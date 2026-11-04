@@ -1,0 +1,12 @@
+# ROMs, extracted game data and saved reference pages stay local
+roms/
+*.sfc
+*.smc
+*.pce
+res/
+disasm/**/*.asm
+disasm/**/*.bin
+tools/**/*.bin
+
+__pycache__/
+node_modules/

@@ -1,0 +1,3044 @@
+[
+ {
+  "code": "5555",
+  "effect": "Start at stage 1-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 0"
+ },
+ {
+  "code": "4554",
+  "effect": "Start at stage 1-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-1 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2552",
+  "effect": "Start at stage 1-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-1 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3553",
+  "effect": "Start at stage 1-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-1 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0505",
+  "effect": "Start at stage 1-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-2 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1504",
+  "effect": "Start at stage 1-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-2 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6502",
+  "effect": "Start at stage 1-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-2 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7503",
+  "effect": "Start at stage 1-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 1"
+ },
+ {
+  "code": "4545",
+  "effect": "Start at stage 1-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-3 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2544",
+  "effect": "Start at stage 1-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-3 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3542",
+  "effect": "Start at stage 1-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-3 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5543",
+  "effect": "Start at stage 1-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 2"
+ },
+ {
+  "code": "1515",
+  "effect": "Start at stage 1-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-4 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6514",
+  "effect": "Start at stage 1-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-4 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7512",
+  "effect": "Start at stage 1-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-4 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0513",
+  "effect": "Start at stage 1-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 3"
+ },
+ {
+  "code": "2525",
+  "effect": "Start at stage 1-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-5 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3524",
+  "effect": "Start at stage 1-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-5 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5522",
+  "effect": "Start at stage 1-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 4"
+ },
+ {
+  "code": "4523",
+  "effect": "Start at stage 1-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-5 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6565",
+  "effect": "Start at stage 1-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-6 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7564",
+  "effect": "Start at stage 1-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 5"
+ },
+ {
+  "code": "0562",
+  "effect": "Start at stage 1-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-6 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1563",
+  "effect": "Start at stage 1-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-6 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3535",
+  "effect": "Start at stage 1-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 6"
+ },
+ {
+  "code": "5534",
+  "effect": "Start at stage 1-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-7 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4532",
+  "effect": "Start at stage 1-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-7 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2533",
+  "effect": "Start at stage 1-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-7 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7575",
+  "effect": "Start at stage 1-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 7"
+ },
+ {
+  "code": "0574",
+  "effect": "Start at stage 1-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-8 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1572",
+  "effect": "Start at stage 1-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-8 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6573",
+  "effect": "Start at stage 1-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 1-8 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0055",
+  "effect": "Start at stage 2-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 8"
+ },
+ {
+  "code": "1054",
+  "effect": "Start at stage 2-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-1 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6052",
+  "effect": "Start at stage 2-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 8"
+ },
+ {
+  "code": "7053",
+  "effect": "Start at stage 2-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-1 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4005",
+  "effect": "Start at stage 2-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 9"
+ },
+ {
+  "code": "2004",
+  "effect": "Start at stage 2-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-2 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3002",
+  "effect": "Start at stage 2-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-2 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5003",
+  "effect": "Start at stage 2-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-2 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1045",
+  "effect": "Start at stage 2-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-3 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6044",
+  "effect": "Start at stage 2-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-3 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7042",
+  "effect": "Start at stage 2-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-3 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0043",
+  "effect": "Start at stage 2-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 10"
+ },
+ {
+  "code": "2015",
+  "effect": "Start at stage 2-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-4 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3014",
+  "effect": "Start at stage 2-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-4 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5012",
+  "effect": "Start at stage 2-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 11"
+ },
+ {
+  "code": "4013",
+  "effect": "Start at stage 2-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-4 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6025",
+  "effect": "Start at stage 2-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-5 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7024",
+  "effect": "Start at stage 2-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 12"
+ },
+ {
+  "code": "0022",
+  "effect": "Start at stage 2-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-5 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1023",
+  "effect": "Start at stage 2-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-5 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3065",
+  "effect": "Start at stage 2-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-6 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5064",
+  "effect": "Start at stage 2-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 13"
+ },
+ {
+  "code": "4062",
+  "effect": "Start at stage 2-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-6 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2063",
+  "effect": "Start at stage 2-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-6 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7035",
+  "effect": "Start at stage 2-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-7 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0034",
+  "effect": "Start at stage 2-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 14"
+ },
+ {
+  "code": "1032",
+  "effect": "Start at stage 2-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-7 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6033",
+  "effect": "Start at stage 2-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-7 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5075",
+  "effect": "Start at stage 2-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-8 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4074",
+  "effect": "Start at stage 2-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-8 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2072",
+  "effect": "Start at stage 2-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 15"
+ },
+ {
+  "code": "3073",
+  "effect": "Start at stage 2-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 2-8 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4455",
+  "effect": "Start at stage 3-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-1 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2454",
+  "effect": "Start at stage 3-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-1 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3452",
+  "effect": "Start at stage 3-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-1 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5453",
+  "effect": "Start at stage 3-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 16"
+ },
+ {
+  "code": "1405",
+  "effect": "Start at stage 3-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-2 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6404",
+  "effect": "Start at stage 3-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-2 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7402",
+  "effect": "Start at stage 3-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 17"
+ },
+ {
+  "code": "0403",
+  "effect": "Start at stage 3-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-2 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2445",
+  "effect": "Start at stage 3-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-3 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3444",
+  "effect": "Start at stage 3-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 18"
+ },
+ {
+  "code": "5442",
+  "effect": "Start at stage 3-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-3 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4443",
+  "effect": "Start at stage 3-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-3 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6415",
+  "effect": "Start at stage 3-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-4 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7414",
+  "effect": "Start at stage 3-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-4 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0412",
+  "effect": "Start at stage 3-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 19"
+ },
+ {
+  "code": "1413",
+  "effect": "Start at stage 3-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-4 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3425",
+  "effect": "Start at stage 3-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-5 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5424",
+  "effect": "Start at stage 3-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-5 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4422",
+  "effect": "Start at stage 3-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-5 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2423",
+  "effect": "Start at stage 3-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 20"
+ },
+ {
+  "code": "7465",
+  "effect": "Start at stage 3-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-6 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0464",
+  "effect": "Start at stage 3-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 21"
+ },
+ {
+  "code": "1462",
+  "effect": "Start at stage 3-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-6 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6463",
+  "effect": "Start at stage 3-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-6 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5435",
+  "effect": "Start at stage 3-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-7 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4434",
+  "effect": "Start at stage 3-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 22"
+ },
+ {
+  "code": "2432",
+  "effect": "Start at stage 3-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-7 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3433",
+  "effect": "Start at stage 3-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-7 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0475",
+  "effect": "Start at stage 3-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 23"
+ },
+ {
+  "code": "1474",
+  "effect": "Start at stage 3-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-8 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6472",
+  "effect": "Start at stage 3-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-8 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7473",
+  "effect": "Start at stage 3-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 3-8 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1155",
+  "effect": "Start at stage 4-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-1 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6154",
+  "effect": "Start at stage 4-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 24"
+ },
+ {
+  "code": "7152",
+  "effect": "Start at stage 4-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-1 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0153",
+  "effect": "Start at stage 4-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-1 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2105",
+  "effect": "Start at stage 4-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-2 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3104",
+  "effect": "Start at stage 4-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-2 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5102",
+  "effect": "Start at stage 4-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-2 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4103",
+  "effect": "Start at stage 4-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 25"
+ },
+ {
+  "code": "6145",
+  "effect": "Start at stage 4-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-3 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7144",
+  "effect": "Start at stage 4-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 26"
+ },
+ {
+  "code": "0142",
+  "effect": "Start at stage 4-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-3 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1143",
+  "effect": "Start at stage 4-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-3 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3115",
+  "effect": "Start at stage 4-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-4 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5114",
+  "effect": "Start at stage 4-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 27"
+ },
+ {
+  "code": "4112",
+  "effect": "Start at stage 4-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-4 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2113",
+  "effect": "Start at stage 4-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-4 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7125",
+  "effect": "Start at stage 4-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-5 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0124",
+  "effect": "Start at stage 4-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-5 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1122",
+  "effect": "Start at stage 4-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 28"
+ },
+ {
+  "code": "6123",
+  "effect": "Start at stage 4-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-5 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5165",
+  "effect": "Start at stage 4-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-6 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4164",
+  "effect": "Start at stage 4-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 29"
+ },
+ {
+  "code": "2162",
+  "effect": "Start at stage 4-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-6 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3163",
+  "effect": "Start at stage 4-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-6 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0135",
+  "effect": "Start at stage 4-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 30"
+ },
+ {
+  "code": "1134",
+  "effect": "Start at stage 4-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-7 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6132",
+  "effect": "Start at stage 4-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-7 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7133",
+  "effect": "Start at stage 4-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-7 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4175",
+  "effect": "Start at stage 4-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-8 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2174",
+  "effect": "Start at stage 4-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 31"
+ },
+ {
+  "code": "3172",
+  "effect": "Start at stage 4-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-8 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5173",
+  "effect": "Start at stage 4-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 4-8 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2255",
+  "effect": "Start at stage 5-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-1 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3254",
+  "effect": "Start at stage 5-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-1 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5252",
+  "effect": "Start at stage 5-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 32"
+ },
+ {
+  "code": "4253",
+  "effect": "Start at stage 5-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-1 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6205",
+  "effect": "Start at stage 5-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-2 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7204",
+  "effect": "Start at stage 5-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 33"
+ },
+ {
+  "code": "0202",
+  "effect": "Start at stage 5-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-2 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1203",
+  "effect": "Start at stage 5-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-2 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3245",
+  "effect": "Start at stage 5-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-3 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5244",
+  "effect": "Start at stage 5-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 34"
+ },
+ {
+  "code": "4242",
+  "effect": "Start at stage 5-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-3 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2243",
+  "effect": "Start at stage 5-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-3 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7215",
+  "effect": "Start at stage 5-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-4 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0214",
+  "effect": "Start at stage 5-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-4 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1212",
+  "effect": "Start at stage 5-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-4 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6213",
+  "effect": "Start at stage 5-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 35"
+ },
+ {
+  "code": "5225",
+  "effect": "Start at stage 5-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-5 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4224",
+  "effect": "Start at stage 5-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 36"
+ },
+ {
+  "code": "2222",
+  "effect": "Start at stage 5-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-5 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3223",
+  "effect": "Start at stage 5-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-5 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0265",
+  "effect": "Start at stage 5-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-6 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1264",
+  "effect": "Start at stage 5-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 37"
+ },
+ {
+  "code": "6262",
+  "effect": "Start at stage 5-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-6 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7263",
+  "effect": "Start at stage 5-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-6 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4235",
+  "effect": "Start at stage 5-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-7 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2234",
+  "effect": "Start at stage 5-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-7 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3232",
+  "effect": "Start at stage 5-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 38"
+ },
+ {
+  "code": "5233",
+  "effect": "Start at stage 5-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-7 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1275",
+  "effect": "Start at stage 5-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-8 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6274",
+  "effect": "Start at stage 5-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-8 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7272",
+  "effect": "Start at stage 5-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 39"
+ },
+ {
+  "code": "0273",
+  "effect": "Start at stage 5-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 5-8 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6655",
+  "effect": "Start at stage 6-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 40"
+ },
+ {
+  "code": "7654",
+  "effect": "Start at stage 6-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-1 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0652",
+  "effect": "Start at stage 6-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 40"
+ },
+ {
+  "code": "1653",
+  "effect": "Start at stage 6-1",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-1 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3605",
+  "effect": "Start at stage 6-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 41"
+ },
+ {
+  "code": "5604",
+  "effect": "Start at stage 6-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-2 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "4602",
+  "effect": "Start at stage 6-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-2 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2603",
+  "effect": "Start at stage 6-2",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-2 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7645",
+  "effect": "Start at stage 6-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 42"
+ },
+ {
+  "code": "0644",
+  "effect": "Start at stage 6-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-3 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1642",
+  "effect": "Start at stage 6-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-3 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6643",
+  "effect": "Start at stage 6-3",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-3 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5615",
+  "effect": "Start at stage 6-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 43"
+ },
+ {
+  "code": "4614",
+  "effect": "Start at stage 6-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-4 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2612",
+  "effect": "Start at stage 6-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-4 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3613",
+  "effect": "Start at stage 6-4",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-4 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "0625",
+  "effect": "Start at stage 6-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-5 (salt 0); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1624",
+  "effect": "Start at stage 6-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-5 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "6622",
+  "effect": "Start at stage 6-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-5 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7623",
+  "effect": "Start at stage 6-5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 44"
+ },
+ {
+  "code": "4665",
+  "effect": "Start at stage 6-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 45"
+ },
+ {
+  "code": "2664",
+  "effect": "Start at stage 6-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-6 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "3662",
+  "effect": "Start at stage 6-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-6 (salt 4); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5663",
+  "effect": "Start at stage 6-6",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-6 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "1635",
+  "effect": "Start at stage 6-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 46"
+ },
+ {
+  "code": "6634",
+  "effect": "Start at stage 6-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-7 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "7632",
+  "effect": "Start at stage 6-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "fixed",
+  "note": "GameFAQs (from Total! magazine) lists 7632 as Level 7-1. There is no world 7: the game decodes it as 6-7 (typed in Mesen, screen shows 6-7 START!). The other 6-7 codes are 1635, 6634 and 0633."
+ },
+ {
+  "code": "0633",
+  "effect": "Start at stage 6-7",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-7 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "2675",
+  "effect": "Start at stage 6-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 47"
+ },
+ {
+  "code": "3674",
+  "effect": "Start at stage 6-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-8 (salt 2); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5672",
+  "effect": "Start at stage 6-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "known",
+  "note": "GameFAQs; typed in Mesen, game set $00A4 = 47"
+ },
+ {
+  "code": "4673",
+  "effect": "Start at stage 6-8 (boss)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "verified": "mesen",
+  "status": "new",
+  "note": "one of the 4 codes for 6-8 (salt 6); the game picks the salt at random when it shows a code"
+ },
+ {
+  "code": "5656",
+  "effect": "Small Bomberman in Normal Game (until reset); the password screen returns to the title",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "$C5:7287 compares the raw digits 5,6,5,6 after the checksum fails and sets $0C90=1; read at $C4:18B0 and $C6:179B (sprite set). Typed in Mesen and seen in 1-1."
+ },
+ {
+  "code": "Controller 5 R on the title",
+  "effect": "Sound test ($00A4=$3C)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "US/EU $C5:4F52 also require the multitap ID ($0CEF&$1F=1, $0CE0=$40); JP and beta test only pad 5 R ($0CEE bit $10). Verified with a real press in all four: Mesen with --snes.port2.type=Multitap, emu.setInput({r=true},0,1,3) (port 2, multitap port D) on the title; no multitap: no sound test in US.",
+  "section": "secret"
+ },
+ {
+  "code": "X in rhythm during the prologue",
+  "effect": "Start the next Normal Game with 9 lives instead of 5",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "$C5:6698: 48 X presses in a row, each 7-9 frames after the last (a ~7.5 Hz turbo works); a gap of 32 frames or a wrong interval resets. Sets $0C8F, which $C5:5106 turns into 9 lives. The prologue only plays in JP (demo table $C5:501F); in US/EU/beta it is unreachable without a cheat (PAR 7E00A433). Verified natively in JP and with the $A4 redirect in US (40 presses: 5 lives, 60: 9)."
+ },
+ {
+  "code": "Start a Normal Game or password with controller 2",
+  "effect": "Player 2 plays alone with the lives; Player 1 shows PRESS START",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$C5:5128 / $C5:7350 test controller 2's new presses ($0CFA & $1080 = A or Start) and give the lives to $0DBD instead of $0D7D. Checked in US on the title; JP/beta not run."
+ },
+ {
+  "code": "Game over on a boss stage (x-8)",
+  "effect": "The CONTINUE screen shows an x-7 code, never a boss code",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$C5:6F23 steps $0D17/$0D16 back one stage when the stage digit is 8, then encodes. Game over at 5-8 showed 2234 (5-7). The x-8 codes in GameFAQs are still valid passwords."
+ },
+ {
+  "code": "Debug menu: Select during a stage (needs patch or PAR codes)",
+  "effect": "Opens the P:/STAGE NO./NO DEATH/... menu for the player who pressed Select; Up/Down move, Left/Right change, Select closes and applies",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Nothing calls the toggle $C6:00D2, the input handler $C6:01B9 or the VRAM upload $C4:0B6F in any version. patches/sb1_debug_menu_<us|eu|jp|beta>.ips (tools/sb1/make_debug_ips.py) add them (plus a NO DEATH check); tested in all four.",
+  "section": "debug"
+ },
+ {
+  "code": "1-2: Make the enemy count go up (bomb the exit)",
+  "effect": "Secret item at 1-2: Ice cream: 50,000 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 7 $C6:2CDF; verified by raising $0D25. 50,000 points = +4 lives from a fresh start, which is the GameFAQs '9 lives if you have not died' effect: with fewer lives or more points you get fewer.",
+  "section": "secret_items"
+ },
+ {
+  "code": "1-3: Kill 3 enemies with one blast or kick chain",
+  "effect": "Secret item at 1-3: Popsicle: 500 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 6 $C6:2C21 (a chain counter $0C3F+ reaches 3); counter injected",
+  "section": "secret_items"
+ },
+ {
+  "code": "1-4: Stand on the exit for 21.3 s (1,280 frames)",
+  "effect": "Secret item at 1-4: Cake: 999,900 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 2 $C6:2B8F; player held on the exit cell",
+  "section": "secret_items"
+ },
+ {
+  "code": "1-5: Bombs in all 4 corners",
+  "effect": "Secret item at 1-5: ? : a random item",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 4 $C6:2BCC; corner cells flagged",
+  "section": "secret_items"
+ },
+ {
+  "code": "1-7: Press nothing for 21.3 s (1,280 frames), anywhere",
+  "effect": "Secret item at 1-7: Heart: 800 points and a one-hit shield",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "cond 1 $C6:2B73 resets on any held button; GameFAQs says 'stand on the exit 21 s', which is the 1-4/4-7 condition. Spawned with no input at all.",
+  "section": "secret_items"
+ },
+ {
+  "code": "2-2: Pause (Start held)",
+  "effect": "Secret item at 2-2: Onigiri: 5,000 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 3 $C6:2BBD; real Start press",
+  "section": "secret_items"
+ },
+ {
+  "code": "2-4: Reveal the items and take none",
+  "effect": "Secret item at 2-4: ? : a random item",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 5 $C6:2C10: items on the board $0C91 = $0D03+1; injected",
+  "section": "secret_items"
+ },
+ {
+  "code": "2-7: Punch 5 times (glove needed)",
+  "effect": "Secret item at 2-7: Heart: 800 points and a one-hit shield",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "cond 8 $C6:2D02: 5 frames in the punch state $C4:1C9F, 1 per punch; same routine verified on 6-5",
+  "section": "secret_items"
+ },
+ {
+  "code": "3-3: Score ending in 20",
+  "effect": "Secret item at 3-3: Apple: 8,000 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 11 $C6:2D3E: low score byte $0D5C = $20; injected",
+  "section": "secret_items"
+ },
+ {
+  "code": "3-4: Get down to your last life",
+  "effect": "Secret item at 3-4: Kendama: 100 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 0 $C6:2B5C: dying ($C4:19E3) with 1 life; lives set to 1, then he bombed himself",
+  "section": "secret_items"
+ },
+ {
+  "code": "3-6: Have exactly 6 bombs out",
+  "effect": "Secret item at 3-6: Fire extinguisher: lives set to 9, plus 9,000 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 10 $C6:2D2F (player +$24 = 6); injected",
+  "section": "secret_items"
+ },
+ {
+  "code": "3-7: Make the enemy count go up (bomb the exit)",
+  "effect": "Secret item at 3-7: Heart: 800 points and a one-hit shield",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 7; injected",
+  "section": "secret_items"
+ },
+ {
+  "code": "4-1: Bombs in all 4 corners",
+  "effect": "Secret item at 4-1: Popsicle: 500 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 4; injected",
+  "section": "secret_items"
+ },
+ {
+  "code": "4-4: Kill 3 enemies with one blast or kick chain",
+  "effect": "Secret item at 4-4: ? : a random item",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 6; injected",
+  "section": "secret_items"
+ },
+ {
+  "code": "4-5: Get down to your last life",
+  "effect": "Secret item at 4-5: Fire extinguisher: lives set to 9, plus 9,000 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 0; lives 1, then died",
+  "section": "secret_items"
+ },
+ {
+  "code": "4-7: Stand on the exit for 21.3 s",
+  "effect": "Secret item at 4-7: Heart: 800 points and a one-hit shield",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 2; player held on the exit",
+  "section": "secret_items"
+ },
+ {
+  "code": "6-2: Get hit by a punched bomb (stunned)",
+  "effect": "Secret item at 6-2: Cake: 999,900 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 9 $C6:2D1F: player in the stun state $C4:159E; state written",
+  "section": "secret_items"
+ },
+ {
+  "code": "6-4: Score ending in 20",
+  "effect": "Secret item at 6-4: Apple: 8,000 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 11; injected",
+  "section": "secret_items"
+ },
+ {
+  "code": "6-5: Punch 5 times (glove needed)",
+  "effect": "Secret item at 6-5: Ice cream: 50,000 points",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 8; glove flag set, then 5 real Y presses",
+  "section": "secret_items"
+ },
+ {
+  "code": "6-7: Pause (Start held)",
+  "effect": "Secret item at 6-7: Heart: 800 points and a one-hit shield",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "cond 3; real Start press",
+  "section": "secret_items"
+ },
+ {
+  "code": "Secret items: complete list",
+  "effect": "Exactly 20 stages have one (the GameFAQs 20); the other 28 have none",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "20 constructor entries ($C6:2ABF) in the stage object lists, identical in all four versions",
+  "section": "secret_items"
+ },
+ {
+  "code": "C600115C C6001200 C600137F C60014C6 C4035D22 C4035E30 C4035F7F C40360C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F356F C67F360B C67F37C4 C67F386B C4138C40 C4138D7F C4138EC6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4592 C67F4619 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B9D C67F4C13 C67F4DC4 C413F450 C413F57F C413F6C6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5592 C67F5619 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5B05 C67F5C14 C67F5DC4",
+  "effect": "Restores the debug menu (Select in a stage), Pro Action Replay ROM codes, same bytes as the IPS patch",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "debug",
+  "note": "90 one-byte ROM codes. Entered as Mesen PAR cheats on the unpatched US ROM: menu opens, cursor moves, values change. EU uses the same codes (its ROM differs from US only in the header and the battle timer)."
+ },
+ {
+  "code": "C600115C C6001200 C600137F C60014C6 C401D422 C401D530 C401D67F C401D7C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F3565 C67F3609 C67F37C4 C67F386B C4118140 C411827F C41183C6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4587 C67F4617 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B92 C67F4C11 C67F4DC4 C411E950 C411EA7F C411EBC6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5587 C67F5617 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5BFA C67F5C11 C67F5DC4",
+  "effect": "Restores the debug menu (Select in a stage), Pro Action Replay ROM codes, same bytes as the IPS patch",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "static",
+  "section": "debug",
+  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen."
+ },
+ {
+  "code": "C600115C C6001200 C600137F C60014C6 C401CF22 C401D030 C401D17F C401D2C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F3560 C67F3609 C67F37C4 C67F386B C4117C40 C4117D7F C4117EC6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4582 C67F4617 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B8D C67F4C11 C67F4DC4 C411E450 C411E57F C411E6C6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5582 C67F5617 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5BF5 C67F5C11 C67F5DC4",
+  "effect": "Restores the debug menu (Select in a stage), Pro Action Replay ROM codes, same bytes as the IPS patch",
+  "versions": [
+   "beta"
+  ],
+  "status": "new",
+  "verified": "static",
+  "section": "debug",
+  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen."
+ },
+ {
+  "code": "Debug menu STAGE NO.",
+  "effect": "Warps to any scene when the menu closes: stages, ending, title, battle setup, prologue, demos, continue, password, map, draw, victory, sound test, battle stages",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "section": "debug",
+  "note": "It is $00A4 itself. Labels after WIN run one behind: 'B-1' is the sound test ($3C), 'B-2'..'B-C','DR' are battle stages 1-12 ($3D-$48); $49-$4D black screen."
+ },
+ {
+  "code": "Debug menu NO DEATH",
+  "effect": "Does nothing in the original code: sets player +$2E, which nothing reads",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "debug",
+  "note": "Own bomb killed the player with it ON. The IPS/PAR set adds a check at the two hit branches (reconstruction) so ON keeps the player alive (verified, all four versions)."
+ },
+ {
+  "code": "Debug menu FIRE PASS",
+  "effect": "Invincibility timer: ON sets player +$36 = $0160 (5.9 s of flashing); shows ON at a stage start because that timer is running",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "debug",
+  "note": "Survived own bomb with it ON."
+ },
+ {
+  "code": "Debug menu FIRE FULL",
+  "effect": "Maximum blast (player +$31 bit 7)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "debug",
+  "note": "A fire-3 bomb burned the whole row."
+ },
+ {
+  "code": "Debug menu SKULL",
+  "effect": "Random skull disease (same routine $C6:113D as the skull item)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "debug",
+  "note": "+$13A set to $23F5."
+ },
+ {
+  "code": "Debug menu GAME SPEED / TIME CHECK",
+  "effect": "No effect: $00A6 and $00B3 are read by nothing in any version",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "static",
+  "section": "debug",
+  "note": "TCRF says game speed no longer works; TIME CHECK likewise has no code left."
+ },
+ {
+  "code": "Debug menu VS CHECK",
+  "effect": "Blacks out every map cell the blue enemy's path search visits (1-5, 6-5); marks are never cleared",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "section": "debug",
+  "note": "$C6:3A40 sets bit $0200 in the map buffer $04F4; the clear routine $C4:0B9F is uncalled."
+ },
+ {
+  "code": "Debug menu BGM NO. / SE NO. + A",
+  "effect": "Plays any of 42 music tracks / 40 sounds",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "debug",
+  "note": "$C3:002C / $C3:0042."
+ },
+ {
+  "code": "Ending credits heading",
+  "effect": "JP reads 'game planner', US/EU/beta 'game planners'",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "region",
+  "note": "Screenshot of the ending (scene $30) at the same frame in each version."
+ },
+ {
+  "code": "$C1:0E40-$C1:17BF",
+  "effect": "74 unused 4bpp sprite tiles after the world-4 enemy sheet: faces with eyes and teeth, shrinking rings",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "unused",
+  "note": "Never read (code, data or DMA) in a CDL sweep of every scene $00-$48 plus 13 stage runs; image docs/img/sb1/unused/C10E40_unread_sprite_tiles_new.png."
+ }
+]

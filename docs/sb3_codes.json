@@ -1,0 +1,1451 @@
+[
+ {
+  "code": "0704",
+  "effect": "Start at 1-1 with full equipment (8 bombs, 8 fire, speed +2, abilities $48D1=7)",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Kit flag $7E2901 stays set until reset."
+ },
+ {
+  "code": "3200",
+  "effect": "Start at 2-1 with full equipment",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "2711",
+  "effect": "Start at 3-1 with full equipment",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "3870",
+  "effect": "Start at 4-1 with full equipment",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "4501",
+  "effect": "Start at 5-1 with full equipment",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "0606",
+  "effect": "Start at 6-1 (final stage) with full equipment",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "3104",
+  "effect": "Start at the final boss (stage $46) with full equipment",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "The only way to start at $46; a normal password for it does not exist (the encoder gives 6363)."
+ },
+ {
+  "code": "1511",
+  "effect": "Battle mode with COM level 4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Sets $7E6C6F=4 (default 1), shown on the GAMEPLAY screen."
+ },
+ {
+  "code": "4622",
+  "effect": "Battle mode, arena layout 1 (of 0-3) for every battle stage",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs calls it new arenas; it picks an alternate layout of stages 1-10 ($542E=1), e.g. stage 1 with no soft blocks. Also re-locks stages 11-12."
+ },
+ {
+  "code": "1616",
+  "effect": "Battle mode, arena layout 2 for every battle stage",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Alternate layouts ($542E=2), e.g. stage 1 starts everyone in the middle. Also re-locks stages 11-12."
+ },
+ {
+  "code": "3194",
+  "effect": "Battle mode, arena layout 3 for every battle stage",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Alternate layouts ($542E=3). Also re-locks stages 11-12."
+ },
+ {
+  "code": "5656",
+  "effect": "Battle mode; no effect",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "Posted as 'yellow character'. Sets $7E4C0C=$7F, but the only reader ($C4:04C5) gives palette $11 to the player whose index (0-4) equals it, so nothing changes."
+ },
+ {
+  "code": "6514",
+  "effect": "Hard mode: new game from the intro, every enemy takes one more hit",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Sets $7E2902=1; $C3:00B2 adds 1 HP to each enemy. Lasts until reset."
+ },
+ {
+  "code": "0803",
+  "effect": "Ending",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "5358",
+  "effect": "Start at 1-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "4974",
+  "effect": "Start at 1-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5358: the decoder ignores two bits, so every stage has four codes. The game only shows 5358."
+ },
+ {
+  "code": "5102",
+  "effect": "Start at 1-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5358: the decoder ignores two bits, so every stage has four codes. The game only shows 5358."
+ },
+ {
+  "code": "5230",
+  "effect": "Start at 1-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5358: the decoder ignores two bits, so every stage has four codes. The game only shows 5358."
+ },
+ {
+  "code": "9486",
+  "effect": "Start at 1-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "9102",
+  "effect": "Start at 1-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9486: the decoder ignores two bits, so every stage has four codes. The game only shows 9486."
+ },
+ {
+  "code": "9230",
+  "effect": "Start at 1-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9486: the decoder ignores two bits, so every stage has four codes. The game only shows 9486."
+ },
+ {
+  "code": "9358",
+  "effect": "Start at 1-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9486: the decoder ignores two bits, so every stage has four codes. The game only shows 9486."
+ },
+ {
+  "code": "4332",
+  "effect": "Start at 1-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "3948",
+  "effect": "Start at 1-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4332: the decoder ignores two bits, so every stage has four codes. The game only shows 4332."
+ },
+ {
+  "code": "4076",
+  "effect": "Start at 1-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4332: the decoder ignores two bits, so every stage has four codes. The game only shows 4332."
+ },
+ {
+  "code": "4204",
+  "effect": "Start at 1-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4332: the decoder ignores two bits, so every stage has four codes. The game only shows 4332."
+ },
+ {
+  "code": "3306",
+  "effect": "Start at 1-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "2922",
+  "effect": "Start at 1-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 3306: the decoder ignores two bits, so every stage has four codes. The game only shows 3306."
+ },
+ {
+  "code": "3050",
+  "effect": "Start at 1-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 3306: the decoder ignores two bits, so every stage has four codes. The game only shows 3306."
+ },
+ {
+  "code": "3178",
+  "effect": "Start at 1-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 3306: the decoder ignores two bits, so every stage has four codes. The game only shows 3306."
+ },
+ {
+  "code": "2280",
+  "effect": "Start at 1 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "1896",
+  "effect": "Start at 1 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2280: the decoder ignores two bits, so every stage has four codes. The game only shows 2280."
+ },
+ {
+  "code": "2024",
+  "effect": "Start at 1 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2280: the decoder ignores two bits, so every stage has four codes. The game only shows 2280."
+ },
+ {
+  "code": "2152",
+  "effect": "Start at 1 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2280: the decoder ignores two bits, so every stage has four codes. The game only shows 2280."
+ },
+ {
+  "code": "6408",
+  "effect": "Start at 2-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "6024",
+  "effect": "Start at 2-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6408: the decoder ignores two bits, so every stage has four codes. The game only shows 6408."
+ },
+ {
+  "code": "6152",
+  "effect": "Start at 2-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6408: the decoder ignores two bits, so every stage has four codes. The game only shows 6408."
+ },
+ {
+  "code": "6280",
+  "effect": "Start at 2-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6408: the decoder ignores two bits, so every stage has four codes. The game only shows 6408."
+ },
+ {
+  "code": "5862",
+  "effect": "Start at 2-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "5478",
+  "effect": "Start at 2-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5862: the decoder ignores two bits, so every stage has four codes. The game only shows 5862."
+ },
+ {
+  "code": "5606",
+  "effect": "Start at 2-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5862: the decoder ignores two bits, so every stage has four codes. The game only shows 5862."
+ },
+ {
+  "code": "5734",
+  "effect": "Start at 2-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5862: the decoder ignores two bits, so every stage has four codes. The game only shows 5862."
+ },
+ {
+  "code": "4836",
+  "effect": "Start at 2-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "4452",
+  "effect": "Start at 2-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4836: the decoder ignores two bits, so every stage has four codes. The game only shows 4836."
+ },
+ {
+  "code": "4580",
+  "effect": "Start at 2-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4836: the decoder ignores two bits, so every stage has four codes. The game only shows 4836."
+ },
+ {
+  "code": "4708",
+  "effect": "Start at 2-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4836: the decoder ignores two bits, so every stage has four codes. The game only shows 4836."
+ },
+ {
+  "code": "7938",
+  "effect": "Start at 2-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "7554",
+  "effect": "Start at 2-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7938: the decoder ignores two bits, so every stage has four codes. The game only shows 7938."
+ },
+ {
+  "code": "7682",
+  "effect": "Start at 2-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7938: the decoder ignores two bits, so every stage has four codes. The game only shows 7938."
+ },
+ {
+  "code": "7810",
+  "effect": "Start at 2-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7938: the decoder ignores two bits, so every stage has four codes. The game only shows 7938."
+ },
+ {
+  "code": "6912",
+  "effect": "Start at 2 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "6528",
+  "effect": "Start at 2 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6912: the decoder ignores two bits, so every stage has four codes. The game only shows 6912."
+ },
+ {
+  "code": "6656",
+  "effect": "Start at 2 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6912: the decoder ignores two bits, so every stage has four codes. The game only shows 6912."
+ },
+ {
+  "code": "6784",
+  "effect": "Start at 2 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6912: the decoder ignores two bits, so every stage has four codes. The game only shows 6912."
+ },
+ {
+  "code": "9438",
+  "effect": "Start at 3-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "9054",
+  "effect": "Start at 3-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9438: the decoder ignores two bits, so every stage has four codes. The game only shows 9438."
+ },
+ {
+  "code": "9182",
+  "effect": "Start at 3-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9438: the decoder ignores two bits, so every stage has four codes. The game only shows 9438."
+ },
+ {
+  "code": "9310",
+  "effect": "Start at 3-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9438: the decoder ignores two bits, so every stage has four codes. The game only shows 9438."
+ },
+ {
+  "code": "8412",
+  "effect": "Start at 3-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "8028",
+  "effect": "Start at 3-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8412: the decoder ignores two bits, so every stage has four codes. The game only shows 8412."
+ },
+ {
+  "code": "8156",
+  "effect": "Start at 3-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8412: the decoder ignores two bits, so every stage has four codes. The game only shows 8412."
+ },
+ {
+  "code": "8284",
+  "effect": "Start at 3-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8412: the decoder ignores two bits, so every stage has four codes. The game only shows 8412."
+ },
+ {
+  "code": "7386",
+  "effect": "Start at 3-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "7002",
+  "effect": "Start at 3-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7386: the decoder ignores two bits, so every stage has four codes. The game only shows 7386."
+ },
+ {
+  "code": "7130",
+  "effect": "Start at 3-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7386: the decoder ignores two bits, so every stage has four codes. The game only shows 7386."
+ },
+ {
+  "code": "7258",
+  "effect": "Start at 3-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7386: the decoder ignores two bits, so every stage has four codes. The game only shows 7386."
+ },
+ {
+  "code": "5880",
+  "effect": "Start at 3-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "5496",
+  "effect": "Start at 3-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5880: the decoder ignores two bits, so every stage has four codes. The game only shows 5880."
+ },
+ {
+  "code": "5624",
+  "effect": "Start at 3-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5880: the decoder ignores two bits, so every stage has four codes. The game only shows 5880."
+ },
+ {
+  "code": "5752",
+  "effect": "Start at 3-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5880: the decoder ignores two bits, so every stage has four codes. The game only shows 5880."
+ },
+ {
+  "code": "4854",
+  "effect": "Start at 3 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "4470",
+  "effect": "Start at 3 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4854: the decoder ignores two bits, so every stage has four codes. The game only shows 4854."
+ },
+ {
+  "code": "4598",
+  "effect": "Start at 3 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4854: the decoder ignores two bits, so every stage has four codes. The game only shows 4854."
+ },
+ {
+  "code": "4726",
+  "effect": "Start at 3 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 4854: the decoder ignores two bits, so every stage has four codes. The game only shows 4854."
+ },
+ {
+  "code": "8916",
+  "effect": "Start at 4-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "8532",
+  "effect": "Start at 4-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8916: the decoder ignores two bits, so every stage has four codes. The game only shows 8916."
+ },
+ {
+  "code": "8660",
+  "effect": "Start at 4-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8916: the decoder ignores two bits, so every stage has four codes. The game only shows 8916."
+ },
+ {
+  "code": "8788",
+  "effect": "Start at 4-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8916: the decoder ignores two bits, so every stage has four codes. The game only shows 8916."
+ },
+ {
+  "code": "7890",
+  "effect": "Start at 4-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "7506",
+  "effect": "Start at 4-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7890: the decoder ignores two bits, so every stage has four codes. The game only shows 7890."
+ },
+ {
+  "code": "7634",
+  "effect": "Start at 4-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7890: the decoder ignores two bits, so every stage has four codes. The game only shows 7890."
+ },
+ {
+  "code": "7762",
+  "effect": "Start at 4-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 7890: the decoder ignores two bits, so every stage has four codes. The game only shows 7890."
+ },
+ {
+  "code": "5360",
+  "effect": "Start at 4-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "4976",
+  "effect": "Start at 4-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5360: the decoder ignores two bits, so every stage has four codes. The game only shows 5360."
+ },
+ {
+  "code": "5104",
+  "effect": "Start at 4-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5360: the decoder ignores two bits, so every stage has four codes. The game only shows 5360."
+ },
+ {
+  "code": "5232",
+  "effect": "Start at 4-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5360: the decoder ignores two bits, so every stage has four codes. The game only shows 5360."
+ },
+ {
+  "code": "3309",
+  "effect": "Start at 4-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "2925",
+  "effect": "Start at 4-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 3309: the decoder ignores two bits, so every stage has four codes. The game only shows 3309."
+ },
+ {
+  "code": "3053",
+  "effect": "Start at 4-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 3309: the decoder ignores two bits, so every stage has four codes. The game only shows 3309."
+ },
+ {
+  "code": "3181",
+  "effect": "Start at 4-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 3309: the decoder ignores two bits, so every stage has four codes. The game only shows 3309."
+ },
+ {
+  "code": "6411",
+  "effect": "Start at 4 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "6027",
+  "effect": "Start at 4 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6411: the decoder ignores two bits, so every stage has four codes. The game only shows 6411."
+ },
+ {
+  "code": "6155",
+  "effect": "Start at 4 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6411: the decoder ignores two bits, so every stage has four codes. The game only shows 6411."
+ },
+ {
+  "code": "6283",
+  "effect": "Start at 4 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6411: the decoder ignores two bits, so every stage has four codes. The game only shows 6411."
+ },
+ {
+  "code": "5865",
+  "effect": "Start at 5-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "5481",
+  "effect": "Start at 5-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5865: the decoder ignores two bits, so every stage has four codes. The game only shows 5865."
+ },
+ {
+  "code": "5609",
+  "effect": "Start at 5-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5865: the decoder ignores two bits, so every stage has four codes. The game only shows 5865."
+ },
+ {
+  "code": "5737",
+  "effect": "Start at 5-1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 5865: the decoder ignores two bits, so every stage has four codes. The game only shows 5865."
+ },
+ {
+  "code": "8967",
+  "effect": "Start at 5-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "8583",
+  "effect": "Start at 5-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8967: the decoder ignores two bits, so every stage has four codes. The game only shows 8967."
+ },
+ {
+  "code": "8711",
+  "effect": "Start at 5-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8967: the decoder ignores two bits, so every stage has four codes. The game only shows 8967."
+ },
+ {
+  "code": "8839",
+  "effect": "Start at 5-2",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 8967: the decoder ignores two bits, so every stage has four codes. The game only shows 8967."
+ },
+ {
+  "code": "2787",
+  "effect": "Start at 5-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "2403",
+  "effect": "Start at 5-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2787: the decoder ignores two bits, so every stage has four codes. The game only shows 2787."
+ },
+ {
+  "code": "2531",
+  "effect": "Start at 5-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2787: the decoder ignores two bits, so every stage has four codes. The game only shows 2787."
+ },
+ {
+  "code": "2659",
+  "effect": "Start at 5-3",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2787: the decoder ignores two bits, so every stage has four codes. The game only shows 2787."
+ },
+ {
+  "code": "9473",
+  "effect": "Start at 5-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "9089",
+  "effect": "Start at 5-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9473: the decoder ignores two bits, so every stage has four codes. The game only shows 9473."
+ },
+ {
+  "code": "9217",
+  "effect": "Start at 5-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9473: the decoder ignores two bits, so every stage has four codes. The game only shows 9473."
+ },
+ {
+  "code": "9345",
+  "effect": "Start at 5-4",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 9473: the decoder ignores two bits, so every stage has four codes. The game only shows 9473."
+ },
+ {
+  "code": "2301",
+  "effect": "Start at 5 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "1917",
+  "effect": "Start at 5 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2301: the decoder ignores two bits, so every stage has four codes. The game only shows 2301."
+ },
+ {
+  "code": "2045",
+  "effect": "Start at 5 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2301: the decoder ignores two bits, so every stage has four codes. The game only shows 2301."
+ },
+ {
+  "code": "2173",
+  "effect": "Start at 5 boss",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 2301: the decoder ignores two bits, so every stage has four codes. The game only shows 2301."
+ },
+ {
+  "code": "6363",
+  "effect": "Start at 6-1 (final stage)",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": ""
+ },
+ {
+  "code": "5979",
+  "effect": "Start at 6-1 (final stage)",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6363: the decoder ignores two bits, so every stage has four codes. The game only shows 6363."
+ },
+ {
+  "code": "6107",
+  "effect": "Start at 6-1 (final stage)",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6363: the decoder ignores two bits, so every stage has four codes. The game only shows 6363."
+ },
+ {
+  "code": "6235",
+  "effect": "Start at 6-1 (final stage)",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Alternate spelling of 6363: the decoder ignores two bits, so every stage has four codes. The game only shows 6363."
+ },
+ {
+  "code": "Title screen: tap X 39-54 times in 360 frames",
+  "effect": "Unlock battle stages 11 (SUPERSTAR) and 12 (HAPPY HAPPY)",
+  "versions": [
+   "eu",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Keep each gap under 16 frames; 7-9 frames per tap works, 6 or 10 does not. Sets $7E542D=12 ($C1:6EC3) with a sound. PAL 7.2 s, JP 6 s."
+ },
+ {
+  "code": "Title screen: tap X 40-47 times in 360 frames",
+  "effect": "Unlock battle stages 11 and 12 (beta)",
+  "versions": [
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The beta checks (count & $F8) = $28, a narrower window: every 9 frames works, every 7 does not."
+ },
+ {
+  "code": "IPS patches/sb3_soft_reset_<eu|jp|beta>.ips, then hold Select+Start+L+R on pad 1",
+  "effect": "Soft reset to the Hudson logo / title screen (restores the unreferenced check at $C0:013A)",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The check (LDA $4E / CMP #$33 / JML $80F000) is in all three ROMs but nothing calls it. The patch moves the pad routine's PLX/PLY/RTL at $C0:0137 so the check runs every frame. Built and verified by tools/sb3/make_ips.py; tested in Mesen on EU, JP and the beta."
+ }
+]

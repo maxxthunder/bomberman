@@ -1,0 +1,1478 @@
+[
+ {
+  "code": "CBCCBBDB",
+  "effect": "Start at world 1 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: decoded to world 1 stage 1, bombs 1, fire 1; planet map, then stage 1-1",
+  "section": "Stage codes"
+ },
+ {
+  "code": "CCCCBBFB",
+  "effect": "Start at world 1 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "DFCCBBGB",
+  "effect": "Start at world 1 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "DGCCBBHB",
+  "effect": "Start at world 1 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FHCCBBJB",
+  "effect": "Start at world 1 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FJCCBBKB",
+  "effect": "Start at world 1 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GLDCBBLB",
+  "effect": "Start at world 1 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GMDCBBMB",
+  "effect": "Start at world 1 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "DBCCBBFB",
+  "effect": "Start at world 2 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FDCCBBGB",
+  "effect": "Start at world 2 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FFCCBBHB",
+  "effect": "Start at world 2 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GGCCBBJB",
+  "effect": "Start at world 2 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GHCCBBKB",
+  "effect": "Start at world 2 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HKDCBBLB",
+  "effect": "Start at world 2 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HLDCBBMB",
+  "effect": "Start at world 2 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JMDCBBNB",
+  "effect": "Start at world 2 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GCCCBBGB",
+  "effect": "Start at world 3 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GDCCBBHB",
+  "effect": "Start at world 3 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HFCCBBJB",
+  "effect": "Start at world 3 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HGCCBBKB",
+  "effect": "Start at world 3 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JJDCBBLB",
+  "effect": "Start at world 3 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JKDCBBMB",
+  "effect": "Start at world 3 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KLDCBBNB",
+  "effect": "Start at world 3 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KMDCBBPB",
+  "effect": "Start at world 3 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HCCCBBHB",
+  "effect": "Start at world 4 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JDCCBBJB",
+  "effect": "Start at world 4 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JFCCBBKB",
+  "effect": "Start at world 4 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KHDCBBLB",
+  "effect": "Start at world 4 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KJDCBBMB",
+  "effect": "Start at world 4 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LKDCBBNB",
+  "effect": "Start at world 4 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LLDCBBPB",
+  "effect": "Start at world 4 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "MNDCBBQB",
+  "effect": "Start at world 4 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KCCCBBJB",
+  "effect": "Start at world 5 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KDCCBBKB",
+  "effect": "Start at world 5 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LGDCBBLB",
+  "effect": "Start at world 5 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LHDCBBMB",
+  "effect": "Start at world 5 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "MJDCBBNB",
+  "effect": "Start at world 5 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "MKDCBBPB",
+  "effect": "Start at world 5 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "NMDCBBQB",
+  "effect": "Start at world 5 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "NNDCBBRB",
+  "effect": "Start at world 5 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LCCCBBKB",
+  "effect": "Start at world 6 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "MFDCBBLB",
+  "effect": "Start at world 6 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "MGDCBBMB",
+  "effect": "Start at world 6 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "NHDCBBNB",
+  "effect": "Start at world 6 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "NJDCBBPB",
+  "effect": "Start at world 6 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "PLDCBBQB",
+  "effect": "Start at world 6 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "PMDCBBRB",
+  "effect": "Start at world 6 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "QNDCBBSB",
+  "effect": "Start at world 6 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "NDDCBBLB",
+  "effect": "Start at world 7 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "NFDCBBMB",
+  "effect": "Start at world 7 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "PGDCBBNB",
+  "effect": "Start at world 7 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "PHDCBBPB",
+  "effect": "Start at world 7 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "QKDCBBQB",
+  "effect": "Start at world 7 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "QLDCBBRB",
+  "effect": "Start at world 7 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "RMDCBBSB",
+  "effect": "Start at world 7 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "RNDCBBTB",
+  "effect": "Start at world 7 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "BABBAACA",
+  "effect": "Start at world 1 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: decoded to world 1 stage 1, bombs 1, fire 1; planet map, then stage 1-1; also accepted by the Special Version's leftover password screen",
+  "section": "Stage codes"
+ },
+ {
+  "code": "BBBBAADA",
+  "effect": "Start at world 1 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "CDBBAAEA",
+  "effect": "Start at world 1 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "CEBBAAFA",
+  "effect": "Start at world 1 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "DFBBAAGA",
+  "effect": "Start at world 1 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "DGBBAAHA",
+  "effect": "Start at world 1 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "EICBAAIA",
+  "effect": "Start at world 1 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "EJCBAAJA",
+  "effect": "Start at world 1 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "CABBAADA",
+  "effect": "Start at world 2 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "DCBBAAEA",
+  "effect": "Start at world 2 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "DDBBAAFA",
+  "effect": "Start at world 2 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "EEBBAAGA",
+  "effect": "Start at world 2 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "EFBBAAHA",
+  "effect": "Start at world 2 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FHCBAAIA",
+  "effect": "Start at world 2 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FICBAAJA",
+  "effect": "Start at world 2 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GJCBAAKA",
+  "effect": "Start at world 2 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "EBBBAAEA",
+  "effect": "Start at world 3 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "ECBBAAFA",
+  "effect": "Start at world 3 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FDBBAAGA",
+  "effect": "Start at world 3 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FEBBAAHA",
+  "effect": "Start at world 3 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GGCBAAIA",
+  "effect": "Start at world 3 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GHCBAAJA",
+  "effect": "Start at world 3 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HICBAAKA",
+  "effect": "Start at world 3 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HJCBAALA",
+  "effect": "Start at world 3 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "FBBBAAFA",
+  "effect": "Start at world 4 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GCBBAAGA",
+  "effect": "Start at world 4 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "GDBBAAHA",
+  "effect": "Start at world 4 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HFCBAAIA",
+  "effect": "Start at world 4 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HGCBAAJA",
+  "effect": "Start at world 4 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "IHCBAAKA",
+  "effect": "Start at world 4 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "IICBAALA",
+  "effect": "Start at world 4 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JKCBAAMA",
+  "effect": "Start at world 4 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HBBBAAGA",
+  "effect": "Start at world 5 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "HCBBAAHA",
+  "effect": "Start at world 5 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "IECBAAIA",
+  "effect": "Start at world 5 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "IFCBAAJA",
+  "effect": "Start at world 5 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JGCBAAKA",
+  "effect": "Start at world 5 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JHCBAALA",
+  "effect": "Start at world 5 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KJCBAAMA",
+  "effect": "Start at world 5 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KKCBAANA",
+  "effect": "Start at world 5 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "IBBBAAHA",
+  "effect": "Start at world 6 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JDCBAAIA",
+  "effect": "Start at world 6 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "JECBAAJA",
+  "effect": "Start at world 6 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KFCBAAKA",
+  "effect": "Start at world 6 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KGCBAALA",
+  "effect": "Start at world 6 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LICBAAMA",
+  "effect": "Start at world 6 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LJCBAANA",
+  "effect": "Start at world 6 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "MKCBAAOA",
+  "effect": "Start at world 6 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KCCBAAIA",
+  "effect": "Start at world 7 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "KDCBAAJA",
+  "effect": "Start at world 7 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LECBAAKA",
+  "effect": "Start at world 7 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "LFCBAALA",
+  "effect": "Start at world 7 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "MHCBAAMA",
+  "effect": "Start at world 7 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "MICBAANA",
+  "effect": "Start at world 7 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "NJCBAAOA",
+  "effect": "Start at world 7 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "NKCBAAPA",
+  "effect": "Start at world 7 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "versions": [
+   "JP",
+   "SP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "section": "Stage codes"
+ },
+ {
+  "code": "PMPHTZNF",
+  "effect": "Final stage (7-8) with 10 bombs, fire 5, every planet cleared and speed 3 (one above the skates' maximum)",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: decoded as listed; the planet map then starts the final stage (the four Bombers on karts)",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "LJLFPTKD",
+  "effect": "Final stage (7-8) with 10 bombs, fire 5, every planet cleared and speed 3 (one above the skates' maximum)",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: decoded as listed; the planet map then starts the final stage (the four Bombers on karts)",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "DCCCBFHB",
+  "effect": "Stage 1-1 at speed 3, faster than the game's maximum of 2",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: $389A = 3, player byte $9B = $30, measured faster than speed 2 (see docs)",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "CBBBADFA",
+  "effect": "Stage 1-1 at speed 3, faster than the game's maximum of 2",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: $389A = 3, player byte $9B = $30, measured faster than speed 2 (see docs)",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "CBCCBCFB",
+  "effect": "Stage 1-1 at speed 1 (one skate)",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: $389A = 1",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "BABBABDA",
+  "effect": "Stage 1-1 at speed 1 (one skate)",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values (typed in the US version)",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "DCCCBDGB",
+  "effect": "Stage 1-1 at speed 2 (the game's maximum)",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: $389A = 2",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "CBBBACEA",
+  "effect": "Stage 1-1 at speed 2 (the game's maximum)",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "fuzz",
+  "note": "accepted by the game's own decoder in the fuzz run with exactly these values (typed in the US version)",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "DGGDFHBC",
+  "effect": "Stage 3-5 with 4 bombs, fire 2, speed 1, planets 1 and 2 cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: all six values as stored; in the stage the player has $A0 = $24 (fire 2, bombs 4)",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "CEECDFAB",
+  "effect": "Stage 3-5 with 4 bombs, fire 2, speed 1, planets 1 and 2 cleared",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: all six values as stored; in the stage the player has $A0 = $24 (fire 2, bombs 4)",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "DBNHCJFC",
+  "effect": "Stage 2-1 with 10 bombs, fire 5, speed 2, planet 1 cleared",
+  "versions": [
+   "US"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: player $A0 = $5A, $9B = $20 in the stage",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "CAKFBGDB",
+  "effect": "Stage 2-1 with 10 bombs, fire 5, speed 2, planet 1 cleared",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen: player $A0 = $5A, $9B = $20 in the stage",
+  "section": "Power-up codes"
+ },
+ {
+  "code": "BBBBBBBB / AAAAAAAA",
+  "effect": "Rejected (letters below the key)",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "typed in Mesen (US); the screen stays",
+  "section": "Stage codes"
+ },
+ {
+  "code": "Beat the game, hold I and press Run on the end screen, reset (Select+Run), start a Normal Game",
+  "effect": "CONFIGRATION screen after each planet map: stage, scene, bombs, fire, power-ups, lives, sound/music test",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "ending code 08:8C85 sets $3FFB; state 1 far-calls 08:8620 which checks it. Verified with $3FFB written, then real soft reset and presses; settings carried into the stage",
+  "section": "Hidden screens"
+ },
+ {
+  "code": "Same as JP (US)",
+  "effect": "The sound plays and $3FFB is set, but nothing else: the call to the screen was removed (02:8421)",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "TCRF asked for a US way in: there is none on retail hardware. ROM patch file $4432: 00 20 E7 EA 20 86 08 restores the call; verified in Mesen",
+  "section": "Hidden screens"
+ },
+ {
+  "code": "Battle Game with Up+I+II+Select+Run held on pad 5 (or the only pad)",
+  "effect": "'Tap is not connected' error screen",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "07:A707 tests $36 & $1F = $1F; removed in the US. Verified by writing the pad-5 byte at the test",
+  "section": "Hidden screens"
+ },
+ {
+  "code": "(none: patch the title menu table 06:984C to $94A0)",
+  "effect": "Leftover password screen; a valid code starts the leftover Normal Game through an old CONFIGRATION screen with a SOUND test",
+  "versions": [
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "all five menu entries are $A34E (battle), so the Special Version cannot reach it; 02:8435 calls the old screen 08:88BD with no flag",
+  "section": "Hidden screens"
+ }
+]

@@ -1,0 +1,532 @@
+[
+ {
+  "code": "7352",
+  "effect": "Start at stage 1-1",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 0, stage loads"
+ },
+ {
+  "code": "8831",
+  "effect": "Start at stage 1-2",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 1, stage loads"
+ },
+ {
+  "code": "7255",
+  "effect": "Start at stage 1-3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 2, stage loads"
+ },
+ {
+  "code": "5714",
+  "effect": "Start at stage 1-4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 3, stage loads"
+ },
+ {
+  "code": "5289",
+  "effect": "Start at stage 1-5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 4, stage loads"
+ },
+ {
+  "code": "1352",
+  "effect": "Start at stage 1-6",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 5, stage loads"
+ },
+ {
+  "code": "6892",
+  "effect": "Start at stage 1-7",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 6, stage loads"
+ },
+ {
+  "code": "6722",
+  "effect": "Start at stage 1-8",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 7, stage loads"
+ },
+ {
+  "code": "7793",
+  "effect": "Start at stage 2-1",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 8, stage loads"
+ },
+ {
+  "code": "6428",
+  "effect": "Start at stage 2-2",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 9, stage loads"
+ },
+ {
+  "code": "8492",
+  "effect": "Start at stage 2-3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 10, stage loads"
+ },
+ {
+  "code": "7490",
+  "effect": "Start at stage 2-4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 11, stage loads"
+ },
+ {
+  "code": "4370",
+  "effect": "Start at stage 2-5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 12, stage loads"
+ },
+ {
+  "code": "6682",
+  "effect": "Start at stage 2-6",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 13, stage loads"
+ },
+ {
+  "code": "4677",
+  "effect": "Start at stage 2-7",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 14, stage loads"
+ },
+ {
+  "code": "4692",
+  "effect": "Start at stage 2-8",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 15, stage loads"
+ },
+ {
+  "code": "4680",
+  "effect": "Start at stage 3-1",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 16, stage loads"
+ },
+ {
+  "code": "2247",
+  "effect": "Start at stage 3-2",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 17, stage loads"
+ },
+ {
+  "code": "5725",
+  "effect": "Start at stage 3-3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 18, stage loads"
+ },
+ {
+  "code": "7821",
+  "effect": "Start at stage 3-4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 19, stage loads"
+ },
+ {
+  "code": "5890",
+  "effect": "Start at stage 3-5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 20, stage loads"
+ },
+ {
+  "code": "7258",
+  "effect": "Start at stage 3-6",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 21, stage loads"
+ },
+ {
+  "code": "3379",
+  "effect": "Start at stage 3-7",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 22, stage loads"
+ },
+ {
+  "code": "6009",
+  "effect": "Start at stage 3-8",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 23, stage loads"
+ },
+ {
+  "code": "5389",
+  "effect": "Start at stage 4-1",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 24, stage loads"
+ },
+ {
+  "code": "4080",
+  "effect": "Start at stage 4-2",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 25, stage loads"
+ },
+ {
+  "code": "2501",
+  "effect": "Start at stage 4-3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 26, stage loads"
+ },
+ {
+  "code": "5736",
+  "effect": "Start at stage 4-4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 27, stage loads"
+ },
+ {
+  "code": "3211",
+  "effect": "Start at stage 4-5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 28, stage loads"
+ },
+ {
+  "code": "5589",
+  "effect": "Start at stage 4-6",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 29, stage loads"
+ },
+ {
+  "code": "8902",
+  "effect": "Start at stage 4-7",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 30, stage loads"
+ },
+ {
+  "code": "0721",
+  "effect": "Start at stage 4-8",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 31, stage loads"
+ },
+ {
+  "code": "3703",
+  "effect": "Start at stage 5-1",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 32, stage loads"
+ },
+ {
+  "code": "2679",
+  "effect": "Start at stage 5-2",
+  "versions": [
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists 5-2 as 2609, which the game rejects; typed in Mesen, $0092 = 33, 5-2 loads"
+ },
+ {
+  "code": "2479",
+  "effect": "Start at stage 5-3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 34, stage loads"
+ },
+ {
+  "code": "4792",
+  "effect": "Start at stage 5-4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 35, stage loads"
+ },
+ {
+  "code": "6790",
+  "effect": "Start at stage 5-5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 36, stage loads"
+ },
+ {
+  "code": "1574",
+  "effect": "Start at stage 5-6",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; typed in Mesen, $0092 = 37, stage loads"
+ },
+ {
+  "code": "1019",
+  "effect": "Start at 1-1 with full power-ups",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; $7F70B5 = 1; P1 gets speed 5, fire 8, 8 bombs, all ability flags ($C2:0540)"
+ },
+ {
+  "code": "1222",
+  "effect": "Start at 2-1 with full power-ups",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; $7F70B5 = 2, $0092 = 8"
+ },
+ {
+  "code": "1107",
+  "effect": "Start at 3-1 with full power-ups",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; $7F70B5 = 3, $0092 = 16"
+ },
+ {
+  "code": "0827",
+  "effect": "Start at 4-1 with full power-ups",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; $7F70B5 = 4, $0092 = 24"
+ },
+ {
+  "code": "0107",
+  "effect": "Start at 5-1 with full power-ups",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; $7F70B5 = 5, $0092 = 32"
+ },
+ {
+  "code": "1009",
+  "effect": "View the ending",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; jumps to the ending ($C2:ABE4)"
+ },
+ {
+  "code": "7777",
+  "effect": "Battle: the last round's winner is gold",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs; $1F48 = 1; seen in a COM battle (round-1 winner gold in round 2). Occupies the 5-7 stage slot"
+ },
+ {
+  "code": "0520",
+  "effect": "Battle: start-position/block set 2",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (set A); $024A = 2; changes start positions and soft blocks of stages 1-10, not the stages"
+ },
+ {
+  "code": "0903",
+  "effect": "Battle: start-position/block set 3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (set B); $024A = 3"
+ },
+ {
+  "code": "4622",
+  "effect": "Battle: start-position/block set 1 (everyone starts in the middle)",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$024A = 1; occupies the 5-8 stage slot; arena matched the hand-set $024A = 1 pixel for pixel"
+ },
+ {
+  "code": "5656",
+  "effect": "Riders never get tired after a super attack",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (as \"super attacks without getting tired\"); $7F70B7 = 1 skips STA $E2,X = $A0 at $C2:4479/$C2:455D/$C2:45F8. Played in 1-1 with the rider type set in $0322: without the code one super attack per ~640 frames, with it one every 120 frames (tools/sb4/super5656.lua)"
+ },
+ {
+  "code": "0164",
+  "effect": "Battle: wider random item pool",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$7F70BD = 1; random items come from $C1:5D87 (13 types) instead of $C1:5DA4 (7 types); Mesen saw item $36, which the normal pool lacks"
+ },
+ {
+  "code": "Title: turbo X",
+  "effect": "Unlock battle stages 11 and 12",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs/TCRF. Any X turbo at a 7-9 frame period for 7.5-10 s ($C3:C83C, 48 well-timed presses); sets $7F202D = 12. No Joycard needed, any turbo pad at that rate"
+ },
+ {
+  "code": "Title: tap X 16 times",
+  "effect": "The villain silhouettes under the logo vanish",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$7F715B >= 16 stops their object drawing ($C2:D560); the title then runs at 60 fps"
+ },
+ {
+  "code": "Confirm with pad 2",
+  "effect": "Normal game: play as Black Bomberman on pad 2",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "START/A from a pad other than pad 1 on the title menu or password screen sets $7F70C0, then $1EF2 = 1; only the $0400 player (Black, top right) starts, controlled by pad 2; pad 1 does nothing"
+ }
+]

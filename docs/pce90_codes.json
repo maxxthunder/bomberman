@@ -1,0 +1,194 @@
+[
+ {
+  "code": "MUVWLNPC",
+  "effect": "Start at round 1 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "start of round 1 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUVWNEPC",
+  "effect": "Start at round 2 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "start of round 2 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUVWLSPC",
+  "effect": "Start at round 3 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "start of round 3 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUVWNNZC",
+  "effect": "Start at round 4 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "start of round 4 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUVWLWZC",
+  "effect": "Start at round 5 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "start of round 5 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUVWNSZC",
+  "effect": "Start at round 6 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "start of round 6 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUVWLEZT",
+  "effect": "Start at round 7 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "start of round 7 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUGWNNPC",
+  "effect": "Start at round 8 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "start of round 8 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUOEPHLA",
+  "effect": "Start at round 8 stage 8 with 10 bombs, fire 15, roller skate",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "the last stage with every stored power-up maxed: fire 15 is past the in-game cap of 5 ($09:8784); typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUEEVHVU",
+  "effect": "Start at round 1 stage 1 with 10 bombs, fire 15, roller skate",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "stage 1-1 with every stored power-up maxed (fire 15 is past the in-game cap of 5); typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "RKGEWVHY",
+  "effect": "Start at round 3 stage 5 with 4 bombs, fire 2, roller skate",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "flip 5, shift 2: a code the game's own encoder can show; typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ACLCHINN",
+  "effect": "Start at round 1 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "flip 3, shift 5: accepted, but the encoder only uses shifts 0-2 ($CB15), so the game never shows it; typed with the pad in Mesen (US); $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CUVYVPNP",
+  "effect": "Start at round 1 stage 3 with 3 bombs, fire 14",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "shift 7, the largest the decoder takes (byte 0 bits 0-2); never shown by the game; typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MUVWLNPU",
+  "effect": "Rejected (PASSWORD ERROR)",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "MUVWLNPC with the last letter changed: the bit-count check ($CCCB) fails; typed in Mesen US and JP, $3465 = 2",
+  "section": "Passwords"
+ },
+ {
+  "code": "BOMSOUND",
+  "effect": "Sound test (after the next valid password)",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "TCRF. $C959 compares the 8 letters with $C96F; a match sets $3451 = $FF and then runs the normal decoder, which rejects it (O, M, S, U, N, D are not in their rows). The next valid code, any one, sees $3451 = $FF at $C76B and jumps to the sound test $C59E instead of starting the game. Typed BOMSOUND then MUVWLNPC in Mesen, US and JP: SOUND-00 screen",
+  "section": "Hidden screens"
+ },
+ {
+  "code": "Hi score hundreds digit 3, demo not cut, hold Down+Select+I+II, Run on 1P START, keep holding through the intro",
+  "effect": "Special Select Room: scene, stage, bombs 1-10, fire 1-15 and four power-up toggles",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "TCRF says 300 or more points and a reset. $01:A001 (called at $00:EAEC after the intro) needs: Down+Run+Select+II+I all held ($2200 & $4F = $4F), $10 != 0 (the last attract demo ran to its end, $0B:CDBE; Run during it clears $10) and $2001 = 3, the hundreds digit of the high score, exactly. In Mesen (US): 300 and 1300 open it, 200 and 400 do not, a demo cut short with Run does not; no reset is needed (high score set at power-on works); JP same code and result for 300/400",
+  "section": "Hidden screens"
+ }
+]

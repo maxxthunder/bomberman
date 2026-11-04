@@ -1,0 +1,1289 @@
+[
+ {
+  "code": "2200",
+  "effect": "Start at Area 1 stage 1",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$00; typed in with the pad and the area was started; the GAME OVER screen of that state shows 2200",
+  "section": "password"
+ },
+ {
+  "code": "6800",
+  "effect": "Start at Area 1 stage 2",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$11; typed in with the pad and the area was started; the GAME OVER screen of that state shows 6800",
+  "section": "password"
+ },
+ {
+  "code": "5120",
+  "effect": "Start at Area 1 stage 3",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$33; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "7420",
+  "effect": "Start at Area 1 boss (last cleared: stage 3)",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$3F; typed in with the pad and the area was started; the GAME OVER screen of that state shows 7420",
+  "section": "password"
+ },
+ {
+  "code": "4501",
+  "effect": "Start at Area 2 stage 1",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$00; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "8111",
+  "effect": "Start at Area 2 stage 2",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$11; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "7421",
+  "effect": "Start at Area 2 stage 3",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$33; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "1051",
+  "effect": "Start at Area 2 stage 4",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$77; typed in with the pad and the area was started; the GAME OVER screen of that state shows 1051",
+  "section": "password"
+ },
+ {
+  "code": "3351",
+  "effect": "Start at Area 2 boss (last cleared: stage 4)",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$7F; typed in with the pad and the area was started; the GAME OVER screen of that state shows 3351",
+  "section": "password"
+ },
+ {
+  "code": "4502",
+  "effect": "Start at Area 3 stage 1",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$00; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "8112",
+  "effect": "Start at Area 3 stage 2",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$11; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "7422",
+  "effect": "Start at Area 3 stage 3",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$33; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "1052",
+  "effect": "Start at Area 3 stage 4",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$77; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "3352",
+  "effect": "Start at Area 3 boss (last cleared: stage 4)",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$7F; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "6803",
+  "effect": "Start at Area 4 stage 1",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$00; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "0513",
+  "effect": "Start at Area 4 stage 2",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$11; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "9723",
+  "effect": "Start at Area 4 stage 3",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$33; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "3353",
+  "effect": "Start at Area 4 stage 4",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$77; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "5653",
+  "effect": "Start at Area 4 boss (last cleared: stage 4)",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$7F; typed in with the pad and the area was started; the GAME OVER screen of that state shows 5653",
+  "section": "password"
+ },
+ {
+  "code": "8114",
+  "effect": "Start at Area 5 stage 1",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$00; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "2814",
+  "effect": "Start at Area 5 stage 2",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$11; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "1134",
+  "effect": "Start at Area 5 stage 3",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$33; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "5654",
+  "effect": "Start at Area 5 stage 4",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$77; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "7954",
+  "effect": "Start at Area 5 boss (last cleared: stage 4)",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$7F; typed in with the pad and the area was started",
+  "section": "password"
+ },
+ {
+  "code": "0515",
+  "effect": "Start at final area",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs (Mega Bomberman page, list labelled TG16); accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=5 $20B5=$00; typed in with the pad and the area was started; the GAME OVER screen of that state shows 0515",
+  "section": "password"
+ },
+ {
+  "code": "1510",
+  "effect": "Start at Area 1, stages 2 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$22; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "6720",
+  "effect": "Start at Area 1, stages 3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$44; typed in with the pad and the area was started; the GAME OVER screen of that state shows 6720; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "0430",
+  "effect": "Start at Area 1, stages 1,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$55; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2730",
+  "effect": "Start at Area 1 boss (last cleared: stage 2)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$5F; typed in with the pad and the area was started; the GAME OVER screen of that state shows 2730; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "5040",
+  "effect": "Start at Area 1, stages 2,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$66; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "7340",
+  "effect": "Start at Area 1 boss (last cleared: stage 1)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$6F; typed in with the pad and the area was started; the GAME OVER screen of that state shows 7340; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "3811",
+  "effect": "Start at Area 2, stages 2 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$22; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "8031",
+  "effect": "Start at Area 2, stages 3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$44; typed in with the pad and the area was started; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2731",
+  "effect": "Start at Area 2, stages 1,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$55; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "7341",
+  "effect": "Start at Area 2, stages 2,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$66; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2651",
+  "effect": "Start at Area 2, stages 4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$88; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "6261",
+  "effect": "Start at Area 2, stages 1,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$99; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "1961",
+  "effect": "Start at Area 2, stages 2,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$AA; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "5571",
+  "effect": "Start at Area 2, stages 1,2,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$BB; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "7871",
+  "effect": "Start at Area 2 boss (last cleared: stage 3)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$BF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "6181",
+  "effect": "Start at Area 2, stages 3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$CC; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "0881",
+  "effect": "Start at Area 2, stages 1,3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$DD; typed in with the pad and the area was started; the GAME OVER screen of that state shows 0881; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2191",
+  "effect": "Start at Area 2 boss (last cleared: stage 2)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$DF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "5491",
+  "effect": "Start at Area 2, stages 2,3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$EE; typed in with the pad and the area was started; the GAME OVER screen of that state shows 5491; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "7791",
+  "effect": "Start at Area 2 boss (last cleared: stage 1)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$EF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "3812",
+  "effect": "Start at Area 3, stages 2 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$22; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "8032",
+  "effect": "Start at Area 3, stages 3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$44; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2732",
+  "effect": "Start at Area 3, stages 1,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$55; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "7342",
+  "effect": "Start at Area 3, stages 2,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$66; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2652",
+  "effect": "Start at Area 3, stages 4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$88; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "6262",
+  "effect": "Start at Area 3, stages 1,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$99; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "1962",
+  "effect": "Start at Area 3, stages 2,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$AA; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "5572",
+  "effect": "Start at Area 3, stages 1,2,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$BB; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "7872",
+  "effect": "Start at Area 3 boss (last cleared: stage 3)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$BF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "6182",
+  "effect": "Start at Area 3, stages 3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$CC; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "0882",
+  "effect": "Start at Area 3, stages 1,3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$DD; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2192",
+  "effect": "Start at Area 3 boss (last cleared: stage 2)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$DF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "5492",
+  "effect": "Start at Area 3, stages 2,3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$EE; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "7792",
+  "effect": "Start at Area 3 boss (last cleared: stage 1)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=2 $20B5=$EF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "5123",
+  "effect": "Start at Area 4, stages 2 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$22; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "0433",
+  "effect": "Start at Area 4, stages 3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$44; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "4043",
+  "effect": "Start at Area 4, stages 1,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$55; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "9643",
+  "effect": "Start at Area 4, stages 2,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$66; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "4953",
+  "effect": "Start at Area 4, stages 4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$88; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "8563",
+  "effect": "Start at Area 4, stages 1,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$99; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "3273",
+  "effect": "Start at Area 4, stages 2,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$AA; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "7873",
+  "effect": "Start at Area 4, stages 1,2,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$BB; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "9183",
+  "effect": "Start at Area 4 boss (last cleared: stage 3)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$BF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "8483",
+  "effect": "Start at Area 4, stages 3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$CC; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2193",
+  "effect": "Start at Area 4, stages 1,3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$DD; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "4493",
+  "effect": "Start at Area 4 boss (last cleared: stage 2)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$DF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "7793",
+  "effect": "Start at Area 4, stages 2,3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$EE; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "9004",
+  "effect": "Start at Area 4 boss (last cleared: stage 1)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=3 $20B5=$EF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "7424",
+  "effect": "Start at Area 5, stages 2 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$22; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "2734",
+  "effect": "Start at Area 5, stages 3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$44; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "6344",
+  "effect": "Start at Area 5, stages 1,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$55; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "1054",
+  "effect": "Start at Area 5, stages 2,3 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$66; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "6264",
+  "effect": "Start at Area 5, stages 4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$88; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "0964",
+  "effect": "Start at Area 5, stages 1,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$99; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "5574",
+  "effect": "Start at Area 5, stages 2,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$AA; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "9184",
+  "effect": "Start at Area 5, stages 1,2,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$BB; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "1584",
+  "effect": "Start at Area 5 boss (last cleared: stage 3)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$BF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "0884",
+  "effect": "Start at Area 5, stages 3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$CC; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "4494",
+  "effect": "Start at Area 5, stages 1,3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$DD; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "6794",
+  "effect": "Start at Area 5 boss (last cleared: stage 2)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$DF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "9005",
+  "effect": "Start at Area 5, stages 2,3,4 cleared",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$EE; typed in with the pad and the area was started; the GAME OVER screen of that state shows 9005; out-of-order clear state the game itself never produces: the hub starts the lowest stage not cleared, so the cleared ones are skipped",
+  "section": "password"
+ },
+ {
+  "code": "1405",
+  "effect": "Start at Area 5 boss (last cleared: stage 1)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=4 $20B5=$EF; boss code with a different \"last cleared\" stage; the boss opens the same way",
+  "section": "password"
+ },
+ {
+  "code": "4128",
+  "effect": "Start at Area 1 stage 1 (alias of 2200)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$00; typed in with the pad and the area was started; the GAME OVER screen of that state shows 2200; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "8728",
+  "effect": "Start at Area 1 stage 2 (alias of 6800)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$11; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "3438",
+  "effect": "Start at Area 1, stages 2 cleared (alias of 1510)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$22; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "7048",
+  "effect": "Start at Area 1 stage 3 (alias of 5120)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$33; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "9348",
+  "effect": "Start at Area 1 boss (last cleared: stage 3) (alias of 7420)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$3F; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "8648",
+  "effect": "Start at Area 1, stages 3 cleared (alias of 6720)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$44; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "2358",
+  "effect": "Start at Area 1, stages 1,3 cleared (alias of 0430)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$55; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "4658",
+  "effect": "Start at Area 1 boss (last cleared: stage 2) (alias of 2730)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$5F; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "7958",
+  "effect": "Start at Area 1, stages 2,3 cleared (alias of 5040)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$66; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "9268",
+  "effect": "Start at Area 1 boss (last cleared: stage 1) (alias of 7340)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=0 $20B5=$6F; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "6429",
+  "effect": "Start at Area 2 stage 1 (alias of 4501)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$00; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "0139",
+  "effect": "Start at Area 2 stage 2 (alias of 8111)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$11; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "5739",
+  "effect": "Start at Area 2, stages 2 cleared (alias of 3811)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$22; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "9349",
+  "effect": "Start at Area 2 stage 3 (alias of 7421)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$33; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "0059",
+  "effect": "Start at Area 2, stages 3 cleared (alias of 8031)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$44; typed in with the pad and the area was started; the GAME OVER screen of that state shows 8031; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "4659",
+  "effect": "Start at Area 2, stages 1,3 cleared (alias of 2731)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$55; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "9269",
+  "effect": "Start at Area 2, stages 2,3 cleared (alias of 7341)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$66; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "3969",
+  "effect": "Start at Area 2 stage 4 (alias of 1051)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$77; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "5279",
+  "effect": "Start at Area 2 boss (last cleared: stage 4) (alias of 3351)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$7F; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "4579",
+  "effect": "Start at Area 2, stages 4 cleared (alias of 2651)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$88; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "8189",
+  "effect": "Start at Area 2, stages 1,4 cleared (alias of 6261)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$99; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "3889",
+  "effect": "Start at Area 2, stages 2,4 cleared (alias of 1961)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$AA; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "7499",
+  "effect": "Start at Area 2, stages 1,2,4 cleared (alias of 5571)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$BB; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "9799",
+  "effect": "Start at Area 2 boss (last cleared: stage 3) (alias of 7871)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "accepted by the game's checker ($1B27C) in Mesen 2 (all 10,000 codes fuzzed); $20B3=1 $20B5=$BF; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code",
+  "section": "password"
+ },
+ {
+  "code": "Title menu: Right, Left, Left+Down, Down, Down+Right, Down+Right+II (held combinations, each within 128 frames of the last)",
+  "effect": "Sound Room (WELCOME TO SOUND ROOM): music and sound effect player",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "TCRF and GameFAQs (TG16). Checked by $1AC64 against the table $1ACCA (20 80 C0 40 60 62 FF, PC Engine pad bits) from the title menu handler $19DF3; on a match $19E97 calls $DF54, a far call to bank $12:$9D89. The only button sequence in the ROM. Shown with soundtest.lua",
+  "section": "secret"
+ },
+ {
+  "code": "ROM patch $3F5B: 89 85 67 A9 9D -> 29 85 67 A9 98, then the Sound Room code",
+  "effect": "BOMBERMAN94 DEBUG VERSION menu: STAGE SELECT, BOSS BATTLE, IMPRESSIVE ENDING, SOUND MODE",
+  "versions": [
+   "retail"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "TCRF. The patch changes the far-call target in $DF54 from $12:$9D89 to $12:$9829. No pointer, jump or far call to $9829 exists anywhere in the ROM (byte scan), so there is no button combination: the menu is reachable only by patching",
+  "section": "debug"
+ },
+ {
+  "code": "Restoration: hook the debug pause menu (debugpause.lua)",
+  "effect": "Debug pause menu INV_MODE ON/OFF, MAP_CLEAR, ENEMY nn / N / X / Y editor",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Handler bank $09 $135C4 (with banks $08/$09 at $8000-$BFFF) and its text at $D844 (TCRF's 0x3850 remnant) survive; the wrapper that called it and the code that drew $D844 are gone. Restored with 2 stubs in free ROM space: I on INV_MODE toggles $3709 bit 1 (the death check at $DA5A is skipped while $3709 != 0: lives stayed 3 standing on a bomb, 3 -> 2 without it); I on MAP_CLEAR sets $B8 bit 5, which the stage-goal object ($10131) waits for, and the centre machine opened; Left/Right opens the enemy editor ($B633)",
+  "section": "debug"
+ },
+ {
+  "code": "RAM $3709 = $02 during a stage",
+  "effect": "Invincibility (INV_MODE)",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The flag the debug pause menu toggles; any non-zero value skips the death check at $DA5A. inv.lua: lives stayed 3 after standing on a bomb (2 with $3709 = 0)",
+  "section": "debug"
+ },
+ {
+  "code": "Demo: hold Left while the CD loads the program (after Run on the System Card screen)",
+  "effect": "Japanese title texts: RUNボタンを押して下さい。 and キャラバン用 限定非売品 (\"for the Caravan, limited, not for sale\") instead of PUSH RUN BUTTON / SPECIAL VERSION",
+  "versions": [
+   "demo"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "TCRF has the screen; the check is one read of the System Card pad byte $2228 bit 7 at demo $5640, right after the last program sector is loaded, selecting the text set ($1A/$1B = 6/4 instead of 5/8). The Japanese text does not say \"Special Version\"",
+  "section": "demo"
+ },
+ {
+  "code": "Demo on a System Card below 3.0",
+  "effect": "\"Super CD-ROM2 system required\" screen (yellow, Bomberman cast)",
+  "versions": [
+   "demo"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Demo $4011 calls the System Card version call $E05A and takes this path when X < 3: it reads data sectors 34-57 into VRAM (read on no other path) and loops, alternating 2 Japanese messages. Shown by forcing X = 0 at $4014 with the 3.0 card",
+  "section": "demo"
+ }
+]

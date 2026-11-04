@@ -1,0 +1,1231 @@
+[
+ {
+  "code": "2200",
+  "effect": "Start at Area 1 stage 1",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "fixed",
+  "verified": "emu",
+  "note": "GameFAQs files it only under TurboGrafx-16, but it is the Genesis code too (missing from the Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$00; typed in with the pad and the area was started"
+ },
+ {
+  "code": "6800",
+  "effect": "Start at Area 1 stage 2",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$11; typed in with the pad and the area was started"
+ },
+ {
+  "code": "1510",
+  "effect": "Start at Area 1, stages 2 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$22; typed in with the pad and the area was started; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "5120",
+  "effect": "Start at Area 1 stage 3",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$33; typed in with the pad and the area was started"
+ },
+ {
+  "code": "7420",
+  "effect": "Start at Area 1 boss (last cleared: stage 3)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$3F; typed in with the pad and the area was started; boss open: all stages cleared, stage 3 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "6720",
+  "effect": "Start at Area 1, stages 3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$44; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "0430",
+  "effect": "Start at Area 1, stages 1,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$55; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "2730",
+  "effect": "Start at Area 1 boss (last cleared: stage 2)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$5F; typed in with the pad and the area was started; boss open: all stages cleared, stage 2 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "5040",
+  "effect": "Start at Area 1, stages 2,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$66; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7340",
+  "effect": "Start at Area 1 boss (last cleared: stage 1)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$6F; typed in with the pad and the area was started; boss open: all stages cleared, stage 1 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "4501",
+  "effect": "Start at Area 2 stage 1",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$00; typed in with the pad and the area was started"
+ },
+ {
+  "code": "8111",
+  "effect": "Start at Area 2 stage 2",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$11; typed in with the pad and the area was started"
+ },
+ {
+  "code": "3811",
+  "effect": "Start at Area 2, stages 2 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$22; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7421",
+  "effect": "Start at Area 2 stage 3",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$33; typed in with the pad and the area was started"
+ },
+ {
+  "code": "8031",
+  "effect": "Start at Area 2, stages 3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$44; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "2731",
+  "effect": "Start at Area 2, stages 1,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$55; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7341",
+  "effect": "Start at Area 2, stages 2,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$66; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "1051",
+  "effect": "Start at Area 2 stage 4",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$77; typed in with the pad and the area was started"
+ },
+ {
+  "code": "3351",
+  "effect": "Start at Area 2 boss (last cleared: stage 4)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$7F; typed in with the pad and the area was started; boss open: all stages cleared, stage 4 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "2651",
+  "effect": "Start at Area 2, stages 4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$88; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "6261",
+  "effect": "Start at Area 2, stages 1,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$99; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "1961",
+  "effect": "Start at Area 2, stages 2,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$AA; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "5571",
+  "effect": "Start at Area 2, stages 1,2,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$BB; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7871",
+  "effect": "Start at Area 2 boss (last cleared: stage 3)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$BF; boss open: all stages cleared, stage 3 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "6181",
+  "effect": "Start at Area 2, stages 3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$CC; typed in with the pad and the area was started; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "0881",
+  "effect": "Start at Area 2, stages 1,3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$DD; typed in with the pad and the area was started; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; played through to the boss in BizHawk, US and EU (skipthrough.lua): clearing stage 2 set $953D=$DF, the hub opened the boss, and after the area-complete sequence the game went on to Area 3 stage 1 with $953B=2, $953D=0"
+ },
+ {
+  "code": "2191",
+  "effect": "Start at Area 2 boss (last cleared: stage 2)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$DF; boss open: all stages cleared, stage 2 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "5491",
+  "effect": "Start at Area 2, stages 2,3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$EE; typed in with the pad and the area was started; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7791",
+  "effect": "Start at Area 2 boss (last cleared: stage 1)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$EF; typed in with the pad and the area was started; boss open: all stages cleared, stage 1 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "4502",
+  "effect": "Start at Area 3 stage 1",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$00; typed in with the pad and the area was started"
+ },
+ {
+  "code": "8112",
+  "effect": "Start at Area 3 stage 2",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$11; typed in with the pad and the area was started"
+ },
+ {
+  "code": "3812",
+  "effect": "Start at Area 3, stages 2 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$22; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7422",
+  "effect": "Start at Area 3 stage 3",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "fixed",
+  "verified": "emu",
+  "note": "GameFAQs files it only under TurboGrafx-16, but it is the Genesis code too (missing from the Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$33; typed in with the pad and the area was started"
+ },
+ {
+  "code": "8032",
+  "effect": "Start at Area 3, stages 3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$44; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "2732",
+  "effect": "Start at Area 3, stages 1,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$55; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7342",
+  "effect": "Start at Area 3, stages 2,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$66; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "1052",
+  "effect": "Start at Area 3 stage 4",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$77; typed in with the pad and the area was started"
+ },
+ {
+  "code": "3352",
+  "effect": "Start at Area 3 boss (last cleared: stage 4)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$7F; typed in with the pad and the area was started; boss open: all stages cleared, stage 4 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "2652",
+  "effect": "Start at Area 3, stages 4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$88; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "6262",
+  "effect": "Start at Area 3, stages 1,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$99; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "1962",
+  "effect": "Start at Area 3, stages 2,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$AA; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "5572",
+  "effect": "Start at Area 3, stages 1,2,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$BB; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7872",
+  "effect": "Start at Area 3 boss (last cleared: stage 3)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$BF; boss open: all stages cleared, stage 3 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "6182",
+  "effect": "Start at Area 3, stages 3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$CC; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "0882",
+  "effect": "Start at Area 3, stages 1,3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$DD; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "2192",
+  "effect": "Start at Area 3 boss (last cleared: stage 2)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$DF; boss open: all stages cleared, stage 2 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "5492",
+  "effect": "Start at Area 3, stages 2,3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$EE; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7792",
+  "effect": "Start at Area 3 boss (last cleared: stage 1)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$EF; boss open: all stages cleared, stage 1 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "6803",
+  "effect": "Start at Area 4 stage 1",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "fixed",
+  "verified": "emu",
+  "note": "GameFAQs files it only under TurboGrafx-16, but it is the Genesis code too (missing from the Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$00; typed in with the pad and the area was started"
+ },
+ {
+  "code": "0513",
+  "effect": "Start at Area 4 stage 2",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$11; typed in with the pad and the area was started"
+ },
+ {
+  "code": "5123",
+  "effect": "Start at Area 4, stages 2 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$22; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "9723",
+  "effect": "Start at Area 4 stage 3",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$33; typed in with the pad and the area was started"
+ },
+ {
+  "code": "0433",
+  "effect": "Start at Area 4, stages 3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$44; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "4043",
+  "effect": "Start at Area 4, stages 1,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$55; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "9643",
+  "effect": "Start at Area 4, stages 2,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$66; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "3353",
+  "effect": "Start at Area 4 stage 4",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$77; typed in with the pad and the area was started"
+ },
+ {
+  "code": "5653",
+  "effect": "Start at Area 4 boss (last cleared: stage 4)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$7F; typed in with the pad and the area was started; boss open: all stages cleared, stage 4 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "4953",
+  "effect": "Start at Area 4, stages 4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$88; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "8563",
+  "effect": "Start at Area 4, stages 1,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$99; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "3273",
+  "effect": "Start at Area 4, stages 2,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$AA; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "7873",
+  "effect": "Start at Area 4, stages 1,2,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$BB; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "9183",
+  "effect": "Start at Area 4 boss (last cleared: stage 3)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$BF; boss open: all stages cleared, stage 3 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "8483",
+  "effect": "Start at Area 4, stages 3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$CC; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "2193",
+  "effect": "Start at Area 4, stages 1,3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$DD; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "4493",
+  "effect": "Start at Area 4 boss (last cleared: stage 2)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$DF; boss open: all stages cleared, stage 2 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "7793",
+  "effect": "Start at Area 4, stages 2,3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$EE; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "9004",
+  "effect": "Start at Area 4 boss (last cleared: stage 1)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$EF; boss open: all stages cleared, stage 1 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "8114",
+  "effect": "Start at Area 5 stage 1",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$00; typed in with the pad and the area was started"
+ },
+ {
+  "code": "2814",
+  "effect": "Start at Area 5 stage 2",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$11; typed in with the pad and the area was started"
+ },
+ {
+  "code": "7424",
+  "effect": "Start at Area 5, stages 2 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$22; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "1134",
+  "effect": "Start at Area 5 stage 3",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$33; typed in with the pad and the area was started"
+ },
+ {
+  "code": "2734",
+  "effect": "Start at Area 5, stages 3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$44; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "6344",
+  "effect": "Start at Area 5, stages 1,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$55; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "1054",
+  "effect": "Start at Area 5, stages 2,3 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$66; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "5654",
+  "effect": "Start at Area 5 stage 4",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$77; typed in with the pad and the area was started"
+ },
+ {
+  "code": "7954",
+  "effect": "Start at Area 5 boss (last cleared: stage 4)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$7F; typed in with the pad and the area was started; boss open: all stages cleared, stage 4 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "6264",
+  "effect": "Start at Area 5, stages 4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$88; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "0964",
+  "effect": "Start at Area 5, stages 1,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$99; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "5574",
+  "effect": "Start at Area 5, stages 2,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$AA; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "9184",
+  "effect": "Start at Area 5, stages 1,2,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$BB; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "1584",
+  "effect": "Start at Area 5 boss (last cleared: stage 3)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$BF; boss open: all stages cleared, stage 3 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "0884",
+  "effect": "Start at Area 5, stages 3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$CC; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "4494",
+  "effect": "Start at Area 5, stages 1,3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$DD; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "6794",
+  "effect": "Start at Area 5 boss (last cleared: stage 2)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$DF; boss open: all stages cleared, stage 2 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "9005",
+  "effect": "Start at Area 5, stages 2,3,4 cleared",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$EE; typed in with the pad and the area was started; out-of-order clear state the game itself never produces: the next stage is the lowest uncleared one ($189B4), so the cleared ones are skipped; the hub seal only counts cleared stages in a row from stage 1, so skipped stages show no seal piece until the gap is filled; the hub's Up/Down stage choice also offers the skipped (already cleared) stages"
+ },
+ {
+  "code": "1405",
+  "effect": "Start at Area 5 boss (last cleared: stage 1)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=4 $953D=$EF; boss open: all stages cleared, stage 1 cleared last (kept out of the high nibble of $953D)"
+ },
+ {
+  "code": "0515",
+  "effect": "Start at the final area (Area 6)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "GameFAQs (Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=5 $953D=$00; typed in with the pad and the area was started"
+ },
+ {
+  "code": "4128",
+  "effect": "Start at Area 1 stage 1 (alias of 2200)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$00; typed in with the pad and the area was started; bit 13 of the number is ignored by the checker, the encoder never sets it, so the game never shows this code (game over showed 2200)"
+ },
+ {
+  "code": "8728",
+  "effect": "Start at Area 1 stage 2 (alias of 6800)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$11; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "3438",
+  "effect": "Start at Area 1, stages 2 cleared (alias of 1510)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$22; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "7048",
+  "effect": "Start at Area 1 stage 3 (alias of 5120)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$33; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "9348",
+  "effect": "Start at Area 1 boss (last cleared: stage 3) (alias of 7420)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$3F; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "8648",
+  "effect": "Start at Area 1, stages 3 cleared (alias of 6720)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$44; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "2358",
+  "effect": "Start at Area 1, stages 1,3 cleared (alias of 0430)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$55; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "4658",
+  "effect": "Start at Area 1 boss (last cleared: stage 2) (alias of 2730)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$5F; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "7958",
+  "effect": "Start at Area 1, stages 2,3 cleared (alias of 5040)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$66; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "9268",
+  "effect": "Start at Area 1 boss (last cleared: stage 1) (alias of 7340)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$6F; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "6429",
+  "effect": "Start at Area 2 stage 1 (alias of 4501)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$00; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "0139",
+  "effect": "Start at Area 2 stage 2 (alias of 8111)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$11; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "5739",
+  "effect": "Start at Area 2, stages 2 cleared (alias of 3811)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$22; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "9349",
+  "effect": "Start at Area 2 stage 3 (alias of 7421)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$33; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "0059",
+  "effect": "Start at Area 2, stages 3 cleared (alias of 8031)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$44; typed in with the pad and the area was started; bit 13 of the number is ignored by the checker, the encoder never sets it, so the game never shows this code (game over showed 8031)"
+ },
+ {
+  "code": "4659",
+  "effect": "Start at Area 2, stages 1,3 cleared (alias of 2731)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$55; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "9269",
+  "effect": "Start at Area 2, stages 2,3 cleared (alias of 7341)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$66; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "3969",
+  "effect": "Start at Area 2 stage 4 (alias of 1051)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$77; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "5279",
+  "effect": "Start at Area 2 boss (last cleared: stage 4) (alias of 3351)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$7F; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "4579",
+  "effect": "Start at Area 2, stages 4 cleared (alias of 2651)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$88; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "8189",
+  "effect": "Start at Area 2, stages 1,4 cleared (alias of 6261)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$99; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "3889",
+  "effect": "Start at Area 2, stages 2,4 cleared (alias of 1961)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$AA; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "7499",
+  "effect": "Start at Area 2, stages 1,2,4 cleared (alias of 5571)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$BB; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "9799",
+  "effect": "Start at Area 2 boss (last cleared: stage 3) (alias of 7871)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=1 $953D=$BF; bit 13 of the number is ignored by the checker and never set by the encoder, so the game never shows this code"
+ },
+ {
+  "code": "Title: Right, then hold Left, add Down, release Left, add Right, press II",
+  "effect": "Sound test on TurboGrafx-16 (Bomberman '94) only; does nothing on Genesis",
+  "versions": [],
+  "status": "fixed",
+  "verified": "static",
+  "note": "GameFAQs lists it on the Genesis page, labelled TG16. The Genesis title menu handler ($1A68C) reads only Up, Down and Start; no sound test exists in the ROM"
+ }
+]
