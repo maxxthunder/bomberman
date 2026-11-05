@@ -64,7 +64,7 @@ if __name__ == "__main__":
     os.makedirs(out, exist_ok=True)
     script = os.path.join(out, "fuzz.lua")
     open(script, "w").write(lua(base, TITLE))
-    p = subprocess.run([sys.executable, os.path.join(HERE, "mesen.py"), script, romp], capture_output=True, text=True)
+    p = subprocess.run([sys.executable, os.path.join(HERE, "..", "emu", "mesen.py"), script, romp], capture_output=True, text=True, env=dict(os.environ, MESEN_TIMEOUT="5990"))
     line = next((l for l in p.stdout.splitlines() if l.startswith("RES ")), None)
     if not line:
         sys.exit(p.stdout[-2000:])

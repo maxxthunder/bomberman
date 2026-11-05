@@ -152,7 +152,7 @@ press with B held) was tried every 40 frames for 800 frames:
 Without the code the rider slumps into the tired pose for ten seconds after the attack (top row, frames 1,
 120 and 240 after the first attempt); with 5656 it attacks again as soon as the last one ends (bottom row).
 
-![5656: tired without the code, attacking again with it](img/sb4/5656_super_attack.png)
+![5656: tired without the code, attacking again with it](img/sb4/super_attack_compare.png)
 
 ## New finds
 

@@ -44,7 +44,7 @@
   "verified": "mesen",
   "note": "GameShark, cart RAM: $A1F0 is the owned byte of Charabom 28 in the roster table $A110 + 8 x id. No stage or event sets it. The game reads the table in place, so the card shows on Charabom Select at once and stays after a save. Shown in Mesen in all five versions.",
   "section": "Charaboms",
-  "img": "charaboms_blue.png"
+  "img": "charabom_heat_rock_blue.png"
  },
  {
   "code": "8001F8A1",
@@ -60,7 +60,7 @@
   "verified": "mesen",
   "note": "GameShark, cart RAM: $A1F8, the owned byte of Charabom 29. Shown on Charabom Select in Mesen (all five versions).",
   "section": "Charaboms",
-  "img": "charaboms_blue.png"
+  "img": "charabom_oct_kong_blue.png"
  },
  {
   "code": "8001E0A1",
@@ -76,7 +76,7 @@
   "verified": "mesen",
   "note": "GameShark, cart RAM: $A1E0, the owned byte of Charabom 26 (the game's own message is \"You have rescued the legendary Charabom Shardra!\"). Shown on Charabom Select in Mesen.",
   "section": "Charaboms",
-  "img": "charaboms_blue.png"
+  "img": "charabom_shardra_blue.png"
  },
  {
   "code": "8001E8A1",
@@ -92,7 +92,7 @@
   "verified": "mesen",
   "note": "GameShark, cart RAM: $A1E8, Charabom 27. Shown on Charabom Select in Mesen.",
   "section": "Charaboms",
-  "img": "charaboms_blue.png"
+  "img": "charabom_ox_battra_blue.png"
  },
  {
   "code": "8001xxA1 (xx = 10 + 8 x id)",

@@ -76,7 +76,7 @@ checks), `$01:6565` (the check), `$01:662E` (what an accepted code sets), tables
 | Cloud | 9156 | 2715 | 4707 | 7046 | 0687 | ★ 5294 |
 | Evil | 3725 | 0157 | 5826 | 9587 | 3752 | ★ 8906 |
 
-**Item icons** (what the power-up codes raise; ripped to `docs/img/items/pocket/`, `tools/pocket/items.py`):
+**Item icons** (what the power-up codes raise; ripped in Game Boy Color colours to `docs/img/items/pocket/`, `tools/pocket/items.py`):
 
 | Icon | Item | File |
 |---|---|---|
@@ -208,7 +208,10 @@ each screen change.
 
 On a Game Boy Color (boot `A` = `$11`) the game sets `$C1A2` = 2, switches to double speed (`$00:0578`) and uses
 colour palettes. The passwords and everything above are the same in both
-modes (the tests ran in DMG mode).
+modes (the tests ran in DMG mode). The screenshots on this page are Game Boy Color captures (Mesen, model
+GameboyColor), except the SGB borders and the debug menu: that menu never loads a colour palette, so on a Game Boy
+Color it is a blank white screen (all 64 palette entries stay `$7FFF`, the menu is in VRAM), and its picture is the
+DMG capture.
 
 ![Title and Forest 1 on a Game Boy Color](img/pocket/cgb.png)
 
@@ -216,7 +219,7 @@ modes (the tests ran in DMG mode).
 
 ![Title](img/pocket/title.png)
 
-Logo: `docs/img/logos/pocket.png` (`tools/pocket/logo.py`, DMG shades).
+Logo: `docs/img/logos/pocket.png` (`tools/pocket/logo.py`, Game Boy Color colours).
 
 ## Open
 

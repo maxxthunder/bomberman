@@ -69,7 +69,8 @@ ORs the code's bit into `$6273` (masked to 7 bits) and into `$6274` (after clear
 These 10 are the whole retail table. All 10 were injected in Mesen and each scene and RAM flag
 checked. 5656 was also typed with real presses.
 
-![No code, 4622 and 0926 a few seconds into the same battle](img/sb5/battle_codes_none_4622_0926.png)
+![4622 typed, the battle starting](img/sb5/battle_4622.png)
+![0926 typed, the battle starting](img/sb5/battle_0926.png)
 ![1103: COM LEVEL goes past つよい (strong) to スーパー (super)](img/sb5/com_level_super_1103.png)
 
 ### The Caravan table: 0719 and 4737 are Caravan-only

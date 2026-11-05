@@ -3,7 +3,7 @@
 Four re-release dumps compared byte for byte with the retail HuCards documented in [`pce90.md`](pce90.md),
 [`pce93.md`](pce93.md) and [`pce94.md`](pce94.md), and checked in a portable Mesen 2 (headless test runner) with the
 scripts in `tools/pcevc/` (`run.sh <pce90|pce93|pce94> "<rom file>" script.lua [VAR=value]`, which reuses that
-game's `lib.lua` and `mesen.py`). Addresses are `bank:logical` or file offsets as in the game's own page.
+game's `lib.lua`). Addresses are `bank:logical` or file offsets as in the game's own page.
 
 | Dump | MD5 | Compared with | Bytes that differ |
 |---|---|---|---|

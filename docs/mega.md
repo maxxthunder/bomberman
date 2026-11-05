@@ -75,7 +75,7 @@ called by the game-over screen `$1B906`), `$1BB2C` (number to digits). `tools/me
 - A wrong code shows the rabbit's X card and stays on the screen: ![](img/mega/password_reject.png)
 - The encoder was checked too (`gameover.lua`): starting from 14 codes, lives set to 0 and dying, the GAME OVER
   screen gave back the entered code for all 12 non-alias ones (in-order, out-of-order and every boss variant tried),
-  and `8031` after `0059`, `2200` after `4128` (aliases come back in the game's own form): ![](img/mega/alias_4128_gameover.png)
+  and `8031` after `0059`, `2200` after `4128` (aliases come back in the game's own form): ![](img/mega/gameover_alias.png)
 
 ### Entering a password
 

@@ -41,4 +41,4 @@ if __name__ == "__main__":
         k, v = kv.split("=", 1)
         body = body.replace(k, v)
     open(tmp, "w").write(head + PRE + body)
-    sys.exit(subprocess.run([sys.executable, os.path.join(HERE, "mesen.py"), tmp, romp]).returncode)
+    sys.exit(subprocess.run([sys.executable, os.path.join(HERE, "..", "emu", "mesen.py"), tmp, romp], env=dict(os.environ, MESEN_TIMEOUT="5990")).returncode)

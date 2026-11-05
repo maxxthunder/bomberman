@@ -450,7 +450,6 @@ colour 0 transparent, crop to the logo above the menu text, save as an indexed P
 | `password.py`, `password.mjs` | encode/decode/validate (no dependencies); `python password.py` lists and self-checks |
 | `fuzz.py` | runs all 10,000 codes through the game's own check in Mesen |
 | `run.py` | runs a Lua test on any version: finds addresses by pattern, adds `title()` and `pw()` |
-| `mesen.py` | copy of `tools/emu/mesen.py` that can keep running with an empty input queue |
 | `type_code.lua`, `joycard.lua`, `debug_menu.lua`, `sudden_death.lua` | the Mesen checks above |
 | `make_ips.py` | builds `patches/sb2_debug_menu_<ver>.ips` from the five ROMs, checking the switch bytes first |
 | `debug_menu_check.lua`, `debug_menu_all.lua` | debug-menu checks (the first runs on the IPS-patched ROM, no RAM writes) |

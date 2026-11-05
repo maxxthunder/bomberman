@@ -1,4 +1,6 @@
 -- pce90 helpers, prepended to test scripts by run.sh
+KEEP=true  -- an at() function may return the input to hold (default: keep the last one)
+function dump(name) local t={} for a=0,0x1FFF do t[#t+1]=string.format('%02x',emu.read(a,emu.memType.pceWorkRam)) end print('DUMP '..name..' '..table.concat(t)) end
 W=emu.memType.pceWorkRam
 function S(n) at(function() shot(n) end) end
 function D(n) at(function() dump(n) end) end

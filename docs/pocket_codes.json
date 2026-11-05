@@ -285,7 +285,7 @@
   "verified": "mesen",
   "note": "Table entry 25. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). GameFAQs lists it (All Items, Super Power-Up). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
   "section": "Passwords",
-  "img": "codes.png"
+  "img": "password_5656.png"
  },
  {
   "code": "4622",

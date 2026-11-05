@@ -1,6 +1,6 @@
 # Bomberman '94 (PC Engine HuCard, Japan) and its demo CD: passwords and secrets
 
-Everything here comes from a disassembly of the HuCard (`tools/pce94/huc6280.py`, a recursive HuC6280 disassembler
+Everything here comes from a disassembly of the HuCard (`tools/huc6280.py 94`, a recursive HuC6280 disassembler
 fed with entry points from Mesen's code/data log; output in `disasm/pce94/bankNN.asm`, one file per 8 KB bank) and
 of the demo CD's boot program (`tools/pce94/demo_disasm.py`, output in `disasm/pce94/demo/`), checked in Mesen 2
 (portable copy, headless test runner) with the Lua scripts in `tools/pce94/` (`run.sh script.lua card|demo
@@ -373,11 +373,11 @@ Patches (IPS, built and checked against the ROM by `tools/pce94/mkpatch.py`):
 - `tools/pce94/fuzz.lua` (all 10,000 codes through the game), `codes.lua` (typed codes), `gameover.lua`
   (encoder), `soundtest.lua` (Sound Room, `DEBUG=1` the debug menu patch), `debugpause.lua` + `fontdump.lua`
   (restored pause menu), `inv.lua` (invincibility), `demo.lua` (demo boot variants), `mkstates.lua`, `lib.lua`,
-  `run.sh`, `mesen.py`.
+  `run.sh`.
 - `tools/pce94/logodump.lua` + `logo.py`: logos from the title screen's VRAM, SAT and palette. Retail: every
   sprite with palette 2, minus colours 10/12/13/15 (the comet streak shares the cells). Demo: sprites with
   palettes 0 and 2 above screen y 130. Colour 0 transparent, cropped tight. The Japanese-text demo title gives
   a byte-identical logo.
-- `tools/pce94/huc6280.py`, `demo_disasm.py`, `trace.lua`, `rawtiles.py`.
+- `tools/huc6280.py 94`, `tools/pce94/demo_disasm.py`, `trace.lua`, `rawtiles.py`.
 - `tools/pce94/cov.py` + `cov.lua` (coverage runs), `maps.py` (map decoder and renderer), `mkpatch.py` (IPS);
   the sweeps `tools/pce93/sweep.py` and `tools/pce93/text.py` take `94`.

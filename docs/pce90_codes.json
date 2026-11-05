@@ -170,7 +170,7 @@
  },
  {
   "code": "MUVWLNPU",
-  "effect": "Rejected (PASSWORD ERROR)",
+  "effect": "Rejected: the letters are cleared for a new try",
   "versions": [
    "US",
    "JP",

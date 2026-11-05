@@ -168,7 +168,7 @@ different sprite set for the player (`$C4:18B0` loads `$C3:26F4` instead of `$C3
 Normal Game until power-off (cleared only at boot, `$C4:0211`). Typed in Mesen, then a Normal Game:
 normal start on the left, after 5656 on the right.
 
-![](img/sb1/5656_small_bomberman.png)
+![](img/sb1/small_bomberman_compare.png)
 
 ### Sound test: controller 5, R on the title (Known)
 

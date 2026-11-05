@@ -1,6 +1,6 @@
 # Bomberman: Users Battle (PC Engine HuCard, Japan, 1990): what it is and what's left in it
 
-Everything here comes from disassembling the HuCard (`tools/pceub/huc6280.py`, the pce90 HuC6280 disassembler;
+Everything here comes from disassembling the HuCard (`tools/huc6280.py`, the pce90 HuC6280 disassembler;
 coverage grown from Mesen 2 code/data logs of title, battle, password and 1P runs, listing in `disasm/pceub/ub.asm`,
 entry points in `disasm/pceub/entries.txt`) and checking the results in Mesen 2 (`tools/pceub/run.sh` runs a Lua
 script headless with `tools/pceub/lib.lua` prepended; a second Mesen copy with a TurboTap in port 1 runs the battle

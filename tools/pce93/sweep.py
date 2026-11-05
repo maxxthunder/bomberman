@@ -4,7 +4,7 @@
   python tools/pce93/sweep.py pad   <93|94> <rom> <out.txt> <cdl...>   code that reads the pad bytes and compares
   python tools/pce93/sweep.py flags <93|94> <rom> <out.txt> <cdl...> [--wnz log.txt ...]   RAM read but never set
 
-The code set is a recursive trace (tools/pce9x/huc6280.py) from the vectors plus one entry per run of logged code
+The code set is a recursive trace (tools/huc6280.py, Dis93 / Dis94) from the vectors plus one entry per run of logged code
 (slot voting as cdl2entries.py; '94 also takes disasm/pce94/entries.txt). A CDL file is Mesen's raw log (a
 9-byte 'CDLv2' header is skipped); bit 0 = executed as code, bit 1 = read as data.
 dead: every traced instruction never executed, grouped into blocks; each block gets its static callers
@@ -13,6 +13,8 @@ as clean code ending in RTS/RTI/JMP and are reached by nothing traced.
 """
 import os, re, sys, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(HERE))
+import huc6280 as H
 STOP = {"RTS", "RTI", "JMP", "BRA", "BRK"}
 
 
@@ -49,9 +51,7 @@ class Code:
         self.game, self.rom, self.cdl = game, rom, cdl
         self.slot = slots(rom, cdl)
         if game == "93":
-            sys.path.insert(0, HERE)
-            import huc6280 as H
-            d = H.Dis(rom)
+            d = H.Dis93(rom)
             vec = [rom[i] | rom[i + 1] << 8 for i in range(0x1FF6, 0x2000, 2)]
             d.run([(v, tuple(d.default)) for v in vec])
             for o, s, mpr in self.entries():
@@ -59,9 +59,7 @@ class Code:
             self.code = {o: (pc, n, t.split()[0], t) for o, (pc, n, t) in d.code.items() if not t.startswith("db ")}
             self.inl = {o: (pc, n, t) for o, (pc, n, t) in d.code.items() if t.startswith("db ")}
         else:
-            sys.path.insert(0, os.path.join(HERE, "..", "pce94"))
-            import huc6280 as H
-            d = H.Dis(rom)
+            d = H.Dis94(rom)
             mpr = [0xFF, 0xF8, None, None, None, None, None, 0]
             for v in (0x1FFE, 0x1FFC, 0x1FFA, 0x1FF8, 0x1FF6):
                 d.run(rom[v] | rom[v + 1] << 8, mpr)
@@ -165,14 +163,9 @@ def dead(c, out):
 
 
 def decode(c, o, pc):
-    if c.game == "93":
-        import huc6280 as H
-        n, t, _ = H.decode(c.rom, o, pc)
-        return n, t, H.OPS[c.rom[o]][0]
-    import huc6280 as H
     op, mode = H.OPS[c.rom[o]]
-    n = H.SIZE[mode]
-    return n, H.fmt(op, mode, c.rom[o:o + n], pc), op
+    n, t, _ = H.decode(c.rom, o, pc, c.game == "94")
+    return (n if c.game == "93" else H.SIZE[mode]), t, op
 
 
 def orphans(c):

@@ -16,7 +16,7 @@ Usage: python tools/pce90/deadcode.py <rom.pce> "<MAPS line>" <cdl> [<cdl> ...] 
   opcodes, ending in RTS/RTI/JMP, with a JSR/JMP into known code) are listed as 'orphan' candidates.
 """
 import os, sys
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import huc6280 as H
 
 args = sys.argv[1:]

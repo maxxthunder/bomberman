@@ -26,7 +26,7 @@ if __name__ == "__main__":
     t = find(open(romp, "rb").read(), TITLE_POLL)
     script = os.path.join(work, "logo.lua")
     open(script, "w").write(LUA % (t, t))
-    p = subprocess.run([sys.executable, os.path.join(HERE, "mesen.py"), script, romp], capture_output=True, text=True)
+    p = subprocess.run([sys.executable, os.path.join(HERE, "..", "emu", "mesen.py"), script, romp], capture_output=True, text=True, env=dict(os.environ, MESEN_TIMEOUT="5990"))
     dump = os.path.join(work, "ppu.txt")
     open(dump, "w").write("\n".join(l for l in p.stdout.splitlines() if l[:3] in ("ST ", "VRA", "CGR")))
     img = bgrender.render(bgrender.load(dump), 0)

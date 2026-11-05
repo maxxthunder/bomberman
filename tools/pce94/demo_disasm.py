@@ -1,15 +1,15 @@
-"""Disassemble the Bomberman '94 demo CD's boot program with huc6280.py.
+"""Disassemble the Bomberman '94 demo CD's boot program with tools/huc6280.py.
 
 Usage: python demo_disasm.py "<Track 2>.bin" <syscard.pce> <outdir>
 Extracts the data track (2352-byte raw sectors, 2048 bytes of user data at +16; data starts at file sector 225,
 after the 3-second pregap) to <outdir>/data.bin, then builds a memory image for the disassembler: banks $00-$1F =
 the System Card, banks $80-$83 = data sectors 2-17 (the IPL record in sector 1 loads them to $4000 with MPR2-6 =
-$80-$84). Traces from $4000 and writes <outdir>/bankNN.asm like huc6280.py.
+$80-$84). Traces from $4000 and writes <outdir>/bankNN.asm like huc6280.py 94.
 """
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import huc6280  # noqa: E402
 
 raw = open(sys.argv[1], "rb").read()
@@ -26,7 +26,7 @@ card = open(sys.argv[2], "rb").read()
 img[:len(card)] = card
 prog = data[blk * 2048:(blk + bln) * 2048]
 img[0x80 * 0x2000:0x80 * 0x2000 + len(prog)] = prog
-d = huc6280.Dis(bytes(img), inline=False)
+d = huc6280.Dis94(bytes(img), inline=False)
 d.run(ipl[6] | ipl[7] << 8, [0xFF, 0xF8, 0x80, 0x81, 0x82, 0x83, 0x84, 0x00], "boot")
 d.write(out)
 for f in os.listdir(out):            # keep only the loaded program's banks

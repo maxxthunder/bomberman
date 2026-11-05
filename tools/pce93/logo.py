@@ -1,4 +1,4 @@
-"""Title logo from a title-screen VRAM/SAT/palette dump (vdump in mesen.py): python logo.py <base> <us|jp|sp> out.png
+"""Title logo from a title-screen VRAM/SAT/palette dump (vdump in lib.lua): python logo.py <base> <us|jp|sp> out.png
 The logo is all sprites: every sprite with palette 2 (BOMBER MAN '93), plus in the US the TM sprite next to it
 (the one at screen y 96; the other TM sprite is in the copyright line) and in the Special Version the
 SPECIAL VERSION banner (palette 4, screen y 96-119). Colour 0 transparent, cropped tight, native resolution.

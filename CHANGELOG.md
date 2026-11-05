@@ -2,6 +2,15 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.3.0 (2026-11-05)
+- On the site (now on GitHub Pages): each game's passwords and special codes come first; debug notes, cheat codes and
+  patches are at the bottom. Card details are collapsed behind a Details toggle.
+- Every screenshot on a code's card shows that exact code; the ones that showed a blank entry, another code or
+  several codes were re-captured.
+- Pocket Bomberman's logo, icons and screenshots are in Game Boy Color colours.
+- Removed the Super Bomberman 3 soft-reset patches (the Pro Action Replay codes stay).
+- Tools: one HuC6280 disassembler, one emulator launcher (`tools/emu/run.sh`) and one Mesen runner.
+
 ## 1.2.1 (2026-11-05)
 - Fixed: switching the Bomberman '93 or Bomberman II generator to another version made codes the checker rejected;
   Pocket Bomberman's ending code was missing from its special-code menu.

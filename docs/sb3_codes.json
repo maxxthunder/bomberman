@@ -1437,18 +1437,6 @@
   "note": "The beta checks (count & $F8) = $28, a narrower window: every 9 frames works, every 7 does not."
  },
  {
-  "code": "IPS patches/sb3_soft_reset_<eu|jp|beta>.ips, then hold Select+Start+L+R on pad 1",
-  "effect": "Soft reset to the Hudson logo / title screen (restores the unreferenced check at $C0:013A)",
-  "versions": [
-   "eu",
-   "jp",
-   "beta"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "The check (LDA $4E / CMP #$33 / JML $80F000) is in all three ROMs but nothing calls it. The patch moves the pad routine's PLX/PLY/RTL at $C0:0137 so the check runs every frame. Built and verified by tools/sb3/make_ips.py; tested in Mesen on EU, JP and the beta."
- },
- {
   "code": "7E542D:0C",
   "effect": "Battle stages 11 (SUPERSTAR) and 12 (HAPPY HAPPY) on the stage select",
   "versions": [

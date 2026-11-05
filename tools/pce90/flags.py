@@ -13,7 +13,7 @@ destination range of TII/TIN/TIA/TAI/TDD block moves. Printed:
 '*' marks reads that never executed in the runs.
 """
 import os, re, sys
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import huc6280 as H
 
 rom = open(sys.argv[1], "rb").read()

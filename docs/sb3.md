@@ -291,11 +291,7 @@ nothing tells which palette belongs to an asset, so unused ones could not be tol
 - **Pad 2**: the input code reads all five pads alike (`$C0:F3F3`, `$C0:0094`); nothing reads pad 2 alone.
 - **★ New: an unreferenced soft reset.** `$C0:013A` is `LDA $4E / CMP #$33 / BNE / JML $80F000`: with
   **Select+Start+L+R** held on pad 1 it jumps to the reset routine. Nothing calls it in EU, JP or the beta (no
-  JSR/JSL/JML to it anywhere). `patches/sb3_soft_reset_{eu,jp,beta}.ips` (built by `tools/sb3/make_ips.py`) rewrite
-  the end of the per-frame pad routine (`$C0:0137`, PLX/PLY/RTL) to run the check before returning; it needs no
-  free space because it reuses the dead routine's own bytes. Verified in Mesen on EU and the beta from inside 1-1
-  (and on JP from the stage card): the reset vector code runs at once and the game is back on the title screen;
-  the unpatched ROM just keeps playing. Two PAR ROM codes do the same (see Cheat codes; round 1 wrongly said PAR could not).
+  JSR/JSL/JML to it anywhere). Two PAR ROM codes hook it into the per-frame pad routine (see Cheat codes).
   ![Unpatched after the combo, patched before, patched after](img/sb3/soft_reset.png)
 
 ## Hidden-content sweep (round 3)
@@ -427,4 +423,3 @@ No invincibility code: no tested-but-unset flag guards the death path, so there 
   copied from `K:\Emulators\Mesen` into `$SB3_MESEN_DIR`, with its own `settings.json`, so nothing is written to the
   normal Mesen data folder.
 - `tools/sb3/assets.py`: asset codec and tables (`list`, `diff`, `png ID out.png`); runs a self-check with no arguments.
-- `tools/sb3/make_ips.py`: builds `patches/sb3_soft_reset_*.ips` and checks each against its ROM.

@@ -1,4 +1,4 @@
-"""Render PC Engine VDC layers from a Mesen dump (vdump in mesen.py): python vram_render.py <base> [bg|spr] [out.png]
+"""Render PC Engine VDC layers from a Mesen dump (vdump in lib.lua): python vram_render.py <base> [bg|spr] [out.png]
 <base>.vram (64 KB), <base>.pal (512 VCE colours), <base>.spr (SAT). Colour 0 of every palette is transparent.
 BG: 32x32 BAT at VRAM word 0, entry = tile (bits 0-11, 16 words each) | palette << 12. Tiles are 4 planes:
 words 0-7 hold planes 0/1 (low/high byte) of rows 0-7, words 8-15 planes 2/3.

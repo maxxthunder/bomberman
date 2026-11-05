@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Game Boy Color, Super Nintendo, Genesis and PC Engine
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.2.1](https://img.shields.io/badge/version-1.2.1-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.3.0](https://img.shields.io/badge/version-1.3.0-ff4f9a)](CHANGELOG.md)
 
 <p align="center">
   <img src="docs/img/logos/nes1_us.png" alt="Bomberman (NES)" height="72">
@@ -187,9 +187,9 @@ Each code list is also in `docs/<game>_codes.json`, and the screenshots that pro
   `node tools/check_page.mjs` checks the result.
 - `tools/disasm.py`: recursive 65816 disassembler (LoROM and HiROM), grown with entry points from Mesen code/data logs.
   `tools/m68k.py`: 68000 listing for Mega Bomberman. `tools/m6502.py` (NES) and `tools/sm83.py` (Game Boy) do the same
-  for the 8-bit games, and `tools/<game>/huc6280.py` for the PC Engine.
-- `tools/emu/mesen.py` and `tools/emu/bizhawk.py` run the Lua test scripts in `tools/<game>/` headless. Set `MESEN`
-  or `EMUHAWK` to the emulator.
+  for the 8-bit games, and `tools/huc6280.py` for the PC Engine.
+- `tools/<game>/run.sh script.lua [ver]` (all through `tools/emu/run.sh`) runs a game's Lua test scripts headless with
+  `tools/emu/mesen.py` (or `mesen_gb.py`, `mesen_nes.py`, `bizhawk.py`). Set `MESEN` or `EMUHAWK` to the emulator.
 
 IPS patches for the debug menus and other restored features are in `patches/`.
 

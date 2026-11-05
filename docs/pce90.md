@@ -1,6 +1,6 @@
 # Bomberman (PC Engine / TurboGrafx-16, 1990): passwords and secrets
 
-Everything here comes from disassembling the HuCards (`tools/pce90/huc6280.py`, a HuC6280 disassembler that
+Everything here comes from disassembling the HuCards (`tools/huc6280.py`, a HuC6280 disassembler that
 follows the MPR bank mapping; listings in `disasm/pce90/`) and checking the results in Mesen 2
 (`tools/pce90/run.sh` runs a Lua script headless with `tools/pce90/lib.lua` prepended). Addresses are
 `bank:address` as mapped when the code runs; the password code is bank 2 at `$C000`, the Special Select Room

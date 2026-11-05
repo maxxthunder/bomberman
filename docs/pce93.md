@@ -1,6 +1,6 @@
 # Bomberman '93 (PC Engine / TurboGrafx-16): passwords and secrets
 
-Everything here comes from disassembling the three HuCards with `tools/pce93/huc6280.py` (recursive descent from
+Everything here comes from disassembling the three HuCards with `tools/huc6280.py 93` (recursive descent from
 the reset vector, MPR bank tracking, extra entry points from Mesen 2 code/data logs via `tools/pce93/cdl2entries.py`;
 output in `disasm/pce93/us.asm`, `jp.asm`, `sp.asm`) and checking the results in Mesen 2 with the Lua scripts in
 `tools/pce93/` (`run.sh script.lua us|jp|sp`). Addresses are `bank:logical` in the USA version unless a version is named;
