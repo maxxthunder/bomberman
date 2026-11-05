@@ -2,6 +2,13 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.4.0 (2026-11-05)
+- Each console has its own colour (Super Nintendo purple, Genesis blue, PC Engine orange, NES red, Game Boy green), and
+  passwords are drawn as plates in the style of that console's password screen.
+- Cards carry a coloured edge for what they are: a code to type, a secret, a cheat-device code, a patch or notes.
+- Screenshots are shown full card width; the game picker is one scrolling row once a game is open.
+- Light mode, following the device setting.
+
 ## 1.3.0 (2026-11-05)
 - On the site (now on GitHub Pages): each game's passwords and special codes come first; debug notes, cheat codes and
   patches are at the bottom. Card details are collapsed behind a Details toggle.

@@ -14,10 +14,26 @@
   /* "Bomber night": navy arena, white helmet plates, the antenna's pink for controls, fuse yellow for New */
   --bg: #0c1230; --panel: #161f4e; --panel-2: #1d2862; --line: #2e3b85; --ink: #f2f4ff; --muted: #aab3de;
   --pink: #ff5c9d; --pink-soft: #3b1d4d; --fuse: #ffd23f; --flame: #ff8a3d; --ok: #5ee08b; --bad: #ff6f6f;
-  --plate: #f4f6ff; --plate-ink: #111735; --screen: #1f43b0; --screen-ink: #ffffff; --screen-line: #6f8cf0;
+  --plate: #f4f6ff; --plate-ink: #111735; --rule: rgb(255 255 255 / .05); --hold: #8a90b0;
+  --cheat: #5aa9ff; --debug: #6d78b0;
   --display: "Bungee", Impact, system-ui, sans-serif; --body: "Nunito", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Consolas, monospace; color-scheme: dark;
+  /* the accent and the code plate follow the console (set per platform group and on the game page) */
+  --acc: var(--pink); --code-bg: var(--plate); --code-ink: var(--plate-ink);
 }
+@media (prefers-color-scheme: light) {
+  :root { --bg: #f3f4fa; --panel: #ffffff; --panel-2: #eceffa; --line: #d4d9ee; --ink: #151b3d; --muted: #59618c;
+    --pink: #d61f6a; --pink-soft: #ffe4ef; --fuse: #f2b600; --flame: #e8641a; --ok: #12864a; --bad: #c62828;
+    --plate: #eef1ff; --plate-ink: #111735; --rule: rgb(0 0 0 / .06); --hold: #9aa0bd; --cheat: #1f6fd6; --debug: #8a92b8;
+    color-scheme: light; }
+}
+/* console colours: Super Nintendo purple, Genesis blue, PC Engine orange, NES red, Game Boy green;
+   code plates styled after each console's password screens */
+[data-fam=snes] { --acc: #8c6cf0; }
+[data-fam=md] { --acc: #2f80ff; --code-bg: #0b0f1e; --code-ink: #ffffff; }
+[data-fam=pce] { --acc: #ff7a1a; --code-bg: #ffffff; --code-ink: #b3400b; }
+[data-fam=nes] { --acc: #e83a3a; --code-bg: #000000; --code-ink: #ffffff; }
+[data-fam=gb] { --acc: #6f9a1f; --code-bg: #c4cfa1; --code-ink: #0f380f; }
 [hidden] { display: none !important; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--body); }
@@ -39,23 +55,23 @@ button { cursor: pointer; }
 /* game picker: full logo cards until a game is chosen, then a compact sticky row (a dropdown on phones) */
 #picker { display: grid; gap: 14px; }
 .pgroup { display: grid; gap: 8px; }
-.pgroup h3 { font: 800 13px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.pgroup h3 { font: 800 13px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--acc); }
 .gcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-.gcard { background: var(--panel); border: 2px solid var(--line); border-radius: 12px; padding: 12px 8px 10px; display: grid; gap: 4px;
+.gcard { background: var(--panel); border: 2px solid var(--line); border-top: 4px solid var(--acc); border-radius: 12px; padding: 12px 8px 10px; display: grid; gap: 4px;
   justify-items: center; align-content: start; font: 800 15px/1.2 var(--body); text-align: center; min-width: 0; }
 .gcard img { width: 100%; height: 72px; object-fit: contain; image-rendering: pixelated; }
 .gcard small { color: var(--muted); font: 600 13px var(--body); }
 .gcard:hover { border-color: var(--muted); }
-.gcard[aria-pressed=true] { border-color: var(--pink); background: var(--pink-soft); }
+.gcard[aria-pressed=true] { border-color: var(--acc); background: color-mix(in srgb, var(--acc) 22%, var(--panel)); }
 @media (max-width: 760px) { .gcards { grid-template-columns: repeat(3, 1fr); gap: 8px; } }
 @media (max-width: 480px) { .gcard { padding: 8px 4px; font-size: 13px; } .gcard img { height: 52px; } .gcard small { font-size: 12px; } }
 #gsel_wrap { display: none; }
 #picker.compact { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 8px 0; border-bottom: 1px solid var(--line); margin: -8px 0 0; }
-#picker.compact #cards { display: flex; flex-wrap: wrap; gap: 6px; }
+#picker.compact #cards { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: thin; padding-bottom: 2px; }
 #picker.compact .pgroup, #picker.compact .gcards { display: contents; }
 #picker.compact .pgroup h3, #picker.compact .gcard .nm, #picker.compact .gcard small { display: none; }
-#picker.compact .gcard { padding: 4px 6px; border-radius: 8px; }
-#picker.compact .gcard img { width: 64px; height: 30px; }
+#picker.compact .gcard { padding: 3px 5px; border-radius: 8px; border-top-width: 3px; flex: none; }
+#picker.compact .gcard img { width: 58px; height: 26px; }
 @media (max-width: 600px) {
   #picker.compact #cards { display: none; }
   #picker.compact #gsel_wrap { display: flex; gap: 10px; align-items: center; font-weight: 800; min-width: 0; }
@@ -91,11 +107,13 @@ select { padding-right: 4px; }
 .up { width: 24px; height: 24px; flex: none; image-rendering: pixelated; }
 /* Game Boy icons are dark greys: give them the screen's pale backdrop */
 .up[src*="/gb"] { background: #d8e0c0; border-radius: 3px; }
+/* the other consoles' icons are drawn for a dark screen: keep one behind them in light mode */
+@media (prefers-color-scheme: light) { .up:not([src*="/gb"]) { background: #151b3d; border-radius: 3px; } }
 .out > label { min-width: 0; max-width: 100%; }
 .out { min-width: 0; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; border-top: 1px solid var(--line); padding-top: 14px; }
-input.code-in { background: var(--plate); color: var(--plate-ink); border: 0; border-radius: 10px; padding: 8px 14px;
+input.code-in { background: var(--code-bg); color: var(--code-ink); border: 2px solid var(--acc); border-radius: 10px; padding: 8px 14px;
   font: 800 max(14px, min(clamp(22px, 7vw, 46px), (100vw - 110px) / (var(--len, 4) * .85)))/1.1 var(--mono); letter-spacing: .14em; text-transform: uppercase; width: calc(var(--len, 4) * 1.2em + 30px); max-width: 100%; }
-input.code-in::placeholder { color: #8a90b0; letter-spacing: .14em; }
+input.code-in::placeholder { color: var(--hold); letter-spacing: .14em; }
 .res { flex: 1 1 240px; display: grid; gap: 4px; }
 .verdict { margin: 0; font-weight: 800; font-size: 19px; }
 .verdict.ok { color: var(--ok); }
@@ -114,7 +132,16 @@ input.code-in::placeholder { color: #8a90b0; letter-spacing: .14em; }
 .code-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 10px; }
 .code-card { position: relative; min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 6px; align-content: start; }
 .code-card h3 { font: 800 17px/1.3 var(--body); overflow-wrap: anywhere; }
+.code-card { border-left: 5px solid var(--kind, var(--line)); }
+.code-card[data-kind=pw] { --kind: var(--acc); }
+.code-card[data-kind=secret] { --kind: var(--fuse); }
+.code-card[data-kind=cheat] { --kind: var(--cheat); }
+.code-card[data-kind=patch] { --kind: var(--flame); }
+.code-card[data-kind=debug] { --kind: var(--debug); }
 .code-card h3.pw { font: 800 24px/1.1 var(--mono); letter-spacing: .1em; }
+/* a password drawn as a plate in the console's style */
+h3.pw .usecode, .stages td.c .usecode { background: var(--code-bg); color: var(--code-ink); border: 1px solid var(--acc); border-radius: 6px; padding: .06em .4em; }
+h3.pw .usecode:hover, .stages td.c .usecode:hover { color: var(--code-ink); box-shadow: 0 0 0 2px var(--acc); }
 .devs { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; align-items: baseline; }
 .devs dt { color: var(--muted); font-size: 12px; font-weight: 700; white-space: nowrap; }
 .devs dd { margin: 0; font: 800 16px/1.3 var(--mono); overflow-wrap: anywhere; }
@@ -128,7 +155,8 @@ input.code-in::placeholder { color: #8a90b0; letter-spacing: .14em; }
 .usecode:hover { color: var(--pink); }
 .usecode:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
 .thumb { all: unset; cursor: zoom-in; justify-self: start; border-radius: 6px; line-height: 0; }
-.thumb img { height: 72px; width: auto; max-width: 100%; border: 1px solid var(--line); border-radius: 6px; image-rendering: pixelated; }
+.thumb { justify-self: stretch; }
+.thumb img { display: block; width: 100%; height: auto; max-height: 230px; object-fit: contain; background: #000; border: 1px solid var(--line); border-radius: 6px; image-rendering: pixelated; }
 .thumb:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
 .ips { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 14px; }
 .ips a { font-weight: 800; }
@@ -141,14 +169,14 @@ input.code-in::placeholder { color: #8a90b0; letter-spacing: .14em; }
 /* stage codes: compact rows */
 .stages { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; font-size: 15px; }
 .stages th { text-align: left; color: var(--muted); font-size: 13px; font-weight: 800; padding: 6px 10px; border-bottom: 1px solid var(--line); }
-.stages td { padding: 3px 10px; border-top: 1px solid rgb(255 255 255 / .05); vertical-align: middle; }
+.stages td { padding: 4px 10px; border-top: 1px solid var(--rule); vertical-align: middle; }
 .stages td.c { font: 800 17px var(--mono); letter-spacing: .08em; white-space: nowrap; }
 /* NES Bomberman's 20-letter codes break into two lines on a phone */
-@media (max-width: 520px) { .stages td.c { white-space: normal; word-break: break-all; } }
+@media (max-width: 520px) { .stages.long td.c { white-space: normal; word-break: break-all; width: 60%; } }
 .stages td.m { white-space: nowrap; text-align: right; }
 .mk { font: 800 12px var(--body); color: var(--fuse); }
-.stages .thumb { cursor: zoom-in; margin-left: 6px; vertical-align: middle; }
-.stages .thumb img { height: 20px; }
+.stages .thumb { cursor: zoom-in; margin-left: 6px; vertical-align: middle; display: inline-block; }
+.stages .thumb img { display: inline; width: auto; height: 40px; max-height: none; }
 .empty { color: var(--muted); }
 #shot { padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--plate-ink); color: var(--ink); max-width: 96vw; max-height: 94vh; }
 #shot::backdrop { background: rgb(0 0 0 / .8); }
@@ -214,7 +242,7 @@ footer a:hover { text-decoration: underline; }
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.3.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.4.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -1560,7 +1588,8 @@ const section = (game, e) => {
 // ---------- game picker: platform groups in release order ----------
 const families = [...new Set(GAMES.map(x => x.family))];
 const byFamily = f => GAMES.filter(x => x.family === f).sort((a, b) => a.year - b.year);
-$("cards").innerHTML = families.map((f, i) => `<div class="pgroup"><h3 id="pf_${i}">${esc(f)}</h3>
+const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy": "gb" };
+$("cards").innerHTML = families.map((f, i) => `<div class="pgroup" data-fam="${FAM[f] || ""}"><h3 id="pf_${i}">${esc(f)}</h3>
   <div class="gcards" role="group" aria-labelledby="pf_${i}">${byFamily(f).map(x =>
     `<button type="button" class="gcard" data-g="${x.id}" aria-pressed="false" title="${esc(x.name)}"><img src="docs/img/logos/${x.logo}.png" alt=""><span class="nm">${esc(x.name)}</span><small>${x.year}</small></button>`).join("")}</div></div>`).join("");
 $("gsel").innerHTML = families.map(f => `<optgroup label="${esc(f)}">${byFamily(f).map(x => `<option value="${x.id}">${esc(x.name)}</option>`).join("")}</optgroup>`).join("");
@@ -1585,9 +1614,12 @@ function pickGame(id) {
   g = GAMES.find(x => x.id === id) || GAMES[0];
   $("game").hidden = false;
   $("picker").classList.add("compact");
+  $("game").dataset.fam = FAM[g.family] || "";
   $("gsel").value = g.id;
   for (const b of $("cards").querySelectorAll(".gcard")) {
     b.setAttribute("aria-pressed", b.dataset.g === g.id);
+    // keep the picked game in view in the scrolling row
+    if (b.dataset.g === g.id) requestAnimationFrame(() => { const c = $("cards"); c.scrollLeft = b.offsetLeft - c.offsetLeft - (c.clientWidth - b.offsetWidth) / 2; });
     const x = GAMES.find(y => y.id === b.dataset.g);
     b.querySelector("img").src = `docs/img/logos/${x.logo}.png`;
   }
@@ -1928,6 +1960,10 @@ const forVer = files => { const v = vlow(), m = files.filter(f => f.endsWith(`_$
 const vtext = e => e.versions.join(" ") + " " + e.code + " " + Object.values(e.devices || {}).join(" ") + " " + e.effect + " " + (e.note || "");
 // a cheat listed for more than one device: one labelled line each
 const devices = d => `<dl class="devs">${Object.entries(d).map(([n, c]) => `<dt>${esc(n)}</dt><dd>${esc(c)}</dd>`).join("")}</dl>`;
+// card colour by what the code is: something to type in the game, a secret, a cheat-device code, a patch, or notes
+const KIND = s => s === "Cheat codes" ? "cheat" : s === "Patches" ? "patch"
+  : ["Debug features", "Unused content", "Region differences", "Demo CD", "How it plays", "Controllers"].includes(s) ? "debug"
+  : /pass|code|Charabom/i.test(s) ? "pw" : "secret";
 function card(e, k, home, patchesShown) {
   const allV = new Set(CODES[g.id].flatMap(x => x.versions)).size;
   const pw = isPw(g, e) && k;
@@ -1937,14 +1973,14 @@ function card(e, k, home, patchesShown) {
   const vf = VERIFIED[e.verified];
   const ips = patchesShown ? [] : forVer(patchLinks(e.game || g.id, vtext(e)));
   const title = pw ? `<button type="button" class="usecode" data-code="${esc(e.code)}" title="Put in the code box">${esc(e.code)}</button>` : esc(e.code);
-  return `<article class="code-card">${badge}${home ? `<span class="home">${esc(home)}</span>` : ""}${e.devices ? devices(e.devices) : `<h3 class="${pw ? "pw" : ""}">${title}</h3>`}<p>${esc(e.effect)}</p>
+  return `<article class="code-card" data-kind="${KIND(section(g, e))}">${badge}${home ? `<span class="home">${esc(home)}</span>` : ""}${e.devices ? devices(e.devices) : `<h3 class="${pw ? "pw" : ""}">${title}</h3>`}<p>${esc(e.effect)}</p>
     ${e.note ? `<details class="note"><summary>Details</summary>${esc(e.note)}</details>` : ""}${thumb(e, shotFor(g.id, e))}${ipsList(ips)}
     <p class="meta">${vf ? icon(vf[0], vf[1]) : ""}${vers}</p></article>`;
 }
 function table(rows) {
   // the code list's own words, minus "Start at" and the starting kit every stage code shares
   const name = x => /^Start at /i.test(x.e.effect) ? cap(x.e.effect.replace(/^Start at /i, "").replace(/ with 1 bomb, fire 1(, normal speed, no planets cleared)?$/, "")) : x.e.effect || x.k.title;
-  return `<table class="stages"><thead><tr><th scope="col">Stage</th><th scope="col">Code</th><th scope="col"><span class="vh">Mark</span></th></tr></thead><tbody>${rows.map(x =>
+  return `<table class="stages${g.len > 10 ? " long" : ""}"><thead><tr><th scope="col">Stage</th><th scope="col">Code</th><th scope="col"><span class="vh">Mark</span></th></tr></thead><tbody>${rows.map(x =>
     `<tr><td>${esc(name(x))}</td><td class="c"><button type="button" class="usecode" data-code="${esc(x.e.code)}" title="Put in the code box">${esc(x.e.code)}</button></td>
       <td class="m">${mark(x.e.status)}${thumb(x.e, shotFor(g.id, x.e))}</td></tr>`).join("")}</tbody></table>`;
 }
