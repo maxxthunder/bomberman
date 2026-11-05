@@ -12,7 +12,8 @@ export const WORLDS = ['Forest', 'Ocean', 'Wind', 'Cloud', 'Evil'];       // $C1
 export const TABLE = ['7693', '3905', '2438', '8261', '1893', '2805', '9271', '1354', '4915', '8649',
   '0238', '5943', '6045', '2850', '8146', '9156', '2715', '4707', '7046', '0687',
   '3725', '0157', '5826', '9587', '3752', '5656', '4622', '3790', '5294', '8906', '9437', '0278'];   // $01:65AA
-export const BOSS_RUSH = '9437', ENDING = '0278';
+export const BOSS_RUSH = '9437';
+export const ENDING = '0278';
 const POWER = { bombs: 4, fire: 4, lives: 3 };      // $C354, $C355, $C356 for indexes 25-30
 const NORMAL = { bombs: 1, fire: 1, lives: 3 };     // new game ($02:5570)
 // -> {index, kind: 'stage' | 'power' | 'boss' | 'ending', world, worldName, stage 1-5, bombs, fire, lives} | null

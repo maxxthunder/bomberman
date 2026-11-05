@@ -31,6 +31,9 @@ def script_safe(s):
 def namespace(name, src):
     if re.search(r"^\s*import\b|^export\s+(default|\{|\*)", src, re.M):
         raise ValueError("uses import or a non-plain export")
+    # only the first name of `export const A = 1, B = 2` would be returned
+    if re.search(r"^export\s+(?:const|let|var)\s+[\w$]+\s*=\s*[^\[{(\n;]*,\s*[\w$]+\s*=", src, re.M):
+        raise ValueError("one name per export line")
     names = EXPORT.findall(src)
     if not names:
         raise ValueError("no exports found")

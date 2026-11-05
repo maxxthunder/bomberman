@@ -603,7 +603,12 @@ function pickGame(id) {
   renderCodes();
 }
 // the '93 generator follows the chip
-function syncPv() { const pv = $("pv"); if (pv && PCE93.LETTERS[vlow()] && pv.value !== vlow()) { pv.value = vlow(); pv.onchange(); } }
+// the generator's own version select and the version chips follow each other
+function syncPv() { const pv = $("pv"); if (pv && [...pv.options].some(o => o.value === vlow()) && pv.value !== vlow()) { pv.value = vlow(); pv.onchange(); } }
+function syncChip(v) {
+  const r = [...$("vers").querySelectorAll("input")].find(x => x.value.toLowerCase() === v);
+  if (ver && r && !r.checked) { r.checked = true; ver = r.value; setLogo(); renderCodes(); }
+}
 $("vers").onchange = e => { ver = e.target.value; setLogo(); syncPv(); renderCodes(); if (g.ns) runCheck(true); };
 
 // ---------- the code box: generators write into it, typing into it checks the code ----------
@@ -772,7 +777,7 @@ const GEN = {
     const secrets = () => { $("spec").innerHTML = '<option value="">Choose…</option>' + NES2.SECRETS.map(([, e, n]) => {
       const c = NES2.secretCode(n, NES2_VER);
       return `<option value="${c}">${c}: ${esc(cap(e.replace(/: \$.*/, "")))}</option>`; }).join(""); };
-    const f = () => { NES2_VER = $("pv").value; showSpecial(""); setCode(NES2.encode({ area: val("a"), stage: val("s"), bombs: val("b"), fire: val("f") }, NES2_VER)); };
+    const f = () => { NES2_VER = $("pv").value; syncChip(NES2_VER); showSpecial(""); setCode(NES2.encode({ area: val("a"), stage: val("s"), bombs: val("b"), fire: val("f") }, NES2_VER)); };
     $("pv").onchange = () => { NES2_VER = $("pv").value; secrets(); f(); };
     for (const id of ["a", "s", "b", "f"]) $(id).onchange = f;
     GEN.nes2.fill = (d, v) => { $("pv").value = NES2_VER = v; secrets(); $("a").value = d.area; $("s").value = d.stage; $("b").value = d.bombs; $("f").value = d.fire; };
@@ -858,7 +863,7 @@ const GEN = {
       <fieldset class="checks" id="cl"><legend>Planets already cleared</legend>${range(1, 6).map(([p]) =>
         `<label><input type="checkbox" value="${p - 1}">Planet ${p}</label>`).join("")}</fieldset>`);
     const f = () => {
-      PCE93_VER = $("pv").value;
+      PCE93_VER = $("pv").value; syncChip(PCE93_VER);
       const st = { world: val("w"), stage: val("s"), bombs: val("b"), fire: val("f"), speed: val("sp"),
         cleared: [...$("cl").querySelectorAll("input:checked")].reduce((m, x) => m | 1 << +x.value, 0) };
       let code = "";
