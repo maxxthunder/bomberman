@@ -117,6 +117,7 @@ input.code-in::placeholder { color: #8a90b0; letter-spacing: .14em; }
 .code-card h3.pw { font: 800 24px/1.1 var(--mono); letter-spacing: .1em; }
 .code-card p { margin: 0; overflow-wrap: anywhere; }
 .code-card .note { color: var(--muted); font-size: 14px; }
+.code-card .note summary { cursor: pointer; font-size: 13px; width: max-content; }
 .code-card .home { color: var(--muted); font: 800 11px var(--body); letter-spacing: .1em; text-transform: uppercase; }
 .meta { color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
 .meta .ver { border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; }
@@ -1524,10 +1525,13 @@ const VERIFIED = { mesen: ["emu", "Tested in an emulator (Mesen 2)"], emu: ["emu
 const SECTION = { stage: "Passwords", special: "Special codes", option: "Option passwords", character: "Character passwords" };
 const NICE = { secret_items: "Secret items", password: "Passwords", secret: "Secrets", debug: "Debug features", demo: "Demo CD",
   patch: "Patches", cheat: "Cheat codes", demo8: "8-Player Demo (prototype)", ub: "Bomberman: Users Battle (Japan)", region: "Region differences", regional: "Region differences", unused: "Unused content",
-  rules: "How it plays", input: "Controllers", hidden: "Hidden screens" };
-// finds first: highlights, then secrets, tricks, debug and patches; the plain stage-code tables come last
-const ORDER = ["Special codes", "Option passwords", "Character passwords", "Secret items", "Hidden screens", "Secrets", "Tricks", "Cheat codes",
-  "Debug features", "Patches", "Demo CD", "Region differences", "Unused content", "Passwords", "Stage codes", "Power-up codes", "8-Player Demo (prototype)", "Bomberman: Users Battle (Japan)"];
+  rules: "How it plays", input: "Controllers", hidden: "Hidden screens", Cheats: "Cheat codes" };
+// what players type in the game comes first: special codes and passwords, then secrets; debug, region notes, cheat
+// devices and patches come last, then the add-on games. Sections named only in a code list go in between.
+const ORDER = ["Special codes", "Option passwords", "Character passwords", "Passwords", "Stage codes", "Power-up codes", "Charaboms",
+  "Secret items", "Hidden screens", "Secrets", "Button codes", "Tricks"];
+const LAST = ["Debug features", "How it plays", "Controllers", "Region differences", "Unused content", "Demo CD", "Cheat codes", "Patches",
+  "8-Player Demo (prototype)", "Bomberman: Users Battle (Japan)"];
 
 const store = {
   get() { try { return JSON.parse(localStorage.getItem("bomberman")) || {}; } catch { return {}; } },
@@ -1931,7 +1935,7 @@ function card(e, k, home, patchesShown) {
   const ips = patchesShown ? [] : forVer(patchLinks(e.game || g.id, vtext(e)));
   const title = pw ? `<button type="button" class="usecode" data-code="${esc(e.code)}" title="Put in the code box">${esc(e.code)}</button>` : esc(e.code);
   return `<article class="code-card">${badge}${home ? `<span class="home">${esc(home)}</span>` : ""}<h3 class="${pw ? "pw" : ""}">${title}</h3><p>${esc(e.effect)}</p>
-    ${e.note ? `<p class="note">${esc(e.note)}</p>` : ""}${thumb(e, shotFor(g.id, e))}${ipsList(ips)}
+    ${e.note ? `<details class="note"><summary>Details</summary>${esc(e.note)}</details>` : ""}${thumb(e, shotFor(g.id, e))}${ipsList(ips)}
     <p class="meta">${vf ? icon(vf[0], vf[1]) : ""}${vers}</p></article>`;
 }
 function table(rows) {
@@ -1957,10 +1961,10 @@ function renderCodes() {
   };
   const order = x => (x.k && x.k.order) || 0;
   const sorted = items => items.sort((a, b) => order(a) - order(b) || a.i - b.i);
-  const names = [...new Set([...ORDER, ...list.map(x => x.s)])];
-  // finds first: New codes other than stage codes (those keep their mark in the stage table) and the add-on
-  // games at the bottom (Users Battle, the 8-player demo), which keep all their codes together
-  const finds = q || only ? [] : list.filter(x => !isRow(x) && x.e.section !== "ub" && x.e.section !== "demo8" && x.e.status === "new");
+  const names = [...new Set([...ORDER, ...list.map(x => x.s).filter(s => !LAST.includes(s)), ...LAST])];
+  // finds first: New codes other than stage codes (those keep their mark in the stage table) and the LAST sections
+  // (debug, cheat devices, patches, the add-on games), which keep their New marks down there
+  const finds = q || only ? [] : list.filter(x => !isRow(x) && !LAST.includes(x.s) && x.e.status === "new");
   const rest = list.filter(x => !finds.includes(x));
   let html = "", shown = 0;
   const sect = (title, body, note) => `<section class="sect" data-s="${esc(title)}"><h2>${esc(title)}</h2>${note ? `<p class="hint">${esc(note)}</p>` : ""}${body}</section>`;
@@ -1979,11 +1983,7 @@ function renderCodes() {
     html += sect(s, ipsList(ips) + (rows.length ? table(rows) : "") + (cards.length ? `<div class="code-list">${cards.map(x => card(x.e, x.k, "", s === "Patches")).join("")}</div>` : ""),
       g.notes && g.notes[s]);
   }
-  // the stage tables go last
   $("codes").innerHTML = html || '<p class="empty">No codes match.</p>';
-  for (const t of [...$("codes").querySelectorAll(".sect")].filter(x => x.querySelector(".stages"))) $("codes").appendChild(t);
-  // then the 8-player demo, a separate program shown on Mega Bomberman's page
-  for (const t of $("codes").querySelectorAll('.sect[data-s="8-Player Demo (prototype)"]')) $("codes").appendChild(t);
   $("sum").textContent = q ? `${shown} match.` : "";
   $("sum").hidden = !q;
 }
