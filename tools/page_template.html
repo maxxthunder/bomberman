@@ -8,7 +8,16 @@
 <meta name="description" content="Every password and secret code for the NES, Game Boy, Game Boy Color, Super Nintendo, Genesis and TurboGrafx-16 / PC Engine Bomberman games, read from the games' own code and tested in emulators, with a password generator and checker for each game.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NWL552ST"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Fredoka:wght@400;500;600;700&family=Azeret+Mono:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/fontawesome.min.css" integrity="sha384-5t0634b3BeTSoxIIgd8lhUy22xY2BGs89gw0vReAMGcfJXXfA7fblIRGVkRFWRDL" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/solid.min.css" integrity="sha384-+CMpNM/Tv3YfWmU43LPsvXlIdOUnxSooWv5fY/Tkap65JU4QTLBHp8nMrEkIEb3u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/brands.min.css" integrity="sha384-hu7sKftLeB/8IYmWPfl2Jo6MTRHquwXVmGPT/08RqhuANVZrbNFBIsvWPOiUduYX" crossorigin="anonymous">
 <style>
 :root {
   /* "Bomber night": navy arena, white helmet plates, the antenna's pink for controls, fuse yellow for New */
@@ -46,6 +55,12 @@ body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(-
 main { max-width: 1000px; margin: 0 auto; padding: 24px 16px 48px; display: grid; gap: 18px; }
 main > *, #game > * { min-width: 0; }
 a { color: var(--pink); }
+header { position: relative; padding: 20px 64px 18px 18px; border-radius: 14px; border: 1px solid var(--line); background: var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='%23ffffff' fill-opacity='.05'%3E%3Ccircle cx='22' cy='32' r='11'/%3E%3Crect x='27' y='17' width='7' height='6' rx='1.5' transform='rotate(45 30.5 20)'/%3E%3C/g%3E%3Cpath d='M33 17c2-5 7-6 11-3' stroke='%23ffffff' stroke-opacity='.07' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 0 0 / 56px 56px; }
+@media (prefers-color-scheme: light) { header { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='%23151b3d' fill-opacity='.05'%3E%3Ccircle cx='22' cy='32' r='11'/%3E%3Crect x='27' y='17' width='7' height='6' rx='1.5' transform='rotate(45 30.5 20)'/%3E%3C/g%3E%3Cpath d='M33 17c2-5 7-6 11-3' stroke='%23151b3d' stroke-opacity='.07' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); } }
+#theme { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; display: grid; place-items: center; background: var(--panel-2);
+  border: 1px solid var(--line); border-radius: 10px; color: var(--ink); cursor: pointer; }
+#theme:hover { border-color: var(--pink); }
+#theme i { font-size: 18px; }
 h1 { font: 400 clamp(26px, 6.4vw, 44px)/1.08 var(--display); margin: 0; letter-spacing: .01em; }
 h1 span { color: var(--pink); }
 h2 { font: 400 clamp(20px, 4.6vw, 26px)/1.15 var(--display); margin: 8px 0 0; }
@@ -82,7 +97,7 @@ button { cursor: pointer; }
 #pname small { display: block; color: var(--muted); font: 600 13px var(--body); }
 #pbtn { display: inline-flex; align-items: center; gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; font-weight: 800; flex: none; }
 #pbtn:hover, #pbtn[aria-expanded=true] { border-color: var(--acc); }
-#pbtn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
+#pbtn i { font-size: 15px; }
 #picker.compact #cards { display: none; }
 #picker.compact.open #cards { display: grid; gap: 14px; margin-top: 10px; padding: 12px; background: var(--panel-2); border: 1px solid var(--line);
   border-radius: 12px; max-height: calc(100vh - 80px); overflow-y: auto; scrollbar-width: thin; }
@@ -94,9 +109,15 @@ button { cursor: pointer; }
 #pbtn .narrow { display: none; }
 @media (max-width: 600px) { #pbtn .wide { display: none; } #pbtn .narrow { display: inline; } #picker.open .gcards { grid-template-columns: repeat(3, 1fr); } }
 
-.ghead { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
-.ghead img { height: 48px; width: auto; image-rendering: pixelated; }
+/* the game's header band: console-colour edge, big logo, name and one screenshot */
+.ghead { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: center; background: var(--panel);
+  border: 1px solid var(--line); border-top: 6px solid var(--acc); border-radius: 12px; padding: 14px 16px; }
+.gtext { display: grid; gap: 8px; justify-items: start; min-width: 0; }
+#glogo { height: 64px; max-width: 100%; width: auto; image-rendering: pixelated; }
 .ghead h2 { margin: 0; }
+#ghero { width: 192px; aspect-ratio: 10 / 9; object-fit: cover; object-position: left top; image-rendering: pixelated;
+  border: 4px solid color-mix(in srgb, var(--acc) 55%, #000); border-radius: 8px; background: #000; }
+@media (max-width: 600px) { #ghero { width: 104px; border-width: 3px; } #glogo { height: 48px; } .ghead { padding: 12px; gap: 10px; } }
 /* version chips: radio buttons drawn as pills */
 .seg { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
 .seg legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
@@ -142,7 +163,7 @@ input.code-in::placeholder { color: var(--hold); letter-spacing: .14em; }
 .bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .bar input[type=search] { flex: 1 1 200px; }
 .legend { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
-.vi { width: 16px; height: 16px; vertical-align: -3px; fill: none; stroke: currentColor; stroke-width: 1.6; color: var(--muted); flex: none; }
+.vi { font-size: 15px; width: 1.25em; text-align: center; color: var(--muted); flex: none; }
 .sect { display: grid; gap: 10px; }
 .sect > .hint { margin-top: -4px; }
 .code-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 10px; }
@@ -156,8 +177,8 @@ input.code-in::placeholder { color: var(--hold); letter-spacing: .14em; }
 .code-card[data-kind=debug] { --kind: var(--debug); }
 .code-card h3.pw { font: 800 24px/1.1 var(--mono); letter-spacing: .1em; }
 /* a password drawn as a plate in the console's style */
-h3.pw .usecode, .stages td.c .usecode { background: var(--code-bg); color: var(--code-ink); border: 1px solid var(--acc); border-radius: 6px; padding: .06em .4em; }
-h3.pw .usecode:hover, .stages td.c .usecode:hover { color: var(--code-ink); box-shadow: 0 0 0 2px var(--acc); }
+h3.pw .usecode, .tile .usecode { background: var(--code-bg); color: var(--code-ink); border: 1px solid var(--acc); border-radius: 6px; padding: .06em .4em; }
+h3.pw .usecode:hover, .tile .usecode:hover { color: var(--code-ink); box-shadow: 0 0 0 2px var(--acc); }
 .devs { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; align-items: baseline; }
 .devs dt { color: var(--muted); font-size: 12px; font-weight: 700; white-space: nowrap; }
 .devs dd { margin: 0; font: 800 16px/1.3 var(--mono); overflow-wrap: anywhere; }
@@ -165,7 +186,6 @@ h3.pw .usecode:hover, .stages td.c .usecode:hover { color: var(--code-ink); box-
 .code-card p { margin: 0; overflow-wrap: anywhere; }
 .code-card .note { color: var(--muted); font-size: 14px; }
 .code-card .note summary { cursor: pointer; font-size: 13px; width: max-content; }
-.code-card .home { color: var(--muted); font: 800 11px var(--body); letter-spacing: .1em; text-transform: uppercase; }
 .meta { color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
 .meta .ver { border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; }
 .usecode { all: unset; cursor: pointer; border-radius: 4px; }
@@ -175,26 +195,34 @@ h3.pw .usecode:hover, .stages td.c .usecode:hover { color: var(--code-ink); box-
 .thumb { justify-self: stretch; }
 .thumb img { display: block; width: 100%; height: auto; max-height: 230px; object-fit: contain; background: #000; border: 1px solid var(--line); border-radius: 6px; image-rendering: pixelated; }
 .thumb:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
+.mapgrid { display: grid; grid-template-columns: auto repeat(var(--n), minmax(0, 1fr)); gap: 6px; align-items: stretch; }
+.mapgrid .ch { text-align: center; font: 800 12px var(--body); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.mapgrid .rh { align-self: center; font-weight: 800; font-size: 14px; padding-right: 6px; white-space: nowrap; }
+.tile { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 4px; display: grid; gap: 4px; justify-items: center; align-content: center; min-width: 0; }
+.tile.boss { background: color-mix(in srgb, #e5484d 20%, var(--panel)); border-color: color-mix(in srgb, #e5484d 45%, var(--line)); }
+.tile .usecode { font: 800 15px var(--mono); letter-spacing: .06em; }
+.tile .thumb img { height: 36px; }
+.tile .mk { font-size: 11px; }
+.tile .thumb { cursor: zoom-in; } .tile .thumb img { width: auto; max-width: 100%; }
+.tile .tl { font-weight: 800; font-size: 14px; line-height: 1.25; text-align: center; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.tiles .tile { padding: 10px 8px; }
+.tiles.long { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.tiles.long .usecode { word-break: break-all; white-space: normal; }
+.mapgrid + .tiles { margin-top: 10px; }
+@media (max-width: 600px) { .mapgrid { gap: 3px; } .mapgrid .tile { padding: 4px 0; } .mapgrid .rh { font-size: 11px; white-space: normal; padding-right: 0; line-height: 1.1; }
+  .mapgrid .usecode { font-size: 11px; letter-spacing: 0; padding: 1px 2px; border-width: 1px; } .mapgrid.long .usecode { font-size: 11px; line-height: 1.15; padding: 2px 1px; white-space: normal; word-break: break-all; max-width: 100%; }
+  .mapgrid .tile .thumb { display: none; } }
 .ips { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 14px; }
 .ips a { font-weight: 800; }
-.ips .dl { color: inherit; stroke-width: 2.2; margin-right: 5px; }
+.ips .dl { color: inherit; margin-right: 6px; }
 .ips span { color: var(--muted); }
 /* "★ New" hangs from the card's top edge like tabs */
 .badge { font: 800 11px var(--body); letter-spacing: .1em; text-transform: uppercase; border-radius: 0 0 5px 5px; padding: 3px 9px;
   position: absolute; top: 0; right: 14px; background: var(--fuse); color: var(--plate-ink); }
 .code-card:has(.badge) { padding-top: 18px; }
 .code-card:has(.badge) h3 { padding-right: 70px; }
-/* stage codes: compact rows */
-.stages { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; font-size: 15px; }
-.stages th { text-align: left; color: var(--muted); font-size: 13px; font-weight: 800; padding: 6px 10px; border-bottom: 1px solid var(--line); }
-.stages td { padding: 4px 10px; border-top: 1px solid var(--rule); vertical-align: middle; }
-.stages td.c { font: 800 17px var(--mono); letter-spacing: .08em; white-space: nowrap; }
-/* NES Bomberman's 20-letter codes break into two lines on a phone */
-@media (max-width: 520px) { .stages.long td.c { white-space: normal; word-break: break-all; width: 60%; } }
-.stages td.m { white-space: nowrap; text-align: right; }
 .mk { font: 800 12px var(--body); color: var(--fuse); }
-.stages .thumb { cursor: zoom-in; margin-left: 6px; vertical-align: middle; display: inline-block; }
-.stages .thumb img { display: inline; width: auto; height: 40px; max-height: none; }
 .empty { color: var(--muted); }
 #shot { padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--plate-ink); color: var(--ink); max-width: 96vw; max-height: 94vh; }
 #shot::backdrop { background: rgb(0 0 0 / .8); }
@@ -208,10 +236,17 @@ footer { display: flex; justify-content: space-between; align-items: center; gap
 footer a { color: var(--pink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
 footer a:hover { text-decoration: underline; }
 </style>
+<script>
+// the light theme's prefers-color-scheme rules; a saved choice forces them on or off before the first paint
+const LIGHT_RULES = [...document.styleSheets].flatMap(sh => { try { return [...sh.cssRules]; } catch (e) { return []; } })
+  .filter(r => r.media && /prefers-color-scheme:\s*light/.test(r.media.mediaText));
+try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if (t) for (const r of LIGHT_RULES) r.media.mediaText = t === "light" ? "all" : "not all"; } catch (e) {}
+</script>
 </head>
 <body>
 <main>
   <header>
+    <button type="button" id="theme"></button>
     <h1>Bomberman <span>Codes</span></h1>
     <p class="sub">Every password and secret code for the NES, Game Boy, Game Boy Color, Super Nintendo, Genesis and TurboGrafx-16 / PC Engine
       Bomberman games, read from each game's own code and tested in emulators.</p>
@@ -219,13 +254,13 @@ footer a:hover { text-decoration: underline; }
 
   <nav id="picker" aria-label="Game">
     <div id="pbar"><img id="pcur" alt=""><span id="pname"></span>
-      <button type="button" id="pbtn" aria-expanded="false" aria-controls="cards"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span class="wide">Change game</span><span class="narrow">Games</span></button></div>
+      <button type="button" id="pbtn" aria-expanded="false" aria-controls="cards"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i><span class="wide">Change game</span><span class="narrow">Games</span></button></div>
     <div id="cards"></div>
   </nav>
 
   <div id="game" hidden style="display:grid;gap:18px">
     <section aria-labelledby="gname" style="display:grid;gap:10px">
-      <div class="ghead"><img id="glogo" alt=""><h2 id="gname"></h2></div>
+      <div class="ghead"><div class="gtext"><img id="glogo" alt=""><h2 id="gname"></h2></div><img id="ghero" alt=""></div>
       <p class="hint" id="gintro"></p>
       <fieldset class="seg" id="vers"><legend>Version</legend></fieldset>
     </section>
@@ -261,7 +296,7 @@ footer a:hover { text-decoration: underline; }
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.7.3</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.8.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -335,7 +370,7 @@ const GAMES = [
     len: 4, shape: /^[0-7]{4}$/, form: "4 digits, 0-7",
     check(c) {
       const d = SB1.decode(c);
-      if (d) return { type: "stage", group: d.world + "-" + d.stage, order: d.index, title: `Stage ${d.world}-${d.stage}${d.stage === 8 ? " (boss)" : ""}`,
+      if (d) return { type: "stage", cell: { r: "World " + d.world, c: d.stage, boss: d.stage === 8 }, group: d.world + "-" + d.stage, order: d.index, title: `Stage ${d.world}-${d.stage}${d.stage === 8 ? " (boss)" : ""}`,
         detail: "You start with 5 lives; a password stores nothing else." };
       return SB1.SPECIAL[c] ? { type: "special", order: 99, title: SB1.SPECIAL[c] } : null;
     },
@@ -347,7 +382,7 @@ const GAMES = [
       if (!d) return null;
       if (d.suddenDeath) return { type: "special", order: 99, title: "Sudden death: in Battle Mode the hurry-up blocks keep falling until the arena is full" };
       const k = d.kit;
-      return { type: "stage", group: c, order: d.index, title: `Stage ${d.world}-1${d.fullPower ? " with full power" : ""}`,
+      return { type: "stage", cell: { r: d.fullPower ? "Full power" : "Start", c: d.world, ax: "World" }, group: c, order: d.index, title: `Stage ${d.world}-1${d.fullPower ? " with full power" : ""}`,
         detail: d.fullPower ? `Speed ${k.speed}, ${k.bombs} bombs, fire ${k.fire + 1}, remote bombs and the power glove.` : "Normal kit: speed 1, 1 bomb." };
     },
     notes: { Passwords: "There is no checksum: the game compares your code with a list of 11, so this is every code there is." } },
@@ -474,7 +509,7 @@ const GAMES = [
         if (!d) continue;
         const who = d.player === "wario" ? " as Wario" : "", only = v === "wario" && !GB1.validate(c, "jp") ? "Wario Blast only." : "";
         if (d.kind !== "stage") return { type: "special", ver: v, order: 99, title: (d.kind === "powerup" ? "Start at 1-1 with every power-up" : "The extra battle") + who, detail: only };
-        return { type: "stage", ver: v, fields: d, group: d.player + d.round + "-" + d.stage, order: (d.player === "wario" ? 100 : 0) + d.round * 10 + d.stage,
+        return { type: "stage", ver: v, cell: { r: (d.player === "wario" ? "Wario, round " : "Round ") + d.round, c: d.stage, boss: d.boss }, fields: d, group: d.player + d.round + "-" + d.stage, order: (d.player === "wario" ? 100 : 0) + d.round * 10 + d.stage,
           title: `Stage ${d.round}-${d.stage}${d.boss ? " (boss)" : ""}${who}`, detail: only };
       }
       return null;
@@ -500,7 +535,7 @@ const GAMES = [
       if (!d) return null;
       if (d.special) return { type: "special", order: 99, title: "Boss attack: the bosses in a row with K, D, L and F" };
       const cl = GB3.AREAS.filter((_, i) => d.cleared[i]), shop = GB3_SHOP.filter((_, i) => d.shop >> i & 1).map(x => x[1]);
-      return { type: "stage", fields: d, group: d.area + "-" + d.stage, order: d.area * 10 + d.stage, title: `${d.areaName} stage ${d.stage}`,
+      return { type: "stage", cell: { r: d.areaName, c: d.stage }, fields: d, group: d.area + "-" + d.stage, order: d.area * 10 + d.stage, title: `${d.areaName} stage ${d.stage}`,
         detail: `Areas cleared: ${cl.length ? cl.join(", ") : "none"}. Bought: ${shop.length ? shop.join(", ") : "nothing"}. ${plural(d.check, "capsule")}.` };
     },
     why: c => /[G-Z]/.test(c) ? "Each digit is 0-9 or A-F." : c.length === 7 ? "The capsule check doesn't balance, so at least one digit is wrong." : "",
@@ -513,7 +548,7 @@ const GAMES = [
       if (d.kind === "ending") return { type: "special", order: 99, title: "The ending, straight from the password screen" };
       if (d.kind === "boss") return { type: "special", fields: d, order: 98, title: "Boss rush: the Forest boss fully powered up, then every world starts at its boss" };
       const area = d.stage === 5 ? "area 5 (boss)" : `area ${d.stage}`;
-      return { type: "stage", fields: d, group: d.world + "-" + d.stage + (d.kind === "power" ? "p" : ""), order: d.world * 10 + d.stage + (d.kind === "power" ? 0.5 : 0),
+      return { type: "stage", cell: d.kind === "power" ? null : { r: d.worldName, c: d.stage, boss: d.stage === 5 }, fields: d, group: d.world + "-" + d.stage + (d.kind === "power" ? "p" : ""), order: d.world * 10 + d.stage + (d.kind === "power" ? 0.5 : 0),
         title: `${d.worldName} ${area}${d.kind === "power" ? ", fully powered up" : ""}`,
         detail: d.kind === "power" ? "4 bombs, fire 4, 3 lives." : "1 bomb, fire 1, 3 lives." };
     },
@@ -542,7 +577,7 @@ const GAMES = [
         const d = GB1.decode(c, "jp");
         if (!d) return null;
         if (d.kind !== "stage") return { type: "special", order: 99, title: "Bomberman: " + (d.kind === "powerup" ? "start at 1-1 with every power-up" : "the extra battle") };
-        return { type: "stage", fields: d, group: "gb" + d.value, order: 300 + d.value, title: `Bomberman: stage ${d.round}-${d.stage}${d.boss ? " (boss)" : ""}` };
+        return { type: "stage", cell: { r: "Round " + d.round, c: d.stage, boss: d.boss }, fields: d, group: "gb" + d.value, order: 300 + d.value, title: `Bomberman: stage ${d.round}-${d.stage}${d.boss ? " (boss)" : ""}` };
       }
       if (c.length === 20) {
         const d = NES1.decode(c);
@@ -570,12 +605,8 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
 const VER = { us: "USA", eu: "Europe", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast" };
 const verName = v => VER[v.toLowerCase()] || v;
 // verified: a pad (run in an emulator) or a chip (read from the ROM)
-const ICON = {
-  emu: '<path d="M6 8h12a4 4 0 0 1 4 4v1a4 4 0 0 1-7 2.6L14 15h-4l-1 .6A4 4 0 0 1 2 13v-1a4 4 0 0 1 4-4Z"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16.5" cy="11" r=".6"/><circle cx="18" cy="13" r=".6"/>',
-  download: '<path d="M12 3v11M7 9.5l5 5 5-5"/><path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/>',
-  rom: '<rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 3v3M12 3v3M15 3v3M9 18v3M12 18v3M15 18v3M3 9h3M3 12h3M3 15h3M18 9h3M18 12h3M18 15h3"/>',
-};
-const icon = (k, label) => `<svg class="vi" viewBox="0 0 24 24" role="img" aria-label="${esc(label)}"><title>${esc(label)}</title>${ICON[k]}</svg>`;
+const ICON = { emu: "fa-gamepad", rom: "fa-microchip", download: "fa-download" };   // Font Awesome Free (solid)
+const icon = (k, label) => `<i class="vi fa-solid ${ICON[k]}" role="img" aria-label="${esc(label)}" title="${esc(label)}"></i>`;
 const VERIFIED = { mesen: ["emu", "Tested in an emulator (Mesen 2)"], emu: ["emu", "Tested in an emulator (BizHawk)"],
   fuzz: ["emu", "Accepted by the game's own decoder in an emulator (fuzz run)"], static: ["rom", "Read from the ROM code"] };
 const SECTION = { stage: "Passwords", special: "Special codes", option: "Option passwords", character: "Character passwords" };
@@ -594,6 +625,18 @@ const store = {
   set(o) { try { localStorage.setItem("bomberman", JSON.stringify(o)); } catch {} },
 };
 const saved = store.get();
+// dark/light toggle: forces the light theme's rules (LIGHT_RULES, in the head) on or off ("all" / "not all")
+const OS_LIGHT = matchMedia("(prefers-color-scheme: light)");
+function applyTheme() {
+  const t = saved.theme, light = t ? t === "light" : OS_LIGHT.matches;
+  for (const r of LIGHT_RULES) r.media.mediaText = t ? (light ? "all" : "not all") : "(prefers-color-scheme: light)";
+  $("theme").innerHTML = `<i class="fa-solid ${light ? "fa-sun" : "fa-moon"}" aria-hidden="true"></i>`;
+  $("theme").setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
+  $("theme").title = $("theme").getAttribute("aria-label");
+}
+$("theme").onclick = () => { const light = saved.theme ? saved.theme === "light" : OS_LIGHT.matches; saved.theme = light ? "dark" : "light"; store.set(saved); applyTheme(); };
+OS_LIGHT.addEventListener("change", applyTheme);
+applyTheme();
 saved.codes = saved.codes || {};
 
 let g = null;       // the chosen game; null until the first pick
@@ -615,6 +658,11 @@ const section = (game, e) => {
 // ---------- game picker: platform groups in release order ----------
 const families = ["Super Nintendo", "TurboGrafx-16 / PC Engine", "Game Boy / Game Boy Color", "NES / Famicom", "Genesis"];
 const byFamily = f => GAMES.filter(x => x.family === f).sort((a, b) => a.year - b.year);
+// the screenshot in each game's header band
+const HERO = { sb1: ["sb1", "debug_fire_full"], sb2: ["sb2", "battle_stage11"], sb3: ["sb3", "arena_variants"], sb4: ["sb4", "stages_11_12"],
+  sb5: ["sb5", "battle_0926"], mega: ["mega", "stage_intro_5120"], pce90: ["pce90", "title_us"], pce93: ["pce93", "sp_normal_game"],
+  pce94: ["pce94", "battle_5players"], nes1: ["nes1", "title_us"], nes2: ["nes2", "title_us"], gb1: ["gb1", "title_wario"], gb2: ["gb2", "title_us"],
+  gb3: ["gb3", "title_jp"], pocket: ["pocket", "title"], max: ["max", "charaboms_blue"], sel: ["sel", "menu"] };
 const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb" };
 $("cards").innerHTML = families.map((f, i) => `<div class="pgroup" data-fam="${FAM[f] || ""}"><h3 id="pf_${i}">${esc(f)}</h3>
   <div class="gcards" role="group" aria-labelledby="pf_${i}">${byFamily(f).map(x =>
@@ -651,7 +699,8 @@ function pickGame(id) {
     const x = GAMES.find(y => y.id === b.dataset.g);
     b.querySelector("img").src = `docs/img/logos/${x.logo}.png`;
   }
-  $("gname").innerHTML = `${esc(g.name)}<small>${esc(g.plat)}</small>`;
+  $("gname").innerHTML = `${esc(g.name)}<small>${esc(g.plat)} · ${g.year}</small>`;
+  $("ghero").src = `docs/img/${HERO[g.id][0]}/${HERO[g.id][1]}.png`;
   $("gintro").textContent = g.intro || "";
   $("gintro").hidden = !$("gintro").textContent;
   const vs = [...new Set(CODES[g.id].flatMap(e => e.versions))];
@@ -1007,7 +1056,7 @@ const shotFor = (id, e) => e.img || (isPw(g, e) ? (SHOTS[id] || []).find(f => ne
 const thumb = (e, f) => f ? `<button type="button" class="thumb" data-img="docs/img/${g.id}/${esc(f)}" data-cap="${esc(e.code)}"><img src="docs/img/${g.id}/${esc(f)}" alt="Screenshot: ${esc(e.code)}" loading="lazy"></button>` : "";
 const mark = s => s === "new" ? '<span class="mk">★ New</span>' : "";
 const ipsList = files => files.length ? `<ul class="ips">${files.map(f =>
-  `<li><a href="patches/${esc(f)}" download><svg class="vi dl" viewBox="0 0 24 24" aria-hidden="true">${ICON.download}</svg>${esc(f)}</a> <span>for ${esc(PATCH_ROM[f] || "?")}</span></li>`).join("")}</ul>` : "";
+  `<li><a href="patches/${esc(f)}" download><i class="vi dl fa-solid ${ICON.download}" aria-hidden="true"></i>${esc(f)}</a> <span>for ${esc(PATCH_ROM[f] || "?")}</span></li>`).join("")}</ul>` : "";
 // with a version chip on, show only that version's patch when there is one
 const forVer = files => { const v = vlow(), m = files.filter(f => f.endsWith(`_${v}.ips`)); return v && m.length ? m : files; };
 const vtext = e => e.versions.join(" ") + " " + e.code + " " + Object.values(e.devices || {}).join(" ") + " " + e.effect + " " + (e.note || "");
@@ -1020,7 +1069,7 @@ const devices = d => `<dl class="devs">${Object.entries(d).map(([n, c]) => `<dt>
 const KIND = s => s === "Cheat codes" ? "cheat" : s === "Patches" ? "patch"
   : ["Debug features", "Unused content", "Region differences", "Demo CD", "How it plays", "Controllers"].includes(s) ? "debug"
   : /pass|code|Charabom/i.test(s) ? "pw" : "secret";
-function card(e, k, home, patchesShown) {
+function card(e, k, patchesShown) {
   const allV = new Set(CODES[g.id].flatMap(x => x.versions)).size;
   const pw = isPw(g, e) && k;
   const badge = e.status === "new" ? '<span class="badge">★ New</span>' : "";
@@ -1029,17 +1078,31 @@ function card(e, k, home, patchesShown) {
   const vf = VERIFIED[e.verified];
   const ips = patchesShown ? [] : forVer(patchLinks(e.game || g.id, vtext(e)));
   const title = pw ? `<button type="button" class="usecode" data-code="${esc(e.code)}" title="Put in the code box">${esc(e.code)}</button>` : esc(e.code);
-  return `<article class="code-card" data-kind="${KIND(section(g, e))}">${badge}${home ? `<span class="home">${esc(home)}</span>` : ""}${e.devices ? devices(e.devices) : `<h3 class="${pw ? "pw" : ""}">${title}</h3>`}<p>${esc(e.effect)}</p>
+  return `<article class="code-card" data-kind="${KIND(section(g, e))}">${badge}${e.devices ? devices(e.devices) : `<h3 class="${pw ? "pw" : ""}">${title}</h3>`}<p>${esc(e.effect)}</p>
     ${e.note ? `<details class="note"><summary>Details</summary>${esc(e.note)}</details>` : ""}${thumb(e, shotFor(g.id, e))}${ipsList(ips)}
     <p class="meta">${vf ? icon(vf[0], vf[1]) : ""}${vers}</p></article>`;
 }
+// stage codes as a map (rounds or worlds down, stages across, boss stages tinted) when their titles say round and stage;
+// everything else, and a second code for the same stage, as labelled tiles
+const cellOf = k => k.cell || (m => m && { r: (m[1] === "Stage" ? "World" : m[1]) + " " + m[2], c: m[3] === "boss" ? 99 : +m[3], boss: m[3] === "boss" })(
+  /^(Stage|Area|World|Round) (\d+)[- ](?:stage )?(\d+|boss)$/.exec(k.title));
 function table(rows) {
-  // the code list's own words, minus "Start at" and the starting kit every stage code shares
-  const name = x => /^Start at /i.test(x.e.effect) ? cap(x.e.effect.replace(/^Start at /i, "").replace(/ with 1 bomb, fire 1(, normal speed, no planets cleared)?$/, "")) : x.e.effect || x.k.title;
-  return `<table class="stages${g.len > 10 ? " long" : ""}"><thead><tr><th scope="col">${esc(g.rowLabel || "Stage")}</th><th scope="col">Code</th><th scope="col"><span class="vh">Mark</span></th></tr></thead><tbody>${rows.map(x =>
-    `<tr><td>${esc(name(x))}</td><td class="c"><button type="button" class="usecode" data-code="${esc(x.e.code)}" title="Put in the code box">${esc(x.e.code)}</button></td>
-      <td class="m">${mark(x.e.status)}${thumb(x.e, shotFor(g.id, x.e))}</td></tr>`).join("")}</tbody></table>`;
+  const seen = new Set(), cells = [], rest = [];
+  for (const x of rows) { const c = cellOf(x.k), key = c && c.r + "/" + c.c; if (c && !seen.has(key)) { seen.add(key); cells.push({ x, c }); } else rest.push(x); }
+  const rs = [...new Set(cells.map(y => y.c.r))], n = Math.max(0, ...cells.filter(y => y.c.c < 99).map(y => y.c.c)), boss = cells.some(y => y.c.c === 99);
+  const cols = n + (boss ? 1 : 0);
+  if (cells.length < 4 || cells.length < rs.length * cols / 2) return tiles(rows);
+  const at = (r, c) => cells.find(y => y.c.r === r && (y.c.c === 99 ? n + 1 : y.c.c) === c);
+  return `<div class="mapgrid${g.len > 6 ? " long" : ""}" style="--n:${cols}"><span class="ch">${esc(cells[0].c.ax || "")}</span>${Array.from({ length: cols }, (_, i) =>
+    `<span class="ch">${boss && i === n ? "Boss" : i + 1}</span>`).join("")}${rs.map(r => `<span class="rh">${esc(r)}</span>` +
+    Array.from({ length: cols }, (_, i) => { const y = at(r, i + 1); return y ? tile(y.x, "", y.c.boss) : "<span></span>"; }).join("")).join("")}</div>` +
+    (rest.length ? tiles(rest) : "");
 }
+// the code list's own words, minus "Start at" and the starting kit every stage code shares
+const tname = x => /^Start at /i.test(x.e.effect) ? cap(x.e.effect.replace(/^Start at /i, "").replace(/ with 1 bomb, fire 1(, normal speed, no planets cleared)?$/, "")) : x.e.effect || x.k.title;
+const tile = (x, label, boss) => `<div class="tile${boss ? " boss" : ""}" title="${esc(tname(x))}">${label ? `<span class="tl">${esc(label)}</span>` : ""}
+  <button type="button" class="usecode" data-code="${esc(x.e.code)}" title="Put in the code box">${esc(x.e.code)}</button>${mark(x.e.status)}${thumb(x.e, shotFor(g.id, x.e))}</div>`;
+const tiles = rows => `<div class="tiles${g.len > 10 ? " long" : ""}">${rows.map(x => tile(x, tname(x))).join("")}</div>`;
 function renderCodes() {
   const q = $("q").value.trim().toLowerCase(), only = $("only").value;
   const list = CODES[g.id].map((e, i) => ({ e, i, k: isPw(g, e) ? g.check(e.code, (e.versions[0] || "").toLowerCase()) || g.check(e.code) : null, s: section(g, e) }))
@@ -1056,26 +1119,20 @@ function renderCodes() {
   };
   const order = x => (x.k && x.k.order) || 0;
   const sorted = items => items.sort((a, b) => order(a) - order(b) || a.i - b.i);
-  const names = [...new Set([...ORDER, ...list.map(x => x.s).filter(s => !LAST.includes(s)), ...LAST])];
-  // finds first: New codes other than stage codes (those keep their mark in the stage table) and the LAST sections
-  // (debug, cheat devices, patches, the add-on games), which keep their New marks down there
-  const finds = q || only ? [] : list.filter(x => !isRow(x) && !LAST.includes(x.s) && x.e.status === "new");
-  const rest = list.filter(x => !finds.includes(x));
+  const all = [...new Set([...ORDER, ...list.map(x => x.s).filter(s => !LAST.includes(s)), ...LAST])];
+  // the sections holding stage passwords come first: that's what most people are here for
+  const pw = s => !LAST.includes(s) && list.some(x => x.s === s && isRow(x));
+  const names = [...all.filter(pw), ...all.filter(s => !pw(s))];
   let html = "", shown = 0;
   const sect = (title, body, note) => `<section class="sect" data-s="${esc(title)}"><h2>${esc(title)}</h2>${note ? `<p class="hint">${esc(note)}</p>` : ""}${body}</section>`;
-  if (finds.length) {
-    const fs = names.flatMap(s => finds.filter(x => x.s === s));
-    shown += fs.length;
-    html += sect("What's new", `<div class="code-list">${fs.map(x => card(x.e, x.k, x.s)).join("")}</div>`);
-  }
   for (const s of names) {
-    const items = rest.filter(x => x.s === s);
+    const items = list.filter(x => x.s === s);
     if (!items.length) continue;
     const rows = collapse(sorted(items.filter(isRow))), cards = collapse(sorted(items.filter(x => !isRow(x))));
     if (!rows.length && !cards.length) continue;
     shown += rows.length + cards.length;
     const ips = s === "Patches" ? forVer([...new Set(items.flatMap(x => patchLinks(g.id, vtext(x.e))))]) : [];
-    html += sect(s, ipsList(ips) + (rows.length ? table(rows) : "") + (cards.length ? `<div class="code-list">${cards.map(x => card(x.e, x.k, "", s === "Patches")).join("")}</div>` : ""),
+    html += sect(s, ipsList(ips) + (rows.length ? table(rows) : "") + (cards.length ? `<div class="code-list">${cards.map(x => card(x.e, x.k, s === "Patches")).join("")}</div>` : ""),
       g.notes && g.notes[s]);
   }
   $("codes").innerHTML = html || '<p class="empty">No codes match.</p>';

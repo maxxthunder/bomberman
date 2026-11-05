@@ -2,6 +2,16 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.8.0 (2026-11-05)
+- Each game opens with a header band: console-colour edge, big logo, name, system, year and a screenshot.
+- Stage passwords show as a map grid (rounds or worlds down, stages across, boss stages tinted); codes that don't fit
+  a grid show as labelled tiles.
+- Passwords come first in every game's code list; the What's new section is gone (New marks stay on the codes).
+- A dark/light toggle in the top corner, remembered in your browser; a faint bomb pattern behind the title.
+- Icons from Font Awesome Free, loaded from jsDelivr.
+- Google Tag Manager added.
+- Fixed: card codes were drawn at the grid's smaller size, and a saved theme could flash the other one on load.
+
 ## 1.7.3 (2026-11-05)
 - Game picker: space between the console groups, bigger group headings on desktop, and "Game Boy / Game Boy Color".
 - Patch downloads have a download icon.
