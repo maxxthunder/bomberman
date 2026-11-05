@@ -1438,6 +1438,10 @@
  },
  {
   "code": "7E542D:0C",
+  "devices": {
+   "Pro Action Replay": "7E542D:0C",
+   "Game Genie": "DAFE-84A7 DA16-8DDC (eu) / DAFF-EDD7 DA16-8DDC (jp) / DAFF-EDD7 DA15-84DC (beta)"
+  },
   "effect": "Battle stages 11 (SUPERSTAR) and 12 (HAPPY HAPPY) on the stage select",
   "versions": [
    "eu",
@@ -1447,10 +1451,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Stage count; the title X trick sets the same value. Checked on EU: Left from stage 1 goes to 12."
+  "note": "Stage count; the title X trick sets the same value. Checked on EU: Left from stage 1 goes to 12. Game Genie: the two LDA #$0A before STA $7E542D (boot $C0:1EFA, JP/beta $C0:1F0F; password $C2:6A7F, beta $C2:6A77) load 12; Mesen: $542D = 12 in all three, Left from stage 1 goes to 12 on EU."
  },
  {
   "code": "7E2901:01",
+  "devices": {
+   "Pro Action Replay": "7E2901:01",
+   "Game Genie": "DDDC-E7FD"
+  },
   "effect": "Full equipment at every stage start (8 bombs, 8 fire, speed 2, abilities 7)",
   "versions": [
    "eu",
@@ -1460,10 +1468,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "The flag the area passwords set. EU: $144F=8, $48B9=8, $126F=2, $48D1=7 at 1-1."
+  "note": "The flag the area passwords set. EU: $144F=8, $48B9=8, $126F=2, $48D1=7 at 1-1. Game Genie: $C4:03AB BEQ +$19 -> BEQ +0, so the full-equipment block always runs; Mesen with 5358: $144F=8, $48B9=8, $126F=2, $48D1=7 (EU, JP, beta; 2/1/0/0 without)."
  },
  {
   "code": "7E2902:01",
+  "devices": {
+   "Pro Action Replay": "7E2902:01",
+   "Game Genie": "DDD8-7FAA"
+  },
   "effect": "Hard mode: every enemy takes one more hit",
   "versions": [
    "eu",
@@ -1473,10 +1485,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "The flag 6514 sets. Flag checked under the cheat; the effect was checked with 6514."
+  "note": "The flag 6514 sets. Flag checked under the cheat; the effect was checked with 6514. Game Genie: $C3:00B6 BEQ +3 -> BEQ +0, so every enemy gets the extra hit point; Mesen, JP and beta: enemy HP 2 instead of 1 (the same as 7E2902:01 run on JP)."
  },
  {
   "code": "C00139:EA C00144:6B",
+  "devices": {
+   "Pro Action Replay": "C00139:EA C00144:6B",
+   "Game Genie": "3CD7-540D 18D0-5FDD"
+  },
   "effect": "Soft reset: hold Select+Start+L+R on pad 1",
   "versions": [
    "eu",
@@ -1486,10 +1502,13 @@
   "status": "fixed",
   "verified": "mesen",
   "section": "cheat",
-  "note": "ROM codes that hook the unreferenced check at $C0:013A (same as the IPS). Reset routine $80:F000 ran on EU, JP and beta."
+  "note": "ROM codes that hook the unreferenced check at $C0:013A (same as the IPS). Reset routine $80:F000 ran on EU, JP and beta. Game Genie: the same two ROM bytes; reset routine $80:F000 ran on EU, JP and beta."
  },
  {
   "code": "7E6C6E:0B / 7E6C6E:0C",
+  "devices": {
+   "Pro Action Replay": "7E6C6E:0B / 7E6C6E:0C"
+  },
   "effect": "Select battle stage 11 / 12",
   "versions": [
    "eu",

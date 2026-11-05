@@ -157,6 +157,9 @@
  },
  {
   "code": "C92-96A-6EB + C92-ACA-6EB + C93-03A-6EB",
+  "devices": {
+   "Game Genie": "C92-96A-6EB + C92-ACA-6EB + C93-03A-6EB"
+  },
   "effect": "Invincible",
   "versions": [
    "us",
@@ -169,6 +172,10 @@
  },
  {
   "code": "010306C1",
+  "devices": {
+   "GameShark": "010306C1",
+   "Game Genie": "B75-58D + B75-98D (us) / B75-85D + B75-C5D (jp)"
+  },
   "effect": "Infinite lives",
   "versions": [
    "us",
@@ -176,11 +183,15 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark: lives $C106 = 3. Bot 6,000 frames: 10 deaths, no game over.",
+  "note": "GameShark: lives $C106 = 3. Bot 6,000 frames: 10 deaths, no game over. Game Genie: DEC A -> OR A at both lives decrements ($00:2558, $00:2598; jp $2585, $25C5); bot 6,000 frames: 10 deaths, no game over (us and jp).",
   "section": "cheat"
  },
  {
   "code": "010103C1 + 010004C1",
+  "devices": {
+   "GameShark": "010103C1 + 010004C1",
+   "Game Genie": "C34-EDD + 185-53D (us) / C35-1AD + 185-80D (jp)"
+  },
   "effect": "Every stage ends cleared at once",
   "versions": [
    "us",
@@ -188,7 +199,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark: stage-end flag $C103 = 1 and dead flag $C104 = 0, so $00:24E3 runs the end countdown $C105 and $00:254F takes the clear path. Bot run: $C100 went 00, 01, 02, 03, 04, 07 (boss), 10 (world 2) in 5,000 frames.",
+  "note": "GameShark: stage-end flag $C103 = 1 and dead flag $C104 = 0, so $00:24E3 runs the end countdown $C105 and $00:254F takes the clear path. Bot run: $C100 went 00, 01, 02, 03, 04, 07 (boss), 10 (world 2) in 5,000 frames. Game Genie: $00:24ED JP NZ -> JP (the end countdown runs every frame) and $00:2553 JR Z -> JR (the clear path); jp $251A, $2580. Bot: $C100 went 00-04, 07, 10 in 5,071 frames (us and jp).",
   "section": "cheat"
  }
 ]

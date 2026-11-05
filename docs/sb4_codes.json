@@ -584,6 +584,10 @@
  },
  {
   "code": "7F202D:0C",
+  "devices": {
+   "Pro Action Replay": "7F202D:0C",
+   "Game Genie": "DA07-77BD"
+  },
   "effect": "Battle stages 11 and 12 without the turbo X trick",
   "versions": [
    "JP",
@@ -592,10 +596,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Stage count (normally 10). JP: the stage select wraps 1 -> 12 -> 11. EN: $7F202D=12 checked; the select was not walked."
+  "note": "Stage count (normally 10). JP: the stage select wraps 1 -> 12 -> 11. EN: $7F202D=12 checked; the select was not walked. Game Genie: the boot LDA #$000A before STA $7F202D ($C4:403D) loads 12; JP: Left from stage 1 goes to 12, then 11; EN: $7F202D=12."
  },
  {
   "code": "C2AEE6:7D C2AEE7:16",
+  "devices": {
+   "Pro Action Replay": "C2AEE6:7D C2AEE7:16",
+   "Game Genie": "52C3-8F68 F1C3-8FA8"
+  },
   "effect": "Password 5757 starts filler stage 5-7 (slot 38)",
   "versions": [
    "JP",
@@ -604,10 +612,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Rewrites the password-table slot that holds 7777 (caught as a special code first, so the slot was dead). $0092=38; empty final-boss arena."
+  "note": "Rewrites the password-table slot that holds 7777 (caught as a special code first, so the slot was dead). $0092=38; empty final-boss arena. Game Genie: the same two ROM bytes; $0092=38 after 5757 (JP and EN)."
  },
  {
   "code": "C2AEE8:E2 C2AEE9:16",
+  "devices": {
+   "Pro Action Replay": "C2AEE8:E2 C2AEE9:16",
+   "Game Genie": "34C3-84D8 F1C3-8408"
+  },
   "effect": "Password 5858 starts filler stage 5-8 (slot 39)",
   "versions": [
    "JP",
@@ -616,10 +628,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Same for slot 39 (4622). Checked on JP: $0092=39. The table is identical in EN."
+  "note": "Same for slot 39 (4622). Checked on JP: $0092=39. The table is identical in EN. Game Genie: the same two ROM bytes; $0092=39 after 5858 (JP and EN)."
  },
  {
   "code": "7E0274:01",
+  "devices": {
+   "Pro Action Replay": "7E0274:01",
+   "Game Genie": "6DD1-E7D9"
+  },
   "effect": "Pause without the PAUSE! label",
   "versions": [
    "JP",
@@ -628,10 +644,13 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$0274 is tested at $C1:0766 but never written; when non-zero the pause code skips setting the label position. Checked in JP and EN."
+  "note": "$0274 is tested at $C1:0766 but never written; when non-zero the pause code skips setting the label position. Checked in JP and EN. Game Genie: $C1:076C BNE -> BRA, the branch taken when $0274 is set; JP and EN: paused with no PAUSE! label."
  },
  {
   "code": "7F202B:0A / 7F202B:0B",
+  "devices": {
+   "Pro Action Replay": "7F202B:0A / 7F202B:0B"
+  },
   "effect": "Select battle stage 11 / 12",
   "versions": [
    "JP",

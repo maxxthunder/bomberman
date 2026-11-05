@@ -785,6 +785,10 @@
  },
  {
   "code": "C98-37B-D5D",
+  "devices": {
+   "Game Genie": "C98-37B-D5D",
+   "GameShark": "01014FC0 + 010049C0"
+  },
   "effect": "Invincible (fire and enemies never kill)",
   "versions": [
    "jp",
@@ -792,11 +796,15 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Game Genie, compare $CD: RET over the hit check $01:4837 (same address in both). tools/gb1/test_cheats.lua, random-input bot 6,000 frames from 1-1: 0 hits with the code, 7 hits / 7 lost sets without. IPS: patches/gb1_invincible.ips (file $4837 = $C9).",
+  "note": "Game Genie, compare $CD: RET over the hit check $01:4837 (same address in both). tools/gb1/test_cheats.lua, random-input bot 6,000 frames from 1-1: 0 hits with the code, 7 hits / 7 lost sets without. IPS: patches/gb1_invincible.ips (file $4837 = $C9). GameShark: player +$4F (the after-hit flash flag) = 1 and its counter +$49 = 0, so $01:4866 always reports the flash; same bot: 0 hits (jp and wario).",
   "section": "cheat"
  },
  {
   "code": "010000C1 + 010000C2 + 010000C3",
+  "devices": {
+   "GameShark": "010000C1 + 010000C2 + 010000C3",
+   "Game Genie": "AF8-8AB-3B4"
+  },
   "effect": "Win every normal set at once (stage clear; not boss sets)",
   "versions": [
    "jp",
@@ -804,7 +812,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; boss sets don't end with it (the 1-boss waits; $01:48C7 needs the boss itself, $C3F7 = 1). GB1 has no lives: a lost match goes to the continue screen.",
+  "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; boss sets don't end with it (the 1-boss waits; $01:48C7 needs the boss itself, $C3F7 = 1). GB1 has no lives: a lost match goes to the continue screen. Game Genie: $01:488A OR A -> XOR A, so the enemy check sees every page empty; with C98-37B-D5D: 12 sets won, 1-1 to 1-4 in 6,000 frames (jp and wario).",
   "section": "cheat"
  }
 ]

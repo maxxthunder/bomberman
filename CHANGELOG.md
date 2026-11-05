@@ -2,6 +2,12 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.5.0 (2026-11-05)
+- New game: Bomberman Quest (US and Japan), with an item code builder, its debug switches, cheats and patches.
+- Cheat codes for both devices: Game Genie and Pro Action Replay (GameShark on Game Boy) side by side on each card,
+  each tested in an emulator; RAM codes got a Game Genie form from the instruction that sets the value. Long code
+  lists fold behind an "All codes" toggle.
+
 ## 1.4.2 (2026-11-05)
 - The game picker on a game's page is a slim bar with the current game and a Change game button that opens every
   game as cards, grouped by console. No more scrolling row of logos; phones get the same bar instead of a drop-down.

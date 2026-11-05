@@ -130,13 +130,13 @@ Red and Yami 20 others, and Ain has all 95 (read from cart RAM after a new game 
 
 ## Cheats (★ New, `tools/max/test_cheats.lua`)
 
-| Code | Effect | Verified |
-|---|---|---|
-| `C32-EBA-C41` (Game Genie) | invincible: `$02:52EB` JP Z -> JP, so the hit test (`$53:4000` via `$00:2A0F`) never reaches the dying state `$3C` | 0 hits in 6,000 bot frames, each version (8-9 without) |
-| `0103F7C2` | infinite lives (`$C2F7`, decremented at `$02:709F`) | 11-13 deaths, lives stay 3, each version |
-| `8001xxA1` | own Charabom id (xx = `$10` + 8 x id); `80vv12A1` + 8 x id sets its level | every card shown |
-| `8001F0A1`, `8001F8A1` | own Heat Rock, Oct Kong (the unused pair; their bytes are Known) | shown |
-| `8001E0A1`, `8001E8A1` | own Shardra, Ox Battra (the legendary pair) | shown |
+| Code | Effect | Verified | Other device (same test) |
+|---|---|---|---|
+| `C32-EBA-C41` (Game Genie) | invincible: `$02:52EB` JP Z -> JP, so the hit test (`$53:4000` via `$00:2A0F`) never reaches the dying state `$3C` | 0 hits in 6,000 bot frames, each version (8-9 without) | GameShark `011052C7`: the flash timer `$C752` (tested before the hit test, `$02:52E0`) held at `$10`; 0 hits, each version |
+| `0103F7C2` | infinite lives (`$C2F7`, decremented at `$02:709F`) | 11-13 deaths, lives stay 3, each version | Game Genie `A70-9F8-19E` (Ain `A70-D08-19E`): DEC A -> AND A at `$02:709F` (Ain `$02:70D0`); 11-13 deaths, lives stay 3 |
+| `8001xxA1` | own Charabom id (xx = `$10` + 8 x id); `80vv12A1` + 8 x id sets its level | every card shown | no Game Genie form (the roster lives in cart RAM) |
+| `8001F0A1`, `8001F8A1` | own Heat Rock, Oct Kong (the unused pair; their bytes are Known) | shown | none (cart RAM) |
+| `8001E0A1`, `8001E8A1` | own Shardra, Ox Battra (the legendary pair) | shown | none (cart RAM) |
 
 The hit branch sits at the same address with the same bytes in all five versions (only the CALL target before it
 moves), so one Game Genie code works everywhere.

@@ -513,22 +513,23 @@ presses only (`tools/sb1/cheats.lua`, `tools/sb1/cheats.sh`): NORMAL GAME from t
 after the start flash, player 1 read back 800 frames later. RAM codes work the same in EU, JP and beta (same RAM map);
 those were not run there. All in `sb1_codes.json` (`section: "cheat"`).
 
-| Code | Effect | Check | Status |
-|---|---|---|---|
-| `7E0D7660` `7E0D7701` | player 1 invincible: the respawn-flash timer (+`$36`) held at `$0160` | own bomb: lives stay 5 (control run: 5 → 4) | ★ New |
-| `7E0D7D09` | player 1 always 9 lives | died, respawned, still 9 | ★ New |
-| `7E0D7180` | maximum blast (FIRE FULL) | RAM and blast on screen | ★ New |
-| `7E0D7009` | 9 bombs | RAM, several bombs laid | ★ New |
-| `7E0D7963` | power, kick, bomb pass, wall pass (+`$39` bits 0, 1, 5, 6) | RAM only | ★ New |
-| `7E0D7301` | remote-control bombs | bombs stayed unexploded 800 frames | ★ New |
-| `7E0C9001` | small Bomberman (as 5656) | flag and sprite at 1-1 | ★ New code (effect Known) |
-| `7E0C8F01` | next Normal Game starts with 9 lives (the prologue-X flag) | 9 lives at 1-1 | ★ New code (effect Known) |
-| `7E00A43C` | sound test | scene `$3C` from power-on | Known |
-| `7E00A4xx` | go to scene xx (list under Debug menu, STAGE NO.); switch it off once the scene has loaded | `7E00A42F` loads 6-8 | Known |
-| `C30D63A2` `C30D64AE` | ROM codes: 1-1 is built from the unused map `$C1:AEA2` (US/EU/beta; the JP header table is elsewhere) | loads and plays ![](img/sb1/maps/unused_C1AEA2_in_1-1.png) | ★ New |
-| (`C30D63DA` `C30D64A1`) | the same for the ring map `$C1:A1DA` | black screen, the stage never starts: not useful | ★ New (fails) |
+| Code | Effect | Check | Status | Game Genie (same test, US, EU, JP, beta) |
+|---|---|---|---|---|
+| `7E0D7660` `7E0D7701` | player 1 invincible: the respawn-flash timer (+`$36`) held at `$0160` | own bomb: lives stay 5 (control run: 5 → 4) | ★ New | `3CFC-77FF` `3CFC-779F` (JP `3CFC-8D9D` `3CFC-8DBD`, beta `3CFB-87FD` `3CFB-879D`): `DEC $36,X` → 2 NOPs at `$C4:14AC`, the start flash never ends (every player); lives stay 5 |
+| `7E0D7D09` | player 1 always 9 lives | died, respawned, still 9 | ★ New | `3CFE-57B4` `3CFE-5724` + the two codes of `7E0C8F01` (JP `3CFE-ED2F` `3CFE-EFFF`, beta `3CF3-E7BF` `3CF3-E72F`): `DEC $3D,X` → 2 NOPs at `$C4:19FE`; 9 lives, still 9 after dying |
+| `7E0D7180` | maximum blast (FIRE FULL) | RAM and blast on screen | ★ New | 5 codes (`sb1_codes.json`): the five FIRE FULL `BEQ`s (`$C4:3F5F` ...) → `BEQ +0`; every bomb laid with range 10, as with the PAR code |
+| `7E0D7009` | 9 bombs | RAM, several bombs laid | ★ New | 6 codes: `LDA $30,X` → `LDA #$09` in the three lay routines (`$C4:241C`, `$C4:3083`, `$C4:4548`); two bombs out, as with the PAR code |
+| `7E0D7963` | power, kick, bomb pass, wall pass (+`$39` bits 0, 1, 5, 6) | RAM only | ★ New | none: each bit is tested in its own routine and only pickups set them |
+| `7E0D7301` | remote-control bombs | bombs stayed unexploded 800 frames | ★ New | 6 codes: `LDA $33,X` → `LDA #$01` where a bomb is placed, `BEQ +0` at the two other remote tests; the bomb waits for a button, as with the PAR code |
+| `7E0C9001` | small Bomberman (as 5656) | flag and sprite at 1-1 | ★ New code (effect Known) | `DDF8-7FF4` `DDFB-E72B` (JP `DDFC-849F`, beta `DDFC-8FFF`, + `DDFB-E72B`): both `$0C90` tests `BEQ +0`; small sprite at 1-1 |
+| `7E0C8F01` | next Normal Game starts with 9 lives (the prologue-X flag) | 9 lives at 1-1 | ★ New code (effect Known) | `DB98-7DB0` `DB9D-5D20` (JP `DB05-E495` `DB0A-E4B5`, beta `DB9C-7F20` `DB9E-74F0`): both start-lives `LDA #$05` → `#$09`; 9 lives at 1-1 |
+| `7E00A43C` | sound test | scene `$3C` from power-on | Known | `7A10-E4BD` (JP `7A17-572D`, beta `7A17-54BD`): the boot's title scene `$31` → `$3C` (`$C4:6349`); scene `$3C` from power-on |
+| `7E00A4xx` | go to scene xx (list under Debug menu, STAGE NO.); switch it off once the scene has loaded | `7E00A42F` loads 6-8 | Known | `xx10-E4BD` (JP `xx17-572D`, beta `xx17-54BD`), xx in Game Genie letters: power-on goes to scene xx; `4E10-E4BD` loads 6-8 |
+| `C30D63A2` `C30D64AE` | ROM codes: 1-1 is built from the unused map `$C1:AEA2` (US/EU/beta; the JP header table is elsewhere) | loads and plays ![](img/sb1/maps/unused_C1AEA2_in_1-1.png) | ★ New | `C4D1-5DAE` `C3D1-5FDE` (the same bytes): loads and plays (US, EU, beta) |
+| (`C30D63DA` `C30D64A1`) | the same for the ring map `$C1:A1DA` | black screen, the stage never starts: not useful | ★ New (fails) | not run |
 
-The debug-menu ROM codes (90 per version) are listed under Debug menu.
+The debug-menu ROM codes (90 per version) are listed under Debug menu. Their Game Genie forms (the same bytes, in
+`sb1_codes.json`) open the menu and change values in all four versions.
 
 ## Searched, nothing found
 

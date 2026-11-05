@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 GAMES = {"sb1": "SB1", "sb2": "SB2", "sb3": "SB3", "sb4": "SB4", "sb5": "SB5", "mega": "MEGA",
          "pce90": "PCE90", "pceub": "PCEUB", "pce93": "PCE93", "pce94": "PCE94", "mega8": "MEGA8",
          "nes1": "NES1", "nes2": "NES2",
-         "gb1": "GB1", "gb2": "GB2", "gb3": "GB3", "pocket": "POCKET", "max": "MAX"}
+         "gb1": "GB1", "gb2": "GB2", "gb3": "GB3", "pocket": "POCKET", "max": "MAX", "quest": "QUEST"}
 EXPORT = re.compile(r"^export\s+(?:const|let|var|function\*?|class)\s+([A-Za-z_$][\w$]*)", re.M)
 NODE = shutil.which("node")
 

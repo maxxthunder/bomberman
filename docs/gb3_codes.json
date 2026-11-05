@@ -937,57 +937,77 @@
  },
  {
   "code": "0101BCC1",
+  "devices": {
+   "GameShark": "0101BCC1",
+   "Game Genie": "C3B-E6B-081 + E4B-E7B-198 + 4AB-E8B-E6D"
+  },
   "effect": "Invincible (unused debug flag $C1BC)",
   "versions": [
    "jp"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark. $C1BC is cleared at boot ($00:12FA) and never set, but the player-hit routine $01:4BE6 skips the dying state when it is non-zero. Bot 6,000 frames from Wood 1: 0 hits with it, 11 deaths without.",
+  "note": "GameShark. $C1BC is cleared at boot ($00:12FA) and never set, but the player-hit routine $01:4BE6 skips the dying state when it is non-zero. Bot 6,000 frames from Wood 1: 0 hits with it, 11 deaths without. Game Genie: the ROM patch below, same bot test.",
   "section": "cheat"
  },
  {
   "code": "C3B-E6B-081 + E4B-E7B-198 + 4AB-E8B-E6D",
+  "devices": {
+   "Game Genie": "C3B-E6B-081 + E4B-E7B-198 + 4AB-E8B-E6D",
+   "GameShark": "0101BCC1"
+  },
   "effect": "Invincible (ROM patch)",
   "versions": [
    "jp"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Game Genie: $01:4BE6 LD A,($C1BC) -> JP $4AE4, the flag's no-death branch. Bot 6,000 frames: 0 hits. IPS: patches/gb3_invincible.ips.",
+  "note": "Game Genie: $01:4BE6 LD A,($C1BC) -> JP $4AE4, the flag's no-death branch. Bot 6,000 frames: 0 hits. IPS: patches/gb3_invincible.ips. GameShark 0101BCC1: the flag above, same bot test.",
   "section": "cheat"
  },
  {
   "code": "010363C3",
+  "devices": {
+   "GameShark": "010363C3",
+   "Game Genie": "B75-17E + B75-61E"
+  },
   "effect": "Infinite lives",
   "versions": [
    "jp"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark: lives $C363 = 3. Bot 6,000 frames: 14 deaths, lives stay 3.",
+  "note": "GameShark: lives $C363 = 3. Bot 6,000 frames: 14 deaths, lives stay 3. Game Genie: DEC A -> OR A at both lives decrements ($00:1517, $00:1561); bot 6,000 frames: 13 deaths, lives stay 3.",
   "section": "cheat"
  },
  {
   "code": "01FF80C4",
+  "devices": {
+   "GameShark": "01FF80C4",
+   "Game Genie": "18B-A2E + C3B-E8E"
+  },
   "effect": "Every stage ends cleared at once",
   "versions": [
    "jp"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark: stage result $C480 = $FF, the exit taken ($00:1BE6 -> $00:13A8). With the invincibility flag: Wood 1-6 then City 1 in 6,000 frames; the shop ($0A:7557) follows each area's 6th stage.",
+  "note": "GameShark: stage result $C480 = $FF, the exit taken ($00:1BE6 -> $00:13A8). With the invincibility flag: Wood 1-6 then City 1 in 6,000 frames; the shop ($0A:7557) follows each area's 6th stage. Game Genie: $00:1BA2 JR NZ -> JR and $00:1BE8 JP Z -> JP (the exit to $00:13A8); with the Game Genie invincibility: Wood 1-6 then City 1 in 6,000 frames.",
   "section": "cheat"
  },
  {
   "code": "0101BDC1",
+  "devices": {
+   "GameShark": "0101BDC1",
+   "Game Genie": "C99-B5D"
+  },
   "effect": "Clock stops (unused debug flag $C1BD)",
   "versions": [
    "jp"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark. $C1BD is cleared at boot and never set; $00:29B1 (the per-frame clock update) returns at once when it is non-zero. 1,200 frames of Wood 1: the clock stays 3:00 (2:41 without).",
+  "note": "GameShark. $C1BD is cleared at boot and never set; $00:29B1 (the per-frame clock update) returns at once when it is non-zero. 1,200 frames of Wood 1: the clock stays 3:00 (2:41 without). Game Genie: $00:29B5 RET NZ -> RET; 1,200 frames of Wood 1 with no input: the clock stays 3:00, as with the GameShark code.",
   "section": "cheat"
  }
 ]

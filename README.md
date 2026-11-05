@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Game Boy Color, Super Nintendo, Genesis and PC Engine
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.4.2](https://img.shields.io/badge/version-1.4.2-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.5.0](https://img.shields.io/badge/version-1.5.0-ff4f9a)](CHANGELOG.md)
 
 <p align="center">
   <img src="docs/img/logos/nes1_us.png" alt="Bomberman (NES)" height="72">
@@ -9,6 +9,7 @@
   <img src="docs/img/logos/gb2_us.png" alt="Bomberman GB" height="72">
   <img src="docs/img/logos/gb3_jp.png" alt="Bomberman GB 3" height="72">
   <img src="docs/img/logos/pocket.png" alt="Pocket Bomberman" height="72">
+  <img src="docs/img/logos/quest_us.png" alt="Bomberman Quest" height="72">
   <img src="docs/img/logos/max_blue.png" alt="Bomberman Max: Blue Champion" height="72">
   <img src="docs/img/logos/max_red.png" alt="Bomberman Max: Red Challenger" height="72">
   <img src="docs/img/logos/sb1_us.png" alt="Super Bomberman" height="72">
@@ -23,19 +24,19 @@
 </p>
 
 Every password and secret code for Bomberman and Bomberman II (NES / Famicom), Wario Blast / Bomberman GB 1–3 (Game
-Boy), Pocket Bomberman and Bomberman Max (Game Boy Color), Super Bomberman 1 to 5 (Super Nintendo), Mega Bomberman
+Boy), Pocket Bomberman, Bomberman Quest and Bomberman Max (Game Boy Color), Super Bomberman 1 to 5 (Super Nintendo), Mega Bomberman
 and its 8-player demo (Genesis), and Bomberman, Users Battle, Bomberman '93 and Bomberman '94 (TurboGrafx-16 / PC
 Engine), read from each game's own code and tested in emulators. For every game, the page has:
 
 - **Make a password** for any stage, and **check** one: it says whether the game takes it and what it holds.
 - **Item icons** ripped from each game next to the power-ups a password holds.
-- **Cheat codes** (Game Genie, Pro Action Replay, GameShark) and **IPS patches** for invincibility, debug menus and
-  restored features, each tested in an emulator.
+- **Cheat codes** for both devices where the hardware allows it: Game Genie and Pro Action Replay (GameShark on Game
+  Boy), each tested in an emulator, and **IPS patches** for invincibility, debug menus and restored features.
 - **Every code**, with ★ New on the ones no published list had.
 - **Super Bomberman 5 character builder:** pick body, colour, bombs, fire, speed and items for a 6-symbol Config
   Battle password, or paste one to see what it holds.
-- **Bomberman Max Charabom builder:** the game has no password, so the page makes GameShark codes that give you any
-  Charabom at any level.
+- **Bomberman Max Charabom builder** and **Bomberman Quest item builder:** neither game has a password, so the page
+  makes GameShark codes that give you any Charabom at any level, or any weapon, equipment or item.
 
 The page works offline too: save [`index.html`](index.html) with the `docs/img/` folder next to it.
 
@@ -77,6 +78,12 @@ Contents: [What's new](#whats-new) · [How the passwords work](#how-the-password
 - The 32-code password list in full, with three powered-up starts (Wind, Cloud, Evil) and 0278, the ending.
 - An unused second password screen whose digits are switches for invincibility, world, area and a stopped clock;
   a patch brings it back.
+
+**Bomberman Quest** (Game Boy Color, US and Japan)
+- No password: the game saves. The page builds GameShark codes for every weapon, piece of equipment and item, for
+  both versions (their save block sits one byte apart).
+- The debug switches: one keeps the hidden test mode (sound, colour and tile tests, the ending) on Select at the
+  title, and a debug start with 160 HP and every item; cheat codes and patches turn them on. The build date stamps.
 
 **Bomberman Max** (Game Boy Color: Blue Champion, Red Challenger, Hikari no Yuusha, Yami no Senshi, Ain Version)
 - No password: the game saves. The page builds GameShark codes for the Charabom roster in the save, any Charabom at
@@ -162,6 +169,7 @@ Contents: [What's new](#whats-new) · [How the passwords work](#how-the-password
 | Bomberman GB (US) / GB 2 | 4 digits | a fixed list | 11 |
 | Bomberman GB 3 | 7 hex digits | area, stage, areas cleared, shop items, capsules, with a capsule balance | 20,329 |
 | Pocket Bomberman | 4 digits | a fixed list | 32 |
+| Bomberman Quest | none: the game saves | (GameShark codes for the save block) | 60 per version |
 | Bomberman Max | none: the game saves | (GameShark codes for the Charabom roster) | 30 Charaboms × levels 1–99 |
 
 The details, with ROM addresses, are in the research notes.
@@ -171,7 +179,7 @@ The details, with ROM addresses, are in the research notes.
 - NES: [Bomberman](docs/nes1.md), [Bomberman II](docs/nes2.md)
 - Game Boy: [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md),
   [Bomberman GB 3](docs/gb3.md)
-- Game Boy Color: [Pocket Bomberman](docs/pocket.md), [Bomberman Max](docs/max.md)
+- Game Boy Color: [Pocket Bomberman](docs/pocket.md), [Bomberman Quest](docs/quest.md), [Bomberman Max](docs/max.md)
 - Super Nintendo: [Super Bomberman](docs/sb1.md), [2](docs/sb2.md), [3](docs/sb3.md), [4](docs/sb4.md),
   [5](docs/sb5.md), and the English [4](docs/sb4en.md) and [5](docs/sb5en.md) (Super Bomberman Collection)
 - Genesis: [Mega Bomberman](docs/mega.md) and its [8-player demo](docs/mega8.md)
@@ -197,7 +205,7 @@ ROMs aren't included. Put them in `roms/` with their No-Intro names.
 
 ## Credits and legal
 
-*Bomberman*, *Bomberman II*, *Bomberman GB* 1–3, *Pocket Bomberman*, *Bomberman Max*, *Bomberman '93*, *Bomberman
+*Bomberman*, *Bomberman II*, *Bomberman GB* 1–3, *Pocket Bomberman*, *Bomberman Quest*, *Bomberman Max*, *Bomberman '93*, *Bomberman
 '94* and *Super Bomberman* 1–5 are © 1985–1999 Hudson Soft, *Mega Bomberman* is © 1994 Hudson Soft and Sega, and
 *Wario Blast* is © 1994 Hudson Soft and Nintendo; Bomberman now belongs to Konami. This project isn't affiliated with
 or endorsed by Konami, Hudson Soft, Sega or Nintendo. The game art on the page and in this repo (logos and

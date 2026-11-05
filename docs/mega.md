@@ -332,14 +332,16 @@ title = id, data address, size and use: `img/mega/maps/map_XX.png`; all on one s
 ## Cheat codes
 
 ★ **New** (neither prior-art page has any). Game Genie codes made with `tools/mega/gg.py` and checked through
-BizHawk's own cheat system (`client.addcheat`, `cheats.lua`), with and without the code, in both versions:
+BizHawk's own cheat system (`client.addcheat`, `cheats.lua`), with and without the code, in both versions. The Pro
+Action Replay column is the same ROM word as `AAAAAA:VVVV`; BizHawk's `client.addcheat` takes Genesis Action Replay
+codes for RAM only, so those ran the same tests with the word written to `MD CART` every frame (same results):
 
-| Code (USA) | Code (Europe) | Effect | Patch | Checked |
-|---|---|---|---|---|
-| `HA3A-AYWC` | same | Infinite lives | `$3242` `subq.b #1,$9543` → `tst.b` | own bombs, 2400 frames: 3 lives lost without, none with |
-| `AJ2A-AAB2` | same | Invincible | `$3038`: the hit check `$3032` always says "not hit" | own bombs, 1200 frames: 2 lives lost without, none with. Player held on each of the 8 enemies of area 1 stage 1 for 120 frames: a life lost on each without, none with. Battle Game (2 players on their own bombs): both die every round without; with it nobody dies, closing-in blocks included, and the round only ends at time-up. Every death in these runs went through `$30A4`, behind the check |
-| `HC0A-AYZ0` | `HC0A-AYZT` | Clock stops | `$ACB6` (Europe `$ACB0`) frame counter `subq` → `tst` | 600 frames: 3:57 stayed 3:57 |
-| `HCXT-DEV6` `DJV6` `DNV6` `DTV6` `DYV6` | `HCXT-DEV0` `DJV0` `DNV0` `DTV0` `DYV0` | Normal Game starts at area 2, 3, 4, 5, 6 | `$1A73C` (Europe `$1A736`) `clr.b $953B` → `addq.b #n,$953B` | all five from the title: planet map shows AREA n, play starts in that area's first stage (`$953A` = n-1, map `$04`, `$0B`, `$13`, `$1C`, `$25`; area 6 after the final-area intro scene). Use from power-on (it adds to the old value) |
+| Code (USA) | Code (Europe) | Effect | Patch | Checked | Pro Action Replay |
+|---|---|---|---|---|---|
+| `HA3A-AYWC` | same | Infinite lives | `$3242` `subq.b #1,$9543` → `tst.b` | own bombs, 2400 frames: 3 lives lost without, none with | `003242:4A38` |
+| `AJ2A-AAB2` | same | Invincible | `$3038`: the hit check `$3032` always says "not hit" | own bombs, 1200 frames: 2 lives lost without, none with. Player held on each of the 8 enemies of area 1 stage 1 for 120 frames: a life lost on each without, none with. Battle Game (2 players on their own bombs): both die every round without; with it nobody dies, closing-in blocks included, and the round only ends at time-up. Every death in these runs went through `$30A4`, behind the check | `003038:0002` |
+| `HC0A-AYZ0` | `HC0A-AYZT` | Clock stops | `$ACB6` (Europe `$ACB0`) frame counter `subq` → `tst` | 600 frames: 3:57 stayed 3:57 | `00ACB6:4A38` (Europe `00ACB0:4A38`) |
+| `HCXT-DEV6` `DJV6` `DNV6` `DTV6` `DYV6` | `HCXT-DEV0` `DJV0` `DNV0` `DTV0` `DYV0` | Normal Game starts at area 2, 3, 4, 5, 6 | `$1A73C` (Europe `$1A736`) `clr.b $953B` → `addq.b #n,$953B` | all five from the title: planet map shows AREA n, play starts in that area's first stage (`$953A` = n-1, map `$04`, `$0B`, `$13`, `$1C`, `$25`; area 6 after the final-area intro scene). Use from power-on (it adds to the old value) | `01A73C:5238` `5438` `5638` `5838` `5A38` (Europe `01A736:...`) |
 
 Battle Game has nothing locked (see above), so there is no unlock code.
 

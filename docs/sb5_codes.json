@@ -404,6 +404,10 @@
  },
  {
   "code": "7E6253:01",
+  "devices": {
+   "Pro Action Replay": "7E6253:01",
+   "Game Genie": "6D44-5727"
+  },
   "effect": "Invincibility (the hit timer never runs out)",
   "versions": [
    "retail",
@@ -411,11 +415,14 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The flag that the orphaned password handler $C5:6951 would have set; $C4:2D2B reads it. Bomberman survived his own blast in Normal Mode with it held at 1. Caravan address is 7E6271 (not tested). Round 3: run through Mesen's PAR cheat engine on retail and English: the player survives his own bomb at the start of 1-1 (without it he dies). Caravan: 7E6271:01.",
+  "note": "The flag that the orphaned password handler $C5:6951 would have set; $C4:2D2B reads it. Bomberman survived his own blast in Normal Mode with it held at 1. Caravan address is 7E6271 (not tested). Round 3: run through Mesen's PAR cheat engine on retail and English: the player survives his own bomb at the start of 1-1 (without it he dies). Caravan: 7E6271:01. Game Genie: $C4:2D2F BNE -> BRA, the branch taken when $6253 is set; Mesen, retail and English: the player survives his own bomb at the start of 1-1.",
   "section": "cheat"
  },
  {
   "code": "PAR 7E62DE:09 / 7E62DF:07",
+  "devices": {
+   "Pro Action Replay": "7E62DE:09 / 7E62DF:07"
+  },
   "effect": "Config Battle editor: body 9 (Subordinate Bomber) / color 7 (boss palette)",
   "versions": [
    "retail",
@@ -463,6 +470,9 @@
  },
  {
   "code": "7E6248:xx",
+  "devices": {
+   "Pro Action Replay": "7E6248:xx"
+  },
   "effect": "PAR room/scene select: the next valid option password goes to scene xx (AC, AD, AE = debug rooms; 0D-66 stages, 67-70 bosses, 74-A7 battle stages)",
   "versions": [
    "retail",
@@ -475,6 +485,10 @@
  },
  {
   "code": "7E6271:01",
+  "devices": {
+   "Pro Action Replay": "7E6271:01",
+   "Game Genie": "6D45-5DF7"
+  },
   "effect": "Invincibility (Caravan address of 7E6253)",
   "versions": [
    "caravan"
@@ -482,10 +496,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Mesen PAR cheat engine: the player survives his own bomb at the start of 1-1. Caravan WRAM from $6249 up is $1E higher."
+  "note": "Mesen PAR cheat engine: the player survives his own bomb at the start of 1-1. Caravan WRAM from $6249 up is $1E higher. Game Genie: the same BNE -> BRA at Caravan $C4:2D70; Mesen: the player survives his own bomb at the start of 1-1."
  },
  {
   "code": "7E0E23:01",
+  "devices": {
+   "Pro Action Replay": "7E0E23:01",
+   "Game Genie": "6D44-5727 6DD1-7499 (retail, en) / 6D45-5DF7 6DD1-7499 (caravan)"
+  },
   "effect": "Invincibility and the stage clock stops",
   "versions": [
    "retail",
@@ -495,10 +513,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$0E23 is tested at $C4:2D31 (hit check, right after $6253) and $C5:0460 (skips the clock tick $0E1C-$0E1E); no code ever sets it (only STZ at $C5:0404). Verified with Mesen's cheat engine on all three ROMs: survives own bomb, clock frozen."
+  "note": "$0E23 is tested at $C4:2D31 (hit check, right after $6253) and $C5:0460 (skips the clock tick $0E1C-$0E1E); no code ever sets it (only STZ at $C5:0404). Verified with Mesen's cheat engine on all three ROMs: survives own bomb, clock frozen. Game Genie: BNE -> BRA after both $0E23 tests ($C4:2D2F, Caravan $C4:2D70; $C5:0469); Mesen on all three ROMs: survives his own bomb, clock frozen."
  },
  {
   "code": "3061E9:01",
+  "devices": {
+   "Pro Action Replay": "3061E9:01",
+   "Game Genie": "CB0B-7DA4 DF0B-7FD4 3C0B-7F04 3C0B-7F64 (retail, en) / CB0B-7404 DF0B-7464 3C0B-74A4 3C0B-77D4 (caravan)"
+  },
   "effect": "Gold Bomberman on the Battle character select without a 100% clear",
   "versions": [
    "retail",
@@ -508,10 +530,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Patches the read of SRAM $1E9 (native 68, $C0:4893 LDA $3061E9; Caravan $C0:4899). Verified on retail with Mesen's cheat engine (Gold in the bottom-right slot, SRAM itself stays 0); Caravan and English use the same instruction but were not run."
+  "note": "Patches the read of SRAM $1E9 (native 68, $C0:4893 LDA $3061E9; Caravan $C0:4899). Verified on retail with Mesen's cheat engine (Gold in the bottom-right slot, SRAM itself stays 0); Caravan and English use the same instruction but were not run. Game Genie: LDA $3061E9 -> LDA #$01 + NOP NOP at $C0:4893 (Caravan $C0:4899); Mesen on all three ROMs: Gold Bomberman in the bottom-right slot of the character select."
  },
  {
   "code": "7E6245:0D",
+  "devices": {
+   "Pro Action Replay": "7E6245:0D",
+   "Game Genie": "D20A-7FD4"
+  },
   "effect": "Battle stages 11-13 without the Super Joycard",
   "versions": [
    "retail",
@@ -520,10 +546,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$6245 = number of battle stages (10 or 13). Verified with Mesen's cheat engine on retail and English ($6245=13 at the Battle menu). Caravan has them unlocked already. The known 7E625A:0B-0D picks the stage instead."
+  "note": "$6245 = number of battle stages (10 or 13). Verified with Mesen's cheat engine on retail and English ($6245=13 at the Battle menu). Caravan has them unlocked already. The known 7E625A:0B-0D picks the stage instead. Game Genie: the LDA #$0A before STA $7E6245 ($C0:48C3) loads 13; Mesen, retail and English: $6245=13 at the Battle menu."
  },
  {
   "code": "C56983:01",
+  "devices": {
+   "Pro Action Replay": "C56983:01",
+   "Game Genie": "DF16-5D21"
+  },
   "effect": "3879 boss rush starts fully powered (8 bombs, 8 fire, top speed, remote, kick, glove): 0719 on retail",
   "versions": [
    "retail",
@@ -532,6 +562,6 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "ROM code: the operand of LDA #$00 / STA $6254 in the 3879 handler ($C5:6982). A RAM code is too late because 3879 builds the players in the same frame. Verified with Mesen's cheat engine: $17CA=8, $4EBD=8, $15EA=2, $4ED5=7 in the boss arena (without it 2/1/0/0)."
+  "note": "ROM code: the operand of LDA #$00 / STA $6254 in the 3879 handler ($C5:6982). A RAM code is too late because 3879 builds the players in the same frame. Verified with Mesen's cheat engine: $17CA=8, $4EBD=8, $15EA=2, $4ED5=7 in the boss arena (without it 2/1/0/0). Game Genie: the same ROM byte; Mesen with 3879, retail and English: $17CA=8, $4EBD=8, $15EA=2, $4ED5=7 in the boss arena."
  }
 ]

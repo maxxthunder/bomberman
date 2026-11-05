@@ -198,6 +198,11 @@ patching `LDA $7A` to `LDA #$7A` in both death checks, `0068:02` infinite lives 
 every stage clears at once (11 stages in 6,000 frames). Patches: `patches/nes1_invincible_us.ips`, `_jp.ips`
 (`tools/nes1/mkpatch.py`, the Game Genie bytes).
 
+Both devices, the same tests: Pro Action Replay (address + value) `007AFF` invincible, `006802` infinite lives,
+`005E01` stage clear; Game Genie `SXPKAG` (JP `SXPGAG`) infinite lives (`DEC $68` -> `LDA $68` at `$C498`, JP
+`$C490`: 18 / 16 deaths, lives stay 2) and `OZTKTK` (JP `OZTGTK`) stage clear (the main loop's `LDA $5E` ->
+`LDA #$5E` at `$C46E`, JP `$C466`: 11 stages in 6,000 frames).
+
 ## Open
 
 - The bonus items were read from the code only; none was made to appear in Mesen.

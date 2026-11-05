@@ -206,8 +206,12 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Flips the disabled switch at \\. Same byte as patches/sb2_debug_menu_<ver>.ips (ROM offset \\ = 01). Up/Down picks a line (wraps over 9 lines), Right/Left steps the value, START closes it (and pauses; START again to play). NO DEATH sets 144 hearts, which never decrease (\\ only takes hearts below \\). BOMB TYPE 4 = spike bomb (burns through soft blocks), 8 = an unnamed fifth type. The last three lines (-) do nothing. Every line checked on the patched ROMs in Mesen.",
-  "section": "debug"
+  "note": "Flips the disabled switch at \\. Same byte as patches/sb2_debug_menu_<ver>.ips (ROM offset \\ = 01). Up/Down picks a line (wraps over 9 lines), Right/Left steps the value, START closes it (and pauses; START again to play). NO DEATH sets 144 hearts, which never decrease (\\ only takes hearts below \\). BOMB TYPE 4 = spike bomb (burns through soft blocks), 8 = an unnamed fifth type. The last three lines (-) do nothing. Every line checked on the patched ROMs in Mesen. The Game Genie code patches the same ROM byte.",
+  "section": "debug",
+  "devices": {
+   "Pro Action Replay": "C15B4001",
+   "Game Genie": "DF90-EDD1"
+  }
  },
  {
   "code": "C0FB2B01",
@@ -221,7 +225,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The battle main loop ($C0:FB11) has its own disabled copy of the Normal Game soft reset (C0FCAF01). Both jump to the reset entry $C0:FA48."
+  "note": "The battle main loop ($C0:FB11) has its own disabled copy of the Normal Game soft reset (C0FCAF01). Both jump to the reset entry $C0:FA48. The Game Genie code patches the same ROM byte.",
+  "devices": {
+   "Pro Action Replay": "C0FB2B01",
+   "Game Genie": "DFE4-E4A4"
+  }
  },
  {
   "code": "CC23A101",
@@ -232,7 +240,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Disabled switch at $CC:239F (LDA #0 / BNE) that skips the $1CB5 check. Europe: CC23FC01, Japan: CC239001. Caravan has its own switch at $CC:250E: CC251001 (checked in Mesen: 12 stages, Left 1 -> 12 -> 11)."
+  "note": "Disabled switch at $CC:239F (LDA #0 / BNE) that skips the $1CB5 check. Europe: CC23FC01, Japan: CC239001. Caravan has its own switch at $CC:250E: CC251001 (checked in Mesen: 12 stages, Left 1 -> 12 -> 11). The Game Genie code patches the same ROM byte.",
+  "devices": {
+   "Pro Action Replay": "CC23A101",
+   "Game Genie": "DF4C-ED5D"
+  }
  },
  {
   "code": "CC251001",
@@ -242,7 +254,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Disabled switch at $CC:250E (LDA #0 / BNE to $CC:2527) that skips the 4-stage limit and the $1CB5 clear. Checked with Mesen's cheat engine: $7F:401E = 11 instead of 3, Left on the stage select goes 1 -> 12 -> 11 (without it 1 -> 4 -> 3)."
+  "note": "Disabled switch at $CC:250E (LDA #0 / BNE to $CC:2527) that skips the 4-stage limit and the $1CB5 clear. Checked with Mesen's cheat engine: $7F:401E = 11 instead of 3, Left on the stage select goes 1 -> 12 -> 11 (without it 1 -> 4 -> 3). The Game Genie code patches the same ROM byte.",
+  "devices": {
+   "Pro Action Replay": "CC251001",
+   "Game Genie": "DF4F-5D7F"
+  }
  },
  {
   "code": "C100BF01",
@@ -256,7 +272,11 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$C1:00BD: force-blank for a few cycles at the end of each frame's work, in both main loops."
+  "note": "$C1:00BD: force-blank for a few cycles at the end of each frame's work, in both main loops. The Game Genie code patches the same ROM byte.",
+  "devices": {
+   "Pro Action Replay": "C100BF01",
+   "Game Genie": "DFD8-77A0"
+  }
  },
  {
   "code": "C13D2801",
@@ -270,7 +290,11 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$C1:3D26 switch, calls the battle jump code $C0:6616/$C0:6658."
+  "note": "$C1:3D26 switch, calls the battle jump code $C0:6616/$C0:6658. The Game Genie code patches the same ROM byte.",
+  "devices": {
+   "Pro Action Replay": "C13D2801",
+   "Game Genie": "DF74-54D5"
+  }
  },
  {
   "code": "C022F301",
@@ -284,7 +308,11 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$C0:22A0: speed 3, 9 bombs, fire 9, remote, kick, glove, both pass items and 144 hearts (checked in RAM)."
+  "note": "$C0:22A0: speed 3, 9 bombs, fire 9, remote, kick, glove, both pass items and 144 hearts (checked in RAM). The Game Genie code patches the same ROM byte.",
+  "devices": {
+   "Pro Action Replay": "C022F301",
+   "Game Genie": "DF4E-8DAD"
+  }
  },
  {
   "code": "C0FCAF01",
@@ -298,7 +326,11 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$C0:FCAD: needs exactly SELECT+START held ($C3 = $3000)."
+  "note": "$C0:FCAD: needs exactly SELECT+START held ($C3 = $3000). The Game Genie code patches the same ROM byte.",
+  "devices": {
+   "Pro Action Replay": "C0FCAF01",
+   "Game Genie": "DFEC-77A7"
+  }
  },
  {
   "code": "7E1CCD0A / 7E1CCD0B",
@@ -356,6 +388,10 @@
  },
  {
   "code": "7E80EF90",
+  "devices": {
+   "Pro Action Replay": "7E80EF90",
+   "Game Genie": "0C67-E70D 6767-E76D D8C9-8D0F D806-5D00 5191-54D9 9991-5409"
+  },
   "effect": "Player 1 invincible in Normal Game (144 hearts, which never go down)",
   "versions": [
    "us",
@@ -367,10 +403,13 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Same value as the debug menu's NO DEATH: a hit takes a heart only below $80. Own bomb in 1-1: he flashed and played on (without the code he died and 1-1 restarted)."
+  "note": "Same value as the debug menu's NO DEATH: a hit takes a heart only below $80. Own bomb in 1-1: he flashed and played on (without the code he died and 1-1 restarted). Game Genie: a hit with no hearts goes to the heart-loss flash instead of dying (JML $C0:A675 at $C0:833C -> $C0:834A, BEQ at $C0:A650 and $C1:4180 -> the flash, JML at $C1:5567 -> $C1:5576); Mesen, all five: own bomb in 1-1, he played on with his kit (without it he died and lost it)."
  },
  {
   "code": "7E80E003 7E80E109 7E80E209",
+  "devices": {
+   "Pro Action Replay": "7E80E003 7E80E109 7E80E209"
+  },
   "effect": "Speed 3, 9 bombs, fire 9 (HUD 10)",
   "versions": [
    "us",
@@ -382,10 +421,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player 1 kit $7E:80E0-$80E2; RAM checked after a bomb."
+  "note": "Player 1 kit $7E:80E0-$80E2; RAM checked after a bomb. No Game Genie form: speed, bombs and fire are read through the player pointer at about 20 places (and copied to +$F0-$F2), and written only at game start, by pickups and by the R switch C022F301 (which gives everything)."
  },
  {
   "code": "7E80F304",
+  "devices": {
+   "Pro Action Replay": "7E80F304",
+   "Game Genie": "CB7D-54AF D07D-57DF"
+  },
   "effect": "Spike bombs (blast through soft blocks); 7E80F301 remote control, 7E80F302 power bomb",
   "versions": [
    "us",
@@ -397,10 +440,13 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Bomb type $7E:80F3; 4 checked in RAM, types checked on screen through the debug menu earlier."
+  "note": "Bomb type $7E:80F3; 4 checked in RAM, types checked on screen through the debug menu earlier. Game Genie: LDA [$6A],Y -> LDA #$04 at $C0:350B, the type load copied to each new bomb (+$42); Mesen, all five: the bomb laid in 1-1 got type 4 (0 without)."
  },
  {
   "code": "7E80FA01 7E80FB01 7E80FE01 7E80FF01",
+  "devices": {
+   "Pro Action Replay": "7E80FA01 7E80FB01 7E80FE01 7E80FF01"
+  },
   "effect": "Both pass items, power glove, kick",
   "versions": [
    "us",
@@ -412,10 +458,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "RAM checked; the glove and kick flags are the ones the pickup handlers set."
+  "note": "RAM checked; the glove and kick flags are the ones the pickup handlers set. No Game Genie form built: the four items have four separate tests (wall pass $C0:AF6A, bomb pass $C0:AEBC, glove $C0:30E6, kick $C0:63AC), and the PAR check was RAM only."
  },
  {
   "code": "7E1CB5FF 7E1CB6FF",
+  "devices": {
+   "Pro Action Replay": "7E1CB5FF 7E1CB6FF",
+   "Game Genie": "DD48-ED7D (us, beta) / DD4D-74EF (eu) / DD4B-E7ED (jp)"
+  },
   "effect": "Battle stages 11 and 12 without the Joycard trick",
   "versions": [
    "us",
@@ -426,10 +476,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$1CB5 is the flag the turbo-X code sets. Left on the stage select went 1 -> 12. Caravan clears it at the stage select (no effect there)."
+  "note": "$1CB5 is the flag the turbo-X code sets. Left on the stage select went 1 -> 12. Caravan clears it at the stage select (no effect there). Game Genie: BEQ +7 -> BEQ +0 after LDA $001CB5 ($CC:23AF; EU $CC:240A, JP $CC:239E), so the stage count is always 12; Mesen, USA, Europe, Japan, beta: Left on the stage select went 1 -> 12."
  },
  {
   "code": "7E1C6EFF 7E1C6FFF",
+  "devices": {
+   "Pro Action Replay": "7E1C6EFF 7E1C6FFF",
+   "Game Genie": "DD1E-5F6F"
+  },
   "effect": "Jump (Y) in every battle stage but 2 and 3",
   "versions": [
    "us",
@@ -441,10 +495,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$1C6E, the flag the pad-5 trick sets. The cheat engine held it at $FFFF; the jump itself was checked with the real pad-5 trick (same flag)."
+  "note": "$1C6E, the flag the pad-5 trick sets. The cheat engine held it at $FFFF; the jump itself was checked with the real pad-5 trick (same flag). Game Genie: BEQ -> BEQ +0 after LDA $001C6E ($C0:65F5); Mesen, all five: the jump handler $C0:6616 runs in battle stage 1 (never without the code)."
  },
  {
   "code": "7E1C68FF 7E1C69FF",
+  "devices": {
+   "Pro Action Replay": "7E1C68FF 7E1C69FF",
+   "Game Genie": "DD2F-8F6F (us, eu, jp, beta) / DD24-8F0F (caravan)"
+  },
   "effect": "Sudden death: the hurry-up blocks fill the whole arena (password 5656)",
   "versions": [
    "us",
@@ -456,7 +514,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$1C68 held at $FFFF by the cheat engine; the effect was checked earlier with the flag set by 5656."
+  "note": "$1C68 held at $FFFF by the cheat engine; the effect was checked earlier with the flag set by 5656. Game Genie: BEQ -> BEQ +0 after LDA $001C68 ($C0:D615, Caravan $C0:D624), so the block list never stops at its $FE marker; Mesen (tools/sb2/sudden_death.lua with the flag cleared), USA, Europe, Japan, beta: the blocks kept coming past 81 (control stops at 81). Caravan not run (the test never reaches the hurry-up there)."
  },
  {
   "code": "$C0:0E9B",

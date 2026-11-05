@@ -386,13 +386,13 @@ to start-position data in `$C3`. Those streams are compressed and were not decod
 Each code was checked in Mesen's cheat engine (`tools/sb4/par.lua`) on the unpatched Japanese ROM, and on the
 English ROM where marked:
 
-| Code | Effect | Checked |
-|---|---|---|
-| `7F202D:0C` | battle stages 11 and 12 without the turbo trick | JP: stage select goes from 1 to 12, then 11. EN: `$7F:202D`=12 (stage select not walked) |
-| `C2AEE6:7D` + `C2AEE7:16` | password **5757** starts the filler stage 5-7 (index 38) | JP and EN: `$0092`=38, empty arena |
-| `C2AEE8:E2` + `C2AEE9:16` | password **5858** starts filler 5-8 (index 39) | JP: `$0092`=39 |
-| `7E0274:01` | pause without the PAUSE! label | JP and EN |
-| `7F202B:0A` / `0B` | stage 11 / 12 at the select | Known, not re-run |
+| Code | Effect | Checked | Game Genie (same test) |
+|---|---|---|---|
+| `7F202D:0C` | battle stages 11 and 12 without the turbo trick | JP: stage select goes from 1 to 12, then 11. EN: `$7F:202D`=12 (stage select not walked) | `DA07-77BD` (`$C4:403D` `LDA #$000A` -> `#$000C`): JP select 1 -> 12 -> 11, EN `$7F:202D`=12 |
+| `C2AEE6:7D` + `C2AEE7:16` | password **5757** starts the filler stage 5-7 (index 38) | JP and EN: `$0092`=38, empty arena | `52C3-8F68` `F1C3-8FA8` (the same bytes): JP and EN `$0092`=38 |
+| `C2AEE8:E2` + `C2AEE9:16` | password **5858** starts filler 5-8 (index 39) | JP: `$0092`=39 | `34C3-84D8` `F1C3-8408`: JP and EN `$0092`=39 |
+| `7E0274:01` | pause without the PAUSE! label | JP and EN | `6DD1-E7D9` (`$C1:076C` `BNE` -> `BRA`): JP and EN |
+| `7F202B:0A` / `0B` | stage 11 / 12 at the select | Known, not re-run | none (no ROM form built) |
 
 The two filler codes rewrite table slots 38/39, which hold 7777 and 4622. Both are caught as special codes before
 the table is searched, so the slots were dead.

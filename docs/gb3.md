@@ -127,13 +127,13 @@ Boot clears `$C1B9-$C1BD` (`$00:12F7`-`$00:12FD`). Two of them are read but neve
 
 ### Cheats (★ New, `tools/gb3/test_cheats.lua`)
 
-| Code | Effect | Verified |
-|---|---|---|
-| `0101BCC1` | invincible (the debug flag) | 0 hits / 6,000 frames |
-| `C3B-E6B-081` + `E4B-E7B-198` + `4AB-E8B-E6D` (Game Genie) | invincible as a ROM patch (`$01:4BE6` -> `JP $4AE4`) | 0 hits |
-| `010363C3` | infinite lives | 14 deaths, lives stay 3 |
-| `01FF80C4` | every stage ends cleared (`$C480` = `$FF`) | Wood 1-6 then City 2 in 6,000 frames |
-| `0101BDC1` | clock stops (the debug flag) | 3:00 after 1,200 frames |
+| Code | Effect | Verified | Other device (same test) |
+|---|---|---|---|
+| `0101BCC1` | invincible (the debug flag) | 0 hits / 6,000 frames | Game Genie: the ROM patch below |
+| `C3B-E6B-081` + `E4B-E7B-198` + `4AB-E8B-E6D` (Game Genie) | invincible as a ROM patch (`$01:4BE6` -> `JP $4AE4`) | 0 hits | GameShark `0101BCC1` |
+| `010363C3` | infinite lives | 14 deaths, lives stay 3 | Game Genie `B75-17E` + `B75-61E` (DEC A -> OR A at `$00:1517`, `$00:1561`): 13 deaths, lives stay 3 |
+| `01FF80C4` | every stage ends cleared (`$C480` = `$FF`) | Wood 1-6 then City 2 in 6,000 frames | Game Genie `18B-A2E` + `C3B-E8E` (`$00:1BA2` JR NZ -> JR, `$00:1BE8` JP Z -> JP): Wood 1-6 then City 1 |
+| `0101BDC1` | clock stops (the debug flag) | 3:00 after 1,200 frames | Game Genie `C99-B5D` (`$00:29B5` RET NZ -> RET): 3:00 |
 
 Patch: `patches/gb3_invincible.ips` (file `$4BE6` = `C3 E4 4A`).
 

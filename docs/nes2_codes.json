@@ -1838,6 +1838,10 @@
  },
  {
   "code": "04E6:01",
+  "devices": {
+   "Pro Action Replay": "04E601",
+   "Game Genie": "AVZGKT + AVGGKT (US) / ATPGET + ATLGET (JP)"
+  },
   "effect": "Invincible",
   "versions": [
    "US",
@@ -1845,33 +1849,45 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $04E6, the vest timer flag: both kill routines ($CEA4 fire, $CEC4 enemy contact; JP $CE10/$CE30) return while it is non-zero. Random bot, 12,000 frames of NORMAL MODE: 0 deaths (US and JP; 10-11 deaths without)",
+  "note": "Mesen 2 cheat engine (custom). RAM $04E6, the vest timer flag: both kill routines ($CEA4 fire, $CEC4 enemy contact; JP $CE10/$CE30) return while it is non-zero. Random bot, 12,000 frames of NORMAL MODE: 0 deaths (US and JP; 10-11 deaths without). Game Genie: the two codes below, same bot test.",
   "section": "cheat"
  },
  {
   "code": "AVZGKT + AVGGKT",
+  "devices": {
+   "Game Genie": "AVZGKT + AVGGKT",
+   "Pro Action Replay": "04E601"
+  },
   "effect": "Invincible (US)",
   "versions": [
    "US"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). RTS at $CEA4 and $CEC4, the two kill routines. 0 deaths in 12,000 frames. Same bytes as patches/nes2_invincible_us.ips",
+  "note": "Mesen 2 cheat engine (Game Genie). RTS at $CEA4 and $CEC4, the two kill routines. 0 deaths in 12,000 frames. Same bytes as patches/nes2_invincible_us.ips. Pro Action Replay 04E601: the RAM code above, same bot test.",
   "section": "cheat"
  },
  {
   "code": "ATPGET + ATLGET",
+  "devices": {
+   "Game Genie": "ATPGET + ATLGET",
+   "Pro Action Replay": "04E601"
+  },
   "effect": "Invincible (JP)",
   "versions": [
    "JP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). RTS at JP $CE10 and $CE30. 0 deaths in 12,000 frames. Same bytes as patches/nes2_invincible_jp.ips",
+  "note": "Mesen 2 cheat engine (Game Genie). RTS at JP $CE10 and $CE30. 0 deaths in 12,000 frames. Same bytes as patches/nes2_invincible_jp.ips. Pro Action Replay 04E601: the RAM code above, same bot test.",
   "section": "cheat"
  },
  {
   "code": "04E5:02",
+  "devices": {
+   "Pro Action Replay": "04E502",
+   "Game Genie": "SXKGKXVK (US) / SZUGEXVK (JP)"
+  },
   "effect": "Infinite lives",
   "versions": [
    "US",
@@ -1879,33 +1895,44 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $04E5, lives (DEC / BMI at $CAC4): 12 deaths in 12,000 frames, no game over (US and JP)",
+  "note": "Mesen 2 cheat engine (custom). RAM $04E5, lives (DEC / BMI at $CAC4): 12 deaths in 12,000 frames, no game over (US and JP). Game Genie: DEC $04E5 -> LDA $04E5 at $CAC4 (JP $CA30); same bot: 12 deaths in 12,000 frames, lives stay 2 (US and JP).",
   "section": "cheat"
  },
  {
   "code": "00B7:F0",
+  "devices": {
+   "Pro Action Replay": "00B7F0",
+   "Game Genie": "AAOKSZEY"
+  },
   "effect": "Every stage clears at once (US)",
   "versions": [
    "US"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $B7, the stage-clear counter (the main loop ends the stage when it reaches $F0, $CA19): 16 stage changes in 8,000 frames, to area 3",
+  "note": "Mesen 2 cheat engine (custom). RAM $B7, the stage-clear counter (the main loop ends the stage when it reaches $F0, $CA19): 16 stage changes in 8,000 frames, to area 3. Game Genie: CMP #$F0 -> CMP #$00 at $CA1C, so the stage-end test always passes; 18 stage changes in 8,000 frames, to area 3.",
   "section": "cheat"
  },
  {
   "code": "00A9:F0",
+  "devices": {
+   "Pro Action Replay": "00A9F0",
+   "Game Genie": "AEEKOPEY"
+  },
   "effect": "Every stage clears at once (JP)",
   "versions": [
    "JP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). the same counter at JP $A9 (the JP zero page sits $0E lower): 16 stage changes in 8,000 frames",
+  "note": "Mesen 2 cheat engine (custom). the same counter at JP $A9 (the JP zero page sits $0E lower): 16 stage changes in 8,000 frames. Game Genie: the same CMP at JP $C988; 18 stage changes in 8,000 frames, to area 3.",
   "section": "cheat"
  },
  {
   "code": "AENIYZPA",
+  "devices": {
+   "Game Genie": "AENIYZPA"
+  },
   "effect": "Demo recorder: the attract demo records pad 1 instead of playing",
   "versions": [
    "US"

@@ -173,15 +173,17 @@ hidden items are the same on every boot; both are already drawn above (`img/mega
 ## Cheat codes
 
 ★ Game Genie codes (made with `tools/mega/gg.py`), all checked in BizHawk's cheat system (`client.addcheat`,
-`tools/mega8/cheats8.lua`: boot with the code, start the battle, read player 1's record and count the hidden items):
+`tools/mega8/cheats8.lua`: boot with the code, start the battle, read player 1's record and count the hidden items).
+The Pro Action Replay codes are the same ROM words (`AAAAAA:VVVV`), run through the same test with the word written to
+`MD CART` every frame (BizHawk's `client.addcheat` takes Genesis Action Replay codes for RAM only): same results.
 
-| Code | Effect | Patch | Checked |
-|---|---|---|---|
-| `CN4T-AADC` | The 4 line bombs under bricks become the unused item `$13` | item table `$3562`: `$14` → `$13` | items: `$13` x4 instead of `$14` x4 |
-| `PNLA-BE0E` | Every player starts with kick | `$14C4` `clr.w $24(a3)` → `addq.w #1` | `+$24` = 1 |
-| `PNLA-BE0N` | Every player starts with line bomb | `$14CC` `clr.w $28(a3)` → `addq.w #1` | `+$28` = 1 |
-| `BALA-AAHC` | Start with fire 8 | `$14E2` = 8 | `+$22` = 8 |
-| `BALA-AAHJ` | Start with 8 bombs | `$14E8` = 8 | `+$20` = 8 |
+| Code | Effect | Patch | Checked | Pro Action Replay |
+|---|---|---|---|---|
+| `CN4T-AADC` | The 4 line bombs under bricks become the unused item `$13` | item table `$3562`: `$14` → `$13` | items: `$13` x4 instead of `$14` x4 | `003562:0013` |
+| `PNLA-BE0E` | Every player starts with kick | `$14C4` `clr.w $24(a3)` → `addq.w #1` | `+$24` = 1 | `0014C4:526B` |
+| `PNLA-BE0N` | Every player starts with line bomb | `$14CC` `clr.w $28(a3)` → `addq.w #1` | `+$28` = 1 | `0014CC:526B` |
+| `BALA-AAHC` | Start with fire 8 | `$14E2` = 8 | `+$22` = 8 | `0014E2:0008` |
+| `BALA-AAHJ` | Start with 8 bombs | `$14E8` = 8 | `+$20` = 8 | `0014E8:0008` |
 
 ## Logo
 

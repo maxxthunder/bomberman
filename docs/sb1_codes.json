@@ -2871,6 +2871,10 @@
  },
  {
   "code": "C600115C C6001200 C600137F C60014C6 C4035D22 C4035E30 C4035F7F C40360C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F356F C67F360B C67F37C4 C67F386B C4138C40 C4138D7F C4138EC6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4592 C67F4619 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B9D C67F4C13 C67F4DC4 C413F450 C413F57F C413F6C6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5592 C67F5619 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5B05 C67F5C14 C67F5DC4",
+  "devices": {
+   "Pro Action Replay": "C600115C C6001200 C600137F C60014C6 C4035D22 C4035E30 C4035F7F C40360C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F356F C67F360B C67F37C4 C67F386B C4138C40 C4138D7F C4138EC6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4592 C67F4619 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B9D C67F4C13 C67F4DC4 C413F450 C413F57F C413F6C6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5592 C67F5619 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5B05 C67F5C14 C67F5DC4",
+   "Game Genie": "9ADF-7D96 DDDF-7DB6 5EDF-7D26 A1DF-7FF6 44D9-E79D 7DD9-E7BD 5ED9-E72D A1D1-EDFD C25D-EDF8 F05D-ED98 D75D-EDB8 6B5D-ED28 DF5D-EFF8 ED5D-EF98 D15D-EFB8 445D-EF28 8B5D-E4F8 DF5D-E498 A15D-E4B8 345D-E428 4D5D-E7F8 445D-E798 6F5D-E7B8 DD5D-E728 A15F-EDF8 BD5F-ED98 F75F-EDB8 6B5F-ED28 4D5F-EFF8 2D5F-EF98 D85F-EFB8 C25F-EF28 F05F-E4F8 D75F-E498 6B5F-E4B8 DF5F-E428 2D5F-E7F8 D65F-E798 9A5F-E7B8 F85F-E728 DD54-EDF8 A154-ED98 9A54-EDB8 2454-ED28 DD54-EFF8 A154-EF98 1854-EFB8 4457-EDF8 1D57-ED98 4057-EDB8 A157-ED28 4457-EFF8 1E57-EF98 D857-EFB8 A057-EF28 1857-E4F8 0DF6-E7FD 5EF6-E79D A1F6-E7BD 8950-EDF8 4350-ED98 2D50-EDB8 D050-ED28 9A50-EFF8 B450-EF98 FB50-EFB8 A050-EF28 5050-E4F8 4E50-E498 9A50-E4B8 B250-E428 F750-E7F8 A050-E798 9DFE-EFFD 5EFE-EF9D A1FE-EFBD 8959-EDF8 4359-ED98 2D59-EDB8 D059-ED28 9A59-EFF8 B459-EF98 FB59-EFB8 A059-EF28 5059-E4F8 4E59-E498 9A59-E4B8 D959-E428 F059-E7F8 A059-E798"
+  },
   "effect": "Restores the debug menu (Select in a stage), Pro Action Replay ROM codes, same bytes as the IPS patch",
   "versions": [
    "US",
@@ -2879,10 +2883,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "90 one-byte ROM codes. Entered as Mesen PAR cheats on the unpatched US ROM: menu opens, cursor moves, values change. EU uses the same codes (its ROM differs from US only in the header and the battle timer)."
+  "note": "90 one-byte ROM codes. Entered as Mesen PAR cheats on the unpatched US ROM: menu opens, cursor moves, values change. EU uses the same codes (its ROM differs from US only in the header and the battle timer). Game Genie: the same 90 bytes; Mesen, US and EU: menu opens, cursor moves, values change."
  },
  {
   "code": "C600115C C6001200 C600137F C60014C6 C401D422 C401D530 C401D67F C401D7C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F3565 C67F3609 C67F37C4 C67F386B C4118140 C411827F C41183C6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4587 C67F4617 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B92 C67F4C11 C67F4DC4 C411E950 C411EA7F C411EBC6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5587 C67F5617 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5BFA C67F5C11 C67F5DC4",
+  "devices": {
+   "Pro Action Replay": "C600115C C6001200 C600137F C60014C6 C401D422 C401D530 C401D67F C401D7C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F3565 C67F3609 C67F37C4 C67F386B C4118140 C411827F C41183C6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4587 C67F4617 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B92 C67F4C11 C67F4DC4 C411E950 C411EA7F C411EBC6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5587 C67F5617 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5BFA C67F5C11 C67F5DC4",
+   "Game Genie": "9ADF-7D96 DDDF-7DB6 5EDF-7D26 A1DF-7FF6 44D2-5FFD 7DD2-5F9D 5ED2-5FBD A1D2-5F2D C25D-EDF8 F05D-ED98 D75D-EDB8 6B5D-ED28 DF5D-EFF8 ED5D-EF98 D15D-EFB8 445D-EF28 8B5D-E4F8 DF5D-E498 A15D-E4B8 345D-E428 4D5D-E7F8 445D-E798 6F5D-E7B8 DD5D-E728 A15F-EDF8 BD5F-ED98 F75F-EDB8 6B5F-ED28 4D5F-EFF8 2D5F-EF98 D85F-EFB8 C25F-EF28 F05F-E4F8 D75F-E498 6B5F-E4B8 DF5F-E428 2D5F-E7F8 D65F-E798 9A5F-E7B8 F85F-E728 DD54-EDF8 A154-ED98 9A54-EDB8 2454-ED28 DD54-EFF8 A154-EF98 1854-EFB8 4457-EDF8 1D57-ED98 4057-EDB8 A157-ED28 4457-EFF8 1957-EF98 DB57-EFB8 A057-EF28 1857-E4F8 0DF6-5D9D 5EF6-5DBD A1F6-5D2D 8950-EDF8 4350-ED98 2D50-EDB8 D050-ED28 9A50-EFF8 6550-EF98 F550-EFB8 A050-EF28 5050-E4F8 4E50-E498 9A50-E4B8 B450-E428 FF50-E7F8 A050-E798 9DF3-549D 5EF3-54BD A1F3-542D 8959-EDF8 4359-ED98 2D59-EDB8 D059-ED28 9A59-EFF8 6559-EF98 F559-EFB8 A059-EF28 5059-E4F8 4E59-E498 9A59-E4B8 EC59-E428 FF59-E7F8 A059-E798"
+  },
   "effect": "Restores the debug menu (Select in a stage), Pro Action Replay ROM codes, same bytes as the IPS patch",
   "versions": [
    "JP"
@@ -2890,10 +2898,14 @@
   "status": "new",
   "verified": "static",
   "section": "debug",
-  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen."
+  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen. Game Genie: the same 90 bytes; Mesen, JP: menu opens, cursor moves, values change."
  },
  {
   "code": "C600115C C6001200 C600137F C60014C6 C401CF22 C401D030 C401D17F C401D2C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F3560 C67F3609 C67F37C4 C67F386B C4117C40 C4117D7F C4117EC6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4582 C67F4617 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B8D C67F4C11 C67F4DC4 C411E450 C411E57F C411E6C6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5582 C67F5617 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5BF5 C67F5C11 C67F5DC4",
+  "devices": {
+   "Pro Action Replay": "C600115C C6001200 C600137F C60014C6 C401CF22 C401D030 C401D17F C401D2C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F3560 C67F3609 C67F37C4 C67F386B C4117C40 C4117D7F C4117EC6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4582 C67F4617 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B8D C67F4C11 C67F4DC4 C411E450 C411E57F C411E6C6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5582 C67F5617 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5BF5 C67F5C11 C67F5DC4",
+   "Game Genie": "9ADF-7D96 DDDF-7DB6 5EDF-7D26 A1DF-7FF6 44DA-572D 7DD2-5DFD 5ED2-5D9D A1D2-5DBD C25D-EDF8 F05D-ED98 D75D-EDB8 6B5D-ED28 DF5D-EFF8 ED5D-EF98 D15D-EFB8 445D-EF28 8B5D-E4F8 DF5D-E498 A15D-E4B8 345D-E428 4D5D-E7F8 445D-E798 6F5D-E7B8 DD5D-E728 A15F-EDF8 BD5F-ED98 F75F-EDB8 6B5F-ED28 4D5F-EFF8 2D5F-EF98 D85F-EFB8 C25F-EF28 F05F-E4F8 D75F-E498 6B5F-E4B8 DF5F-E428 2D5F-E7F8 D65F-E798 9A5F-E7B8 F85F-E728 DD54-EDF8 A154-ED98 9A54-EDB8 2454-ED28 DD54-EFF8 A154-EF98 1854-EFB8 4457-EDF8 1D57-ED98 4057-EDB8 A157-ED28 4457-EFF8 1D57-EF98 DB57-EFB8 A057-EF28 1857-E4F8 0DF5-57FD 5EF5-579D A1F5-57BD 8950-EDF8 4350-ED98 2D50-EDB8 D050-ED28 9A50-EFF8 6450-EF98 F550-EFB8 A050-EF28 5050-E4F8 4E50-E498 9A50-E4B8 6250-E428 FF50-E7F8 A050-E798 9DF3-5FFD 5EF3-5F9D A1F3-5FBD 8959-EDF8 4359-ED98 2D59-EDB8 D059-ED28 9A59-EFF8 6459-EF98 F559-EFB8 A059-EF28 5059-E4F8 4E59-E498 9A59-E4B8 E959-E428 FF59-E7F8 A059-E798"
+  },
   "effect": "Restores the debug menu (Select in a stage), Pro Action Replay ROM codes, same bytes as the IPS patch",
   "versions": [
    "beta"
@@ -2901,7 +2913,7 @@
   "status": "new",
   "verified": "static",
   "section": "debug",
-  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen."
+  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen. Game Genie: the same 90 bytes; Mesen, beta: menu opens, cursor moves, values change."
  },
  {
   "code": "Debug menu STAGE NO.",
@@ -3045,6 +3057,10 @@
  },
  {
   "code": "7E0D7660 7E0D7701",
+  "devices": {
+   "Pro Action Replay": "7E0D7660 7E0D7701",
+   "Game Genie": "3CFC-77FF 3CFC-779F (US, EU) / 3CFC-8D9D 3CFC-8DBD (JP) / 3CFB-87FD 3CFB-879D (beta)"
+  },
   "effect": "Player 1 invincible (the respawn-flash timer +$36 held at $0160)",
   "versions": [
    "US",
@@ -3055,10 +3071,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Mesen cheat engine, unpatched US: bomb laid under player 1 after the start flash ran out; lives stayed 5 (without the codes: 5 -> 4). Enemies and blasts pass through him while he flashes. Player 2: 7E0DB660 7E0DB701 (not run)."
+  "note": "Mesen cheat engine, unpatched US: bomb laid under player 1 after the start flash ran out; lives stayed 5 (without the codes: 5 -> 4). Enemies and blasts pass through him while he flashes. Player 2: 7E0DB660 7E0DB701 (not run). Game Genie: DEC $36,X -> NOP NOP at $C4:14AC (JP $C4:12A1, beta $C4:129C), so the start-of-stage flash never runs out (every player); Mesen, all four versions: own bomb after the start flash, lives stay 5."
  },
  {
   "code": "7E0D7D09",
+  "devices": {
+   "Pro Action Replay": "7E0D7D09",
+   "Game Genie": "3CFE-57B4 3CFE-5724 DB98-7DB0 DB9D-5D20 (US, EU) / 3CFE-ED2F 3CFE-EFFF DB05-E495 DB0A-E4B5 (JP) / 3CF3-E7BF 3CF3-E72F DB9C-7F20 DB9E-74F0 (beta)"
+  },
   "effect": "Player 1 always has 9 lives",
   "versions": [
    "US",
@@ -3069,10 +3089,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Lives byte player +$3D. Died to his own bomb: respawned, still 9."
+  "note": "Lives byte player +$3D. Died to his own bomb: respawned, still 9. Game Genie: DEC $3D,X -> NOP NOP at $C4:19FE (JP $C4:17F3, beta $C4:17EE) plus both start-lives loads LDA #$05 -> #$09 (see 7E0C8F01; every player); Mesen, all four: 9 lives at 1-1, still 9 after his own bomb."
  },
  {
   "code": "7E0D7180",
+  "devices": {
+   "Pro Action Replay": "7E0D7180",
+   "Game Genie": "DD71-EDF7 DD06-579F DD0A-87FF DD09-8D94 DD00-7F97 (US, EU) / DD79-5F97 DD06-EDBD DD0A-7D9F DD00-7FB4 DD07-84B4 (JP) / DD79-5DF7 DD05-E79D DD08-77FF DD00-7D94 DD07-8F94 (beta)"
+  },
   "effect": "Maximum blast range (the debug menu's FIRE FULL)",
   "versions": [
    "US",
@@ -3083,10 +3107,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$31 bit 7; checked in RAM and on screen (blast across the row)."
+  "note": "Player +$31 bit 7; checked in RAM and on screen (blast across the row). Game Genie: the five FIRE FULL tests (BEQ over LDA #$09 at $C4:3F5F, $C4:458C, $C4:46CB, $C4:4A50, $C4:4C44; JP and beta lower) -> BEQ +0 (every player); Mesen, all four: each bomb is laid with range 10, the PAR code's value (1 without)."
  },
  {
   "code": "7E0D7009",
+  "devices": {
+   "Pro Action Replay": "7E0D7009",
+   "Game Genie": "CB4F-77FF DB4F-779F CB76-7D2D DB76-7FFD CB00-54FF DB00-549F (US, EU) / CB4F-8D9D DB4F-8DBD CB45-84F7 DB45-8497 CB07-E79D DB07-E7BD (JP) / CB4D-87FD DB4D-879D CB45-8D27 DB45-8FF7 CB07-E4FD DB07-E49D (beta)"
+  },
   "effect": "9 bombs at once",
   "versions": [
    "US",
@@ -3097,10 +3125,13 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$30 (BOMB UP). RAM checked; more than one bomb laid."
+  "note": "Player +$30 (BOMB UP). RAM checked; more than one bomb laid. Game Genie: LDA $30,X -> LDA #$09 in the three bomb-lay routines ($C4:241C, $C4:3083, $C4:4548; JP and beta lower; every player); Mesen, all four: two bombs out in the test, as with the PAR code (one without)."
  },
  {
   "code": "7E0D7963",
+  "devices": {
+   "Pro Action Replay": "7E0D7963"
+  },
   "effect": "Power bomb, kick, bomb pass and wall pass",
   "versions": [
    "US",
@@ -3111,10 +3142,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$39 = bits 0, 1, 5, 6 (POWER, KICK, BOMB PASS, WALL PASS of the debug menu). RAM checked only."
+  "note": "Player +$39 = bits 0, 1, 5, 6 (POWER, KICK, BOMB PASS, WALL PASS of the debug menu). RAM checked only. No Game Genie form: nothing writes the four bits but the item pickups and the debug menu (the title and death only clear them), and each is tested in its own routine (kick $C4:1D0D, power $C4:22B0, both passes $C6:0B6F); the PAR check was RAM only."
  },
  {
   "code": "7E0D7301",
+  "devices": {
+   "Pro Action Replay": "7E0D7301",
+   "Game Genie": "DD7C-74FD DD04-579F CB09-84F4 DF09-8494 CB00-77F7 DF00-7797 (US, EU) / DD4B-8797 DD04-EDBD CB00-7794 DF00-77B4 CB00-8D94 DF00-8DB4 (JP) / DD4B-84F7 DD0F-E79D CB00-74F4 DF00-7494 CB07-87F4 DF07-8794 (beta)"
+  },
   "effect": "Remote-control bombs",
   "versions": [
    "US",
@@ -3125,10 +3160,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$33 (REMOCON). The bombs laid in the test stayed on the board 800 frames without going off."
+  "note": "Player +$33 (REMOCON). The bombs laid in the test stayed on the board 800 frames without going off. Game Genie: LDA $33,X -> LDA #$01 where a bomb is placed ($C4:4A58, $C4:4C4C) and BEQ +0 after the other two remote tests ($C4:30A7, $C4:452C; JP and beta lower; every player); Mesen, all four: the bomb stayed on the board until a button set it off, as with 7E0D7301."
  },
  {
   "code": "7E0C9001",
+  "devices": {
+   "Pro Action Replay": "7E0C9001",
+   "Game Genie": "DDF8-7FF4 DDFB-E72B (US, EU) / DDFC-849F DDFB-E72B (JP) / DDFC-8FFF DDFB-E72B (beta)"
+  },
   "effect": "Small Bomberman in Normal Game (same as password 5656)",
   "versions": [
    "US",
@@ -3139,10 +3178,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$0C90; seen at 1-1. The effect is Known (5656)."
+  "note": "$0C90; seen at 1-1. The effect is Known (5656). Game Genie: both $0C90 tests BEQ -> BEQ +0 ($C4:18B3, JP $C4:16A8, beta $C4:16A3; $C6:179E); Mesen, all four: small Bomberman at 1-1."
  },
  {
   "code": "7E0C8F01",
+  "devices": {
+   "Pro Action Replay": "7E0C8F01",
+   "Game Genie": "DB98-7DB0 DB9D-5D20 (US, EU) / DB05-E495 DB0A-E4B5 (JP) / DB9C-7F20 DB9E-74F0 (beta)"
+  },
   "effect": "Next Normal Game starts with 9 lives (the prologue-X reward)",
   "versions": [
    "US",
@@ -3153,10 +3196,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$0C8F, read at $C5:5106; NORMAL GAME then showed 9 lives."
+  "note": "$0C8F, read at $C5:5106; NORMAL GAME then showed 9 lives. Game Genie: both start-lives loads LDA #$05 -> #$09 ($C5:50B1, $C5:5102; JP $C5:4F78/$C5:4FC9, beta $C5:50A6/$C5:50F7), so every game starts with 9; Mesen, all four: 9 lives at 1-1."
  },
  {
   "code": "7E00A43C",
+  "devices": {
+   "Pro Action Replay": "7E00A43C",
+   "Game Genie": "7A10-E4BD (US, EU) / 7A17-572D (JP) / 7A17-54BD (beta)"
+  },
   "effect": "Sound test",
   "versions": [
    "US",
@@ -3167,10 +3214,14 @@
   "status": "known",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Known code; $00A4 is the next-scene byte. Scene $3C shown from power-on."
+  "note": "Known code; $00A4 is the next-scene byte. Scene $3C shown from power-on. Game Genie: the boot's LDA #$31 (title) before STA $00A4 ($C4:6349, JP $C4:613E, beta $C4:6139) loads $3C; Mesen, all four: scene $3C from power-on."
  },
  {
   "code": "7E00A4xx",
+  "devices": {
+   "Pro Action Replay": "7E00A4xx",
+   "Game Genie": "xx10-E4BD (US, EU) / xx17-572D (JP) / xx17-54BD (beta), xx = the scene in Game Genie letters (0-F: D F 4 7 0 9 1 5 6 B C 8 A 2 3 E)"
+  },
   "effect": "Go to scene xx: $00-$2F = stage 1-1 ... 6-8, $30 ending, $33 prologue, $3D-$48 battle stages (list under Debug menu STAGE NO.)",
   "versions": [
    "US",
@@ -3181,10 +3232,14 @@
   "status": "known",
   "verified": "mesen",
   "section": "cheat",
-  "note": "7E00A42F (6-8) checked: scene $2F loads. Turn it off once the scene has loaded, or every stage clear sends you back. Used from the title the game has no lives set: enable it after starting a game."
+  "note": "7E00A42F (6-8) checked: scene $2F loads. Turn it off once the scene has loaded, or every stage clear sends you back. Used from the title the game has no lives set: enable it after starting a game. Game Genie: the same boot load set to xx, so power-on goes to scene xx instead of the title. 4E10-E4BD / 4E17-572D / 4E17-54BD (6-8) in Mesen, all four: 6-8 loads at power-on, then CONTINUE as with the PAR code (no lives set)."
  },
  {
   "code": "C30D63A2 C30D64AE",
+  "devices": {
+   "Pro Action Replay": "C30D63A2 C30D64AE",
+   "Game Genie": "C4D1-5DAE C3D1-5FDE"
+  },
   "effect": "1-1 uses the unused arena map $C1:AEA2",
   "versions": [
    "US",
@@ -3194,7 +3249,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built)."
+  "note": "ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built). Game Genie: the same two ROM bytes; Mesen, US, EU and beta: 1-1 loads with that layout and plays."
  },
  {
   "code": "$C1:A1DA, $C1:AEA2",

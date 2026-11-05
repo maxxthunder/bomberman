@@ -122,57 +122,77 @@
  },
  {
   "code": "CN4T-AADC",
+  "devices": {
+   "Game Genie": "CN4T-AADC",
+   "Pro Action Replay": "003562:0013"
+  },
   "effect": "The 4 line bombs under bricks become the unused item $13 (Game Genie)",
   "versions": [
    "EU proto"
   ],
   "status": "unchecked",
   "verified": "emu",
-  "note": "item table $3562: $14 -> $13. BizHawk client.addcheat: hidden items $13 x4 instead of $14 x4",
+  "note": "item table $3562: $14 -> $13. BizHawk client.addcheat: hidden items $13 x4 instead of $14 x4. Pro Action Replay 003562:0013: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): hidden items $13 x4 instead of $14 x4.",
   "section": "cheat"
  },
  {
   "code": "PNLA-BE0E",
+  "devices": {
+   "Game Genie": "PNLA-BE0E",
+   "Pro Action Replay": "0014C4:526B"
+  },
   "effect": "Every player starts with kick (Game Genie)",
   "versions": [
    "EU proto"
   ],
   "status": "unchecked",
   "verified": "emu",
-  "note": "$14C4 clr.w $24(a3) -> addq.w #1. Player 1 +$24 = 1 at the start",
+  "note": "$14C4 clr.w $24(a3) -> addq.w #1. Player 1 +$24 = 1 at the start. Pro Action Replay 0014C4:526B: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): player 1 +$24 = 1.",
   "section": "cheat"
  },
  {
   "code": "PNLA-BE0N",
+  "devices": {
+   "Game Genie": "PNLA-BE0N",
+   "Pro Action Replay": "0014CC:526B"
+  },
   "effect": "Every player starts with line bomb (Game Genie)",
   "versions": [
    "EU proto"
   ],
   "status": "unchecked",
   "verified": "emu",
-  "note": "$14CC clr.w $28(a3) -> addq.w #1. Player 1 +$28 = 1",
+  "note": "$14CC clr.w $28(a3) -> addq.w #1. Player 1 +$28 = 1. Pro Action Replay 0014CC:526B: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): player 1 +$28 = 1.",
   "section": "cheat"
  },
  {
   "code": "BALA-AAHC",
+  "devices": {
+   "Game Genie": "BALA-AAHC",
+   "Pro Action Replay": "0014E2:0008"
+  },
   "effect": "Start with fire 8 (Game Genie)",
   "versions": [
    "EU proto"
   ],
   "status": "unchecked",
   "verified": "emu",
-  "note": "$14E2 = 8 (was 2). Player 1 +$22 = 8",
+  "note": "$14E2 = 8 (was 2). Player 1 +$22 = 8. Pro Action Replay 0014E2:0008: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): player 1 +$22 = 8.",
   "section": "cheat"
  },
  {
   "code": "BALA-AAHJ",
+  "devices": {
+   "Game Genie": "BALA-AAHJ",
+   "Pro Action Replay": "0014E8:0008"
+  },
   "effect": "Start with 8 bombs (Game Genie)",
   "versions": [
    "EU proto"
   ],
   "status": "unchecked",
   "verified": "emu",
-  "note": "$14E8 = 8 (was 1). Player 1 +$20 = 8",
+  "note": "$14E8 = 8 (was 1). Player 1 +$20 = 8. Pro Action Replay 0014E8:0008: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): player 1 +$20 = 8.",
   "section": "cheat"
  },
  {

@@ -159,13 +159,13 @@ area 1 invincible with the Start clock toggle; **0214** starts the Wind boss, no
 
 ### Cheats (★ New unless marked, `tools/pocket/test_cheats.lua`)
 
-| Code | Effect | Verified |
-|---|---|---|
-| `0101CCC2` | invincible (the debug flag) | 0 deaths in 2 x 20,000 frames of the random-input bot |
-| `C33-6FB-E61` + `18D-C7B-6EA` (Game Genie) | invincible as a ROM patch (`$02:436F` JP NZ -> JP, `$02:4DC7` JR NZ -> JR) | 0 deaths in 2 x 20,000 frames |
-| `0103F1C1` | infinite lives | 40 deaths in 20,000 frames, lives stay 3 |
-| `0101CDC2` | Start stops / restarts the clock (the debug flag) | clock held at 3:55 for 600 frames, then ran on |
-| `0F9-C1A-E62` (Game Genie, Known) | the debug menu in place of the title menu | the numbered test menu shows, text partly garbled |
+| Code | Effect | Verified | Other device (same test) |
+|---|---|---|---|
+| `0101CCC2` | invincible (the debug flag) | 0 deaths in 2 x 20,000 frames of the random-input bot | Game Genie: the ROM patch below |
+| `C33-6FB-E61` + `18D-C7B-6EA` (Game Genie) | invincible as a ROM patch (`$02:436F` JP NZ -> JP, `$02:4DC7` JR NZ -> JR) | 0 deaths in 2 x 20,000 frames | GameShark `0101CCC2` |
+| `0103F1C1` | infinite lives | 40 deaths in 20,000 frames, lives stay 3 | Game Genie `A73-70A-19E` (`$02:5370` DEC A -> AND A): 37 deaths, lives stay 3 |
+| `0101CDC2` | Start stops / restarts the clock (the debug flag) | clock held at 3:55 for 600 frames, then ran on | Game Genie `380-CCB-4CA` (`$02:40CC` JR Z -> JR C, never taken): the same |
+| `0F9-C1A-E62` (Game Genie, Known) | the debug menu in place of the title menu | the numbered test menu shows, text partly garbled | no GameShark form: holding the scene byte `$C1A8` at `$0F` skips the setup the title hands over, the screen stays blank |
 
 Patch: `patches/pocket_invincible.ips` (file `$836F` = `C3`, `$8DC7` = `18`): 0 deaths in 2 x 20,000 frames. The
 Game Genie pair needs both codes: with only the first, the bot still died 3 times in 20,000 frames (the second death

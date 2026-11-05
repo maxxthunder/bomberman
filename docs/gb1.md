@@ -108,10 +108,10 @@ BATTLE. In JP it is reachable only by password; the title's BATTLE entry (SGB mu
 
 All in `docs/gb1_codes.json` (`section: "cheat"`), verified with `tools/gb1/test_cheats.lua` (random-input bot).
 
-| Code | Effect | Verified |
-|---|---|---|
-| `C98-37B-D5D` (Game Genie) | invincible: RET over the hit check `$01:4837` (same in both) | 6,000 frames: 0 hits; 7 without |
-| `010000C1` + `010000C2` + `010000C3` (GameShark) | every set won at once (enemy states 0) | 6 sets won, 1-1 to the 1-boss in 6,000 frames; a boss set doesn't end (it waits for the boss) |
+| Code | Effect | Verified | Other device (same test) |
+|---|---|---|---|
+| `C98-37B-D5D` (Game Genie) | invincible: RET over the hit check `$01:4837` (same in both) | 6,000 frames: 0 hits; 7 without | GameShark `01014FC0` + `010049C0` (the after-hit flash flag `$C04F` on, counter `$C049` 0): 0 hits |
+| `010000C1` + `010000C2` + `010000C3` (GameShark) | every set won at once (enemy states 0) | 6 sets won, 1-1 to the 1-boss in 6,000 frames; a boss set doesn't end (it waits for the boss) | Game Genie `AF8-8AB-3B4` (`$01:488A` OR A -> XOR A): with the invincibility code, 12 sets won, 1-1 to 1-4 |
 
 Patch: `patches/gb1_invincible.ips` (file `$4837` = `$C9`, both versions; the same byte as the Game Genie code).
 

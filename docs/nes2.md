@@ -189,6 +189,12 @@ All verified in Mesen 2's cheat engine (`tools/nes2/test_cheats.lua`, NORMAL MOD
 (JP `00A9:F0`) every stage clears at once (16 stages in 8,000 frames). Patches: `patches/nes2_invincible_us.ips`,
 `_jp.ips` (`tools/nes2/mkpatch.py`).
 
+Both devices, the same tests: Pro Action Replay (address + value) `04E601` invincible, `04E502` infinite lives,
+`00B7F0` (JP `00A9F0`) stage clear; Game Genie `SXKGKXVK` (JP `SZUGEXVK`) infinite lives (`DEC $04E5` -> `LDA` at
+`$CAC4`, JP `$CA30`: 12 deaths, lives stay 2) and `AAOKSZEY` (JP `AEEKOPEY`) stage clear (`CMP #$F0` -> `CMP #$00` at
+`$CA1C`, JP `$C988`: 18 stage changes in 8,000 frames, to area 3). The demo recorder code `AENIYZPA` patches a ROM
+byte and has no Pro Action Replay form.
+
 ## Open
 
 - The expansion-pad path (no Four Score), the reset behaviour and the `$FF` typo are from the code.

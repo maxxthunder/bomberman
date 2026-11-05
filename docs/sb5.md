@@ -583,15 +583,15 @@ solid, green floor, blue other attributes). Second layouts (op `0C`) are BG-laye
 All verified with Mesen's own cheat engine (`emu.addCheat`, PAR type; Mesen takes the 8-digit form without the
 colon) on unpatched ROMs, and added to `sb5_codes.json` with `section: "cheat"`:
 
-| Code | Effect | Verified on | Status |
-|---|---|---|---|
-| `7E6253:01` (Caravan `7E6271:01`) | invincible: own bomb at the start of 1-1, the player survives (without it he dies, `$15A2`=`$81`) | retail, English, Caravan | Known address (round 1), PAR form new |
-| `7E0E23:01` | invincible **and** the stage clock stops | retail, English, Caravan | ★ New |
-| `7E6248:xx` + any option password | room/scene select: `AC`, `AD` and `2B` (3-1) each started after 4622 | retail, English | New (the known `7E1038` is a work byte) |
-| `7E6248:AC` / `AD` / `AE` | the three debug rooms | retail, English | Known rooms, new code |
-| `3061E9:01` | Gold Bomberman on the Battle character select (the read of SRAM `$1E9` is patched; SRAM stays 0) | retail | ★ New |
-| `7E6245:0D` | battle stages 11-13 without a turbo pad (`$6245`=13 at the Battle menu) | retail, English | New (the known `7E625A` sets the chosen stage instead) |
-| `C56983:01` (ROM) | 3879 boss rush starts fully powered (8 bombs, 8 fire, speed `$0200`, items `$07`): Caravan's 0719 on retail | retail, English | ★ New |
+| Code | Effect | Verified on | Status | Game Genie (same test) |
+|---|---|---|---|---|
+| `7E6253:01` (Caravan `7E6271:01`) | invincible: own bomb at the start of 1-1, the player survives (without it he dies, `$15A2`=`$81`) | retail, English, Caravan | Known address (round 1), PAR form new | `6D44-5727` (Caravan `6D45-5DF7`): `$C4:2D2F` (Caravan `$C4:2D70`) `BNE` -> `BRA`; survives, all three |
+| `7E0E23:01` | invincible **and** the stage clock stops | retail, English, Caravan | ★ New | `6D44-5727` `6DD1-7499` (Caravan `6D45-5DF7` `6DD1-7499`): also `$C5:0469` `BNE` -> `BRA`; survives, clock frozen, all three |
+| `7E6248:xx` + any option password | room/scene select: `AC`, `AD` and `2B` (3-1) each started after 4622 | retail, English | New (the known `7E1038` is a work byte) | none (no single ROM read of `$6248` found) |
+| `7E6248:AC` / `AD` / `AE` | the three debug rooms | retail, English | Known rooms, new code | none |
+| `3061E9:01` | Gold Bomberman on the Battle character select (the read of SRAM `$1E9` is patched; SRAM stays 0) | retail | ★ New | `CB0B-7DA4` `DF0B-7FD4` `3C0B-7F04` `3C0B-7F64` (Caravan `CB0B-7404` `DF0B-7464` `3C0B-74A4` `3C0B-77D4`): `LDA $3061E9` -> `LDA #$01` + 2 NOPs; Gold shown, all three |
+| `7E6245:0D` | battle stages 11-13 without a turbo pad (`$6245`=13 at the Battle menu) | retail, English | New (the known `7E625A` sets the chosen stage instead) | `D20A-7FD4` (`$C0:48C3` `LDA #$0A` -> `#$0D`): `$6245`=13, retail and English |
+| `C56983:01` (ROM) | 3879 boss rush starts fully powered (8 bombs, 8 fire, speed `$0200`, items `$07`): Caravan's 0719 on retail | retail, English | ★ New | `DF16-5D21` (the same byte): 8/8/2/7, retail and English |
 
 ![PAR test, own bomb at the start of 1-1: no code, 7E6253:01, 7E0E23:01 (top: blast, bottom: 200 frames later)](img/sb5/par_invincibility_none_6253_0E23.png)
 ![3061E9:01: Gold Bomberman bottom right](img/sb5/par_gold_3061E9.png)

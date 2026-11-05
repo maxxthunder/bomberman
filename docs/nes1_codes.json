@@ -902,6 +902,10 @@
  },
  {
   "code": "007A:FF",
+  "devices": {
+   "Pro Action Replay": "007AFF",
+   "Game Genie": "OXTKPV + OZTSYE (US) / OXTGPV + OZTIYE (JP)"
+  },
   "effect": "Invincible (fire and enemies)",
   "versions": [
    "US",
@@ -909,33 +913,45 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $7A, the mystery-item timer: the fire check ($C6E9) and the enemy check ($D06F) skip while it is non-zero. Random bot, 12,000 frames: 0 deaths (US and JP; 3 deaths and a game over without)",
+  "note": "Mesen 2 cheat engine (custom). RAM $7A, the mystery-item timer: the fire check ($C6E9) and the enemy check ($D06F) skip while it is non-zero. Random bot, 12,000 frames: 0 deaths (US and JP; 3 deaths and a game over without). Game Genie: the two codes below, same bot test.",
   "section": "cheat"
  },
  {
   "code": "OXTKPV + OZTSYE",
+  "devices": {
+   "Game Genie": "OXTKPV + OZTSYE",
+   "Pro Action Replay": "007AFF"
+  },
   "effect": "Invincible (US)",
   "versions": [
    "US"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). $C6E9 and $D06F: LDA $7A -> LDA #$7A (A5 -> A9), so both checks always take the invincible branch. 0 deaths in 12,000 frames. Same bytes as patches/nes1_invincible_us.ips",
+  "note": "Mesen 2 cheat engine (Game Genie). $C6E9 and $D06F: LDA $7A -> LDA #$7A (A5 -> A9), so both checks always take the invincible branch. 0 deaths in 12,000 frames. Same bytes as patches/nes1_invincible_us.ips. Pro Action Replay 007AFF: the RAM code above, same bot test.",
   "section": "cheat"
  },
  {
   "code": "OXTGPV + OZTIYE",
+  "devices": {
+   "Game Genie": "OXTGPV + OZTIYE",
+   "Pro Action Replay": "007AFF"
+  },
   "effect": "Invincible (JP)",
   "versions": [
    "JP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). the same two instructions at JP $C6E1 / $D067. 0 deaths in 12,000 frames. Same bytes as patches/nes1_invincible_jp.ips",
+  "note": "Mesen 2 cheat engine (Game Genie). the same two instructions at JP $C6E1 / $D067. 0 deaths in 12,000 frames. Same bytes as patches/nes1_invincible_jp.ips. Pro Action Replay 007AFF: the RAM code above, same bot test.",
   "section": "cheat"
  },
  {
   "code": "0068:02",
+  "devices": {
+   "Pro Action Replay": "006802",
+   "Game Genie": "SXPKAG (US) / SXPGAG (JP)"
+  },
   "effect": "Infinite lives",
   "versions": [
    "US",
@@ -943,11 +959,15 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $68, lives (DEC / BMI at US $C498): 19 deaths in 12,000 frames, no game over (US and JP)",
+  "note": "Mesen 2 cheat engine (custom). RAM $68, lives (DEC / BMI at US $C498): 19 deaths in 12,000 frames, no game over (US and JP). Game Genie: DEC $68 -> LDA $68 at $C498 (JP $C490); same bot: 18 / 16 deaths in 12,000 frames, lives stay 2.",
   "section": "cheat"
  },
  {
   "code": "005E:01",
+  "devices": {
+   "Pro Action Replay": "005E01",
+   "Game Genie": "OZTKTK (US) / OZTGTK (JP)"
+  },
   "effect": "Every stage clears at once",
   "versions": [
    "US",
@@ -955,7 +975,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $5E, the stage-clear flag ($CCA1 sets it on the open exit): 11 stages cleared in 6,000 frames with no input (US and JP)",
+  "note": "Mesen 2 cheat engine (custom). RAM $5E, the stage-clear flag ($CCA1 sets it on the open exit): 11 stages cleared in 6,000 frames with no input (US and JP). Game Genie: the main loop's LDA $5E -> LDA #$5E ($C46E, JP $C466); 11 stages cleared in 6,000 frames with no input (US and JP).",
   "section": "cheat"
  },
  {

@@ -304,16 +304,16 @@ Checked with Mesen's cheat engine (`emu.addCheat`) on the unpatched USA ROM, rea
 `tools/sb2/cheats.sh`): `4361` typed on the password screen, a bomb laid under player 1. All in `sb2_codes.json`
 (`section: "cheat"`); RAM codes apply to every version (same RAM map), only USA was run.
 
-| Code | Effect | Check | Status |
-|---|---|---|---|
-| `7E80EF90` | invincible in Normal Game (144 hearts that never drop, the debug menu's NO DEATH) | own bomb: flashed and played on; control run died | ★ New |
-| `7E80E003` `7E80E109` `7E80E209` | speed 3, 9 bombs, fire 9 | RAM | ★ New |
-| `7E80F304` | spike bombs (`01` remote, `02` power bomb, `08` the fifth type) | RAM | ★ New |
-| `7E80FA01` `7E80FB01` `7E80FE01` `7E80FF01` | both pass items, power glove, kick | RAM | ★ New |
-| `7E1CB5FF` `7E1CB6FF` | battle stages 11 and 12 (not in Caravan) | Left on the stage select: 1 → 12 | ★ New (`7E1CCD0A/0B` was known) |
-| `7E1CCD0A` / `7E1CCD0B` | battle stage 11 / 12 | stage select shows 11 / 12, the battle is the boxing ring / trampolines | **Known** |
-| `7E1C6EFF` `7E1C6FFF` | jump in battle (the pad-5 flag) | flag held; jump shown earlier with the same flag | ★ New |
-| `7E1C68FF` `7E1C69FF` | sudden death (the `5656` flag) | flag held; effect shown earlier | ★ New |
+| Code | Effect | Check | Status | Game Genie (same test, all versions listed) |
+|---|---|---|---|---|
+| `7E80EF90` | invincible in Normal Game (144 hearts that never drop, the debug menu's NO DEATH) | own bomb: flashed and played on; control run died | ★ New | `0C67-E70D` `6767-E76D` `D8C9-8D0F` `D806-5D00` `5191-54D9` `9991-5409`: the three no-heart hit branches go to the heart-loss flash; own bomb: played on, all five ROMs |
+| `7E80E003` `7E80E109` `7E80E209` | speed 3, 9 bombs, fire 9 | RAM | ★ New | none: read at about 20 places, set only at game start and by pickups |
+| `7E80F304` | spike bombs (`01` remote, `02` power bomb, `08` the fifth type) | RAM | ★ New | `CB7D-54AF` `D07D-57DF` (`$C0:350B` type load → `LDA #$04`): new bombs get type 4, all five |
+| `7E80FA01` `7E80FB01` `7E80FE01` `7E80FF01` | both pass items, power glove, kick | RAM | ★ New | none built (four separate tests) |
+| `7E1CB5FF` `7E1CB6FF` | battle stages 11 and 12 (not in Caravan) | Left on the stage select: 1 → 12 | ★ New (`7E1CCD0A/0B` was known) | `DD48-ED7D` (Europe `DD4D-74EF`, Japan `DD4B-E7ED`): the `$1CB5` test `BEQ +0`; 1 → 12, all four |
+| `7E1CCD0A` / `7E1CCD0B` | battle stage 11 / 12 | stage select shows 11 / 12, the battle is the boxing ring / trampolines | **Known** | none (no ROM form built) |
+| `7E1C6EFF` `7E1C6FFF` | jump in battle (the pad-5 flag) | flag held; jump shown earlier with the same flag | ★ New | `DD1E-5F6F` (the `$1C6E` test `BEQ +0`): the jump handler runs in stage 1, all five |
+| `7E1C68FF` `7E1C69FF` | sudden death (the `5656` flag) | flag held; effect shown earlier | ★ New | `DD2F-8F6F` (Caravan `DD24-8F0F`; the `$1C68` test `BEQ +0`): hurry-up blocks keep coming past 81 (`sudden_death.lua`, flag cleared), USA, Europe, Japan, beta |
 
 The ROM switch codes (debug menu `C15B4001`, soft resets, CPU meter, R power-ups, Normal Game jump, 12 stages) are
 listed under Disabled debug switches.

@@ -378,6 +378,10 @@
  },
  {
   "code": "0101CCC2",
+  "devices": {
+   "GameShark": "0101CCC2",
+   "Game Genie": "C33-6FB-E61 + 18D-C7B-6EA"
+  },
   "effect": "Invincible (the unused debug flag $C2CC)",
   "versions": [
    "us"
@@ -385,10 +389,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark. $C2CC is cleared at every start and set only by the unused debug decoder; the two player-death checks ($02:436B, $02:4DC3) skip when it is set, and so does the clock running out. Mesen: 0 deaths in 2 x 20,000 frames of the random-input bot (40 deaths with infinite lives on)."
+  "note": "GameShark. $C2CC is cleared at every start and set only by the unused debug decoder; the two player-death checks ($02:436B, $02:4DC3) skip when it is set, and so does the clock running out. Mesen: 0 deaths in 2 x 20,000 frames of the random-input bot (40 deaths with infinite lives on). Game Genie: the ROM patch below, same bot test."
  },
  {
   "code": "C33-6FB-E61 + 18D-C7B-6EA",
+  "devices": {
+   "Game Genie": "C33-6FB-E61 + 18D-C7B-6EA",
+   "GameShark": "0101CCC2"
+  },
   "effect": "Invincible (ROM patch of both death checks)",
   "versions": [
    "us"
@@ -396,10 +404,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $02:436F JP NZ -> JP and $02:4DC7 JR NZ -> JR, the branches that skip when $C2CC is set. The same bytes as patches/pocket_invincible.ips. Mesen: 0 deaths in 2 x 20,000 frames of the bot."
+  "note": "Game Genie: $02:436F JP NZ -> JP and $02:4DC7 JR NZ -> JR, the branches that skip when $C2CC is set. The same bytes as patches/pocket_invincible.ips. Mesen: 0 deaths in 2 x 20,000 frames of the bot. GameShark 0101CCC2: the flag above, same bot test."
  },
  {
   "code": "0103F1C1",
+  "devices": {
+   "GameShark": "0103F1C1",
+   "Game Genie": "A73-70A-19E"
+  },
   "effect": "Infinite lives",
   "versions": [
    "us"
@@ -407,10 +419,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark: lives $C1F1 = 3 (the HUD shows 2). Mesen: 40 deaths in 20,000 frames of the bot, lives still 3."
+  "note": "GameShark: lives $C1F1 = 3 (the HUD shows 2). Mesen: 40 deaths in 20,000 frames of the bot, lives still 3. Game Genie: $02:5370 DEC A -> AND A; Mesen: 37 deaths in 20,000 frames of the bot, lives still 3."
  },
  {
   "code": "0101CDC2",
+  "devices": {
+   "GameShark": "0101CDC2",
+   "Game Genie": "380-CCB-4CA"
+  },
   "effect": "Start stops and restarts the clock instead of pausing (the unused debug flag $C2CD)",
   "versions": [
    "us"
@@ -418,10 +434,13 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark. With $C2CD set, Start in play toggles the clock ($C1F8) and opens no pause screen ($02:40C8). Mesen: in Forest 1 the clock stayed at 3:55 for 600 frames after Start, then ran on after a second Start (3:45 600 frames later)."
+  "note": "GameShark. With $C2CD set, Start in play toggles the clock ($C1F8) and opens no pause screen ($02:40C8). Mesen: in Forest 1 the clock stayed at 3:55 for 600 frames after Start, then ran on after a second Start (3:45 600 frames later). Game Genie: $02:40CC JR Z -> JR C (never taken after AND A); Mesen, Forest 1: the clock stayed at 3:55 for 600 frames after Start with no pause screen, 3:45 after the second Start."
  },
  {
   "code": "0F9-C1A-E62",
+  "devices": {
+   "Game Genie": "0F9-C1A-E62"
+  },
   "effect": "Debug menu in place of the title menu",
   "versions": [
    "us"

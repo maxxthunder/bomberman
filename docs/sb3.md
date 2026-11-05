@@ -398,13 +398,13 @@ in script data that was not decoded. Each frame shows the arena just after it st
 
 Each code was checked in Mesen's cheat engine (`emu.addCheat`, `tools/sb3/par.lua`) on the unpatched ROM:
 
-| Code | Effect | Checked |
-|---|---|---|
-| `7E542D:0C` | battle stages 11 and 12 on the stage select | EU: Left from stage 1 goes to 12 |
-| `7E2901:01` | full equipment at every stage start | EU: bombs 8, fire 8, speed 2, `$48D1`=7 at 1-1 |
-| `7E2902:01` | hard mode (enemies take one more hit) | EU: the flag holds. The effect itself was checked with 6514 in round 1 |
-| `C00139:EA` + `C00144:6B` | soft reset with Select+Start+L+R (same hook as the IPS) | EU, JP, beta: the reset routine at `$80:F000` runs |
-| `7E6C6E:0B` / `0C` | pick stage 11 / 12 | Known, not re-run |
+| Code | Effect | Checked | Game Genie (same test) |
+|---|---|---|---|
+| `7E542D:0C` | battle stages 11 and 12 on the stage select | EU: Left from stage 1 goes to 12 | `DAFE-84A7` `DA16-8DDC` (JP `DAFF-EDD7` `DA16-8DDC`, beta `DAFF-EDD7` `DA15-84DC`): both `LDA #$0A` before `STA $7E542D` load 12; `$542D`=12 in all three, EU Left 1 -> 12 |
+| `7E2901:01` | full equipment at every stage start | EU: bombs 8, fire 8, speed 2, `$48D1`=7 at 1-1 | `DDDC-E7FD`: `$C4:03AB` `BEQ` -> branch of 0; 8/8/2/7 at 1-1 in EU, JP, beta |
+| `7E2902:01` | hard mode (enemies take one more hit) | EU: the flag holds. The effect itself was checked with 6514 in round 1 | `DDD8-7FAA`: `$C3:00B6` `BEQ` -> branch of 0; JP and beta enemies start with 2 HP instead of 1 (as with the PAR code) |
+| `C00139:EA` + `C00144:6B` | soft reset with Select+Start+L+R (same hook as the IPS) | EU, JP, beta: the reset routine at `$80:F000` runs | `3CD7-540D` `18D0-5FDD` (the same bytes): the reset runs on EU, JP, beta |
+| `7E6C6E:0B` / `0C` | pick stage 11 / 12 | Known, not re-run | none (no ROM form built) |
 
 **Fixed:** round 1 said the soft reset needs an IPS because a PAR code "patches RAM". PAR (and Mesen) can patch
 ROM reads too. The first code turns the `RTL` at `$C0:0139` into a `NOP`, so the pad routine falls into the check

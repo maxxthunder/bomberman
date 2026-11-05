@@ -77,11 +77,11 @@ dispatcher value (also `'stage'`, `'ending'`, `'soundtest2'`, `'closing'`, `'tit
 Verified with `tools/gb2/test_cheats.lua` (world 1 MODE-A, random-input bot, 6,000 frames), both versions share
 the addresses.
 
-| Code | Effect | Verified |
-|---|---|---|
-| `C92-96A-6EB` + `C92-ACA-6EB` + `C93-03A-6EB` (Game Genie) | invincible: RET over the three death handlers in the hit table `$01:4913` | 0 deaths; 5 and a game over without |
-| `010306C1` | infinite lives (`$C106` = 3) | 10 deaths, no game over |
-| `010103C1` + `010004C1` | every stage ends cleared | `$C100` 00, 01, 02, 03, 04, 07 (boss), 10 in 5,000 frames |
+| Code | Effect | Verified | Other device (same test) |
+|---|---|---|---|
+| `C92-96A-6EB` + `C92-ACA-6EB` + `C93-03A-6EB` (Game Genie) | invincible: RET over the three death handlers in the hit table `$01:4913` | 0 deaths; 5 and a game over without | no GameShark form found (RAM holds no invincibility state; the only timer that skips the hit also freezes the player) |
+| `010306C1` | infinite lives (`$C106` = 3) | 10 deaths, no game over | Game Genie `B75-58D` + `B75-98D` (jp `B75-85D` + `B75-C5D`): DEC A -> OR A at both decrements; 10 deaths, no game over |
+| `010103C1` + `010004C1` | every stage ends cleared | `$C100` 00, 01, 02, 03, 04, 07 (boss), 10 in 5,000 frames | Game Genie `C34-EDD` + `185-53D` (jp `C35-1AD` + `185-80D`): `$00:24ED` JP NZ -> JP, `$00:2553` JR Z -> JR; the same `$C100` sequence |
 
 Patch: `patches/gb2_invincible.ips` (`$5296`, `$52AC`, `$5303` = `$C9`, both versions).
 
