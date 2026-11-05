@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis and PC Engine
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.7.1](https://img.shields.io/badge/version-1.7.1-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.7.2](https://img.shields.io/badge/version-1.7.2-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 17 Bomberman games, read from each game's own code and tested in emulators, with a
 password generator and checker for each one.
@@ -33,15 +33,10 @@ The page follows your device's light or dark setting, and works offline: save [`
 | <img src="docs/img/logos/sb3_eu.png" alt="" height="28"> | [Super Bomberman 3](https://maxxthunder.github.io/bomberman/#sb3) | 1995 | password generator, cheats |
 | <img src="docs/img/logos/sb4_jp.png" alt="" height="28"> | [Super Bomberman 4](https://maxxthunder.github.io/bomberman/#sb4) | 1996 | password generator, cheats |
 | <img src="docs/img/logos/sb5_jp.png" alt="" height="28"> | [Super Bomberman 5](https://maxxthunder.github.io/bomberman/#sb5) | 1997 | option codes, character builder, cheats, debug rooms patch |
-| **Genesis** | | | |
-| <img src="docs/img/logos/mega_us.png" alt="" height="28"> | [Mega Bomberman](https://maxxthunder.github.io/bomberman/#mega) and its 8-player demo | 1994 | password generator, cheats |
 | **TurboGrafx-16 / PC Engine** | | | |
 | <img src="docs/img/logos/pce90_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#pce90) and Users Battle | 1990 | password generator, cheats, patches |
 | <img src="docs/img/logos/pce93_us.png" alt="" height="28"> | [Bomberman '93](https://maxxthunder.github.io/bomberman/#pce93) | 1992 | password generator, cheats, patches |
 | <img src="docs/img/logos/pce94_jp.png" alt="" height="28"> | [Bomberman '94](https://maxxthunder.github.io/bomberman/#pce94) | 1993 | password generator, cheats, debug patches |
-| **NES / Famicom** | | | |
-| <img src="docs/img/logos/nes1_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#nes1) | 1985 | password generator, cheats |
-| <img src="docs/img/logos/nes2_us.png" alt="" height="28"> | [Bomberman II](https://maxxthunder.github.io/bomberman/#nes2) | 1991 | password generator, cheats |
 | **Game Boy** | | | |
 | <img src="docs/img/logos/gb1_wario.png" alt="" height="28"> | [Wario Blast / Bomberman GB](https://maxxthunder.github.io/bomberman/#gb1) | 1994 | password generator, cheats |
 | <img src="docs/img/logos/gb2_us.png" alt="" height="28"> | [Bomberman GB / GB 2](https://maxxthunder.github.io/bomberman/#gb2) | 1995 | password generator, cheats |
@@ -50,6 +45,11 @@ The page follows your device's light or dark setting, and works offline: save [`
 | <img src="docs/img/logos/pocket.png" alt="" height="28"> | [Pocket Bomberman](https://maxxthunder.github.io/bomberman/#pocket) | 1998 | password generator, cheats |
 | <img src="docs/img/logos/max_blue.png" alt="" height="28"> | [Bomberman Max](https://maxxthunder.github.io/bomberman/#max) | 1999 | Charabom code builder (the game saves), cheats |
 | <img src="docs/img/logos/sel.png" alt="" height="28"> | [Bomberman Selection](https://maxxthunder.github.io/bomberman/#sel) | 2003 | password generator for Bomber Boy, its Bomber Man mode and Bomberman |
+| **NES / Famicom** | | | |
+| <img src="docs/img/logos/nes1_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#nes1) | 1985 | password generator, cheats |
+| <img src="docs/img/logos/nes2_us.png" alt="" height="28"> | [Bomberman II](https://maxxthunder.github.io/bomberman/#nes2) | 1991 | password generator, cheats |
+| **Genesis** | | | |
+| <img src="docs/img/logos/mega_us.png" alt="" height="28"> | [Mega Bomberman](https://maxxthunder.github.io/bomberman/#mega) and its 8-player demo | 1994 | password generator, cheats |
 
 Every password checker was fuzzed against the game's own decoder in Mesen 2 (NES, Game Boy, SNES, PC Engine) or
 BizHawk (Genesis): every possible code for the 4-digit games, and tens of thousands of codes (every state, plus
@@ -174,13 +174,13 @@ What each patch does, and how it was tested, is on the game's page under Patches
 
 - Super Nintendo: [Super Bomberman](docs/sb1.md), [2](docs/sb2.md), [3](docs/sb3.md), [4](docs/sb4.md),
   [5](docs/sb5.md), and the English [4](docs/sb4en.md) and [5](docs/sb5en.md) (Super Bomberman Collection)
-- Genesis: [Mega Bomberman](docs/mega.md) and its [8-player demo](docs/mega8.md)
 - PC Engine: [Bomberman](docs/pce90.md), [Users Battle](docs/pceub.md), [Bomberman '93](docs/pce93.md),
   [Bomberman '94](docs/pce94.md), and the [Wii U and Collection re-releases](docs/pcevc.md)
-- NES: [Bomberman](docs/nes1.md), [Bomberman II](docs/nes2.md)
 - Game Boy: [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md),
   [Bomberman GB 3](docs/gb3.md)
 - Game Boy Color: [Pocket Bomberman](docs/pocket.md), [Bomberman Max](docs/max.md), [Bomberman Selection](docs/sel.md)
+- NES: [Bomberman](docs/nes1.md), [Bomberman II](docs/nes2.md)
+- Genesis: [Mega Bomberman](docs/mega.md) and its [8-player demo](docs/mega8.md)
 
 Each code list is also in `docs/<game>_codes.json`, and the screenshots that prove the finds are in `docs/img/<game>/`.
 

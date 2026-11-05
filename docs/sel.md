@@ -78,3 +78,18 @@ So `tools/nes1/password.mjs` and every NES Bomberman code work here. Typed in Me
 The Bomberman slot keeps the Japanese Bomberman GB's password table byte for byte (`$0A:42F3` here, `$0A:42EE` in
 the Japanese cart; 34 records), so its 32 stage codes, 4622 (every power-up) and 5656 (the extra battle) are
 unchanged. Typed in Mesen: 4622 (ROUND 1-1), 5656 (GREAT BATTLE), 9867 (ROUND 6-3); 1234 is rejected.
+
+## Cheats
+
+Checked in Mesen's cheat engine (random-input bot for 6,000 frames from 1-1 for the Bomberman ones).
+
+| Code | Effect | Evidence |
+|---|---|---|
+| GameShark `010FE0C0` + `0127E1C0` | Bomber Boy: 9,999 gold | gold held at `$270F`, the game's cap; the Panel Shop shows 9999 |
+| Game Genie `C98-16B-D5D`, GameShark `01014FC0` + `010049C0` | Bomberman: invincible | RET over the hit check `$01:4816`; or the after-hit flash flag. 0 sets lost with either, 2 without |
+| Game Genie `AF8-69B-3B4` | Bomberman: every normal set won at once | `$01:4869` OR A → XOR A; with invincibility 6 sets won, 1-1 to 1-4. The boss set doesn't end |
+
+The Bomberman slot's code sits `$21` bytes earlier than in the Japanese cart (`$01:4816` for `$01:4837`, `$01:4869`
+for `$01:488A`), so the Japanese Game Genie codes don't apply; the RAM is the same, so the invincibility GameShark
+pair carries over. The Japanese win-every-set GameShark codes (`010000C1` + `010000C2` + `010000C3`) don't work here:
+no set ended in 6,000 frames.

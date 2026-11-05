@@ -2,6 +2,11 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.7.2 (2026-11-05)
+- Bomberman Selection: cheat codes for 9,999 gold in Bomber Boy, and invincibility and instant set wins in Bomberman,
+  each tested in an emulator.
+- README: the games table and research notes follow the picker's order.
+
 ## 1.7.1 (2026-11-05)
 - Removed the patches for Bomberman (PC Engine, 1990) and every Game Boy and Game Boy Color game; their cheat codes
   stay.

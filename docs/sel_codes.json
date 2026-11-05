@@ -422,5 +422,48 @@
   "note": "Typed in Mesen. The Bomberman slot keeps Bomberman GB (Japan)'s password table byte for byte ($0A:42F3, 34 records).",
   "section": "Bomberman",
   "img": "bomberman_5656.png"
+ },
+ {
+  "code": "010FE0C0 + 0127E1C0",
+  "devices": {
+   "GameShark": "010FE0C0 + 0127E1C0"
+  },
+  "effect": "Bomber Boy: 9,999 gold",
+  "versions": [
+   "kr"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark: gold $C0E0/$C0E1 held at $270F, the game's own cap. Mesen: the Panel Shop shows GOLD 9999 on a new game.",
+  "section": "cheat"
+ },
+ {
+  "code": "C98-16B-D5D",
+  "devices": {
+   "Game Genie": "C98-16B-D5D",
+   "GameShark": "01014FC0 + 010049C0"
+  },
+  "effect": "Bomberman: invincible (fire and enemies never kill)",
+  "versions": [
+   "kr"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Game Genie, compare $CD: RET over the hit check, $01:4816 here ($21 earlier than the Japanese cart's $01:4837, the same bytes). GameShark: the after-hit flash flag, the same RAM as the Japanese cart. Random-input bot, 6,000 frames from 1-1: 0 sets lost with either code, 2 without.",
+  "section": "cheat"
+ },
+ {
+  "code": "AF8-69B-3B4",
+  "devices": {
+   "Game Genie": "AF8-69B-3B4"
+  },
+  "effect": "Bomberman: win every normal set at once (not boss sets)",
+  "versions": [
+   "kr"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Game Genie: $01:4869 OR A -> XOR A, so the enemy check sees every page empty ($01:488A in the Japanese cart). With C98-16B-D5D, bot 6,000 frames: 6 sets won, 1-1 to 1-4; the boss set doesn't end. The Japanese cart's GameShark form (010000C1 + 010000C2 + 010000C3) doesn't work here: with it no set ended in 6,000 frames.",
+  "section": "cheat"
  }
 ]
