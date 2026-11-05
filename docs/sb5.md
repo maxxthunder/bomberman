@@ -7,9 +7,9 @@ confirmed, and a sample of each kind was also typed with real button presses. Tw
 
 - **retail**: `Super Bomberman 5 (Japan).sfc`, header title `SUPER BOMBERMAN 5`.
 - **Caravan**: `Super Bomberman 5 (Japan) (Caravan Event Ban).sfc`, header title `SUPER BOMBERMAN 5G`.
-  Its RAM layout matches the addresses TCRF gives for the gold cartridge (`$627D` for retail `$625F`).
+  Its RAM layout matches the published addresses for the gold cartridge (`$627D` for retail `$625F`).
 
-Prior art: GameFAQs and TCRF (`res/`). Marks: ★ **New** = in neither; **Fixed** = posted wrong;
+Prior art: GameFAQs and other published notes (`res/`). Marks: ★ **New** = in neither; **Fixed** = posted wrong;
 **Known** = posted and confirmed. Codecs: `tools/sb5/password.py` and `tools/sb5/password.mjs`;
 every code is listed in `sb5_codes.json`.
 
@@ -95,7 +95,7 @@ after a valid code:
 
 | Handler | Does | Result in Mesen |
 |---|---|---|
-| `$C5:6951` | `$6253=1`, back to options | **invincibility**: `$C4:2D2B` skips the hit timer and sets the blink flag while `$6253`≠0. With it held at 1, Bomberman sat in his own blast and lived (below). The debug-menu text TCRF found includes MUTEKI (無敵, invincible) |
+| `$C5:6951` | `$6253=1`, back to options | **invincibility**: `$C4:2D2B` skips the hit timer and sets the blink flag while `$6253`≠0. With it held at 1, Bomberman sat in his own blast and lived (below). The known debug-menu text includes MUTEKI (無敵, invincible) |
 | `$C5:698D` | `$6255=1`, back to options | `$6255` is never read: dead |
 | `$C5:6934` | 2657's bit 0x08, then scene = A, also stored to `$1D1F`/`$4D63`/`$4D65` (`$0D` for scenes ≥ `$AE`) | entry with no caller; `$C5:698D` jumps into its tail |
 | `$C5:69B5` | scene 8 | the GAME OVER / CONTINUE screen |
@@ -135,14 +135,14 @@ checksum, `$C5:6789` fields), `$C5:6545` encodes. They are script natives 91 and
   The editor cycles bodies 0-8 and colors 0-5 (Mesen: `$62DE` wraps 8→0, `$62DF` 5→0).
 - **Only the checksum is checked.** Any body 0-15, color 0-7 and fire 0-15 loads. The name isn't in the
   password; the game gives a default (`$C2:1955`). One game state has exactly one code.
-- Out-of-range values, all loaded in Mesen: color 7 is the boss palette (TCRF's "Boss palette" PAR
+- Out-of-range values, all loaded in Mesen: color 7 is the boss palette (the known "Boss palette" PAR
   code). Its color name reads past the end of the name table and fills the editor with junk kana. Color 6
   is the burnt palette. Fire above 6 shows junk digits. Body 9 has no portrait (a red Bomberman in the
   editor, a red X in the select list) and no icon, so it uses Pirate Bomber's in matches.
 
 Why Subordinate Bomber (body 9) breaks things: the editor only offers bodies 0-8, so the game's
 per-body art and sound (portrait, select icon, victory voice) were never finished for index 9. In
-Mesen his editor portrait is a stand-in red Bomberman. TCRF blames the freeze when he wins a single
+Mesen his editor portrait is a stand-in red Bomberman. The usual explanation blames the freeze when he wins a single
 match on the missing voice clip.
 
 **Confirmed in Mesen (round 2):** a Battle Royal single match with BATTLE set to 1, P1 set to body 9
@@ -157,7 +157,7 @@ winner's character (`$625F`,X − 1) and looks up the voice in a byte table at `
 09 0A 0B 0C 0D` for bodies 0-8. Body 9 reads the next byte, `$EF` (part of the following script),
 and plays "voice" `$EF` (sound call `$03EF`, `$C0:0D5F`). Its entry in the voice-pointer table
 `$80:8765` is junk (`$0010`), so the sample upload that follows sends the sound driver garbage, and
-the next sound command (`$0247`) is never acknowledged. So TCRF is right: it's the missing victory
+the next sound command (`$0247`) is never acknowledged. So the usual explanation is right: it's the missing victory
 voice. The two 9-entry animation tables suggested last round (`$C5:12FE`, `$C2:1470`) are not the cause.
 
 ![Battle VICTORY with body 0 (left) and Subordinate Bomber (middle, and right 30 s later, frozen)](img/sb5/subordinate_victory_freeze.png)
@@ -173,7 +173,7 @@ plus random fields. Each was injected into the buffer at a savestate and then OK
 261 accepted, 554 rejected, 0 disagreements** with `password.py`/`password.mjs`, including every decoded
 field of the accepted ones. **Caravan** (buffer `$6311`, fields `$62FD`), the same 815 cases: **261 accepted, 554 rejected, 0 disagreements**. Four codes (U04GJL, KR3MT9, 23D830, 2YLPVD) were
 also typed with real presses (`tools/sb5/typecode.lua`); all loaded with the expected fields. All 20
-typeable codes posted on GameFAQs/TCRF went through the real decoder too (`CASES=... fuzz.sh`). Every
+typeable codes posted on GameFAQs and elsewhere went through the real decoder too (`CASES=... fuzz.sh`). Every
 one loaded, with the fields in the table below. The JS
 and Python codecs agree on all 815 and round-trip 4,096 field sets (`tools/sb5/test.mjs`).
 
@@ -187,9 +187,9 @@ and Python codecs agree on all 815 and round-trip 4,096 field sets (`tools/sb5/t
 | UO4GJL (Gold Bomberman) | **Fixed**: the letter O can't be typed (no O on the grid) | `U04GJL`, with a zero. It's a yellow Bomberman with full stats plus Remote control, Bomb pass, Soft-block pass, Power glove and Punch. It is not the real Gold Bomberman, who isn't a config character |
 | XROPLG (Muscle Bomber) | **Fixed**: same letter-O typo | `XR0PLG` |
 | 23D830 | OK | Subordinate Bomber, red, all stats past max (fire 15 = junk digits), all 9 items |
-| 2YLPVD (TCRF) | OK | Subordinate Bomber, red, 1 bomb, fire 8, speed 1 |
+| 2YLPVD | OK | Subordinate Bomber, red, 1 bomb, fire 8, speed 1 |
 
-TCRF's editor PAR codes (`7E62FD`, `7E62FE`) are the Caravan/gold addresses. Retail's are `7E62DE`
+The published editor PAR codes (`7E62FD`, `7E62FE`) are the Caravan/gold addresses. Retail's are `7E62DE`
 (body) and `7E62DF` (color) (**Fixed**).
 
 ## Gold Bomberman (100% completion)
@@ -211,7 +211,7 @@ press adds to `$0CD7`. A run of 16 frames without one starts over. At 360 frames
 happens if `($0CD7-7) & $F0 = $20`, i.e. **39-54 X presses in 6 seconds** (6.5-9 Hz). Then a sound
 plays and `$C0:489C` sets `$6245`=13 and SRAM `$1EA`=`$FF`; at boot `$C0:48B5` picks 13 or 10 stages from
 it. A Super Joycard's turbo held on X makes this pulse rate. Tested in Mesen: 4 frames on/4 off and 3/5
-and 1/7 unlock; 2/2, 1/1, 4/10, 6/6, 8/8 and plain holding don't. (Known: GameFAQs and TCRF. The exact
+and 1/7 unlock; 2/2, 1/1, 4/10, 6/6, 8/8 and plain holding don't. (Known: GameFAQs and others. The exact
 window is new.)
 
 **Caravan:** `$C1:75F1` is `JSL $C0:48A2`, the unlock itself. The stages are on from the first boot
@@ -269,7 +269,7 @@ and 5-27 → `$70` come from the scripts and were not walked.
 
 ### The debug menu text (★ New: decoded, and the scripts that show it)
 
-TCRF's text at file `0x11EEFA` is message `$F1` of text table 6. The text drawer (`$C0:0000`-`$C0:0134`)
+The known text at file `0x11EEFA` is message `$F1` of text table 6. The text drawer (`$C0:0000`-`$C0:0134`)
 takes a table number (`$0340`) and a message number; table 6's base is in the 3-byte list at
 `$80:8000`, and its 16-bit pointers start at `$D1:A000`, so message `$F1` starts at `$D1:EEF3` (file
 `0x11EEF3`). A message is one or more windows: `w h x y attr`, then `w×h` tile bytes, plus a second
@@ -316,7 +316,7 @@ They are plain scenes. The password screen's scene variable `$6248` is copied to
 any value works. A sweep of every scene `$00`-`$B2` through `$6248` showed `$A0`-`$A7` (battle stages 12 and 13, see "Maps"; round 2 called them boss arenas, **fixed**),
 `$A8` Bowling Bomber, `$A9`-`$AB` the ending scenes, and:
 
-| Scene | Script | Name (TCRF) | Seen in Mesen |
+| Scene | Script | Known name | Seen in Mesen |
 |---|---|---|---|
 | `$AC` | `$C7:170D` | Battle test | Zone 3 mine-cart cave layout, only the player, 2:00 timer |
 | `$AD` | `$C6:0309` | Single-player level test | battle stage 1 layout, Normal HUD, two enemies, soft blocks |
@@ -380,14 +380,14 @@ most cutscenes and most of the staff roll were never played, and sets in formats
 
 | Set (group/number) | Source (file) | What it looks like | Status |
 |---|---|---|---|
-| 3/10 | `$D3:9915` (0x139915) | The *Super Bomberman 3* logo ("…BER 3") with a plus sign | **Known** (TCRF "Super Bomberman 3 Logo") |
+| 3/10 | `$D3:9915` (0x139915) | The *Super Bomberman 3* logo ("…BER 3") with a plus sign | **Known** ("Super Bomberman 3 Logo") |
 | 3/11 | `$D3:A7AC` (0x13A7AC) | A font sheet: katakana, big digits 1-12, ∞, MAN / COM / OFF, 1 2 5P 3 4, COMMAND, OK? | New, unconfirmed: looks like an older battle-setup font; not reached |
 | 3/17, 3/18, 3/19 | `$D3:E50E`, `$D3:F0D7`, `$D4:081C` | Zone-map islands (prehistoric, city, machine) | not reached (zone maps weren't run) |
 | 0/8, 0/11-0/15, 0/17, 0/18 | `$C8:0400`-`$C9:3400` (raw) | Character sprite sheets (Bomberman and the bosses in story poses) | not reached (cutscenes) |
 | 0/22, 0/26, 0/29, 0/30, 0/32 | `$C9:A000`-`$CA:9000` (raw) | Large character sprites | not reached |
 | the rest (36 sets, mostly groups 3 and 4) | see `unused/` | stage-piece and effect tiles; many are non-4bpp formats | not reached |
 
-TCRF's other graphics (the scrawled digits in VRAM, the Warooi frames) sit inside sets that are
+The other known graphics (the scrawled digits in VRAM, the Warooi frames) sit inside sets that are
 loaded, so a set-level sweep can't flag them. A per-tile sweep would need VRAM-read logging, which
 Mesen's code/data log doesn't record.
 
@@ -428,7 +428,7 @@ Mesen's code/data log doesn't record.
 - The debug menu text and debug rooms: see the next section.
 - Unused graphics: see "Unused graphics sets" below.
 - Script natives 67/68 (Gold flag) and the SRAM signature strings `CONFIG BATTLE DATA Ver 1.00` /
-  `SuperBomberman5 by Hudson ver0.9` (Known, TCRF) are read at boot (`$C0:47F6`, `$C0:4A94`).
+  `SuperBomberman5 by Hudson ver0.9` (Known) are read at boot (`$C0:47F6`, `$C0:4A94`).
 
 ## Round 3: hidden-content sweep
 
@@ -586,10 +586,10 @@ colon) on unpatched ROMs, and added to `sb5_codes.json` with `section: "cheat"`:
 |---|---|---|---|
 | `7E6253:01` (Caravan `7E6271:01`) | invincible: own bomb at the start of 1-1, the player survives (without it he dies, `$15A2`=`$81`) | retail, English, Caravan | Known address (round 1), PAR form new |
 | `7E0E23:01` | invincible **and** the stage clock stops | retail, English, Caravan | ★ New |
-| `7E6248:xx` + any option password | room/scene select: `AC`, `AD` and `2B` (3-1) each started after 4622 | retail, English | New (TCRF's `7E1038` is a work byte) |
+| `7E6248:xx` + any option password | room/scene select: `AC`, `AD` and `2B` (3-1) each started after 4622 | retail, English | New (the known `7E1038` is a work byte) |
 | `7E6248:AC` / `AD` / `AE` | the three debug rooms | retail, English | Known rooms, new code |
 | `3061E9:01` | Gold Bomberman on the Battle character select (the read of SRAM `$1E9` is patched; SRAM stays 0) | retail | ★ New |
-| `7E6245:0D` | battle stages 11-13 without a turbo pad (`$6245`=13 at the Battle menu) | retail, English | New (TCRF's `7E625A` sets the chosen stage instead) |
+| `7E6245:0D` | battle stages 11-13 without a turbo pad (`$6245`=13 at the Battle menu) | retail, English | New (the known `7E625A` sets the chosen stage instead) |
 | `C56983:01` (ROM) | 3879 boss rush starts fully powered (8 bombs, 8 fire, speed `$0200`, items `$07`): Caravan's 0719 on retail | retail, English | ★ New |
 
 ![PAR test, own bomb at the start of 1-1: no code, 7E6253:01, 7E0E23:01 (top: blast, bottom: 200 frames later)](img/sb5/par_invincibility_none_6253_0E23.png)

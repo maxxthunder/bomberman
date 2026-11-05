@@ -5,7 +5,7 @@ Everything here comes from disassembling the carts (`tools/m6502.py` with `--far
 `tools/nes2/lib.lua` prepended, output in `$SCRATCH`). The analysis scripts are shared with Bomberman (NES) and live in
 `tools/nes1/` (`deadcode.py`, `padscan.py`, `flags.py`, `textdump.py`, `logo.py`, `gg.py`); they take `--far C852`
 here. Addresses are `bank:address` (16 KB PRG banks, 0-6 at `$8000`, bank 7 fixed at `$C000`); US unless a version
-is named. Prior art: the GameFAQs codes page and the TCRF article in `res/`. Marks: ★ **New** (in neither),
+is named. Prior art: the GameFAQs codes page and a published article on the game in `res/`. Marks: ★ **New** (in neither),
 **Fixed** (prior art is wrong or incomplete), **Known** (prior art has it; the mechanism is added here).
 
 | Dump | MD5 | vs US |
@@ -48,7 +48,7 @@ Code: `$05:92C6` (entry screen), `$05:9619` (decoder), `$05:9562` (encoder, call
 state with 16 keys.
 
 - **8 characters.** Each is a nibble v[k]: its place in `K3DH6J8B75214CFG` (US) or `PCKNFOHIGEBADJLM` (JP). The
-  two carts take **the same nibbles**, so a code converts letter by letter (`convert()`; TCRF: "A=1, H=8, I=B").
+  two carts take **the same nibbles**, so a code converts letter by letter (`convert()`; already known as "A=1, H=8, I=B").
 - **First the secret list** (`$05:96C6`): the raw code is compared with seven codes stored in JP letters (the US cart
   maps its nibbles through a copy of the JP alphabet at `$05:973B` first).
 - **Then v0 is a key**: v1-v7 are XORed with it (`$05:966C`).
@@ -77,7 +77,7 @@ state with 16 keys.
 
 The fuse and detonator codes return to the title (`$054E`), so a level code can follow. ★ Their settings survive a
 **Reset**: the boot code (`$05:AC54`) only clears the top score, the last password and these two settings
-(`$05:9280`) when `KOSAKA!!` is missing from `$03C0`, which is only the case after power-on (TCRF has the string as the
+(`$05:9280`) when `KOSAKA!!` is missing from `$03C0`, which is only the case after power-on (the string was already known as the
 reset check; the consequence is from the code, as Mesen's test runner can't reset). ★ The US staff roll ends with
 **SECRET PASSWORD K3456712** (JP `PCDEFGAB`), the sound test, before ETC and the copyright (seen in the ending in Mesen).
 
@@ -117,8 +117,12 @@ bad code sounds the error and stays on the screen.
 (`$CE59`/`$CE5C`). ★ **Pad 3 differs by region**: the US cart first reads 24 bits from each port and checks the Four
 Score signature (`$10` on `$4016`, `$20` on `$4017`, `$C430`); with it, pad 3 is the Four Score's third pad
 (`$C47D`), without it the Famicom expansion pad (`$4016` bit 1). The JP cart only reads the expansion pad (`$C382`).
-Both ran in Mesen with random input on all three pads (`cov.lua`, modes `vs` and `battle`); the Four Score path is from
-the code.
+Both ran in Mesen with random input on all three pads (`cov.lua`, modes `vs` and `battle`). Four Score verified in
+Mesen 2 (US, `Nes.Port1.Type = "FourScore"`; Mesen's game database also turns it on by itself): the signature reads
+`$45`/`$46` = `$10`/`$20`, Left/Down on Four Score pad 3 (`emu.setInput(b, 0, 0, 2)`) land in `$04B7` and move P3 (the
+blue one) in BATTLE, pad 4 changes nothing (the game reads three pads). Without a Four Score the signature reads
+`$FF`/`$FF`; the expansion-pad fallback is from the code (Mesen's Famicom two-player adapter could not be driven
+from Lua).
 
 ![Match select](img/nes2/battle_match_select.png) ![Battle](img/nes2/battle_3p.png)
 
@@ -132,7 +136,9 @@ the code.
 | Sound room title | BOMBERMAN2 SOUND ROOM | BOMBER MAN 2 SOUND ROOM |
 | Build string at `$07:FFE0` | `BOMBERMAN2 92817` | `BOMBER MAN 2` |
 
-All but pad 3 match TCRF. TCRF's church-cross change in the cutscene was not checked.
+All but pad 3 match what was known. **Known**: the church in the ending's street scene (after 6-8, before the staff roll) has
+its cross only in JP; checked in Mesen (`H8666HBH` / `NHFFFNIN` = 6-8, then `$B7`/`$A9` = `$F0`).
+![US ending](img/nes2/ending_us.png) ![JP ending](img/nes2/ending_jp.png)
 ![US title](img/nes2/title_us.png) ![JP title](img/nes2/title_jp.png)
 
 ## Title logo and item icons
@@ -141,8 +147,10 @@ All but pad 3 match TCRF. TCRF's church-cross change in the cutscene was not che
 rendered with `tools/nes1/logo.py crop ... 0 1`, which keys out the green backdrop and draws the sprites (the bomb on
 the O is one). The password holds bombs and fire only: `docs/img/items/nes2/bomb.png` and `fire.png` (16 x 16, tiles
 `$60 $61 $70 $71` and `$62 $63 $72 $73` of the area-1 metatile table `$04:8080`) come from the stage 1-1 PPU dump with
-`tools/nes2/items.py`. **Their palette slot (0) is a guess**: no dump caught a whole icon on screen with the
-palette lit (`items.lua` tries), so the colours may differ from the game's.
+`tools/nes2/items.py` with BG palette 0. Palette 0 is right: the metatile update `$07:CF34` takes the slot from a
+nibble table at `($66)` (area 1 byte `$10` = `$00`: bomb low nibble, fire high nibble, both 0), and in Mesen a
+fire-up revealed in 1-1 queued its attribute byte as `$00` (`$23DA`) and showed in the playfield colours (`$18`
+`$10` `$30` `$0F`), matching `fire.png`. The bomb-up was not seen on screen.
 
 ## Hidden-content sweep
 
@@ -170,7 +178,7 @@ and the seven secrets, in both carts. **22,186 of 23,616 traced code bytes ran**
 - **Maps**: the stage layouts are blocks in bank 4 (`$04:9BE6-$A6xx`, records starting `2A 2B`); there are two
   copies of the area tables, and in the runs one copy of area 6's blocks (`$04:9F1F-$9FD4`) was never read while the
   other copy was. Not decoded further.
-- **Graphics**: CHR is RAM, loaded from PRG per screen, so Mesen keeps no CHR log; TCRF's unused Kondoria graphic was
+- **Graphics**: CHR is RAM, loaded from PRG per screen, so Mesen keeps no CHR log; the known unused Kondoria graphic was
   not located.
 
 ### Cheat codes
@@ -183,6 +191,5 @@ All verified in Mesen 2's cheat engine (`tools/nes2/test_cheats.lua`, NORMAL MOD
 
 ## Open
 
-- The item icons' palette slot.
-- The Four Score path, the reset behaviour and the `$FF` typo are from the code.
-- TCRF's church cross and Kondoria graphic were not checked.
+- The expansion-pad path (no Four Score), the reset behaviour and the `$FF` typo are from the code.
+- The known unused Kondoria graphic was not checked.

@@ -89,7 +89,7 @@ separate English codec.
   change of D24GJN, encoded codes for every body 0-15 × colour 0-7 plus random fields) through the English
   ROM's own decoder: **815 cases, 261 accepted, 554 rejected, 0 mismatches** with `tools/sb5/password.py`,
   including every decoded field. These are the same counts as the Japanese retail and Caravan ROMs.
-- **Posted codes:** the 20 typeable GameFAQs/TCRF codes (D24GJN, W04VJ4, D344J6, W24G0N, W24LKN, W04V0T,
+- **Posted codes:** the 20 typeable codes posted on GameFAQs and elsewhere (D24GJN, W04VJ4, D344J6, W24G0N, W24LKN, W04V0T,
   W1440E, D24L1A, JWLPVP, KR3MT9, QM3PDF, RMHPCN, TDK4VU, VM6NVQ, WM6XC5, YH1PLQ, U04GJL, XR0PLG, 23D830,
   2YLPVD): **20 accepted, 0 mismatches**, so they decode as in `sb5_codes.json`. U04GJL and 23D830 were
   also typed with real presses: both loaded, with `$62DE-$62F1` = `0,5,…,7,6,7,1,0,0,0,1,1,1,0,1` and

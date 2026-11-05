@@ -797,14 +797,14 @@
  },
  {
   "code": "010000C1 + 010000C2 + 010000C3",
-  "effect": "Win every set at once (stage clear)",
+  "effect": "Win every normal set at once (stage clear; not boss sets)",
   "versions": [
    "jp",
    "wario"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; the coverage run used it to play through to the ending. GB1 has no lives: a lost match goes to the continue screen.",
+  "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; boss sets don't end with it (the 1-boss waits; $01:48C7 needs the boss itself, $C3F7 = 1). GB1 has no lives: a lost match goes to the continue screen.",
   "section": "cheat"
  }
 ]

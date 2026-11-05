@@ -3,7 +3,7 @@
 Everything here comes from disassembling the ROM (`tools/sm83.py`, listing `disasm/gb3/jp.asm`) and checking in
 Mesen 2 (`tools/gb3/run.sh`, helpers in `tools/gb3/lib.lua`). Addresses are `bank:address`.
 
-Prior art: the GameFAQs "Bomberman GB 3" codes page (in `res/`). There is no TCRF page for this game. Marks:
+Prior art: the GameFAQs "Bomberman GB 3" codes page (in `res/`). No wiki article on this game is saved there. Marks:
 ★ **New**, **Fixed**, **Known**.
 
 | Dump | Header title | MD5 |
@@ -66,10 +66,13 @@ Code: `$0D:6AFC` (entry), `$0D:68EC` (check), `$02:7C41` (the code the game show
 | 0 | ![](img/items/gb3/kick.png) | K kick | 1 | `kick.png` |
 | 1 | ![](img/items/gb3/dash.png) | D dash | 1 | `dash.png` |
 | 2 | ![](img/items/gb3/line.png) | L line bomb | 1 | `line.png` |
-| 3 | ![](img/items/gb3/full.png) | F (GameFAQs: full bombs) | 7 | `full.png` |
-| 4-7 | ![](img/items/gb3/moto1.png) ![](img/items/gb3/moto2.png) ![](img/items/gb3/moto3.png) ![](img/items/gb3/moto4.png) | M1-M4 motorbike | 1, 2, 2, 3 | `moto1.png`-`moto4.png` |
+| 3 | ![](img/items/gb3/full.png) | F フルパワー (full power: always at full power; **Fixed**, GameFAQs: full bombs) | 7 | `full.png` |
+| 4-7 | ![](img/items/gb3/moto1.png) ![](img/items/gb3/moto2.png) ![](img/items/gb3/moto3.png) ![](img/items/gb3/moto4.png) | M1-M4 モトボンバー1-4ごう: 1 takes one hit; 2 also hops one low hard block; 3 also breaks soft blocks when ridden into with B; 4 runs faster than dash and takes two hits | 1, 2, 2, 3 | `moto1.png`-`moto4.png` |
 
 ![The shop (after an area's 6th stage)](img/gb3/shop.png)
+
+Names and effects are the shop's own help pages (Select on an item, messages 29-46 in `disasm/gb3/text_jp.tsv`; the K,
+D and L pages were shown in Mesen, the others are read from the ROM).
 
 **Codec API** (`tools/gb3/password.mjs`): `decode(code)` returns `{area, areaName, stage, extra, cleared[7], shop,
 check}` (shop = the `$C38D` byte, check = capsules), `{special: 'boss'}` for DEB1F7F, or `null`; `validate(code)`;
@@ -136,22 +139,35 @@ Patch: `patches/gb3_invincible.ips` (file `$4BE6` = `C3 E4 4A`).
 
 ## Hidden-content sweep
 
-Coverage (`tools/gb3/cov.sh`): intro and title, STORY, the 3rd title mode (ちゃんぴおん, champion battles), the boss
+Coverage (`tools/gb3/cov.sh`): intro and title, STORY, the 3rd title mode (ちゃれんじ, challenge mode: score attack on はらはら / どきどき stages, 2 or 5 minutes), the boss
 attack, all three area tiers with the cheats, a game over. Executed: **44,079 bytes**.
 
 - **Dead code** (`disasm/gb3/dead_jp.txt`): branch-reachable never-run 5,019 bytes, dead 1,244, no reference 0.
-  The `$C480` = 3 path (`$00:16D1`, set by `$01:45F0` only when `$C1B8` = 2, probably the champion mode) and
+  The `$C480` = 3 path (`$00:16D1`, set by `$01:45F0` only when `$C1B8` = 2, probably the challenge mode) and
   `$00:16F7` never ran. Orphans (241) are mostly graphics data.
 - **Unset flags**: the static scan finds only object-page reads (`$C012`, `$C100`, written through HL); `$C1BC`
   and `$C1BD` were found by hand from the boot clear (they have a write, the clear, so the scan doesn't list them).
 - **Input codes** (`disasm/gb3/pad_jp.txt`, 31 hits): menus, the password cursor, movement. No hidden pad code.
-- **Text**: drawn from tile records; no tile-to-kana table was built, so no text dump.
+- **Text** (`tools/gb3/textdump.py`, `disasm/gb3/text_jp.tsv`): text is drawn glyph by glyph into tiles (`$00:0880`:
+  character n = one compressed tile from the pointer table `$00:08AD`, bank `$0C` below `$70`, bank 8 above); the
+  table was built by rendering every glyph: `$00-$32` hiragana (gojuon, ユ where ぬ would be, small kana last),
+  `$33-$69` katakana with punctuation and Ⓐ Ⓑ ♡, `$70-$79` digits. Messages: table `$0A:6905` (71 entries: 32
+  characters in two lines of 16, then an 8-byte mask, 2 bits per character, 3 = ゛, 2 = ゜); shop prompts: `$0A:7CA6`
+  (12: 20 characters + 20 mark bytes, `$AA` ゛, `$AB` ゜). Area briefings, the intro and ending story, boss lines and
+  the shop all show in the runs. Not shown: message 19 (an area that moves) and 68 (rocks that stop moving), the
+  shop help for F and M1-M4 and its M2-M4 prompts; all are picked by the same tables, so none is known to be unused.
+  The title, password and challenge-mode words are BG tile maps (not in this dump).
+- **Graphics** (CDL incl. an SGB run): the unread blocks are small, plus two pictures at `$0B:4BBE` / `$0C:7308`
+  that graphics sets do load (set records at `$00:0B52`, `$00:0AAF`) on screens the runs didn't reach. Nothing unreferenced found.
 - **Stage format**: not decoded.
 
 ### Super Game Boy
 
 Packets (`tools/emu/sgb.lua`): MLT_REQ 2 / 1, DATA_SND x8, CHR_TRN x2, PCT_TRN, ATTR_TRN, PAL_TRN, PAL_SET, then
-MLT_REQ 4 players and palette fades. The border (space, a castle, Bomberman, characters in the corners):
+MLT_REQ 4 players and palette fades. ★ New: the 4 players are never used. The pad reader `$00:055E` stores all four
+pads (`$C2E0 + 2 x id`), but only pad 2's new-press byte is touched (`$00:021F`, a latch next to pad 1's) and no
+code reads pads 2-4; with 4 players answered and pads 2-4 fed (`sgb.lua`), the title still has only すとーりー /
+ぱすわーど / ちゃれんじ and challenge mode is one player. The border (space, a castle, Bomberman, characters in the corners):
 
 ![SGB border](img/gb3/sgb_border_jp.png)
 
@@ -164,5 +180,4 @@ Logo: `docs/img/logos/gb3_jp.png` (`tools/gb3/logo.py`).
 ## Open
 
 - What `$C38E` (the stage-7 password form) changes in play.
-- The F technique's exact name (GameFAQs: full bombs) and the M1-M4 differences.
-- Champion mode wasn't won, the stage format and text are not dumped.
+- Challenge mode wasn't played to a result; the stage format is not decoded.

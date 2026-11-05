@@ -1,4 +1,4 @@
-"""Decode SB5 text windows (the debug menu text TCRF found at file 0x11EEFA is message $F1 of table 6).
+"""Decode SB5 text windows (the known debug menu text at file 0x11EEFA is message $F1 of table 6).
 Text drawer $C0:0000-$C0:0134: table at $80:8000 + 3*$0340 (24-bit base) -> 16-bit pointer per message,
 same bank. A message is a list of windows: w h [x y] attr, then w*h tile bytes through the decompressor
 at $C0:1CB0/$C0:1D45, plus a second w*h layer (tile high bytes) when attr == 0. w == 0 ends the message.

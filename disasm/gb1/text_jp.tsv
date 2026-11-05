@@ -1,0 +1,34 @@
+offset	bank:addr	read	text
+019EA	00:19EA	yes	VS ENEMYVS BOSS
+01FE0	00:1FE0	yes	TIMEROUNDPAUSE
+02255	00:2255	yes	TIME UPQ
+02295	00:2295	yes	VVENEMY
+052DF	01:52DF	yes	DRAW GAMEYOU LOSE YOU WIN! Q9
+1069D	04:469D	yes	script 12: 
+1069E	04:469E	yes	script 11: テンヲ コガス ダイバクハツ! / タタカイハ オワッタ・・・
+10735	04:4735	yes	script 10: ボス ヲ タオシタ!
+1076D	04:476D	yes	script 0: ボス ヲ タオシタ! / "ボムキック" ヲ トリカエシタ
+107F5	04:47F5	yes	script 1: ボス ヲ タオシタ! / "ダッシュ" ヲ トリカエシタ
+10878	04:4878	yes	script 2: ボス ヲ タオシタ! / "タックル" ヲ トリカエシタ
+108FB	04:48FB	yes	script 3: ボス ヲ タオシタ! / "ラインボム" ヲ トリカエシタ
+10983	04:4983	yes	script 4: ボス ヲ タオシタ! / "モトボンバー" ヲ トリカエシタ
+10A10	04:4A10	yes	script 5: ・・・ボムキック・・・ / セットシタ バクダンヲ オス. | Bボタンヲ オシテ バクダンヲ / トメルコトモ デキル.
+10B20	04:4B20	yes	script 6: ・・・ダッシュ・・・ / Bボタンヲ オシナガラ イドウ | スルト オシテイル アイダダケ / スバヤク ウゴクコトガ デキル.
+10C44	04:4C44	yes	script 7: ・・・タックル・・・ / ダッシュヲ シテイル トチュウニ | アイテニ ブツカルト アイテハ / トオクヘ トバサレテシマウ.
+10D63	04:4D63	yes	script 8: ・・・ラインボム・・・ / Aボタンヲ オシテカラ モウイチド | Aボタンヲ オスト モッテイル / ブンダケ イッキニ オケル.
+10E8C	04:4E8C	yes	script 9: ・・・モトボンバー・・・ / ハードブロック1コブンダケナラ | トビコエルコトガ デキル. / +ボタンヲ オスダケデ デキル.
+10FB0	04:4FB0	yes	script 13: ・・・スタッフ・・・ | ゲームデザイン / オオクボ ノリオ | グラフィックオオクボ ノリオ / ウラベ カツヒコ | プログラム / オガタ ケンジ | ・・・サウンド スタッフ・・・ | サッキョク  フクダ ヤスヒコ / オペレータ  モリオ タカシ | ディレクター / ナカガミ ノリユキ | スペシャル サンクス / デンキミライシャ | アドバイザー クワハラ ツカサ / ハガ タカヒロ | アドバイザー エビナ トシマサ / ウリタ トモアキ | ・・・スペシャル サンクス・・・ | タケベ タカシ / フジワラ シゲキ | オオタ ヒロユキ / ミカミ ユキコ | ゲンガ    ミズノ ショウジ / センデン   ヤマザキ アキヨシ | ディレクター / オオクボ ノリオ | プロデューサー / ミヤモト ノリヒト | PRESENTED BY / HUDSON SOFT
+11679	04:5679	yes	script 14: モトボンバーニ ノッテ キョウモ / パトロールダ! ボンバーマン・・
+1171F	04:571F	yes	script 15: ダガ アルヒ・・・ / ブラックボンバーマンタチニ・・・ | ボムキック・・・ | ダッシュ・・・ | タックル・・・ | ラインボム・・・ | スーパーバイク / モトボンバー・・・
+118A6	04:58A6	yes	script 16: スベテノ ワザガ ブラックタチニ / ウバワレテシマッタノダ!・・・ | トラレタ ワザヲ トリカエセ! / サア タタカエ! ボンバーマン!
+13343	04:7343	yes	VVCONTINUEEND
+24585	09:4585	yes	VVTECHNIQUEROUND SELECT
+24DB6	09:4DB6	yes	DRAW!   1PLAYER WIN!2PLAYER WIN!3PLAYER WIN!4PLAYER WIN!
+25043	09:5043	no	1PLAYER VICTORY!2PLAYER VICTORY!3PLAYER VICTORY!4PLAYER VICTORY!
+284E6	0A:44E6	yes	START PASSWORD0000----
+284FE	0A:44FE	yes	1994 HUDSON SOFTLICENSED BY NINTENDO
+2867E	0A:467E	yes	NORMALBATTLE
+28820	0A:4820	yes	VVGAME OVER
+288FD	0A:48FD	yes	VVCONTINUEENDPASSWORD
+28B63	0A:4B63	yes	VVGREATBATTLE
+28EE4	0A:4EE4	yes	PERFECT!CONGRATULATIONS!

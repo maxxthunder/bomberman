@@ -1,4 +1,4 @@
--- Special Select Room (TCRF). Set HUND (high-score hundreds digit), THOU (thousands digit, optional), CUT (true = Run
+-- Special Select Room. Set HUND (high-score hundreds digit), THOU (thousands digit, optional), CUT (true = Run
 -- during the demo) and NORESET (true = skip the soft reset) first. Prints the round and $10; check sr_result.png.
 -- Power on, write the high score ($2000-$2007, ones digit = tens of points), soft reset (hold Select, press Run),
 -- hold Down+Select+I+II while the demo runs (so the title menu never sees a new Down/Select press), press Run on the

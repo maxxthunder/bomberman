@@ -1,0 +1,41 @@
+entry	use	header	map	map read	shared with
+0	round 1 stage 1	08:699C	08:69A4	64/64	
+1	round 1 stage 2	08:6954	08:695C	64/64	
+2	round 1 stage 3	08:690C	08:6914	64/64	
+3	round 1 boss	08:690C	08:6914	64/64	2
+4	round 2 stage 1	08:6448	08:6450	64/64	
+5	round 2 stage 2	08:6400	08:6408	64/64	
+6	round 2 stage 3	08:63B8	08:63C0	64/64	
+7	round 2 boss	08:6370	08:6378	64/64	
+8	round 3 stage 1	08:65AD	08:65B5	64/64	
+9	round 3 stage 2	08:6565	08:656D	64/64	
+10	round 3 stage 3	08:651D	08:6525	64/64	
+11	round 3 boss	08:64D5	08:64DD	64/64	
+12	round 4 stage 1	08:60CB	08:60D3	64/64	
+13	round 4 stage 2	08:6083	08:608B	64/64	
+14	round 4 stage 3	08:603B	08:6043	64/64	
+15	round 4 boss	08:5FF3	08:5FFB	64/64	
+16	round 5 stage 1	08:6712	08:671A	64/64	
+17	round 5 stage 2	08:66CA	08:66D2	64/64	
+18	round 5 stage 3	08:6682	08:668A	64/64	
+19	round 5 boss	08:663A	08:6642	64/64	
+20	round 6 stage 1	08:61E8	08:61F0	64/64	
+21	round 6 stage 2	08:61A0	08:61A8	64/64	
+22	round 6 stage 3	08:6158	08:6160	64/64	
+23	round 6 boss	08:6158	08:6160	64/64	22
+24	round 7 stage 1	08:6873	08:687B	64/64	
+25	round 7 stage 2	08:682B	08:6833	64/64	
+26	round 7 stage 3	08:67E3	08:67EB	64/64	
+27	round 7 boss	08:679B	08:67A3	64/64	
+28	round 8 stage 1	08:62F4	08:62FC	64/64	
+29	round 8 stage 2	08:62AC	08:62B4	64/64	
+30	round 8 stage 3	08:6264	08:626C	64/64	
+31	round 8 boss	08:6264	08:626C	64/64	30
+32	battle arena 1	08:6A71	08:6A79	64/64	
+33	battle arena 2	08:6AB9	08:6AC1	0/64	
+34	battle arena 3	08:6B01	08:6B09	0/64	
+35	battle arena 4	08:6B49	08:6B51	0/64	
+36	battle arena 5	08:6B91	08:6B99	0/64	
+37	battle arena 6	08:6BD9	08:6BE1	0/64	
+38	battle arena 7	08:6C21	08:6C29	0/64	
+39	battle arena 8	08:6C69	08:6C71	0/64	

@@ -33,7 +33,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Option > PASSWORD (4 digits). Handler $C5:68D0, $6246=3. It does not unlock Gold Bomberman (one GameFAQs list says it does); Gold comes from a 100% clear, see the Gold Bomberman entry."
+  "note": "Option > PASSWORD (4 digits). Handler $C5:68D0, $6246=3. It does not unlock Gold Bomberman; Gold comes from a 100% clear, see the Gold Bomberman entry."
  },
  {
   "code": "1103",
@@ -137,7 +137,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Option > PASSWORD (4 digits). Caravan only (handler $C5:6A08, $6293=1; at match start $C5:0DE1 sets $6272=1, which $C4:2908 reads). GameFAQs says power-ups every 10 seconds; nothing in the code does that, and Mesen showed only the full starting power. Rejected by the retail ROM."
+  "note": "Option > PASSWORD (4 digits). Caravan only (handler $C5:6A08, $6293=1; at match start $C5:0DE1 sets $6272=1, which $C4:2908 reads). No power-ups are given during the match; Mesen showed only the full starting power. Rejected by the retail ROM."
  },
  {
   "code": "D24GJN",
@@ -341,7 +341,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. GameFAQs prints UO4GJL with a letter O. The entry grid has no O (no I, O, S or Z), so the posted code can't be typed. With a zero it decodes and loads. It is a yellow Bomberman, not the unlockable Gold Bomberman."
+  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. Typed with a zero (the entry grid has no I, O, S or Z); it decodes and loads. It is a yellow Bomberman, not the unlockable Gold Bomberman."
  },
  {
   "code": "XR0PLG",
@@ -353,7 +353,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. GameFAQs prints XROPLG with a letter O, which the grid doesn't have. Use a zero."
+  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. The third character is a zero (the entry grid has no letter O)."
  },
  {
   "code": "23D830",
@@ -377,7 +377,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. From TCRF. Winning a Battle match as him freezes the VICTORY screen: the victory voice table at $C6:74D1 has 9 entries, so body 9 plays junk voice $EF and the sound CPU stops answering (Mesen)."
+  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. Already known. Winning a Battle match as him freezes the VICTORY screen: the victory voice table at $C6:74D1 has 9 entries, so body 9 plays junk voice $EF and the sound CPU stops answering (Mesen)."
  },
  {
   "code": "Super Joycard turbo X on the title screen",
@@ -423,7 +423,7 @@
   ],
   "status": "fixed",
   "verified": "static",
-  "note": "TCRF gives 7E62FD/7E62FE, which are the Caravan (gold) addresses. In retail the editor block is $1F lower; the decoder writes body/color to $62DE/$62DF. The editor variables were found in Mesen by cycling body/color; the PAR values themselves weren't tested."
+  "note": "In retail the editor block is $1F lower than in the Caravan (gold) cartridge (7E62FD/7E62FE there); the decoder writes body/color to $62DE/$62DF. The editor variables were found in Mesen by cycling body/color; the PAR values themselves weren't tested."
  },
  {
   "code": "0172",
@@ -470,7 +470,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$6248 is the scene run after the password screen (it becomes $1031). Round 3: verified with Mesen's cheat engine on retail and English with AC, AD and 2B after 4622. TCRF's 7E1038:XX is a shared work byte.",
+  "note": "$6248 is the scene run after the password screen (it becomes $1031). Round 3: verified with Mesen's cheat engine on retail and English with AC, AD and 2B after 4622. The known 7E1038:XX is a shared work byte.",
   "section": "cheat"
  },
  {
@@ -520,7 +520,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$6245 = number of battle stages (10 or 13). Verified with Mesen's cheat engine on retail and English ($6245=13 at the Battle menu). Caravan has them unlocked already. TCRF's 7E625A:0B-0D picks the stage instead."
+  "note": "$6245 = number of battle stages (10 or 13). Verified with Mesen's cheat engine on retail and English ($6245=13 at the Battle menu). Caravan has them unlocked already. The known 7E625A:0B-0D picks the stage instead."
  },
  {
   "code": "C56983:01",

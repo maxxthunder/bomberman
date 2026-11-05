@@ -6,7 +6,7 @@ logs via `tools/sb2/cdl2entries_hirom.py`) and checking the results in Mesen 2. 
 bank `$CC` code sits at a different offset in each (Europe +`$5B`, Japan -`$11`, Caravan +`$198`), so the
 tools find routines by their bytes instead of by address.
 
-Prior art: the GameFAQs codes page and the TCRF article (both in `res/`). Finds are marked
+Prior art: the GameFAQs codes page and a published article on the game (both in `res/`). Finds are marked
 **★ New** (in neither), **Fixed** (posted wrong) or **Known**. None of the posted codes was wrong.
 
 ## The password
@@ -63,7 +63,8 @@ all five versions.
 - **Start value: `0000`, cursor on the first digit.** The digits are copied from `$1C60-$1C66`, which are 0
   after power-on. The game-over/continue screen (`$CC:4216`) writes the current world's password there
   (from the table at `$CC:0000`, index (`$1A` − `$10`) / 16), so after a game over the screen opens with that
-  code already in place (read from the code, not checked in Mesen).
+  code already in place. Verified in Mesen (USA): `3903`, four deaths, CONTINUE? shows `3903` and `$1C60-$1C66`
+  = 3 9 0 3; NO, then PASSWORD opens on `3903` ([img](img/sb2/password_after_game_over.png)) and START plays 3-1.
 - **Up adds 1, Down subtracts 1, and both wrap: 9 → 0 on Up, 0 → 9 on Down.** Any pad works (`$7F:402E`,
   all pads). Holding repeats after 36 frames, then every 9.
 - **Left/Right move the cursor and stop at the ends** (no wrap from the 4th digit back to the 1st). Holding
@@ -117,7 +118,7 @@ and plays sound `$0D`. The stage select (`$CC:2399`) then allows 12 stages (`$7F
   for six seconds". Nothing checks for a Joycard: any turbo pad, or tapping at 7-9 frames, works.
 - Verified in Mesen 2 (`tools/sb2/joycard.lua`): gaps of 7, 8, 9 unlock; 5, 6, 10 don't; 48 presses at 8
   don't, 49 do. Unlocks in all five ROMs. With it, Left on the USA stage select goes 1 → 12 → 11
-  ([img](img/sb2/battle_stage11.png)). Stages 11/12 are **Known** (TCRF: `7E1CCD:0A/0B`).
+  ([img](img/sb2/battle_stage11.png)). Stages 11/12 are **Known** (already known via `7E1CCD:0A/0B`).
 - ★ New: **the Caravan version kills it.** Its stage select (`$CC:250E` there) writes 0 to `$1CB5` and a
   limit of 4 stages before reading the flag, so the trick sets the flag but the stage list never grows
   (checked: Left goes 1 → 4 → 3, `$1CB5` = 0).
@@ -152,7 +153,7 @@ went white → pink → green.
 ## Disabled debug switches
 
 The code has seven `LDA #$0000` / `BEQ`/`BNE` switches. Each is turned on by changing the operand's high byte
-to `01`, which is what the TCRF codes do. All seven are at the same address in every version except the
+to `01`, which is what the known codes do. All seven are at the same address in every version except the
 stage-select one in bank `$CC`.
 
 | Switch | Code | Effect | Status | Verified |
@@ -162,15 +163,16 @@ stage-select one in bank `$CC`.
 | `$C0:22F1` | `C022F301` | R in Normal Game gives everything (`$C0:22A0`) | Known | Mesen: speed 3, 9 bombs, fire 9, remote, kick, glove, both pass items, 144 hearts |
 | `$C0:FCAD` | `C0FCAF01` | Normal Game soft reset: pause, hold SELECT, press START (`$C3` = `$3000` exactly) → `$C0:FA48` | Known | Mesen: back to the intro |
 | `$C0:FB29` | `C0FB2B01` | the same soft reset in the **Battle Mode** loop `$C0:FB11` | ★ New | Mesen: back to the intro; unpatched, the round goes on |
-| `$C1:5B3E` | `C15B4001` | **debug menu** on SELECT in Normal Game (below) | ★ New (TCRF has only its text) | Mesen, all five ROMs |
+| `$C1:5B3E` | `C15B4001` | **debug menu** on SELECT in Normal Game (below) | ★ New (only its text was known) | Mesen, all five ROMs |
 | `$CC:239F` | `CC23A101` (EU `CC23FC01`, JP `CC239001`) | stage select always offers 12 stages, no `$1CB5` needed | ★ New | Mesen: Left from 1 → 12 ([img](img/sb2/stage_switch_12.png)) |
 
-The Caravan version's stage select has its own switch at `$CC:250E` that skips both the 4-stage limit and the
-`$1CB5` clear (not tested).
+The Caravan version's stage select has its own switch at `$CC:250E` (`LDA #0` / `BNE` to `$CC:2527`, `LDA #$0B`):
+★ New: **`CC251001`** skips both the 4-stage limit and the `$1CB5` clear and allows 12 stages. Verified in Mesen
+(Caravan, cheat engine): `$7F:401E` = 11 instead of 3, Left goes 1 → 12 → 11; without the code 1 → 4 → 3.
 
 ### The debug menu (★ New)
 
-TCRF lists the menu text (`$C1:6068`, unused font) as unused. The menu itself is complete. Turn it on with the
+The menu text (`$C1:6068`, unused font) was already known to be unused. The menu itself is complete. Turn it on with the
 PAR code `C15B4001` or the IPS patches `patches/sb2_debug_menu_{us,eu,jp,beta,caravan}.ips` (one byte, ROM
 offset `$15B40` = `$01`, the same in all five dumps; built and self-checked by `tools/sb2/make_ips.py`).
 
@@ -193,12 +195,15 @@ so press START once more to play on. Handlers come from the table at `$C1:61C4`:
 Bomb types, from the code and the test (fire 3, a bomb laid between two soft blocks; image rows are types
 0, 1, 2, 4, 8): type 0 breaks the first block each way; type 1 never goes off by itself (remote); type 2
 looks like type 0 here (it only differs in range, which the blocks hide); **type 4 burns through every soft
-block in its range** (the spike bomb); type 8 explodes like type 0. In the code type 8 gives the bomb a random
-direction from `$0408` when it starts to move (`$C0:93A2`), so it is probably a bouncing bomb when kicked or
-thrown (not checked). Each type has its own item counter (`$80E5` type 4, `$80E6` remote, `$80E7` power,
+block in its range** (the spike bomb); type 8 explodes like type 0. Type 8 gives the bomb a random direction from
+`$0408` (`$C0:93A2`, direction at object `+$5E`). ★ New, verified in Mesen (USA 1-1, cheat engine `7E80F308` +
+glove `7E80FE01`, bomb thrown down): **a thrown type-8 bomb changes direction on its bounces** (directions
+02 02 02 04 04 04 04 04 04 04 10 10 10 02 over 14 bounces, about 180 frames in the air); a type-0 bomb thrown the
+same way bounced 4 times, all down (08), then went off. Kicking was not exercised (the kick test never moved the
+bomb). Each type has its own item counter (`$80E5` type 4, `$80E6` remote, `$80E7` power,
 `$80E8` type 8) and pickup handler (`$C0:9965` sets 4, `$C0:9C19` sets 8).
 
-The TCRF text also lists "NORMAL GAME" and "BATTLE GAME", which this menu never draws.
+The known text also lists "NORMAL GAME" and "BATTLE GAME", which this menu never draws.
 
 Verified on the IPS-patched ROMs with no RAM writes (`tools/sb2/debug_menu_check.lua`): TEST=1 walks every line
 in all five versions with identical results ([img](img/sb2/debug_menu_nav.png)); TEST=2/3 are the bomb-type
@@ -220,15 +225,15 @@ What they are, as far as checked:
 
 | Where | What it looks like | Status |
 |---|---|---|
-| `$C5:0D00-$C5:7BBF` (most of it) | enemy sprite frames in 16 × 16 cells, interleaved with frames that were read | candidates only: these are animation frames the short stage visits did not trigger (turning, dying). TCRF's Mr. Moai tongue frames (**Known**) should be among them; not singled out |
+| `$C5:0D00-$C5:7BBF` (most of it) | enemy sprite frames in 16 × 16 cells, interleaved with frames that were read | candidates only: these are animation frames the short stage visits did not trigger (turning, dying). The known Mr. Moai tongue frames (**Known**) should be among them; not singled out |
 | `$C8:40C0-$C8:D8BF`, `$C9:2000-$C9:5F9F` | stage background tile sets | candidates: battle stages 6-12 and some world maps were not covered |
 | `$C3:06E0-$C3:39FF`, `$CB:ACE0-$CB:C55F`, `$CD:0000-$CD:0D5F` | not readable as 4bpp (likely 2bpp/8bpp or packed) | unidentified |
 | `$C2`, `$C4`, `$CA`, `$CC` runs | mostly not tile art (code tables, sound) | not graphics |
 
-Nothing in the sweep could be confirmed as never-used art, so no ★ New unused graphics are claimed. The TCRF
+Nothing in the sweep could be confirmed as never-used art, so no ★ New unused graphics are claimed. The known
 items are a different kind: they are **loaded but never shown**, which a data log cannot see. The item icon
 block `$C8:0002-$C8:0F11` (DMA'd to VRAM `$4000` in every stage) is drawn in
-[items_C80002.png](img/sb2/unused/items_C80002.png) (16 × 16 icons, rows of 8). In it are TCRF's unused
+[items_C80002.png](img/sb2/unused/items_C80002.png) (16 × 16 icons, rows of 8). In it are the known unused
 clock (row 2, 8th) and question mark (row 2, 7th) (**Known**). The early icon set (fire extinguisher, early
 glove, ice cream, spike bomb) and the filler icons were not located. Palettes were not swept.
 
@@ -305,7 +310,8 @@ Checked with Mesen's cheat engine (`emu.addCheat`) on the unpatched USA ROM, rea
 | `7E80E003` `7E80E109` `7E80E209` | speed 3, 9 bombs, fire 9 | RAM | ★ New |
 | `7E80F304` | spike bombs (`01` remote, `02` power bomb, `08` the fifth type) | RAM | ★ New |
 | `7E80FA01` `7E80FB01` `7E80FE01` `7E80FF01` | both pass items, power glove, kick | RAM | ★ New |
-| `7E1CB5FF` `7E1CB6FF` | battle stages 11 and 12 (not in Caravan) | Left on the stage select: 1 → 12 | ★ New (TCRF has `7E1CCD0A/0B`) |
+| `7E1CB5FF` `7E1CB6FF` | battle stages 11 and 12 (not in Caravan) | Left on the stage select: 1 → 12 | ★ New (`7E1CCD0A/0B` was known) |
+| `7E1CCD0A` / `7E1CCD0B` | battle stage 11 / 12 | stage select shows 11 / 12, the battle is the boxing ring / trampolines | **Known** |
 | `7E1C6EFF` `7E1C6FFF` | jump in battle (the pad-5 flag) | flag held; jump shown earlier with the same flag | ★ New |
 | `7E1C68FF` `7E1C69FF` | sudden death (the `5656` flag) | flag held; effect shown earlier | ★ New |
 
@@ -373,9 +379,9 @@ version (the Japanese release is the "(En)" dump).
 | `$7E:80E5-$80E8` | bomb-type item counts: spike, remote, power, type 8 |
 | `$7F:402E`, `$7F:4032/38/3E/44/4A`, `$7F:4034` | new presses: all pads, pads 1-5; pad 1 held |
 
-Item names: `$C0:22A0` (TCRF's "power-up toggler", whose list is remote, bomb-through, wall-through, kick,
+Item names: `$C0:22A0` (the known "power-up toggler", whose list is remote, bomb-through, wall-through, kick,
 throw) sets `$F3` = 1 and `$FA` `$FB` `$FE` `$FF`. The pickup handler `$C0:9BF6` sets `$FE` and holds the
-power-glove sound byte TCRF points at (`0x9BF7`), and `$C0:9C3A` (sound byte `0x9C3B`, power bomb) sets bomb
+power-glove sound byte already pointed out (`0x9BF7`), and `$C0:9C3A` (sound byte `0x9C3B`, power bomb) sets bomb
 type 2. `$FF`'s pickup `$C0:9BA8` plays sound `$61` instead of the usual `$4C`, likely the "Kick" voice.
 Which of `$FA`/`$FB` is bomb pass and which wall pass wasn't checked.
 
@@ -383,20 +389,20 @@ Which of `$FA`/`$FB` is bomb pass and which wall pass wasn't checked.
 
 - **Passwords:** the same 11 codes, same table at `$CC:0000`, same check, same effects in all five
   (fuzzed above).
-- **USA beta** (★ New, TCRF lists it as to-do): it is the retail game with three letters missing. The credits
+- **USA beta** (★ New, listed as to-do before): it is the retail game with three letters missing. The credits
   say "Graphics Designer", "Programmer", "Sound Producer" (singular, like the Japanese version); retail adds the
   "s". Those 3 bytes (`$CC:8234`, `$CC:828A`, `$CC:82E3`) shift the rest of bank `$CC` by 1-3, which explains
   every other byte that differs except one 10-byte tilemap row at `$C7:C4CD` (two tiles moved one place,
   again as in the Japanese version) and the header checksum. Checked by realigning bank `$CC` around the
   three bytes: no other difference. No unique content, same passwords and switches.
-- **Japan (En):** credits have the "Special thanks ... kids" block and singular titles (**Known**, TCRF).
+- **Japan (En):** credits have the "Special thanks ... kids" block and singular titles (**Known**).
   No `$1FFE` menu delay (**Known**). The logo has no "TM" (see below).
 - **Europe:** credits and logo as USA. Bank `$CC` has `$5B` extra bytes: `LDA #0 / STA $7F:4004` at
   `$CC:015B` and a block in front of the title menu (`$CC:1364`) that checks the controller ID of all five
   ports (`$CD-$D1`, built from `$4218-$421F` and `$4016/$4017` at `$C0:1797`; `AND #$1E` / `CMP #$02` = a
   SNES Mouse). If any port holds a mouse it jumps to `$CC:13AE`, which skips the menu, so the title menu
   never accepts input (below).
-- **Caravan** (**Known**, TCRF: sponsor screens, locked battle settings, 4 stages, hurry-up at 1:00): Normal
+- **Caravan** (**Known**: sponsor screens, locked battle settings, 4 stages, hurry-up at 1:00): Normal
   Game and the password screen still work with all 11 codes; the debug switches are the same. New: it clears
   `$1CB5` at the stage select, so the Joycard trick does nothing (above).
 
@@ -411,12 +417,12 @@ Images: [title and password](img/sb2/region_title_password.png) (rows US, EU, JP
 
 | Screen | USA | Europe | Japan (En) | Caravan | Status |
 |---|---|---|---|---|---|
-| Header | `SUPER BOMBERMAN2`, region 1 | region 2 | region 0 | `SUPER BOMBER2 CARAVAN`, region 0 | ★ New (not in TCRF) |
+| Header | `SUPER BOMBERMAN2`, region 1 | region 2 | region 0 | `SUPER BOMBER2 CARAVAN`, region 0 | ★ New (not in the prior art) |
 | Power-on to intro | intro | intro | intro | 2 sponsor screens first | Known |
 | Intro length (frames until the title menu polls input, no buttons) | 2506 | 2453 (41.8 s at 60 Hz in the US, 49.1 s at 50 Hz here) | 2282 | 2834 | ★ New (measured) |
 | Title logo | "TM" | "TM" | no "TM" | no "TM" | Known (see Logos) |
 | Title bottom lines | "TM & © 1994 HUDSONSOFT" / "Licensed by Nintendo" | same as USA | "© 1994 HUDSON SOFT", no Nintendo line (tilemap `$C7:C4CD` and `$CB:E822`/`$CB:EB32` blanked) | as Japan | ★ New |
-| Title menu delay | `$1FFE` counts to 224 | same | no counter | no counter | Known (TCRF gives 253 and 31 frames) |
+| Title menu delay | `$1FFE` counts to 224 | same | no counter | no counter | Known (published as 253 and 31 frames) |
 | Title menu with a SNES Mouse plugged in | works | **locked**: START/A do nothing, `$1FFE` stays 0 ([img](img/sb2/eu_mouse_title.png), left USA, right Europe) | works | works | ★ New |
 | Password screen title | "PASSWORD" | "PASSWORD" | "PASS  WORD" | "PASS  WORD" | ★ New |
 | Password entry, codes | same | same | same | same | (above) |

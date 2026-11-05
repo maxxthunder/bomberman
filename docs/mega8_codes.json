@@ -7,7 +7,7 @@
   ],
   "status": "unchecked",
   "verified": "emu",
-  "note": "$256 waits for bit 7 of $2F4 (the first pad found); then $3BC sets up the arena. Not in TCRF or GameFAQs",
+  "note": "$256 waits for bit 7 of $2F4 (the first pad found); then $3BC sets up the arena. Not in GameFAQs or other published notes",
   "section": "rules"
  },
  {

@@ -3,7 +3,7 @@
 Everything here comes from a linear 68000 disassembly of the ROMs (`tools/m68k.py`; output in `disasm/mega/`,
 `usa.asm` and `eu.asm` for `$200-$40000`) and checking the results in BizHawk 2 (Genesis Plus GX core) with the Lua
 scripts in `tools/mega/` (`run.sh script.lua us|eu`; run `mkstates.lua` first). Addresses are USA unless a version is
-named; RAM addresses are short `$xxxx.w` forms of `$FFxxxx`. Prior art: the GameFAQs codes page and the TCRF article
+named; RAM addresses are short `$xxxx.w` forms of `$FFxxxx`. Prior art: the GameFAQs codes page and a published article on the game
 in `res/`. Marks: ★ **New** (in neither), **Fixed** (prior art is wrong or misfiled), **Known** (prior art has it).
 
 ![](img/logos/mega_us.png)
@@ -184,16 +184,16 @@ order as N) and `6429` `0139` `5739` `9349` `0059` `4659` `9269` `3969` `5279` `
 
 ## Unused content
 
-- **Known (located here):** TCRF's crying animations, one 2-frame loop for each of the 9 battle characters. They
+- **Known (located here):** the known unused crying animations, one 2-frame loop for each of the 9 battle characters. They
   are in the player sprite sheets but **no frame points at them**. The player sprites come in 4 sets (frame table /
   DMA table, installed only by `$9840`-`$98BA`: `$EB6B4`/`$ECBC0` 184 frames, `$EC250`/`$EE6C8` 108,
   `$EDC6C`/`$EFA92` 173, `$EF17E`/`$F0D76` 102). Each frame's DMA list (`count, $FF`, then `source.l, length/8,
   VRAM tile`) names the 128-byte 16x16 pieces it copies. None of the 567 lists names the crying bodies, and no other
   long or 24-bit value in the ROM points at them (the few byte matches are inside compressed data), so nothing can
-  play them. Found by matching TCRF's GIFs against every piece in `$BD000`-`$D8000`, and drawn from the ROM by
-  `tools/mega/cry.py`. All 9 match TCRF's frames, apart from 1-5 pixels on 3 of them: ![](img/mega/unused/cry.png)
+  play them. Found by matching the published GIFs against every piece in `$BD000`-`$D8000`, and drawn from the ROM by
+  `tools/mega/cry.py`. All 9 match the published frames, apart from 1-5 pixels on 3 of them: ![](img/mega/unused/cry.png)
 
-| TCRF # | Character | Head piece | Crying body, frame 1 / frame 2 |
+| # | Character | Head piece | Crying body, frame 1 / frame 2 |
 |---|---|---|---|
 | 1 | white Bomberman | `$BDC00` (used by set 0 frame `$11`) | `$BF500` / `$BF580` |
 | 2 | bow | `$C1200` (set 0 `$61`, `$77`) | `$C2280` / `$C2300` |
@@ -337,9 +337,9 @@ BizHawk's own cheat system (`client.addcheat`, `cheats.lua`), with and without t
 | Code (USA) | Code (Europe) | Effect | Patch | Checked |
 |---|---|---|---|---|
 | `HA3A-AYWC` | same | Infinite lives | `$3242` `subq.b #1,$9543` → `tst.b` | own bombs, 2400 frames: 3 lives lost without, none with |
-| `AJ2A-AAB2` | same | Invincible | `$3038`: the hit check `$3032` always says "not hit" | own bombs, 1200 frames: 2 lives lost without, none with. Enemies not tried; the check is shared, so in battle it should cover every player (not tried) |
+| `AJ2A-AAB2` | same | Invincible | `$3038`: the hit check `$3032` always says "not hit" | own bombs, 1200 frames: 2 lives lost without, none with. Player held on each of the 8 enemies of area 1 stage 1 for 120 frames: a life lost on each without, none with. Battle Game (2 players on their own bombs): both die every round without; with it nobody dies, closing-in blocks included, and the round only ends at time-up. Every death in these runs went through `$30A4`, behind the check |
 | `HC0A-AYZ0` | `HC0A-AYZT` | Clock stops | `$ACB6` (Europe `$ACB0`) frame counter `subq` → `tst` | 600 frames: 3:57 stayed 3:57 |
-| `HCXT-DEV6` `DJV6` `DNV6` `DTV6` `DYV6` | `HCXT-DEV0` `DJV0` `DNV0` `DTV0` `DYV0` | Normal Game starts at area 2, 3, 4, 5, 6 | `$1A73C` (Europe `$1A736`) `clr.b $953B` → `addq.b #n,$953B` | area 3 code: planet map and hub on area 3 (`$953A` = 2, map `$0B`); the other four are the same patch with another n. Use from power-on (it adds to the old value) |
+| `HCXT-DEV6` `DJV6` `DNV6` `DTV6` `DYV6` | `HCXT-DEV0` `DJV0` `DNV0` `DTV0` `DYV0` | Normal Game starts at area 2, 3, 4, 5, 6 | `$1A73C` (Europe `$1A736`) `clr.b $953B` → `addq.b #n,$953B` | all five from the title: planet map shows AREA n, play starts in that area's first stage (`$953A` = n-1, map `$04`, `$0B`, `$13`, `$1C`, `$25`; area 6 after the final-area intro scene). Use from power-on (it adds to the old value) |
 
 Battle Game has nothing locked (see above), so there is no unlock code.
 

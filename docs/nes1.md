@@ -5,7 +5,7 @@ shared with Bomberman II, with coverage grown from Mesen 2 code/data logs; listi
 the results in Mesen 2 (`tools/nes1/run.sh` runs a Lua script headless with `tools/nes1/lib.lua` prepended, output in
 `$SCRATCH`). The PRG is one 16 KB bank at `$C000`; RAM is `$0000-$07FF`. US addresses unless a version is named.
 Prior art: the GameFAQs codes pages for the NES game and for the Game Boy Advance Classic NES Series re-release (the
-same list, all platforms mixed in) and the TCRF article, all in `res/`. Marks: ★ **New** (in none of them),
+same list, all platforms mixed in) and a published article on the game, all in `res/`. Marks: ★ **New** (in none of them),
 **Fixed** (prior art is wrong or incomplete), **Known** (prior art has it; the mechanism is added here).
 
 | Dump | MD5 | vs US |
@@ -13,7 +13,7 @@ same list, all platforms mixed in) and the TCRF article, all in `res/`. Marks: �
 | USA | `775f664b177e561b34615614d160dfb7` | |
 | Japan | `64c3903224298ca9972991ea6a2b22a4` | 12,033 bytes differ (586 of them in CHR). The password code and tables, the stage tables and the item code are the same; most of the code sits 8 bytes lower (the decoder is at `$DB72`, the encoder at `$E291`). The title screen and the ending text differ (see [Regions](#regions)) |
 
-Both headers are iNES NROM, 16 KB PRG + 8 KB CHR. The Famicom Disk System version that TCRF and GameFAQs also cover was
+Both headers are iNES NROM, 16 KB PRG + 8 KB CHR. The Famicom Disk System version that GameFAQs and the article also cover was
 not available, so nothing here is checked against it; its GameFAQs codes are the same strings as the cart codes.
 
 ## RAM that matters
@@ -105,7 +105,7 @@ right about every code except as noted:
 | `BABABABABABABABABABA` | level 00 | **Fixed**: stage 0, and fire 0 (every value is 0) |
 | `HJDIKMEFNCLFEINMIHF` | level 29 (FDS list) | **Fixed**: 19 letters; `IHJDIKMEFNCLFEINMIHF` (the other lists) is stage 29 |
 | levels 01-50 | max bombs and fire | **Known**; each also has speed and a score of 3.5-7 million |
-| `IIIIIJJJJJKKKKKNNNNN` (TCRF) | stage 53, which "and beyond" draws the hidden tiles | **Fixed**: the marks come from the code's reveal nibble (3). Stage 53 with reveal 0 shows nothing |
+| `IIIIIJJJJJKKKKKNNNNN` (posted) | stage 53, which "and beyond" draws the hidden tiles | **Fixed**: the marks come from the code's reveal nibble (3). Stage 53 with reveal 0 shows nothing |
 
 New codes (★, typed in US and JP unless marked): `BAHIMNJDJNMNMNMNMNMF` (stage 1, new game), `BOBAMNABONCPPCIHIHAN`
 (stage 1, every storable power-up), `BOHIDJFEKJGKEFOLOMIC` (stage 50, the same), `BAHIMNJDJNMNMNMNJDJF` (stage 1 with
@@ -133,14 +133,14 @@ reads `$DFA0[letter & 15]`.
 
 ### Reveal flag `$94` (Known, Fixed)
 
-TCRF found that `$94` non-zero draws the hidden door and item as red half-broken bricks. ★ It is value 16 of the
+It was already known that `$94` non-zero draws the hidden door and item as red half-broken bricks. ★ It is value 16 of the
 password, so any code can set it (`BAHIMNJDJNMNMNMNJDJF` is stage 1 with it). The new game clears it (`$C3D7`), and
 nothing else in the game ever writes it: it is a debug switch reached only through the password. `$CB1B`: with `$94`
 set the map draw skips turning cell types 4 (item) and 5 (exit) into plain bricks.
 
 ### Bonus items (Known)
 
-TCRF and GameFAQs list the six bonus items (target, goddess mask, cola, Famicom, Nakamoto-san, Dezeniman-san) and their
+GameFAQs and other published notes list the six bonus items (target, goddess mask, cola, Famicom, Nakamoto-san, Dezeniman-san) and their
 conditions. The checks are `$E399-$E4AE`, called every frame from the main loop (`$C467`); the bonus item index per
 stage is `$E4AF` (`$58 & 7`, 6 and 7 folded to 0-1). None of the runs met the
 conditions, so this code never ran (it is the biggest `cond` stretch in `disasm/nes1/dead_us.txt`); **not reproduced
@@ -154,7 +154,7 @@ in Mesen**.
 | Title | no frame, START / CONTINUE side by side, Nintendo licence lines | logo in a frame, START over CONTINUE, COPYRIGHT 1985 |
 | Ending | CONGRATULATIONS / YOU HAVE SUCCEEDED IN HELPING BOMBERMAN TO BECOME A HUMAN BEING / MAYBE YOU CAN RECOGNIZE HIM IN ANOTHER HUDSON SOFT GAME / GOOD BYE | CONGRATULATIONS / BOMBER MAN BECOMES RUNNER / SEE YOU AGAIN IN LODE RUNNER |
 
-Both match TCRF. ![US title](img/nes1/title_us.png) ![JP title](img/nes1/title_jp.png) ![US ending](img/nes1/ending_us.png) ![JP ending](img/nes1/ending_jp.png)
+Both match what was known. ![US title](img/nes1/title_us.png) ![JP title](img/nes1/title_jp.png) ![US ending](img/nes1/ending_us.png) ![JP ending](img/nes1/ending_jp.png)
 
 ## Title logo and item icons
 
@@ -185,7 +185,7 @@ codes, and the out-of-range stages. **7,313 of the 7,510 traced code bytes ran**
   only the item (`$CC03`) and 10 enemy slots (`$D708` for 1-25, `$D802` for 26-50); the arena is a fixed template and
   the soft blocks are random. US and JP are identical for stages 1-50.
 - **Graphics**: the CHR tiles never drawn in the JP runs (Mesen CHR log) are the bonus-item sprites, the letters Q, W, X,
-  Z and a few block frames, all used by code. No unused graphics, as TCRF also says.
+  Z and a few block frames, all used by code. No unused graphics, which matches what was known.
 - **Debug**: only `$94` (above).
 - **Small bug** (★, from the code, not reproduced): the top-score compare at `$DDAA` checks 8 bytes, `$61-$68` against
   `$01-$08`, one past the 7 score digits: on an exact tie it compares lives (`$68`) with `$08`.

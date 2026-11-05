@@ -4,7 +4,7 @@ Everything here comes from a linear 68000 disassembly of the ROM (`tools/m68k.py
 `demo.asm` is all of the game code, `$200`-`$37B2`, and `sound_head.asm` the start of the sound driver at `$D8000`)
 and checks in BizHawk 2 (Genesis Plus GX core) with the Lua scripts in `tools/mega8/`
 (`SCRATCH=dir run.sh script.lua tap|tap1|pad`; run `players.lua` first, it saves the battle state the others load).
-RAM addresses are offsets from `$FF0000` (the game keeps `a6` = `$FF0000`). Prior art (the TCRF article and the
+RAM addresses are offsets from `$FF0000` (the game keeps `a6` = `$FF0000`). Prior art (a published article and the
 GameFAQs page in `res/`) does not mention this demo at all, so every finding here is marked **unchecked** against it.
 
 ![](img/logos/mega8_eu.png)

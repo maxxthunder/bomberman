@@ -6,7 +6,7 @@ checking the results in Mesen 2 (`tools/gb1/run.sh` runs a Lua script headless w
 `tools/emu/mesen_gb.py`'s helpers prepended). Addresses are `bank:address` (bank 0 at `$0000`, the switched bank at
 `$4000`). JP addresses unless Wario is named; most routines sit at the same address in both.
 
-Prior art: the GameFAQs codes page for Wario Blast and the TCRF article on Wario Blast (both saved in `res/`). The
+Prior art: the GameFAQs codes page for Wario Blast and a wiki article on Wario Blast (both saved in `res/`). The
 GameFAQs page titled "Bomberman GB" is the US release of JP Bomberman GB 2 ([gb2.md](gb2.md)), but its 4622 and 5656
 also work here. Marks: ★ **New** (in neither), **Fixed** (posted wrong or incomplete), **Known**.
 
@@ -100,7 +100,7 @@ Entering: on the title, Down to PASSWORD, Start. Up/Down step the digit (wrappin
 
 GameFAQs calls it Battle Mode / Extra Battle. It's an elimination run: the JP intro text (GREAT BATTLE) reads
 "how many Black Bombermen can you defeat before you go down? The elimination battle begins!"; Wario's is THE
-BATTLE. In JP it is reachable only by password; the title has no battle entry.
+BATTLE. In JP it is reachable only by password; the title's BATTLE entry (SGB multitap only, below) is a different mode.
 
 ![Extra battle intro (SGB colours)](img/gb1/battle_intro_sgb.png)
 
@@ -111,15 +111,18 @@ All in `docs/gb1_codes.json` (`section: "cheat"`), verified with `tools/gb1/test
 | Code | Effect | Verified |
 |---|---|---|
 | `C98-37B-D5D` (Game Genie) | invincible: RET over the hit check `$01:4837` (same in both) | 6,000 frames: 0 hits; 7 without |
-| `010000C1` + `010000C2` + `010000C3` (GameShark) | every set won at once (enemy states 0) | 6 sets won, 1-1 to the 1-boss in 6,000 frames; used to reach the ending |
+| `010000C1` + `010000C2` + `010000C3` (GameShark) | every set won at once (enemy states 0) | 6 sets won, 1-1 to the 1-boss in 6,000 frames; a boss set doesn't end (it waits for the boss) |
 
 Patch: `patches/gb1_invincible.ips` (file `$4837` = `$C9`, both versions; the same byte as the Game Genie code).
 
 ## Hidden-content sweep
 
 Coverage: Mesen code/data logs from the attract mode, the password screen with wrong codes and every special,
-battles, and the whole game to the ending with the cheats above (`tools/gb1/cov.sh`, scenarios in `cov.lua`).
-Executed code: **21,136 bytes** (JP), **21,274** (Wario).
+battles, and play with the cheats above (`tools/gb1/cov.sh`, scenarios in `cov.lua`; that run stalls at the
+1-boss: the GameShark enemy codes don't end a boss set). Executed code: **21,136 bytes** (JP), **21,274** (Wario);
+the dead-code numbers below are from these runs. The text, stage and graphics checks also use later runs: the
+forced-win run to the staff roll and one per boss (`tools/gb1/cov_win.lua`), a time-up, the extra battle and the
+multitap battle.
 
 - **Dead code** (`tools/gbsweep.py dead`, `disasm/gb1/dead_<ver>.txt`): never-run code reached by a branch from code
   that ran: 4,771 bytes (JP) / 4,802 (Wario); reached only from never-run code: 1,538 / 1,316; no reference: 3 (the
@@ -130,10 +133,37 @@ Executed code: **21,136 bytes** (JP), **21,274** (Wario).
   None is a real flag.
 - **Input codes** (`tools/gbsweep.py pad`, `disasm/gb1/pad_<ver>.txt`, 22 hits each): A+B+Select+Start held
   (`$00:07B7`, soft reset), the pause, the password digits and movement. **No hidden pad code** beyond the passwords.
-- **Text**: the title and menu strings are BG tile codes (A = `$EA`, space = `$C0`, `$0A:44E7` JP), the story/battle
-  texts tile records at `$04:567E`; no readable unused string was found. A full text dump is not done (no complete
-  tile-to-kana table).
-- **Stages**: the arenas are built at run time; the stage format is not decoded here.
+- **Text** (`tools/gb1/textdump.py`, `disasm/gb1/text_jp.tsv`, `text_wario.tsv`): menu strings are BG tile codes
+  copied by `$00:087F` (Latin set at `$C0`: A = `$EA`, 0 = `$E0`, W-Y `$CD-$CF`). The longer texts are scripts:
+  pointer table `$04:467B` (17 entries, JP) / `$04:4B8C` (14, Wario), reader `$04:45E3` (JP); records of 5 bytes JP
+  (frames, VRAM address, mark tile, character; `$F6` ゛ / `$F8` ゜ on the row above) or 4 Wario (no mark), `$FE` waits
+  for a button, `$FF` ends. Each script screen loads its own font arrangement, so the code-to-character table was
+  read off VRAM: `tools/gb1/txlog.lua` logs every queued copy with the tile data on screen, matched against the
+  story and title glyphs (`FONTS` in the dump). Scripts: the story (JP 14-16: Known),
+  boss-cleared lines 0-4/10 (ボス ヲ タオシタ! "ボムキック" ヲ トリカエシタ / BOSS CLEARED. RETRIEVED: KICKS),
+  the five technique help pages 5-9, the victory line 11 (テンヲ コガス ダイバクハツ! / AN EXPLOSION OF EARTHQUAKE
+  PROPORTIONS SIGNALS YOUR VICTORY.) and the staff roll 13. **Every script is read in play** (Mesen CDL; all but Wario's 10 also caught by the tile log;
+  coverage needed a forced-win run, `tools/gb1/cov_win.lua`, as the earlier bot runs stopped at the 1-boss). Two
+  strings never showed in the runs: Wario's `TIME UP` (JP's did, after `$C585-$C587` = 0) and **PERFECT! /
+  CONGRATULATIONS!** (`$0A:4EE4`, drawn by `$0A:4DFF`, which the extra battle (5656) runs when the defeated count
+  `$C1D1-$C1D3` reaches 240, `$0A:4EFC`; in JP its tile copy was queued once, in a time-up run, without showing on screen). The bank 9
+  strings (TECHNIQUE / ROUND SELECT, nPLAYER WIN!) belong to the multitap battle (below); the VICTORY! lines (match
+  won) didn't come up in the battle runs. ★ New: the Wario ROM has no trace of the JP story (no script records).
+- **Stages** (`tools/gb1/stages.py`, `disasm/gb1/stages_<ver>.tsv`): `$00:1608` looks up `$C3F0` in the word table
+  `$08:5C19` (Wario `$08:5FA3`): 40 entries of an 8-byte header (map, metablock, sub-block and a 4th table) and a
+  64-byte map of 8 x 8 metablocks (4 x 4 tiles each: the whole BG map); soft blocks are scattered afterwards
+  (`$01:4C19`). 0-31 are the 32 stages (1-3/1-boss, 6-3/6-boss and 8-3/8-boss share a map: 29 distinct), **32-39 the 8
+  multitap battle arenas** (`$09:47C3`: `$C3F0` = `$20` + round). The table ends at the first header and the headers
+  and metablock tables are packed with no gap, so **there is no unused layout**. All 33 game/arena-1 maps were read in
+  the runs; arenas 2-8 weren't picked.
+- **Graphics** (CDL: which ROM bytes the coverage runs read, SGB and multitap runs included; `tools/gb1/gfx.py` for
+  the tile format): almost everything unread is code (bank 2), the 7 unplayed battle arenas, sound data and small
+  tails. One notable block: ★ **New: an unused title logo**, 128 compressed tiles at `$03:6911` (Wario `$03:62E2`, the
+  same bytes), referenced by no graphics set (sets `$00:10C3` / `$00:12C2` list everything else; the title loads
+  `$03:76AF`). It is the BOMBERMAN GB logo with no ® and the "GB" in grey with a dark outline instead of white with a
+  black one; 104 of its tiles equal the shipped ones. Nothing in `res/` mentions it.
+
+  ![Shipped title logo (left) and the unused one at $03:6911 (right)](img/gb1/unused_logo.png)
 - **Debug features**: none found (no unreferenced menu, no flag read without a write).
 
 ### Super Game Boy
@@ -148,17 +178,28 @@ MASK_EN freeze, CHR_TRN (tiles 0-127), PCT_TRN (the border map and palettes), PA
 | Border | ![](img/gb1/sgb_border_jp.png) | ![](img/gb1/sgb_border_wario.png) |
 | Title in SGB colours | ![](img/gb1/sgb_title_jp.png) | ![](img/gb1/sgb_title_wario.png) |
 
-Wario's border puts Wario where the JP border has a blue Bomberman (top centre), as TCRF says (Known). TCRF also says
-the game takes the SNES multitap; at the title only the 2-player detection request is sent, so that wasn't seen here.
+Wario's border puts Wario where the JP border has a blue Bomberman (top centre) (Known).
+
+### SGB multitap: 4-player battle (Known that it exists; ★ New: how to reach it, verified in Mesen)
+
+`sgb.lua` now also feeds pads 2-4: while the joypad id is 1-3 it answers reads with `SGBPAD[2..4]` (the id steps on
+P15 low -> high, as the game's reader `$08:5B75` expects; it stores pad n at `$CC60 + 2n`). Pressing START on the
+title calls `$08:404A`: MLT_REQ 2 players, a joypad-id check (`$08:5AF7`, `$C3FF`), and on an SGB **MLT_REQ 4 players
+and a NORMAL / BATTLE menu**. BATTLE (all bank 9, never run before): a join screen (1-4PLAYER ON/OFF, each pad's A),
+TECHNIQUE ON/OFF and ROUND SELECT, then a 4-player battle on one of the arenas 32-39; results show nPLAYER WIN! and
+the run returns to the join screen after a match. Played with random input on all four pads for 18,000 frames in
+JP and Wario (`tools/gb1/multitap.lua`, run with `tools/emu/sgb_dump.py`).
+
+![NORMAL / BATTLE, join screen, TECHNIQUE / ROUND SELECT, a 4-player battle, results](img/gb1/multitap_battle.png)
 
 ## Regions (Wario vs JP)
 
 | | JP | Wario |
 |---|---|---|
 | Title | BOMBERMAN GB, START / PASSWORD | WARIO BLAST featuring BOMBERMAN!, same menu |
-| Player | Bomberman only | Bomberman or Wario for the whole game (`$C3D5`); the other one is the enemy (TCRF, Known) |
+| Player | Bomberman only | Bomberman or Wario for the whole game (`$C3D5`); the other one is the enemy (Known) |
 | Passwords | 34 codes | the same 34 + 32 Wario stage codes + 2264, 6565 |
-| Story | attract story about the stolen techniques (TCRF quotes it, Known) | removed |
+| Story | attract story about the stolen techniques (Known) | removed, no trace in the ROM |
 | SGB border | blue Bombermen | Wario in the top centre |
 
 ![JP and Wario titles](img/gb1/title_jp.png) ![](img/gb1/title_wario.png)
@@ -170,5 +211,6 @@ Item icons: the password stores no items (a table index only), so none were ripp
 
 ## Open
 
-- The SGB multitap game TCRF mentions was not reached.
-- Text dump and stage format not done.
+- The multitap battle's VICTORY! screen, arenas 2-8 and TECHNIQUE OFF weren't played through; PERFECT! /
+  CONGRATULATIONS! (240 in the extra battle) wasn't seen on screen.
+- Why the logo at `$03:6911` was dropped (an earlier palette design is a guess).

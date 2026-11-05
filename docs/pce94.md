@@ -5,7 +5,7 @@ fed with entry points from Mesen's code/data log; output in `disasm/pce94/bankNN
 of the demo CD's boot program (`tools/pce94/demo_disasm.py`, output in `disasm/pce94/demo/`), checked in Mesen 2
 (portable copy, headless test runner) with the Lua scripts in `tools/pce94/` (`run.sh script.lua card|demo
 [VAR=value]`; run `mkstates.lua` first). Addresses are ROM offsets (`$1B27C`) or, for RAM, logical `$2xxx`/`$3xxx`
-(zero page `$xx` = `$20xx`). Prior art: the two TCRF articles and the GameFAQs Mega Bomberman page in `res/`.
+(zero page `$xx` = `$20xx`). Prior art: two published articles on the game and the GameFAQs Mega Bomberman page in `res/`.
 Marks: ★ **New** (in none of them), **Fixed** (prior art is wrong or misfiled), **Known** (prior art has it).
 
 | Retail | Demo ("Special Version") |
@@ -156,13 +156,13 @@ At the title menu (NORMAL GAME / BATTLE GAME / PASS WORD), hold these button com
 Left, Left+Down, Down, Down+Right, Down+Right+II**. Releasing everything in between is allowed. `$1AC64` (called
 every frame by the menu handler `$19DF3`) records each new held combination in `$305D` and compares the list with
 `$1ACCA` = `20 80 C0 40 60 62 FF`; a wrong combination clears the list, and so does holding nothing new for 128
-frames. On a match `$19E97` calls `$DF54`, which far-calls bank `$12` at `$9D89`: the Sound Room. TCRF's wording
+frames. On a match `$19E97` calls `$DF54`, which far-calls bank `$12` at `$9D89`: the Sound Room. The known wording
 (press Right, hold Left, hold Down, release Left, hold Right, press II) is the same sequence. Verified with
 `soundtest.lua`: ![](img/pce94/sound_room.png)
 
-### Debug Version menu (Known; ★ answer to TCRF's question)
+### Debug Version menu (Known; ★ answer to an open question)
 
-TCRF's patch (`$3F5B`: `89 85 67 A9 9D` → `29 85 67 A9 98`) changes the far-call target in `$DF54` from
+The known patch (`$3F5B`: `89 85 67 A9 9D` → `29 85 67 A9 98`) changes the far-call target in `$DF54` from
 `$12:$9D89` to `$12:$9829`, so the Sound Room code opens **BOMBERMAN94 DEBUG VERSION** (STAGE SELECT, BOSS
 BATTLE, IMPRESSIVE ENDING, SOUND MODE). Verified (`soundtest.lua DEBUG=1`): ![](img/pce94/debug_menu.png)
 
@@ -176,7 +176,7 @@ against a combination or sequence.
 
 ### ★ New: the debug pause menu, restored
 
-TCRF's "development text" at `$3850` is part of a cut **pause menu**. What survives:
+The known "development text" at `$3850` is part of a cut **pause menu**. What survives:
 
 - `$D844` (ROM `$3844`): its text, `>INV_MODE`, `MAP_CLEAR`, `ENEMY;00`, `N;00 X;00 Y;00` (`;` is drawn as `:`).
 - `$135C4` (bank `$09`, run with banks `$08`/`$09` at `$8000`-`$BFFF`): the menu handler. Up/Down move the cursor
@@ -206,13 +206,13 @@ so for the screenshots `FONT=1` copies the ASCII tiles from the title screen (`f
 
 ## Unused content
 
-- **Known (not re-checked here):** the Fire Pass and Broken Egg item graphics (TCRF).
+- **Known (not re-checked here):** the Fire Pass and Broken Egg item graphics.
 - **Known:** the Debug Version menu in bank `$12` (`$25829`) and the pause-menu text at `$3850`, see above. Bank
   `$12` also holds the Sound Room (`$25D89`); the Sound Room is the only part the retail game can reach.
 
 ## Demo vs retail
 
-The demo ("Bomberman '94 Special Version", TCRF; キャラバン用 限定非売品 on the Japanese title) is a CD.
+The demo ("Bomberman '94 Special Version" in the prior art; キャラバン用 限定非売品 on the Japanese title) is a CD.
 
 - ★ It is a **Super CD-ROM²** disc: the boot program (data sectors 2-17, loaded to `$4000` with MPR2-6 = `$80`-`$84`)
   asks the System Card for its version (`$E05A`, `$4011`) and with a card older than 3.0 shows a warning screen
@@ -232,7 +232,7 @@ The demo ("Bomberman '94 Special Version", TCRF; キャラバン用 限定非売
   sectors 26-33, 58-85 and 86-97. Sectors 130-132 and 138-139 are byte-identical to retail ROM `$3E000`-`$3F7FF`
   and `$48000`-`$48FFF`. A raw scan of the whole image for pad reads followed by a compare finds only the soft
   reset: the demo has **no title code and no Sound Room**.
-- **Not checked:** the '93 placeholder music (audio) and battle rule changes inside the match (TCRF's to-do); the
+- **Not checked:** the '93 placeholder music (audio) and battle rule changes inside the match (open items in the prior art); the
   match has a 3:00 timer.
 
 ### ★ New: unused data on the demo CD
@@ -269,7 +269,7 @@ The SCSI log of every run (normal boot, Left held, old-card path, battles) shows
 
 Method. 18 HuCard coverage runs in fresh portable Mesen copies (`tools/pce94/cov.py` + `cov.lua`, one run per test):
 title idle and the attract demo; all 25 game-shown passwords with random play and lives kept at 3 (every area,
-every boss, the final area); game over; four Battle Game runs; the Sound Room; the Debug Version menu (TCRF's
+every boss, the final area); game over; four Battle Game runs; the Sound Room; the Debug Version menu (the known
 patch in memory) with its stage select (area 6-1), boss room (area 1 and area 6 bosses) and IMPRESSIVE ENDING.
 Each run leaves Mesen's code/data log, a bitmap of RAM bytes ever written non-zero and, for every map loaded, VRAM
 and the palette. Two demo runs trace every instruction executed from CD RAM. The sweeps are the shared
@@ -312,7 +312,7 @@ change. ★ New, effect unclear.
 `:`, `@` as the copyright sign). 174 strings; the Japanese text of '94 is graphics. Never read in any run, retail or
 with the debug patch:
 
-- `$3844` `>INV_MODE / MAP_CLEAR / ENEMY:00 / N:00 X:00 Y:00` (TCRF's development text, the cut pause menu; Known).
+- `$3844` `>INV_MODE / MAP_CLEAR / ENEMY:00 / N:00 X:00 Y:00` (the known development text, the cut pause menu; Known).
 - The Sound Room's name table (`$25F17`, 32 bytes per entry, `E:00`-`E:67` effects and `M:xx` music): all reachable by
   scrolling the Sound Room, only the first entries were shown in the runs. Reached with the debug patch: the debug
   menu, WE NEED BRAVEST BOMBERMAN / STAGE SELECT, WELCOME TO BOSS ROOM (AREA1 SARU AND BANANACHER, AREA2 PYRAMID
@@ -361,7 +361,7 @@ Each was added with `emu.addCheat(emu.cheatType.pceRaw, ...)` and checked:
 
 Patches (IPS, built and checked against the ROM by `tools/pce94/mkpatch.py`):
 
-- `patches/pce94_debug_menu.ips`: TCRF's `$3F5B` change. Verified on the patched file: the Sound Room code opens the
+- `patches/pce94_debug_menu.ips`: the known `$3F5B` change. Verified on the patched file: the Sound Room code opens the
   debug menu.
 - `patches/pce94_debug_pause.ips`: the `debugpause.lua` stubs (`$3F66`, `$3F82`) and hooks (`$3891`, `$389C`).
   Verified on the patched file: pausing area 1 installs hook `$DF66`, I turns INV_MODE on (`$3709` = 2):

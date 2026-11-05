@@ -104,7 +104,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Value $88 -> $00:2146. Typed with the pad in US and JP. GameFAQs and TCRF both have it.",
+  "note": "Value $88 -> $00:2146. Typed with the pad in US and JP. Already documented (GameFAQs and others).",
   "section": "Passwords",
   "img": "codes_us.png"
  },
@@ -134,13 +134,13 @@
  },
  {
   "code": "7824",
-  "effect": "Rejected; in an unused copy of the table it meant the ending",
+  "effect": "Rejected by the game; an unused copy of the password table maps it to the ending",
   "versions": [
    "us"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "TCRF: 7824 sits among the US passwords and only returns invalid, effect unknown. The US ROM has two copies of the table: the live one at $0F:7F72 (11 codes, used by $00:35CC) and an older, unreferenced one at $0F:5447 with a 12th record 7824 = $89. The dispatcher still handles $89: it jumps to $00:1E3A, the ending sequence the game runs after world 8 ($00:260E). Typed with the pad: rejected (reject exit $00:3602 ran). JP has neither the copy nor 7824.",
+  "note": "The US ROM has two copies of the table: the live one at $0F:7F72 (11 codes, used by $00:35CC) and an older, unreferenced one at $0F:5447 with a 12th record 7824 = $89. The dispatcher still handles $89: it jumps to $00:1E3A, the ending sequence the game runs after world 8 ($00:260E). Typed with the pad: rejected (reject exit $00:3602 ran). JP has neither the copy nor 7824.",
   "section": "unused"
  },
  {

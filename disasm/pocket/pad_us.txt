@@ -1,0 +1,316 @@
+== 00:032A  LD A,($FF82)   [COMBO]
+     00:032D  AND $0F
+     00:032F  CP $0F
+     00:0331  JP NZ,$033D
+     00:0334  XOR A
+     00:0335  LD ($C1A8),A
+     00:0338  LD A,$04
+     00:033A  LD ($C1A9),A
+     00:033D  CALL $303C
+== 00:05DD  LD A,($FF00+C)   [COMBO]
+     00:05DE  LD A,($FF00+C)
+     00:05DF  LD A,($FF00+C)
+     00:05E0  LD B,A
+     00:05E1  LD A,$10
+     00:05E3  LD ($FF00+C),A
+     00:05E4  LD A,B
+     00:05E5  AND $0F
+     00:05E7  SWAP A
+== 00:05DE  LD A,($FF00+C)   [COMBO]
+     00:05DF  LD A,($FF00+C)
+     00:05E0  LD B,A
+     00:05E1  LD A,$10
+     00:05E3  LD ($FF00+C),A
+     00:05E4  LD A,B
+     00:05E5  AND $0F
+     00:05E7  SWAP A
+     00:05E9  LD B,A
+== 00:05DF  LD A,($FF00+C)   [COMBO]
+     00:05E0  LD B,A
+     00:05E1  LD A,$10
+     00:05E3  LD ($FF00+C),A
+     00:05E4  LD A,B
+     00:05E5  AND $0F
+     00:05E7  SWAP A
+     00:05E9  LD B,A
+     00:05EA  LD A,($FF00+C)
+== 00:05F0  LD A,($FF00+C)   [COMBO]
+     00:05F1  LD A,($FF00+C)
+     00:05F2  LD A,($FF00+C)
+     00:05F3  LD A,($FF00+C)
+     00:05F4  LD A,($FF00+C)
+     00:05F5  LD A,($FF00+C)
+     00:05F6  LD A,($FF00+C)
+     00:05F7  LD A,($FF00+C)
+     00:05F8  AND $0F
+== 00:05F1  LD A,($FF00+C)   [COMBO]
+     00:05F2  LD A,($FF00+C)
+     00:05F3  LD A,($FF00+C)
+     00:05F4  LD A,($FF00+C)
+     00:05F5  LD A,($FF00+C)
+     00:05F6  LD A,($FF00+C)
+     00:05F7  LD A,($FF00+C)
+     00:05F8  AND $0F
+     00:05FA  OR B
+== 00:05F2  LD A,($FF00+C)   [COMBO]
+     00:05F3  LD A,($FF00+C)
+     00:05F4  LD A,($FF00+C)
+     00:05F5  LD A,($FF00+C)
+     00:05F6  LD A,($FF00+C)
+     00:05F7  LD A,($FF00+C)
+     00:05F8  AND $0F
+     00:05FA  OR B
+     00:05FB  CPL
+== 00:05F3  LD A,($FF00+C)   [COMBO]
+     00:05F4  LD A,($FF00+C)
+     00:05F5  LD A,($FF00+C)
+     00:05F6  LD A,($FF00+C)
+     00:05F7  LD A,($FF00+C)
+     00:05F8  AND $0F
+     00:05FA  OR B
+     00:05FB  CPL
+     00:05FC  LD B,A
+== 00:05F4  LD A,($FF00+C)   [COMBO]
+     00:05F5  LD A,($FF00+C)
+     00:05F6  LD A,($FF00+C)
+     00:05F7  LD A,($FF00+C)
+     00:05F8  AND $0F
+     00:05FA  OR B
+     00:05FB  CPL
+     00:05FC  LD B,A
+     00:05FD  LD A,$30
+== 00:05F5  LD A,($FF00+C)   [COMBO]
+     00:05F6  LD A,($FF00+C)
+     00:05F7  LD A,($FF00+C)
+     00:05F8  AND $0F
+     00:05FA  OR B
+     00:05FB  CPL
+     00:05FC  LD B,A
+     00:05FD  LD A,$30
+     00:05FF  LD ($FF00+C),A
+== 00:05F6  LD A,($FF00+C)   [COMBO]
+     00:05F7  LD A,($FF00+C)
+     00:05F8  AND $0F
+     00:05FA  OR B
+     00:05FB  CPL
+     00:05FC  LD B,A
+     00:05FD  LD A,$30
+     00:05FF  LD ($FF00+C),A
+     00:0600  LD A,($FF82)
+== 00:05F7  LD A,($FF00+C)   [COMBO]
+     00:05F8  AND $0F
+     00:05FA  OR B
+     00:05FB  CPL
+     00:05FC  LD B,A
+     00:05FD  LD A,$30
+     00:05FF  LD ($FF00+C),A
+     00:0600  LD A,($FF82)
+     00:0603  XOR B
+== 00:3508  LDH A,($FF00)   [COMBO]
+     00:350A  AND $03
+     00:350C  CP $03
+     00:350E  JR NZ,$3552
+     00:3510  LD A,$20
+     00:3512  LDH ($FF00),A
+     00:3514  LDH A,($FF00)
+     00:3516  LDH A,($FF00)
+     00:3518  LD A,$30
+== 00:3528  LDH A,($FF00)   [COMBO]
+     00:352A  LDH A,($FF00)
+     00:352C  LD A,$30
+     00:352E  LDH ($FF00),A
+     00:3530  LDH A,($FF00)
+     00:3532  LDH A,($FF00)
+     00:3534  LDH A,($FF00)
+     00:3536  LDH A,($FF00)
+     00:3538  AND $03
+== 00:352A  LDH A,($FF00)   [COMBO]
+     00:352C  LD A,$30
+     00:352E  LDH ($FF00),A
+     00:3530  LDH A,($FF00)
+     00:3532  LDH A,($FF00)
+     00:3534  LDH A,($FF00)
+     00:3536  LDH A,($FF00)
+     00:3538  AND $03
+     00:353A  CP $03
+== 00:3530  LDH A,($FF00)   [COMBO]
+     00:3532  LDH A,($FF00)
+     00:3534  LDH A,($FF00)
+     00:3536  LDH A,($FF00)
+     00:3538  AND $03
+     00:353A  CP $03
+     00:353C  JR NZ,$3552
+     00:353E  LD HL,$4000
+     00:3541  CALL $3784
+== 00:3532  LDH A,($FF00)   [COMBO]
+     00:3534  LDH A,($FF00)
+     00:3536  LDH A,($FF00)
+     00:3538  AND $03
+     00:353A  CP $03
+     00:353C  JR NZ,$3552
+     00:353E  LD HL,$4000
+     00:3541  CALL $3784
+     00:3544  CALL $3778
+== 00:3534  LDH A,($FF00)   [COMBO]
+     00:3536  LDH A,($FF00)
+     00:3538  AND $03
+     00:353A  CP $03
+     00:353C  JR NZ,$3552
+     00:353E  LD HL,$4000
+     00:3541  CALL $3784
+     00:3544  CALL $3778
+     00:3547  XOR A
+== 00:3536  LDH A,($FF00)   [COMBO]
+     00:3538  AND $03
+     00:353A  CP $03
+     00:353C  JR NZ,$3552
+     00:353E  LD HL,$4000
+     00:3541  CALL $3784
+     00:3544  CALL $3778
+     00:3547  XOR A
+     00:3548  LD ($C1A2),A
+== 01:5DD4  LD A,($FF83)  ; <- call   [COMBO]
+     01:5DD7  AND $09
+     01:5DD9  JR Z,$5DE5
+     01:5DDB  LD A,$04
+     01:5DDD  CALL $147D
+     01:5DE0  LD A,$11
+     01:5DE2  LD ($C1A9),A
+     01:5DE5  RET
+     01:5DE6  LD A,$01
+== 01:6170  LD A,($FF83)   [COMBO]
+     01:6173  AND $09
+     01:6175  JR NZ,$61D8
+     01:6177  LD A,($FF83)
+     01:617A  BIT 1,A
+     01:617C  JR NZ,$6148
+     01:617E  BIT 7,A
+     01:6180  JR NZ,$61A9
+     01:6182  BIT 6,A
+== 01:6282  LD A,($FF83)   [COMBO]
+     01:6285  AND $09
+     01:6287  JR NZ,$6301
+     01:6289  LD A,($FF83)
+     01:628C  BIT 1,A
+     01:628E  JR Z,$62B7
+     01:6290  LD A,$04
+     01:6292  CALL $147D
+     01:6295  LD A,$09
+== 01:670F  LD A,($FF83)  ; <- call   [COMBO]
+     01:6712  AND $F0
+     01:6714  JP Z,$67DA
+     01:6717  AND $C0
+     01:6719  JR Z,$675B
+     01:671B  PUSH AF
+     01:671C  LD A,$03
+     01:671E  LD ($C1C1),A
+     01:6721  LD A,$41
+== 01:6734  LD A,($FF83)   [COMBO]
+     01:6737  BIT 6,A
+     01:6739  JR Z,$674A
+     01:673B  LD A,(HL)
+     01:673C  CP $09
+     01:673E  JR NC,$6745
+     01:6740  INC A
+     01:6741  LD (HL),A
+     01:6742  JP $67D3
+== 01:6D59  LD A,($FF83)   [COMBO]
+     01:6D5C  LD ($C1B4),A
+     01:6D5F  CALL $6DBF
+     01:6D62  LD A,($C1B8)
+     01:6D65  AND A
+     01:6D66  JR Z,$6DB4
+     01:6D68  CP $01
+     01:6D6A  JR Z,$6D9A
+     01:6D6C  CP $03
+== 02:53AC  LD A,($FF83)   [COMBO]
+     02:53AF  AND $09
+     02:53B1  JR NZ,$5414
+     02:53B3  LD A,($FF83)
+     02:53B6  BIT 4,A
+     02:53B8  JR NZ,$53E6
+     02:53BA  BIT 5,A
+     02:53BC  JP Z,$5469
+     02:53BF  LD E,$1A
+== 02:582B  LD A,($FF83)   [COMBO]
+     02:582E  AND $09
+     02:5830  JR Z,$5848
+     02:5832  LD A,$02
+     02:5834  LD ($C1C1),A
+     02:5837  XOR A
+     02:5838  LD ($C1C2),A
+     02:583B  CALL $254E
+     02:583E  LD A,$04
+== 02:5FA6  LD A,($FF83)   [COMBO]
+     02:5FA9  BIT 6,A
+     02:5FAB  JR Z,$5FB6
+     02:5FAD  LD A,($C1EC)
+     02:5FB0  AND A
+     02:5FB1  JR Z,$5FB6
+     02:5FB3  CALL $61B1
+     02:5FB6  LD A,($FF82)
+     02:5FB9  AND $30
+== 02:5FB6  LD A,($FF82)   [COMBO]
+     02:5FB9  AND $30
+     02:5FBB  JP Z,$607B
+     02:5FBE  LD E,$0D
+     02:5FC0  LD (DE),A
+     02:5FC1  LD ($C259),A
+     02:5FC4  LD A,($FF82)
+     02:5FC7  BIT 4,A
+     02:5FC9  JP NZ,$6026
+== 02:615C  LD A,($FF82)   [COMBO]
+     02:615F  BIT 5,A
+     02:6161  JR Z,$616B
+     02:6163  LD E,$00
+     02:6165  LD A,(DE)
+     02:6166  AND $DF
+     02:6168  LD (DE),A
+     02:6169  JR $612A
+     02:616B  LD A,$05
+== 03:45E8  LD A,($FF82)   [COMBO]
+     03:45EB  AND $30
+     03:45ED  JR Z,$4624
+     03:45EF  LD E,$0D
+     03:45F1  LD (DE),A
+     03:45F2  LD ($C259),A
+     03:45F5  LD A,($FF82)
+     03:45F8  BIT 4,A
+     03:45FA  JR NZ,$4611
+== 03:4948  LD A,($FF83)   [COMBO]
+     03:494B  AND $09
+     03:494D  JR NZ,$49B0
+     03:494F  LD A,($FF83)
+     03:4952  BIT 4,A
+     03:4954  JR NZ,$4982
+     03:4956  BIT 5,A
+     03:4958  JP Z,$49EC
+     03:495B  LD E,$1A
+== 03:4B50  LD A,($FF83)   [COMBO]
+     03:4B53  BIT 1,A
+     03:4B55  JR Z,$4B60
+     03:4B57  LD A,($C1E7)
+     03:4B5A  AND A
+     03:4B5B  JR Z,$4B60
+     03:4B5D  CALL $4C2D
+     03:4B60  LD A,($FF82)
+     03:4B63  AND $30
+== 03:4B60  LD A,($FF82)   [COMBO]
+     03:4B63  AND $30
+     03:4B65  JP Z,$4BA2
+     03:4B68  LD E,$0D
+     03:4B6A  LD (DE),A
+     03:4B6B  LD ($C259),A
+     03:4B6E  LD A,($FF82)
+     03:4B71  BIT 4,A
+     03:4B73  JP NZ,$4B8D
+== 03:4C12  LD A,($FF82)   [COMBO]35 hits
+
+     03:4C15  BIT 5,A
+     03:4C17  JR Z,$4C21
+     03:4C19  LD E,$00
+     03:4C1B  LD A,(DE)
+     03:4C1C  AND $DF
+     03:4C1E  LD (DE),A
+     03:4C1F  JR $4BE0
+     03:4C21  LD A,$05

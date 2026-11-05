@@ -5,7 +5,7 @@ follows the MPR bank mapping; listings in `disasm/pce90/`) and checking the resu
 (`tools/pce90/run.sh` runs a Lua script headless with `tools/pce90/lib.lua` prepended). Addresses are
 `bank:address` as mapped when the code runs; the password code is bank 2 at `$C000`, the Special Select Room
 bank 1 at `$A000`. Work RAM is `$2000-$3FFF`. US addresses unless a version is named. The only prior art is the
-TCRF article in `res/`. Marks: ★ **New** (not in TCRF), **Fixed** (TCRF is wrong or incomplete), **Known** (TCRF
+published article on the game in `res/`. Marks: ★ **New** (not in it), **Fixed** (it is wrong or incomplete), **Known** (it
 has it; the mechanism is added here).
 
 | Dump | MD5 | vs US |
@@ -86,7 +86,7 @@ self-contained `tools/pce90/password.mjs` do both directions; `password.py --tes
 ### Codes verified
 
 Every code below was **typed with real pad presses** in Mesen from the password screen (`tools/pce90/test_codes.py`,
-`tools/pce90/test_codes.lua`), END pressed with I, and `$3465` and `$284A-$284E` read back. TCRF lists no level
+`tools/pce90/test_codes.lua`), END pressed with I, and `$3465` and `$284A-$284E` read back. The prior art lists no level
 passwords, so these are all status *unchecked* (no prior art to check against) in `docs/pce90_codes.json`.
 
 | Code | Effect | Versions typed | Notes |
@@ -167,7 +167,7 @@ MUVWLNPC, END → SOUND-00.
 
 ### Special Select Room (Fixed)
 
-TCRF: "300 points or more", reset, hold Down+Select+I+II as the title reappears after the first demo, Run on the
+The known method: "300 points or more", reset, hold Down+Select+I+II as the title reappears after the first demo, Run on the
 menu, keep holding Run through the intro. The check is `$01:A001`, called at `$00:EAEC` when the 1P intro ends,
 only if the mode is 1P START (`$33B6` = 0), `$33BA` = 0 and `$284A` ≠ 8. It opens the room only if all of these
 hold at that moment:
@@ -201,7 +201,7 @@ off, `$09:8FA3`/`$09:90A0`), `$20`, `$40` (`$20` bomb pass: cell type 0 is a bom
 
 When a battle mode is chosen, `$00:E371` compares the new presses of all five pad ports. Without a TurboTap
 every port reads pad 1, so all five are equal and `$33` = 0; any difference sets `$33` = 1. In 2-5P BATTLE
-`$08:601E` sends `$33` = 0 to `$08:78D9` (not traced; presumably the tap error screen TCRF shows) instead of the
+`$08:601E` sends `$33` = 0 to `$08:78D9` (not traced; presumably the known tap error screen) instead of the
 battle setup; C-LINK BATTLE skips the test. So with a tap,
 the check fails only if all five players happen to press exactly the same buttons on the same frame.
 
@@ -210,14 +210,14 @@ the check fails only if all five players happen to press exactly the same button
 - **Music 2D and 39 (Fixed: used, in C-Link battle only).** The battle result code plays `$31` (`$08:6E2A`) and
   `$32` (`$08:7389`). In C-LINK BATTLE (`$33B6` = 2, two consoles linked) each console checks its own player
   (`$53`) instead: if that player's status bit 0 is set (`$23BD`/`$23BE`, the "dead" state set at `$09:8CBD`),
-  it plays **`$39`** in place of `$31` and **`$2D`** in place of `$32` (`$08:6E4B`, `$08:73AD`). So TCRF's
+  it plays **`$39`** in place of `$31` and **`$2D`** in place of `$32` (`$08:6E4B`, `$08:73AD`). So the known
   "alternative death theme" (39) and "slowed-down Game Over" (2D) are the losing console's jingles. A link
   cable can't be emulated, so this is from the code only. Same in JP (`$08:6E7F`, `$08:73E1`).
 - **Music 36, 37, 38 (Known).** No `LDA #n / JSR` to the sound routine (`$EA57` US, `$EA3E` JP) uses `$36`, `$37`
   or `$38` (nor `$00`, `$0E`, `$15`, `$16`, `$1E`, `$26`) in either ROM. They are reachable only from the sound
   test (range `$00-$39`, `$02:C5FB`). The scan finds only immediate operands, so a number loaded from a table
   wouldn't show; the absent `$0E`-`$26` are probably stage tunes picked that way.
-- **Black Bomberman sliding sprite (Known):** from TCRF, not located in the ROM here.
+- **Black Bomberman sliding sprite (Known):** already known, not located in the ROM here.
 
 ## Regions
 

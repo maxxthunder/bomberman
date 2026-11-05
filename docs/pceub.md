@@ -9,7 +9,7 @@ the password code bank 2 at `$C000`, the battle code banks 8-9 at `$6000-$9FFF`.
 
 The comparison card is the 1990 Japanese Bomberman, `roms/Bomberman (Japan) (En).pce`, written up in
 [pce90.md](pce90.md). There is no prior art for Users Battle in `res/`. Marks: ★ **New** (no prior art), **Known**
-(the TCRF page for the 1990 card describes the same thing, and it works the same here).
+(published notes for the 1990 card describe the same thing, and it works the same here).
 
 | Dump | MD5 | Size |
 |---|---|---|
@@ -198,7 +198,7 @@ than the 1990 card's; 24.5 KB of `$FF` runs in all against 9.1 KB; which data we
 
 ### BOMSOUND sound test (Known)
 
-Unchanged from the 1990 card (TCRF): `$02:C656` compares the letters with `BOMSOUND` (`$02:C66C`) and sets `$341B`
+Unchanged from the 1990 card, where it was already known: `$02:C656` compares the letters with `BOMSOUND` (`$02:C66C`) and sets `$341B`
 = `$FF`; the decoder rejects it; the next valid code goes to the sound test `$02:C2A5` instead of the game. I / II
 step `$340A` through `$00-$39` (`$02:C2F9`, `CMP #$39`), Run plays, Select stops, no exit. Reachable only through
 the patched-in password screen; verified there (SOUND-00).

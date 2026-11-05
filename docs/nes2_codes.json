@@ -1063,7 +1063,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Bonus Stage\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PONEJACK",
+  "note": "GameFAQs \"Bonus Stage\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PONEJACK",
   "section": "Secrets"
  },
  {
@@ -1074,7 +1074,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Long Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBOLD",
+  "note": "GameFAQs \"Long Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBOLD",
   "section": "Secrets"
  },
  {
@@ -1085,7 +1085,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Manual Detonator\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PACHINKO",
+  "note": "GameFAQs \"Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PACHINKO",
   "section": "Secrets"
  },
  {
@@ -1096,7 +1096,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Normal Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBMAN",
+  "note": "GameFAQs \"Normal Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBMAN",
   "section": "Secrets"
  },
  {
@@ -1107,7 +1107,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Semi-Manual Detonator\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PANICMAN",
+  "note": "GameFAQs \"Semi-Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PANICMAN",
   "section": "Secrets"
  },
  {
@@ -1118,7 +1118,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Short Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBACE",
+  "note": "GameFAQs \"Short Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBACE",
   "section": "Secrets"
  },
  {
@@ -1657,7 +1657,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Sound Test\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PCDEFGAB",
+  "note": "GameFAQs \"Sound Test\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PCDEFGAB",
   "section": "Secrets"
  },
  {
@@ -1668,7 +1668,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Bonus Stage\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: KJH5C13D",
+  "note": "GameFAQs \"Bonus Stage\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: KJH5C13D",
   "section": "Secrets"
  },
  {
@@ -1679,7 +1679,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Long Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2JF4",
+  "note": "GameFAQs \"Long Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2JF4",
   "section": "Secrets"
  },
  {
@@ -1690,7 +1690,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Manual Detonator\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K138BHDJ",
+  "note": "GameFAQs \"Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K138BHDJ",
   "section": "Secrets"
  },
  {
@@ -1701,7 +1701,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Normal Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2G1H",
+  "note": "GameFAQs \"Normal Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2G1H",
   "section": "Secrets"
  },
  {
@@ -1712,7 +1712,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Semi Manual Detonator\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K1HB3G1H",
+  "note": "GameFAQs \"Semi Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K1HB3G1H",
   "section": "Secrets"
  },
  {
@@ -1723,7 +1723,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Small Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2135",
+  "note": "GameFAQs \"Small Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2135",
   "section": "Secrets"
  },
  {
@@ -1734,7 +1734,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Sound Test\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K3456712",
+  "note": "GameFAQs \"Sound Test\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K3456712",
   "section": "Secrets"
  },
  {

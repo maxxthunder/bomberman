@@ -232,7 +232,17 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Disabled switch at $CC:239F (LDA #0 / BNE) that skips the $1CB5 check. Europe: CC23FC01, Japan: CC239001. Caravan has a different switch at $CC:250E (it skips the Caravan 4-stage limit and the $1CB5 clear; not tested)."
+  "note": "Disabled switch at $CC:239F (LDA #0 / BNE) that skips the $1CB5 check. Europe: CC23FC01, Japan: CC239001. Caravan has its own switch at $CC:250E: CC251001 (checked in Mesen: 12 stages, Left 1 -> 12 -> 11)."
+ },
+ {
+  "code": "CC251001",
+  "effect": "Caravan version: stages 11 and 12 on the battle stage select (the event build otherwise allows 4)",
+  "versions": [
+   "caravan"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Disabled switch at $CC:250E (LDA #0 / BNE to $CC:2527) that skips the 4-stage limit and the $1CB5 clear. Checked with Mesen's cheat engine: $7F:401E = 11 instead of 3, Left on the stage select goes 1 -> 12 -> 11 (without it 1 -> 4 -> 3)."
  },
  {
   "code": "C100BF01",
@@ -300,12 +310,12 @@
    "beta"
   ],
   "status": "known",
-  "verified": "static",
-  "note": "$1CCD is the chosen battle stage. Mesen showed both stages through the Joycard trick instead."
+  "verified": "mesen",
+  "note": "$1CCD is the chosen battle stage. Checked with Mesen's cheat engine (USA): the stage select shows 11 / 12 and the battle is the boxing ring / trampolines."
  },
  {
   "code": "BOMB TYPE 4 / 8 in the debug menu",
-  "effect": "Spike bomb (4): the blast burns through every soft block in range. Type 8: a fifth bomb type that picks a random direction when it starts moving",
+  "effect": "Spike bomb (4): the blast burns through every soft block in range. Type 8: a fifth bomb type that bounces off in random directions when thrown",
   "versions": [
    "us",
    "eu",
@@ -316,7 +326,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "\\ values; each has its own item counter (\\ type 4, \\ type 8) and pickup handler (\\, \\). Type 4 checked in Mesen next to soft blocks; type 8 exploded like a normal bomb, its random-direction code (\\) was not exercised."
+  "note": "\\ values; each has its own item counter (\\ type 4, \\ type 8) and pickup handler (\\, \\). Type 4 checked in Mesen next to soft blocks; type 8 checked in Mesen (7E80F308 + glove): a thrown type-8 bomb takes a new random direction on its bounces, a type-0 bomb keeps the throw direction; kicking not exercised."
  },
  {
   "code": "SNES Mouse in any port (Europe)",

@@ -32,7 +32,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "GameFAQs: swap the 3rd and 4th letters from the right of any code to highlight the exit and item. The swap keeps the checksum (values 16-18 change by +d, 0, -d, d = the difference of the two letters) but changes two fields: reveal ($94) by d and wall pass ($76) by -d. So it works whenever the two letters differ, and it can also switch wall pass on or off; with two equal letters nothing changes. Here: reveal 1, wall-pass nibble 15 (off). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Swap the 3rd and 4th letters from the right of any code to highlight the exit and item. The swap keeps the checksum (values 16-18 change by +d, 0, -d, d = the difference of the two letters) but changes two fields: reveal ($94) by d and wall pass ($76) by -d. So it works whenever the two letters differ, and it can also switch wall pass on or off; with two equal letters nothing changes. Here: reveal 1, wall-pass nibble 15 (off). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
   "section": "Passwords"
  },
  {
@@ -44,7 +44,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "GameFAQs: level 00. Every value decodes to 0: stage 0 and fire 0. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Level 00. Every value decodes to 0: stage 0 and fire 0. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
   "section": "Passwords"
  },
  {
@@ -692,7 +692,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "GameFAQs: 1 bomb, 14-block range, detonator and flame pass. The fire nibble is 11, not 14; the top score digit is 10 (a garbage tile). Decoded: stage 1, 1 bomb, fire 11, detonator, flame pass, score digits A000016 (a digit over 9 shows as a garbage tile). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Decoded: stage 1, 1 bomb, fire 11, detonator, flame pass, score digits A000016 (a digit over 9 shows as a garbage tile). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
   "section": "Passwords"
  },
  {
@@ -704,7 +704,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "GameFAQs (GBA) calls it a new level \"?1\": it is stage 131, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Stage 131, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
   "section": "Passwords"
  },
  {
@@ -716,7 +716,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "GameFAQs (GBA) calls it a new level \"H3\": it is stage 243, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Stage 243, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
   "section": "Passwords"
  },
  {
@@ -740,7 +740,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "GameFAQs lists it as Level 74 and as Level 76: it is stage 74, with fire 15, 10 bombs, every stored power-up and reveal. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Stage 74, with fire 15, 10 bombs, every stored power-up and reveal. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
   "section": "Passwords"
  },
  {
@@ -824,7 +824,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "the hidden exit and item show as marked bricks: the $94 debug flag TCRF found in RAM, reachable by password (value 16); typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "the hidden exit and item show as marked bricks: the known $94 debug flag in RAM, reachable by password (value 16); typed with the pad in Mesen (US and JP), RAM read back",
   "section": "Passwords"
  },
  {
@@ -896,7 +896,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "TCRF says stage 53 and up render the hidden tiles. The marks come from this code's reveal nibble (3), not the stage: stage 53 by a code with reveal 0 shows nothing (img/nes1/stage53_reveal0.png). Decoded: stage 53, 7 bombs, fire 15, speed, detonator, flame pass, hidden exit and item marked (reveal 3), wall-pass nibble 3 (not 1, so no wall pass), score digits 5DDF826 (a digit over 9 shows as a garbage tile); typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "The marks come from this code's reveal nibble (3), not the stage: stage 53 by a code with reveal 0 shows nothing (img/nes1/stage53_reveal0.png). Decoded: stage 53, 7 bombs, fire 15, speed, detonator, flame pass, hidden exit and item marked (reveal 3), wall-pass nibble 3 (not 1, so no wall pass), score digits 5DDF826 (a digit over 9 shows as a garbage tile); typed with the pad in Mesen (US and JP), RAM read back",
   "section": "Passwords",
   "img": "stage53_reveal3.png"
  },

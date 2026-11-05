@@ -8,7 +8,7 @@
   ],
   "status": "fixed",
   "verified": "emu",
-  "note": "GameFAQs files it only under TurboGrafx-16, but it is the Genesis code too (missing from the Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$00; typed in with the pad and the area was started"
+  "note": "Works on Genesis and TurboGrafx-16; accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=0 $953D=$00; typed in with the pad and the area was started"
  },
  {
   "code": "6800",
@@ -360,7 +360,7 @@
   ],
   "status": "fixed",
   "verified": "emu",
-  "note": "GameFAQs files it only under TurboGrafx-16, but it is the Genesis code too (missing from the Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$33; typed in with the pad and the area was started"
+  "note": "Works on Genesis and TurboGrafx-16; accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=2 $953D=$33; typed in with the pad and the area was started"
  },
  {
   "code": "8032",
@@ -536,7 +536,7 @@
   ],
   "status": "fixed",
   "verified": "emu",
-  "note": "GameFAQs files it only under TurboGrafx-16, but it is the Genesis code too (missing from the Genesis list); accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$00; typed in with the pad and the area was started"
+  "note": "Works on Genesis and TurboGrafx-16; accepted by the game's checker ($1BE32) in BizHawk, US and EU (all 10,000 codes fuzzed); $953B=3 $953D=$00; typed in with the pad and the area was started"
  },
  {
   "code": "0513",
@@ -1226,7 +1226,7 @@
   "versions": [],
   "status": "fixed",
   "verified": "static",
-  "note": "GameFAQs lists it on the Genesis page, labelled TG16. The Genesis title menu handler ($1A68C) reads only Up, Down and Start; no sound test exists in the ROM"
+  "note": "TurboGrafx-16 only. The Genesis title menu handler ($1A68C) reads only Up, Down and Start; no sound test exists in the ROM"
  },
  {
   "code": "HCXT-DEV6",
@@ -1235,8 +1235,8 @@
    "US"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "$1A73C clr.b $953B -> addq.b #1,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "verified": "emu",
+  "note": "$1A73C clr.b $953B -> addq.b #1,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 2, then play began in area 2's first stage ($953A=1, map $04)",
   "section": "cheat"
  },
  {
@@ -1246,8 +1246,8 @@
    "EU"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "$1A736 clr.b $953B -> addq.b #1,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "verified": "emu",
+  "note": "$1A736 clr.b $953B -> addq.b #1,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 2, then play began in area 2's first stage ($953A=1, map $04)",
   "section": "cheat"
  },
  {
@@ -1258,7 +1258,7 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "$1A73C clr.b $953B -> addq.b #2,$953B; use from power-on (it adds to the old value); checked in BizHawk: Normal Game opened the planet map and hub of area 3 ($953A=2, map $0B)",
+  "note": "$1A73C clr.b $953B -> addq.b #2,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 3, then play began in area 3's first stage ($953A=2, map $0B)",
   "section": "cheat"
  },
  {
@@ -1269,7 +1269,7 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "$1A736 clr.b $953B -> addq.b #2,$953B; use from power-on (it adds to the old value); checked in BizHawk: Normal Game opened the planet map and hub of area 3 ($953A=2, map $0B)",
+  "note": "$1A736 clr.b $953B -> addq.b #2,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 3, then play began in area 3's first stage ($953A=2, map $0B)",
   "section": "cheat"
  },
  {
@@ -1279,8 +1279,8 @@
    "US"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "$1A73C clr.b $953B -> addq.b #3,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "verified": "emu",
+  "note": "$1A73C clr.b $953B -> addq.b #3,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 4, then play began in area 4's first stage ($953A=3, map $13)",
   "section": "cheat"
  },
  {
@@ -1290,8 +1290,8 @@
    "EU"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "$1A736 clr.b $953B -> addq.b #3,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "verified": "emu",
+  "note": "$1A736 clr.b $953B -> addq.b #3,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 4, then play began in area 4's first stage ($953A=3, map $13)",
   "section": "cheat"
  },
  {
@@ -1301,8 +1301,8 @@
    "US"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "$1A73C clr.b $953B -> addq.b #4,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "verified": "emu",
+  "note": "$1A73C clr.b $953B -> addq.b #4,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 5, then play began in area 5's first stage ($953A=4, map $1C)",
   "section": "cheat"
  },
  {
@@ -1312,8 +1312,8 @@
    "EU"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "$1A736 clr.b $953B -> addq.b #4,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "verified": "emu",
+  "note": "$1A736 clr.b $953B -> addq.b #4,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 5, then play began in area 5's first stage ($953A=4, map $1C)",
   "section": "cheat"
  },
  {
@@ -1323,8 +1323,8 @@
    "US"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "$1A73C clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "verified": "emu",
+  "note": "$1A73C clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 6, then play began in area 6's first stage (after the final-area intro scene) ($953A=5, map $25)",
   "section": "cheat"
  },
  {
@@ -1334,8 +1334,8 @@
    "EU"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "$1A736 clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "verified": "emu",
+  "note": "$1A736 clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 6, then play began in area 6's first stage (after the final-area intro scene) ($953A=5, map $25)",
   "section": "cheat"
  },
  {
@@ -1359,7 +1359,7 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "$3038 = $0002: the hit check $3032 always returns 'not hit' (same address in EU). Own bombs, 1200 frames: 2 lives lost without, none with (US and EU). Enemies not tried; shared code, so in battle it should apply to every player (not tried)",
+  "note": "$3038 = $0002: the hit check $3032 always returns 'not hit' (same address in EU); every death in these runs went through $30A4, behind that check. BizHawk, US and EU: own bombs, 1200 frames: 2 lives lost without, none with; player held on each of the 8 enemies of area 1 stage 1 for 120 frames: a life lost on each without, none with; Battle Game (2 players, both on their own bombs): both die every round without, with the code nobody dies, the closing-in blocks included, and the round only ends at time-up",
   "section": "cheat"
  },
  {

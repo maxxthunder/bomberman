@@ -371,7 +371,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "GameFAQs lists 5-2 as 2609, which the game rejects; typed in Mesen, $0092 = 33, 5-2 loads"
+  "note": "Typed in Mesen: $0092 = 33, 5-2 loads"
  },
  {
   "code": "2479",
@@ -558,7 +558,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs/TCRF. Any X turbo at a 7-9 frame period for 7.5-10 s ($C3:C83C, 48 well-timed presses); sets $7F202D = 12. No Joycard needed, any turbo pad at that rate"
+  "note": "GameFAQs and others. Any X turbo at a 7-9 frame period for 7.5-10 s ($C3:C83C, 48 well-timed presses); sets $7F202D = 12. No Joycard needed, any turbo pad at that rate"
  },
  {
   "code": "Title: tap X 16 times",
@@ -640,6 +640,6 @@
   "status": "known",
   "verified": "static",
   "section": "cheat",
-  "note": "TCRF."
+  "note": "Already known."
  }
 ]

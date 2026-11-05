@@ -1,0 +1,168 @@
+[
+ {
+  "code": "Right, Left, Right, Right, Left, Left, Right, Left, Right, Left, Left, Right",
+  "effect": "Sound test (BOMBERMAN MAX SOUND TEST): music and effect numbers",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "On the title menu (Normal Game / Battle Game / Pitch Area), then A. The menu routine ($01:5F7E in Blue) compares each new press with the 12-byte table $01:5FCD (Red $01:5F87, Hikari $01:54BB, Yami $01:5475, Ain $01:6013); a wrong press starts over. Shown in Mesen in all five versions. GameFAQs lists it for Blue, Red and the Ain Version; Hikari and Yami have the same table.",
+  "section": "Button codes",
+  "img": "sound_test_blue.png"
+ },
+ {
+  "code": "A + B + Select + Start",
+  "effect": "Soft reset",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Held together ($00:0335: the held-pad byte $FF82 & $0F = $0F): the game mode $C187 is set back and the boot sequence (logos, intro) runs again. Held in 1-01 in Mesen in all five versions.",
+  "section": "Button codes"
+ },
+ {
+  "code": "8001F0A1",
+  "effect": "Own Heat Rock, the unused Charabom (Lv 50)",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameShark, cart RAM: $A1F0 is the owned byte of Charabom 28 in the roster table $A110 + 8 x id. No stage or event sets it. The game reads the table in place, so the card shows on Charabom Select at once and stays after a save. Shown in Mesen in all five versions.",
+  "section": "Charaboms",
+  "img": "charaboms_blue.png"
+ },
+ {
+  "code": "8001F8A1",
+  "effect": "Own Oct Kong, the unused Charabom (Lv 50)",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameShark, cart RAM: $A1F8, the owned byte of Charabom 29. Shown on Charabom Select in Mesen (all five versions).",
+  "section": "Charaboms",
+  "img": "charaboms_blue.png"
+ },
+ {
+  "code": "8001E0A1",
+  "effect": "Own Shardra, the legendary Charabom (Lv 40)",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark, cart RAM: $A1E0, the owned byte of Charabom 26 (the game's own message is \"You have rescued the legendary Charabom Shardra!\"). Shown on Charabom Select in Mesen.",
+  "section": "Charaboms",
+  "img": "charaboms_blue.png"
+ },
+ {
+  "code": "8001E8A1",
+  "effect": "Own Ox Battra, the legendary Charabom (Lv 40)",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark, cart RAM: $A1E8, Charabom 27. Shown on Charabom Select in Mesen.",
+  "section": "Charaboms",
+  "img": "charaboms_blue.png"
+ },
+ {
+  "code": "8001xxA1 (xx = 10 + 8 x id)",
+  "effect": "Own any Charabom, including the other version's ten",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark, cart RAM: the 30-entry roster $A110 + 8 x id ([owned, id, level, three stats, 0, 0]) is the same in all five versions; only the stages that hand them out differ. All 30 owned at once in Mesen (all five versions): every card shows. 80vv12A1 + 8 x id sets the level to vv.",
+  "section": "Charaboms"
+ },
+ {
+  "code": "C32-EBA-C41",
+  "effect": "Invincible",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Game Genie, compare $CA: $02:52EB JP Z -> JP, so the hit test ($53:4000, via $00:2A0F) never reaches the dying state $3C ($02:5356). Same address and bytes in all five versions. Bot 6,000 frames of 1-01 in each of the five versions: 0 hits (8-9 without).",
+  "section": "cheat"
+ },
+ {
+  "code": "0103F7C2",
+  "effect": "Infinite lives",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark: lives $C2F7 (decremented at $02:709F after a death; 0 = game over) held at 3. Bot 6,000 frames in each version: 11-13 deaths, lives stay 3, no game over.",
+  "section": "cheat"
+ },
+ {
+  "code": "patches/max_invincible_<ver>.ips",
+  "effect": "Invincible (ROM patch)",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $92EB: CA -> C3 ($02:52EB, the Game Genie code's byte); one file per version, the same byte in each. Patched Blue and Ain ROMs: 0 hits in 6,000 bot frames.",
+  "section": "patch"
+ },
+ {
+  "code": "Ain Version: any new game",
+  "effect": "A new game flags all 95 stages of both versions, against 75 in each retail version",
+  "versions": [
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The new-game template copied to cart RAM $A030 (a word per stage, 19 per world, read by $53:4D0E) has every stage's flag set in the Ain Version. Each retail version clears the flag of the 20 stages only the other version has (55 are shared); Blue matches Hikari and Red matches Yami. Read from cart RAM after a new game in Mesen in all five versions; not played through to those stages.",
+  "section": "Secrets"
+ }
+]

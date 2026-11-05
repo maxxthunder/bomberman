@@ -1673,7 +1673,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "TCRF asked for a US way in: there is none on retail hardware. ROM patch file $4432: 00 20 E7 EA 20 86 08 restores the call; verified in Mesen",
+  "note": "A US way in was an open question: there is none on retail hardware. ROM patch file $4432: 00 20 E7 EA 20 86 08 restores the call; verified in Mesen",
   "section": "Hidden screens"
  },
  {

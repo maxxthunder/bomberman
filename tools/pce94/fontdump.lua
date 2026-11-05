@@ -1,5 +1,5 @@
 -- Save the ASCII font tiles ($100-$17F, VRAM bytes $2000-$2FFF) from the Debug Version menu to <scratch>/font.bin for
--- debugpause.lua FONT=1. Applies TCRF's patch in memory and enters the Sound Room code to reach that menu.
+-- debugpause.lua FONT=1. Applies the known patch in memory and enters the Sound Room code to reach that menu.
 local p={0x29,0x85,0x67,0xA9,0x98}
 for i=1,5 do emu.write(0x3F5A+i, p[i], emu.memType.pcePrgRom) end
 wait(700) press({run=true}) wait(120) press({run=true}) wait(120)

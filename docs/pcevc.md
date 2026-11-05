@@ -166,7 +166,7 @@ predicted `$20B2`/`$20B3`/`$20B5`. The GAME OVER screen after `5120` shows `5120
 ### Sound Room, debug menu, debug pause menu: all work
 
 - Sound Room code (`tools/pce94/soundtest.lua`): opens. ![](img/pcevc/94w_sound_room.png)
-- TCRF's patch (`$3F5B`, `soundtest.lua DEBUG=1`): BOMBERMAN94 DEBUG VERSION. Its STAGE SELECT starts all 20
+- The known patch (`$3F5B`, `soundtest.lua DEBUG=1`): BOMBERMAN94 DEBUG VERSION. Its STAGE SELECT starts all 20
   stages, IMPRESSIVE ENDING plays the staff roll (`tools/pcevc/stages94.lua`, `ending94.lua`).
   ![](img/pcevc/94w_debug_menu.png)
 - The restored debug pause menu (`tools/pce94/debugpause.lua FONT=1`): the same log as retail (INV_MODE sets

@@ -9,7 +9,7 @@ ROMs: `Super Bomberman 3 (Europe).sfc` (primary; HiROM, FastROM, 1.5 MB, header 
 `(Japan)` and `(Europe) (Beta)`. There was no US release. Addresses are for the European ROM unless noted. The Japanese
 ROM has the password code at the same addresses. In the beta it sits 8 bytes lower, so `$C2:67DB` there is `$C2:67D3`.
 
-Prior art: the GameFAQs codes page and the TCRF article (both in `res/`). **★ New** = in neither. **Fixed** = posted
+Prior art: the GameFAQs codes page and a published article on the game (both in `res/`). **★ New** = in neither. **Fixed** = posted
 with a wrong effect. **Known** = works as posted.
 
 ## RAM that matters
@@ -173,7 +173,7 @@ How each was checked (in Mesen on EU; the fuzz also ran every one on JP and the 
 
 ## Hidden battle stages (title screen X)
 
-Code: `$C1:6E4D`, a title-screen task. Known (GameFAQs, TCRF); the exact rule is ★ New.
+Code: `$C1:6E4D`, a title-screen task. Known (GameFAQs and others); the exact rule is ★ New.
 
 - It waits for a new X press on any of the five pads (`$C1:6ECD` checks bit `$40` of the new-press bytes `$58-$5C`),
   then counts X presses in `$05AA` and frames in `$055A/$0582`.
@@ -188,7 +188,7 @@ Code: `$C1:6E4D`, a title-screen task. Known (GameFAQs, TCRF); the exact rule is
 - The beta tests `(count & $F8) = $28` instead: only **40-47 presses**. Tapping every 9 frames (40) worked there and
   every 7 (51) did not (★ New).
 
-TCRF's Pro Action Replay route (`7E6C6E:0B`/`0C`) pokes the selected stage directly and needs no unlock.
+The known Pro Action Replay route (`7E6C6E:0B`/`0C`) pokes the selected stage directly and needs no unlock.
 
 ## Regions and the beta
 
@@ -213,11 +213,11 @@ of 240 differ).
 
 | Screen | EU | JP | Beta | Status |
 |---|---|---|---|---|
-| Title menu | NORMAL GAME / BATTLE GAME / OPTIONS, "TM & © 1995 HUDSON SOFT / Licensed by Nintendo" | OPTION, "© 1995 HUDSON SOFT" | as JP | Known (TCRF) |
-| Player count | 1PLAYER GAME / 2PLAYER GAME | 1PLAYER␣␣GAME / 2PLAYERS GAME | as JP | Known (TCRF) |
+| Title menu | NORMAL GAME / BATTLE GAME / OPTIONS, "TM & © 1995 HUDSON SOFT / Licensed by Nintendo" | OPTION, "© 1995 HUDSON SOFT" | as JP | Known |
+| Player count | 1PLAYER GAME / 2PLAYER GAME | 1PLAYER␣␣GAME / 2PLAYERS GAME | as JP | Known |
 | Battle menu headers | SELECT MATCH, SELECT PLAYER, SELECT GAMEPLAY, SELECT COUNTRY, SELECT STAGE | Japanese sentences (対戦モードを えらんで下さい …) | as JP | ★ New |
 | Battle rule names | SUDDEN DEATH, BAD BOMBER, SOCCER BOMBER | サドンデス, みそボン, PKーボンバー | as JP | ★ New |
-| Country map (asset 3.41) | FRANCE, KENYA | **FRANCE, KENYA** | **FRENCH, KENIA** | **Fixed**: TCRF credits the misspellings to Japan, but the JP retail dump already has the corrected map; only the beta has FRENCH/KENIA |
+| Country map (asset 3.41) | FRANCE, KENYA | **FRANCE, KENYA** | **FRENCH, KENIA** | **Fixed**: the misspellings are usually credited to Japan, but the JP retail dump already has the corrected map; only the beta has FRENCH/KENIA |
 | Battle stage names | English (STAGE 1 BLOCKBUSTER …) | katakana (オナジミサン …) | as JP | ★ New |
 | Story stage card (asset 3.57, the stage-name font) | STAGE 1 SWAMP ATTACK | ステージ1 モリモリスター | as JP | ★ New |
 | Controller error screen (asset 3.72) | CONTROLLER MALFUNCTION | コントローラー 接続が異常です | as JP | ★ New (from the ROM; the screen was not brought up) |
@@ -269,11 +269,11 @@ were never read in any run.** They are rendered in `docs/img/sb3/unused/` (file 
 "Never read" is only as good as the coverage: two-player story mode, every battle character, the boss of every
 area being beaten and the controller fault were not exercised, so some of these may still be used there.
 
-**TCRF's items:**
+**Known items:**
 - **Egg power-up icon (Known)**: found as tiles `$50-$53` of asset 6.02 (`$C0:6D46`, BG tiles at VRAM `$0800`),
-  matched pixel for pixel against TCRF's image. That sheet is loaded for story stages and battles, so the icon sits unused inside
+  matched pixel for pixel against the published image. That sheet is loaded for story stages and battles, so the icon sits unused inside
   a used sheet. ![Egg icon](img/sb3/unused/egg_icon_6.02_tiles50-53.png)
-- **Heart-eyed Bomberman and Louie (Known, not located)**: no single 8×8 tile of TCRF's image matched any asset,
+- **Heart-eyed Bomberman and Louie (Known, not located)**: no single 8×8 tile of the published image matched any asset,
   probably because the sprite is built from overlapping head and body pieces; not found.
 
 **Palettes** were not swept: the palette requests (`$C0:1B38`, 14 sets in the table at `$C0:1CD0`) were logged, but
@@ -408,7 +408,7 @@ Each code was checked in Mesen's cheat engine (`emu.addCheat`, `tools/sb3/par.lu
 | `7E2901:01` | full equipment at every stage start | EU: bombs 8, fire 8, speed 2, `$48D1`=7 at 1-1 |
 | `7E2902:01` | hard mode (enemies take one more hit) | EU: the flag holds. The effect itself was checked with 6514 in round 1 |
 | `C00139:EA` + `C00144:6B` | soft reset with Select+Start+L+R (same hook as the IPS) | EU, JP, beta: the reset routine at `$80:F000` runs |
-| `7E6C6E:0B` / `0C` | pick stage 11 / 12 (TCRF) | Known, not re-run |
+| `7E6C6E:0B` / `0C` | pick stage 11 / 12 | Known, not re-run |
 
 **Fixed:** round 1 said the soft reset needs an IPS because a PAR code "patches RAM". PAR (and Mesen) can patch
 ROM reads too. The first code turns the `RTL` at `$C0:0139` into a `NOP`, so the pad routine falls into the check

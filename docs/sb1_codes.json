@@ -2428,7 +2428,7 @@
   ],
   "verified": "mesen",
   "status": "fixed",
-  "note": "GameFAQs (from Total! magazine) lists 7632 as Level 7-1. There is no world 7: the game decodes it as 6-7 (typed in Mesen, screen shows 6-7 START!). The other 6-7 codes are 1635, 6634 and 0633."
+  "note": "The game decodes it as 6-7 (typed in Mesen, screen shows 6-7 START!). The other 6-7 codes are 1635, 6634 and 0633."
  },
  {
   "code": "0633",
@@ -2642,7 +2642,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "cond 1 $C6:2B73 resets on any held button; GameFAQs says 'stand on the exit 21 s', which is the 1-4/4-7 condition. Spawned with no input at all.",
+  "note": "cond 1 $C6:2B73 resets on any held button; standing on the exit for 21 s is the 1-4/4-7 condition. Spawned with no input at all.",
   "section": "secret_items"
  },
  {
@@ -2985,7 +2985,7 @@
   "status": "known",
   "verified": "static",
   "section": "debug",
-  "note": "TCRF says game speed no longer works; TIME CHECK likewise has no code left."
+  "note": "Game speed is known to no longer work; TIME CHECK likewise has no code left."
  },
  {
   "code": "Debug menu VS CHECK",
@@ -3167,7 +3167,7 @@
   "status": "known",
   "verified": "mesen",
   "section": "cheat",
-  "note": "TCRF's code; $00A4 is the next-scene byte. Scene $3C shown from power-on."
+  "note": "Known code; $00A4 is the next-scene byte. Scene $3C shown from power-on."
  },
  {
   "code": "7E00A4xx",
@@ -3208,7 +3208,7 @@
   "status": "known",
   "verified": "mesen",
   "section": "unused",
-  "note": "TCRF's two unused level structures; addresses, format and renders new (tools/sb1/maps.py, docs/img/sb1/maps/). $C1:AEA2 loaded into 1-1 with a ROM code and played; $C1:A1DA leaves a black screen."
+  "note": "The two known unused level structures; addresses, format and renders new (tools/sb1/maps.py, docs/img/sb1/maps/). $C1:AEA2 loaded into 1-1 with a ROM code and played; $C1:A1DA leaves a black screen."
  },
  {
   "code": "$C6:1093",
@@ -3249,6 +3249,6 @@
   "status": "new",
   "verified": "static",
   "section": "unused",
-  "note": "TCRF's dump stops at DR WIN / X1-X4."
+  "note": "The known list stops at DR WIN / X1-X4."
  }
 ]

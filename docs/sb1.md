@@ -2,7 +2,7 @@
 
 Everything here comes from disassembling the ROMs (`tools/disasm.py`, coverage grown from Mesen 2 code/data
 logs via `tools/sb1/cdl2entries_hi.py`, the HiROM version of `tools/cdl2entries.py`) and checking the results in
-Mesen 2. Addresses are US retail unless a version is named. Prior art: the GameFAQs codes page and the TCRF
+Mesen 2. Addresses are US retail unless a version is named. Prior art: the GameFAQs codes page and a published
 article in `res/`. Marks: ★ **New** (in neither), **Fixed** (prior art is wrong), **Known** (prior art has it;
 any detail added here is noted).
 
@@ -186,7 +186,7 @@ port 3, which doesn't exist. US/EU read pads 4-5 only when the multitap check `$
 
 ### Prologue: X in rhythm for 9 lives (Known, timing ★ New)
 
-TCRF says pressing X during the prologue gives nine lives. The code (`$C5:6515`, `$C5:6698`) is a rhythm
+Pressing X during the prologue is known to give nine lives. The code (`$C5:6515`, `$C5:6698`) is a rhythm
 check: each frame `$0C95` counts up; an X press when it reads **7-9** adds one to `$0C96`, any other press or 32
 frames without one resets both. A row of bomb icons across the top shows progress. At **48** good presses
 `$0C8F` is set, and the next Normal Game starts with 9 lives instead of 5 (`$C5:5106`). One press every 8 frames
@@ -194,7 +194,7 @@ frames without one resets both. A row of bomb icons across the top shows progres
 
 Only the Japanese version plays the prologue: its demo table `$C5:501F` is `33 34 33 35 33 36` (prologue between
 each demo); US/EU `$C5:5158` and the beta `$C5:514D` are `34 35 36` and nothing else sets `$00A4` = `$33`. So in
-the international versions the trick needs a cheat to reach the scene (TCRF's PAR `7E00A433`).
+the international versions the trick needs a cheat to reach the scene (the known PAR `7E00A433`).
 
 Verified: JP, untouched title, X every 8 frames: the prologue started at frame 1544 and `$0C8F` was set at
 frame 1978. US, NORMAL GAME redirected to `$33`: 60 presses → 9 lives in 1-1; 40 presses → `$0C96` = 39, 5 lives.
@@ -209,13 +209,13 @@ Verified in US: Start on controller 2 at the title → `$0D44` = 0, `$0D84` = `$
 
 ### Debug menu (Known; restored and every option checked ★ New)
 
-The text (TCRF: "Text starts at 0x607D8") is drawn into `$7E:2000` by `$C6:09F5`. Three pieces are cut off in every
+The text (known to start at 0x607D8) is drawn into `$7E:2000` by `$C6:09F5`. Three pieces are cut off in every
 version, beta included; the code itself is intact and bank `$C6` is byte-identical in all four dumps:
 
 - **Opening.** The pause object (`$C6:0000`, every frame in a stage) calls `$C6:0081`, which finds the first active
   player whose new presses have Start *or Select* (`BIT #$30`) and then always toggles pause (`$C6:001B`). Nothing
   calls the menu toggle `$C6:00D2` (open: copy the player's state into `$00A5-$00B6`, draw, set `$0314` bit 0; second
-  call: clear the buffer, write the values back, `$C6:053C`). TCRF's note that Select opened it fits.
+  call: clear the buffer, write the values back, `$C6:053C`). The known note that Select opened it fits.
 - **Input.** The menu's handler `$C6:01B9` is uncalled: Up/Down move the cursor `$0316` (wrapping 0-18), Left/Right
   change the value, A on BGM NO./SE NO. plays it; holding L or R makes Up/Down/Left/Right repeat (it reads held
   instead of new presses). That is why the cursor never moved in round 1.
@@ -246,11 +246,11 @@ Up/Down pick a line, Left/Right change it, Select closes it and applies the valu
 | 9 | FIRE PASS | `+$36` | Not a power-up: it is the invincibility timer. Shown ON while the start/respawn flashing lasts; ON writes `$0160` frames (5.9 s). Own bomb with it on: survived, timer ran out normally | ★ New |
 | 10 | FIRE FULL | `+$31` bit 7 | Maximum blast: a fire-3 bomb burned across the whole row ![](img/sb1/debug_fire_full.png) | ★ New |
 | 11 | BREAK THR. | `+$38` | flag set; not played | ★ New (RAM) |
-| 12 | POWER | `+$39` bit 0 | sets bit 0 (TCRF says POWER and KICK are swapped; not checked against the item handlers) | Known (RAM checked) |
+| 12 | POWER | `+$39` bit 0 | sets bit 0 (often described as POWER and KICK swapped; not checked against the item handlers) | Known (RAM checked) |
 | 13 | KICK | `+$39` bit 1 | sets bit 1 | Known (RAM checked) |
 | 14 | SKULL | `$C6:113D` | Gives a random skull disease (`+$13A`/`+$13C` = `$23F5`...), the same routine the skull item calls (`$C6:0FC5`) | ★ New |
 | 15 | TIME CHECK | `$00B3` | Nothing reads it in any version: no effect | ★ New |
-| 16 | VS CHECK | `$00B4` | The path search `$C6:39C0` of the blue enemy in 1-5 and 6-5 (the only stages that run it) sets bit `$0200` of every map cell it visits (`$C6:3A40`), which draws them black; the clear routine `$C4:0B9F` is uncalled too, so the marks pile up. TCRF: "a debugging tool for Pakupa" ![](img/sb1/debug_vs_check.png) | Known; effect ★ New |
+| 16 | VS CHECK | `$00B4` | The path search `$C6:39C0` of the blue enemy in 1-5 and 6-5 (the only stages that run it) sets bit `$0200` of every map cell it visits (`$C6:3A40`), which draws them black; the clear routine `$C4:0B9F` is uncalled too, so the marks pile up. Already known as "a debugging tool for Pakupa" ![](img/sb1/debug_vs_check.png) | Known; effect ★ New |
 | 17 | BGM NO. | `$00B5`, 00-41 | A plays track n (`$C3:002C`, Y = n via `$C6:0996`); verified Y = 3 for 03 | ★ New |
 | 18 | SE NO. | `$00B6`, 00-39 | A plays sound n (`$C3:0042`, via `$C6:096A`) | ★ New |
 
@@ -345,7 +345,7 @@ at the same frame counts; EU runs at 50 Hz, so its shots fall at other moments):
 | Normal Game 1-1, 2-1, 6-1, 6-8, map, continue, password | no difference seen (apart from random codes and timing) | ★ New (checked) |
 | Battle setup, battle stages 1 and 8 | no difference seen | ★ New (checked) |
 | Battle victory | JP Bomberman yellow with red hands; US/EU/beta white ![](img/sb1/region_victory_us_eu_jp_beta.png) | Known |
-| Battle draw | not reached this way (the scene needs a finished battle) | not re-checked (TCRF: Known) |
+| Battle draw | not reached this way (the scene needs a finished battle) | not re-checked (Known) |
 | Ending credits | JP's heading reads **"game planner"**; US, EU and beta read "game planners" ![](img/sb1/region_credits_us_eu_jp_beta.png) | ★ New |
 | Sound test | same | ★ New (checked) |
 | Text | Apart from the credits heading, no other text difference found: the only ASCII differences are the multitap library strings, and the debug text is identical | ★ New |
@@ -353,12 +353,12 @@ at the same frame counts; EU runs at 50 Hz, so its shots fall at other moments):
 | Music | Each of the 42 tracks played from the debug menu (BGM NO., `tools/sb1/debug_menu_bgm_spc.lua`) leaves the same APU RAM in US, JP and beta, apart from the echo buffer and ~110 bytes of player state; EU's ROM differs from US in 4 bytes only | ★ New |
 
 - Europe differs from US in 4 bytes: 3 header bytes (region, checksum) and the timer constant at `$C4:07F4`
-  (`CMP #$003C` → `#$0032`), so battle seconds are real seconds at 50 Hz. Known (TCRF "Battle Length").
+  (`CMP #$003C` → `#$0032`), so battle seconds are real seconds at 50 Hz. Known ("Battle Length").
 - ★ **New:** the multitap library strings and the stricter sound-test check exist only in US/EU.
 
 ## The 1993-05-11 beta
 
-TCRF lists the beta as undocumented. What the comparison found (`tools/sb1/romdiff.py`, a shift-tolerant
+The beta was listed as undocumented. What the comparison found (`tools/sb1/romdiff.py`, a shift-tolerant
 diff of 16-byte runs, plus the code checks above):
 
 - ~14 KB of the beta is not found anywhere in US retail, almost all in banks `$C4`/`$C5` and in pointer tables
@@ -386,11 +386,11 @@ then the non-empty runs of the graphics banks `$C0-$C2` that were never read.
 
 | Address (all four dumps) | What | Status |
 |---|---|---|
-| `$C1:0E40-$C1:17BF` (74 tiles, 4bpp) | Right after the world-4 enemy sheet `$C1:0800-$C1:0E3F` (read by DMA in 4-1, 4-3, 4-6 and a demo); the DMA stops at `$C1:0E3F`. Small round faces with eyes and teeth (4 + 6 frames), a ring that shrinks to a dot over 7 frames and a larger ring. Never read in the sweep; identical in US, EU, JP and beta. Red boxes = never read; the right half uses 4-1's sprite palette 0, which may not be the intended one ![](img/sb1/unused/C10E40_unread_sprite_tiles_new.png) | ★ New (could be TCRF's unnamed "strange graphic") |
+| `$C1:0E40-$C1:17BF` (74 tiles, 4bpp) | Right after the world-4 enemy sheet `$C1:0800-$C1:0E3F` (read by DMA in 4-1, 4-3, 4-6 and a demo); the DMA stops at `$C1:0E3F`. Small round faces with eyes and teeth (4 + 6 frames), a ring that shrinks to a dot over 7 frames and a larger ring. Never read in the sweep; identical in US, EU, JP and beta. Red boxes = never read; the right half uses 4-1's sprite palette 0, which may not be the intended one ![](img/sb1/unused/C10E40_unread_sprite_tiles_new.png) | ★ New (could be the known unnamed "strange graphic") |
 | `$C1:A1DA`, `$C1:AEA1`, `$C1:C193`, 32-192-byte pieces in `$C2:0100-$C2:2400`, `$C2:8E57` | never read, but they don't decode as 4bpp tiles (compressed or other data) | not graphics as far as checked |
 
 Not covered: palettes. The CPU copies palettes in blocks, so an unused colour set inside a used block counts as read,
-and no never-read region of banks `$C3-$C7` looks like BGR555 colours. So TCRF's green bomb, Starnuts and gold Mecha
+and no never-read region of banks `$C3-$C7` looks like BGR555 colours. So the known green bomb, Starnuts and gold Mecha
 Bomberman palettes (Known) were not re-found, and no new palette is claimed. The debug font (Known) is loaded at boot
 and used by the restored menu.
 
@@ -418,7 +418,7 @@ Never-run code falls in two groups:
 |---|---|---|---|---|
 | `$C6:00D2`, `$C6:0474`, `$C6:09D9`, `$C4:0B6F` | 312, 303, 124, 70 | the debug menu: toggle, cursor/values, buffer clear and draw, VRAM upload | debug feature | Known (restored above) |
 | `$C6:1093` | 28 | an item handler (100 points, the pickup sound) that the handler table `$C6:0D26` skips: the table goes from the kendama `$C6:1077` straight to the apple `$C6:10AF`. A byte copy of the kendama handler, so the slot of a cut 100-point item | cut feature | ★ New |
-| `$C7:7277`, `$C7:7292`, `$C4:273F` | 320, 162 | puts player 1 at (`$68`,`$B8`) and player 2 at (`$A8`,`$B8`) in the falling state `$C4:273F`: the Japanese-style DRAW screen with Bombermen dropping in (TCRF) | unreferenced | Known |
+| `$C7:7277`, `$C7:7292`, `$C4:273F` | 320, 162 | puts player 1 at (`$68`,`$B8`) and player 2 at (`$A8`,`$B8`) in the falling state `$C4:273F`: the Japanese-style DRAW screen with Bombermen dropping in | unreferenced | Known |
 | `$C5:3B7C`, `$C5:3C16` | 123, 618 | objects started at fixed screen positions (one at y = `$FFE0`, above the screen) with animations `$C5:1D57`/`$C5:1D60`; same bytes in JP, also never run there | unreferenced | not identified |
 | `$C4:4FCB` | 325 | walks the four blast arms from a cell and clears bit `$0800` (fire) in each map cell until a wall: the old end-of-explosion routine. The same code runs in the Japanese version (`$C4:48A3`); US/EU/beta use a replacement | superseded | ★ New |
 | `$C4:5F89`, `$C5:59A7` | 257, 279 | two byte-identical copies of a "pick a random cell in the 13 × 11 field" routine (RNG `$C6:1F13`) | unreferenced | ★ New (minor) |
@@ -473,7 +473,7 @@ graphics, so the real text is:
 | Address | Text | Read in play | Status |
 |---|---|---|---|
 | `$C6:07D3` | the debug menu: P:, STAGE NO., NO DEATH ... SE NO. (each line has a 2-byte position) | no | Known |
-| `$C6:0659` | the debug scene labels 1-1 ... 6-8, END TIT SEL DM1-DM4 CON PAS PRM DRW WIN B-1 ... B-C DR WIN, **then a second 2-1 ... 2-8**, then X1-X4 and 0-F. TCRF stops at DR WIN / X1-X4; the eight extra labels sit where scenes `$4A-$51` would be | no | ★ New (minor) |
+| `$C6:0659` | the debug scene labels 1-1 ... 6-8, END TIT SEL DM1-DM4 CON PAS PRM DRW WIN B-1 ... B-C DR WIN, **then a second 2-1 ... 2-8**, then X1-X4 and 0-F. The known list stops at DR WIN / X1-X4; the eight extra labels sit where scenes `$4A-$51` would be | no | ★ New (minor) |
 | `$C6:0448`, `$C6:096B`, `$C6:0997` | character tables of the debug font | no | |
 | `$C4:0000`-`$C4:0190` | START OF MULTI5 BIOS / MODIFIED FROM SHVC MULTI5 BIOS Ver2.00 / ... CONNECT CHECK Ver1.00 (US, EU only) | yes (library code) | Known (above) |
 | `$C4:8002` | BOOT VER1.03 (sound driver) | no | ★ New (minor) |
@@ -501,8 +501,8 @@ versions; two are referenced by no stage:
 | `$C1:A62A` | all of world 5 (20 extra walls: the narrow top) | |
 | `$C1:AA52`, `$C1:A954` | 6-1 to 6-3, battle 12 / 6-4 to 6-8 | |
 | `$C1:AB70`, `$C1:AC5E`, `$C1:AD84`, `$C1:C28C` | battle 1 / battle 11 / battle 6 / battle 5 | |
-| **`$C1:A1DA`** | **none** | 23 extra walls: a block of walls filling the middle, so the field is a ring ![](img/sb1/maps/map_C1A1DA.png) | Known (TCRF's ring-shaped structure); address and render ★ New |
-| **`$C1:AEA2`** | **none** | a plain grid with its own floor tiles | Known (TCRF's second structure); address and render ★ New |
+| **`$C1:A1DA`** | **none** | 23 extra walls: a block of walls filling the middle, so the field is a ring ![](img/sb1/maps/map_C1A1DA.png) | Known (the ring-shaped structure); address and render ★ New |
+| **`$C1:AEA2`** | **none** | a plain grid with its own floor tiles | Known (the second known structure); address and render ★ New |
 
 These two were also the "never read, not 4bpp" blocks of the graphics sweep. ![](img/sb1/maps/sheet.png)
 
@@ -523,7 +523,7 @@ those were not run there. All in `sb1_codes.json` (`section: "cheat"`).
 | `7E0D7301` | remote-control bombs | bombs stayed unexploded 800 frames | ★ New |
 | `7E0C9001` | small Bomberman (as 5656) | flag and sprite at 1-1 | ★ New code (effect Known) |
 | `7E0C8F01` | next Normal Game starts with 9 lives (the prologue-X flag) | 9 lives at 1-1 | ★ New code (effect Known) |
-| `7E00A43C` | sound test | scene `$3C` from power-on | Known (TCRF) |
+| `7E00A43C` | sound test | scene `$3C` from power-on | Known |
 | `7E00A4xx` | go to scene xx (list under Debug menu, STAGE NO.); switch it off once the scene has loaded | `7E00A42F` loads 6-8 | Known |
 | `C30D63A2` `C30D64AE` | ROM codes: 1-1 is built from the unused map `$C1:AEA2` (US/EU/beta; the JP header table is elsewhere) | loads and plays ![](img/sb1/maps/unused_C1AEA2_in_1-1.png) | ★ New |
 | (`C30D63DA` `C30D64A1`) | the same for the ring map `$C1:A1DA` | black screen, the stage never starts: not useful | ★ New (fails) |
@@ -544,4 +544,4 @@ The debug-menu ROM codes (90 per version) are listed under Debug menu.
 - Debug menu: REMOCON, WALL PASS, BOMB PASS, BREAK THR., POWER and KICK checked as RAM bits only; GAME SPEED and
   TIME CHECK have no code left to restore.
 - Unused palettes: needs the palette tables mapped (see Unused graphics).
-- Regions: the battle DRAW screen and the NPC / Mecha Bomberman palettes (TCRF) not re-shot.
+- Regions: the battle DRAW screen and the NPC / Mecha Bomberman palettes (Known) not re-shot.

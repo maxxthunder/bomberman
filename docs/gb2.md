@@ -5,8 +5,8 @@ dump table there for the comparison. Everything here comes from disassembling th
 in `disasm/gb2/`) and checking in Mesen 2 (`tools/gb2/run.sh`, helpers in `tools/gb2/lib.lua`). Addresses are
 `bank:address`, US unless JP is named.
 
-Prior art: the GameFAQs "Bomberman GB" codes page and the TCRF "Bomberman GB" article (both in `res/`; both mean
-this game: TCRF gives "also known as Bomberman GB 2 (JP)", GameFAQs the 1998 US release). Marks: ★ **New**,
+Prior art: the GameFAQs "Bomberman GB" codes page and a wiki article on "Bomberman GB" (both in `res/`; both mean
+this game: the article gives "also known as Bomberman GB 2 (JP)", GameFAQs the 1998 US release). Marks: ★ **New**,
 **Fixed**, **Known**. Every code either page lists works as described.
 
 | Dump | Header title | MD5 | vs US |
@@ -46,8 +46,7 @@ current world, shown on the CONTINUE screen by `$00:1FE5`). Table: bank `$0F`, `
 
 - ★ **New: dispatcher cases no code uses.** Values `$00-$7F` would set `$C100` to the value directly (any world and
   stage), `$8B` opens the sound test with `$C11B` = 1, `$8C` jumps to `$00:34E9` (the screen after the staff roll).
-- **Fixed: 7824.** TCRF: "inserted among the passwords of the US version is 7824, which only returns invalid". The
-  US ROM has a second, older copy of the table at `$0F:5447` that nothing references; it has a 12th record **7824 =
+- **Fixed: 7824.** Known as a US password that only returns invalid, effect unknown. The US ROM has a second, older copy of the table at `$0F:5447` that nothing references; it has a 12th record **7824 =
   `$89`**, and `$89` in the dispatcher jumps to `$00:1E3A`, the **ending** (the same routine the game calls after
   world 8, `$00:260E`). The live table lacks it, so it is rejected (typed: the reject exit ran). JP has no copy.
 
@@ -68,10 +67,9 @@ dispatcher value (also `'stage'`, `'ending'`, `'soundtest2'`, `'closing'`, `'tit
 
 ## Secrets
 
-- **2145 sound test** (Known: GameFAQs, TCRF). MUSIC / EFFECT / EXIT; Left/Right change the number, A plays.
+- **2145 sound test** (Known). MUSIC / EFFECT / EXIT; Left/Right change the number, A plays.
 - **5656 battle** (Known). The plain-GB title has only STORY / LESSON / PASSWORD; this code is the way into battle.
-  The battle setup shows 1P-4P; the game asks the SGB for 4 players at boot (MLT_REQ `89 03`), so with a multitap
-  four people can play (SGB-only content; the multitap itself couldn't be emulated).
+  The battle setup shows 1P-4P; with a Super Game Boy multitap the title has a BATTLE line instead (below).
 - **4622 power-ups**, **8566-5472 world codes** (Known, GameFAQs "Level 1-8", "All Power-Ups").
 
 ### Cheats (★ New)
@@ -103,7 +101,20 @@ MODE-B through the ending with the cheats, a game over. Executed: **28,498 bytes
   A-Z; JP `$30-$5D` katakana, `$60-$8D` hiragana, `$9x` small kana, stored as (mark, character) pairs with `$25` ゛,
   `$26` ゜. Story, rules, item help and the staff roll (`$06:7AF9` US) are all read in the runs. Unread: the JP mode
   name "?かくれアジト" (hidden hideout, MODE-A of one world, `$02:4053`); its US counterpart was read.
-- **Stage format**: not decoded.
+- **Stages** (`tools/gb2/stages.py`, `disasm/gb2/stages_<ver>.tsv`): `$00:0E32` splits `$C100` into world, mode
+  (A/B) and stage; bank 5 `$4000` points at two tables (MODE-A, MODE-B) of 7 world records, whose header (`$00:0FEC`)
+  gives the graphics, two compressed maps and per stage a layout pointer. World 8 and every boss (stage 7) use the 8
+  headers at bank 5 `$4074` (`$00:0ED4`; world 8's stages take boss headers 1-5 as arenas, `$00:0EDC`, not checked
+  in play). A layout (`$00:1054`) is width, height and
+  width x height metatile numbers (2 x 2 tiles). 70 stage layouts + 8 boss arenas + 8 second boss layouts (6 x 5),
+  all in bank 6, packed back to back with the compressed maps between worlds: **no layout that nothing points at**
+  (same in JP). 27 were not read in the runs (whole worlds the MODE-A/B runs skipped: A2, A4, A7, B3, B5, B6, and
+  some boss second layouts).
+- **Graphics** (CDL incl. the SGB and multitap runs): graphics are raw blocks (2-byte length + tiles, `$00:02DB`)
+  listed in 32 sets (`$00:3F7E`, loader `$00:3EDD`). Every unread block belongs to a set the code loads: sets 20-21
+  (battle stages 3-4, `$12` + `$C1A8` at `$00:2BEE`; the battle runs played stages 1-2) and sets 3 and 10 (loaded by
+  `$00:2AD4` and `$00:1F1A`, screens the runs didn't reach). Sets 12 and 13 repeat set 5. No unreferenced tiles
+  found.
 - **Debug features**: none found.
 
 ### Super Game Boy
@@ -111,13 +122,22 @@ MODE-B through the ending with the cheats, a game over. Executed: **28,498 bytes
 Packets (`tools/emu/sgb.lua`): MLT_REQ 2 then 4 players, DATA_SND x8, ATTR_TRN, PAL_TRN, PAL_SET, CHR_TRN (both
 halves), PCT_TRN, then PAL_SET fades. The border is the "BOMBER THEATER" stage in both versions.
 
+**4-player battle (★ New, verified in Mesen, US and JP).** With the SGB answering 4 players (`sgb.lua` now also
+feeds pads 2-4 from `SGBPAD`), the title has a 4th line, **BATTLE**. The pad reader `$00:086A` takes all four pads
+each frame (`$FFA0/$FFA2/$FFA4/$FFA6` held, +1 new). PLAYER page: each player joins with Up or Down (`$00:3063`, flags
+`$C1AA-$C1AD`); with all four in, Start goes to MODE (TIME / BATTLE count), STAGE, and a 4-player match; WINNER
+counts the trophies. Played with random input on all four pads (`tools/gb2/multitap.lua`, run with
+`tools/emu/sgb_dump.py`); players 2 and 4 won rounds, so the extra pads really steer their bombers.
+
+![Title with BATTLE, all four joined, MODE, a 4-player match, WINNER](img/gb2/multitap_battle.png)
+
 ![US border](img/gb2/sgb_border_us.png) ![JP border](img/gb2/sgb_border_jp.png)
 
 ## Regions
 
 | | JP | US/EU |
 |---|---|---|
-| Title | BOMBERMAN GB 2 | BOMBERMAN GB, ™ (TCRF, Known) |
+| Title | BOMBERMAN GB 2 | BOMBERMAN GB, ™ (Known) |
 | Text | kana | English |
 | Passwords | 11 | the same 11; plus the unused 12-record copy with 7824 |
 
@@ -130,4 +150,4 @@ Item icons: the password stores no items (a table index; the power-ups come from
 
 ## Open
 
-- Stage format not decoded; SGB multitap battle not played.
+- Battle stages 3-4 and the MODE options weren't played; the screens behind graphics sets 3 and 10 weren't identified.

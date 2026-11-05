@@ -4,6 +4,8 @@
 --   P15 low = 1, stop bit): prints 'SGB <frame> <16 bytes hex>' per packet.
 -- * Answers MLT_REQ the way an SGB does, so the game's SGB check passes: with 2 or 4 players on, a read of $FF00 with
 --   P14 = P15 = 1 returns $F - joypad id in the low nibble; the id steps when P15 goes low -> high.
+--   Pads 2-4 (multitap): while the id is 1-3, reads with P14 or P15 low return SGBPAD[id + 1] (a button table like
+--   setInput's: a b select start right left up down) instead of the Game Boy's own pad; unset = nothing held.
 -- * For a *_TRN packet (PAL_TRN $0B, ATTR_TRN $15, CHR_TRN $13, PCT_TRN $14) the 4 KB the SGB would take from the
 --   next frame's screen is printed as 'TRN <cmd> <arg> <hex>': the BG tiles shown in the 20 x 13 tile top of the
 --   screen, in order (SCX/SCY = 0 is assumed, as the transfer protocol requires).
@@ -31,8 +33,17 @@ emu.addMemoryCallback(function(a, v)
   if players > 1 and (last & 0x20) == 0 and p15 ~= 0 then id = (id + 1) % players end
   last = v
 end, emu.callbackType.write, 0xFF00, 0xFF00, emu.cpuType.gameboy, emu.memType.gameboyMemory)
+SGBPAD = SGBPAD or {}
+local DIR, BTN = {'right', 'left', 'up', 'down'}, {'a', 'b', 'select', 'start'}
 emu.addMemoryCallback(function(a, v)
   if players > 1 and (last & 0x30) == 0x30 then return (v & 0xF0) | (0x0F - id) end
+  if players > 1 and id > 0 then
+    local p, n = SGBPAD[id + 1] or {}, 0x0F
+    for k = 1, 4 do
+      if ((last & 0x10) == 0 and p[DIR[k]]) or ((last & 0x20) == 0 and p[BTN[k]]) then n = n & ~(1 << (k - 1)) end
+    end
+    return (v & 0xF0) | n
+  end
 end, emu.callbackType.read, 0xFF00, 0xFF00, emu.cpuType.gameboy, emu.memType.gameboyMemory)
 emu.addEventCallback(function()
   if not trn then return end

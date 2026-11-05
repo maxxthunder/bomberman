@@ -106,7 +106,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "TCRF documents this for the 1990 card. Same code here: $02:C656 compares the letters with $C66C and sets $341B = $FF, the decoder rejects BOMSOUND, the next valid code opens the sound test $02:C2A5 (I/II step $00-$39, Run plays, Select stops). Only reachable through the patched-in password screen: BOMSOUND, END, MUVWLNPC, END gave SOUND-00 in Mesen",
+  "note": "Already known for the 1990 card. Same code here: $02:C656 compares the letters with $C66C and sets $341B = $FF, the decoder rejects BOMSOUND, the next valid code opens the sound test $02:C2A5 (I/II step $00-$39, Run plays, Select stops). Only reachable through the patched-in password screen: BOMSOUND, END, MUVWLNPC, END gave SOUND-00 in Mesen",
   "section": "Hidden screens (unreachable)"
  },
  {
@@ -117,7 +117,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "TCRF documents it for the 1990 card. The check $01:A001 is still called from $00:EA43, but only if mode $3380 = 0 and round $2849 != 8; the title always sets $3380 = 1 or 2 and $2849 = 8 ($01:A560/$A572), and $10 is only set by the attract-demo code in bank $0B, which nothing calls. So it cannot open in the shipped game. In Mesen with the password screen patched in, MUVWLNPC, $10 = 1, $2001 = 3 and the five buttons held, the room opened (and set $284D = 1, roller skate); $2001 = 4 or $10 = 0 did not (tools/pceub/test_select_room.lua)",
+  "note": "Already known for the 1990 card. The check $01:A001 is still called from $00:EA43, but only if mode $3380 = 0 and round $2849 != 8; the title always sets $3380 = 1 or 2 and $2849 = 8 ($01:A560/$A572), and $10 is only set by the attract-demo code in bank $0B, which nothing calls. So it cannot open in the shipped game. In Mesen with the password screen patched in, MUVWLNPC, $10 = 1, $2001 = 3 and the five buttons held, the room opened (and set $284D = 1, roller skate); $2001 = 4 or $10 = 0 did not (tools/pceub/test_select_room.lua)",
   "section": "Hidden screens (unreachable)"
  },
  {

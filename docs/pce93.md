@@ -4,8 +4,8 @@ Everything here comes from disassembling the three HuCards with `tools/pce93/huc
 the reset vector, MPR bank tracking, extra entry points from Mesen 2 code/data logs via `tools/pce93/cdl2entries.py`;
 output in `disasm/pce93/us.asm`, `jp.asm`, `sp.asm`) and checking the results in Mesen 2 with the Lua scripts in
 `tools/pce93/` (`run.sh script.lua us|jp|sp`). Addresses are `bank:logical` in the USA version unless a version is named;
-RAM is logical `$2000-$3FFF` (work RAM at MPR1 = `$F8`). The only prior art is the TCRF article in `res/`. Marks:
-★ **New** (not in TCRF), **Known** (TCRF has it; any detail added is noted). There is no codes page, so every
+RAM is logical `$2000-$3FFF` (work RAM at MPR1 = `$F8`). The only prior art is a published article on the game in `res/`. Marks:
+★ **New** (not in it), **Known** (it has it; any detail added is noted). There is no codes page, so every
 password below is ★ New (status `unchecked` in `pce93_codes.json`).
 
 | Dump | MD5 | Title logo |
@@ -126,7 +126,7 @@ So the game accepts exactly the codes `password.py` accepts, and stores exactly 
 
 The US and JP codecs are the same instructions with the same tables; only the letters drawn on the grid differ.
 A code moves between them letter for letter by grid position: US `B C D F G H J K L M N P Q R S T` =
-JP `A B C D E F G H I J K L M N O P` (TCRF's "A = B, B = C, ..."; Known, and confirmed by the fuzz run, which fed
+JP `A B C D E F G H I J K L M N O P` (the known "A = B, B = C, ..."; Known, and confirmed by the fuzz run, which fed
 both decoders the same index strings). `convert()` in `password.mjs` does it.
 
 The Special Version's decoder is the same except that d4 and d5 must be **below 15** (`CMP #$0F` instead of `#$10`):
@@ -152,7 +152,7 @@ codes itself on its continue screen (encoder called from `07:A2FA`); not played 
 
 ### CONFIGRATION screen (Known; US access ★ New)
 
-TCRF: beat the game, at the end screen hold I and press Run, reset, start a Normal Game; JP only.
+The known method: beat the game, at the end screen hold I and press Run, reset, start a Normal Game; JP only.
 
 How it works: at the ending, `08:8C7D` (JP `08:8C85`) waits for I held (`$32` bit 0) and Run newly pressed (`$37`
 bit 3), sets `$3FFB` bit 0 and plays a sound (`$F243`, effect `$0A`). `$3FFB` survives the soft reset. In JP, every
@@ -160,7 +160,7 @@ time the Normal Game reaches the planet map, state 1 far-calls `08:8620` (`02:84
 that routine returns at once unless `$3FFB` is set, otherwise it draws the screen and lets you set STAGE, SCENE,
 BOMB, FIRE, SHOES, BOMB KICK, LINE BOMB, RIMOCON, BLOCK WALK, BOMB WALK, FREE FIRE, REVIVE, STOCK, SE and MUSIC.
 
-**USA:** the ending code still sets `$3FFB` and plays the sound (which is why TCRF heard it), and the screen itself
+**USA:** the ending code still sets `$3FFB` and plays the sound (which is why the sound was already known), and the screen itself
 is still in the ROM at `08:8620`, minus its `$3FFB` test. What is gone is the call: US state 1 (`02:8421`) goes
 straight from the map to the stage. No byte in the US ROM calls `08:8620`, so **no input reaches the screen on a
 retail US cart**. It can be put back with a 7-byte ROM patch at file offset `$4432`: `00 20 E7 EA 20 86 08`
@@ -206,7 +206,7 @@ A shift-tolerant diff (16-byte runs of one ROM found nowhere in the other, as `t
 
 ### ★ The Special Version
 
-TCRF lists it as undocumented. It is a **Battle Game only** cart: the title shows the logo with a SPECIAL VERSION
+It was listed as undocumented. It is a **Battle Game only** cart: the title shows the logo with a SPECIAL VERSION
 banner and PUSH RUN BUTTON; Run goes straight to the battle setup (2-5 players, 1-5 wins). It differs from JP retail
 in about 175 KB (more than half the code banks), and much of it looks older, not newer:
 

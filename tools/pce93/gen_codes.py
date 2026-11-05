@@ -37,7 +37,7 @@ secrets = [
  ("Beat the game, hold I and press Run on the end screen, reset (Select+Run), start a Normal Game", "CONFIGRATION screen after each planet map: stage, scene, bombs, fire, power-ups, lives, sound/music test", ["JP"], "known", "mesen",
   "ending code 08:8C85 sets $3FFB; state 1 far-calls 08:8620 which checks it. Verified with $3FFB written, then real soft reset and presses; settings carried into the stage"),
  ("Same as JP (US)", "The sound plays and $3FFB is set, but nothing else: the call to the screen was removed (02:8421)", ["US"], "known", "mesen",
-  "TCRF asked for a US way in: there is none on retail hardware. ROM patch file $4432: 00 20 E7 EA 20 86 08 restores the call; verified in Mesen"),
+  "A US way in was an open question: there is none on retail hardware. ROM patch file $4432: 00 20 E7 EA 20 86 08 restores the call; verified in Mesen"),
  ("Battle Game with Up+I+II+Select+Run held on pad 5 (or the only pad)", "'Tap is not connected' error screen", ["JP"], "known", "mesen",
   "07:A707 tests $36 & $1F = $1F; removed in the US. Verified by writing the pad-5 byte at the test"),
  ("(none: patch the title menu table 06:984C to $94A0)", "Leftover password screen; a valid code starts the leftover Normal Game through an old CONFIGRATION screen with a SOUND test", ["SP"], "new", "mesen",

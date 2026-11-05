@@ -7,7 +7,7 @@ fire = 62 63 72 73) sit in pattern table 0 (the playfield's; PPUCTRL read mid-fr
 the item shows up in the dump. An icon that never showed whole in the dumps is drawn with the palette of one that
 did (both sit in the same CHR and use the same item palette slot); the script says so. If neither showed, both are
 drawn from the first dump with BG palette [palette] (default 0) - the committed PNGs were made that way from the
-stage 1-1 dump, so their palette slot is a guess (see docs/nes2.md).
+stage 1-1 dump; palette 0 was later confirmed from the code and a fire-up on screen (see docs/nes2.md).
 """
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "nes1"))

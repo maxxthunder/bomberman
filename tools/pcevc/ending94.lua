@@ -1,4 +1,4 @@
--- Bomberman '94: open TCRF's Debug Version menu (ROM $3F5B patch in memory, as tools/pce94/soundtest.lua DEBUG=1),
+-- Bomberman '94: open the Debug Version menu (ROM $3F5B patch in memory, as tools/pce94/soundtest.lua DEBUG=1),
 -- pick ITEM (1 STAGE SELECT, 2 BOSS BATTLE, 3 IMPRESSIVE ENDING, 4 SOUND MODE) and take a shot every STEP frames
 -- for FRAMES frames, pressing Run every PRESS frames (0 = never). run.sh pce94 <rom> ending94.lua ITEM=3
 local p={0x29,0x85,0x67,0xA9,0x98}

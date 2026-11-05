@@ -1,5 +1,5 @@
 -- The title-screen code ($1AC64 checks the held-button history against $1ACCA): Right, Left, Left+Down, Down,
--- Down+Right, Down+Right+II, each held a few frames. DEBUG=1 first applies TCRF's patch in memory (ROM $3F5B:
+-- Down+Right, Down+Right+II, each held a few frames. DEBUG=1 first applies the known patch in memory (ROM $3F5B:
 -- 89 85 67 A9 9D -> 29 85 67 A9 98, the launcher at $3F54 then jumps to bank $12:$9829 instead of $9D89).
 if DEBUG then
   local p={0x29,0x85,0x67,0xA9,0x98}

@@ -1,0 +1,17 @@
+$C006	never set	reads 9	33:4739, 34:4739, 35:4739, 36:4739, 37:4739
+$C007	never set	reads 9	33:477B, 34:477B, 35:477B, 36:477B, 37:477B
+$C025	never set	reads 9	33:473E, 34:473E, 35:473E, 36:473E, 37:473E
+$C026	never set	reads 9	33:4743, 34:4743, 35:4743, 36:4743, 37:4743
+$C027	never set	reads 9	33:4780, 34:4780, 35:4780, 36:4780, 37:4780
+$C028	never set	reads 9	33:4785, 34:4785, 35:4785, 36:4785, 37:4785
+$C029	never set	reads 9	33:47D1, 34:47D1, 35:47D1, 36:47D1, 37:47D1
+$C02A	never set	reads 9	33:47DA, 34:47DA, 35:47DA, 36:47DA, 37:47DA
+$C037	never set	reads 18	33:42AB, 33:471B, 34:42AB, 34:471B, 35:42AB
+$C038	never set	reads 18	33:4310, 33:4761, 34:4310, 34:4761, 35:4310
+$C039	never set	reads 18	33:4375, 33:47B3, 34:4375, 34:47B3, 35:4375
+$C03A	never set	reads 9	33:4811, 34:4811, 35:4811, 36:4811, 37:4811
+$C067	never set	reads 9	33:472C, 34:472C, 35:472C, 36:472C, 37:472C
+$C068	never set	reads 9	33:4772, 34:4772, 35:4772, 36:4772, 37:4772
+$C069	never set	reads 9	33:47C2, 34:47C2, 35:47C2, 36:47C2, 37:47C2
+$C0B2	never set	reads 1	3C:41D0
+$C183	never set	reads 1	00:26A2	untraced stores at 01:63B6

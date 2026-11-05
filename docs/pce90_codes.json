@@ -191,7 +191,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "TCRF. $C959 compares the 8 letters with $C96F; a match sets $3451 = $FF and then runs the normal decoder, which rejects it (O, M, S, U, N, D are not in their rows). The next valid code, any one, sees $3451 = $FF at $C76B and jumps to the sound test $C59E instead of starting the game. Typed BOMSOUND then MUVWLNPC in Mesen, US and JP: SOUND-00 screen; Bomberman Collection: opens the sound test too (docs/pcevc.md)",
+  "note": "Already known. $C959 compares the 8 letters with $C96F; a match sets $3451 = $FF and then runs the normal decoder, which rejects it (O, M, S, U, N, D are not in their rows). The next valid code, any one, sees $3451 = $FF at $C76B and jumps to the sound test $C59E instead of starting the game. Typed BOMSOUND then MUVWLNPC in Mesen, US and JP: SOUND-00 screen; Bomberman Collection: opens the sound test too (docs/pcevc.md)",
   "section": "Hidden screens"
  },
  {
@@ -204,7 +204,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "TCRF says 300 or more points and a reset. $01:A001 (called at $00:EAEC after the intro) needs: Down+Run+Select+II+I all held ($2200 & $4F = $4F), $10 != 0 (the last attract demo ran to its end, $0B:CDBE; Run during it clears $10) and $2001 = 3, the hundreds digit of the high score, exactly. In Mesen (US): 300 and 1300 open it, 200 and 400 do not, a demo cut short with Run does not; no reset is needed (high score set at power-on works); JP same code and result for 300/400; Bomberman Collection: opens the same way (docs/pcevc.md)",
+  "note": "$01:A001 (called at $00:EAEC after the intro) needs: Down+Run+Select+II+I all held ($2200 & $4F = $4F), $10 != 0 (the last attract demo ran to its end, $0B:CDBE; Run during it clears $10) and $2001 = 3, the hundreds digit of the high score, exactly. In Mesen (US): 300 and 1300 open it, 200 and 400 do not, a demo cut short with Run does not; no reset is needed (high score set at power-on works); JP same code and result for 300/400; Bomberman Collection: opens the same way (docs/pcevc.md)",
   "section": "Hidden screens"
  },
  {

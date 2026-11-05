@@ -141,7 +141,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Posted as 'yellow character'. Sets $7E4C0C=$7F, but the only reader ($C4:04C5) gives palette $11 to the player whose index (0-4) equals it, so nothing changes."
+  "note": "Sets $7E4C0C=$7F, but the only reader ($C4:04C5) gives palette $11 to the player whose index (0-4) equals it, so nothing changes."
  },
  {
   "code": "6514",
@@ -1498,7 +1498,7 @@
   "status": "fixed",
   "verified": "mesen",
   "section": "cheat",
-  "note": "ROM codes that hook the unreferenced check at $C0:013A (same as the IPS). Reset routine $80:F000 ran on EU, JP and beta. Round 1 said a PAR code could not do this."
+  "note": "ROM codes that hook the unreferenced check at $C0:013A (same as the IPS). Reset routine $80:F000 ran on EU, JP and beta."
  },
  {
   "code": "7E6C6E:0B / 7E6C6E:0C",
@@ -1511,6 +1511,6 @@
   "status": "known",
   "verified": "static",
   "section": "cheat",
-  "note": "TCRF."
+  "note": "Already known."
  }
 ]

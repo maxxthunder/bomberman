@@ -1,7 +1,7 @@
-"""Render TCRF's unused crying animations straight from the ROM: python tools/mega/cry.py
+"""Render the known unused crying animations straight from the ROM: python tools/mega/cry.py
 Each frame is a set of 16x16 sprite pieces (128 bytes, 4 tiles column-major, the format the player DMA lists
-point at). The pieces and offsets were found by matching TCRF's GIFs against every 128-byte block in $BD000-$D8000.
-Writes docs/img/mega/unused/cry.png (9 characters, 2 frames each, in TCRF's order, 3x)."""
+point at). The pieces and offsets were found by matching the published GIFs against every 128-byte block in $BD000-$D8000.
+Writes docs/img/mega/unused/cry.png (9 characters, 2 frames each, in the published order, 3x)."""
 import os
 from PIL import Image
 here = os.path.dirname(os.path.abspath(__file__))

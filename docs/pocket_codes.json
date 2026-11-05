@@ -1,0 +1,458 @@
+[
+ {
+  "code": "7693",
+  "effect": "Start at Forest area 1",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 0 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords",
+  "img": "password_screen.png"
+ },
+ {
+  "code": "3905",
+  "effect": "Start at Forest area 2",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 1 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2438",
+  "effect": "Start at Forest area 3",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 2 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "8261",
+  "effect": "Start at Forest area 4",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 3 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "1893",
+  "effect": "Start at Forest area 5 (boss)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 4 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2805",
+  "effect": "Start at Ocean area 1",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 5 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "9271",
+  "effect": "Start at Ocean area 2",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 6 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "1354",
+  "effect": "Start at Ocean area 3",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 7 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4915",
+  "effect": "Start at Ocean area 4",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 8 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "8649",
+  "effect": "Start at Ocean area 5 (boss)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 9 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0238",
+  "effect": "Start at Wind area 1",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 10 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5943",
+  "effect": "Start at Wind area 2",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 11 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "6045",
+  "effect": "Start at Wind area 3",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 12 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2850",
+  "effect": "Start at Wind area 4",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 13 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "8146",
+  "effect": "Start at Wind area 5 (boss)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 14 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "9156",
+  "effect": "Start at Cloud area 1",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 15 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2715",
+  "effect": "Start at Cloud area 2",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 16 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4707",
+  "effect": "Start at Cloud area 3",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 17 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "7046",
+  "effect": "Start at Cloud area 4",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 18 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0687",
+  "effect": "Start at Cloud area 5 (boss)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 19 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "3725",
+  "effect": "Start at Evil area 1",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 20 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0157",
+  "effect": "Start at Evil area 2",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 21 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5826",
+  "effect": "Start at Evil area 3",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 22 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "9587",
+  "effect": "Start at Evil area 4",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 23 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "3752",
+  "effect": "Start at Evil area 5 (boss)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 24 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5656",
+  "effect": "Start at Forest area 1 fully powered up",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 25. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). GameFAQs lists it (All Items, Super Power-Up). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords",
+  "img": "codes.png"
+ },
+ {
+  "code": "4622",
+  "effect": "Start at Ocean area 1 fully powered up",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 26. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). GameFAQs lists it (All Power-Ups, Skip to Ocean World). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "3790",
+  "effect": "Start at Wind area 1 fully powered up",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Table entry 27. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5294",
+  "effect": "Start at Cloud area 1 fully powered up",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Table entry 28. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "8906",
+  "effect": "Start at Evil area 1 fully powered up",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Table entry 29. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "9437",
+  "effect": "Boss rush: start at the Forest boss fully powered up; every later stage starts at its world boss",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table entry 30: Forest area 5 with the power-up start; $C352 = 2, then 3 at the stage start, and while it is 3 every stage starts as area 5 ($02:45FE). GameFAQs lists it (Boss Mode, Super Boss Fight). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0278",
+  "effect": "Watch the ending",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Table entry 31: $C352 = 3, and leaving the password screen with $C352 = 3 goes to the ending instead of the game ($01:6A2D, state 7). Typed in Mesen: \"Let's go!\", then the ending text and \"The End.\"",
+  "section": "Passwords",
+  "img": "ending.png"
+ },
+ {
+  "code": "← → ← → ↑ ↓ ↑ ↓ B ← B → B ↑ B ↓, A",
+  "effect": "Arms a bomb counter: after a set number of bombs a flower power-up appears (GameFAQs: maximum bombs and fire and the remote primer, for that stage)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "section": "Button codes",
+  "note": "On the \"Area n\" screen of areas 1-4 (it follows the world select for area 1 and the password for the others), with bombs and fire both under 3 ($02:48D5, sequence $02:4983). Bombs to place (table $02:4943, areas 1-4): Forest 10/20/30/15, Ocean 20/30/40/15, Wind 20/30/30/15, Cloud 15/20/30/20, Evil 20/30/10/20. GameFAQs lists the code. Mesen (tools/pocket/test_flower.lua): typed on the Ocean 3 screen it arms the counter with 40 ($C35B = 1, $C35C = 40), and the flower is spawned ($02:680C) at the 40th bomb; Wind 3 arms 30, Ocean 2 30."
+ },
+ {
+  "code": "A + B + Select + Start",
+  "effect": "Soft reset",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Button codes",
+  "note": "Held together ($00:032A, the held-pad byte $FF82 & $0F = $0F): back to the boot state ($C1A8 = 0). Mesen: held for 10 frames in Forest 1, the intro starts again."
+ },
+ {
+  "code": "0101CCC2",
+  "effect": "Invincible (the unused debug flag $C2CC)",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "GameShark. $C2CC is cleared at every start and set only by the unused debug decoder; the two player-death checks ($02:436B, $02:4DC3) skip when it is set, and so does the clock running out. Mesen: 0 deaths in 2 x 20,000 frames of the random-input bot (40 deaths with infinite lives on)."
+ },
+ {
+  "code": "C33-6FB-E61 + 18D-C7B-6EA",
+  "effect": "Invincible (ROM patch of both death checks)",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "Game Genie: $02:436F JP NZ -> JP and $02:4DC7 JR NZ -> JR, the branches that skip when $C2CC is set. The same bytes as patches/pocket_invincible.ips. Mesen: 0 deaths in 2 x 20,000 frames of the bot."
+ },
+ {
+  "code": "0103F1C1",
+  "effect": "Infinite lives",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "GameShark: lives $C1F1 = 3 (the HUD shows 2). Mesen: 40 deaths in 20,000 frames of the bot, lives still 3."
+ },
+ {
+  "code": "0101CDC2",
+  "effect": "Start stops and restarts the clock instead of pausing (the unused debug flag $C2CD)",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "GameShark. With $C2CD set, Start in play toggles the clock ($C1F8) and opens no pause screen ($02:40C8). Mesen: in Forest 1 the clock stayed at 3:55 for 600 frames after Start, then ran on after a second Start (3:45 600 frames later)."
+ },
+ {
+  "code": "0F9-C1A-E62",
+  "effect": "Debug menu in place of the title menu",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "Game Genie, already documented for the Game Boy Color release. In Mesen the title leads to the numbered test menu (1-7), its text partly garbled.",
+  "img": "debug_menu.png"
+ },
+ {
+  "code": "patches/pocket_invincible.ips",
+  "effect": "Invincible",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Patches",
+  "note": "File $836F = C3, $8DC7 = 18 (the two death checks always skip). Mesen: 0 deaths in 2 x 20,000 frames of the bot."
+ },
+ {
+  "code": "patches/pocket_debug_password.ips",
+  "effect": "Restores the unused debug password: digit 1 invincible (0/1), 2 world (0-4), 3 Start stops the clock (0/1), 4 area (0-4)",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Patches",
+  "note": "The second decoder at $01:66CD has no caller. The patch ($6588 = CD CD 66 FA BD C1 C9) calls it when a code is not in the table, so the 32 table codes still work. Mesen: 1010 starts Forest area 1 invincible with the Start clock toggle (clock held at 3:54 for 300 frames, then ran on); 0214 starts Wind area 5 (boss), not invincible.",
+  "img": "debug_password.png"
+ }
+]

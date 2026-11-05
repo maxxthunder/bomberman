@@ -2,7 +2,7 @@
 
 Everything here comes from disassembling the ROM (`tools/disasm.py`, coverage grown from Mesen 2 code/data
 logs with `tools/sb4/cdl_fill.py`) and checking the results in Mesen 2 (`tools/sb4/*.lua`, run with
-`tools/sb4/job.sh`). Prior art: the GameFAQs codes page and the TCRF article in `res/`. Marks: ★ **New** (in
+`tools/sb4/job.sh`). Prior art: the GameFAQs codes page and a published article on the game in `res/`. Marks: ★ **New** (in
 neither), **Fixed** (prior art is wrong), **Known** (prior art has it; any detail added here is noted).
 
 The game is HiROM, 2 MB, banks `$C0-$DF`, header title `SUPER BOMBERMAN 4`. One dump: `Super Bomberman 4
@@ -167,7 +167,7 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
 - ★ **Why there is no 5-7 or 5-8 code.** The table has a slot for every stage up to 5-8, but slots 38 and 39
   hold 7777 and 4622, and those are caught as special codes before the stage would start. World 5 has six
   stages; with `$0092` set to 38 or 39 by hand the game loads the empty final-boss arena with no boss, which
-  are TCRF's filler levels (Known). 40 and up give a black screen.
+  are the filler levels (Known). 40 and up give a black screen.
 
   ![Stage slot 38 (5-7)](img/sb4/filler_5-7.png)
 - ★ **The title X trick, exactly.** `$C3:C83C` runs on the title menu (while `$7F:7114` ≠ 0) and counts X
@@ -179,7 +179,7 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
   Net effect: any **turbo X at a 7, 8 or 9 frame period** (6.7-8.6 presses a second) unlocks stages 11 and 12
   after 7.5-10 s (Mesen: 450, 506 and 614 frames of tapping); 10 frames does not. A Super Joycard does it,
   but so does any turbo pad set to that rate. After the unlock the stage select wraps to STAGE 12 はたはたとりとり
-  ("flag grab") and STAGE 11 とろっこやろう ("mine-cart guy"), and both load (Known: GameFAQs, TCRF).
+  ("flag grab") and STAGE 11 とろっこやろう ("mine-cart guy"), and both load (Known: GameFAQs and others).
 
   ![Stage select after the turbo trick, and stage 11](img/sb4/stages_11_12.png)
 - ★ **Starting from pad 2 plays as Black Bomberman.** If the START/A that confirms a normal game (title
@@ -197,7 +197,7 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
 
 ## Debug and unused content
 
-- **Debug parameter menu text** at `$C4:6E6A` (Known: TCRF): a build stamp `96-02-29 21:38` and the list
+- **Debug parameter menu text** at `$C4:6E6A` (Known): a build stamp `96-02-29 21:38` and the list
   PARAMETER / EXIT / WHO'S PRM / FIRE LEV / BOMBCOUNT / BOMBTYPE / SPEED / PASS BOMB / PASS WALL / PASS 16SEC /
   STOP TIME / PUSH / PUNCH / KICK / POW GLOVE / HEART / NODEATH (`#` = space, `&` = new line, `$` = end).
   Nothing references it: no 16- or 24-bit pointer to `$C4:6E40`-`$C4:6F9B` exists anywhere in the ROM, and
@@ -206,7 +206,7 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
   - **No text printer.** The text uses `#` for a space, `&` for a new line and `$` as the end. No routine in
     the ROM compares a character with both `$26` and `$24` (no `CMP #$26` within 48 bytes of a `CMP #$24`, raw
     search, disassembled or not), and this is the only string in that format anywhere in the ROM.
-  - **The font survives** (Known, TCRF's "unused font"): 64 2bpp tiles at `$D1:BC16`, tile n = character
+  - **The font survives** (Known, the "unused font"): 64 2bpp tiles at `$D1:BC16`, tile n = character
     `$20`+n, in which `#`, `$`, `%` and `&` are blank tiles. It is loaded with the battle graphics (DMA of
     `$D1:BC15`-`$D1:EFA2`) to VRAM word `$5000`, the BG3 character base in battle, but BG3's map there is
     tile `$6E` throughout, so it is never shown. Drawn with this font, the text would look like the mock-up below
@@ -226,14 +226,14 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
   fire 8; not tried), which is what the power-up passwords already do.
 
   ![The PARAMETER text drawn with the unused font (mock-up)](img/sb4/unused/debug_menu_mockup.png)
-- **Unused item icons** (Known: TCRF, the Power Bomb left over from Super Bomberman 2 and the "?" item). Both
+- **Unused item icons** (Known: the Power Bomb left over from Super Bomberman 2 and the "?" item). Both
   are raw 4bpp 16×16 icons in the battle item sheet: Power Bomb at `$D1:C558`, "?" at `$D1:C598` (tiles t,
-  t+1, t+16, t+17; found with `tools/sb4/findtile.py` from TCRF's pictures). The sheet starts at `$D1:C018`
+  t+1, t+16, t+17; found with `tools/sb4/findtile.py` from the published pictures). The sheet starts at `$D1:C018`
   and goes to VRAM word `$2800` in battle, so they are BG tiles `$2AA` and `$2AC`; no battle tilemap dumped
   during play used them. Shown with the battle item palette (CGRAM palette 4, `tools/sb4/battle_cgram.bin`):
 
   ![Power Bomb and question-mark icons](img/sb4/unused/item_icons_D1C558_D1C598.png)
-- **Unused font** (Known: TCRF): `$D1:BC16`, 64 2bpp tiles, loaded to BG3 in battle and never shown (see
+- **Unused font** (Known): `$D1:BC16`, 64 2bpp tiles, loaded to BG3 in battle and never shown (see
   the debug menu above).
 
   ![The unused 2bpp font](img/sb4/unused/debug_font_D1BC16.png)
@@ -247,9 +247,9 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
   `$D7:6C3A`-`$D7:DB3A`, `$DD:24CA`-`$DD:86D4`, `$DE:9C93`-`$DE:FFFF`). None of them was confirmed unused, so
   no New unused graphics are claimed; the list is in the sweep's output and is the place to start. Palettes
   were not swept.
-- **Sound driver banner** at `$DE:744D` (Known: TCRF): `SFX SOUND DRIVER Ver 2.28 (C)1993-95 Hudson Soft`,
+- **Sound driver banner** at `$DE:744D` (Known): `SFX SOUND DRIVER Ver 2.28 (C)1993-95 Hudson Soft`,
   `Program : LU.Iwabuchi`, `Driver : Kazumi-TYPE`.
-- **Filler stages 5-7, 5-8** (Known: TCRF; see above for why no password reaches them).
+- **Filler stages 5-7, 5-8** (Known; see above for why no password reaches them).
 
 ## Not verified
 
@@ -379,7 +379,7 @@ to start-position data in `$C3`. Those streams are compressed and were not decod
   - Stage 9 was still black at the capture frame. It needs a later shot.
 - **Normal game**, all 40 slots of `$0092`, forced at the password hit (`$C2:A9C9`):
   ![Normal stages](img/sb4/maps/normal_stages.png)
-  Slots 38 and 39 are the empty final-boss arena (TCRF's filler 5-7/5-8, Known), and no other slot is cut.
+  Slots 38 and 39 are the empty final-boss arena (the known filler 5-7/5-8), and no other slot is cut.
 
 ### Cheat codes (Pro Action Replay)
 
@@ -392,7 +392,7 @@ English ROM where marked:
 | `C2AEE6:7D` + `C2AEE7:16` | password **5757** starts the filler stage 5-7 (index 38) | JP and EN: `$0092`=38, empty arena |
 | `C2AEE8:E2` + `C2AEE9:16` | password **5858** starts filler 5-8 (index 39) | JP: `$0092`=39 |
 | `7E0274:01` | pause without the PAUSE! label | JP and EN |
-| `7F202B:0A` / `0B` | stage 11 / 12 at the select (TCRF) | Known, not re-run |
+| `7F202B:0A` / `0B` | stage 11 / 12 at the select | Known, not re-run |
 
 The two filler codes rewrite table slots 38/39, which hold 7777 and 4622. Both are caught as special codes before
 the table is searched, so the slots were dead.
