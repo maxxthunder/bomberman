@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Game Boy Color, Super Nintendo, Genesis and PC Engine
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.4.0](https://img.shields.io/badge/version-1.4.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.4.1](https://img.shields.io/badge/version-1.4.1-ff4f9a)](CHANGELOG.md)
 
 <p align="center">
   <img src="docs/img/logos/nes1_us.png" alt="Bomberman (NES)" height="72">

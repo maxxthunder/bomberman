@@ -2,6 +2,9 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.4.1 (2026-11-05)
+- Light mode: darker console colours for the picker headings and a readable ★ New mark in the password tables.
+
 ## 1.4.0 (2026-11-05)
 - Each console has its own colour (Super Nintendo purple, Genesis blue, PC Engine orange, NES red, Game Boy green), and
   passwords are drawn as plates in the style of that console's password screen.
