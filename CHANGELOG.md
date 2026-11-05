@@ -2,6 +2,10 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.4.2 (2026-11-05)
+- The game picker on a game's page is a slim bar with the current game and a Change game button that opens every
+  game as cards, grouped by console. No more scrolling row of logos; phones get the same bar instead of a drop-down.
+
 ## 1.4.1 (2026-11-05)
 - Light mode: darker console colours for the picker headings and a readable ★ New mark in the password tables.
 

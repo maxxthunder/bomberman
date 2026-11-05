@@ -71,18 +71,26 @@ button { cursor: pointer; }
 .gcard[aria-pressed=true] { border-color: var(--acc); background: color-mix(in srgb, var(--acc) 22%, var(--panel)); }
 @media (max-width: 760px) { .gcards { grid-template-columns: repeat(3, 1fr); gap: 8px; } }
 @media (max-width: 480px) { .gcard { padding: 8px 4px; font-size: 13px; } .gcard img { height: 52px; } .gcard small { font-size: 12px; } }
-#gsel_wrap { display: none; }
+/* once a game is open: a slim sticky bar with that game and a button that drops the cards down as a panel */
+#pbar { display: none; }
 #picker.compact { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 8px 0; border-bottom: 1px solid var(--line); margin: -8px 0 0; }
-#picker.compact #cards { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: thin; padding-bottom: 2px; }
-#picker.compact .pgroup, #picker.compact .gcards { display: contents; }
-#picker.compact .pgroup h3, #picker.compact .gcard .nm, #picker.compact .gcard small { display: none; }
-#picker.compact .gcard { padding: 3px 5px; border-radius: 8px; border-top-width: 3px; flex: none; }
-#picker.compact .gcard img { width: 58px; height: 26px; }
-@media (max-width: 600px) {
-  #picker.compact #cards { display: none; }
-  #picker.compact #gsel_wrap { display: flex; gap: 10px; align-items: center; font-weight: 800; min-width: 0; }
-  #gsel { flex: 1; min-width: 0; }
-}
+#picker.compact #pbar { display: flex; align-items: center; gap: 10px; min-width: 0; }
+#pbar img { height: 30px; width: 64px; object-fit: contain; image-rendering: pixelated; flex: none; }
+#pname { flex: 1; min-width: 0; font-weight: 800; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#pname small { display: block; color: var(--muted); font: 600 13px var(--body); }
+#pbtn { display: inline-flex; align-items: center; gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; font-weight: 800; flex: none; }
+#pbtn:hover, #pbtn[aria-expanded=true] { border-color: var(--acc); }
+#pbtn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
+#picker.compact #cards { display: none; }
+#picker.compact.open #cards { display: grid; gap: 14px; margin-top: 10px; padding: 12px; background: var(--panel-2); border: 1px solid var(--line);
+  border-radius: 12px; max-height: calc(100vh - 80px); overflow-y: auto; scrollbar-width: thin; }
+/* six to a row in the panel, so every console fits without scrolling on a desktop screen */
+#picker.open .gcards { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; }
+#picker.open .gcard { padding: 8px 4px 6px; font-size: 13px; }
+#picker.open .gcard img { height: 48px; }
+#picker.open .pgroup { gap: 6px; }
+#pbtn .narrow { display: none; }
+@media (max-width: 600px) { #pbtn .wide { display: none; } #pbtn .narrow { display: inline; } #picker.open .gcards { grid-template-columns: repeat(3, 1fr); } }
 
 .ghead { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
 .ghead img { height: 48px; width: auto; image-rendering: pixelated; }
@@ -206,8 +214,9 @@ footer a:hover { text-decoration: underline; }
   </header>
 
   <nav id="picker" aria-label="Game">
+    <div id="pbar"><img id="pcur" alt=""><span id="pname"></span>
+      <button type="button" id="pbtn" aria-expanded="false" aria-controls="cards"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span class="wide">Change game</span><span class="narrow">Games</span></button></div>
     <div id="cards"></div>
-    <label id="gsel_wrap">Game <select id="gsel"></select></label>
   </nav>
 
   <div id="game" hidden style="display:grid;gap:18px">
@@ -248,7 +257,7 @@ footer a:hover { text-decoration: underline; }
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.4.1</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.4.2</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -1598,9 +1607,11 @@ const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Eng
 $("cards").innerHTML = families.map((f, i) => `<div class="pgroup" data-fam="${FAM[f] || ""}"><h3 id="pf_${i}">${esc(f)}</h3>
   <div class="gcards" role="group" aria-labelledby="pf_${i}">${byFamily(f).map(x =>
     `<button type="button" class="gcard" data-g="${x.id}" aria-pressed="false" title="${esc(x.name)}"><img src="docs/img/logos/${x.logo}.png" alt=""><span class="nm">${esc(x.name)}</span><small>${x.year}</small></button>`).join("")}</div></div>`).join("");
-$("gsel").innerHTML = families.map(f => `<optgroup label="${esc(f)}">${byFamily(f).map(x => `<option value="${x.id}">${esc(x.name)}</option>`).join("")}</optgroup>`).join("");
-$("cards").onclick = e => { const b = e.target.closest(".gcard"); if (b) pickGame(b.dataset.g); };
-$("gsel").onchange = () => pickGame($("gsel").value);
+$("cards").onclick = e => { const b = e.target.closest(".gcard"); if (b) { const was = $("picker").classList.contains("open"); pickGame(b.dataset.g); if (was) $("game").scrollIntoView(); } };
+const openPicker = on => { $("picker").classList.toggle("open", on); $("pbtn").setAttribute("aria-expanded", on); };
+$("pbtn").onclick = () => openPicker(!$("picker").classList.contains("open"));
+document.addEventListener("keydown", e => { if (e.key === "Escape" && $("picker").classList.contains("open")) { openPicker(false); $("pbtn").focus(); } });
+document.addEventListener("click", e => { if (!$("picker").contains(e.target)) openPicker(false); });
 $("docs").innerHTML = GAMES.map(x => `<a href="docs/${x.id}.md">${esc(x.name)}</a>`).join(", ");
 $("legend").innerHTML = `<span>${icon("emu", "Tested in an emulator")} tested in an emulator</span><span>${icon("rom", "Read from the ROM code")} read from the ROM code</span>`;
 
@@ -1612,7 +1623,7 @@ const versionsDiffer = game => {
 };
 function setLogo() {
   const l = logoFor(g, ver);
-  $("glogo").src = `docs/img/logos/${l}.png`;
+  $("glogo").src = $("pcur").src = `docs/img/logos/${l}.png`;
   const b = $("cards").querySelector(`.gcard[data-g="${g.id}"] img`);
   if (b) b.src = `docs/img/logos/${l}.png`;
 }
@@ -1620,12 +1631,11 @@ function pickGame(id) {
   g = GAMES.find(x => x.id === id) || GAMES[0];
   $("game").hidden = false;
   $("picker").classList.add("compact");
-  $("game").dataset.fam = FAM[g.family] || "";
-  $("gsel").value = g.id;
+  openPicker(false);
+  $("game").dataset.fam = $("picker").dataset.fam = FAM[g.family] || "";
+  $("pname").innerHTML = `${esc(g.name)}<small>${esc(g.plat)}</small>`;
   for (const b of $("cards").querySelectorAll(".gcard")) {
     b.setAttribute("aria-pressed", b.dataset.g === g.id);
-    // keep the picked game in view in the scrolling row
-    if (b.dataset.g === g.id) requestAnimationFrame(() => { const c = $("cards"); c.scrollLeft = b.offsetLeft - c.offsetLeft - (c.clientWidth - b.offsetWidth) / 2; });
     const x = GAMES.find(y => y.id === b.dataset.g);
     b.querySelector("img").src = `docs/img/logos/${x.logo}.png`;
   }
