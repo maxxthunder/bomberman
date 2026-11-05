@@ -1,0 +1,1940 @@
+[
+ {
+  "code": "KKKFKJKO",
+  "effect": "Start at 1-1 with 1 bomb, fire 1",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 1-1\"; key 2, free nibbles 15, 7. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "EEGJEBEE",
+  "effect": "Start at 1-2 with 1 bomb, fire 1",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 1-2\"; key 9, free nibbles 3, 0. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MMJKMOLM",
+  "effect": "Start at 1-3 with 1 bomb, fire 2",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 1-3\"; key 15, free nibbles 10, 0. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MMDHMJJJ",
+  "effect": "Start at 1-4 with 1 bomb, fire 3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 1-4\"; key 15, free nibbles 2, 2. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DDGCDFLN",
+  "effect": "Start at 1-5 with 1 bomb, fire 3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 1-5\"; key 12, free nibbles 8, 15. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BBMAAKGA",
+  "effect": "Start at 1-6 with 2 bombs, fire 3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 1-6\"; key 10, free nibbles 8, 1. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CCIDPMNI",
+  "effect": "Start at 1-7 with 2 bombs, fire 3",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 1-7\"; key 1, free nibbles 14, 6. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MMGLLCDI",
+  "effect": "Start at 1-8 with 2 bombs, fire 4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 1-8\"; key 15, free nibbles 14, 8. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IHINHLFC",
+  "effect": "Start at 2-1 with 2 bombs, fire 4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 2-1\"; key 7, free nibbles 9, 6. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "GEEPEJAO",
+  "effect": "Start at 2-2 with 2 bombs, fire 4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 2-2\"; key 8, free nibbles 5, 13. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NKCPCBPC",
+  "effect": "Start at 2-3 with 3 bombs, fire 4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 2-3\"; key 3, free nibbles 9, 2. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABGPEJGI",
+  "effect": "Start at 2-4 with 3 bombs, fire 4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 2-4\"; key 11, free nibbles 6, 12. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NKIHCBPC",
+  "effect": "Start at 2-5 with 3 bombs, fire 4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 2-5\"; key 3, free nibbles 9, 2. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FOCKIOIJ",
+  "effect": "Start at 2-6 with 4 bombs, fire 4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 2-6\"; key 4, free nibbles 1, 9. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HIPPOEOD",
+  "effect": "Start at 2-7 with 4 bombs, fire 4",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 2-7\"; key 6, free nibbles 15, 10. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CPHIKLOE",
+  "effect": "Start at 2-8 with 4 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 2-8\"; key 1, free nibbles 15, 8. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OIOACMCM",
+  "effect": "Start at 3-1 with 5 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 3-1\"; key 5, free nibbles 10, 10. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "EAGAJLJE",
+  "effect": "Start at 3-2 with 5 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 3-2\"; key 9, free nibbles 7, 0. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IOOINJNJ",
+  "effect": "Start at 3-3 with 5 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 3-3\"; key 7, free nibbles 10, 10. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DLMEGMGE",
+  "effect": "Start at 3-4 with 5 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 3-4\"; key 12, free nibbles 3, 5. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FHPCCMPM",
+  "effect": "Start at 3-5 with 6 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 3-5\"; key 4, free nibbles 11, 11. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HFNHNEKI",
+  "effect": "Start at 3-6 with 6 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 3-6\"; key 6, free nibbles 15, 1. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OINAPPCJ",
+  "effect": "Start at 3-7 with 6 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 3-7\"; key 5, free nibbles 5, 8. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NCFIHAIE",
+  "effect": "Start at 3-8 with 6 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 3-8\"; key 3, free nibbles 8, 10. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OHOFNECJ",
+  "effect": "Start at 4-1 with 7 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 4-1\"; key 5, free nibbles 12, 8. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "AGBGJDMO",
+  "effect": "Start at 4-2 with 7 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 4-2\"; key 11, free nibbles 7, 14. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BEGDJILN",
+  "effect": "Start at 4-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 4-3\"; key 10, free nibbles 13, 9. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BEEKJGLM",
+  "effect": "Start at 4-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 4-4\"; key 10, free nibbles 2, 5. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IFNEPMNN",
+  "effect": "Start at 4-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 4-5\"; key 7, free nibbles 8, 4. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IFKKPJNM",
+  "effect": "Start at 4-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 4-6\"; key 7, free nibbles 10, 8. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MDEIGJAJ",
+  "effect": "Start at 4-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 4-7\"; key 15, free nibbles 2, 2. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MDGEGPAJ",
+  "effect": "Start at 4-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 4-8\"; key 15, free nibbles 15, 2. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "LBLBEHBN",
+  "effect": "Start at 5-1 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 5-1\"; key 14, free nibbles 8, 13. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MALEGCAI",
+  "effect": "Start at 5-2 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 5-2\"; key 15, free nibbles 14, 8. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DGLKAHGM",
+  "effect": "Start at 5-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 5-3\"; key 12, free nibbles 10, 3. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "LBJPENBC",
+  "effect": "Start at 5-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 5-4\"; key 14, free nibbles 13, 15. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BLLLJKLN",
+  "effect": "Start at 5-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 5-5\"; key 10, free nibbles 8, 9. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "KHIJOFHI",
+  "effect": "Start at 5-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 5-6\"; key 2, free nibbles 6, 5. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HKPDCHKN",
+  "effect": "Start at 5-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 5-7\"; key 6, free nibbles 0, 5. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "COHFHHOE",
+  "effect": "Start at 5-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 5-8\"; key 1, free nibbles 7, 8. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "JGJHBKEC",
+  "effect": "Start at 6-1 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 6-1\"; key 13, free nibbles 15, 12. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFPDHEOO",
+  "effect": "Start at 6-2 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 6-2\"; key 1, free nibbles 8, 4. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFNIHMOI",
+  "effect": "Start at 6-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 6-3\"; key 1, free nibbles 14, 6. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "GJACMEDJ",
+  "effect": "Start at 6-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 6-4\"; key 8, free nibbles 1, 5. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFOFHDOO",
+  "effect": "Start at 6-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 6-5\"; key 1, free nibbles 13, 4. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "LAAOEIBN",
+  "effect": "Start at 6-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 6-6\"; key 14, free nibbles 9, 13. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "JGACBOEN",
+  "effect": "Start at 6-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 6-7\"; key 13, free nibbles 8, 14. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MBGOGKAE",
+  "effect": "Start at 6-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (JP Version): Area 6-8\"; key 15, free nibbles 13, 6. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "888D8C8G",
+  "effect": "Start at 1-1 with 1 bomb, fire 1",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-1\"; key 6, free nibbles 11, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HHDBD7DJ",
+  "effect": "Start at 1-2 with 2 bombs, fire 2",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-2\"; key 3, free nibbles 11, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "115K2823",
+  "effect": "Start at 1-3 with 2 bombs, fire 2",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-3\"; key 11, free nibbles 13, 10. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "88J2BC6C",
+  "effect": "Start at 1-4 with 2 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-4\"; key 6, free nibbles 11, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "GG17GHF5",
+  "effect": "Start at 1-5 with 1 bomb, fire 2",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-5\"; key 15, free nibbles 12, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "336HKDK5",
+  "effect": "Start at 1-6 with 2 bombs, fire 2",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-6\"; key 1, free nibbles 3, 8. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BB3B88J3",
+  "effect": "Start at 1-7 with 2 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-7\"; key 7, free nibbles 1, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "883FBJ6C",
+  "effect": "Start at 1-8 with 2 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-8\"; key 6, free nibbles 3, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "7571542H",
+  "effect": "Start at 2-1 with 2 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-1\"; key 8, free nibbles 4, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "J66161BF",
+  "effect": "Start at 2-2 with 2 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-2\"; key 5, free nibbles 14, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DHK5KCKB",
+  "effect": "Start at 2-3 with 3 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-3\"; key 2, free nibbles 15, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "C4FFGDG3",
+  "effect": "Start at 2-4 with 3 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-4\"; key 13, free nibbles 15, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "C45FG3GH",
+  "effect": "Start at 2-5 with 3 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-5\"; key 13, free nibbles 12, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "4C5GGGF5",
+  "effect": "Start at 2-6 with 4 bombs, fire 3",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-6\"; key 12, free nibbles 3, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "B83B6D65",
+  "effect": "Start at 2-7 with 4 bombs, fire 4",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-7\"; key 7, free nibbles 5, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "GF71454G",
+  "effect": "Start at 2-8 with 4 bombs, fire 4",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-8\"; key 15, free nibbles 6, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "151BG275",
+  "effect": "Start at 3-1 with 5 bombs, fire 4",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-1\"; key 11, free nibbles 1, 2. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "152FGD75",
+  "effect": "Start at 3-2 with 5 bombs, fire 4",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-2\"; key 11, free nibbles 9, 2. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DKK8823H",
+  "effect": "Start at 3-3 with 5 bombs, fire 4",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-3\"; key 2, free nibbles 8, 1. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "68B7KCBH",
+  "effect": "Start at 3-4 with 5 bombs, fire 4",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-4\"; key 4, free nibbles 9, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "86DHHKJB",
+  "effect": "Start at 3-5 with 6 bombs, fire 4",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-5\"; key 6, free nibbles 6, 1. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BJDBDHH1",
+  "effect": "Start at 3-6 with 6 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-6\"; key 7, free nibbles 4, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "H3JC86BJ",
+  "effect": "Start at 3-7 with 6 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-7\"; key 3, free nibbles 7, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "68H231K5",
+  "effect": "Start at 3-8 with 6 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-8\"; key 4, free nibbles 15, 13. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "6B63DJKH",
+  "effect": "Start at 4-1 with 7 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-1\"; key 4, free nibbles 1, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "6BJHD2KG",
+  "effect": "Start at 4-2 with 7 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-2\"; key 4, free nibbles 14, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "2572C3FG",
+  "effect": "Start at 4-3 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-3\"; key 10, free nibbles 11, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFF82155",
+  "effect": "Start at 4-4 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-4\"; key 13, free nibbles 6, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "52C6F2C3",
+  "effect": "Start at 4-5 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-5\"; key 9, free nibbles 3, 8. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "6B31HHK3",
+  "effect": "Start at 4-6 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-6\"; key 4, free nibbles 7, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "17CK48G3",
+  "effect": "Start at 4-7 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-7\"; key 11, free nibbles 13, 10. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "71G2G84B",
+  "effect": "Start at 4-8 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-8\"; key 8, free nibbles 14, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "C5C12F55",
+  "effect": "Start at 5-1 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-1\"; key 13, free nibbles 3, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "6KJFHJKC",
+  "effect": "Start at 5-2 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-2\"; key 4, free nibbles 1, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "742DGD4B",
+  "effect": "Start at 5-3 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-3\"; key 8, free nibbles 10, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "7414GH4G",
+  "effect": "Start at 5-4 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-4\"; key 8, free nibbles 11, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "5CCJF6CJ",
+  "effect": "Start at 5-5 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-5\"; key 9, free nibbles 13, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "J3K4DK3J",
+  "effect": "Start at 5-6 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-6\"; key 5, free nibbles 5, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "8DKF34DG",
+  "effect": "Start at 5-7 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-7\"; key 6, free nibbles 10, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "471K1G7G",
+  "effect": "Start at 5-8 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-8\"; key 12, free nibbles 3, 3. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "C7C4245C",
+  "effect": "Start at 6-1 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-1\"; key 13, free nibbles 1, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "F1GH5125",
+  "effect": "Start at 6-2 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-2\"; key 14, free nibbles 5, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "8H6136DG",
+  "effect": "Start at 6-3 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-3\"; key 6, free nibbles 2, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "7C1JGH4B",
+  "effect": "Start at 6-4 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-4\"; key 8, free nibbles 11, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "36JK87JJ",
+  "effect": "Start at 6-5 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-5\"; key 1, free nibbles 9, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "633FHFKG",
+  "effect": "Start at 6-6 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-6\"; key 4, free nibbles 10, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "1FC34CGJ",
+  "effect": "Start at 6-7 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-7\"; key 11, free nibbles 6, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "1F4H4KGC",
+  "effect": "Start at 6-8 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-8\"; key 11, free nibbles 11, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "KJH5C13D",
+  "effect": "Play the bonus stage, then back to the title",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Bonus Stage\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PONEJACK",
+  "section": "Secrets"
+ },
+ {
+  "code": "K2JG2JF4",
+  "effect": "Long bomb fuse",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Long Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBOLD",
+  "section": "Secrets"
+ },
+ {
+  "code": "K138BHDJ",
+  "effect": "Remote-control bombs in NORMAL MODE",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Manual Detonator\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PACHINKO",
+  "section": "Secrets"
+ },
+ {
+  "code": "K2JG2G1H",
+  "effect": "Normal bomb fuse",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Normal Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBMAN",
+  "section": "Secrets"
+ },
+ {
+  "code": "K1HB3G1H",
+  "effect": "Semi-remote bombs in NORMAL MODE: remote, but they also go off on their own",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Semi-Manual Detonator\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PANICMAN",
+  "section": "Secrets"
+ },
+ {
+  "code": "K2JG2135",
+  "effect": "Short bomb fuse",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Short Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBACE",
+  "section": "Secrets"
+ },
+ {
+  "code": "EEGBLLJE",
+  "effect": "Start at 1-2 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 1-2\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 9. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "EEALLNJE",
+  "effect": "Start at 1-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 1-3\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 9. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "EEBMLFJK",
+  "effect": "Start at 1-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 1-4\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 9. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NNIJFLIC",
+  "effect": "Start at 1-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 1-5\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 3. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NNHPFKIC",
+  "effect": "Start at 1-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 1-6\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 3. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MMEJGGAO",
+  "effect": "Start at 1-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 1-7\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 15. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DDAMABGI",
+  "effect": "Start at 1-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 1-8\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 12. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MLMFGLAC",
+  "effect": "Start at 2-1 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 2-1\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 15. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "LMMIEABE",
+  "effect": "Start at 2-2 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 2-2\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 14. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BAGCJLLN",
+  "effect": "Start at 2-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 2-3\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 10. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NKPKFAIE",
+  "effect": "Start at 2-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 2-4\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 3. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IHNLPGNJ",
+  "effect": "Start at 2-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 2-5\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 7. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "KNIGOBHN",
+  "effect": "Start at 2-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 2-6\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 2. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FOKONDPN",
+  "effect": "Start at 2-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 2-7\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 4. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NKFNFFIO",
+  "effect": "Start at 2-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 2-8\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 3. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DLDAABGG",
+  "effect": "Start at 3-1 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 3-1\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 12. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "AEBHDLMC",
+  "effect": "Start at 3-2 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 3-2\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 11. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "LDDOEABE",
+  "effect": "Start at 3-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 3-3\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 14. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IOFMPANA",
+  "effect": "Start at 3-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 3-4\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 7. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MJALGCAJ",
+  "effect": "Start at 3-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 3-5\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 15. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "LDABECBJ",
+  "effect": "Start at 3-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 3-6\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 14. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "EAMALHJE",
+  "effect": "Start at 3-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 3-7\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 9. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CNHFHDOO",
+  "effect": "Start at 3-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 3-8\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 1. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BEBFJCLM",
+  "effect": "Start at 4-1 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 4-1\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 10. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "JLDLBEEJ",
+  "effect": "Start at 4-2 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 4-2\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 13. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CKNAHEON",
+  "effect": "Start at 4-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 4-3\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 1. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "LJJAEJBM",
+  "effect": "Start at 4-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 4-4\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 14. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "KCHCOBHA",
+  "effect": "Start at 4-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 4-5\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 2. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HONCCJKM",
+  "effect": "Start at 4-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 4-6\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 6. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CKIGHPOO",
+  "effect": "Start at 4-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 4-7\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 1. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "KCODOBHN",
+  "effect": "Start at 4-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 4-8\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 2. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "AMABDNMC",
+  "effect": "Start at 5-1 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 5-1\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 11. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FPOGNAPE",
+  "effect": "Start at 5-2 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 5-2\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 4. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BLGHJFLI",
+  "effect": "Start at 5-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 5-3\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 10. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "AMGEDAMA",
+  "effect": "Start at 5-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 5-4\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 11. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "COODHAOC",
+  "effect": "Start at 5-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 5-5\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 1. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NIHDFBIC",
+  "effect": "Start at 5-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 5-6\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 3. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FPKMNCPO",
+  "effect": "Start at 5-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 5-7\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 4. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BLJAJFLI",
+  "effect": "Start at 5-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 5-8\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 10. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FCFCNLPM",
+  "effect": "Start at 6-1 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 6-1\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 4. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FCOJNMPE",
+  "effect": "Start at 6-2 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 6-2\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 4. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HNFACFKM",
+  "effect": "Start at 6-3 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 6-3\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 6. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFKBHOOO",
+  "effect": "Start at 6-4 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 6-4\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 1. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ALMLDGMO",
+  "effect": "Start at 6-5 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 6-5\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 11. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFFAHGOJ",
+  "effect": "Start at 6-6 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 6-6\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 1. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OPNAKNCI",
+  "effect": "Start at 6-7 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 6-7\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 5. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "KIOFOGHI",
+  "effect": "Start at 6-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level 6-8\" (JP list): right, and every one also has 8 bombs and fire 5, which the list doesn't say; key 2. typed with the pad in Mesen (JP); RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "1F4K4CGJ",
+  "effect": "Start at 6-8 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Passwords: Final Level\"; key 11, free nibbles 6, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "K3456712",
+  "effect": "Sound test (BOMBERMAN2 SOUND ROOM)",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Sound Test\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PCDEFGAB",
+  "section": "Secrets"
+ },
+ {
+  "code": "PONEJACK",
+  "effect": "Play the bonus stage, then back to the title",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Bonus Stage\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: KJH5C13D",
+  "section": "Secrets"
+ },
+ {
+  "code": "PBOMBOLD",
+  "effect": "Long bomb fuse",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Long Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2JF4",
+  "section": "Secrets"
+ },
+ {
+  "code": "PACHINKO",
+  "effect": "Remote-control bombs in NORMAL MODE",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Manual Detonator\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K138BHDJ",
+  "section": "Secrets"
+ },
+ {
+  "code": "PBOMBMAN",
+  "effect": "Normal bomb fuse",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Normal Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2G1H",
+  "section": "Secrets"
+ },
+ {
+  "code": "PANICMAN",
+  "effect": "Semi-remote bombs in NORMAL MODE: remote, but they also go off on their own",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Semi Manual Detonator\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K1HB3G1H",
+  "section": "Secrets"
+ },
+ {
+  "code": "PBOMBACE",
+  "effect": "Short bomb fuse",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Small Primer Time\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2135",
+  "section": "Secrets"
+ },
+ {
+  "code": "PCDEFGAB",
+  "effect": "Sound test (BOMBERMAN2 SOUND ROOM)",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Sound Test\", also TCRF. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K3456712",
+  "section": "Secrets"
+ },
+ {
+  "code": "LAELEJBG",
+  "effect": "Start at 6-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Secret Passwords (Japanese version): Start at final level with max bomb explosion length and max bombs on-screen at a time\"; key 14, free nibbles 3, 6. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FFFJNAPA",
+  "effect": "Start at 1-1 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Secret Passwords (Japanese version): Start with max bomb explosion length and max bombs on-screen at a time\"; key 4, free nibbles 15, 15. typed with the pad in Mesen (JP); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "1F4441G1",
+  "effect": "Start at 6-8 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Special Passwords: Start at final level with max bomb explosion length and max bombs on-screen at a time\"; key 11, free nibbles 0, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "111K41G1",
+  "effect": "Start at 1-1 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"Special Passwords: Start with max bomb explosion length and max bombs on-screen at a time\"; key 11, free nibbles 0, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "33333333",
+  "effect": "Start at 1-1 with 1 bomb, fire 1",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "made with password.mjs (key 1, free nibbles 0); typed with the pad in Mesen (US), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CCCCCCCC",
+  "effect": "Start at 1-1 with 1 bomb, fire 1",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "made with password.mjs (key 1, free nibbles 0); typed with the pad in Mesen (JP), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "368883J3",
+  "effect": "Start at 6-8 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "made with password.mjs (key 1, free nibbles 0); typed with the pad in Mesen (US), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFHHHCOC",
+  "effect": "Start at 6-8 with 8 bombs, fire 5",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "made with password.mjs (key 1, free nibbles 0); typed with the pad in Mesen (JP), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "KKK1BK6K",
+  "effect": "Start at 1-1 with 8 bombs, fire 5",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "key 0: the game never shows a code with key 0 (it picks 1-15), the decoder takes it. made with password.mjs (key 0, free nibbles 0); typed with the pad in Mesen (US), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "04E6:01",
+  "effect": "Invincible",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (custom). RAM $04E6, the vest timer flag: both kill routines ($CEA4 fire, $CEC4 enemy contact; JP $CE10/$CE30) return while it is non-zero. Random bot, 12,000 frames of NORMAL MODE: 0 deaths (US and JP; 10-11 deaths without)",
+  "section": "cheat"
+ },
+ {
+  "code": "AVZGKT + AVGGKT",
+  "effect": "Invincible (US)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (Game Genie). RTS at $CEA4 and $CEC4, the two kill routines. 0 deaths in 12,000 frames. Same bytes as patches/nes2_invincible_us.ips",
+  "section": "cheat"
+ },
+ {
+  "code": "ATPGET + ATLGET",
+  "effect": "Invincible (JP)",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (Game Genie). RTS at JP $CE10 and $CE30. 0 deaths in 12,000 frames. Same bytes as patches/nes2_invincible_jp.ips",
+  "section": "cheat"
+ },
+ {
+  "code": "04E5:02",
+  "effect": "Infinite lives",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (custom). RAM $04E5, lives (DEC / BMI at $CAC4): 12 deaths in 12,000 frames, no game over (US and JP)",
+  "section": "cheat"
+ },
+ {
+  "code": "00B7:F0",
+  "effect": "Every stage clears at once (US)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (custom). RAM $B7, the stage-clear counter (the main loop ends the stage when it reaches $F0, $CA19): 16 stage changes in 8,000 frames, to area 3",
+  "section": "cheat"
+ },
+ {
+  "code": "00A9:F0",
+  "effect": "Every stage clears at once (JP)",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (custom). the same counter at JP $A9 (the JP zero page sits $0E lower): 16 stage changes in 8,000 frames",
+  "section": "cheat"
+ },
+ {
+  "code": "AENIYZPA",
+  "effect": "Demo recorder: the attract demo records pad 1 instead of playing",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (Game Genie). ROM byte $D2F7 (JP $D263) is 1 = play the recorded demo ($05:9A01). Set to 0, the demo code stores (button, frame count) pairs at ($B9),Y, the demo's own ROM table, instead: in Mesen the demo stood still and the store at $05:9A22 ran on each button change (3 times in 3,000 frames; 0 without the code, 915 playback calls). On a cart those stores hit the MMC1 registers; the recorder needs RAM there (development hardware)",
+  "section": "cheat"
+ },
+ {
+  "code": "patches/nes2_invincible_us.ips",
+  "effect": "US: fire and enemies never kill",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $1CEB4 and $1CED4: AD -> 60 (RTS); the same bytes were verified as the Game Genie codes AVZGKT + AVGGKT",
+  "section": "patch"
+ },
+ {
+  "code": "patches/nes2_invincible_jp.ips",
+  "effect": "JP: fire and enemies never kill",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $1CE20 and $1CE40: AD -> 60; the same bytes were verified as the Game Genie codes ATPGET + ATLGET",
+  "section": "patch"
+ }
+]

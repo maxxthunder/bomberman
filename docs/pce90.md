@@ -21,6 +21,9 @@ has it; the mechanism is added here).
 | `$2010` (`$10`) | 1 when the last attract-mode demo played to its end, 0 when Run cut it short | `$0B:CDBE` / `$0B:CDC2` |
 | `$2200` / `$220A` | pad 1 held / newly pressed: `$01` I, `$02` II, `$04` Select, `$08` Run, `$10` Up, `$20` Right, `$40` Down, `$80` Left | `$01:A004`, `$02:C8D3` |
 | `$243A` | player power-up bits: `$10` remote control, `$20` wall pass, `$40` bomb pass, `$80` invincible (timer `$2446`); bits 0-2 = dying/dead state | `$09:8757` item handlers, `$09:8AE9`, `$09:8FA3` |
+| `$2437` | 1 = stage cleared (set when all enemies are gone and Bomberman stands on the open exit); writing 1 clears any stage but 8-8 | `$0B:C1E0`, `$09:8943`, `$00:EC5F` |
+| `$2438` | lives left (game over when `DEC` goes negative) | `$00:EC7F` |
+| `$244A-$2849` | the 32 × 32 stage map, one byte per cell (graphic × 32 + type) | `$00:EE20`, see [Maps](#maps) |
 | `$284A` | round - 1 (the game calls it SCENE in the select room) | `$02:C77D`, `$01:A156` |
 | `$284B` | stage - 1 | same |
 | `$284C` | bombs (1-10) | `$09:87A5` |
@@ -188,8 +191,8 @@ reset and 1,300 open the room. JP: same code at the same address, 300 opens it a
 The room (`$01:A063`): Up/Down (or Select) moves between the 8 lines, I/II change the value: SCENE 1-8
 (`$284A`, wraps), STAGE 1-8 (`$284B`), bombs 1-10 (`$284C`), fire 1-15 (`$284D`, again past the in-game cap of
 5), and four ON/OFF power-ups, which are the `$243A` bits `$10` (remote control: bombs don't tick, II sets them
-off, `$09:8FA3`/`$09:90A0`), `$20`, `$40` (passing through soft blocks / bombs, `$09:8B03`/`$09:8B0C`; which bit
-is which is not checked in play) and `$80` (invincible, `$09:8716`). ★ **New:** entering the room also sets
+off, `$09:8FA3`/`$09:90A0`), `$20`, `$40` (`$20` bomb pass: cell type 0 is a bomb, `$09:8B03`; `$40` wall pass: types 2-6 are soft blocks,
+`$09:8B0C`; from the code, not played) and `$80` (invincible, `$09:8716`). ★ **New:** entering the room also sets
 `$284E` = 1 (`$01:A049`), so the game always starts with the roller skate. Run starts the chosen stage.
 
 ![Special Select Room](img/pce90/special_select_room.png)
@@ -239,8 +242,160 @@ and SAT were dumped at frame 600 (`tools/pce90/vdump.lua`). The logo is BG: BAT 
 planar, palette from the BAT word) with colour 0 transparent and crops to the bounding box. The cloud and the
 eyes on the two bombs seen on the title are sprites (palette 3, behind the BG), so they aren't part of the logo.
 
+## Hidden-content sweep
+
+Six passes over US and JP, with the tools named below. Coverage came from Mesen runs (portable copies, code/data
+logs merged): all 64 stages (passwords for 1-1 and 5-1, random input, each stage cleared by writing `$2437`, deaths
+patched out), the ending (8-8 by password, the stage-clear test at `$00:EC5F` forced), three game overs with SAVE,
+CONTINUE and END and a LOAD from the title, the attract demos, the password screen, BOMSOUND and all 58 tunes, the
+Special Select Room with every line changed, and TurboTap battles (normal and skull mode, 2-5 players). Executed
+code: **32,213 bytes** (US), **32,173** (JP). Scripts: `tools/pce90/cov_1p.lua`, `cov_ending.lua`, `cov_gameover.lua`,
+`cov_battle.lua` (on a TurboTap Mesen copy) and `test_cheats.lua`.
+
+### Dead code
+
+`tools/pce90/deadcode.py` traces the ROM from the vectors plus every executed code start (Mesen's jump-target and
+sub-entry flags). It lists each stretch of traced code that never ran, with its static references, and it decodes
+the stretches the trace never reached ("orphans"). Full lists: `disasm/pce90/dead_us.txt` and
+`disasm/pce90/dead_jp.txt`. The listings were regenerated with the new entry points (`disasm/pce90/us.asm`, `jp.asm`,
+`entries_us.txt`, `entries_jp.txt`).
+
+| | US | JP |
+|---|---|---|
+| never-run code reached by a branch or call from code that ran (`cond`) | 233 stretches, 3,570 bytes | 247, 3,388 |
+| reached only from other never-run code (`dead`) | 63, 4,799 | 61, 4,900 |
+| no reference found (`noref`) | 23, 916 | 19, 831 |
+| orphan code (never traced) | 42, 1,704 | 49, 2,059 |
+
+Almost all of it is **reachable only in situations the runs didn't cover**:
+
+| Where (US) | Bytes | What it is |
+|---|---|---|
+| `$08:60EF-$77E2`, `$0A:A97C`, `$0B:D000` | ~2,500 | C-LINK BATTLE: the BOTH OF YOU MUST HAVE THIS SCREEN setup (`$08:6107` points at the text), the link I/O, which writes the pad port `$1000` and polls it in a timeout loop (`$0B:D000`; Users Battle doesn't have it), and the link-mode result and sync code (`$0A:A68C`: `$33B6` = 2). It needs a second console. |
+| `$00:F6EF-$FEAB`, `$02:D106-$D1FF` | ~1,100 | the backup-RAM file manager's paths for a full or unformatted file cabinet (format, delete a file, MEMORY IN YOUR FILE CABINET IS NOT ENOUGH). Mesen's backup RAM always had room. |
+| `$0A:B04D-$BCDF`, `$0B:C1B5-$C4ED` | ~3,000 | enemy and boss states the random bot never triggered, and the real 8-8 clear test (`$0B:C1A2`: `$3377`, `$2D96`, all enemies gone) |
+| `$09:8796-$88F2` (`noref`, table `$09:8759`) | 330 | handlers for items the bot never picked up, reached through the item jump table |
+| `$02:C802-$C8B3` | 100 | password-grid cursor wrap cases |
+| `$04:91xx-$9Cxx` | 250 | sound-driver branches (effects and channel states no tune that played used) |
+
+★ **New: unreferenced and debug code**
+
+- **A pad recorder at `$00:EBA2` (JP `$00:EB89`).** It sits right after the attract-demo player `$00:EB75` and is
+  its mirror image. The player reads 3 bytes per frame (held, new, previous) from `($7D)` into `$3F/$40/$41`. The
+  recorder writes `$3F/$40/$41` to `($7D)` and advances the pointer, using the same bank table `$EBCF`. Nothing calls
+  it (no JSR, JMP or pointer anywhere). `($7D)` points into the ROM bank that holds the demo input, so on a HuCard
+  the writes go nowhere. It's the tool the demos were recorded with, on hardware with RAM in place of the ROM. Users
+  Battle doesn't have it. *Debug, unreferenced.*
+- **A typo in a queue routine at `$00:F2D2` (JP `$00:F2B9`, Users Battle `$00:F1F3`).** When the 128-entry queue at
+  `$76/$77` is full, the routine saves `$2213` to `$73`, then saves `$2215` to `$73` too. Later it restores `$2215`
+  from `$74`, which nothing ever writes. The path never ran. Forcing `$74` = `$FF` changed nothing: `$F2D2` ran 0
+  times in 3,000 frames of play. *Reachable only on overflow; latent bug.*
+- `$00:E230` is the timer-interrupt handler (vector `$FFFA`), and the timer is never enabled. `$00:F5E6` is entry 2
+  of the VDC-setup jump table `$00:F559`, which no caller selects. `$00:EB09` (JSR `$EABC` / JMP `$ABCF`) looked
+  unreferenced in the old listing, but it's the ending's entry, reached from `$08:7C73` after 8-8 (it ran).
+
+Nothing looked cut: no orphan routine refers to unused text, music or RAM.
+
+### Input codes
+
+`tools/pce90/padscan.py` lists every read of the pad bytes (`$2200-$220E`, and the copies `$3F-$41`) that is tested
+against a constant, a table or a multi-button mask. It found 20 hits in the full US listing, and the same set in JP.
+Each was checked against the code and the runs:
+
+| Hit | What it is |
+|---|---|
+| `$00:E351` / `$E358` | soft reset: Select newly pressed while Select+Run are held, on any port |
+| `$00:E371-$E37E` | the TurboTap test (all five ports equal) |
+| `$01:A004` | the Special Select Room's Down+Run+Select+II+I |
+| `$01:A204-$A25C` | the room's line editing (I / II / Up / Down) |
+| `$00:F6B1` | D-pad auto-repeat in the file screens |
+| `$09:83D4`, `$09:8BE6` | walking |
+| `$09:8F3F-$8FAC` | the skull illnesses that rewrite the held buttons (`ORA #$01`: bombs drop by themselves; `AND #$FE`: you can't drop one) and the remote control's II |
+
+BOMSOUND is the only typed code (a string compare at `$02:C959`). **Neither version has any other hidden input code**
+(known: Special Select Room, BOMSOUND, soft reset).
+
+### Unset flags
+
+`tools/pce90/flags.py` lists RAM that is read but never written, counting direct, indexed and block writes (a raw
+scan of the ROM for store opcodes catches code the trace missed). It also lists RAM that code that ran reads, but
+that only code that never ran writes. US and JP give **one** address: `$2074`, read only by the queue typo above.
+Forced to `$FF` every frame in Mesen for 3,000 frames of play, it changed nothing. Every other flag that live code
+reads is set somewhere.
+
+### Text
+
+`tools/pce90/textdump.py` decodes every text list (records `x y text`, ending in `$FE` / `$FF`; ASCII plus half-width
+katakana) and marks the ones whose bytes were read in the runs. Dumps: `disasm/pce90/text_us.tsv`,
+`disasm/pce90/text_jp.tsv`. Lists drawn by a block transfer don't get the data bit, so each unread string was also
+checked for a code reference.
+
+- **US**: every real string is used or reachable. The unread ones are the file-cabinet-full prompts (MEMORY IN YOUR
+  FILE CABINET IS NOT ENOUGH. / DO YOU WISH TO DELETE FILES FROM YOUR CABINET? YES NO) and PASSWORD ERROR, which does
+  show but is drawn by a block transfer.
+- **JP**, with translations:
+
+  | String | Translation | Status |
+  |---|---|---|
+  | PASSWORD ヲ ニュウリョクシテクダサイ | please enter the password | used |
+  | ドレヲ LOAD シマスカ? / ドコニ SAVE シマスカ? | which one will you load? / where will you save? | used |
+  | ドレヲ ケシマスカ? / マダ タリマセン / ケシテモ ヨイデスカ? YES NO | which one will you erase? / still not enough / OK to erase it? | backup RAM full only |
+  | BACKUP RAM ノ メモリーガ タリマセン。 RAMチュウ ノ データヲ ケシマスカ? | not enough backup RAM memory. Erase data in the RAM? | backup RAM full only |
+  | イズレカノMODEヲ エランデクダサイ | choose one of the modes | used |
+  | タイセンスルニンズウヲ キメテクダサイ | decide how many will battle | used |
+  | ショウセンカイスウヲ エランデクダサイ | choose the number of wins | used |
+  | リョウシャトモ コノガメンニシテクダサイ / ドチラカガサキニ RUNボタンヲ オスコトニヨリ ホワイトボンバーマンヲ シヨウスル プレイヤーガケッテイサレマス | both of you, bring up this screen / whoever presses RUN first is the player who uses White Bomberman | C-Link (US: BOTH OF YOU MUST HAVE THIS SCREEN...) |
+  | ★ アナタハ ホワイト ボンバーマン デス / アナタハ ブラック ボンバーマン デス | you are White Bomberman / you are Black Bomberman | **no reference found** (`$08:61E9`, `$08:6203`); the US card has no counterpart |
+
+- Both: the whole staff roll at `$01:AE26` shows in the ending: Game Designer Tsukasa Kuwahara, Main Programmer
+  Atsuo Nagata, Sub Programmer Wrecker Muroya, Graphics Designers Hideyuki Ogura and Mika Sasaki, Music Composer
+  Atsushi Chikuma, Sound Programmer Keita Hoshi, Produced By HUDSON SOFT. "Wrecker Muroya" fits the password rows,
+  which start `MUROYA...` and `WRECK...`.
+
+### Maps
+
+★ `tools/pce90/maps.py` decodes the stage format and renders every layout to `docs/img/pce90/maps/`
+(`r<round>-<stage>.png`, `battle.png` and the contact sheet `_all.png`). Each image carries the stage id, header
+address, layout type, soft-block count and block addresses. The US and JP data are byte-identical (all 67 renders
+match).
+
+- **Stage header** (bank `$0C` at `$4000`, `$00:ED94`): `$4028` + 2 × round → 8 stage pointers → 2 bytes, the layout
+  type and the soft-block count. Round 9 (`$284A` = 8) is the battle arena.
+- **Layout types**: `$4000` + 4 × type holds slot:block nibbles. The map at `$244A` is 32 × 32 cells in four 16 × 16
+  slots (`$00:EEC5`). Types 0 and 1 are one screen (battle; rounds 1-2), type 2 is two screens tall, type 3 two
+  screens wide. The soft blocks are **not** in the data: `$00:ED19` scatters the stage's count at random over the
+  type's area (`$4020` / `$4024`), skipping shadow cells, so each play of a stage has a different block layout.
+- **Blocks** (banks `$0D/$0E`, table `$00:EED5` + 2 × round): 16 rows, each RLE-coded (`$F0` ends the row,
+  `$F1 n a b` repeats a pair, `$F2-$FF` is a run, anything else one tile). A tile below 8 is floor with graphic t
+  (cell `t × 32 | $0A`), anything else wall (cell `$01`). Cell types in play (`$09:8AE0`): 0 bomb, 1 wall, 2-6 soft
+  block (2) and its break animation, `$0B` and up fire.
+- Soft-block counts climb from 30 (1-1) to 144 (8-7); every x-8 boss stage has 0.
+- ★ **New: an unused layout.** Round 1's block table has blocks 0 and 1, a full two-screen-wide arena in the round-1
+  tiles (`$0D:4ED8`, `$0D:4F39`; `unused_r1_blk0.png`, `unused_r1_blk1.png`). Every round-1 stage is type 1 or 2,
+  so nothing loads them. Rounds 2-8 use their blocks 0/1 for their wide stages.
+
+![All layouts](img/pce90/maps/_all.png)
+
+### Cheat codes
+
+Mesen 2's PC Engine "raw" cheats replace the value the CPU reads at a **physical** address. RAM `$2xxx` (bank `$F8`)
+is written `1F0xxx`/`1F1xxx`, and a ROM byte by its file offset. (Written as `F8xxxx`, Mesen ignored the code.) All of
+these were verified in Mesen and are in `docs/pce90_codes.json` (`section: "cheat"`; the ROM patches are
+`section: "patch"`).
+
+| Code | Effect | Verified |
+|---|---|---|
+| `012AB3:60` + `014485:60` (US, Collection) / `012AD6:60` + `0144A8:60` (JP) | invincible to fire and enemies (RTS over the two checks; the clock still kills) | random-input bot, 6,000 frames: 0 deaths; without the cheat: 6 deaths and a game over |
+| `1F0438:02` | infinite lives | 8 (US) / 9 (JP) deaths, no game over |
+| `00200B:80` + `00200C:0B` | the Special Select Room after every 1P START intro, with no buttons held and any high score (round select) | the room code `$01:A063` ran in US, JP and the Collection |
+| `1F1451:FF` | the sound test after any valid password | MUVWLNPC → SOUND-00 (US, JP) |
+
+Patches: `patches/pce90_select_room.ips` (file `$200B`: `D0 F3` → `80 0B`, the same bytes in all three cards),
+`patches/pce90_invincible_us.ips` (US and Collection) and `patches/pce90_invincible_jp.ips`.
+
 ## Open
 
 - The full 2^24 `fuzz_all.py` sweep was not run: it needs hours of emulator time on this machine.
-- Which of `$243A` bits `$20` / `$40` is wall pass and which is bomb pass (cell type 0 vs 2-5 at `$09:8AE9`).
+- C-Link battle, the backup-RAM-full paths and the enemy states the bot never reached are read from the code only.
+- Whether anything shows the JP "you are White / Black Bomberman" strings (no reference found).
 - Where the black Bomberman sliding sprite is.

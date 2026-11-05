@@ -1447,5 +1447,70 @@
   "status": "new",
   "verified": "mesen",
   "note": "The check (LDA $4E / CMP #$33 / JML $80F000) is in all three ROMs but nothing calls it. The patch moves the pad routine's PLX/PLY/RTL at $C0:0137 so the check runs every frame. Built and verified by tools/sb3/make_ips.py; tested in Mesen on EU, JP and the beta."
+ },
+ {
+  "code": "7E542D:0C",
+  "effect": "Battle stages 11 (SUPERSTAR) and 12 (HAPPY HAPPY) on the stage select",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Stage count; the title X trick sets the same value. Checked on EU: Left from stage 1 goes to 12."
+ },
+ {
+  "code": "7E2901:01",
+  "effect": "Full equipment at every stage start (8 bombs, 8 fire, speed 2, abilities 7)",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "The flag the area passwords set. EU: $144F=8, $48B9=8, $126F=2, $48D1=7 at 1-1."
+ },
+ {
+  "code": "7E2902:01",
+  "effect": "Hard mode: every enemy takes one more hit",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "The flag 6514 sets. Flag checked under the cheat; the effect was checked with 6514."
+ },
+ {
+  "code": "C00139:EA C00144:6B",
+  "effect": "Soft reset: hold Select+Start+L+R on pad 1",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "ROM codes that hook the unreferenced check at $C0:013A (same as the IPS). Reset routine $80:F000 ran on EU, JP and beta. Round 1 said a PAR code could not do this."
+ },
+ {
+  "code": "7E6C6E:0B / 7E6C6E:0C",
+  "effect": "Select battle stage 11 / 12",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "static",
+  "section": "cheat",
+  "note": "TCRF."
  }
 ]

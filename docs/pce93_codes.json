@@ -3,7 +3,8 @@
   "code": "CBCCBBDB",
   "effect": "Start at world 1 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -14,7 +15,8 @@
   "code": "CCCCBBFB",
   "effect": "Start at world 1 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -25,7 +27,8 @@
   "code": "DFCCBBGB",
   "effect": "Start at world 1 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -36,7 +39,8 @@
   "code": "DGCCBBHB",
   "effect": "Start at world 1 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -47,7 +51,8 @@
   "code": "FHCCBBJB",
   "effect": "Start at world 1 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -58,7 +63,8 @@
   "code": "FJCCBBKB",
   "effect": "Start at world 1 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -69,7 +75,8 @@
   "code": "GLDCBBLB",
   "effect": "Start at world 1 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -80,7 +87,8 @@
   "code": "GMDCBBMB",
   "effect": "Start at world 1 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -91,7 +99,8 @@
   "code": "DBCCBBFB",
   "effect": "Start at world 2 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -102,7 +111,8 @@
   "code": "FDCCBBGB",
   "effect": "Start at world 2 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -113,7 +123,8 @@
   "code": "FFCCBBHB",
   "effect": "Start at world 2 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -124,7 +135,8 @@
   "code": "GGCCBBJB",
   "effect": "Start at world 2 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -135,7 +147,8 @@
   "code": "GHCCBBKB",
   "effect": "Start at world 2 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -146,7 +159,8 @@
   "code": "HKDCBBLB",
   "effect": "Start at world 2 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -157,7 +171,8 @@
   "code": "HLDCBBMB",
   "effect": "Start at world 2 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -168,7 +183,8 @@
   "code": "JMDCBBNB",
   "effect": "Start at world 2 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -179,7 +195,8 @@
   "code": "GCCCBBGB",
   "effect": "Start at world 3 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -190,7 +207,8 @@
   "code": "GDCCBBHB",
   "effect": "Start at world 3 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -201,7 +219,8 @@
   "code": "HFCCBBJB",
   "effect": "Start at world 3 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -212,7 +231,8 @@
   "code": "HGCCBBKB",
   "effect": "Start at world 3 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -223,7 +243,8 @@
   "code": "JJDCBBLB",
   "effect": "Start at world 3 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -234,7 +255,8 @@
   "code": "JKDCBBMB",
   "effect": "Start at world 3 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -245,7 +267,8 @@
   "code": "KLDCBBNB",
   "effect": "Start at world 3 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -256,7 +279,8 @@
   "code": "KMDCBBPB",
   "effect": "Start at world 3 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -267,7 +291,8 @@
   "code": "HCCCBBHB",
   "effect": "Start at world 4 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -278,7 +303,8 @@
   "code": "JDCCBBJB",
   "effect": "Start at world 4 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -289,7 +315,8 @@
   "code": "JFCCBBKB",
   "effect": "Start at world 4 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -300,7 +327,8 @@
   "code": "KHDCBBLB",
   "effect": "Start at world 4 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -311,7 +339,8 @@
   "code": "KJDCBBMB",
   "effect": "Start at world 4 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -322,7 +351,8 @@
   "code": "LKDCBBNB",
   "effect": "Start at world 4 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -333,7 +363,8 @@
   "code": "LLDCBBPB",
   "effect": "Start at world 4 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -344,7 +375,8 @@
   "code": "MNDCBBQB",
   "effect": "Start at world 4 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -355,7 +387,8 @@
   "code": "KCCCBBJB",
   "effect": "Start at world 5 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -366,7 +399,8 @@
   "code": "KDCCBBKB",
   "effect": "Start at world 5 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -377,7 +411,8 @@
   "code": "LGDCBBLB",
   "effect": "Start at world 5 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -388,7 +423,8 @@
   "code": "LHDCBBMB",
   "effect": "Start at world 5 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -399,7 +435,8 @@
   "code": "MJDCBBNB",
   "effect": "Start at world 5 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -410,7 +447,8 @@
   "code": "MKDCBBPB",
   "effect": "Start at world 5 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -421,7 +459,8 @@
   "code": "NMDCBBQB",
   "effect": "Start at world 5 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -432,7 +471,8 @@
   "code": "NNDCBBRB",
   "effect": "Start at world 5 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -443,7 +483,8 @@
   "code": "LCCCBBKB",
   "effect": "Start at world 6 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -454,7 +495,8 @@
   "code": "MFDCBBLB",
   "effect": "Start at world 6 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -465,7 +507,8 @@
   "code": "MGDCBBMB",
   "effect": "Start at world 6 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -476,7 +519,8 @@
   "code": "NHDCBBNB",
   "effect": "Start at world 6 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -487,7 +531,8 @@
   "code": "NJDCBBPB",
   "effect": "Start at world 6 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -498,7 +543,8 @@
   "code": "PLDCBBQB",
   "effect": "Start at world 6 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -509,7 +555,8 @@
   "code": "PMDCBBRB",
   "effect": "Start at world 6 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -520,7 +567,8 @@
   "code": "QNDCBBSB",
   "effect": "Start at world 6 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -531,7 +579,8 @@
   "code": "NDDCBBLB",
   "effect": "Start at world 7 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -542,7 +591,8 @@
   "code": "NFDCBBMB",
   "effect": "Start at world 7 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -553,7 +603,8 @@
   "code": "PGDCBBNB",
   "effect": "Start at world 7 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -564,7 +615,8 @@
   "code": "PHDCBBPB",
   "effect": "Start at world 7 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -575,7 +627,8 @@
   "code": "QKDCBBQB",
   "effect": "Start at world 7 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -586,7 +639,8 @@
   "code": "QLDCBBRB",
   "effect": "Start at world 7 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -597,7 +651,8 @@
   "code": "RMDCBBSB",
   "effect": "Start at world 7 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -608,7 +663,8 @@
   "code": "RNDCBBTB",
   "effect": "Start at world 7 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -620,7 +676,8 @@
   "effect": "Start at world 1 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -632,7 +689,8 @@
   "effect": "Start at world 1 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -644,7 +702,8 @@
   "effect": "Start at world 1 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -656,7 +715,8 @@
   "effect": "Start at world 1 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -668,7 +728,8 @@
   "effect": "Start at world 1 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -680,7 +741,8 @@
   "effect": "Start at world 1 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -692,7 +754,8 @@
   "effect": "Start at world 1 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -704,7 +767,8 @@
   "effect": "Start at world 1 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -716,7 +780,8 @@
   "effect": "Start at world 2 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -728,7 +793,8 @@
   "effect": "Start at world 2 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -740,7 +806,8 @@
   "effect": "Start at world 2 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -752,7 +819,8 @@
   "effect": "Start at world 2 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -764,7 +832,8 @@
   "effect": "Start at world 2 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -776,7 +845,8 @@
   "effect": "Start at world 2 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -788,7 +858,8 @@
   "effect": "Start at world 2 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -800,7 +871,8 @@
   "effect": "Start at world 2 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -812,7 +884,8 @@
   "effect": "Start at world 3 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -824,7 +897,8 @@
   "effect": "Start at world 3 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -836,7 +910,8 @@
   "effect": "Start at world 3 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -848,7 +923,8 @@
   "effect": "Start at world 3 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -860,7 +936,8 @@
   "effect": "Start at world 3 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -872,7 +949,8 @@
   "effect": "Start at world 3 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -884,7 +962,8 @@
   "effect": "Start at world 3 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -896,7 +975,8 @@
   "effect": "Start at world 3 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -908,7 +988,8 @@
   "effect": "Start at world 4 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -920,7 +1001,8 @@
   "effect": "Start at world 4 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -932,7 +1014,8 @@
   "effect": "Start at world 4 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -944,7 +1027,8 @@
   "effect": "Start at world 4 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -956,7 +1040,8 @@
   "effect": "Start at world 4 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -968,7 +1053,8 @@
   "effect": "Start at world 4 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -980,7 +1066,8 @@
   "effect": "Start at world 4 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -992,7 +1079,8 @@
   "effect": "Start at world 4 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1004,7 +1092,8 @@
   "effect": "Start at world 5 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1016,7 +1105,8 @@
   "effect": "Start at world 5 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1028,7 +1118,8 @@
   "effect": "Start at world 5 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1040,7 +1131,8 @@
   "effect": "Start at world 5 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1052,7 +1144,8 @@
   "effect": "Start at world 5 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1064,7 +1157,8 @@
   "effect": "Start at world 5 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1076,7 +1170,8 @@
   "effect": "Start at world 5 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1088,7 +1183,8 @@
   "effect": "Start at world 5 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1100,7 +1196,8 @@
   "effect": "Start at world 6 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1112,7 +1209,8 @@
   "effect": "Start at world 6 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1124,7 +1222,8 @@
   "effect": "Start at world 6 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1136,7 +1235,8 @@
   "effect": "Start at world 6 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1148,7 +1248,8 @@
   "effect": "Start at world 6 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1160,7 +1261,8 @@
   "effect": "Start at world 6 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1172,7 +1274,8 @@
   "effect": "Start at world 6 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1184,7 +1287,8 @@
   "effect": "Start at world 6 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1196,7 +1300,8 @@
   "effect": "Start at world 7 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1208,7 +1313,8 @@
   "effect": "Start at world 7 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1220,7 +1326,8 @@
   "effect": "Start at world 7 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1232,7 +1339,8 @@
   "effect": "Start at world 7 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1244,7 +1352,8 @@
   "effect": "Start at world 7 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1256,7 +1365,8 @@
   "effect": "Start at world 7 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1268,7 +1378,8 @@
   "effect": "Start at world 7 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1280,7 +1391,8 @@
   "effect": "Start at world 7 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
    "JP",
-   "SP"
+   "SP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1291,7 +1403,8 @@
   "code": "PMPHTZNF",
   "effect": "Final stage (7-8) with 10 bombs, fire 5, every planet cleared and speed 3 (one above the skates' maximum)",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1302,7 +1415,8 @@
   "code": "LJLFPTKD",
   "effect": "Final stage (7-8) with 10 bombs, fire 5, every planet cleared and speed 3 (one above the skates' maximum)",
   "versions": [
-   "JP"
+   "JP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1313,7 +1427,8 @@
   "code": "DCCCBFHB",
   "effect": "Stage 1-1 at speed 3, faster than the game's maximum of 2",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1324,7 +1439,8 @@
   "code": "CBBBADFA",
   "effect": "Stage 1-1 at speed 3, faster than the game's maximum of 2",
   "versions": [
-   "JP"
+   "JP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1335,7 +1451,8 @@
   "code": "CBCCBCFB",
   "effect": "Stage 1-1 at speed 1 (one skate)",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1346,7 +1463,8 @@
   "code": "BABBABDA",
   "effect": "Stage 1-1 at speed 1 (one skate)",
   "versions": [
-   "JP"
+   "JP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1357,7 +1475,8 @@
   "code": "DCCCBDGB",
   "effect": "Stage 1-1 at speed 2 (the game's maximum)",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1368,7 +1487,8 @@
   "code": "CBBBACEA",
   "effect": "Stage 1-1 at speed 2 (the game's maximum)",
   "versions": [
-   "JP"
+   "JP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1379,7 +1499,8 @@
   "code": "DGGDFHBC",
   "effect": "Stage 3-5 with 4 bombs, fire 2, speed 1, planets 1 and 2 cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1390,7 +1511,8 @@
   "code": "CEECDFAB",
   "effect": "Stage 3-5 with 4 bombs, fire 2, speed 1, planets 1 and 2 cleared",
   "versions": [
-   "JP"
+   "JP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1401,7 +1523,8 @@
   "code": "DBNHCJFC",
   "effect": "Stage 2-1 with 10 bombs, fire 5, speed 2, planet 1 cleared",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1412,7 +1535,8 @@
   "code": "CAKFBGDB",
   "effect": "Stage 2-1 with 10 bombs, fire 5, speed 2, planet 1 cleared",
   "versions": [
-   "JP"
+   "JP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1424,12 +1548,111 @@
   "effect": "Rejected (letters below the key)",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen (US); the screen stays",
   "section": "Stage codes"
+ },
+ {
+  "code": "1F0091:20",
+  "effect": "Invincible: player 1 ability bit 5, read by the death check 02:8C79, never set by the game",
+  "versions": [
+   "US",
+   "JP",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen raw code (RAM F8:0091 = $2091). Stood on its own bomb: lives kept; without it the same test lost a life (US)",
+  "section": "cheat"
+ },
+ {
+  "code": "1F189F:09",
+  "effect": "9 lives in reserve",
+  "versions": [
+   "US",
+   "JP",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "RAM F8:189F = $389F; HUD showed 9 (US)",
+  "section": "cheat"
+ },
+ {
+  "code": "1F189A:03",
+  "effect": "Speed 3, one above the skates' maximum",
+  "versions": [
+   "US",
+   "JP",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "RAM F8:189A = $389A, copied to the player at the stage start: $9B = $30 (US)",
+  "section": "cheat"
+ },
+ {
+  "code": "1F1895:0w + 1F1896:0s",
+  "effect": "World / stage select: every Normal Game stage is world w+1, stage s+1",
+  "versions": [
+   "US",
+   "JP",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "RAM F8:1895 / F8:1896; 1F1895:03 + 1F1896:04 made a new game load record 28 (4-5) (US). Turn off after the stage starts",
+  "section": "cheat"
+ },
+ {
+  "code": "1F1FFB:01",
+  "effect": "CONFIGRATION screen after every planet map (stage, scene, power-ups, lives, sound)",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "RAM F8:1FFB = $3FFB, the flag the ending's I+Run sets; screen shown (JP). US: use the patch",
+  "section": "cheat"
+ },
+ {
+  "code": "1F18B1:00",
+  "effect": "The ending's clear-time page even after a password or continue",
+  "versions": [
+   "US",
+   "JP",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "RAM F8:18B1 = $38B1; page shown with the RAM cleared as the ending reads it",
+  "section": "cheat"
+ },
+ {
+  "code": "patches/pce93_configration_us.ips",
+  "effect": "US: CONFIGRATION screen after every planet map",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $4432: 08 20 E7 EA 9A AB 06 -> 00 20 E7 EA 20 86 08 (far call to 08:8620 put back); the patched file showed the screen",
+  "section": "patch"
+ },
+ {
+  "code": "patches/pce93_normal_game_sp.ips",
+  "effect": "Special Version: Run on the title opens the leftover password screen and Normal Game",
+  "versions": [
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $D84C: 4E A3 -> A0 94 (title menu entry 0 = $94A0); verified with the same bytes written in memory",
+  "section": "patch"
  },
  {
   "code": "Beat the game, hold I and press Run on the end screen, reset (Select+Run), start a Normal Game",
@@ -1473,6 +1696,31 @@
   "status": "new",
   "verified": "mesen",
   "note": "all five menu entries are $A34E (battle), so the Special Version cannot reach it; 02:8435 calls the old screen 08:88BD with no flag",
+  "section": "Hidden screens"
+ },
+ {
+  "code": "Finish the game from a new game with no password and no continue",
+  "effect": "The ending shows CONGRATULATIONS!, CLEAR TIME and CLEAR SCORE before the credits",
+  "versions": [
+   "US",
+   "JP",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "08:8CB8 shows the page only when $38B1 = 0; a continue (07:A191) or a password (01:D93B) sets it. Shown in Mesen by clearing $38B1 at the ending (cheat 1F18B1:00)",
+  "section": "Hidden screens"
+ },
+ {
+  "code": "Title item 3 (VS GAME / COM-LINK)",
+  "effect": "Link-cable screen: both players press Run, the first is White Bomberman; then waits for the other console",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "world 9 mode, 07:AC61; the serial handshake through the pad port never completes without a second console. On the Wii U VC the item starts the Battle Game instead (pcevc.md)",
   "section": "Hidden screens"
  }
 ]

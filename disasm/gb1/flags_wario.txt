@@ -1,0 +1,15 @@
+$D905	never set	reads 1	07:45B9
+$D906	never set	reads 1	07:45F6
+$D925	never set	reads 1	07:45BE
+$D926	never set	reads 1	07:45C3
+$D927	never set	reads 1	07:45FB
+$D928	never set	reads 1	07:4600
+$D929	never set	reads 1	07:4647
+$D92A	never set	reads 1	07:4650
+$D937	never set	reads 1	07:459B
+$D938	never set	reads 1	07:45DC
+$D939	never set	reads 1	07:4629
+$D93A	never set	reads 1	07:4683
+$D953	never set	reads 1	07:45AC
+$D954	never set	reads 1	07:45ED
+$D955	never set	reads 1	07:4638

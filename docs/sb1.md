@@ -205,7 +205,7 @@ frame 1978. US, NORMAL GAME redirected to `$33`: 60 presses → 9 lives in 1-1; 
 
 `$C5:5128` (new game) and `$C5:7350` (password) check whether controller 2 pressed A or Start on that frame
 (`$0CFA & $1080`). If so the lives go to player 2 (`$0DBD`) and player 1 is left out (PRESS START on the HUD).
-Verified in US: Start on controller 2 at the title → `$0D44` = 0, `$0D84` = `$FF`, `$0DBD` = 5.
+Verified in US: Start on controller 2 at the title → `$0D44` = 0, `$0D84` = `$FF`, `$0DBD` = 5. Same result in JP and the beta (`tools/sb1/test_p2_start.lua`, the JP code is at `$C5:4F9C`/`$C5:4FEF`).
 
 ### Debug menu (Known; restored and every option checked ★ New)
 
@@ -394,6 +394,142 @@ and no never-read region of banks `$C3-$C7` looks like BGR555 colours. So TCRF's
 Bomberman palettes (Known) were not re-found, and no new palette is claimed. The debug font (Known) is loaded at boot
 and used by the restored menu.
 
+## Dead code
+
+Method (`tools/sb1/coverage.lua`, `tools/sb1/sweep.py dead2`, listing `disasm/sb1/dead_us.txt`): code/data logs from
+a clean portable Mesen (no debug patch or PAR code ever loaded into it), merged: every scene `$00-$4D` written to
+`$00A4` and played 500-4000 frames each with random presses on all five pads (multitap), player 1 and 2 kept
+invincible (+`$36`), random power-ups every 40 frames, an item 1-24 put under player 1 every 40 frames (so every
+pickup handler runs), a forced stage clear (enemy count 0, player on the exit) in each stage, a run with deaths to
+GAME OVER and the continue screen, 8,000 frames of attract mode, plus the earlier scene and stage sweeps. 62,873
+bytes of code ran (US). The listing was then rebuilt from those logs (`disasm/sb1/us`, 1,216 entries).
+
+Never-run code falls in two groups:
+
+- **Reachable, not covered:** 339 places where a conditional branch in code that ran leads to code that never ran
+  (6,477 bytes): boss and enemy states, rare collisions, battle cases. Situations the runs did not reach, not hidden
+  features; the biggest are the 6-8 boss (`$C7:5911`, 413 bytes) and per-direction collision branches
+  (`$C4:31D9`/`329B`/`335D`/`341F`).
+- **Islands:** 70 runs of plausible code (8+ instructions after a return or jump, with a return or jump in them)
+  that no code that ran leads to; 54 of them (8,030 bytes) in the code banks `$C4-$C7`. The 16 in `$C0-$C3` are
+  graphics or data that happen to decode. The ones in the code banks:
+
+| Address | Bytes | What it is | Class | Status |
+|---|---|---|---|---|
+| `$C6:00D2`, `$C6:0474`, `$C6:09D9`, `$C4:0B6F` | 312, 303, 124, 70 | the debug menu: toggle, cursor/values, buffer clear and draw, VRAM upload | debug feature | Known (restored above) |
+| `$C6:1093` | 28 | an item handler (100 points, the pickup sound) that the handler table `$C6:0D26` skips: the table goes from the kendama `$C6:1077` straight to the apple `$C6:10AF`. A byte copy of the kendama handler, so the slot of a cut 100-point item | cut feature | ★ New |
+| `$C7:7277`, `$C7:7292`, `$C4:273F` | 320, 162 | puts player 1 at (`$68`,`$B8`) and player 2 at (`$A8`,`$B8`) in the falling state `$C4:273F`: the Japanese-style DRAW screen with Bombermen dropping in (TCRF) | unreferenced | Known |
+| `$C5:3B7C`, `$C5:3C16` | 123, 618 | objects started at fixed screen positions (one at y = `$FFE0`, above the screen) with animations `$C5:1D57`/`$C5:1D60`; same bytes in JP, also never run there | unreferenced | not identified |
+| `$C4:4FCB` | 325 | walks the four blast arms from a cell and clears bit `$0800` (fire) in each map cell until a wall: the old end-of-explosion routine. The same code runs in the Japanese version (`$C4:48A3`); US/EU/beta use a replacement | superseded | ★ New |
+| `$C4:5F89`, `$C5:59A7` | 257, 279 | two byte-identical copies of a "pick a random cell in the 13 × 11 field" routine (RNG `$C6:1F13`) | unreferenced | ★ New (minor) |
+| `$C6:11BA`, `$C7:12EE`, `$C7:786A`, `$C7:7897` | 370 ... 136 | palette loaders (colours 1-13 through `$C6:2436`) | unreferenced | not identified |
+| `$C4:8085`-`$C4:8150` | 89, 45 | entry stubs of the "BOOT VER1.03" sound-driver library (`$C4:8002`) that the game never calls | library | ★ New (minor) |
+| `$C6:1F68`, `$C6:3BF9`, `$C6:207D` | 40, 279, 185 | distance-to-player-1 check (`$40` pixels), a box-overlap test, a loop over 4 players | unreferenced helpers | not identified |
+| `$C7:1396`, `$C7:184C`, `$C7:1B2C`, `$C7:73D7` | 456 ... 397 | scene code in the ending/battle-result bank: freezes the game (`$0314` bit 3) and moves players 1 and 2; spawns objects | unreferenced | not identified |
+| `$C4:FA8F`, `$C4:F801`, `$C5:B1EE`, `$C5:F70F` ... | small | data decoded as code (sound and graphics in the code banks) | not code | |
+
+EU equals US. In JP the same islands exist where the code exists (checked by byte search plus a JP coverage run of
+every scene, `tools/sb1/coverage.lua` with FR=500).
+
+## Input codes
+
+`tools/sb1/sweep.py pads` (listing `disasm/sb1/pads.txt`) scans the disassembly for the shapes a hidden input
+code needs: a frame counter checked against a window and followed by a press counter (rhythm codes), `AND #m` then
+`CMP #m` with two or more buttons (held combinations), a compare against a table indexed by a RAM counter
+(sequences), and every test of a fixed pad (not indexed by player). Run on all four versions:
+
+| Hit | What | Status |
+|---|---|---|
+| `$C5:66B0` (JP `$C5:6572`, beta `$C5:66A5`) | the prologue X rhythm (window 7-9 frames, counter `$0C96`) | Known (only rhythm code in the game) |
+| `$C5:4F52`/`$C5:4F5D` (JP `$C5:4E2C`) | pad 5 R and the multitap ID: sound test | Known |
+| `$C5:50D5`, `$C5:5128`, `$C5:6FD2`, `$C5:7350` (JP `$C5:4F9C` ...) | player 2's Start / A+Start: the controller-2 start, present in all four versions | ★ New (above) |
+| `$C6:160A` | a table compare with a counter: the random number generator (lagged table `$C6:161D`), not input | false hit |
+| combos `#$0700`, `#$003F` ... | map-cell and object bit masks, not pads | false hits |
+
+No button-sequence table and no other held combination exists. The scanner also finds SB2's turbo-X code, so the
+pattern works.
+
+## Unset flags
+
+`tools/sb1/sweep.py flags` lists RAM (absolute addresses and object fields `dp,X`) that code which ran tests and
+branches on, but that no instruction writes, or only never-run code writes. With the clean logs (US):
+
+| Address | Tested at | Result | Status |
+|---|---|---|---|
+| `$00B4` | `$C6:3A40` | VS CHECK: written only by the debug menu | Known (above) |
+| player +`$2E` (`$0D6E`) | (nothing) | NO DEATH: written by the debug menu, read by nothing | Known (above) |
+| `$0304` | `$C6:22E7` | a frame-skip mask for the animated-tile updater (`AND` with the per-speed masks `$C6:2426`, skip the update when non-zero). Write watch over 9 scenes of play (`tools/sb1/flagwatch.lua`): written once, by the RAM clear at boot (`$C4:0211`), so it stays 0 and every animation speed class updates every frame. Looks like a counter whose increment was dropped; setting it was not tried | ★ New (minor) |
+| `$0D6F`, `$0CFB` | `$C4:091B`, `$C5:50D5` | written through `$2F,X` (1,450 writes in the watch) and the 16-bit pad store: false hits | |
+
+So beyond the debug menu's own variables nothing is tested that the game never sets.
+
+## Text
+
+`tools/sb1/text.py` dumps every run of bytes in the debug-font encoding (A-Z = `$01-$1A`, 0-9 = `$20-$29`, `.`
+`$1C`, `:` `$1E`, `-` `$34`, space `$36`) and in ASCII, and marks runs no log ever read (listing
+`disasm/sb1/text_us.txt`; most short runs are graphics bytes). The game's own screens (title, menus, credits) are
+graphics, so the real text is:
+
+| Address | Text | Read in play | Status |
+|---|---|---|---|
+| `$C6:07D3` | the debug menu: P:, STAGE NO., NO DEATH ... SE NO. (each line has a 2-byte position) | no | Known |
+| `$C6:0659` | the debug scene labels 1-1 ... 6-8, END TIT SEL DM1-DM4 CON PAS PRM DRW WIN B-1 ... B-C DR WIN, **then a second 2-1 ... 2-8**, then X1-X4 and 0-F. TCRF stops at DR WIN / X1-X4; the eight extra labels sit where scenes `$4A-$51` would be | no | ★ New (minor) |
+| `$C6:0448`, `$C6:096B`, `$C6:0997` | character tables of the debug font | no | |
+| `$C4:0000`-`$C4:0190` | START OF MULTI5 BIOS / MODIFIED FROM SHVC MULTI5 BIOS Ver2.00 / ... CONNECT CHECK Ver1.00 (US, EU only) | yes (library code) | Known (above) |
+| `$C4:8002` | BOOT VER1.03 (sound driver) | no | ★ New (minor) |
+
+No Japanese text: the JP ROM has the same strings (no kana encoding in use).
+
+## Maps
+
+Format (decoder `$C4:7B33`; each stage header in the table `$C3:2EEF` (JP `$C3:2E8A`) holds a 24-bit map pointer at
+offset `$11`): 14 words of wall bitmap, 17 columns × 13 rows, MSB first; then the floor tile codes for the same cells
+two at a time, with a mask word before every 16 pairs (bit set = two new tile words, clear = repeat). Soft blocks are
+not in the map: they are placed at random when the stage starts. `tools/sb1/maps.py` decodes every map the table
+points to, then scans the whole ROM for any other block with the wall signature (row 0 and columns 0, 1, 15, 16
+solid), and renders each one: walls grey, floor coloured by tile code so special floors stand out
+(`docs/img/sb1/maps/map_<address>.png`, contact sheet `sheet.png`, `index.txt`). 20 maps, identical in all four
+versions; two are referenced by no stage:
+
+| Map | Used by | Note |
+|---|---|---|
+| `$C1:9CF4` | 1-1, 1-2, battle 3 | standard grid |
+| `$C1:9DF2` / `$C1:9EE8` | 1-3 to 1-5, battle 2 / 1-6 to 1-8, battle 4 | |
+| `$C1:A0D4`, `$C1:A324` | 2-1 to 2-5, battle 7 / 2-6 to 2-8 | |
+| `$C1:A74C`, `$C1:A41A`, `$C1:A520` | 3-1 to 3-3, battle 8 / 3-4 to 3-7 / 3-8 (33 extra walls, a smaller arena) | |
+| `$C1:9FDE`, `$C1:A84E` | 4-1 to 4-7, battle 9 / 4-8, battle 10 | |
+| `$C1:A62A` | all of world 5 (20 extra walls: the narrow top) | |
+| `$C1:AA52`, `$C1:A954` | 6-1 to 6-3, battle 12 / 6-4 to 6-8 | |
+| `$C1:AB70`, `$C1:AC5E`, `$C1:AD84`, `$C1:C28C` | battle 1 / battle 11 / battle 6 / battle 5 | |
+| **`$C1:A1DA`** | **none** | 23 extra walls: a block of walls filling the middle, so the field is a ring ![](img/sb1/maps/map_C1A1DA.png) | Known (TCRF's ring-shaped structure); address and render ★ New |
+| **`$C1:AEA2`** | **none** | a plain grid with its own floor tiles | Known (TCRF's second structure); address and render ★ New |
+
+These two were also the "never read, not 4bpp" blocks of the graphics sweep. ![](img/sb1/maps/sheet.png)
+
+## Cheat codes
+
+Pro Action Replay codes, each checked with Mesen's own cheat engine (`emu.addCheat`) on the unpatched US ROM and real
+presses only (`tools/sb1/cheats.lua`, `tools/sb1/cheats.sh`): NORMAL GAME from the title, a bomb laid under player 1
+after the start flash, player 1 read back 800 frames later. RAM codes work the same in EU, JP and beta (same RAM map);
+those were not run there. All in `sb1_codes.json` (`section: "cheat"`).
+
+| Code | Effect | Check | Status |
+|---|---|---|---|
+| `7E0D7660` `7E0D7701` | player 1 invincible: the respawn-flash timer (+`$36`) held at `$0160` | own bomb: lives stay 5 (control run: 5 → 4) | ★ New |
+| `7E0D7D09` | player 1 always 9 lives | died, respawned, still 9 | ★ New |
+| `7E0D7180` | maximum blast (FIRE FULL) | RAM and blast on screen | ★ New |
+| `7E0D7009` | 9 bombs | RAM, several bombs laid | ★ New |
+| `7E0D7963` | power, kick, bomb pass, wall pass (+`$39` bits 0, 1, 5, 6) | RAM only | ★ New |
+| `7E0D7301` | remote-control bombs | bombs stayed unexploded 800 frames | ★ New |
+| `7E0C9001` | small Bomberman (as 5656) | flag and sprite at 1-1 | ★ New code (effect Known) |
+| `7E0C8F01` | next Normal Game starts with 9 lives (the prologue-X flag) | 9 lives at 1-1 | ★ New code (effect Known) |
+| `7E00A43C` | sound test | scene `$3C` from power-on | Known (TCRF) |
+| `7E00A4xx` | go to scene xx (list under Debug menu, STAGE NO.); switch it off once the scene has loaded | `7E00A42F` loads 6-8 | Known |
+| `C30D63A2` `C30D64AE` | ROM codes: 1-1 is built from the unused map `$C1:AEA2` (US/EU/beta; the JP header table is elsewhere) | loads and plays ![](img/sb1/maps/unused_C1AEA2_in_1-1.png) | ★ New |
+| (`C30D63DA` `C30D64A1`) | the same for the ring map `$C1:A1DA` | black screen, the stage never starts: not useful | ★ New (fails) |
+
+The debug-menu ROM codes (90 per version) are listed under Debug menu.
+
 ## Searched, nothing found
 
 - Battle Mode: all 12 stages (Normal, Western, Bomb, Jump, Belt, Tunnel, Duel, Flower, Light, Power, Warp,
@@ -403,7 +539,8 @@ and used by the restored menu.
 
 ## Open
 
-- Controller-2 start in JP and the beta (code present at the same place; not run).
+- Unset flag `$0304`: what setting it does was not tried.
+- The ring map `$C1:A1DA` could not be loaded (black screen); why the stage never starts was not traced.
 - Debug menu: REMOCON, WALL PASS, BOMB PASS, BREAK THR., POWER and KICK checked as RAM bits only; GAME SPEED and
   TIME CHECK have no code left to restore.
 - Unused palettes: needs the palette tables mapped (see Unused graphics).

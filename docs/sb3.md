@@ -295,8 +295,126 @@ nothing tells which palette belongs to an asset, so unused ones could not be tol
   the end of the per-frame pad routine (`$C0:0137`, PLX/PLY/RTL) to run the check before returning; it needs no
   free space because it reuses the dead routine's own bytes. Verified in Mesen on EU and the beta from inside 1-1
   (and on JP from the stage card): the reset vector code runs at once and the game is back on the title screen;
-  the unpatched ROM just keeps playing. A PAR code cannot do this (it patches RAM, the hook is in ROM).
+  the unpatched ROM just keeps playing. Two PAR ROM codes do the same (see Cheat codes; round 1 wrongly said PAR could not).
   ![Unpatched after the combo, patched before, patched after](img/sb3/soft_reset.png)
+
+## Hidden-content sweep (round 3)
+
+Six passes over the European ROM, with spot checks on JP and the beta. Tools: `tools/sb3/sweep.py` (dead code, pad
+scanner, flag scanner; shared with SB4), `tools/sb3/strings.py`, `tools/sb3/monkey.lua` (random-input coverage),
+`tools/sb3/watch.lua` (write watch), `tools/sb3/maps.lua`, `tools/sb3/par.lua`, `tools/sb3/sheet.py`. Raw outputs are
+in `disasm/sb3/` (`dead.txt`, `pads.txt`, `flags.txt`, `strings.txt`).
+
+**A bug in the earlier logs.** Every code/data log dumped by `cdl.lua` (and SB4's `lib.lua`) looped
+`for i=1,#c` over Mesen's 0-based table, so byte 0 was dropped and every flag sat one byte early. Listing entries
+grown from those logs started one byte inside instructions, which is why parts of the old listing were garbage.
+The helpers now loop from 0, `sweep.py cdl` shifts old dumps back, and `disasm/sb3/` was regenerated from scratch
+(fresh `entries.txt`, `tools/sb4/cdl_fill.py`). The earlier note that "Mesen marks DMA blocks one byte early" was
+this bug. The merged log (26 runs: rounds 1-2, Mesen's own `.cdl`, a 2-player random run) has 69,142 code bytes.
+
+### Dead code
+
+`sweep.py dead` takes every JSR/JSL target and every block after an unconditional jump that no branch reaches,
+decodes executed code straight from the log (exact widths), and drops blocks that read as data, use BRK/COP/WDM/STP
+or call into nowhere. **755 entry points never ran**:
+
+| Class | Count | Meaning |
+|---|---|---|
+| only from code that never ran | 440 | callers exist, none ran (mostly enemy/boss states in `$C3`/`$C4`, 2-player and battle-rule paths) |
+| pointer/table only | 229 | the address sits in a pointer table or is built with `LDA #hi / XBA / LDA #lo` (object state handlers) |
+| no reference | 72 | nothing points at them |
+| referenced by code that ran | 14 | a state pointer was set but that state never came up |
+
+Most are reachable but not covered: the bot never beats a boss or clears an area. The no-reference ones worth
+naming:
+
+- `$C2:6AD5`, the cut password handler (`$2900`=1). Known from round 1.
+- `$C0:013A`, the soft-reset check from round 1. It now also works as PAR codes (below).
+- **★ New: an unused raster effect.** `$C1:63B9` sets the V-IRQ timer (`$4209`), points the IRQ vector at `$38`
+  to `$F758` and enables IRQs. `$C0:F758` waits a few lines and writes the complements of `$031D`/`$031E` to BG3's
+  horizontal scroll (`$2111`). Nothing calls `$C1:63B9` and nothing else installs `$F758`, so this is a dropped
+  split-scroll effect. Static only; not run.
+- **★ New: unused script-VM commands.** `$C2:1541`-`$C2:1861` are about 15 small handlers that read their
+  arguments through `($B8)` and return to the VM's argument loop (`$C2:14F4`/`$C2:14F8`). They are not in the
+  VM's command table, so no script can reach them. Static only.
+- The rest are one-instruction stubs (`RTL`, `NOP / RTS` at `$C2:631A`) and alternate entry points into live
+  routines.
+
+JP and the beta were not swept separately. Their code matches EU apart from the address shifts listed above.
+
+### Input codes
+
+`sweep.py pads` flags code that loads a pad byte (`$3B-$66`, `$036F-$037D`, `$4016/7`, `$4218-$421F`, also
+through a helper that returns one) and then compares it with a constant or a table, bit-tests it, or bumps a
+counter. It gets 42 hits, including both known codes: the title X counter (`$C1:6E4D`/`$C1:6ECD`) and the
+soft-reset check (`$C0:013A`). The rest are the pad driver, multitap detection (`$C0:F4EE`-`$C0:F50E`), "any
+button" checks (`$C1:1A9F`, `$C2:55B5`) and player movement in `$C4`. **No new button code in native code.**
+Menus run on the script VM, and its pad reads go through the VM's generic load. Scripts were not decoded, so a
+code hidden inside a script would not show up here.
+
+### Unset flags
+
+`sweep.py flags` finds 28 RAM addresses that are tested but either never written directly (10) or written only by
+code that never ran (18). `tools/sb3/watch.lua` watched all of them through a story stage (5358) and a battle
+(1511), with 4,000 frames of random input each:
+
+- Written by the script VM (`$C2:0ACD`) or by indexed code: `$147F/$1480` (`$C4:0012`), `$1B1F`, `$1C8A`,
+  `$1C8D`, `$1EB0`, `$1ED1/$1ED2`, `$2908`, `$6C4D`, `$0D7B`, `$0DB8`, `$0F0E`.
+- Never set to non-zero: `$2900` (round 1's cut handler), `$2907` (the VM only ever writes 0; it is the index
+  whose cursor blinks at `$C1:2681`), `$64F6` (read only by the dead `$C1:54A1`), and the 18 that only dead code
+  writes. None of them is a debug switch, so nothing was worth poking beyond round 2.
+
+### Text
+
+The game has one text table: **the staff roll** at `$C1:7A72`-`$C1:7D7C` (EU). It is ASCII with `@` for a space,
+`^` for `/`, `a`/`_` for opening/closing quotes and `b` for `!`. `python tools/sb3/strings.py <rom> <cdl>` dumps it,
+along with the noise, and marks what was read. JP and the beta have the same table 34 bytes lower, with the
+round-1 credit differences. **PRESENTED BY HUDSON** (`$C1:7D69`) is the only entry the logs never saw read. The
+0803 ending runs may simply have stopped before the last card (unverified).
+
+All other on-screen text (menus, stage names, battle text, the Japanese headers) is tile graphics in the asset
+sets, which the round-2 asset sweep covered. The only other ASCII is the ROM header and the multitap BIOS IDs at
+`$C0:F3DD`-`$C0:F55F` (`NINTENDO SHVC MULTI5 BIOS Ver2.10`, `CONNECT CHECK Ver1.00`). The IDs are never read;
+they are markers inside the driver.
+
+### Maps
+
+These are rendered from the game itself (`tools/sb3/maps.lua`), not from the data, because the stage format lives
+in script data that was not decoded. Each frame shows the arena just after it starts.
+
+- **Story**: every id `$0B`-`$47`, forced at the decoder's RTL (`$C2:67FC`) after 5358.
+  ![Story ids](img/sb3/maps/story_ids.png)
+  - The 26 ids in the stage table play normally.
+  - The ids in between are the later rooms of a stage. Entered cold, they show broken tiles.
+  - `$17 $1C $26 $2A $41` stay black, and `$18 $1D $27 $2B $42` drop back to the password screen. These are not
+    playable rooms; they are probably area-clear or boss-intro scene ids.
+  - `$46` is the final boss arena. **`$47` is the staff-roll field**: the credits scroll over a copy of 1-1, as
+    part of the ending.
+  - No cut stage turned up.
+- **Battle**: 12 stages × arena variants 0-3, with `$6C6E` and `$542E` written at the stage select:
+  ![Variant 0](img/sb3/maps/battle_variant0.png)
+  ![Variant 1](img/sb3/maps/battle_variant1.png)
+  ![Variant 2](img/sb3/maps/battle_variant2.png)
+  ![Variant 3](img/sb3/maps/battle_variant3.png)
+  Stages 11 and 12 look the same in every variant (fixed data sets `$75`/`$6D`).
+
+### Cheat codes (Pro Action Replay)
+
+Each code was checked in Mesen's cheat engine (`emu.addCheat`, `tools/sb3/par.lua`) on the unpatched ROM:
+
+| Code | Effect | Checked |
+|---|---|---|
+| `7E542D:0C` | battle stages 11 and 12 on the stage select | EU: Left from stage 1 goes to 12 |
+| `7E2901:01` | full equipment at every stage start | EU: bombs 8, fire 8, speed 2, `$48D1`=7 at 1-1 |
+| `7E2902:01` | hard mode (enemies take one more hit) | EU: the flag holds. The effect itself was checked with 6514 in round 1 |
+| `C00139:EA` + `C00144:6B` | soft reset with Select+Start+L+R (same hook as the IPS) | EU, JP, beta: the reset routine at `$80:F000` runs |
+| `7E6C6E:0B` / `0C` | pick stage 11 / 12 (TCRF) | Known, not re-run |
+
+**Fixed:** round 1 said the soft reset needs an IPS because a PAR code "patches RAM". PAR (and Mesen) can patch
+ROM reads too. The first code turns the `RTL` at `$C0:0139` into a `NOP`, so the pad routine falls into the check
+at `$C0:013A`. The second turns that check's `RTS` into an `RTL`.
+
+No invincibility code: no tested-but-unset flag guards the death path, so there is nothing to point one at.
 
 ## Tools
 

@@ -1,0 +1,800 @@
+# 348 never-executed blocks, 8938 bytes of traced code (71389 traced bytes in all)
+# kinds: branch-not-taken = after an executed branch or called by executed code; dead-callers = only called from never-executed code; table/indirect = reached only through a jump table. '*' = caller executed
+00:E3B2 file $003B2     6 bytes    3 ins  branch-not-taken callers -  | LDA $28,X; CMP #$0C; BEQ $E3BE
+00:E3BE file $003BE     3 bytes    1 ins  dead-callers     callers 00:E3B6  | JMP $E062
+00:E468 file $00468     2 bytes    1 ins  branch-not-taken callers -  | BRA $E4CC
+00:E4CC file $004CC     5 bytes    3 ins  dead-callers     callers 00:E468  | LDX #$FF; SEC; BRA $E4CA
+00:E67C file $0067C     4 bytes    4 ins  branch-not-taken callers -  | PLY; PLX; SEC; RTS
+00:E8CE file $008CE     3 bytes    1 ins  branch-not-taken callers -  | JMP $E9EB
+00:E913 file $00913     3 bytes    1 ins  branch-not-taken callers -  | JMP $E9EB
+00:E936 file $00936     6 bytes    3 ins  branch-not-taken callers -  | LDA $0A; CMP #$C0; BPL $E94D
+00:E9C2 file $009C2     4 bytes    4 ins  branch-not-taken callers -  | LSR; LSR; LSR; LSR
+00:EE02 file $00E02     7 bytes    4 ins  branch-not-taken callers -  | LDA $6E; EOR #$FF; INC; STA $6E
+00:EE69 file $00E69     2 bytes    1 ins  branch-not-taken callers -  | INC $6C
+00:EE8D file $00E8D    17 bytes    9 ins  branch-not-taken callers -  | LDA $6A; EOR #$FF; STA $6A; LDA $69; EOR #$FF; INC
+00:EF31 file $00F31     5 bytes    3 ins  branch-not-taken callers 00:EF1F*  | JSR $E557; SEC; RTS
+00:F04F file $0104F    10 bytes    4 ins  branch-not-taken callers -  | LDA #$10; STA $340E; LDA #$01; STA $340F
+00:F79F file $0179F    13 bytes    6 ins  branch-not-taken callers -  | LDA #$3E; STA $61; LDA #$91; STA $62; JSR $EB16; BRA $F7EF
+00:F8B7 file $018B7     1 bytes    1 ins  branch-not-taken callers -  | RTS
+01:C125 file $02125     3 bytes    3 ins  branch-not-taken callers -  | SEC; PLX; RTS
+01:C374 file $02374    29 bytes   14 ins  dead-callers     callers 0B:B98A  | PHY; TAY; LDA $C391,Y; CLC; ADC $2FA9; STA $2FA9
+01:C401 file $02401    19 bytes    8 ins  branch-not-taken callers -  | INC $2FAA; BRA $C414; CLC; ADC $2885,X; EOR $2885,X; AND #$30
+01:C564 file $02564    26 bytes   11 ins  dead-callers     callers 0A:8D3D  | LDA $2FA5; AND #$F0; STA $70; LDA $2FA6; STA $71; LDA $2FA7
+01:C594 file $02594    26 bytes   11 ins  dead-callers     callers 0B:A1B2  | LDA $3552,X; AND #$F0; STA $70; LDA $3566,X; STA $71; LDA $358E,X
+01:C6AA file $026AA    11 bytes    5 ins  dead-callers     callers 10:8446  | LDA $358E,X; STA $93; LDA $35A2,X; STA $94; RTS
+01:C7E1 file $027E1     2 bytes    1 ins  branch-not-taken callers -  | LDA #$04
+01:C7FB file $027FB     2 bytes    1 ins  branch-not-taken callers -  | LDA #$04
+01:C8FB file $028FB    67 bytes   32 ins  dead-callers     callers 08:8EAF 08:8C8B  | PHX; PHY; LDA #$30; STA $08; LDA #$C9; STA $09
+01:C94C file $0294C    12 bytes    5 ins  branch-not-taken callers -  | JSR $C28B; JSR $C959; BCC $C958; CLA; STA $2CDD,Y
+01:C959 file $02959    84 bytes   42 ins  dead-callers     callers 01:C94F  | PHY; LDY $36D5; LDA $27EF,X; SEC; SBC $27EF,Y; STA $02
+01:C9D2 file $029D2     2 bytes    2 ins  branch-not-taken callers -  | CLC; RTS
+01:CA17 file $02A17    18 bytes    9 ins  branch-not-taken callers -  | BSR $CA39; STA $0B; BSR $CA39; STA $0A; LDA $0B; BSR $CA4F
+01:CC05 file $02C05     4 bytes    2 ins  branch-not-taken callers -  | LDA $3C80,Y; TAY
+01:D0EA file $030EA     5 bytes    2 ins  branch-not-taken callers -  | LDA $3B79; BEQ $D13C
+01:D1F3 file $031F3    10 bytes    4 ins  branch-not-taken callers -  | LDA #$FF; STA $3705; LDA #$FF; STA $3706
+01:D233 file $03233     3 bytes    1 ins  branch-not-taken callers -  | DEC $3704
+01:D27B file $0327B     7 bytes    3 ins  branch-not-taken callers -  | BEQ $D288; STZ $3411; BRA $D288
+01:D2B4 file $032B4     6 bytes    2 ins  branch-not-taken callers 01:D2A0*  | STZ $3414; STZ $3415
+01:D2C2 file $032C2    22 bytes    9 ins  branch-not-taken callers -  | LDA #$3D; STA $3476,X; LDA #$A0; STA $348A,X; LDA #$29; STA $344E,X
+01:D2DF file $032DF    71 bytes   29 ins  branch-not-taken callers 01:D2D8*  | LDA #$29; STA $3476,X; LDA #$B5; STA $348A,X; LDA #$C9; STA $344E,X
+01:D359 file $03359    20 bytes    8 ins  branch-not-taken callers 01:D352*  | STZ $3606,X; STZ $361A,X; LDA $3476,X; STA $344E,X; LDA $348A,X; STA $3462,X
+01:D38A file $0338A    20 bytes    8 ins  branch-not-taken callers 01:D372*  | LDA #$29; STA $3476,X; LDA #$B5; STA $348A,X; LDA #$15; STA $344E,X
+01:D47B file $0347B    37 bytes   16 ins  branch-not-taken callers 01:D45A* 01:D45F*  | LDA $308B,X; BNE $D483; DEC $3095,X; DEC $308B,X; LDA #$04; STA $0A
+01:D7CA file $037CA    37 bytes   19 ins  branch-not-taken callers -  | STZ $0A; STZ $0B; CLX; LDA $3B94,X; BIT #$20; BNE $D7E0
+01:D806 file $03806     1 bytes    1 ins  branch-not-taken callers -  | RTS
+01:DA1E file $03A1E     2 bytes    1 ins  branch-not-taken callers -  | INC $0D
+01:DAAB file $03AAB     2 bytes    1 ins  branch-not-taken callers -  | INC $0D
+01:DAD9 file $03AD9     2 bytes    1 ins  branch-not-taken callers -  | INC $0D
+01:DBB7 file $03BB7     2 bytes    2 ins  branch-not-taken callers -  | PLA; RTS
+01:DD78 file $03D78    21 bytes   10 ins  branch-not-taken callers -  | STZ $3C24,X; TAX; LDY $278B,X; LDA $41; PHA; STY $41
+01:DDD1 file $03DD1    15 bytes    6 ins  branch-not-taken callers -  | LDA #$06; STA $294D,X; LDA #$8E; STA $297F,X; LDA #$CB; STA $2E5D,Y
+01:DF3D file $03F3D     3 bytes    3 ins  branch-not-taken callers 01:DF0B* 01:DF20*  | PLX; PLY; RTS
+08:80BC file $100BC    36 bytes   15 ins  branch-not-taken callers 08:809D*  | JSR $8650; LDA #$FA; STA $08; LDA #$80; STA $09; LDA #$42
+08:8134 file $10134    54 bytes   22 ins  branch-not-taken callers -  | LDA $294D,X; BNE $816A; LDA #$B0; STA $294D,X; LDA #$8E; STA $297F,X
+08:816B file $1016B    98 bytes   37 ins  table/indirect   callers -  | JSR $C88F; JSR $C877; JSR $C0B5; BCC $8184; LDA #$40; STA $29B1,X
+08:8650 file $10650    37 bytes   16 ins  dead-callers     callers 08:80BC  | LDA #$75; STA $08; LDA #$86; STA $09; LDA #$42; LDY #$FD
+08:86CA file $106CA    40 bytes   16 ins  branch-not-taken callers -  | JSR $E501; INC $29B1,X; LDA $294D,X; CMP #$E0; BEQ $86FA; LDA $29B1,X
+08:86FA file $106FA    19 bytes    7 ins  dead-callers     callers 08:86D6 08:9041  | JSR $C28B; INC $2FAA; INC $2FAA; JSR $C32C; LDA #$04; STA ($74)
+08:8A6A file $10A6A     2 bytes    1 ins  branch-not-taken callers -  | INC $75
+08:8A7D file $10A7D     1 bytes    1 ins  branch-not-taken callers -  | BRK
+08:8A9B file $10A9B     5 bytes    2 ins  branch-not-taken callers -  | JSR $C9D4; BRA $8ABD
+08:8AE8 file $10AE8    81 bytes   33 ins  branch-not-taken callers -  | CMP #$06; BCS $8B3A; STA $2A47,X; STA $3BE3; TAX; LDA $34C6,X
+08:8B40 file $10B40   272 bytes  104 ins  table/indirect   callers -  | DEC $29B1,X; BNE $8B3A; LDA #$01; STA $29B1,X; STZ $291B,X; JSR $E501
+08:8C54 file $10C54   266 bytes  114 ins  dead-callers     callers 08:8B6D 08:8B7A  | JSR $8D00; JSR $C28B; JSR $C32C; LDA ($74); AND #$0F; CMP #$01
+08:8D6C file $10D6C    94 bytes   46 ins  dead-callers     callers 08:8B51 08:8B75  | LDY $28E9,X; LDA $8DCA,Y; STA $0B; JSR $C28B; CLA; STA $0A
+08:8DCF file $10DCF   356 bytes  166 ins  dead-callers     callers 08:8CA8 08:8CFD  | LDA $29E3,X; STA $20AB; LDA $294D,X; STA $0D; LDA $2B9D,Y; STA $0A
+08:900C file $1100C    56 bytes   23 ins  branch-not-taken callers -  | JSR $E501; LDA #$10; STA $29B1,X; JSR $C19F; STZ $10; LDA #$47
+08:9121 file $11121     4 bytes    2 ins  table/indirect   callers -  | ST0 #$D0; ORA $DE
+08:9243 file $11243    74 bytes   28 ins  branch-not-taken callers -  | STZ $2AAB,X; LDA #$FA; STA $2A79,X; LDA #$03; STA $29B1,X; JSR $E501
+08:9568 file $11568     7 bytes    3 ins  branch-not-taken callers -  | LDA #$3A; JSR $F9DF; BRA $9574
+08:95CF file $115CF    46 bytes   19 ins  branch-not-taken callers -  | LDA #$07; STA $2FA9; JSR $C32C; LDA #$04; STA ($74); LDA #$09
+08:9861 file $11861     8 bytes    3 ins  branch-not-taken callers -  | JSR $D36D; LDA #$1A; JSR $F9DF
+08:9D02 file $11D02     2 bytes    1 ins  branch-not-taken callers -  | LDA #$09
+08:9E01 file $11E01    19 bytes    9 ins  branch-not-taken callers -  | LDA #$01; STA $0C; LDA #$19; STA $08; JSR $D5A1; INC $9B
+08:9E39 file $11E39    24 bytes   10 ins  branch-not-taken callers -  | LDA $3702; DEC; CMP $06; BEQ $9E51; LDY $3087,X; LDA $3B94,Y
+09:A60F file $1260F     5 bytes    2 ins  dead-callers     callers 09:A800  | LDA #$01; JSR $F9DF
+09:A6E0 file $126E0    10 bytes    4 ins  branch-not-taken callers -  | LDA #$B9; STA $2A79,X; LDA #$A5; STA $2AAB,X
+09:A7F3 file $127F3    19 bytes    7 ins  branch-not-taken callers 09:A7E8*  | LDA #$89; STA $2A79,X; LDA #$A9; STA $2AAB,X; STZ $3BE9; JSR $A60F
+09:A94A file $1294A     2 bytes    1 ins  branch-not-taken callers -  | LDA #$10
+09:AA61 file $12A61     6 bytes    3 ins  branch-not-taken callers -  | LDA #$11; JSR $F9DF; RTS
+09:AA9C file $12A9C    10 bytes    4 ins  branch-not-taken callers 09:AA88*  | LDA #$89; STA $2A79,X; LDA #$A9; STA $2AAB,X
+09:ACB7 file $12CB7    15 bytes    6 ins  branch-not-taken callers -  | LDA #$08; STA $3BDB; LDA #$05; STA $3BDC; LDA #$10; STA $3BDD
+09:AD51 file $12D51     6 bytes    3 ins  branch-not-taken callers 09:AD4E*  | LDA $27EF,X; BEQ $AD57; RTS
+09:AD8A file $12D8A    13 bytes    6 ins  branch-not-taken callers -  | LDA #$FA; STA $61; LDA #$AD; STA $62; JSR $EB16; BRA $ADB4
+09:AE40 file $12E40    31 bytes   14 ins  branch-not-taken callers 09:AE20*  | JSR $9E6F; LDX $3086; LDA #$47; STA $04; LDA #$02; STA $05
+09:AE74 file $12E74     4 bytes    2 ins  branch-not-taken callers -  | LDA #$81; STA $08
+09:AEB7 file $12EB7    45 bytes   20 ins  branch-not-taken callers -  | LDA #$58; STA $2885,X; LDA $3BEF; BEQ $AEC6; LDA #$98; STA $2885,X
+09:B216 file $13216    22 bytes   10 ins  branch-not-taken callers 09:B200*  | JSR $B442; LDY $0A; LDA $B429,Y; CLC; ADC $0B; TAY
+09:B3F9 file $133F9    49 bytes   21 ins  branch-not-taken callers 09:B3ED*  | LDX $3425; BSR $B442; LDX $0A; LDA $B429,X; CLC; ADC $0B
+09:B442 file $13442    42 bytes   22 ins  dead-callers     callers 09:B3FC 09:B216  | PHX; PHY; LDX $3425; LDA $3B94,X; STA $0B; STZ $0A
+09:B4F9 file $134F9    18 bytes    8 ins  branch-not-taken callers 09:B4F0*  | STZ $22; STZ $3BEF; LDA $0A; BNE $B50E; LDA #$40; STA $3BEF
+09:B511 file $13511   114 bytes   56 ins  dead-callers     callers 09:B64C 09:B703 09:B5D9  | LDA #$83; STA $08; LDA #$B5; STA $09; JSR $C9FB; TST #$02,$3709
+09:B591 file $13591    35 bytes   21 ins  dead-callers     callers 09:B53A 09:B576 09:B57B 09:B580  | PHY; PHA; LSR; LSR; LSR; LSR
+09:B5C4 file $135C4   497 bytes  231 ins  table/indirect   callers -  | JSR $D5F2; BIT #$01; BEQ $B5FD; TST #$01,$3BFF; BNE $B5E0; LDA $3709
+09:B7C2 file $137C2    95 bytes   40 ins  dead-callers     callers 09:B682  | LDA $99; CMP #$10; BEQ $B7E8; LDA $3553; SEC; SBC #$88
+09:BA3A file $13A3A     1 bytes    1 ins  branch-not-taken callers -  | RTS
+09:BA99 file $13A99     7 bytes    3 ins  branch-not-taken callers -  | LDA $0D; STA $323B,Y; BRA $BABB
+09:BBAE file $13BAE   148 bytes   68 ins  branch-not-taken callers 09:BBA9*  | JSR $C0B5; BCC $BC1E; JSR $EF10; LDA #$2D; STA $11; LDA #$88
+09:BC45 file $13C45    48 bytes   18 ins  dead-callers     callers 09:BBDC 09:BBF3  | JSR $C180; LDA $11; STA $2CDD,Y; STZ $2AAB,X; LDA #$FC; STA $2A79,X
+0A:84A8 file $144A8   108 bytes   47 ins  branch-not-taken callers -  | LDA #$B0; STA $29B1,X; LDA #$04; STA $29E3,X; INC $28E9,X; LDA $28E9,X
+0A:86AC file $146AC     1 bytes    1 ins  branch-not-taken callers 0A:8683*  | RTS
+0A:86D6 file $146D6     5 bytes    2 ins  branch-not-taken callers -  | LDA #$9B; STA $2CDD,Y
+0A:86F0 file $146F0    34 bytes   13 ins  branch-not-taken callers -  | JSR $E501; LDA #$34; JSR $F9DF; RTS; JSR $C0B5; BCC $8713
+0A:897D file $1497D     5 bytes    3 ins  branch-not-taken callers -  | CLC; ADC #$10; STA $10
+0A:89DC file $149DC     6 bytes    2 ins  branch-not-taken callers -  | STZ $2821,X; STZ $27EF,X
+0A:8A0F file $14A0F     6 bytes    2 ins  branch-not-taken callers -  | STZ $28B7,X; STZ $2885,X
+0A:8B11 file $14B11    32 bytes   12 ins  branch-not-taken callers 0A:8B0B*  | LDY $29B1,X; LDA $2A15,X; ORA $2A15,Y; STA $2A15,Y; LDY $41; LDA #$EE
+0A:8B40 file $14B40   100 bytes   44 ins  branch-not-taken callers -  | LDA #$80; STA $29B1,X; JSR $E501; DEC $29B1,X; BNE $8B51; JMP $EF10
+0A:8CBE file $14CBE    13 bytes    5 ins  branch-not-taken callers -  | LDA $3B9E; BEQ $8CCB; LDX $36D7; LDA #$01; STA $29B1,X
+0A:8D2D file $14D2D    54 bytes   27 ins  branch-not-taken callers 0A:8D27*  | LDX $3425; LDA $2FA9; PHA; LDA $2FAA; PHA; LDA $41
+0A:8E4A file $14E4A    10 bytes    4 ins  branch-not-taken callers -  | LDA $2A15,X; ORA #$08; STA $2A15,X; BRA $8E60
+0A:8E58 file $14E58     8 bytes    3 ins  branch-not-taken callers -  | LDA $2A15,X; ORA #$10; STA $2A15,X
+0A:8E6A file $14E6A     9 bytes    3 ins  branch-not-taken callers 0A:8DEC*  | LDX $3BE3; INC $3B9E,X; JMP $8DD5
+0A:8ED2 file $14ED2    98 bytes   46 ins  branch-not-taken callers 0A:8ECC*  | LDX $3425; JSR $C9AD; BCC $8F0D; LDA $2A15,X; BIT #$01; BNE $8EEA
+0A:90E1 file $150E1    15 bytes    6 ins  branch-not-taken callers -  | BBS6 $B8,$90F0; LDA $2A47,X; BNE $90F0; LDA $29B1,X; CMP #$04; BCS $9100
+0A:92A7 file $152A7     7 bytes    3 ins  branch-not-taken callers -  | CLA; STA $2DDD,Y; STA $2E1D,Y
+0A:92BE file $152BE    12 bytes    6 ins  branch-not-taken callers -  | LDA $2DDD,Y; SEC; SBC #$0E; EOR #$FF; AND #$FE; ORA #$02
+0A:92E6 file $152E6     7 bytes    3 ins  branch-not-taken callers -  | LDA #$16; STA $28E9,X; BRA $92F6
+0A:92F1 file $152F1     5 bytes    2 ins  branch-not-taken callers -  | LDA #$04; STA $28E9,X
+0A:942A file $1542A     5 bytes    2 ins  branch-not-taken callers -  | JSR $DD63; BRA $9451
+0A:9469 file $15469    14 bytes    6 ins  branch-not-taken callers -  | JSR $C610; LDA $AB; AND #$01; ORA #$04; JSR $94F7; BRA $9451
+0A:991A file $1591A    33 bytes   12 ins  branch-not-taken callers -  | STZ $3B8A; STZ $3B8B; STZ $3B8C; SMB2 $B8; BBR0 $B8,$9930; INC $3B88
+0A:9943 file $15943     5 bytes    2 ins  branch-not-taken callers -  | JSR $99AA; BRA $9962
+0A:9956 file $15956    12 bytes    5 ins  branch-not-taken callers -  | LDA $3B8C; CMP #$01; BNE $9962; JSR $9A9D; BRA $9962
+0A:99AA file $159AA    95 bytes   42 ins  dead-callers     callers 0A:9943  | LDA $3B8D; BNE $99B2; BBR7 $B8,$99B3; RTS; LDA $3B8B; CMP #$3B
+0A:9A9D file $15A9D   187 bytes   75 ins  dead-callers     callers 0A:995D  | LDA #$D7; STA $08; LDA #$9A; STA $09; LDA #$40; LDY #$04
+0A:9B71 file $15B71   319 bytes  134 ins  dead-callers     callers 0A:992B  | BBS0 $B8,$9B75; RTS; LDA #$AA; STA $08; LDA #$9B; STA $09
+0B:A064 file $16064     7 bytes    3 ins  branch-not-taken callers -  | LDA #$15; JSR $F9DF; BRA $A070
+0B:A10D file $1610D     5 bytes    2 ins  branch-not-taken callers -  | INC $3552,X; BRA $A115
+0B:A11A file $1611A    10 bytes    4 ins  branch-not-taken callers -  | BCS $A121; INC $358E,X; BRA $A124; DEC $358E,X
+0B:A179 file $16179    14 bytes    7 ins  branch-not-taken callers -  | STZ $80; LDA #$FC; STA $81; STZ $82; LDA #$04; STA $83
+0B:A198 file $16198    76 bytes   32 ins  branch-not-taken callers -  | ASL; TAX; JSR $A209; LDX $3BE3; LDA $3095,X; BNE $A1AC
+0B:A209 file $16209     3 bytes    1 ins  dead-callers     callers 0B:A19A  | JMP ($A20A,X)
+0B:A375 file $16375     3 bytes    1 ins  branch-not-taken callers -  | BBS4 $C1,$A37E
+0B:A3A6 file $163A6     3 bytes    1 ins  branch-not-taken callers -  | BBS5 $C1,$A37E
+0B:A3C6 file $163C6     5 bytes    3 ins  branch-not-taken callers 0B:A3B2* 0B:A3BD*  | SEC; LDX $3425; RTS
+0B:A4A9 file $164A9     2 bytes    2 ins  branch-not-taken callers 0B:A4A5*  | SEC; RTS
+0B:A4B9 file $164B9     4 bytes    2 ins  branch-not-taken callers -  | LDA $84; BNE $A4BF
+0B:A553 file $16553     3 bytes    1 ins  branch-not-taken callers -  | JSR $C4EF
+0B:A57E file $1657E     2 bytes    2 ins  branch-not-taken callers 0B:A57A*  | SEC; RTS
+0B:A58C file $1658C     4 bytes    2 ins  branch-not-taken callers -  | LDA $86; BNE $A592
+0B:A624 file $16624     3 bytes    1 ins  branch-not-taken callers -  | JSR $C4E1
+0B:A64F file $1664F     2 bytes    2 ins  branch-not-taken callers 0B:A64B*  | SEC; RTS
+0B:A6FC file $166FC     3 bytes    1 ins  branch-not-taken callers -  | JSR $C4E1
+0B:A727 file $16727     2 bytes    2 ins  branch-not-taken callers 0B:A723*  | SEC; RTS
+0B:A746 file $16746     2 bytes    1 ins  branch-not-taken callers -  | BRA $A753
+0B:A7CB file $167CB     5 bytes    2 ins  branch-not-taken callers -  | LDA #$14; JSR $F9DF
+0B:A7EF file $167EF     1 bytes    1 ins  branch-not-taken callers -  | SEC
+0B:A84A file $1684A     5 bytes    2 ins  branch-not-taken callers -  | LDA #$40; STA $34EE,X
+0B:AAF0 file $16AF0    15 bytes    5 ins  branch-not-taken callers -  | LDA $3477; STA $3476,X; LDA $348B; STA $348A,X; STZ $3BE5
+0B:ABA6 file $16BA6     9 bytes    4 ins  branch-not-taken callers -  | DEC $3BCC,X; LDA #$0B; BSR $ABB9; BRA $ABA1
+0B:ABB7 file $16BB7     2 bytes    1 ins  branch-not-taken callers 0B:ABB4*  | LDA #$09
+0B:ABF1 file $16BF1    19 bytes   10 ins  branch-not-taken callers -  | LDA #$02; STA $2FA9; LDA $2FAA; INC; CMP #$0C; BNE $ABD1
+0B:ACEC file $16CEC     9 bytes    4 ins  branch-not-taken callers -  | LDA $3BA3,X; CMP #$0A; BEQ $ACFF; BRA $ACFC
+0B:AD5F file $16D5F    31 bytes   14 ins  branch-not-taken callers 0B:AD7C  | LDX $3BE3; STA $3090,X; LDA #$80; STA $308B,X; LDA #$04; STA $3095,X
+0B:ADE0 file $16DE0     8 bytes    4 ins  branch-not-taken callers -  | TAX; TYA; STA $3C7B,X; LDX $3BE3
+0B:ADED file $16DED    10 bytes    4 ins  branch-not-taken callers -  | TAX; LDA $3BE3; STA $3C7B,X; LDX $3BE3
+0B:B1F0 file $171F0    16 bytes    6 ins  branch-not-taken callers -  | LDX $322A; LDA $323B,X; AND #$F0; BNE $B202; LDY $322F; LDA $B149,Y
+0B:B245 file $17245     9 bytes    4 ins  branch-not-taken callers -  | LDA $3B94,X; EOR $0C; BIT #$40; BEQ $B293
+0B:B2AB file $172AB     4 bytes    2 ins  branch-not-taken callers -  | STA $C1; BRA $B2E4
+0B:B2B4 file $172B4     4 bytes    2 ins  branch-not-taken callers -  | STA $C1; BRA $B2E4
+0B:B2CD file $172CD     4 bytes    2 ins  branch-not-taken callers -  | STA $C1; BRA $B2E4
+0B:B2F3 file $172F3    25 bytes   11 ins  branch-not-taken callers 0B:B2E9* 0B:B2F0*  | LDX $3BE3; LDA $C3; CMP $0E; BCC $B30B; LDA $3B9E,X; CMP $3227
+0B:B3B2 file $173B2     5 bytes    2 ins  branch-not-taken callers -  | LDA #$FF; JMP $B334
+0B:B45B file $1745B     4 bytes    2 ins  branch-not-taken callers -  | LDA #$FF; BRA $B3EE
+0B:B4EF file $174EF    12 bytes    6 ins  branch-not-taken callers -  | LDA #$04; JSR $E9EC; CMP #$03; BNE $B500; INC; BNE $B500
+0B:B5A9 file $175A9     7 bytes    3 ins  branch-not-taken callers -  | LDA #$15; JSR $F9DF; BRA $B5B5
+0B:B936 file $17936     2 bytes    1 ins  branch-not-taken callers -  | BSR $B973
+0B:B973 file $17973    56 bytes   23 ins  dead-callers     callers 0B:B936  | LDY $3BE3; LDA $34C6,Y; PHA; LDX $3425; LDA $3656,X; BPL $B99B
+0C:8000 file $18000     3 bytes    1 ins  branch-not-taken callers 0C:802A* 0C:8034*  | JMP $E557
+0C:8022 file $18022     3 bytes    1 ins  branch-not-taken callers -  | JMP $80AF
+0C:82B4 file $182B4     2 bytes    1 ins  branch-not-taken callers -  | BRA $8299
+0C:83AA file $183AA     3 bytes    1 ins  branch-not-taken callers -  | STZ $2200
+0C:83C1 file $183C1     3 bytes    1 ins  branch-not-taken callers -  | STZ $2200
+0C:841B file $1841B     7 bytes    3 ins  branch-not-taken callers 0C:8410*  | LDA $27BD,X; CMP #$40; BPL $842D
+0C:848C file $1848C    22 bytes    9 ins  branch-not-taken callers 0C:8472*  | DEC $27BD,X; LDA $27BD,X; CMP #$40; BNE $849B; JSR $8422; BRA $84A2
+0C:8609 file $18609     8 bytes    3 ins  branch-not-taken callers 0C:85F4*  | LDA #$0D; STA $2CDD,Y; JMP $E555
+0C:8C9E file $18C9E    12 bytes    5 ins  branch-not-taken callers -  | LDA $28E9,X; CMP #$04; BNE $8CAA; LDA #$58; JSR $F9DF
+0C:8CAF file $18CAF     8 bytes    3 ins  branch-not-taken callers -  | LDA #$01; STA $2AAB,X; JSR $E4F1
+0C:90B0 file $190B0     1 bytes    1 ins  branch-not-taken callers -  | CLY
+0C:90B8 file $190B8    16 bytes    7 ins  branch-not-taken callers 0C:904A*  | STZ $B4; LDA #$C4; STA $61; LDA #$9A; STA $62; JSR $EB16
+0C:93C3 file $193C3     3 bytes    1 ins  branch-not-taken callers -  | JMP $8FBF
+0C:93D6 file $193D6     3 bytes    1 ins  branch-not-taken callers -  | JMP $8FBF
+0C:93EC file $193EC   507 bytes  208 ins  branch-not-taken callers 0C:93E7*  | JSR $E4F1; JSR $CC71; LDA $370F; BEQ $93F8; RTS; LDA #$08
+0C:9629 file $19629     4 bytes    2 ins  branch-not-taken callers -  | LDA #$05; BRA $962E
+0C:9A7B file $19A7B     6 bytes    3 ins  branch-not-taken callers -  | LDA #$80; STA $370F; RTS
+0C:9A8F file $19A8F     3 bytes    2 ins  branch-not-taken callers -  | EOR #$FF; INC
+0C:9AA3 file $19AA3     6 bytes    3 ins  branch-not-taken callers 0C:9A9B*  | LDA #$40; STA $370F; RTS
+0C:9ED1 file $19ED1     3 bytes    1 ins  branch-not-taken callers -  | JMP $9FB9
+0C:9F27 file $19F27     3 bytes    1 ins  branch-not-taken callers -  | STZ $2FB7
+0C:9F92 file $19F92     3 bytes    1 ins  branch-not-taken callers -  | INC $2FCB
+0C:9F9A file $19F9A     3 bytes    1 ins  branch-not-taken callers -  | DEC $2FC9
+0C:9FC8 file $19FC8     3 bytes    1 ins  branch-not-taken callers -  | INC $2FCB
+0D:A031 file $1A031     2 bytes    1 ins  branch-not-taken callers -  | INC $03
+0D:A40A file $1A40A     3 bytes    1 ins  branch-not-taken callers -  | JMP $A057
+0D:A42E file $1A42E     3 bytes    1 ins  branch-not-taken callers -  | JMP $A404
+0D:A60C file $1A60C     3 bytes    1 ins  branch-not-taken callers -  | JMP $A057
+0D:A710 file $1A710     3 bytes    1 ins  branch-not-taken callers -  | JMP $A057
+0D:A81C file $1A81C     3 bytes    1 ins  branch-not-taken callers -  | JMP $A057
+0D:AF66 file $1AF66    20 bytes   12 ins  branch-not-taken callers -  | LDA $B5; AND #$F0; LSR; LSR; LSR; LSR
+0D:B03E file $1B03E     5 bytes    2 ins  branch-not-taken callers -  | INC $2FCA; BRA $B02F
+0D:B2C3 file $1B2C3     3 bytes    1 ins  branch-not-taken callers -  | JMP $B367
+0D:B2D1 file $1B2D1     3 bytes    1 ins  branch-not-taken callers -  | JMP $B367
+0D:B2E2 file $1B2E2     3 bytes    1 ins  branch-not-taken callers -  | JMP $B367
+0E:8213 file $1C213    12 bytes    5 ins  branch-not-taken callers -  | LDA $361A,X; CMP #$0A; BNE $821F; LDA #$C1; STA $2D1D,Y
+0E:8341 file $1C341     4 bytes    2 ins  branch-not-taken callers -  | CLA; STA $2CDD,Y
+0E:834B file $1C34B    10 bytes    4 ins  branch-not-taken callers -  | LDA #$81; STA $2D1D,Y; LDA #$1E; STA $2CDD,Y
+0E:8362 file $1C362    41 bytes   16 ins  branch-not-taken callers -  | LDA #$FF; STA $3516,X; STZ $366A,X; LDA #$FE; STA $3656,X; LDA #$80
+0E:83FB file $1C3FB     3 bytes    2 ins  branch-not-taken callers -  | EOR #$FF; INC
+0E:8577 file $1C577    10 bytes    4 ins  branch-not-taken callers -  | LDA #$21; STA $344E,X; LDA #$85; STA $3462,X
+0E:8596 file $1C596    79 bytes   33 ins  branch-not-taken callers 0E:8593*  | JSR $C1B8; LDA #$D0; STA $08; LDA #$85; STA $09; LDA #$42
+0E:8688 file $1C688     5 bytes    3 ins  branch-not-taken callers -  | LDA #$00; SEC; BRA $86AA
+0E:8695 file $1C695    15 bytes    7 ins  branch-not-taken callers -  | LDA $2A79,Y; CMP $2FA9; LDA #$01; BCS $86AA; LDA #$03; SEC
+0E:88C9 file $1C8C9    11 bytes    4 ins  branch-not-taken callers -  | STZ $367E,X; LDA #$41; STA $2E5D,Y; STA $34B2,X
+0E:89EC file $1C9EC    13 bytes    5 ins  branch-not-taken callers -  | LDA $2FAA; SEC; SBC $3C96; TST #$02,$3516,X; BEQ $8A13
+0E:8A13 file $1CA13    32 bytes   15 ins  branch-not-taken callers 0E:89F7  | CMP #$05; BCS $8A33; LDA #$A0; STA $82; STZ $83; LDA $3516,X
+0E:8ADD file $1CADD    16 bytes    6 ins  branch-not-taken callers -  | STZ $352A,X; JSR $C000; LDA #$5E; STA $344E,X; LDA #$8A; STA $3462,X
+0E:8B24 file $1CB24    56 bytes   23 ins  branch-not-taken callers -  | LDA #$13; STA $2E5D,Y; STA $34B2,X; JSR $C1B8; LDA #$5D; STA $08
+0E:8BD2 file $1CBD2     2 bytes    1 ins  branch-not-taken callers -  | BRA $8BDC
+0E:8E46 file $1CE46    48 bytes   20 ins  branch-not-taken callers -  | JSR $C1B8; LDA #$5D; STA $08; LDA #$8B; STA $09; LDA #$C2
+0E:8E81 file $1CE81    19 bytes    6 ins  branch-not-taken callers -  | JSR $E405; BCS $8E94; LDA #$76; STA $29B1,X; LDA $3425; STA $29E3,X
+0E:8EFF file $1CEFF    71 bytes   28 ins  branch-not-taken callers 0E:8EFC*  | STZ $352A,X; STZ $34EE,X; LDA #$01; STA $34DA,X; DEC $20C8; LDA #$21
+0E:8FDE file $1CFDE     6 bytes    2 ins  branch-not-taken callers 0E:8FC5*  | JSR $8434; JMP $916B
+0E:9038 file $1D038    41 bytes   16 ins  branch-not-taken callers -  | LDA #$62; STA $35DE,X; LDA #$97; STA $35F2,X; STZ $361A,X; STZ $3606,X
+0E:907D file $1D07D     6 bytes    2 ins  branch-not-taken callers 0E:9066* 0E:9098 0E:9088*  | JSR $8464; JMP $916B
+0E:9093 file $1D093    28 bytes   11 ins  dead-callers     callers 0E:9055  | LDA $3426,X; CMP #$24; BNE $907D; LDA $2CDD,Y; TAY; LDA $8F2E,Y
+0E:916D file $1D16D    58 bytes   24 ins  branch-not-taken callers -  | LDA #$43; STA $34B2,X; LDA #$43; STA $2E5D,Y; JSR $C1B8; LDA #$5D
+0E:92DF file $1D2DF     3 bytes    1 ins  branch-not-taken callers 0E:92D1*  | JSR $DD63
+0E:9421 file $1D421     4 bytes    2 ins  branch-not-taken callers -  | LDA #$0D; STA $0A
+0E:94D0 file $1D4D0     1 bytes    1 ins  branch-not-taken callers -  | RTS
+0E:9693 file $1D693     5 bytes    2 ins  branch-not-taken callers 0E:968A*  | LDA #$04; STA $348A,X
+0E:96F5 file $1D6F5    18 bytes    7 ins  branch-not-taken callers -  | LDA #$02; STA $348A,X; LDA $3476,X; AND #$F0; ORA #$01; STA $3476,X
+0E:97AB file $1D7AB    18 bytes    7 ins  branch-not-taken callers -  | LDA #$08; STA $348A,X; LDA $3476,X; AND #$F0; ORA #$01; STA $3476,X
+0E:9926 file $1D926     3 bytes    2 ins  branch-not-taken callers -  | EOR #$FF; INC
+0E:9932 file $1D932     2 bytes    1 ins  branch-not-taken callers -  | EOR #$02
+0E:9ACB file $1DACB     7 bytes    4 ins  branch-not-taken callers -  | LDA $6F; EOR #$FF; INC; STA $6F
+0E:9AD6 file $1DAD6     9 bytes    4 ins  branch-not-taken callers -  | LDA #$40; BBR7 $70,$9B28; LDA #$C0; BRA $9B28
+0E:9AF1 file $1DAF1     4 bytes    2 ins  branch-not-taken callers -  | LDA #$20; BRA $9B18
+0E:9BE3 file $1DBE3     2 bytes    1 ins  branch-not-taken callers -  | INC $0B
+0E:9C17 file $1DC17     2 bytes    1 ins  branch-not-taken callers -  | INC $0B
+0E:9C79 file $1DC79     2 bytes    1 ins  branch-not-taken callers -  | DEC $0A
+0E:9D57 file $1DD57     3 bytes    2 ins  branch-not-taken callers -  | EOR #$FF; INC
+0E:9DF5 file $1DDF5     5 bytes    2 ins  branch-not-taken callers -  | LDA #$06; STZ $30B8
+0E:9E26 file $1DE26    52 bytes   20 ins  branch-not-taken callers 0E:9E23*  | LDA #$15; STA $2CDD,Y; STZ $30BC; JSR $E405; LDX $3425; LDA #$40
+0F:A6D2 file $1E6D2    23 bytes    9 ins  branch-not-taken callers -  | DEC $30BA; LDA #$EA; STA $344E,X; LDA #$A6; STA $3462,X; LDA #$15
+0F:A815 file $1E815     3 bytes    1 ins  branch-not-taken callers -  | JSR $C9D4
+0F:BB1B file $1FB1B    12 bytes    4 ins  branch-not-taken callers -  | STZ $2FA1; STZ $2FA2; STZ $3162; STZ $3163
+10:8147 file $20147     9 bytes    3 ins  branch-not-taken callers -  | STZ $362E,X; ASL $3C8F; ROL $3C90
+10:8163 file $20163     3 bytes    1 ins  branch-not-taken callers -  | JMP $871F
+10:8186 file $20186     3 bytes    1 ins  branch-not-taken callers -  | JMP $86CE
+10:81BB file $201BB     3 bytes    1 ins  branch-not-taken callers -  | JMP $871F
+10:832A file $2032A     3 bytes    1 ins  branch-not-taken callers -  | JMP $8388
+10:8331 file $20331     3 bytes    1 ins  branch-not-taken callers -  | JMP $83D7
+10:836C file $2036C     2 bytes    1 ins  branch-not-taken callers -  | LDX #$05
+10:8376 file $20376   129 bytes   51 ins  branch-not-taken callers 10:8371*  | LDA $3BAD; BMI $837F; LDA #$05; BRA $8380; CLA; JSR $D2BB
+10:843B file $2043B   241 bytes  106 ins  branch-not-taken callers 10:8428*  | LDA $90; ASL; CLC; ADC $93; STA $03; JSR $C69F
+10:866A file $2066A   224 bytes   96 ins  dead-callers     callers 10:84D4 10:850E  | PHY; LDA $27EF,X; CLC; ADC $2201; STA $90; LDA $2821,X
+10:8C98 file $20C98     6 bytes    2 ins  branch-not-taken callers 10:8C7E*  | JSR $E6DB; JMP $EF10
+10:8CC5 file $20CC5     6 bytes    2 ins  branch-not-taken callers 10:8CB5*  | JSR $E6DB; JMP $EF10
+10:8D4A file $20D4A     3 bytes    1 ins  branch-not-taken callers -  | JSR $E501
+10:8D8C file $20D8C   120 bytes   47 ins  table/indirect   callers -  | JSR $E528; STZ $2A15,X; STZ $3296; LDX $3258; JSR $C1B8; JSR $8DDA
+10:8E18 file $20E18    19 bytes    7 ins  table/indirect   callers -  | INC $2A15,X; LDA $2A15,X; CMP #$08; BCS $8E25; JMP $C8C7; JSR $E6DB
+10:8E4C file $20E4C    10 bytes    4 ins  branch-not-taken callers -  | LDA #$5E; STA $344E,X; LDA #$90; STA $3462,X
+10:8EBA file $20EBA    16 bytes    7 ins  branch-not-taken callers 10:8EA8*  | LDA #$C8; STA $35DE,X; LDA #$82; STA $35F2,X; LDA #$03; STA $3278
+10:8F05 file $20F05    12 bytes    5 ins  branch-not-taken callers 10:8ECD*  | STZ $3278; LDA $3256; AND #$80; STA $3256; RTS
+10:8F8D file $20F8D    22 bytes    9 ins  branch-not-taken callers -  | LDA $3299; EOR #$FF; STA $3299; LDA $3298; EOR #$FF; INC
+10:8FC4 file $20FC4     3 bytes    1 ins  branch-not-taken callers -  | INC $329B
+10:8FFD file $20FFD     6 bytes    3 ins  branch-not-taken callers 10:8FEE* 10:8FF3* 10:8FF7*  | LDA #$A0; STA $326E; RTS
+10:9024 file $21024     2 bytes    2 ins  branch-not-taken callers 10:9020*  | SEC; RTS
+10:932E file $2132E     3 bytes    1 ins  branch-not-taken callers -  | INC $3297
+10:9365 file $21365     3 bytes    1 ins  branch-not-taken callers -  | INC $3297
+10:93B2 file $213B2     8 bytes    3 ins  branch-not-taken callers -  | LDA $3256; BMI $93BA; STZ $3256
+10:94CA file $214CA    22 bytes    9 ins  branch-not-taken callers -  | LDA $3299; EOR #$FF; STA $3299; LDA $3298; EOR #$FF; INC
+10:94F5 file $214F5    22 bytes    9 ins  branch-not-taken callers -  | LDA $329B; EOR #$FF; STA $329B; LDA $329A; EOR #$FF; INC
+10:9526 file $21526    19 bytes    8 ins  branch-not-taken callers -  | LDA $3298; STA $3265; LSR; STA $3269; ROR $3268; LDA #$02
+10:95DD file $215DD     4 bytes    2 ins  branch-not-taken callers -  | STZ $3256; RTS
+10:95EC file $215EC    12 bytes    5 ins  branch-not-taken callers -  | LDA $69; STA $3296; LDA $6A; STA $3297; BRA $9602
+10:9607 file $21607    22 bytes    9 ins  branch-not-taken callers -  | LDA $3297; EOR #$FF; STA $3297; LDA $3296; EOR #$FF; INC
+10:96EB file $216EB     3 bytes    1 ins  branch-not-taken callers -  | JMP $972E
+10:9716 file $21716     3 bytes    1 ins  branch-not-taken callers -  | JMP $972E
+10:972E file $2172E    39 bytes   16 ins  dead-callers     callers 10:96EB 10:9716  | LDA #$80; STA $3256; LDA #$80; STA $B8; LDA #$01; TSB $3709
+10:99D9 file $219D9     2 bytes    1 ins  branch-not-taken callers -  | LDX #$05
+10:9CF8 file $21CF8    45 bytes   18 ins  branch-not-taken callers 10:9CE0* 10:9CF5*  | LDX #$06; LDA #$25; STA $344E,X; LDA #$9D; STA $3462,X; STZ $3516,X
+10:9DB0 file $21DB0     3 bytes    1 ins  branch-not-taken callers -  | JSR $9E12
+10:9DD2 file $21DD2     5 bytes    2 ins  branch-not-taken callers -  | LDA #$01; STA $3642,X
+10:9E02 file $21E02     3 bytes    2 ins  branch-not-taken callers -  | BSR $9E12; RTS
+10:9E12 file $21E12    45 bytes   19 ins  dead-callers     callers 10:9DB0 10:9E02  | LDX #$07; LDA #$3F; STA $344E,X; LDA #$9E; STA $3462,X; STZ $3516,X
+11:A055 file $22055     5 bytes    3 ins  branch-not-taken callers -  | PLX; JSR $E555; RTS
+11:A113 file $22113     3 bytes    2 ins  branch-not-taken callers -  | EOR #$FF; INC
+11:A11A file $2211A    32 bytes   15 ins  branch-not-taken callers -  | LDX #$08; LDA $358E,X; STA $02; LDX #$06; LDA $358E,X; SEC
+11:A32E file $2232E     3 bytes    1 ins  branch-not-taken callers -  | JMP $A7A5
+11:A4A3 file $224A3     8 bytes    4 ins  branch-not-taken callers 11:A497*  | LDA #$E8; STA $02; LDA #$A4; STA $03
+11:A4D2 file $224D2    14 bytes    6 ins  branch-not-taken callers 11:A4B7*  | STZ $3259; LDA #$B2; STA $344E,X; LDA #$A7; STA $3462,X; RTS
+11:A4F5 file $224F5    11 bytes    5 ins  branch-not-taken callers -  | CMP #$01; BEQ $A507; LDA #$03; STA $3516,X; BRA $A50C
+11:A507 file $22507     5 bytes    2 ins  dead-callers     callers 11:A4F7  | LDA #$01; STA $3516,X
+11:A557 file $22557     3 bytes    1 ins  branch-not-taken callers -  | JMP $AABE
+11:A590 file $22590    15 bytes    7 ins  branch-not-taken callers -  | CMP #$01; BEQ $A5A5; CLA; JSR $A5B7; LDA #$01; JSR $A5B7
+11:A5A5 file $225A5     5 bytes    2 ins  dead-callers     callers 11:A592  | LDA #$01; JSR $A5B7
+11:A5B2 file $225B2     1 bytes    1 ins  branch-not-taken callers -  | CLA
+11:A606 file $22606    75 bytes   35 ins  branch-not-taken callers 11:A5B9*  | LDX #$06; LDA $3552,X; CLC; ADC #$0C; STA $02; LDA $358E,X
+11:A967 file $22967     2 bytes    1 ins  branch-not-taken callers -  | INC $03
+11:AA25 file $22A25    45 bytes   17 ins  branch-not-taken callers -  | LDA #$E7; STA $367E,X; STZ $3516,X; LDA #$02; STA $352A,X; JSR $C000
+11:AABE file $22ABE    50 bytes   20 ins  dead-callers     callers 11:A557  | JSR $C03A; STZ $3516,X; LDA #$12; STA $352A,X; JSR $C000; STZ $3606,X
+12:836F file $2436F    36 bytes   15 ins  branch-not-taken callers 12:834F* 12:836C*  | LDA #$01; TSB $3709; LDA #$40; TSB $B8; LDA #$69; STA $344E,X
+12:83F8 file $243F8     3 bytes    1 ins  branch-not-taken callers -  | JMP $867B
+12:842E file $2442E    10 bytes    4 ins  branch-not-taken callers 12:841B*  | LDA #$37; STA $344E,X; LDA #$83; STA $3462,X
+12:8494 file $24494    95 bytes   39 ins  branch-not-taken callers 12:848E*  | STA $8D; LDA #$08; STA $8C; LDA #$37; STA $67; LDA #$8A
+12:8504 file $24504    81 bytes   32 ins  table/indirect   callers -  | JSR $C0B5; STZ $6B; LDA #$04; STA $6C; JSR $C784; JSR $C88F
+12:85AE file $245AE    50 bytes   21 ins  table/indirect   callers -  | LDA #$08; STA $8D; LDA #$0E; STA $8C; LDA #$89; STA $67
+12:867B file $2467B   108 bytes   42 ins  dead-callers     callers 12:83F8  | STZ $30B7; LDA #$8D; STA $344E,X; LDA #$86; STA $3462,X; LDA #$30
+12:870E file $2470E   111 bytes   48 ins  dead-callers     callers 12:869D  | JSR $C1B8; LDA $2FA5; SEC; SBC #$1C; STA $2FA5; LDA $2FA6
+12:8DF9 file $24DF9     2 bytes    2 ins  branch-not-taken callers 12:8E09*  | SEC; RTS
+12:8FD2 file $24FD2     1 bytes    1 ins  branch-not-taken callers 12:8F9B*  | RTS
+12:9007 file $25007     2 bytes    1 ins  branch-not-taken callers -  | LDA #$09
+12:949A file $2549A     6 bytes    2 ins  branch-not-taken callers -  | JSR $CA39; STA $316F
+12:9EBE file $25EBE     3 bytes    2 ins  branch-not-taken callers -  | CLC; ADC #$02
+12:9EC4 file $25EC4     6 bytes    3 ins  branch-not-taken callers 12:9EB5*  | LDA #$80; JSR $F9B3; RTS
+13:B160 file $27160    18 bytes    7 ins  branch-not-taken callers -  | LDA $29E3,X; BEQ $B16C; TAX; STZ $34DA,X; JMP $C03A; STZ $29B1,X
+13:B275 file $27275     2 bytes    1 ins  branch-not-taken callers -  | INC $0F
+13:B2A0 file $272A0     3 bytes    1 ins  branch-not-taken callers -  | INC $2FA2
+13:B310 file $27310     5 bytes    2 ins  branch-not-taken callers -  | LDA #$80; STA $2D1D,Y
+61:402F file $C202F     4 bytes    2 ins  branch-not-taken callers 61:401F*  | LDA #$FF; BRA $4012
+61:4087 file $C2087     6 bytes    4 ins  branch-not-taken callers 61:407E* 61:4135 61:413A 61:415C 61:4161  | LDA #$FF; RTS; LDA #$01; RTS
+61:4135 file $C2135     3 bytes    1 ins  branch-not-taken callers -  | JMP $4087
+61:413A file $C213A     3 bytes    1 ins  branch-not-taken callers -  | JMP $4087
+61:4147 file $C2147     3 bytes    1 ins  branch-not-taken callers -  | JMP $408A
+61:415C file $C215C     3 bytes    1 ins  branch-not-taken callers -  | JMP $4087
+61:4161 file $C2161     3 bytes    1 ins  branch-not-taken callers -  | JMP $4087
+61:416A file $C216A     3 bytes    1 ins  branch-not-taken callers -  | JMP $408A
+61:4234 file $C2234     3 bytes    1 ins  branch-not-taken callers -  | ORA $423B,X
+61:44AC file $C24AC    12 bytes    6 ins  branch-not-taken callers -  | STA $3F1E,X; PHY; TAY; LDA $5299,Y; STA $3CE9,X; PLY
+61:44EE file $C24EE    38 bytes   23 ins  branch-not-taken callers -  | CLX; LDA #$06; CPY #$00; BEQ $44F7; INX; ASL
+61:451A file $C251A    27 bytes   14 ins  branch-not-taken callers -  | PHY; LDX #$05; LDY #$0B; LDA $3D25,Y; BEQ $452C; LDA $3CF5,X
+61:4540 file $C2540    24 bytes   11 ins  branch-not-taken callers -  | LDX #$0B; LDA $3D25,X; BEQ $454F; LDA $3CF5,X; AND #$7F; STA $3CF5,X
+61:4570 file $C2570    12 bytes    7 ins  branch-not-taken callers -  | CLX; TYA; BEQ $4575; INX; LDA $E9,X; AND #$1F
+61:457F file $C257F    36 bytes   21 ins  branch-not-taken callers -  | CLX; TYA; BEQ $4584; INX; LDA $EA; STA $3CC1,X
+61:468A file $C268A     8 bytes    4 ins  branch-not-taken callers 61:4675*  | LDA ($E3); INC $E3; BNE $4692; INC $E4
+61:4A95 file $C2A95     3 bytes    1 ins  branch-not-taken callers -  | JMP $4B2F
+61:4A9D file $C2A9D     1 bytes    1 ins  branch-not-taken callers -  | INX
+61:4BE4 file $C2BE4    97 bytes   48 ins  branch-not-taken callers -  | BIT #$F0; BEQ $4BEC; LSR; LSR; LSR; LSR
+61:4D79 file $C2D79     2 bytes    1 ins  branch-not-taken callers -  | LDA #$EE
+61:4D99 file $C2D99     2 bytes    1 ins  branch-not-taken callers -  | INC $E4
+61:4EFC file $C2EFC     5 bytes    2 ins  branch-not-taken callers -  | DEC $3E9A,X; BRA $4F2C
+61:501B file $C301B     2 bytes    1 ins  branch-not-taken callers -  | LDA #$7C
+61:503E file $C303E    26 bytes   11 ins  branch-not-taken callers -  | LDA $3E2E,X; BNE $5000; LDA $3E16,X; ASL; TAY; LDA $6107,Y
+61:5073 file $C3073     2 bytes    1 ins  branch-not-taken callers -  | LDA #$7C
+61:5097 file $C3097     2 bytes    1 ins  branch-not-taken callers -  | LDA #$E1
+61:510F file $C310F    22 bytes    9 ins  branch-not-taken callers -  | CMP #$FD; BEQ $515B; CMP #$FE; BEQ $5164; LDA #$FF; STA $3E2E,X
+61:515B file $C315B    33 bytes   17 ins  dead-callers     callers 61:5111  | INY; LDA ($E3),Y; STA $3CF5,X; INY; BRA $5103; INY
+61:51BC file $C31BC    29 bytes   13 ins  branch-not-taken callers 61:518B*  | EOR #$FF; INC; CLC; ADC $3F44,X; BPL $51CA; DEC $3F46,X
+61:526E file $C326E     2 bytes    1 ins  branch-not-taken callers -  | LDA #$EE
+
+# orphans: never-logged, untraced bytes that decode as code ending in RTS/RTI/JMP (>= 12 bytes)
+00:E4E1 file $004E1    16 bytes  | LDA $08; STA $2727; LDA $09; STA $2759; LDA #$08; STA $26F5; RTS
+00:E58A file $0058A    26 bytes  | PHX; PHY; CLX; LDA $26C2,X; BMI $E5A1; CMP #$64; BCC $E59B; JSR $E557
+00:E645 file $00645    21 bytes  | PHX; TAX; LDA $2AE8,X; STA $0A; LDA $2AE1,X; LSR $0A; ROR; LSR $0A
+00:ED30 file $00D30    19 bytes  | LDA #$01; STA $25; ST0 #$01; LDA #$E0; STA $0002; LDA #$48; STA $0003; JMP $EC33
+00:F6AB file $016AB    31 bytes  | AND #$01; EOR #$01; CLC; ADC #$38; STA $10; LDA #$33; STA $08; LDA #$88
+00:F91F file $0191F    32 bytes  | LDA #$28; STA $08; LDA #$92; STA $09; LDA #$42; LDY #$FE; JSR $EF16; JSR $87ED
+00:FA98 file $01A98    76 bytes  | TAI $FAA8,$36B1,$0008; TAI $FAAA,$36BF,$0008; BRA $FAF2; CMP $F4AF,X; BBS2 $20,$FAB3; CPX $57; CLV; JSR $C0A9
+00:FAE4 file $01AE4    36 bytes  | TAI $FB0A,$36B1,$0008; TAI $FB0C,$36BF,$0008; STZ $0A; BIT #$04; BNE $FAFA; INC $0A; AND #$03; INC
+01:C2A8 file $022A8    25 bytes  | LDA $91; LSR; LDA $90; ROR; LSR; LSR; LSR; STA $2FA9
+01:C6CB file $026CB    16 bytes  | LDA $8F; STA $27BD,X; LDA $90; STA $27EF,X; LDA $91; STA $2821,X; RTS
+01:C6DB file $026DB    16 bytes  | LDA $92; STA $2853,X; LDA $93; STA $2885,X; LDA $94; STA $28B7,X; RTS
+01:C727 file $02727    30 bytes  | STZ $6D; BBR7 $6A,$C72E; DEC $6D; CLC; LDA $27BD,X; ADC $69; STA $8F; LDA $27EF,X
+01:C745 file $02745    30 bytes  | STZ $6D; BBR7 $6C,$C74C; DEC $6D; CLC; LDA $2853,X; ADC $6B; STA $92; LDA $2885,X
+01:CC3A file $02C3A    14 bytes  | ORA $4C68; CLY; CPY $4448; ORA $44,X; TSB $68; JMP $CC9F
+01:CC79 file $02C79    20 bytes  | STA $3B7F; LDA #$07; STA $3B7E; LDA #$12; STA $B9; LDA #$22; STA $BA; JSR $CDBC
+01:CC8D file $02C8D    18 bytes  | STA $3B7E; STZ $3B7F; LDA #$12; STA $B9; LDA #$22; STA $BA; JSR $CDBC; RTS
+01:D329 file $03329    35 bytes  | STX $3BE3; JSR $C03A; LDA #$02; STA $0A; LDA $2D,X; AND #$F0; BEQ $D33D; LDA #$08
+01:D420 file $03420    16 bytes  | LDA #$33; STA $2CDD,Y; LDA $2D1D,Y; ORA #$10; STA $2D1D,Y; PLY; PLX; RTS
+01:D430 file $03430    32 bytes  | STX $3BE3; LDA #$01; STA $0A; LDA $2D,X; AND #$F0; BEQ $D441; LDA #$04; STA $0A
+01:D7AE file $037AE    25 bytes  | TMA #$10; PHA; TMA #$20; PHA; LDA #$1B; TAM #$10; INC; TAM #$20
+01:DDF8 file $03DF8    31 bytes  | PHX; JSR $DD44; LDA $3C06,X; CMP #$8E; BEQ $DE17; STZ $3C06,X; JSR $C33E; JSR $C34C
+01:DEB3 file $03EB3    29 bytes  | LDX $3425; LDA $80; STA $86; LDA $81; STA $87; JSR $A580; LDX $3425; LDA $35A2,X
+08:80FA file $100FA    27 bytes  | JSR $C88F; JSR $C877; LDA #$02; JSR $C529; BCC $8115; CMP #$06; BCS $8115; LDA #$50
+08:81D5 file $101D5   113 bytes  | JSR $C88F; JSR $C877; DEC $29B1,X; BNE $8245; STZ $294D,X; LDA #$01; STA $28E9,X; LDA #$40
+08:8246 file $10246    78 bytes  | DEC $28E9,X; BNE $825F; LDA #$06; STA $28E9,X; INC $29B1,X; LDA $29B1,X; AND #$0F; TAY
+08:82A4 file $102A4   107 bytes  | BBR2 $1A,$830C; INC $294D,X; LDA $294D,X; CMP #$18; BNE $830C; JSR $C877; LDA #$DC; STA $344E
+08:8310 file $10310    81 bytes  | SBC $FCFC,X; LDA #$30; STA $29B1,X; STZ $2AAB,X; STZ $2A79,X; STZ $294D,X; JSR $E501; ROL $A982,X
+08:8361 file $10361    34 bytes  | DEC $29B1,X; BNE $836F; LDA #$30; STA $29B1,X; JSR $E501; ASL $A9,X; BPL $8392; SEC
+08:8383 file $10383    29 bytes  | DEC $29B1,X; BNE $8391; LDA #$20; STA $29B1,X; JSR $E501; ORA ($DE),Y; EOR $BD29; EOR $8529
+08:83A0 file $103A0    48 bytes  | LDA $294D,X; CLC; ADC #$06; STA $294D,X; BCS $83D0; LDA $294D,X; LSR; LSR
+08:83D0 file $103D0    89 bytes  | CLX; LDA $3A90,X; STA $41; BMI $83DB; JSR $E6DB; INX; CPX #$0C; BNE $83D1
+08:842C file $1042C    42 bytes  | LDX #$06; LDA $349E,X; STA $41; LDA $3426,X; BEQ $8450; STZ $3426,X; CMP #$05; BNE $844D
+08:8456 file $10456    75 bytes  | CLA; STA $2FAA; CLA; STA $2FA9; JSR $C32C; LDA ($74); AND #$F0; CMP #$60
+08:84A2 file $104A2    22 bytes  | CLV; DEC $60,X; DEC $29B1,X; BNE $84B7; JSR $E501; TSB $08A9; TSB $B8; LDA #$04
+08:84B8 file $104B8    50 bytes  | JSR $CC71; LDA #$01; TRB $3709; LDA $B2; CMP $B3; BNE $84D5; LDY $B4; LDA $B5
+08:84EE file $104EE   141 bytes  | LDA #$0C; STA $0A; INC $29E3,X; LDA $29E3,X; LSR; AND #$03; CLC; ADC #$22
+08:857C file $1057C    43 bytes  | CLC; ADC $2DDD,Y; STA $2DDD,X; LDA $03; ADC $2E1D,Y; STA $2E1D,X; LDA $2DDD,X; SEC
+08:85A7 file $105A7   107 bytes  | DEC $28E9,X; BNE $85BF; LDA #$05; STA $28E9,X; INC $291B,X; LDA $291B,X; AND #$03; CLC
+08:9049 file $11049    12 bytes  | CPY #$90; ST0 #$4C; BPL $903E; JSR $C88F; JMP $C877
+08:90BE file $110BE    26 bytes  | CPX $DC; BCC $9104; PLA; TAY; STA $297F,X; STZ $291B,X; CLA; STA $36D1,Y
+08:90D9 file $110D9    62 bytes  | SMB0 $00; DEY; LDY $297F,X; LDA $36D1,Y; BEQ $9117; LDA $1A; AND #$03; CMP #$03
+08:954C file $1154C    17 bytes  | LDA #$C0; STA $10; LDA #$02; BSR $9531; LDA #$C2; STA $10; LDA #$01; BRA $9531
+08:961E file $1161E    41 bytes  | SEC; SBC #$09; ASL; ASL; ASL; ASL; PHA; LDA #$AA
+08:9647 file $11647    34 bytes  | SEC; SBC #$08; PHA; LDA #$B8; STA $10; LDA #$69; STA $08; LDA #$96
+08:9669 file $11669    46 bytes  | JSR $C88F; JSR $C877; LDA #$01; STA $0A; LDA $2A15,X; BEQ $967C; LDA #$FF; STA $0A
+08:9697 file $11697    18 bytes  | LDA #$83; JSR $F0EA; JSR $E405; LDA #$96; SAY; JSR $C180; LDA #$06; CLC
+08:96A9 file $116A9   105 bytes  | JSR $CC71; JSR $C28B; JSR $C32C; CLA; STA ($74); JSR $E501; SXY; JSR $C28B
+09:A3BB file $123BB    34 bytes  | JSR $A490; LDA #$03; STA $2A15,X; LDA #$01; STA $3BE9; JSR $B28C; LDA $3702; ASL
+09:A989 file $12989    82 bytes  | STZ $3BEA; TII $AA35,$3BF3,$000A; LDA $3702; STA $3BF9; LDX $3BE9; STX $10; LDA $3B93,X; AND #$40
+09:A9DB file $129DB    15 bytes  | BIT #$09; BEQ $AA11; JSR $AA12; BCC $A9EA; LDA #$11; JSR $F9DF; RTS
+09:AA12 file $12A12    32 bytes  | PHX; LDA $3702; DEC; STA $0B; CLX; LDA $3B94,X; AND #$40; STA $0A
+09:B28C file $1328C   111 bytes  | CLX; STX $10; LDA #$FB; STA $08; LDA #$B2; STA $09; LDA #$50; LDY #$F0
+09:B2FB file $132FB    47 bytes  | JSR $A5A6; LDY $2A47,X; LDA $B32A,Y; STA $294D,X; LDA #$54; STA $2885,X; LDA $3B94,Y; BIT #$40
+09:B42C file $1342C    15 bytes  | ST0 #$06; BMI $B458; SEC; PLP; BMI $B46C; BIT $34; PLP; SEC
+09:B857 file $13857    25 bytes  | LDA #$01; STA $0A; LDA $3C7F; BEQ $B86D; CMP #$D0; BNE $B869; LDA #$0E; JSR $F9DF
+09:B875 file $13875    70 bytes  | EOR #$40; LSR; LDA $3C7F; BEQ $B8D6; CMP #$E0; BNE $B8BB; LDA $27BD,X; BNE $B8D6
+09:B8BB file $138BB    28 bytes  | CMP #$06; BNE $B8D6; LDA #$80; LDY $27BD,X; STA $2AAB,Y; LDY $27EF,X; STA $2AAB,Y; LDY $2821,X
+09:B8D7 file $138D7    46 bytes  | JSR $E405; ORA $20B9; LDA #$C0; STA $2821,X; LDA #$48; STA $2853,X; LDA #$3F; STA $2885,X
+09:BC75 file $13C75    90 bytes  | BNE $BC57; BEQ $BC79; LDY #$90; BVS $BCDD; STZ $2FA1; LDA #$02; STA $2FA2; LDA $29E3,X
+09:BCD1 file $13CD1    33 bytes  | AND #$D0; SBC $EE,X; LDY $4C30,X; BPL $BCC9; LDA $29B1,X; TAX; JSR $C19F; LDA $2A79,X
+0A:803A file $1403A   124 bytes  | PHX; CLX; JSR $C26E; PLX; LDA $2FAA; SEC; SBC $0A; BPL $8049
+0A:80B6 file $140B6    72 bytes  | PHY; LDA $3BE3; BNE $80FC; JSR $C33E; JSR $EF36; JSR $C34C; STA ($74); JSR $C8F6
+0A:8105 file $14105    26 bytes  | BBS6 $4C,$8097; INY; PHX; CLX; LDA $265E,X; CMP #$FF; BEQ $811C; TAX
+0A:811F file $1411F    19 bytes  | LDA $2A79,X; CMP $2FA9; BNE $810B; LDA $2AAB,X; CMP $2FAA; BNE $810B; SEC; PLX
+0A:8132 file $14132    41 bytes  | PHX; PHY; STA $20AB; JSR $C26E; LDA $20AB; JSR $A7D4; BCS $8158; JSR $C32C
+0A:815B file $1415B   109 bytes  | LDA #$C8; STA $08; LDA #$81; STA $09; LDA #$42; LDY #$F8; JSR $EF16; BCS $81C7
+0A:81C8 file $141C8   137 bytes  | JSR $C28B; JSR $C32C; JSR $C33E; LDA ($74); AND #$0F; CMP #$07; BCS $821B; CMP #$03
+0A:8252 file $14252    88 bytes  | BPL $8243; LDX $3C; LDY $41; LDA #$DC; STA $2CDD,Y; JSR $C28B; JSR $C32C; JSR $C62B
+0A:82AA file $142AA    65 bytes  | JSR $C33E; JSR $EF36; LDA #$04; STA $0A; LDA #$84; STA $0B; JSR $F5D7; LDY $297F,X
+0A:82F6 file $142F6    23 bytes  | JSR $E501; ORA $20,X; PHA; CPY $B6A5; CMP #$05; BEQ $8308; LDA #$7F; STA $3B81
+0A:830D file $1430D    12 bytes  | JSR $CC71; LDA $B6; CMP #$05; BEQ $8319; JMP $CB80
+0A:8319 file $14319    28 bytes  | LDX #$20; LDA #$8A; JSR $F9B3; JSR $CBE2; STA $8D; LDA #$08; STA $8C; LDA #$FA
+0A:851A file $1451A   106 bytes  | AND #$D0; ST0 #$4C; BPL $850F; LDA #$40; CLC; ADC $2AAB,X; STA $2AAB,X; LDA $2A79,X
+0A:8777 file $14777    28 bytes  | PHA; LDX $3C; JSR $E501; RMB1 $BD; ORA $2A,X; ORA #$20; STA $2A15,X; PLA
+0A:87F0 file $147F0    16 bytes  | ADC $202A,Y; PLP; SBC $8B; BBS0 $A9,$8810; JSR $F9DF; JSR $DF0F; RTS
+0A:8800 file $14800   103 bytes  | STA $0A; LDX $3BE3; LDA $3BD6,X; BNE $8866; LDX $3425; LDA $3552,X; AND #$0F; SEC
+0A:8867 file $14867   145 bytes  | STX $3BE3; CLA; STA $2CDD,Y; CPX #$05; BCC $8882; LDY $3C7B,X; STY $3BE3; LDA $349E,Y
+0A:88F8 file $148F8    34 bytes  | PHY; TAY; LDA #$01; STA $36D0,Y; LDA #$3F; STA $12; LDA #$8E; STA $13
+0A:891A file $1491A    16 bytes  | LDA #$01; STA $36D1,Y; LDA #$48; STA $12; LDA #$8E; STA $13; JMP $C8FB
+0A:8BAC file $14BAC    65 bytes  | BIT $E0,X; ASL $90; ORA ($60,X); DEC; PHA; LDA #$ED; STA $344E,X; LDA #$8B
+0A:8BED file $14BED    68 bytes  | LDA $36D3; BNE $8BFE; LDA $3476,X; STA $344E,X; LDA $348A,X; STA $3462,X; BSR $8C3B; CLA
+0A:8C39 file $14C39    48 bytes  | BBR0 $FC,$8BE5; JSR $0A85; LDY $36D1; LDA $28; AND $CC1C,Y; BEQ $8C4D; LDA #$40; STA $0A
+0A:8C6B file $14C6B    29 bytes  | STY $8C74; DEY; STY $8C93; STZ $AD8C,X; CMP ($36); EOR #$FF; CLC; ADC #$01
+0A:8C8E file $14C8E    16 bytes  | TIN $8536,$6089,$D2AD; ROL $85,X; TXA; LDA $36D3; STA $8B; RTS
+0A:8C9E file $14C9E    20 bytes  | LDA $36D2; EOR #$FF; CLC; ADC #$01; STA $88; LDA $36D3; EOR #$FF; ADC #$00
+0A:8D64 file $14D64    28 bytes  | STA $8D80; STA $8D,X; TAX; STA $AACE; BBR2 $A9,$8D60; CLC; ADC $2FA7; STA $2FA7
+0A:8D80 file $14D80    21 bytes  | INC $2FA9; LDA #$10; CLC; ADC $2FA5; STA $2FA5; LDA #$00; ADC $2FA6; STA $2FA6
+0A:8D95 file $14D95    21 bytes  | INC $2FAA; LDA #$10; CLC; ADC $2FA7; STA $2FA7; LDA #$00; ADC $2FA8; STA $2FA8
+0A:8DAA file $14DAA    21 bytes  | DEC $2FA9; LDA #$F0; CLC; ADC $2FA5; STA $2FA5; LDA #$FF; ADC $2FA6; STA $2FA6
+0A:8F34 file $14F34    40 bytes  | PHX; STA $AB; JSR $A7D4; BCS $8F5A; JSR $C9AD; BCC $8F5A; LDA $29B1,X; CMP #$04
+0A:8F9B file $14F9B   107 bytes  | TDD $4F4C,$4492,$207C; ORA ($C8,X); JSR $C7B9; BMI $9006; JSR $C4FD; JSR $C28B; JSR $C32C; LDA ($74)
+0A:9006 file $15006    23 bytes  | LDY $41; JSR $9290; JSR $C8C7; JSR $C946; BCC $901A; CLA; STA $2DDD,Y; STA $2E1D,Y
+0A:901D file $1501D    23 bytes  | LDA $2A15,X; AND #$03; TAY; LDA $9034,Y; STA $6A; LDA $9038,Y; STA $6C; STZ $69
+0A:903C file $1503C    76 bytes  | LDA $99; LSR; LSR; LSR; LSR; STA $0A; JSR $C763; BPL $9054
+0A:9088 file $15088    25 bytes  | LDA $2885,X; SEC; SBC $0C; LDA $28B7,X; SBC $0D; BCC $90A0; STZ $28B7,X; LDA $2885,X
+0A:914E file $1514E    42 bytes  | LDA #$A8; STA $12; LDA #$91; STA $13; LDA #$B0; STA $14; LDA #$91; STA $15
+0A:9178 file $15178    48 bytes  | LDY $294D,X; LDA $202D,Y; BIT #$02; BEQ $918A; LDA $2A15,X; ORA #$80; STA $2A15,X; LDA $2A15,X
+0A:91B8 file $151B8    40 bytes  | LDA #$E0; STA $12; LDA #$91; STA $13; LDA #$E8; STA $14; LDA #$91; STA $15
+0A:91F0 file $151F0    52 bytes  | LDX $3C; JSR $C34C; STA ($74); LDA $297F,X; JSR $C3C3; LDA ($74); AND #$0F; CMP #$05
+0A:922E file $1522E    33 bytes  | TDD $6018,$6038,$7FBD; AND #$0A; TAY; LDA ($12),Y; STA $69; LDA ($14),Y; STA $6B; INY
+0A:94DC file $154DC    13 bytes  | LDA $99; CLC; ADC $74; STA $74; CLA; ADC $75; STA $75; RTS
+0A:9A09 file $15A09   148 bytes  | BBR4 $B8,$9A26; LDA $3B89; CMP #$06; BNE $9A26; LDA $3B8A; BEQ $9A1C; CMP #$05; BNE $9A26
+0A:9CB0 file $15CB0    33 bytes  | LDA $2A79,X; STA $2FA9; LDA $2AAB,X; STA $2FAA; LDA $29B1,X; DEC; BEQ $9CD1; STA $29B1,X
+0A:9CD1 file $15CD1    61 bytes  | LDA #$0D; JSR $F9DF; JSR $EF10; JSR $C32C; JSR $DD63; LDA ($74); AND #$F0; ORA #$00
+0B:A0B2 file $160B2    24 bytes  | STZ $3BE3; JSR $C03A; BSR $A106; JSR $C7A5; BMI $A0CA; LDA #$05; STA $344E,X; LDA #$A1
+0B:A0D4 file $160D4    13 bytes  | ROR $E0C8; ORA $D0; ASL $20; SMB4 $FB; JSR $FC0F; RTS
+0B:A20C file $1620C    33 bytes  | ASL $2DA2,X; LDX #$3A; LDX #$47; LDX #$4E; LDX #$53; LDX #$7B; LDX #$A7; LDX #$AA
+0B:A22D file $1622D    13 bytes  | STZ $80; LDA #$FC; STA $81; STZ $82; LDA #$04; STA $83; RTS
+0B:A23A file $1623A    13 bytes  | LDA $C1; AND #$FE; STA $C1; LDA $C2; AND #$FE; STA $C2; RTS
+0B:A24F file $1624F    44 bytes  | ORA ($85,X); TDD $AD60,$3BE4,$22D0; LDX $3BE3; LDA $3B94,X; BIT #$10; BNE $A27A; LDA $C1; LSR
+0B:A27B file $1627B    44 bytes  | LDA $C1; AND #$F0; BNE $A2A6; LDX $3425; CPX #$05; BCC $A295; LDA $3C80,X; CMP #$01
+0B:A9DC file $169DC   112 bytes  | INC $3BE0; CPX #$05; BEQ $AA4C; LDA #$B9; STA $35DE,X; LDA #$87; STA $35F2,X; LDA $3BAD
+0B:AA4C file $16A4C    37 bytes  | LDA #$01; STA $2CDD,Y; LDA $2D1D,Y; ORA #$10; STA $2D1D,Y; LDA $34B2,X; STA $2E5D,Y; LDA $2B9D,Y
+0B:AA71 file $16A71    86 bytes  | STA $20AB; PHX; PHY; STZ $3BE3; CLX; LDA $3BAD; BMI $AA81; LDX #$05
+0B:AD09 file $16D09    19 bytes  | BIT $A9,X; ST1 #$60; LDA $34C6; AND #$03; CMP #$03; BEQ $AD19; INC $34C6; LDA #$13
+0B:AD1D file $16D1D    15 bytes  | JSR $C60C; BIT $A9,X; ST1 #$60; LDA #$40; TSB $34C6; LDA #$13; RTS
+0B:AD2C file $16D2C    21 bytes  | JSR $E405; INY; BBS2 $42,$ACE3; ASL; LDA #$04; STA $29B1,X; LDA #$40; STA $34EE
+0B:AD41 file $16D41    20 bytes  | LDA #$86; JSR $F9DF; INC $3704; BPL $AD4E; DEC $3704; INC $3C7E; LDA $000F; RTS
+0B:AF0C file $16F0C    14 bytes  | LDX $3BE3; LDA $34C6,X; ORA #$08; STA $34C6,X; LDA #$13; RTS
+0B:AF1A file $16F1A    21 bytes  | JSR $E405; LDA ($AF),Y; SAY; BCS $AF2C; LDA #$58; STA $27EF,X; LDA #$02; STA $2821,X
+0B:AF2F file $16F2F    17 bytes  | LDX $3BE3; INC $3BCC,X; LDA $34C6,X; ORA #$10; STA $34C6,X; LDA #$13; RTS
+0B:AF40 file $16F40    13 bytes  | LDA $34C6; AND #$03; BEQ $AF4A; DEC $34C6; LDA #$13; RTS
+0B:AF4D file $16F4D    13 bytes  | INC $34DA; BNE $AF57; LDA #$FF; STA $34DA; LDA #$13; RTS
+0B:AFB1 file $16FB1    22 bytes  | LDA #$01; STA $20C9; STZ $69; LDA #$FF; STA $6A; JSR $C763; BPL $AFC7; STZ $20C9
+0B:AFC8 file $16FC8    20 bytes  | LDA $34EE; CMP #$01; BNE $AFDC; LDA #$FF; STA $34EE; DEC $29B1,X; BNE $AFDC; JMP $E555
+0B:AFDD file $16FDD    23 bytes  | DEC; STA $0A; LDX $3C; LDA $2A15,X; AND #$07; BNE $AFF3; ORA #$02; STA $2A15,X
+0B:AFF4 file $16FF4    27 bytes  | DEC; ASL; TAY; LDA $91E0,Y; STA $88; LDA $91E8,Y; STA $8A; LDA $91E1,Y
+0B:B00F file $1700F    21 bytes  | DEC; STA $0A; LDX $3C; JSR $C512; BNE $B023; LDA #$16; JSR $F9DF; LDA $0A
+0B:B5C9 file $175C9    73 bytes  | LDA $3C7B,X; STA $3BE3; JSR $C03A; LDA #$01; STA $0A; LDX $3BE3; LDA $2D,X; AND #$F0
+0B:B612 file $17612    41 bytes  | LDA $3C7B,X; STA $3BE3; LDA #$01; STA $0A; LDX $3BE3; LDA $2D,X; AND #$F0; BEQ $B629
+0B:B649 file $17649    12 bytes  | CMP #$B6; INC $60B6,X; LDX $3425; BBS1 $C2,$B655; RTS
+0B:B655 file $17655    46 bytes  | LDA #$0C; STA $3606,X; LDA $3516,X; AND #$03; CLC; ADC #$23; LDY $349E,X; STA $2CDD,Y
+0B:B688 file $17688    37 bytes  | ORA ($60,X); LDA $3516,X; ORA #$80; STA $3516,X; STZ $3606,X; STZ $361A,X; LDA #$50; STA $35DE,X
+0B:B6CB file $176CB    51 bytes  | BIT $9F,X; CLY; ORA ($60,X); LDA #$0C; STA $3606,X; LDA $3516,X; AND #$03; CLC
+0B:B700 file $17700    71 bytes  | BIT $9F,X; CLY; ORA ($60,X); STZ $3606,X; STZ $361A,X; LDA #$80; STA $34C6,X; LDA #$08
+0B:B748 file $17748    31 bytes  | LSR; SMB3 $52; SMB3 $67; SMB3 $71; SMB3 $7B; SMB3 $AE; AND $34; LDA $358E,X
+0B:B797 file $17797    36 bytes  | LDA $3C7B,X; STA $3BE3; JSR $D450; DEC $3606,X; BNE $B7BA; STZ $361A,X; LDA $3516,X; AND #$7F
+0B:B7BB file $177BB    15 bytes  | LDA $3C7B,X; STA $3BE3; JSR $B834; JSR $A070; BCC $B7CA; RTS
+0B:B7CA file $177CA    64 bytes  | LDA $3606,X; BNE $B7E1; LDA $361A,X; BIT #$02; BNE $B7E1; LDA #$02; JSR $E9EC; CLC
+0B:B80A file $1780A    28 bytes  | LDA $3516,X; AND #$7F; STA $3516,X; STZ $3606,X; STZ $361A,X; JSR $C000; LDA #$29; STA $344E,X
+0B:B9FD file $179FD    17 bytes  | INC $30C2; LDA $3476,X; STA $344E,X; LDA $348A,X; STA $3462,X; SEC; RTS
+0B:BA0E file $17A0E    39 bytes  | STZ $3606,X; STZ $361A,X; LDA #$1E; STA $344E,X; LDA #$BA; STA $3462,X; JSR $C03A; BCC $BA2F
+0B:BA35 file $17A35    75 bytes  | STZ $30C2; LDA #$42; STA $344E,X; LDA #$BA; STA $3462,X; LDA $30C2; BEQ $BA7A; LDA #$80
+0B:BA81 file $17A81    79 bytes  | DEC; CPY #$4C; INC; DEC $C29C,X; BMI $BA33; TST #$9D,$344E; LDA #$BA; STA $3462,X
+0B:BAD0 file $17AD0    65 bytes  | LDA #$01; STA $2CDD,Y; LDA $2D1D,Y; ORA #$10; STA $2D1D,Y; LDA #$E7; STA $344E,X; LDA #$BA
+0B:BB11 file $17B11    13 bytes  | LDA #$89; STA $35DE,X; LDA #$87; STA $35F2,X; JMP $BA0E
+0B:BB1E file $17B1E    40 bytes  | LDA #$37; STA $344E,X; LDA #$BB; STA $3462,X; LDA #$46; STA $3476,X; LDA #$BB; STA $348A,X
+0B:BB46 file $17B46    19 bytes  | INC $30C0; LDA #$53; STA $344E,X; LDA #$BB; STA $3462,X; JSR $C03A; JMP $C81B
+0B:BB59 file $17B59    34 bytes  | LDA #$40; STA $362E,X; LDA #$72; STA $344E,X; LDA #$BB; STA $3462,X; LDA #$7B; STA $3476,X
+0B:BB7B file $17B7B    58 bytes  | LDA #$80; STA $344E,X; LDA #$BA; STA $3462,X; LDA #$B5; STA $3476,X; LDA #$BB; STA $348A,X
+0B:BBB5 file $17BB5    23 bytes  | LDA #$06; STA $35DE,X; LDA #$8D; STA $35F2,X; LDA #$CC; STA $3476,X; LDA #$BB; STA $348A,X
+0B:BBCC file $17BCC    16 bytes  | INC $30C2; LDA #$DC; STA $344E,X; LDA #$BB; STA $3462,X; JMP $BB75
+0B:BBDC file $17BDC    31 bytes  | LDA $30C2; BEQ $BB75; STZ $30C2; LDA #$FB; STA $3476,X; LDA #$BB; STA $348A,X; LDA #$0D
+0B:BBFB file $17BFB    16 bytes  | INC $30C2; LDA #$0B; STA $344E,X; LDA #$BC; STA $3462,X; JMP $BB75
+0B:BC0C file $17C0C    43 bytes  | CLY; BMI $BBDF; ST0 #$4C; ADC $BB,X; LDA #$26; STA $2CDD,Y; LDA $2D1D,Y; ORA #$10
+0B:BC37 file $17C37    51 bytes  | LDA #$1E; STA $344E; LDA #$BB; STA $3462; LDA #$4B; STA $344E,X; LDA #$BC; STA $3462,X
+0B:BC6F file $17C6F    21 bytes  | INY; STA $8D; LDA #$0E; STA $8C; LDA #$B8; STA $67; LDA #$A4; STA $68
+0B:BC84 file $17C84    21 bytes  | LDY $349E,X; STY $41; STX $3425; LDA $344E,X; STA $08; LDA $3462,X; STA $09; JMP ($2008)
+0C:8611 file $18611    94 bytes  | STZ $B2; STZ $2853,X; JSR $8EF4; LDA #$42; STA $61; LDA #$8F; STA $62; JSR $EB16
+0C:866F file $1866F    84 bytes  | LDA #$56; JSR $F9DF; LDA #$C8; STA $03; CLA; JSR $8C36; LDA #$01; STA $2AAB,X
+0C:86C4 file $186C4    56 bytes  | EOR $87; LDA $B3; DEC; STA $B2; JSR $8EF4; LDA #$42; STA $61; LDA #$8F
+0C:86FC file $186FC    52 bytes  | DEC $86; LDX $3C; LDA #$80; STA $2A47,X; STZ $2A79,X; JSR $E4F1; JSR $8EA3; JSR $CC71
+0C:8730 file $18730    35 bytes  | LDA #$56; JSR $F9DF; LDX $3C; LDA #$80; STA $2A47,X; STZ $2A79,X; JSR $E4F1; JSR $82BF
+0C:8753 file $18753    88 bytes  | JSR $86C6; LDA #$5E; STA $08; LDA #$8E; STA $09; LDA #$B4; LDY #$32; JSR $EF16
+0C:87AB file $187AB   174 bytes  | LDA #$57; JSR $F9DF; LDA #$03; JSR $CC36; JSR $E4F1; JSR $CC71; CLA; STA $2CDD,Y
+0C:8859 file $18859    68 bytes  | LDX $3C; LDA #$4D; STA $27BD,X; LDA #$FF; STA $27EF,X; JSR $8422; LDX $3C; LDA #$80
+0C:889D file $1889D    30 bytes  | LDA #$FF; STA $370E; LDA #$05; STA $B2; STZ $B4; LDA #$04; JSR $CC2D; JSR $E4F1
+0C:88BB file $188BB   497 bytes  | LDA #$01; STA $2200; JSR $8EF4; LDA #$50; STA $61; LDA #$8F; STA $62; JSR $EB16
+0C:8AAC file $18AAC    61 bytes  | LDX $3C; STZ $2A47,X; LDA #$01; STA $2A79,X; JSR $E4F1; JSR $82BF; LDA #$0A; JSR $CC2D
+0C:8AE9 file $18AE9    90 bytes  | LDA $29B1,X; LDY $29E3,X; JSR $8167; CLC; ADC $27EF,X; STA $27EF,X; LDA $03; ADC $2821,X
+0C:8B44 file $18B44    42 bytes  | JSR $C0B5; BCC $8B4C; JSR $E4F1; LDA $2AAB,X; CLC; ADC #$20; STA $2AAB,X; STA $6B
+0C:8B75 file $18B75    86 bytes  | ST0 #$4C; EOR $E5,X; JSR $C0B5; BCC $8BCA; JSR $EF10; LDA #$71; STA $08; LDA #$8B
+0C:8BCB file $18BCB   106 bytes  | LDA #$64; STA $03; CLC; JSR $8C36; LDY $278B,X; LDA $2D5D,Y; STA $04; LDA $2DDD,Y
+0C:8CDC file $18CDC    23 bytes  | LDA $27BD,X; LDY $27EF,X; JSR $815B; STA $BD; LDA $27BD,X; LDY $27EF,X; JSR $8158; STA $BF
+0C:9755 file $19755    50 bytes  | LDA #$01; TSB $3709; STZ $22; LDA #$FF; STA $2200; LDA #$C0; STA $B8; STZ $370F
+0C:9787 file $19787   202 bytes  | LDA #$49; STA $2FAA; LDA #$30; STA $2FA9; LDA #$64; STA $08; LDA #$98; STA $09
+0C:9851 file $19851    19 bytes  | TXS; PLP; JSR $E4F1; LDA $370F; BNE $9863; JSR $E528; SED; TST #$20,$CBE2
+0C:9864 file $19864    29 bytes  | LDA $2200; ORA $2201; ORA $2202; ORA $2203; ORA $2204; ORA $2205; ORA $2206; ORA $2207
+0C:9B74 file $19B74    19 bytes  | LDA #$FF; STA $2205; LDA #$1E; JSR $9B9A; JSR $E4F1; LDA $2204; BEQ $9B87; RTS
+0D:AFDB file $1AFDB    39 bytes  | STZ $2FC9; STZ $2FCA; STZ $2FCB; SEC; SBC #$64; BCC $AFEE; INC $2FC9; BRA $AFE4
+0D:B077 file $1B077    16 bytes  | LDA $2FC9; STA $02; LDA $2FCA; STA $03; LDA $2FCB; STA $04; RTS
+0D:B3DB file $1B3DB    32 bytes  | LDX $02; STZ $02; LDA $02; CLC; ADC #$64; STA $02; DEX; BNE $B3DF
+0D:B453 file $1B453    22 bytes  | STA $02; AND #$F0; LSR; LSR; LSR; LSR; STA $03; LDA $02
+0D:B469 file $1B469    17 bytes  | CLX; STZ $2FC3; LSR; ROL $2FC3; INX; CPX #$08; BNE $B46D; LDA $2FC3
+0E:8000 file $1C000    42 bytes  | LDA $27EF,X; STA $0A; LDA $2821,X; STA $0B; LDA $2885,X; STA $0C; LDA $28B7,X; STA $0D
+0E:802A file $1C02A   155 bytes  | LDA $358E,X; SEC; SBC $0C; STA $0E; LDA $35A2,X; SBC $0D; STA $0F; BPL $804C
+0E:80C5 file $1C0C5    21 bytes  | LDY $349E,X; LDA $3426,X; CMP #$01; BNE $80DA; LDA #$81; STA $2D1D,Y; LDA #$1E; STA $2CDD,Y
+0E:80DA file $1C0DA    17 bytes  | TAY; LDA $80D5,Y; LDY $349E,X; STA $2CDD,Y; LDA $34B2,X; STA $2E5D,Y; RTS
+0E:80EB file $1C0EB    96 bytes  | CLC; ORA $1B1A,Y; TRB $1D1D; JSR $C26E; JSR $80C5; LDA $353E,X; CMP #$3C; BCS $8107
+0E:838C file $1C38C    39 bytes  | LDA #$F7; STA $2CDD,Y; JSR $8B71; BCC $839A; CLA; STA $2CDD,Y; LDA #$11; STA $34B2,X
+0E:8E95 file $1CE95    87 bytes  | DEC $29B1,X; BNE $8E94; LDA #$03; STA $41; LDA $29E3,X; TAX; JSR $C1B8; JSR $C114
+0E:8F82 file $1CF82    39 bytes  | LDA #$24; STA $34B2,X; LDA $3606,X; BNE $8F8F; STZ $3692,X; LDA $3692,X; DEC; DEC
+0E:9306 file $1D306    98 bytes  | STY $4C; INY; TST #$A9,$9D23; LDA ($34); JSR $C26E; LDA $3516,X; AND #$03; JSR $C429
+0E:9842 file $1D842    76 bytes  | LDA #$03; STA $0A; LDA $2FA9; PHA; LDA $2FAA; PHA; PHY; LDA $3502,X
+0E:9E5A file $1DE5A    20 bytes  | DEC $3606,X; BNE $9E6B; LDA $3476,X; STA $344E,X; LDA $348A,X; STA $3462,X; JMP $A55D
+0E:9E78 file $1DE78    52 bytes  | STA $0000,X; BVS $9E7C; STA $8D; LDA #$08; STA $8C; LDA #$86; STA $67; LDA #$BD
+0E:9EAC file $1DEAC    68 bytes  | DEC $3606,X; BNE $9EE5; LDA $A5; BNE $9EB1; LDA #$6E; STA $61; LDA #$9E; STA $62
+0E:9EF0 file $1DEF0   133 bytes  | LDA $3606,X; BNE $9F3E; LDA $361A,X; CMP #$0A; BNE $9F3E; JSR $A87B; JSR $C1B8; LDA #$75
+0E:9F75 file $1DF75    25 bytes  | LDA #$66; STA $2CDD,Y; LDA $29B1,X; CMP #$20; BCS $9F86; LDA #$C1; STA $2D1D,Y; DEC $29B1,X
+0E:9F8E file $1DF8E    34 bytes  | STZ $69; LDA #$FF; STA $6A; JSR $C763; LDA #$10; STA $8D; LDA #$08; STA $8C
+0E:9FB0 file $1DFB0    53 bytes  | BSR $A021; BCS $9FE9; LDA $3476,X; AND #$F0; BNE $A01B; LDA #$80; STA $3476,X; JSR $E9FF
+0F:A001 file $1E001    26 bytes  | JSR $C000; STZ $352A,X; PLA; STA $3516,X; LDA #$01; STA $344E,X; LDA #$A3; STA $3462,X
+0F:A01D file $1E01D    54 bytes  | STY $B0; BSR $A081; JSR $C4CF; BNE $A053; JSR $C4D7; BNE $A053; JSR $97EB; JSR $C26E
+0F:A059 file $1E059    68 bytes  | ROR $20C8; ROR $20C2; ROR $B081,X; ORA ($60,X); LDA #$08; STA $352A,X; JSR $C000; LDA #$06
+0F:A09D file $1E09D    96 bytes  | JSR $C03A; BCS $A0B3; LDA $3606,X; BNE $A055; LDA $361A,X; CMP #$06; BNE $A055; JSR $A1B2
+0F:A0FD file $1E0FD    78 bytes  | LDA #$80; STA $353E,X; LDA #$0C; STA $344E,X; LDA #$A1; STA $3462,X; JSR $C03A; JSR $9DBF
+0F:A14B file $1E14B    73 bytes  | LDA #$64; STA $344E,X; LDA #$A1; STA $3462,X; LDA #$C0; STA $35DE,X; LDA #$9A; STA $35F2,X
+0F:A194 file $1E194    30 bytes  | LDA #$80; TRB $34CC; STZ $367E,X; LDA #$80; TRB $34CB; STZ $3606,X; STZ $361A,X; LDA #$B0
+0F:A1B4 file $1E1B4    87 bytes  | CPX $AB; LDX #$42; BCS $A205; STZ $30BB; STZ $30BE; STZ $30B8; LDA #$02; STA $30B9
+0F:A20B file $1E20B    53 bytes  | LDA $30BB; BPL $A240; LDA #$0A; STA $26F4,X; LDA $29E3,X; EOR #$FF; INC; LSR
+0F:A240 file $1E240   107 bytes  | LDA #$E8; STA $2CDD,Y; LDA $30B7; CLC; ADC $29E3,X; STA $20AB; LDY $30BE; STA $8D
+0F:A2AB file $1E2AB    26 bytes  | LDA $30BB; BEQ $A2C5; JSR $9E0C; LDA $30B7; CMP #$04; BCS $A2D6; STZ $30B7; LDA #$FF
+0F:A2C5 file $1E2C5    18 bytes  | LDA #$7F; STA $0A; JSR $9DDB; LDA $30BE; CMP #$40; BEQ $A2D6; INC $30BE; RTS
+0F:A2D7 file $1E2D7    42 bytes  | LDA #$02; PHX; CLX; STA $8D; LDA #$0A; STA $8C; LDA #$73; STA $67
+0F:A301 file $1E301    52 bytes  | JSR $C03A; LDA $3606,X; BNE $A335; LDA $361A,X; CMP #$08; BNE $A335; INC $30BB; LDA #$38
+0F:A336 file $1E336    28 bytes  | EOR $A0,X; JSR $C03A; BCC $A338; LDA #$47; STA $344E,X; LDA #$A3; STA $3462,X; JSR $C7E7
+0F:A356 file $1E356    28 bytes  | ROR $20C8; CLV; CMP ($A9,X); BBS1 $85,$A367; LDA #$A3; STA $09; LDA #$41; LDY #$80
+0F:A372 file $1E372    45 bytes  | JSR $C180; LDA #$84; STA $2D1D,Y; LDA #$EE; STA $2E5D,Y; LDA #$30; STA $2A15,X; LDA #$80
+0F:A39F file $1E39F    70 bytes  | LDA #$E8; STA $2CDD,Y; LDA #$20; STA $8D; LDA #$08; STA $8C; LDA #$38; STA $67
+0F:A3E5 file $1E3E5    32 bytes  | LDA #$60; STA $2FA1; STZ $2FA2; LDA $29E3,X; JSR $C2C1; JSR $C763; JSR $C784; JSR $C8C7
+0F:A405 file $1E405    96 bytes  | JSR $E501; ROL; LDA #$81; STA $2D1D,Y; LDA #$33; STA $2E5D,Y; LDA #$10; STA $2A15,X
+0F:A465 file $1E465    47 bytes  | LDA $29E3,X; JSR $C529; BCC $A494; STA $3425; LDA $29E3,X; INC; STA $8D; LDA #$0A
+0F:A494 file $1E494    36 bytes  | JSR $C801; LDA $2AAB,X; STA $2FA1; LDA $2A79,X; STA $2FA2; LDA $29E3,X; JSR $C2C1; JSR $C763
+0F:A4BB file $1E4BB    82 bytes  | ST0 #$F0; ORA ($60,X); LDA $294D,X; STA $0C; JSR $C19F; LDA #$0D; STA $08; LDA #$A5
+0F:A514 file $1E514    83 bytes  | BBS6 $4C,$A49D; INY; LDA $3552,X; STA $90; LDA $3566,X; STA $91; LDA $358E,X; STA $93
+0F:A56A file $1E56A    13 bytes  | ROR $C936,X; SBC ($F0); ORA ($60,X); LDA $30BC; BNE $A577; RTS
+0F:A577 file $1E577    38 bytes  | LDX #$08; LDA #$8A; JSR $F9B3; LDX $3425; LDA #$40; STA $3606,X; LDA #$5A; STA $344E,X
+0F:A59D file $1E59D   111 bytes  | LDA #$42; STA $35DE,X; LDA #$99; STA $35F2,X; STZ $361A,X; STZ $3606,X; STZ $367E,X; LDA #$BA
+0F:A60C file $1E60C    37 bytes  | LDA $30BC; BEQ $A630; LDA $3606,X; BNE $A622; LDA $361A,X; CMP #$20; BNE $A622; LDA #$60
+0F:A63A file $1E63A    22 bytes  | BVS $A63B; LDA $1A; AND #$03; BNE $A650; DEC $3414; BNE $A650; INC $30BC; INC $30BD
+0F:A81C file $1E81C    49 bytes  | LDA #$B8; STA $7E; STZ $7F; LDA #$88; STA $7C; STZ $7D; LDA $3552; STA $90
+0F:A84D file $1E84D    37 bytes  | STA $20AB; CLX; JSR $C26E; LDA $20AB; JSR $C429; LDA ($74); CMP #$00; BNE $A868
+0F:A873 file $1E873    69 bytes  | BBR0 $37,$A864; LDY $4C30,X; EOR $E5,X; JSR $E405; CLV; TAY; JSR $00A9; STA $2821,X
+0F:A8B9 file $1E8B9    13 bytes  | EOR $C929; ST0 #$F0; TSB $20; BIT $60F2; JMP $E555
+0F:A8C8 file $1E8C8   125 bytes  | RMB4 $A0; RMB4 $40; PHA; CPX #$48; LDA #$6A; STA $08; LDA #$A9; STA $09
+0F:A945 file $1E945    35 bytes  | LDA $70; CMP #$9A; BEQ $A968; TAX; CLC; ADC #$07; STA $70; LDA $39F0,X
+0F:A96A file $1E96A    55 bytes  | JSR $CC71; LDA #$FF; STA $6B; LDA #$FF; STA $6C; JSR $C784; CLA; STA $2D9D,Y
+0F:A9A1 file $1E9A1    94 bytes  | LDA #$DC; STA $2CDD,Y; LDA $39F3,X; CLC; ADC $39F5,X; STA $39F5,X; LDA $39F4,X; ADC $39F6,X
+0F:AA01 file $1EA01    40 bytes  | STZ $0000,X; BMI $AA05; JSR $AB1F; DEC $3634; BNE $AA28; LDA #$29; STA $344E,X; LDA #$AA
+0F:AA29 file $1EA29   102 bytes  | JSR $ABB7; JSR $AC0E; JSR $C03A; JSR $C4CF; BNE $AA6D; JSR $C4D7; BNE $AA6D; LDA #$08
+0F:AA90 file $1EA90    62 bytes  | LDA #$FF; STA $61; LDA #$A9; STA $62; JSR $EB16; LDA #$BA; STA $344E,X; LDA #$AA
+0F:AACE file $1EACE    81 bytes  | LDA #$D8; STA $344E,X; LDA #$AA; STA $3462,X; JSR $C03A; BCC $AAC2; LDA #$C2; STA $344E,X
+0F:AB27 file $1EB27   110 bytes  | JSR $C1B8; LDA $2FA5; SEC; SBC #$10; STA $2FA5; JSR $E9FF; AND #$1F; CLC
+0F:ABA2 file $1EBA2    21 bytes  | BPL $AB93; JSR $C0B5; BCS $ABA1; LDA #$80; STA $6B; LDA #$FE; STA $6C; JSR $C784
+0F:ABBC file $1EBBC    78 bytes  | ORA ($60,X); JSR $C1B8; LDA #$A4; STA $08; LDA #$AB; STA $09; LDA #$42; LDY #$01
+0F:AC0E file $1EC0E    18 bytes  | LDA $1A; AND #$3F; BNE $AC19; LDA #$30; JSR $9C28; LDA $1A; AND #$03; BEQ $AC20
+0F:AC20 file $1EC20    42 bytes  | STZ $2FA6; STZ $2FA8; JSR $E9FF; STA $2FA5; JSR $E9FF; STA $2FA7; JSR $AB54; JSR $E9FF
+0F:AC4A file $1EC4A    52 bytes  | DEC $29B1,X; BNE $AC7E; LDA #$30; STA $29B1,X; JSR $E501; BBR3 $20,$AC5F; CPX $BD; LDA $6242
+0F:AC7E file $1EC7E    23 bytes  | LDA $1A; AND #$02; LSR; CLC; ADC #$D5; STA $2CDD,Y; STZ $69; LDA #$FE
+0F:AC95 file $1EC95   122 bytes  | STZ $370F; DEC $29B1,X; BNE $AC7E; INC $30BC; STZ $2AAB,X; STZ $2A79,X; LDA #$A0; STA $29B1,X
+0F:AD0F file $1ED0F    88 bytes  | STZ $3426; INC $30C0; JSR $E501; AND #$A9; ORA ($99,X); ORA $A92D,X; BEQ $ACBE; STA $28
+0F:AD7C file $1ED7C    18 bytes  | TAI $0520,$88E4,$42AD; LDA #$40; STA $29B1,X; DEC $29B1,X; BEQ $AD8E; RTS
+0F:AD8E file $1ED8E    25 bytes  | LDA $3BAD; BMI $AD98; LDA #$1C; JSR $F9DF; LDA #$40; STA $29B1,X; JSR $E501; SXY
+0F:ADA7 file $1EDA7    22 bytes  | LDA #$06; STA $B3; STA $8D; LDA #$0C; STA $8C; LDA #$03; STA $67; LDA #$83
+0F:ADBF file $1EDBF    39 bytes  | BMI $ADB1; ST0 #$4C; EOR $E5,X; LDA $29E3,X; TAX; LDA $30BC; BNE $ADD4; JSR $C7E7
+0F:ADF3 file $1EDF3    28 bytes  | SBC $07; LDA #$40; STA $29B1,X; STZ $6B; LDA #$FF; STA $6C; JSR $C784; JSR $C19F
+0F:AE0F file $1EE0F    66 bytes  | STZ $30BB; LDX #$07; LDA #$18; STA $2FA7; STZ $2FA8; LDA #$64; STA $04; LDA #$85
+0F:AE51 file $1EE51    60 bytes  | LDA #$F8; JSR $9C75; BPL $AE7A; STZ $3656,X; STZ $366A,X; LDA #$8D; STA $344E,X; LDA #$AE
+0F:AE8D file $1EE8D   264 bytes  | LDA $30BC; BNE $AE87; LDA #$21; STA $2E5D,Y; JSR $C03A; BCC $AE87; INC $30BC; LDA #$B3
+0F:AF95 file $1EF95    62 bytes  | INC $30BB; JSR $E9FF; BPL $AFB6; INC $30BB; LDA #$D3; STA $344E,X; LDA #$AF; STA $3462,X
+0F:AFD3 file $1EFD3    46 bytes  | JSR $C03A; BCC $AFE5; STZ $30BB; LDA #$1A; STA $344E,X; LDA #$AF; STA $3462,X; LDA $3606,X
+0F:B001 file $1F001   209 bytes  | LSR; TAY; LDA $B132,Y; STA $20AB; STZ $2FA1; LDA #$10; STA $2FA2; LDA #$D8
+0F:B0D4 file $1F0D4    12 bytes  | BIT $A4,X; EOR ($60,X); LDA $29B1,X; BNE $B0E0; JMP $EF10
+0F:B0E0 file $1F0E0   109 bytes  | LDA $29E3,X; BBR1 $1A,$B0E7; INC; STA $2CDD,Y; LDA $29B1,X; DEC $29B1,X; CMP #$22; BNE $B0FC
+0F:B16F file $1F16F    67 bytes  | STZ $30BB; LDA #$89; STA $2CDD,Y; LDA #$21; STA $2E5D,Y; LDA $34DA,X; BEQ $B18C; LDA $1A
+0F:B1B2 file $1F1B2   109 bytes  | LDA $34DA,X; BNE $B1A1; LDA #$C7; STA $344E,X; LDA #$B1; STA $3462,X; STZ $366A,X; STZ $3656,X
+0F:B21F file $1F21F   152 bytes  | LDA #$F0; STA $3606,X; LDA #$2E; STA $344E,X; LDA #$B2; STA $3462,X; DEC $3606,X; BNE $B21C
+0F:B2C8 file $1F2C8   164 bytes  | DEC $361A,X; LDA $361A,X; AND #$07; STA $20AB; TAY; LDA $B36C,Y; STA $6A; LDA $B374,Y
+0F:B37C file $1F37C    22 bytes  | DEY; BCS $B31B; CPY $64; BIT $C478,X; DEC $2885,X; JSR $C8C7; JSR $C0B5; BCC $B392
+0F:B3FE file $1F3FE    23 bytes  | AND #$D0; SMB7 $4C; BPL $B3F3; JSR $E405; ORA $B4,X; TMA #$B0; ORA $A9; BPL $B3AC
+0F:B417 file $1F417    40 bytes  | AND #$D0; ST0 #$4C; EOR $E5,X; LDA $29B1,X; LSR; LSR; ORA #$01; STA $20AB
+0F:B43F file $1F43F    70 bytes  | STZ $6B; LDA #$E0; STA $6C; JSR $C1B8; LDA #$85; STA $08; LDA #$B4; STA $09
+0F:B486 file $1F486    13 bytes  | ORA ($C8,X); JSR $C7B9; BMI $B493; INC $30BC; JMP $EF10
+0F:B494 file $1F494    14 bytes  | SMB4 $C8; LDY $34A6; LDA $2E5D,Y; LDY $41; STA $2E5D,Y; RTS
+0F:B4A2 file $1F4A2    36 bytes  | LDA #$C6; STA $08; LDA #$B4; STA $09; LDA #$43; LDY #$FE; JSR $EF16; LDA #$21
+0F:B4C6 file $1F4C6    28 bytes  | CLA; STA $2CDD,Y; BBR0 $1A,$B4D3; LDA $29B1,X; STA $2CDD,Y; LDA $29E3,X; TAX; JSR $C1B8
+0F:B4E3 file $1F4E3    30 bytes  | BIT $8020,X; CMP ($4C,X); BBS0 $C8,$B490; INC; AND #$03; BNE $B501; INC $3595; LDA $3414
+0F:B502 file $1F502    56 bytes  | JSR $E405; BIT $20F2; LDA #$00; STA $2821,X; LDA #$41; STA $2853,X; LDA #$3F; STA $2885,X
+0F:B53B file $1F53B   124 bytes  | EOR #$C0; EOR #$00; LSR; STZ $30CF; STZ $30D0; STZ $30D1; STZ $30D2; LDA #$14
+0F:B5B7 file $1F5B7    29 bytes  | LDA #$51; STA $08; LDA #$AE; STA $09; LDA #$0E; JSR $EF4C; LDA #$81; STA $2D1D,Y
+0F:B5D5 file $1F5D5    98 bytes  | ORA ($60,X); CLC; ADC $353E,X; STA $0A; CMP #$95; BCC $B5E7; LDA #$95; STA $0A
+0F:B637 file $1F637   171 bytes  | LDX #$0D; STX $3425; LDA $349E,X; STA $41; LDY #$01; LDA $353E,X; CMP #$76; BCC $B651
+0F:B6E2 file $1F6E2    67 bytes  | PHA; LDA $30CE; STA $2FA1; LDA $30CF; STA $2FA2; PLA; EOR #$FF; INC
+0F:B725 file $1F725    32 bytes  | LDA $30D2; BEQ $B745; DEC $30D2; LDA $30CE; SEC; SBC #$60; STA $30CE; LDA $30CF
+0F:B745 file $1F745    26 bytes  | LDA #$30; CLC; ADC $30CE; STA $30CE; CLA; ADC $30CF; CMP #$0A; BCC $B75B
+0F:B75F file $1F75F    47 bytes  | JSR $B725; CMP #$0A; BNE $B77A; LDA #$8E; STA $344E,X; LDA #$B7; STA $3462,X; LDA #$10
+0F:B78E file $1F78E    84 bytes  | JSR $B725; LDA $3606,X; BEQ $B7A6; DEC $3606,X; BNE $B7B6; LDA $361A,X; EOR #$FF; INC
+0F:B7E2 file $1F7E2    29 bytes  | LDA #$52; JSR $F9DF; LDA #$FF; STA $344E,X; LDA #$B7; STA $3462,X; LDA #$20; STA $3606,X
+0F:B7FF file $1F7FF    21 bytes  | JSR $B725; LDA $361A,X; JSR $B5D4; JSR $B637; DEC $3606,X; BEQ $B814; JSR $BA4B; RTS
+0F:B814 file $1F814   117 bytes  | LDA $361A,X; EOR #$FF; INC; STA $361A,X; LDA #$55; STA $344E,X; LDA #$B8; STA $3462,X
+0F:B889 file $1F889    88 bytes  | JSR $C1B8; STZ $2FA1; LDA #$04; STA $2FA2; LDA $353E,X; EOR #$FF; INC; PHA
+0F:B8E3 file $1F8E3    57 bytes  | CPY #$90; ST0 #$4C; BPL $B8D8; LDA $2A15,X; STA $69; LDA $2A47,X; STA $6A; LDA $2A79,X
+0F:B91E file $1F91E    51 bytes  | BMI $B8F0; ST0 #$4C; BPL $B913; LDY $34A6; LDX $41; LDA $2E5D,Y; STA $2E5D,X; LDA $2CDD,Y
+0F:B951 file $1F951    34 bytes  | LDA $30BB; BNE $B960; LDA #$8E; STA $344E,X; LDA #$B7; STA $3462,X; LDA #$01; STA $30D2
+0F:B973 file $1F973    60 bytes  | STZ $30D2; JSR $B725; LDA $30BC; BPL $B9AF; STZ $20AB; LDA #$A0; STA $2FA1; STZ $2FA2
+0F:B9C0 file $1F9C0    43 bytes  | SBC $FE00,X; JSR $99F6; LDA $69; STA $3642,X; LDA $6A; STA $362E,X; LDA $6B; STA $35DE,X
+0F:B9EB file $1F9EB    90 bytes  | LDA $3642,X; STA $69; LDA $362E,X; STA $6A; LDA $35DE,X; STA $6B; LDA $35F2,X; STA $6C
+0F:BA4A file $1FA4A   105 bytes  | INY; LDA #$10; JSR $D9FC; JSR $C26E; LDX #$07; JSR $81BF; BCC $BAAF; LDA #$01
+10:852C file $2052C    25 bytes  | JSR $C26E; STA $8D; LDA #$0E; STA $8C; LDA #$BF; STA $67; LDA #$81; STA $68
+10:8545 file $20545    18 bytes  | LDA $3426,X; CMP #$01; BNE $8556; LDA #$24; STA $344E,X; LDA #$81; STA $3462,X; RTS
+10:8557 file $20557    19 bytes  | LDA $2A47,X; CMP $27EF,X; BNE $856A; LDA $2A79,X; CMP $2885,X; BNE $856A; JMP $85A3
+10:856A file $2056A    52 bytes  | JSR $C6B5; JSR $C6C0; LDA $2A47,X; STA $7C; STZ $7D; LDA $2A79,X; STA $7E; STZ $7F
+10:859F file $2059F    94 bytes  | EOR ($4C,X); BBS0 $C8,$8549; BIT $0285,X; JSR $C28B; JSR $C32C; LDA ($74); AND #$0F; CMP #$01
+10:85FD file $205FD    22 bytes  | JSR $E4F1; LDA $27EF,X; CMP $2201; BNE $8613; LDA $2885,X; CMP $2203; BNE $8613; JMP $864F
+10:8613 file $20613    60 bytes  | JSR $C6B5; JSR $C6C0; LDA $2201; STA $7C; LDA $2202; STA $7D; LDA $2203; STA $7E
+10:864F file $2064F    27 bytes  | LDX #$06; LDA #$01; STA $3426,X; JSR $E4F1; LDA $41; PHA; LDA $2AAB,X; STA $41
+10:874A file $2074A   120 bytes  | JSR $C03A; BCC $87C1; LDA #$63; STA $344E,X; LDA #$87; STA $3462,X; LDA #$96; STA $35DE,X
+10:87C2 file $207C2    32 bytes  | LDA #$31; STA $35DE,X; LDA #$81; STA $35F2,X; LDA #$E2; STA $344E,X; LDA #$87; STA $3462,X
+10:87F3 file $207F3    77 bytes  | INC $A9; SMB2 $9D; DEC $A935,X; STA ($9D,X); SBC ($35); LDA #$0D; STA $344E,X; LDA #$88
+10:8840 file $20840    85 bytes  | PHX; LDA #$08; STA $03; JSR $C69F; JSR $C6AA; INC $2200; LDA $2200; AND #$01
+10:8895 file $20895    14 bytes  | LDA #$20; STA $29B1,X; JSR $E4F1; DEC $29B1,X; BEQ $88A3; RTS
+10:88A3 file $208A3   109 bytes  | LDA #$12; STA $29B1,X; LDA #$3F; JSR $F9DF; JSR $E4F1; LDA #$13; STA $08; LDA #$89
+10:8911 file $20911   135 bytes  | EOR $E5,X; LDA $29B1,X; LDY #$07; STA $8D; LDA #$0C; STA $8C; LDA #$67; STA $67
+10:8999 file $20999    24 bytes  | BPL $898A; STA ($91),Y; STA ($92); TST #$94,$9695; LDA #$38; STA $29B1,X; JSR $E4F1; DEC $29B1,X
+10:89B1 file $209B1   109 bytes  | LDA #$10; STA $29B1,X; JSR $E4F1; INC $29E3,X; LDA $29E3,X; CMP #$06; BCC $89B0; LDA #$48
+10:8A1F file $20A1F   135 bytes  | EOR $E5,X; JSR $C0B5; LDA #$60; STA $6B; LDA #$FC; STA $6C; INC $2A79,X; LDA $6B
+10:8E2B file $20E2B    23 bytes  | JSR $C8C7; JSR $C0B5; BCC $8E41; LDA $3256; ORA #$02; STA $3256; JSR $E6DB; JSR $EF10
+10:905E file $2105E   101 bytes  | STZ $362E,X; LDA #$FF; STA $344E,X; LDA #$90; STA $3462,X; LDA $3552,X; STA $3298; LDA $3566,X
+10:90C3 file $210C3    44 bytes  | PHY; LDY $3296; LDA $90EF,Y; CLC; ADC $3298; STA $2FA5; LDA $90F0,Y; ADC $3299
+10:90FD file $210FD    15 bytes  | BPL $90FF; INC $362E,X; LDA $362E,X; CMP #$08; BCS $910C; JMP $C81B
+10:910C file $2110C    15 bytes  | JSR $E6DB; STZ $3426,X; LDA $3256; ORA #$01; STA $3256; RTS
+10:9755 file $21755    46 bytes  | JSR $C03A; JSR $C81B; JSR $C86E; LDA $3256; AND #$03; CMP #$03; BNE $9782; LDA #$4F
+10:9783 file $21783    66 bytes  | JSR $C03A; JSR $C81B; JSR $C86E; INC $326A; BNE $97C5; LDA #$D4; STA $344E,X; LDA #$97
+10:97C5 file $217C5    15 bytes  | LDA $326A; CMP #$C0; BCS $97D3; AND #$1F; BNE $97D3; JSR $98FB; RTS
+10:97D4 file $217D4    22 bytes  | JSR $C03A; BCC $97E3; LDA #$EA; STA $344E,X; LDA #$97; STA $3462,X; JSR $C81B; JSR $C86E
+10:97EA file $217EA    22 bytes  | LDA $3257; BNE $97FC; JSR $E6DB; STZ $3426,X; JSR $E409; EOR $97,X; TSB $9C32; RMB5 $32
+10:9800 file $21800   100 bytes  | LDA $3552,X; STA $327E; LDA $3566,X; STA $327F; LDA $358E,X; STA $3280; LDA $35A2,X; STA $3281
+10:9864 file $21864    63 bytes  | LDA #$03; STA $3296; LDA #$A3; STA $08; LDA #$98; STA $09; LDA #$48; LDY #$01
+10:98A3 file $218A3    47 bytes  | LDA #$01; STA $3257; JSR $C88F; JSR $C0B5; BCC $98D1; JSR $98D2; JSR $C180; LDA #$D1
+10:98D2 file $218D2    41 bytes  | JSR $E9FF; ADC #$83; AND #$3F; CLC; ADC $327A; STA $2FA5; CLA; ADC $327B
+10:98FB file $218FB    55 bytes  | LDA #$04; STA $3296; LDA #$47; STA $08; LDA #$99; STA $09; LDA #$48; LDY #$01
+10:9932 file $21932    17 bytes  | PHY; LDY $3296; LDA $9942,Y; STA $2A15,X; LDA #$30; STA $2A47,X; PLY; RTS
+10:9945 file $21945    45 bytes  | BRA $9907; LDA #$01; STA $3257; JSR $997E; BCS $9978; JSR $C180; JSR $C88F; LDA $2A47,X
+10:997A file $2197A    78 bytes  | INC $4C; BPL $996D; LDA $2A15,X; CLC; ADC #$08; STA $2A15,X; LDA $2A47,X; CLC
+10:9D25 file $21D25    25 bytes  | JSR $C03A; BCC $9D3A; INC $3516,X; JSR $C000; LDA #$3E; STA $344E,X; LDA #$9D; STA $3462,X
+10:9E40 file $21E40    32 bytes  | DEC; CPY #$B0; ST0 #$4C; DEC; STA $16FE,X; AND $20,X; ADC ($9F,X); STZ $362E,X
+10:9E60 file $21E60    93 bytes  | JSR $C03A; TST #$01,$3642,X; BNE $9E76; STZ $69; LDA #$03; STA $6A; LDA #$02; STA $3516,X
+10:9EBD file $21EBD   164 bytes  | PHP; BPL $9ED0; BPL $9ED2; JSR $C03A; STZ $69; LDA #$FD; STA $6A; JSR $C63D
+10:9F6B file $21F6B    70 bytes  | LDA #$B1; STA $344E,X; LDA #$9F; STA $3462,X; LDA $344E,X; STA $3476,X; LDA $3462,X; STA $348A,X
+10:9FB1 file $21FB1    27 bytes  | JSR $C03A; LDA #$09; STA $352A,X; STZ $3516,X; BSR $9F61; LDA #$D8; STA $344E,X; LDA #$9F
+10:9FD6 file $21FD6    14 bytes  | SBC $60; JSR $C03A; BCC $9FE4; JSR $E6DB; STZ $3426,X; RTS
+11:A000 file $22000    57 bytes  | LDA $35A2,X; STA $2FA8; LDA #$FC; STA $04; LDA #$A4; STA $05; LDA #$39; STA $08
+11:A7B2 file $227B2    31 bytes  | JSR $C03A; JSR $C03A; JSR $C26E; STA $8D; LDA #$0E; STA $8C; LDA #$BF; STA $67
+11:A7D1 file $227D1   137 bytes  | LDA #$33; STA $82; STZ $83; LDA $3552,X; STA $90; LDA $358E,X; STA $93; LDA $3552
+11:AAF0 file $22AF0    43 bytes  | JSR $C03A; BCC $AB1A; LDA #$1B; STA $344E,X; LDA #$AB; STA $3462,X; INC $3516,X; JSR $C000
+11:AB1B file $22B1B   126 bytes  | JSR $C03A; LDA $362E,X; AND #$FE; LSR; TAY; LDA $ABC8,Y; CLC; ADC $3552,X
+11:AB99 file $22B99    33 bytes  | INC $362E,X; LDA $362E,X; CMP #$3C; BNE $ABB2; LDA #$62; JSR $F9DF; LDA #$B2; STA $344E,X
+12:84F3 file $244F3    16 bytes  | JSR $C88F; LDA #$DE; STA $2CDD,Y; DEC $29B1,X; BNE $8503; JMP $EF10
+12:8555 file $24555    38 bytes  | DEC $29B1,X; BNE $857B; LDA #$08; STA $29B1,X; JSR $C28B; LDA $297F,X; JSR $C399; AND #$0F
+12:857C file $2457C    50 bytes  | LDA #$AE; STA $08; LDA #$85; STA $09; LDA #$42; LDY #$80; JSR $EF16; BCS $85A9
+12:86E9 file $246E9    34 bytes  | BMI $86DB; ST0 #$4C; EOR ($83); LDA #$10; STA $353E,X; LDA #$03; STA $344E,X; LDA #$87
+12:877D file $2477D   104 bytes  | DEC $362E,X; BEQ $87E5; LDA #$10; STA $8D; LDA #$0E; STA $8C; LDA #$75; STA $67
+12:87E5 file $247E5   111 bytes  | LDA #$EF; STA $344E,X; LDA #$87; STA $3462,X; DEC $362E,X; BEQ $8854; LDA $362E,X; AND #$0F
+12:8854 file $24854    21 bytes  | LDA #$5E; STA $344E,X; LDA #$88; STA $3462,X; DEC $362E,X; BNE $8851; STZ $3426,X; JMP $E6DB
+12:886A file $2486A    65 bytes  | SAX; BIT #$20; DEC; CPY #$B0; ORA ($60,X); JSR $C1B8; LDA #$94; STA $35DE,X
+12:88AC file $248AC    46 bytes  | SAX; BIT #$20; DEC; CPY #$DE; ROL $F036; ORA ($60,X); LDA #$A5; STA $35DE,X
+12:88DA file $248DA    56 bytes  | LDA #$3F; JSR $F9DF; JSR $E405; ORA ($89); SAY; LDA #$80; STA $29B1,X; LDX $3425
+12:8912 file $24912    23 bytes  | DEC $29B1,X; BNE $8921; JSR $E555; JSR $E409; EOR $97,X; TSB $6032; LDA $1A; AND #$07
+12:8929 file $24929   121 bytes  | JSR $C1B8; LDA $2FA5; SEC; SBC #$20; STA $2FA5; JSR $E9FF; AND #$3F; CLC
+12:89AF file $249AF   109 bytes  | BPL $89A0; LDA #$1C; STA $08; LDA #$8A; STA $09; LDA #$C2; LDY #$01; JSR $EF16
+12:8A1C file $24A1C    72 bytes  | LDA $29B1,X; STA $69; LDA $29E3,X; STA $6A; LDA $2A15,X; STA $6B; LDA $2A47,X; STA $6C
+12:8A64 file $24A64    22 bytes  | LDA #$40; STA $29B1,X; LDA #$C1; STA $2D1D,Y; JSR $E501; SXY; DEC $29B1,X; BNE $8A5E
+12:9958 file $25958    20 bytes  | BIT #$9D; STA $8D; LDA #$08; STA $8C; LDA #$AD; STA $67; LDA #$D6; STA $68
+12:9F37 file $25F37    25 bytes  | ST2 #$30; EOR $3A; BMI $9F6F; BBR5 $23,$9F77; BBR5 $5F,$9FA2; BBR5 $5F,$9FA5; BBR5 $5F,$9F8C; EOR ($4E,X)
+12:9F51 file $25F51    62 bytes  | BBR5 $5F,$9FB3; BBR5 $5F,$9F57; ST2 #$30; EOR $3A; BMI $9F90; BBR5 $23,$9F97; BBR5 $5F,$9FB0; EOR ($4E,X)
+13:A000 file $26000   109 bytes  | BBR5 $5F,$A062; BBR5 $5F,$A065; PHA; EOR $52,X; EOR ($59); BBR5 $55,$A05E; BBR5 $5F,$A070; BBR5 $5F,$A073
+13:A06D file $2606D    67 bytes  | EOR $54; BBR5 $5F,$A0D1; BBR5 $5F,$A0D4; BBR5 $00,$A09B; BMI $A0BF; DEC; BMI $A0C0; BBR5 $23,$A0B7
+13:A0CB file $260CB    40 bytes  | BBR4 $46,$A12D; LSR; BBR4 $59,$A131; BBR5 $5F,$A134; BBR5 $00,$A0FB; BMI $A11F; DEC; BMI $A123
+13:A151 file $26151    95 bytes  | BBR5 $5F,$A1B3; BBR5 $5F,$A157; ST2 #$30; EOR $3A; AND ($33),Y; BBR5 $23,$A197; BBR5 $5F,$A1C2; BBR5 $5F,$A1C5
+13:A212 file $26212    26 bytes  | BBR5 $5F,$A274; BBR5 $00,$A23B; BMI $A25F; DEC; AND ($39),Y; BBR5 $23,$A257; BBR5 $5F,$A282; BBR5 $5F,$A285
+13:A22C file $2622C    68 bytes  | BVC $A281; BBR5 $5F,$A290; BBR5 $5F,$A293; BBR5 $5F,$A237; ST2 #$30; EOR $3A; AND ($41),Y; BBR5 $23,$A277
+13:A271 file $26271    59 bytes  | BBR5 $5F,$A2D3; BBR5 $5F,$A277; ST2 #$30; EOR $3A; AND ($43),Y; BBR5 $23,$A2B7; BBR5 $5F,$A2E2; BBR5 $5F,$A2E5
+13:A3D2 file $263D2    27 bytes  | BBR5 $5F,$A434; BBR5 $00,$A3FB; BMI $A41F; DEC; AND ($37); BBR5 $23,$A417; BBR5 $5F,$A442; BBR5 $43,$A427
+13:A44F file $2644F    25 bytes  | EOR $5F; BBR5 $5F,$A4B3; BBR5 $5F,$A457; ST2 #$30; EOR $3A; AND ($42); BBR5 $23,$A497; BBR5 $5F,$A4C2
+13:A468 file $26468    45 bytes  | LSR $5F4F; EOR $52; EOR $50,X; CSL; EOR #$4F; LSR $5F5F; BBR5 $00,$A49B; BMI $A4BF
+13:A51C file $2651C    19 bytes  | AND ($5F),Y; ST2 #$37; BBR5 $5F,$A582; BBR5 $5F,$A585; BBR5 $5F,$A56B; EOR $42,X; SAY; JMP $5F45
+13:A5BC file $265BC    17 bytes  | ROL $5F,X; ST2 #$37; BBR5 $5F,$A622; BBR5 $5F,$A608; EOR ($52,X); EOR ($45); JMP $425F
+13:A5FF file $265FF    13 bytes  | RMB3 $5F; BBR5 $5F,$A663; EOR $5349; TAM #$49; JMP $5F45
+13:A67C file $2667C    20 bytes  | TMA #$5F; ST2 #$37; BBR5 $5F,$A6E2; BBR5 $5F,$A6E5; BSR $A6C9; TAM #$48; BBR5 $52,$A6DC; JMP $454C
+13:A69C file $2669C    20 bytes  | BSR $A6FD; ST2 #$37; BBR5 $5F,$A702; BBR5 $5F,$A705; EOR $4E; EOR $4D; EOR $465F,Y; JMP $4D41
+13:A6BC file $266BC    16 bytes  | EOR $5F; ST2 #$37; BBR5 $5F,$A722; BBR5 $5F,$A719; EOR $4C41; JMP $455F
+13:A6CC file $266CC    62 bytes  | CLI; BVC $A71B; BBR4 $52,$A717; BBR5 $5F,$A734; BBR5 $00,$A6FB; BMI $A71F; DEC; BIT $46,X
+13:A70C file $2670C    97 bytes  | SAY; EOR ($45); EOR ($4B,X); BBR5 $5F,$A773; BBR5 $5F,$A717; ST2 #$30; EOR $3A; BIT $31,X
+13:A76D file $2676D    32 bytes  | BSR $A7B8; LSR $5F47; BBR5 $5F,$A7D4; BBR5 $00,$A79B; BMI $A7BF; DEC; BIT $34,X; BBR5 $23,$A7B7
+13:A825 file $26825    16 bytes  | TAM #$33; BBR5 $53,$A877; EOR ($53,X); PHA; BBR5 $42,$A885; SAY; SAY; JMP $5F45
+13:A88E file $2688E    36 bytes  | BBR4 $54,$A8F0; BBR5 $5F,$A8F3; BBR5 $5F,$A897; ST2 #$30; EOR $3A; BIT $44,X; BBR5 $23,$A8D7; BBR5 $5F,$A902
+13:A8ED file $268ED    30 bytes  | EOR $41; BSR $A950; BBR5 $5F,$A953; BBR5 $5F,$A8F7; ST2 #$30; EOR $3A; AND $30,X; BBR5 $23,$A937
+13:A972 file $26972    52 bytes  | BBR4 $4E,$A9D4; BBR5 $00,$A99B; BMI $A9BF; DEC; AND $34,X; BBR5 $23,$A9B7; BBR5 $5F,$A9E2; TAM #$50
+13:AA0E file $26A0E    65 bytes  | BBR5 $5F,$AA70; BBR5 $5F,$AA73; BBR5 $5F,$AA17; ST2 #$30; EOR $3A; AND $39,X; BBR5 $23,$AA57; BBR5 $5F,$AA82
+13:AA6F file $26A6F    36 bytes  | EOR $564F; EOR $5F; BBR5 $5F,$AA77; ST2 #$30; EOR $3A; AND $43,X; BBR5 $23,$AAB7; BBR5 $5F,$AAE2
+13:AAAF file $26AAF    64 bytes  | SAY; EOR ($45); EOR ($4B,X); BBR5 $5F,$AAB7; ST2 #$30; EOR $3A; AND $45,X; BBR5 $23,$AAF7
+13:AB8D file $26B8D    27 bytes  | EOR $5F; TAM #$48; BBR4 $4F,$ABE8; BBR5 $5F,$AB97; ST2 #$30; EOR $3A; ROL $35,X; BBR5 $23,$ABD7
+13:ABB4 file $26BB4    20 bytes  | BBR5 $5F,$ABB7; ST2 #$30; EOR $3A; ROL $36,X; BBR5 $23,$ABF7; BBR5 $5F,$AC05; EOR $47,X; JMP $4145
+13:ABC8 file $26BC8    35 bytes  | EOR ($5F); SAY; BBR4 $4D,$AC10; BBR5 $54,$AC19; EOR ($4F); RMB5 $5F; BBR5 $00,$ABFB; BMI $AC1F
+13:AC0C file $26C0C    34 bytes  | BBR5 $42,$AC56; EOR $5F5F; BBR5 $5F,$AC74; BBR5 $00,$AC3B; BMI $AC67; DEC; BMI $AC4E; BBR5 $23,$AC53
+13:AC2E file $26C2E    33 bytes  | BBR5 $5F,$AC90; BBR5 $5F,$AC93; BBR5 $5F,$AC37; ST2 #$30; EOR $303A; AND ($5F); ST2 #$33; BBR5 $5F,$ACA2
+13:AC4F file $26C4F    32 bytes  | CSL; AND ($5F),Y; BBR5 $5F,$ACB4; BBR5 $00,$AC7B; BMI $ACA7; DEC; BMI $AC90; BBR5 $23,$AC93
+13:AC6F file $26C6F    33 bytes  | CSL; AND ($5F); BBR5 $5F,$ACD4; BBR5 $00,$AC9B; BMI $ACC7; DEC; BMI $ACB1; BBR5 $23,$ACB3
+13:ADAA file $26DAA    39 bytes  | BBR5 $4F,$AE03; EOR $52; BBR5 $5F,$AE11; BBR5 $5F,$AE14; BBR5 $00,$ADDB; BMI $AE07; DEC; BMI $AE02
+13:ADD1 file $26DD1    32 bytes  | BBR5 $5F,$AE33; BBR5 $5F,$ADD7; ST2 #$30; EOR $303A; LSR $5F; ST2 #$33; BBR5 $5F,$AE42; BBR5 $5F,$AE28
+13:ADF1 file $26DF1    63 bytes  | BBR5 $5F,$AE53; BBR5 $5F,$ADF7; ST2 #$30; EOR $313A; BMI $AE5D; ST2 #$33; BBR5 $5F,$AE62; BBR5 $42,$AE5B
+13:AE31 file $26E31    32 bytes  | SAY; RMB4 $4D; BBR5 $5F,$AE37; ST2 #$30; EOR $313A; AND ($5F); ST2 #$33; BBR5 $5F,$AE87
+13:AE55 file $26E55    29 bytes  | BBR5 $00,$AE7B; BMI $AEA7; DEC; AND ($33),Y; BBR5 $23,$AE93; BBR5 $5F,$AEC2; BBR5 $5F,$AEAC; EOR #$4E
+13:AE72 file $26E72    20 bytes  | BBR5 $5F,$AED4; BBR5 $00,$AE9B; BMI $AEC7; DEC; AND ($34),Y; BBR5 $23,$AEB3; BBR5 $5F,$AEC4; JMP $5F4C
+13:AF41 file $26F41   113 bytes  | BBR5 $5F,$AFA3; BBR5 $5F,$AFA6; BBR5 $5F,$AF8E; EOR ($41); RMB5 $5F; BBR5 $5F,$AFB0; BBR5 $5F,$AFB3; BBR5 $5F,$AF57
+61:40B7 file $C20B7    52 bytes  | EOR ($42,X); EOR ($42); LSR $42,X; PHY; SAY; BVS $4103; SMB0 $42; STA $B442,X
+61:40EE file $C20EE    19 bytes  | SBC #$A9; ORA ($0C,X); TDD $623C,$A960,$853F; NOP; LDA #$01; TSB $3CC4; CLA; RTS
+61:4116 file $C2116    13 bytes  | BIT $6062,X; LDA #$04; TSB $3CC3; TSB $3CC4; CLA; RTS
+61:417E file $C217E    13 bytes  | ST0 #$4C; SMB0 $40; TST #$01,$3CC4; BEQ $418B; JMP $408A
+61:4191 file $C2191    12 bytes  | BIT $6062,X; LDA $E0; BIT #$E0; BEQ $419D; JMP $4087
+61:419F file $C219F    12 bytes  | BBR3 $62,$4202; LDA $E0; BIT #$E0; BEQ $41AB; JMP $4087
+61:41BF file $C21BF    13 bytes  | ST0 #$4C; SMB0 $40; TST #$20,$3CC4; BEQ $41CC; JMP $408A
+61:41CE file $C21CE    20 bytes  | TDD $F03C,$4C03,$4090; STA $E9; TYA; JSR $4033; LDA ($E0); BPL $41E2; JMP $408D
+61:41E7 file $C21E7    16 bytes  | TDD $623C,$A560,$10E0; ST0 #$4C; SMB0 $40; BNE $41F7; JMP $4087
+61:41FA file $C21FA    13 bytes  | ST0 #$4C; SMB0 $40; TST #$20,$3CC3; BEQ $4207; JMP $408A
+61:420C file $C220C    17 bytes  | ST0 #$4C; BCC $4250; STA $E9; TYA; JSR $4033; LDA ($E0); BMI $421D; JMP $408D
+61:4220 file $C2220    12 bytes  | JSR $C40C; BIT $6062,X; LDA $3D31; AND #$C0; RTS
+61:4254 file $C2254    28 bytes  | BIT $AD60,X; CLY; BIT $C260,X; LSR $E0; BCC $4269; LDA $3D25,Y; BEQ $4269; ORA #$80
+61:4270 file $C2270    23 bytes  | LDY #$06; LSR $E0; BCC $4280; LDA $3D25,Y; BEQ $4280; ORA #$80; STA $3D25,Y; INY
+61:4287 file $C2287    22 bytes  | CLY; LSR $E0; BCC $4296; LDA $3D25,Y; BEQ $4296; AND #$7F; STA $3D25,Y; INY
+61:429D file $C229D    23 bytes  | LDY #$06; LSR $E0; BCC $42AD; LDA $3D25,Y; BEQ $42AD; AND #$7F; STA $3D25,Y; INY
+61:42C4 file $C22C4    14 bytes  | BBR3 $60,$426C; CPX #$10; ST0 #$4C; SMB0 $40; BNE $42D2; JMP $4087
+61:42D8 file $C22D8    12 bytes  | ST0 #$4C; SMB0 $40; LDX $3D31; BPL $42E4; JMP $408A
+61:42E4 file $C22E4    13 bytes  | STY $3F46; STA $3F42; LDA #$04; TSB $3CC3; CLA; RTS
+61:42F9 file $C22F9    15 bytes  | ST0 #$4C; SMB0 $40; EOR #$FF; INC; TAX; CPY #$20; BCC $4308; JMP $4087
+61:4311 file $C2311    13 bytes  | STY $3F47; STX $3F43; LDA #$04; TSB $3CC4; CLA; RTS
+61:431F file $C231F    22 bytes  | CPX #$BD; TIA $6020,$E0A5,$6918; CMP ($85,X); CPX #$98; AND #$0F; ADC #$3C; STA $E1; LDA ($E0)
+61:4336 file $C2336    18 bytes  | CPX #$C9; ST1 #$B0; ORA $8D; PHA; BBR3 $62,$43A0; LDA #$80; STA $3F48; JMP $4087
+61:4348 file $C2348    28 bytes  | LDX $3D31; LDA #$20; TRB $3D31; TXA; EOR #$FF; AND #$20; ORA $3D31; STA $3D31
+61:47C8 file $C27C8    12 bytes  | LDA ($E3); STA $3CE9,Y; CLA; STA $3F2A,Y; JMP $4B2F
+61:480A file $C280A    22 bytes  | ST0 #$4C; SBC ($45),Y; ORA #$40; STA $3D25,Y; LDA $3D9E,Y; STA $E3; LDA $3DAA,Y; STA $E4
+61:492F file $C292F    18 bytes  | LDA ($E3); TAX; INC $E3; BNE $4938; INC $E4; LDA ($E3); STA $E4; STX $E3
+61:4941 file $C2941    45 bytes  | SXY; JSR $4B38; LDA $E3; STA ($E5),Y; INY; LDA $E4; STA ($E5),Y; INY
+61:496E file $C296E    36 bytes  | SXY; JSR $4B38; DEY; LDA ($E5),Y; STA $E4; DEY; LDA ($E5),Y; STA $E3
+61:49AC file $C29AC    35 bytes  | LDX #$06; STZ $E5; CPY #$06; BCC $49B8; STX $E5; LDX #$0C; LDA ($E3); ASL
+61:4A0B file $C2A0B    16 bytes  | LDA $3D25,Y; AND #$40; BNE $4A1B; INC $E3; BNE $4A18; INC $E4; JMP $4B2F
+61:4A1B file $C2A1B    18 bytes  | LDA ($E3); TAX; INC $E3; BNE $4A24; INC $E4; LDA ($E3); STA $E4; STX $E3
+61:4A2D file $C2A2D    21 bytes  | SXY; JSR $4B38; DEY; LDA ($E5),Y; CMP #$01; BEQ $4A42; INC $E3; BNE $4A3E
+61:4A42 file $C2A42    33 bytes  | DEY; DEY; STY $E5; LDA $3D0D,X; AND #$F0; ORA $E5; STA $3D0D,X; LDA ($E3)
+61:4A7C file $C2A7C    21 bytes  | BBS6 $99,$4AA4; AND $F14C,X; EOR $B2; TIA $E3E6,$02D0,$E4E6; ASL; TAX; LSR; JMP ($4666,X)
+61:4AC1 file $C2AC1    25 bytes  | LDA ($E3); STA $3CC2; BRA $4B2F; LDA ($E3); STA $3CC1; BRA $4B2F; LDA $3D86,Y; AND #$7F
+61:4CCB file $C2CCB    27 bytes  | TIA $CA99,$4C3E,$4D95; LDA ($E3); TAX; LDA $5299,X; TST #$20,$3D31; BEQ $4CE0; LDA #$EE; STA $3CE9,Y
+61:4CE7 file $C2CE7    20 bytes  | STA $4D,X; LDA ($E3); TAX; INC $E3; BNE $4CF2; INC $E4; LDA ($E3); STA $E4
+61:4CFB file $C2CFB    30 bytes  | LDA $3EBE,Y; BNE $4D02; LDA ($E3); DEC; STA $3EBE,Y; BEQ $4D19; LDY #$01; LDA ($E3),Y
+61:4D19 file $C2D19    15 bytes  | LDA #$03; CLC; ADC $E3; STA $E3; CLA; ADC $E4; STA $E4; JMP $4C6F
+61:4D28 file $C2D28    21 bytes  | LDA $3D01,Y; BPL $4D3D; AND #$7F; CLC; ADC $3EE2,Y; AND #$1F; ORA #$80; STA $3D01,Y
+61:4D3D file $C2D3D    30 bytes  | STZ $E5; LDA $3EE2,Y; BPL $4D46; DEC $E5; LDA $3CC5,Y; CLC; ADC $3EE2,Y; STA $3CC5,Y
+61:5787 file $C3787    12 bytes  | STY $CA,X; SMB0 $F4; SMB0 $6C; BCC $57B3; DEY; JMP ($4390)

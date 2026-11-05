@@ -1,0 +1,92 @@
+## us
+C008D7 table  CMP ($41),Y, index $00, then INY 
+C16931 table  EOR $24663F,X, index $96, then INC $BE7E,X
+C4007D test   LDA $0CE7 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C40085 test   LDA $0CE9 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C42331 combo  AND/EOR #0x0700 Right+Left+Down
+C4234F combo  AND/EOR #0x0700 Right+Left+Down
+C423DA combo  AND/EOR #0x0700 Right+Left+Down
+C426D2 combo  AND/CMP #0x001f R
+C441A8 combo  AND/CMP #0x0003 lo:-/hi:Right+Left
+C452F1 combo  AND/CMP #0x0070 R+L+X
+C45C6C combo  AND/CMP #0x001f R
+C48695 combo  AND/CMP #0x00ff R+L+X+A
+C486E2 combo  AND/CMP #0x00ff R+L+X+A
+C54F52 test   LDA $0CEF / AND #$001F R
+C54F5D test   LDA $0CE9 / BIT #$0010 R
+C550D5 test   LDA $0CFB / BIT #$10 lo:R/hi:Start
+C55128 test   LDA $0CFA / BIT #$1080 A+Start
+C566B0 window $0C95 in [0x7,0xa) then INC $0C96
+C56FD2 test   LDA $0CFB / BIT #$10 lo:R/hi:Start
+C57350 test   LDA $0CFA / BIT #$1080 A+Start
+C60C12 combo  AND/CMP #0x003f R+L
+C60D0D combo  AND/CMP #0x003f R+L
+C6160A table  EOR $C6161D,X, index $76, then INC $76
+C65BD5 combo  AND/CMP #0x00ff R+L+X+A
+C6C3E0 table  CMP $78D5,X, index $0D9E, then INC $28CE
+# 25 hits
+## eu
+C4007D test   LDA $0CE7 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C40085 test   LDA $0CE9 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C42331 combo  AND/EOR #0x0700 Right+Left+Down
+C4234F combo  AND/EOR #0x0700 Right+Left+Down
+C423DA combo  AND/EOR #0x0700 Right+Left+Down
+C426D2 combo  AND/CMP #0x001f R
+C452F1 combo  AND/CMP #0x0070 R+L+X
+C45C6C combo  AND/CMP #0x001f R
+C48695 combo  AND/CMP #0x00ff R+L+X+A
+C486E2 combo  AND/CMP #0x00ff R+L+X+A
+C54F52 test   LDA $0CEF / AND #$001F R
+C54F5D test   LDA $0CE9 / BIT #$0010 R
+C550D5 test   LDA $0CFB / BIT #$10 lo:R/hi:Start
+C55128 test   LDA $0CFA / BIT #$1080 A+Start
+C566B0 window $0C95 in [0x7,0xa) then INC $0C96
+C56FD2 test   LDA $0CFB / BIT #$10 lo:R/hi:Start
+C57350 test   LDA $0CFA / BIT #$1080 A+Start
+C60C12 combo  AND/CMP #0x003f R+L
+C60D0D combo  AND/CMP #0x003f R+L
+C6160A table  EOR $C6161D,X, index $76, then INC $76
+C65BD5 combo  AND/CMP #0x00ff R+L+X+A
+# 21 hits
+## jp
+C4081E test   LDA $0CE0 / AND #$01 lo:-/hi:Right
+C42126 combo  AND/EOR #0x0700 Right+Left+Down
+C42144 combo  AND/EOR #0x0700 Right+Left+Down
+C421CF combo  AND/EOR #0x0700 Right+Left+Down
+C424C7 combo  AND/CMP #0x001f R
+C450E6 combo  AND/CMP #0x0070 R+L+X
+C45A61 combo  AND/CMP #0x001f R
+C48695 combo  AND/CMP #0x00ff R+L+X+A
+C486E2 combo  AND/CMP #0x00ff R+L+X+A
+C54E2C test   LDA $0CEE / BIT #$0010 R
+C54F9C test   LDA $0CFB / BIT #$10 lo:R/hi:Start
+C54FEF test   LDA $0CFA / BIT #$1080 A+Start
+C56572 window $0C95 in [0x7,0xa) then INC $0C96
+C56E94 test   LDA $0CFB / BIT #$10 lo:R/hi:Start
+C57232 test   LDA $0CFA / BIT #$1080 A+Start
+C60C12 combo  AND/CMP #0x003f R+L
+C60D0D combo  AND/CMP #0x003f R+L
+C6160A table  EOR $C6161D,X, index $76, then INC $76
+C65BD5 combo  AND/CMP #0x00ff R+L+X+A
+# 19 hits
+## beta
+C40819 test   LDA $0CE0 / AND #$01 lo:-/hi:Right
+C42121 combo  AND/EOR #0x0700 Right+Left+Down
+C4213F combo  AND/EOR #0x0700 Right+Left+Down
+C421CA combo  AND/EOR #0x0700 Right+Left+Down
+C424C2 combo  AND/CMP #0x001f R
+C450E1 combo  AND/CMP #0x0070 R+L+X
+C45A5C combo  AND/CMP #0x001f R
+C48695 combo  AND/CMP #0x00ff R+L+X+A
+C486E2 combo  AND/CMP #0x00ff R+L+X+A
+C54F52 test   LDA $0CEE / BIT #$0010 R
+C550CA test   LDA $0CFB / BIT #$10 lo:R/hi:Start
+C5511D test   LDA $0CFA / BIT #$1080 A+Start
+C566A5 window $0C95 in [0x7,0xa) then INC $0C96
+C56FC7 test   LDA $0CFB / BIT #$10 lo:R/hi:Start
+C57345 test   LDA $0CFA / BIT #$1080 A+Start
+C60C12 combo  AND/CMP #0x003f R+L
+C60D0D combo  AND/CMP #0x003f R+L
+C6160A table  EOR $C6161D,X, index $76, then INC $76
+C65BD5 combo  AND/CMP #0x00ff R+L+X+A
+# 19 hits

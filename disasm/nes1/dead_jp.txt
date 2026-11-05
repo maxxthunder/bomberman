@@ -1,0 +1,34 @@
+# never-executed code (traced)
+cond  00:C119-C11A     2 bytes    1 ins  from: 00:C117 fall
+cond  00:C4CA-C4CC     3 bytes    1 ins  from: 00:C4C5 BEQ
+cond  00:C61C-C63A    31 bytes   14 ins  from: 00:C61A fall
+cond  00:C64C-C655    10 bytes    4 ins  from: 00:C64A fall
+cond  00:CC40-CC43     4 bytes    2 ins  from: 00:CC3E fall
+cond  00:CC83-CC9A    24 bytes   11 ins  from: 00:CC7D BEQ, 00:CC81 fall
+dead  00:CEE1-CF57   119 bytes   68 ins  from: 00:CC8A JMP*
+cond  00:CFA5-CFA6     2 bytes    1 ins  from: 00:CFA3 fall
+dead  00:CFE5-CFFD    25 bytes   13 ins  from: 00:E391 JSR*
+cond  00:D077-D082    12 bytes    6 ins  from: 00:D075 fall
+cond  00:D989-D98A     2 bytes    1 ins  from: 00:D987 fall
+cond  00:DB12-DB15     4 bytes    2 ins  from: 00:DB0B BEQ
+cond  00:DB31-DB34     4 bytes    2 ins  from: 00:DB2A BEQ
+dead  00:DD03-DD1A    24 bytes   12 ins  from: 00:E3AD JSR*, 00:E3B3 JSR*
+cond  00:DD3E-DD41     4 bytes    2 ins  from: 00:DD3C fall
+dead  00:E36C-E36C     1 bytes    1 ins  from: 00:E381 BEQ*
+cond  00:E371-E37A    10 bytes    5 ins  from: 00:E36F fall
+cond  00:E37F-E3BA    60 bytes   28 ins  from: 00:E37D fall
+cond  00:E3D0-E3D4     5 bytes    2 ins  from: 00:E3CE fall
+cond  00:E3D9-E3E9    17 bytes    8 ins  from: 00:E3D7 fall
+cond  00:E41B-E41B     1 bytes    1 ins  from: 00:E419 fall
+cond  00:E424-E43A    23 bytes   11 ins  from: 00:E422 fall, 00:E44E BNE*, 00:E457 BEQ*, 00:E45E BCS, 00:E469 BCS*, 00:E480 BEQ*
+cond  00:E440-E450    17 bytes    9 ins  from: 00:E43E fall
+cond  00:E455-E459     5 bytes    3 ins  from: 00:E453 fall
+cond  00:E465-E46B     7 bytes    4 ins  from: 00:E463 fall
+cond  00:E47C-E482     7 bytes    4 ins  from: 00:E478 BEQ, 00:E47A fall
+cond  00:E496-E499     4 bytes    2 ins  from: 00:E4A7 BCS
+cond  00:E545-E546     2 bytes    1 ins  from: 00:E543 fall
+cond  00:E561-E570    16 bytes    8 ins  from: 00:E55F fall
+cond  00:E57E-E57E     1 bytes    1 ins  from: 00:E57C fall
+noref 00:FFF9-FFF9     1 bytes    1 ins  from: -  ptr@03FFE
+# orphan code candidates (not reached by the trace)
+orphan 00:E5EF   11 bytes   5 ins  calls 1

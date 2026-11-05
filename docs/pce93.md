@@ -235,6 +235,165 @@ Run on that screen starts stage 1-1 of the Normal Game, which plays normally (`$
 | "Tap is not connected" screen | `07:A712` | JP | JP: pad-5 hold |
 | Normal Game, password, save/load screens | bank 2, `06:94A0`, `06:9430` | Special Version | patch only |
 | Old CONFIGRATION screen with SOUND test | `08:88BD` | Special Version | patch only |
+| Clear-time page of the ending | `08:8CBE` | US, JP | without passwords and continues |
+| Map chunks `$3E`, `$6C` (SP `$68`) | file `$17014`, `$17EA0` (SP `$17C91`) | all | no |
+
+## Deep sweep (dead code, input codes, unset flags, text, maps, cheats)
+
+Method. 23 coverage runs over the three carts in fresh portable Mesen copies (one run per test, no `emu.reset()`):
+`tools/pce93/cov.py` + `cov.lua`. Segments: a password, then every stage of every world by writing world/stage and
+losing a life (the death path reloads the stage); the ending; game over and continue; the password screen with
+random input; the Battle Game with the stage forced to cycle through all nine; the VS / COM-LINK item; title idle.
+Each run leaves Mesen's code/data log and a bitmap of every RAM byte ever written non-zero. The sweeps are
+`tools/pce93/sweep.py` (`dead`, `pad`, `flags`), `tools/pce93/text.py` and `tools/pce93/maps.py`; their outputs are
+`disasm/pce93/dead_*.txt`, `pad_*.txt`, `flags_*.txt`, `text_*.txt`, `maps_*.txt`.
+Fixed on the way: `cdl_dump` in `tools/pce93/lib.lua` dropped the first byte of the log (the Lua table is 0-based),
+so the logs behind the earlier entry lists were one byte off.
+
+### Dead code
+
+| Version | Never-executed traced blocks | Bytes | After an executed branch or called by run code | Called only from dead code | Reached only through a jump table | Orphans (untraced, never run, decode as code) |
+|---|---|---|---|---|---|---|
+| USA | 418 | 13,590 | 287 (5.3 KB) | 81 (6.6 KB) | 50 (1.7 KB) | 148, 6.3 KB |
+| Japan | 415 | 14,726 | 276 (5.0 KB) | 84 (7.6 KB) | 55 (2.2 KB) | 150, 6.6 KB |
+| Special Version | 476 | 16,746 | 190 (3.6 KB) | 228 (9.5 KB) | 58 (3.6 KB) | 224, 10.3 KB |
+
+Most blocks are error paths and branches random input never takes. The large ones, read and classed (USA
+addresses; JP and SP have the same groups):
+
+| Code | What it is | Class |
+|---|---|---|
+| `00:F445`-`F6xx`, `07:ACA9`-`AD2A` | COM-LINK / VS link: serial handshake through the pad port `$1000` after the "who pushes RUN is White" screen (world 9, set at `07:AC61`) | needs a second console and the cable; the screen itself was reached (below) |
+| `00:FA96`-`FE82`, `06:9320` (802 bytes), `06:9654` | backup-RAM file system and the SAVE / LOAD / DELETE / FORMAT screens (title item LOAD) | needs a Tennokoe / CD backup RAM: situation not covered |
+| `08:8620`, `08:86C3`, `08:87AF` | US: the CONFIGRATION screen | US: unreferenced (orphan, see above); JP: reached |
+| `08:8CBE` | CONGRATULATIONS! / CLEAR TIME / CLEAR SCORE page of the ending | ★ reachable only without passwords and continues (below) |
+| `08:8871` (317 bytes) | the lose-a-life path from state 6 with more than one life left | not covered (lives were kept up) |
+| `02:874D`, `02:8766` | player input modifiers: stuck direction, swapped Up/Down and Left/Right (skull curses) | battle items not picked up |
+| `05:B549`-`BE8E` (1.9 KB), `04:9D14` | boss behaviour phases | bosses were not hurt by random input |
+| `13:415A`, `13:4254` | sound-driver commands no track uses | unused |
+| `00:EE60` | an empty `RTS` called every frame just before the pad is read, next to the `$2F99` test (below) | ★ debug hook stub, cut |
+| `00:EDB4` | the pad-read skip taken when `$2F99` is not 0 | its flag is never set |
+
+### Input codes
+
+`sweep.py pad` lists every read of the pad bytes (`$32`-`$3B`) with the compares that follow, and flags compares
+against tables, multi-bit constants and a held-button test next to a newly-pressed test. Hits, all three carts:
+the pad reader itself (`00:EDBB`), the password-grid cursor (`06:9898`, `08:87F8`: compares of the cursor index),
+JP's pad-5 tap test (`07:A707`, Known) and the ending's I held + Run pressed (`08:8C7D` US / `08:8C85` JP, Known).
+There is no other button code in any version.
+
+The ending code was now played to with real presses (it was written directly before): the test runs **every frame**
+on the END screen (logged over 6,000 times), so holding I and pressing Run works any time there; `$3FFB` became 1 in
+US and JP. ![](img/pce93/ending_end_us.png)
+
+### Flags that are read but never set
+
+Candidates: RAM read by the code but never stored to (static), and never written non-zero in any run (`flags_*.txt`),
+plus the bits of the player's ability byte that no code sets. Each was set in Mesen.
+
+| Flag | Read at | Set by the game? | Set in Mesen | Status |
+|---|---|---|---|---|
+| player ability `$91,X` bit 5 (`$2091` for player 1) | death check `02:8C79` (skips death), sprite flash `02:9171` | never; only cleared (`03:ACD6`) | **invincible**: stood on its own bomb, lives stayed 2; with the bit clear the same test lost a life | ★ New |
+| `$91,X` bit 4 | `02:96DF` (sets `$B1` bit 0) | never | survived its own bomb once, then died to an enemy; no clear effect | ★ New, effect unclear |
+| `$91,X` bit 3 | fire check `02:8C9D` | yes: the vest item (`03:A9BF`, with a timer) | fire-proof | item effect |
+| `$2F99` | pad reader `00:EDAF`: non-zero skips the pad read | never (cleared at `00:ED9B`) | input kept working; no visible effect | ★ New, effect unclear |
+| `$38B1` | ending `08:8CB8`, clear timer `01:D93F` | 1 after a continue (`07:A191`) or a password (`01:D93B`) | 0 at the ending shows the clear page | ★ New |
+
+The CONFIGRATION screen's BOMB WALK item is shown and changed but never stored (`08:862E` clears `$2204`, and the
+write-back at `08:86C3` skips it), so it does nothing. ★ New.
+
+★ **The clear-time page.** The ending shows CONGRATULATIONS!, CLEAR TIME (counted from the start of a new game,
+`01:D93F`) and CLEAR SCORE only when the game was finished from a new game with no password and no continue. Shown
+in Mesen with `$38B1` = 0 at the ending (cheat `1F18B1:00` below): ![](img/pce93/clear_time.png)
+
+### Text
+
+`text.py` dumps every string: ASCII plus half-width katakana (JIS X 0201, `$A1`-`$DF`), ended by `$00`, after a
+3-byte position header. 251 (US), 226 (JP) and 195 (SP) strings, the ones no run read marked NEVER, in
+`disasm/pce93/text_*.txt`. Unused or unreached groups:
+
+- the CONFIGRATION item names (unreachable in the US), the COM-LINK texts (BOTH PLAYERS START HERE AT THE SAME
+  TIME..., WHITE / BLACK BOMBER MAN PLAYER, RETRY..PUSH RUN BUTTON, GET READY!), the backup-RAM texts (WHICH FILE TO
+  SAVE TO?, DATA ERROR!, FILE CABINET IS FULL, DELETE DATA?, FORMAT IT NOW?), CONGRATULATIONS! / CLEAR TIME /
+  CLEAR SCORE. The link screen (title item 3) is reachable and waits for the other console:
+  ![](img/pce93/comlink_us.png) ![](img/pce93/vs_link_jp.png)
+- The Japanese texts, translated:
+
+| Japanese | Translation |
+|---|---|
+| ﾄﾞﾚｦ LOAD ｼﾏｽｶ? / ﾄﾞｺﾆ SAVE ｼﾏｽｶ? | Which one do you load? / Where do you save? |
+| ｹｼﾀｲﾃﾞｰﾀｦ ｴﾗﾝﾃﾞｸﾀﾞｻｲ / ﾖﾛｼｲﾃﾞｽｶ? | Choose the data to erase / Is that OK? |
+| ﾊﾞｯｸｱｯﾌﾟﾗﾑｶﾞ ｲｯﾊﾟｲﾃﾞｽ | The backup RAM is full |
+| ﾊﾞｯｸｱｯﾌﾟﾗﾑ ｶﾞ ｼｮｷｶ ｻﾚﾃｲﾏｾﾝ ｼｮｷｶ ｼﾏｽｶ? | The backup RAM is not formatted. Format it? |
+| PASSWORDｦ ﾆｭｳﾘｮｸｼﾃｸﾀﾞｻｲ | Please enter the password |
+| ﾀｲｾﾝｽﾙﾆﾝｽﾞｳｦ ｷﾒﾃｸﾀﾞｻｲ / ﾄﾞﾉﾎﾞﾝﾊﾞｰﾏﾝｦ ｺﾝﾋﾟｭｰﾀｰﾆｼﾏｽｶ? | Choose the number of players / Which Bombermen does the computer play? |
+| ｺﾝﾋﾟｭｰﾀｰﾉﾚﾍﾞﾙｦ ｷﾒﾃｸﾀﾞｻｲ / ｼｮｳｾﾝｶｲｽｳｦ ｴﾗﾝﾃﾞｸﾀﾞｻｲ / ﾀｲｾﾝｽﾙｽﾃｰｼﾞｦ ｴﾗﾝﾃﾞｸﾀﾞｻｲ | Set the computer's level / Choose the number of wins / Choose the stage |
+| ﾘｮｳｼｬﾄﾓ ｺﾉｶﾞﾒﾝﾆｼﾃｸﾀﾞｻｲ / ﾄﾞﾁﾗｶｶﾞｻｷﾆ RUNﾎﾞﾀﾝｦ ｵｽｺﾄﾆﾖﾘ / ﾎﾜｲﾄﾎﾞﾝﾊﾞｰﾏﾝｶﾞ ｹｯﾃｲｻﾚﾏｽ | (VS link) Both players go to this screen / Whoever presses Run first / becomes White Bomberman |
+| ｱｼﾞｱﾝｽﾀｰ, ﾌﾞﾗｼﾞﾗｽﾀｰ, ｻﾞｳﾙｽｽﾀｰ, ﾃﾞｭｰﾝｽﾀｰ, ｱｸｴﾘｱｽｽﾀｰ, ｸﾘｽﾀﾙｽﾀｰ, ｼﾞｪﾈｼｽｽﾀｰ | the planets: Asian Star, Brazil Star, Saurus Star, Dune Star, Aqueria Star, Crystal Star, Genesis Star (US: QUARRY, BLOSSOM, INFERNO, WITHER, SURF, ICICLE, TECHO) |
+| ｱﾝｺｸ / ｼﾞｬﾝｸﾞﾙ / ｶｻﾞﾝ / ｻﾊﾞｸ / ﾐｽﾞ / ｺｵﾘ / ｷｶｲ ﾉ ﾎｼ | planet of darkness / of jungle / of volcanoes / of desert / of water / of ice / of machines |
+| ﾎﾞｽ:ﾓﾝｶﾞｰ, ｻﾞﾝｺｸﾗﾝ, ﾌﾟﾃﾗﾉﾝ, ｶﾞﾊﾞﾗ, ｶﾆｺﾞｾﾞﾝ, ﾋﾊﾞﾄﾞﾝ | the bosses: Monger, Zankokuran, Pteranon, Gabara, Kanigozen, Hibadon (US: Digger, Petunia, Blastbat, El-Baal, the Cockle Twins, Grumpus) |
+| ﾜｰﾌﾟｺﾞﾉ ﾌｧｲﾔｰ ｺｳｹﾞｷｦ ｻｹﾅｶﾞﾗ ｺｳｹﾞｷｾﾖ! | Fire after the warp. Dodge it and strike back! |
+| ﾎﾞｽｶﾞ ﾎﾝﾀｲｦ ｱﾗﾜｽﾏﾃﾞ ｻﾞｺﾆ ｺｳｹﾞｷﾀﾞ! | Until the boss shows its true body, attack the small fry! |
+| ﾁｼﾞｮｳﾆ ｵﾘﾀﾄｷｶﾞ ﾀﾞﾒｰｼﾞｦ ｱﾀｴﾙ ﾁｬﾝｽﾀﾞ! | When it comes down to the ground is your chance to hurt it! |
+| ﾎﾞｽﾉ ｶｵﾆ ｱﾙ ｱｶｲ ﾎﾟｲﾝﾄｶﾞ ｼﾞｬｸﾃﾝﾀﾞ! | The red points on the boss's face are its weak spot! |
+| ﾎﾞｽﾉ ｼｬｶﾞﾝﾀﾞﾄｷｶﾞ ｺｳｹﾞｷﾉ ﾁｬﾝｽﾀﾞ! | When the boss crouches is your chance to attack! |
+| ﾎﾞｽﾉ ｼﾞｬﾝﾌﾟﾆﾊ ﾊﾞｸﾀﾞﾝｦ ﾊｶｲｽﾙ ﾁｶﾗｶﾞｱﾙ! | The boss's jumps can destroy bombs! |
+
+- ★ The Special Version's planet briefings are an older draft. Planet 1: ﾜｰﾌﾟｺﾞﾉ ﾌｧｲﾔｰ ｺｳｹﾞｷﾆ ｷｦﾂｹﾛ! (fire after
+  the warp, watch out for its attacks!); planet 2: ﾎﾞｽｶﾞ ﾎﾝﾀｲｦ ｱﾗﾜｽﾄｷ ﾎﾞｽｦｶｺﾑ ﾊﾞﾘﾔｰﾆ ｷｦﾂｹﾛ! (when the boss shows its
+  body, watch out for the barrier around it!); planet 5: ﾎﾞｽﾉ ｶｹﾞﾉﾅｶﾉ ﾐﾄﾞﾘﾉ ﾎﾟｲﾝﾄﾆ ﾊﾞｸﾀﾞﾝｦ ｾｯﾄｾﾖ! (put a bomb on
+  the green point in the boss's shadow!); planet 6: ﾎﾞｽｶﾞ ｵｺｽ ｼﾞｼﾝﾆﾊ ﾊﾞｸﾀﾞﾝｦ ﾊｶｲｽﾙﾁｶﾗｶﾞｱﾙ (the earthquakes the boss
+  makes can destroy bombs). Boss 6 is ﾋﾞﾊﾞﾄﾞﾝ (Bibadon). Its battle stage names are the JP list (SIMPLE MAP, DESERT,
+  NEON STREET, COLOSSEUM, SPACE, GREAT SKY, ARENA; tiles WARP HOLE, NON SET TILE, BELT CONVEYER, RETURN BLOCK).
+
+### Maps
+
+Format (`tools/pce93/maps.py`, the same in all three carts). Stage records, 8 bytes each, at `02:8156` (file
+`$4156`), index `$D1` (SP `$D8`) = (world - 1) × 8 + stage - 1; the nine battle stages are records 64-72.
+Bytes 0-3 = one chunk per quadrant of a 2×2-screen field (top-left, top-right, bottom-left, bottom-right); byte 4
+low nibble = which are used (0 one screen, 2 two across, 3 two down, 4 all four), high nibble = palette set.
+A chunk is 256 cells (16×16, one byte each; the play field is rows 1-11, columns 2-14) packed with an LZSS
+(pointer table `$5CC8`, banks `$0A`/`$0B`; flag byte MSB first; literal, or ring-buffer offset with two copies
+sharing one length byte, nibble + 2). Soft blocks are placed at random after unpacking (`02:80E9`), so the renders
+show the fixed layout.
+
+All 73 records of each cart are drawn in `docs/img/pce93/maps/<ver>_<record>.png` (ids and file addresses in
+`disasm/pce93/maps_<ver>.txt`) with the real tiles, learnt from VRAM dumps of the stages taken in the coverage
+runs. US and JP maps are identical; the Special Version differs in 16 records. Findings:
+
+- Records 56-63 ("world 8") are eight copies of battle stage 3's record: never used.
+- ★ **Unused chunk `$3E`** (US/JP, file `$17014`): the right half of a two-screen arena for the world 5 boss.
+  Retail 5-8 uses one screen (`3D 3D 3D 3D 00`); the **Special Version's 5-8 uses the wide field**
+  (`3D 3E 3D 3E 04`): ![](img/pce93/maps/jp_39.png) ![](img/pce93/maps/sp_39.png) ![](img/pce93/maps/jp_chunk3E_unused.png)
+- ★ **Unused chunk `$6C`** (US/JP, file `$17EA0`): an empty battle arena, outer walls only:
+  ![](img/pce93/maps/jp_chunk6C_unused.png)
+- ★ **Unused chunk `$68` in the Special Version** (file `$17C91`): a battle stage no record uses (tile set unknown,
+  drawn as cell values): ![](img/pce93/maps/sp_chunk68_unused.png)
+- The Special Version's battle records differ: its stages 7 and 8 use chunks `$69`/`$6B` and stage 9 repeats stage 2
+  with palette set 1.
+
+### Cheat codes
+
+Mesen 2's PC Engine codes are raw `AAAAAA:VV`, `AAAAAA` being the 21-bit physical address: work RAM bank `$F8` is
+`$1F0000`, so RAM `$2000 + x` (F8:x) is `1F` + x, and ROM bank `b` offset `o` is `b << 13 | o`. Each code below was
+added with `emu.addCheat(emu.cheatType.pceRaw, ...)` and checked (USA unless noted; JP uses the same addresses;
+the Special Version's game variables sit 9 bytes lower).
+
+| Code (Mesen) | F8 address | Effect | Check |
+|---|---|---|---|
+| `1F0091:20` | F8:0091 | invincible (player 1 ability bit 5) | stood on its own bomb, lives kept |
+| `1F189F:09` | F8:189F | 9 lives in reserve | HUD shows 9 |
+| `1F189A:03` | F8:189A | speed 3 (above the skates' 2) | player `$9B` = `$30` in the stage |
+| `1F1895:0w` + `1F1896:0s` | F8:1895, F8:1896 | every Normal Game stage is world w+1, stage s+1 | `03` + `04`: a new game loaded record 28 (4-5) |
+| `1F1FFB:01` | F8:1FFB | JP: CONFIGRATION screen after every planet map | screen shown ![](img/pce93/config_jp_cheat.png) |
+| `1F18B1:00` | F8:18B1 | the ending shows the clear page even after a password or continue | page shown (RAM written as the ending reads it) |
+
+Patches (IPS, built and checked against the ROM by `tools/pce93/mkpatch.py`):
+
+- `patches/pce93_configration_us.ips` (USA): file `$4432` `08 20 E7 EA 9A AB 06` → `00 20 E7 EA 20 86 08`, the
+  CONFIGRATION screen after every planet map. Verified on the patched file: ![](img/pce93/config_us_ips.png)
+- `patches/pce93_normal_game_sp.ips` (Special Version): file `$D84C` `4E A3` → `A0 94`; Run on the title opens the
+  leftover password screen and the Normal Game (the bytes of the in-memory test above; the IPS file itself was not run).
 
 ## Title logos
 
@@ -247,6 +406,7 @@ logo), plus the ™ sprite (US) or the banner sprites (SP, palette 4), renders t
 ## Open
 
 - A real pad-5 press for the tap screen (needs Mesen input on Multi Tap sub-ports).
-- The ending's I+Run itself was not played to; `$3FFB` was written directly.
+- `$91` bit 4 and `$2F99`: set in Mesen with no clear effect.
+- The backup-RAM screens and the COM-LINK game (need a Tennokoe or a second console); no cheat was checked on the Special Version.
 - That a stage started from the JP CONFIGRATION screen uses its values (only the screen keeping them was seen).
 - The `←` `→` entries on the password grid and the continue screen's code display.

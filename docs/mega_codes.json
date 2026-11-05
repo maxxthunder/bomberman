@@ -1227,5 +1227,161 @@
   "status": "fixed",
   "verified": "static",
   "note": "GameFAQs lists it on the Genesis page, labelled TG16. The Genesis title menu handler ($1A68C) reads only Up, Down and Start; no sound test exists in the ROM"
+ },
+ {
+  "code": "HCXT-DEV6",
+  "effect": "Normal Game starts at area 2 (Game Genie, USA)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$1A73C clr.b $953B -> addq.b #1,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DEV0",
+  "effect": "Normal Game starts at area 2 (Game Genie, Europe)",
+  "versions": [
+   "EU"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$1A736 clr.b $953B -> addq.b #1,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DJV6",
+  "effect": "Normal Game starts at area 3 (Game Genie, USA)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$1A73C clr.b $953B -> addq.b #2,$953B; use from power-on (it adds to the old value); checked in BizHawk: Normal Game opened the planet map and hub of area 3 ($953A=2, map $0B)",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DJV0",
+  "effect": "Normal Game starts at area 3 (Game Genie, Europe)",
+  "versions": [
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$1A736 clr.b $953B -> addq.b #2,$953B; use from power-on (it adds to the old value); checked in BizHawk: Normal Game opened the planet map and hub of area 3 ($953A=2, map $0B)",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DNV6",
+  "effect": "Normal Game starts at area 4 (Game Genie, USA)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$1A73C clr.b $953B -> addq.b #3,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DNV0",
+  "effect": "Normal Game starts at area 4 (Game Genie, Europe)",
+  "versions": [
+   "EU"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$1A736 clr.b $953B -> addq.b #3,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DTV6",
+  "effect": "Normal Game starts at area 5 (Game Genie, USA)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$1A73C clr.b $953B -> addq.b #4,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DTV0",
+  "effect": "Normal Game starts at area 5 (Game Genie, Europe)",
+  "versions": [
+   "EU"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$1A736 clr.b $953B -> addq.b #4,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DYV6",
+  "effect": "Normal Game starts at area 6 (Game Genie, USA)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$1A73C clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "section": "cheat"
+ },
+ {
+  "code": "HCXT-DYV0",
+  "effect": "Normal Game starts at area 6 (Game Genie, Europe)",
+  "versions": [
+   "EU"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$1A736 clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); same patch as the checked area 3 code with another value; not run",
+  "section": "cheat"
+ },
+ {
+  "code": "HA3A-AYWC",
+  "effect": "Infinite lives (Game Genie)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$3242 subq.b #1,$9543 -> tst.b (same address in EU). BizHawk client.addcheat: standing on own bombs for 2400 frames lost 3 lives without the code, none with it (US and EU)",
+  "section": "cheat"
+ },
+ {
+  "code": "AJ2A-AAB2",
+  "effect": "Invincible (Game Genie)",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$3038 = $0002: the hit check $3032 always returns 'not hit' (same address in EU). Own bombs, 1200 frames: 2 lives lost without, none with (US and EU). Enemies not tried; shared code, so in battle it should apply to every player (not tried)",
+  "section": "cheat"
+ },
+ {
+  "code": "HC0A-AYZ0",
+  "effect": "Stage/battle clock stops (Game Genie, USA)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$ACB6 frame counter subq.b -> tst.b. 600 frames in area 1 stage 1: clock stayed 3:57",
+  "section": "cheat"
+ },
+ {
+  "code": "HC0A-AYZT",
+  "effect": "Stage/battle clock stops (Game Genie, Europe)",
+  "versions": [
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$ACB0 (USA $ACB6) frame counter subq.b -> tst.b. 600 frames: clock stayed 3:57",
+  "section": "cheat"
  }
 ]

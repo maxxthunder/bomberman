@@ -1,0 +1,693 @@
+00215a  [AD0A]  
+    00215a  lea.l    $ad0a.w, a0
+    00215e  move.b   $2(a0, d0.w), $a932.w
+    002164  move.b   $3(a0, d0.w), $a933.w
+    00216a  bra.w    $2178
+    00216e  addq.b   #$1, $a943.w
+    002172  jsr      $87f6.l
+002df6  [AD0A]  andi.b   #$f
+    002df6  lea.l    $ad0a.w, a0
+    002dfa  move.b   $3(a0, d0.w), d0
+    002dfe  andi.b   #$f, d0
+    002e02  beq.w    $2e0c
+    002e06  move.b   #$8, $a942.w
+    002e0c  jsr      $2f70.l
+002f44  [AD0A]  andi.b   #$f
+    002f44  lea.l    $ad0a.w, a0
+    002f48  move.b   $3(a0, d0.w), d0
+    002f4c  andi.b   #$f, d0
+    002f50  beq.w    $2f5a
+    002f54  move.b   #$4, $a942.w
+    002f5a  jsr      $2f70.l
+003424  [AD0A]  andi.b   #$f
+    003424  lea.l    $ad0a.w, a0
+    003428  move.b   $3(a0), d0
+    00342c  andi.b   #$f, d0
+    003430  beq.w    $343a
+    003434  move.b   #$3, $a942.w
+    00343a  movem.l  d4, -(a7)
+0043da  [AD0A]  andi.b   #$20
+    0043da  lea.l    $ad0a.w, a0
+    0043de  andi.b   #$20, $2(a0)
+    0043e4  andi.b   #$20, $3(a0)
+    0043ea  move.b   $16(a6), d0
+    0043ee  beq.w    $4408
+    0043f2  subq.b   #$1, $16(a6)
+00471a  [AD0A]  andi.b   #$f
+    00471a  lea.l    $ad0a.w, a0
+    00471e  move.b   $3(a0, d0.w), d0
+    004722  andi.b   #$f, d0
+    004726  beq.w    $4730
+    00472a  move.b   #$8, $a942.w
+    004730  move.b   $a42c.w, d4
+004794  [AD0A]  andi.b   #$f
+    004794  lea.l    $ad0a.w, a0
+    004798  move.b   $3(a0, d0.w), d0
+    00479c  andi.b   #$f, d0
+    0047a0  beq.w    $47aa
+    0047a4  move.b   #$3, $a942.w
+    0047aa  move.b   $a42c.w, d4
+004bdc  [AD0A]  andi.b   #$f0
+    004bdc  lea.l    $ad0a.w, a0
+    004be0  andi.b   #$f0, $2(a0, d0.w)
+    004be6  andi.b   #$f0, $3(a0, d0.w)
+    004bec  move.b   $a42c.w, d4
+    004bf0  movea.l  $a42e.w, a4
+    004bf4  rts      
+004c36  [AD0A]  
+    004c36  lea.l    $ad0a.w, a0
+    004c3a  or.b     d0, $2(a0, d1.w)
+    004c3e  move.b   $8a57.w, d5
+    004c42  movea.l  $8a5a.w, a5
+    004c46  jsr      $1fd6.w
+    004c4a  bcs.w    $4c74
+005eb6  [AD0A]  btst.b   #$6; btst.b   #$7
+    005eb6  lea.l    $ad0a.w, a0
+    005eba  btst.b   #$6, $3(a0, d0.w)
+    005ec0  beq.w    $5eca
+    005ec4  ori.b    #$80, $18(a6)
+    005eca  btst.b   #$7, $18(a6)
+    005ed0  beq.w    $5eea
+007dd0  [805A]  
+    007dd0  tst.b    $805a.w
+    007dd4  beq.b    $7dda
+    007dd6  clr.b    $805a.w
+    007dda  jsr      $b954.l
+    007de0  clr.b    $8a56.w
+    007de4  addq.b   #$1, $80d4.w
+007dd6  [805A]  
+    007dd6  clr.b    $805a.w
+    007dda  jsr      $b954.l
+    007de0  clr.b    $8a56.w
+    007de4  addq.b   #$1, $80d4.w
+    007de8  addq.b   #$1, $a400.w
+    007dec  clr.b    $9432.w
+007dfa  [805A]  
+    007dfa  move.b   #$1, $805a.w
+    007e00  tst.b    $805a.w
+    007e04  bne.b    $7e00
+    007e06  rts      
+    007e08  moveq    #$40, d7
+    007e0a  move.b   d7, $a10009.l
+007e00  [805A]  
+    007e00  tst.b    $805a.w
+    007e04  bne.b    $7e00
+    007e06  rts      
+    007e08  moveq    #$40, d7
+    007e0a  move.b   d7, $a10009.l
+    007e10  move.b   d7, $a1000b.l
+007e78  [800A]  
+    007e78  tst.w    $800a.w
+    007e7c  bmi.w    $7e8a
+    007e80  moveq    #$4, d0
+    007e82  bsr.w    $7e92
+    007e86  move.b   d0, $1(a1)
+    007e8a  move.w   (a7)+, $a11100.l
+0080f4  [800A]  
+    0080f4  tst.w    $800a.w
+    0080f8  bmi.w    $810e
+    0080fc  bsr.b    $8114
+    0080fe  bcs.w    $810e
+    008102  bsr.b    $8114
+    008104  bcs.w    $810e
+00823a  [800A]  btst.b   #$7; cmpi.w   #$2
+    00823a  move.w   $800a.w, d0
+    00823e  cmpi.w   #$2, d0
+    008242  bcc.w    $8256
+    008246  btst.b   #$7, $800d.w
+    00824c  bne.b    $825e
+    00824e  btst.b   #$7, $8017.w
+008246  [800D]  btst.b   #$7
+    008246  btst.b   #$7, $800d.w
+    00824c  bne.b    $825e
+    00824e  btst.b   #$7, $8017.w
+    008254  bne.b    $825e
+    008256  subq.w   #$1, $805c.w
+    00825a  beq.b    $825e
+00824e  [8017]  
+    00824e  btst.b   #$7, $8017.w
+    008254  bne.b    $825e
+    008256  subq.w   #$1, $805c.w
+    00825a  beq.b    $825e
+    00825c  rts      
+    00825e  jsr      $855a.l
+009144  [800A]  
+    009144  lea.l    $800a.w, a1
+    009148  bsr.w    $918e
+    00914c  lea.l    $8014.w, a1
+    009150  bsr.w    $919c
+    009154  lea.l    $801e.w, a1
+    009158  bsr.w    $91aa
+00914c  [8014]  
+    00914c  lea.l    $8014.w, a1
+    009150  bsr.w    $919c
+    009154  lea.l    $801e.w, a1
+    009158  bsr.w    $91aa
+    00915c  lea.l    $8028.w, a1
+    009160  bsr.w    $91b8
+009154  [801E]  
+    009154  lea.l    $801e.w, a1
+    009158  bsr.w    $91aa
+    00915c  lea.l    $8028.w, a1
+    009160  bsr.w    $91b8
+    009164  bra.w    $9178
+    009168  lea.l    $800a.w, a1
+00915c  [8028]  
+    00915c  lea.l    $8028.w, a1
+    009160  bsr.w    $91b8
+    009164  bra.w    $9178
+    009168  lea.l    $800a.w, a1
+    00916c  bsr.w    $91e2
+    009170  lea.l    $8014.w, a1
+009168  [800A]  
+    009168  lea.l    $800a.w, a1
+    00916c  bsr.w    $91e2
+    009170  lea.l    $8014.w, a1
+    009174  bsr.w    $91d4
+    009178  movem.l  (a7)+, d1/a0-a1
+    00917c  rts      
+009170  [8014]  
+    009170  lea.l    $8014.w, a1
+    009174  bsr.w    $91d4
+    009178  movem.l  (a7)+, d1/a0-a1
+    00917c  rts      
+    00917e  ori.b    #$1, d1
+    009182  subi.b   #$6, d5
+0092be  [AD02]  cmpi.w   #$f0
+    0092be  btst.b   #$7, $ad02.w
+    0092c4  bne.w    $92d8
+    0092c8  addq.w   #$1, $aed0.w
+    0092cc  cmpi.w   #$f0, $aed0.w
+    0092d2  beq.w    $92d8
+    0092d6  rts      
+00d446  [AD0A]  andi.b   #$40
+    00d446  lea.l    $ad0a.w, a0
+    00d44a  move.b   $3(a0), d0
+    00d44e  andi.b   #$40, d0
+    00d452  move.b   d0, $a933.w
+    00d456  clr.b    $a932.w
+    00d45a  jsr      $5776.w
+00dc48  [AD0A]  
+    00dc48  lea.l    $ad0a.w, a0
+    00dc4c  clr.b    $2(a0, d0.w)
+    00dc50  clr.b    $3(a0, d0.w)
+    00dc54  move.b   #$37, d0
+    00dc58  jsr      $34b6.w
+    00dc5c  rts      
+00e7ba  [AD0A]  
+    00e7ba  lea.l    $ad0a.w, a0
+    00e7be  move.b   $2(a0), d0
+    00e7c2  lea.l    $9c6c.l, a0
+    00e7c8  and.b    (a0, d1.w), d0
+    00e7cc  beq.w    $e7d2
+    00e7d0  moveq    #$40, d2
+010274  [AD04]  
+    010274  cmp.w    $ad04.w, d0
+    010278  bne.w    $1029a
+    01027c  subq.b   #$1, $ad06.w
+    010280  beq.w    $102aa
+    010284  clr.w    $ad02.w
+    010288  bsr.w    $102e8
+01027c  [AD06]  andi.w   #$f00f
+    01027c  subq.b   #$1, $ad06.w
+    010280  beq.w    $102aa
+    010284  clr.w    $ad02.w
+    010288  bsr.w    $102e8
+    01028c  andi.w   #$f00f, d0
+    010290  or.w     d0, $ad02.w
+010284  [AD02]  andi.w   #$f00f
+    010284  clr.w    $ad02.w
+    010288  bsr.w    $102e8
+    01028c  andi.w   #$f00f, d0
+    010290  or.w     d0, $ad02.w
+    010294  movem.l  (a7)+, d0
+    010298  rts      
+010290  [AD02]  
+    010290  or.w     d0, $ad02.w
+    010294  movem.l  (a7)+, d0
+    010298  rts      
+    01029a  move.w   d0, $ad04.w
+    01029e  move.w   d0, $ad02.w
+    0102a2  move.b   #$20, $ad06.w
+01029a  [AD04]  
+    01029a  move.w   d0, $ad04.w
+    01029e  move.w   d0, $ad02.w
+    0102a2  move.b   #$20, $ad06.w
+    0102a8  bra.b    $10288
+    0102aa  move.w   d0, $ad02.w
+    0102ae  move.b   #$6, $ad06.w
+01029e  [AD02]  
+    01029e  move.w   d0, $ad02.w
+    0102a2  move.b   #$20, $ad06.w
+    0102a8  bra.b    $10288
+    0102aa  move.w   d0, $ad02.w
+    0102ae  move.b   #$6, $ad06.w
+    0102b4  bra.b    $10288
+0102a2  [AD06]  
+    0102a2  move.b   #$20, $ad06.w
+    0102a8  bra.b    $10288
+    0102aa  move.w   d0, $ad02.w
+    0102ae  move.b   #$6, $ad06.w
+    0102b4  bra.b    $10288
+    0102b6  movem.l  d1-d2/a0, -(a7)
+0102aa  [AD02]  
+    0102aa  move.w   d0, $ad02.w
+    0102ae  move.b   #$6, $ad06.w
+    0102b4  bra.b    $10288
+    0102b6  movem.l  d1-d2/a0, -(a7)
+    0102ba  lea.l    $ad0a.w, a0
+    0102be  clr.w    d0
+0102ae  [AD06]  
+    0102ae  move.b   #$6, $ad06.w
+    0102b4  bra.b    $10288
+    0102b6  movem.l  d1-d2/a0, -(a7)
+    0102ba  lea.l    $ad0a.w, a0
+    0102be  clr.w    d0
+    0102c0  clr.w    d1
+0102ba  [AD0A]  cmpi.w   #$2
+    0102ba  lea.l    $ad0a.w, a0
+    0102be  clr.w    d0
+    0102c0  clr.w    d1
+    0102c2  moveq    #$3, d2
+    0102c4  cmpi.w   #$2, $0(a0)
+    0102ca  bcc.w    $102d6
+0102ec  [AD0A]  cmpi.w   #$2
+    0102ec  lea.l    $ad0a.w, a0
+    0102f0  clr.w    d0
+    0102f2  clr.w    d1
+    0102f4  moveq    #$3, d2
+    0102f6  cmpi.w   #$2, $0(a0)
+    0102fc  bcc.w    $10308
+01032c  [AD02]  btst.b   #$0
+    01032c  btst.b   #$1, $ad02.w
+    010332  beq.w    $1033e
+    010336  bsr.w    $1037c
+    01033a  bra.w    $1034c
+    01033e  btst.b   #$0, $ad02.w
+    010344  beq.w    $1034c
+01033e  [AD02]  btst.b   #$3
+    01033e  btst.b   #$0, $ad02.w
+    010344  beq.w    $1034c
+    010348  bsr.w    $10398
+    01034c  bsr.w    $103b0
+    010350  bcs.w    $10374
+    010354  btst.b   #$3, $ad02.w
+010354  [AD02]  btst.b   #$2
+    010354  btst.b   #$3, $ad02.w
+    01035a  beq.w    $10366
+    01035e  bsr.w    $1037c
+    010362  bra.w    $10374
+    010366  btst.b   #$2, $ad02.w
+    01036c  beq.w    $10374
+010366  [AD02]  
+    010366  btst.b   #$2, $ad02.w
+    01036c  beq.w    $10374
+    010370  bsr.w    $10398
+    010374  asl.b    #$1, d1
+    010376  movem.l  (a7)+, d0-d2/a0-a1
+    01037a  rts      
+010380  [AD07]  
+    010380  add.b    $ad07.w, d0
+    010384  cmp.b    $ad08.w, d0
+    010388  beq.w    $10394
+    01038c  bcs.w    $10394
+    010390  move.b   $ad09.w, d0
+    010394  move.b   d0, (a1)
+010384  [AD08]  
+    010384  cmp.b    $ad08.w, d0
+    010388  beq.w    $10394
+    01038c  bcs.w    $10394
+    010390  move.b   $ad09.w, d0
+    010394  move.b   d0, (a1)
+    010396  rts      
+010390  [AD09]  
+    010390  move.b   $ad09.w, d0
+    010394  move.b   d0, (a1)
+    010396  rts      
+    010398  subq.l   #$1, d1
+    01039a  move.b   (a1), d0
+    01039c  sub.b    $ad07.w, d0
+01039c  [AD07]  
+    01039c  sub.b    $ad07.w, d0
+    0103a0  bcs.w    $103aa
+    0103a4  cmp.b    $ad09.w, d0
+    0103a8  bcc.b    $10394
+    0103aa  move.b   $ad08.w, d0
+    0103ae  bra.b    $10394
+0103a4  [AD09]  
+    0103a4  cmp.b    $ad09.w, d0
+    0103a8  bcc.b    $10394
+    0103aa  move.b   $ad08.w, d0
+    0103ae  bra.b    $10394
+    0103b0  move.b   (a0)+, d0
+    0103b2  bpl.w    $103be
+0103aa  [AD08]  
+    0103aa  move.b   $ad08.w, d0
+    0103ae  bra.b    $10394
+    0103b0  move.b   (a0)+, d0
+    0103b2  bpl.w    $103be
+    0103b6  addq.w   #$1, a0
+    0103b8  ori.b    #$1, ccr
+0103be  [AD07]  andi.b   #$fe
+    0103be  move.b   d0, $ad07.w
+    0103c2  move.b   (a0)+, $ad08.w
+    0103c6  move.b   (a0)+, $ad09.w
+    0103ca  addq.w   #$1, a0
+    0103cc  movea.l  (a0)+, a1
+    0103ce  andi.b   #$fe, ccr
+0103c2  [AD08]  andi.b   #$fe
+    0103c2  move.b   (a0)+, $ad08.w
+    0103c6  move.b   (a0)+, $ad09.w
+    0103ca  addq.w   #$1, a0
+    0103cc  movea.l  (a0)+, a1
+    0103ce  andi.b   #$fe, ccr
+    0103d2  rts      
+0103c6  [AD09]  andi.b   #$fe
+    0103c6  move.b   (a0)+, $ad09.w
+    0103ca  addq.w   #$1, a0
+    0103cc  movea.l  (a0)+, a1
+    0103ce  andi.b   #$fe, ccr
+    0103d2  rts      
+    0103d4  movem.l  d0/d6-d7/a0-a1, -(a7)
+0103d8  [800A]  
+    0103d8  lea.l    $800a.w, a0
+    0103dc  lea.l    $ad2a.w, a1
+    0103e0  move.l   a0, $0(a1)
+    0103e4  move.l   a0, $4(a1)
+    0103e8  move.l   a0, $8(a1)
+    0103ec  move.l   a0, $c(a1)
+0103dc  [AD2A]  
+    0103dc  lea.l    $ad2a.w, a1
+    0103e0  move.l   a0, $0(a1)
+    0103e4  move.l   a0, $4(a1)
+    0103e8  move.l   a0, $8(a1)
+    0103ec  move.l   a0, $c(a1)
+    0103f0  moveq    #$4, d7
+01041a  [AD2A]  btst.b   #$0
+    01041a  lea.l    $ad2a.w, a1
+    01041e  lea.l    $ad0a.w, a2
+    010422  clr.w    d1
+    010424  btst.b   #$0, $9540.w
+    01042a  beq.w    $10432
+    01042e  move.b   #$3, d1
+01041e  [AD0A]  btst.b   #$0
+    01041e  lea.l    $ad0a.w, a2
+    010422  clr.w    d1
+    010424  btst.b   #$0, $9540.w
+    01042a  beq.w    $10432
+    01042e  move.b   #$3, d1
+    010432  movea.l  (a1)+, a0
+0104cc  [AD02]  
+    0104cc  clr.b    $ad02.w
+    0104d0  move.l   #$9c24, $92fa.w
+    0104d8  jsr      $94d8.l
+    0104de  move.l   #$1054e, $92fa.w
+    0104e6  jsr      $94d8.l
+    0104ec  move.b   #$16, d0
+010a52  [AD02]  andi.b   #$e0
+    010a52  move.b   $ad02.w, d0
+    010a56  andi.b   #$e0, d0
+    010a5a  beq.w    $10ab6
+    010a5e  move.l   #$10a7e, $1c(a6)
+    010a66  move.b   #$1c, $16(a6)
+    010a6c  move.l   #$10bb6, -(a7)
+010bb6  [AD02]  
+    010bb6  btst.b   #$7, $ad02.w
+    010bbc  bne.w    $10bc8
+    010bc0  subq.b   #$1, $16(a6)
+    010bc4  bne.w    $10bcc
+    010bc8  jmp      $558.w
+    010bcc  rts      
+010bf2  [AD02]  
+    010bf2  btst.b   #$4, $ad02.w
+    010bf8  beq.w    $10c28
+    010bfc  move.l   #$10a18, $1c(a6)
+    010c04  move.b   #$22, d0
+    010c08  jsr      $34b6.w
+    010c0c  subq.b   #$1, $9306.w
+010c28  [AD02]  andi.b   #$e0
+    010c28  move.b   $ad02.w, d0
+    010c2c  andi.b   #$e0, d0
+    010c30  beq.w    $10c6a
+    010c34  move.l   #$10c54, $1c(a6)
+    010c3c  move.b   #$1c, $16(a6)
+    010c42  move.l   #$10bb6, -(a7)
+010d3c  [AD02]  andi.b   #$3
+    010d3c  move.b   $ad02.w, d0
+    010d40  andi.b   #$3, d0
+    010d44  beq.w    $10d54
+    010d48  move.b   #$23, d0
+    010d4c  jsr      $34b6.w
+    010d50  bra.w    $10d5c
+010d64  [AD02]  btst.b   #$4
+    010d64  move.b   $ad02.w, d0
+    010d68  btst.b   #$4, d0
+    010d6c  beq.w    $10d86
+    010d70  move.l   #$10bce, $1c(a6)
+    010d78  clr.b    $ad3b.w
+    010d7c  jsr      $10c04.l
+010d96  [AD02]  btst.b   #$1; btst.b   #$5
+    010d96  btst.b   #$6, $ad02.w
+    010d9c  bne.w    $10dd8
+    010da0  btst.b   #$5, $ad02.w
+    010da6  bne.w    $10dd8
+    010daa  btst.b   #$1, $9540.w
+    010db0  bne.w    $10dc2
+010da0  [AD02]  btst.b   #$1
+    010da0  btst.b   #$5, $ad02.w
+    010da6  bne.w    $10dd8
+    010daa  btst.b   #$1, $9540.w
+    010db0  bne.w    $10dc2
+    010db4  jsr      $11a82.l
+    010dba  addq.b   #$1, $ad3a.w
+010ec0  [AD02]  andi.b   #$f0; btst.b   #$4
+    010ec0  move.b   $ad02.w, d0
+    010ec4  andi.b   #$f0, d0
+    010ec8  beq.w    $10f4c
+    010ecc  btst.b   #$4, $ad02.w
+    010ed2  bne.w    $10f32
+    010ed6  move.l   #$10cc6, -(a7)
+010ecc  [AD02]  
+    010ecc  btst.b   #$4, $ad02.w
+    010ed2  bne.w    $10f32
+    010ed6  move.l   #$10cc6, -(a7)
+    010edc  jsr      $53e.w
+    010ee0  addq.w   #$4, a7
+    010ee2  addq.b   #$1, $ad44.w
+010f4c  [AD02]  andi.b   #$3; btst.b   #$0
+    010f4c  move.b   $ad02.w, d0
+    010f50  andi.b   #$3, d0
+    010f54  beq.w    $10fa4
+    010f58  btst.b   #$0, $ad02.w
+    010f5e  bne.w    $10f82
+    010f62  move.b   #$20, d0
+010f58  [AD02]  
+    010f58  btst.b   #$0, $ad02.w
+    010f5e  bne.w    $10f82
+    010f62  move.b   #$20, d0
+    010f66  jsr      $34b6.w
+    010f6a  move.b   $9e9c.w, d0
+    010f6e  addi.b   #$a, d0
+011060  [AD02]  btst.b   #$4
+    011060  move.b   $ad02.w, d0
+    011064  btst.b   #$4, d0
+    011068  beq.w    $1107e
+    01106c  move.l   #$10cc6, $1c(a6)
+    011074  jsr      $10c04.l
+    01107a  bra.w    $11a6e
+011150  [AD02]  andi.b   #$e0
+    011150  move.b   $ad02.w, d0
+    011154  andi.b   #$e0, d0
+    011158  beq.w    $11194
+    01115c  jsr      $112bc.l
+    011162  bcc.w    $11170
+    011166  move.b   #$31, d0
+011194  [AD02]  btst.b   #$1
+    011194  btst.b   #$4, $ad02.w
+    01119a  beq.w    $11200
+    01119e  jsr      $105b0.l
+    0111a4  jsr      $108ae.l
+    0111aa  jsr      $94b2.l
+    0111b0  btst.b   #$1, $9540.w
+0120f8  [AD02]  
+    0120f8  btst.b   #$7, $ad02.w
+    0120fe  beq.w    $1211e
+    012102  move.l   #$12122, $80e0.w
+    01210a  move.b   #$26, d0
+    01210e  jsr      $34b6.w
+    012112  move.b   #$fc, d0
+01218c  [AD02]  
+    01218c  btst.b   #$7, $ad02.w
+    012192  beq.w    $121ae
+    012196  move.l   #$121b2, $80e0.w
+    01219e  move.b   #$27, d0
+    0121a2  jsr      $34b6.w
+    0121a6  move.b   #$fd, d0
+01220e  [AD02]  
+    01220e  btst.b   #$7, $ad02.w
+    012214  beq.w    $12272
+    012218  move.l   #$12276, -(a7)
+    01221e  move.b   #$80, -(a7)
+    012222  move.b   #$3, -(a7)
+    012226  jsr      $1222.w
+0122a4  [AD02]  
+    0122a4  btst.b   #$7, $ad02.w
+    0122aa  beq.w    $122c8
+    0122ae  move.b   #$18, $16(a6)
+    0122b4  move.l   #$122fa, $80e0.w
+    0122bc  move.b   #$27, d0
+    0122c0  jsr      $34b6.w
+017a60  [AD02]  andi.b   #$5
+    017a60  move.b   $ad02.w, d0
+    017a64  andi.b   #$5, d0
+    017a68  beq.w    $17a8e
+    017a6c  tst.b    $953a.w
+    017a70  beq.w    $17a78
+    017a74  clr.b    $adce.w
+017a8e  [AD02]  andi.b   #$a
+    017a8e  move.b   $ad02.w, d0
+    017a92  andi.b   #$a, d0
+    017a96  beq.w    $17aca
+    017a9a  tst.b    $953a.w
+    017a9e  beq.w    $17aa6
+    017aa2  clr.b    $adce.w
+017aca  [AD02]  andi.b   #$80
+    017aca  move.b   $ad02.w, d0
+    017ace  andi.b   #$80, d0
+    017ad2  beq.w    $17af0
+    017ad6  move.b   #$21, d0
+    017ada  jsr      $34b6.w
+    017ade  move.b   $add0.w, d0
+017ce6  [AD02]  andi.b   #$80
+    017ce6  move.b   $ad02.w, d0
+    017cea  andi.b   #$80, d0
+    017cee  bne.w    $17cf8
+    017cf2  jmp      $18564.l
+    017cf8  move.b   #$21, d0
+    017cfc  jsr      $34b6.w
+018a30  [AD02]  btst.b   #$2
+    018a30  move.b   $ad02.w, d0
+    018a34  btst.b   #$2, d0
+    018a38  beq.w    $18a5e
+    018a3c  clr.b    $add6.w
+    018a40  subq.b   #$1, $953c.w
+    018a44  move.b   $953c.w, d0
+018a8c  [AD02]  andi.b   #$2
+    018a8c  move.b   $ad02.w, d0
+    018a90  andi.b   #$2, d0
+    018a94  beq.w    $18aac
+    018a98  move.b   #$20, d0
+    018a9c  jsr      $34b6.w
+    018aa0  jsr      $18b84.l
+018aac  [AD02]  andi.b   #$e0
+    018aac  move.b   $ad02.w, d0
+    018ab0  andi.b   #$e0, d0
+    018ab4  beq.w    $18adc
+    018ab8  move.b   #$21, d0
+    018abc  jsr      $34b6.w
+    018ac0  move.b   $953c.w, d0
+01a6a0  [AD02]  btst.b   #$1; btst.b   #$7
+    01a6a0  btst.b   #$0, $ad02.w
+    01a6a6  bne.w    $1a6c0
+    01a6aa  btst.b   #$1, $ad02.w
+    01a6b0  bne.w    $1a6d4
+    01a6b4  btst.b   #$7, $ad02.w
+    01a6ba  bne.w    $1a6ee
+01a6aa  [AD02]  btst.b   #$7
+    01a6aa  btst.b   #$1, $ad02.w
+    01a6b0  bne.w    $1a6d4
+    01a6b4  btst.b   #$7, $ad02.w
+    01a6ba  bne.w    $1a6ee
+    01a6be  rts      
+    01a6c0  move.b   #$20, d0
+01a6b4  [AD02]  
+    01a6b4  btst.b   #$7, $ad02.w
+    01a6ba  bne.w    $1a6ee
+    01a6be  rts      
+    01a6c0  move.b   #$20, d0
+    01a6c4  jsr      $34b6.w
+    01a6c8  move.b   $1a6e8(pc, d1.w), $ae89.w
+01a7d4  [AD02]  andi.b   #$f0; andi.b   #$fe
+    01a7d4  move.b   $ad02.w, d0
+    01a7d8  andi.b   #$f0, d0
+    01a7dc  bne.w    $1a7e6
+    01a7e0  andi.b   #$fe, ccr
+    01a7e4  rts      
+    01a7e6  ori.b    #$1, ccr
+01b976  [AD02]  andi.b   #$3; andi.b   #$e0
+    01b976  move.b   $ad02.w, d0
+    01b97a  andi.b   #$3, d0
+    01b97e  bne.w    $1b99c
+    01b982  move.b   $ad02.w, d0
+    01b986  andi.b   #$e0, d0
+    01b98a  beq.b    $1b962
+01b982  [AD02]  andi.b   #$e0
+    01b982  move.b   $ad02.w, d0
+    01b986  andi.b   #$e0, d0
+    01b98a  beq.b    $1b962
+    01b98c  move.b   #$1, $955c.w
+    01b992  move.b   #$21, d0
+    01b996  jsr      $34b6.w
+01bd5a  [AD02]  btst.b   #$1; btst.b   #$3
+    01bd5a  btst.b   #$0, $ad02.w
+    01bd60  bne.w    $1bdac
+    01bd64  btst.b   #$1, $ad02.w
+    01bd6a  bne.w    $1bdc6
+    01bd6e  btst.b   #$3, $ad02.w
+    01bd74  bne.w    $1bde0
+01bd64  [AD02]  btst.b   #$2; btst.b   #$3
+    01bd64  btst.b   #$1, $ad02.w
+    01bd6a  bne.w    $1bdc6
+    01bd6e  btst.b   #$3, $ad02.w
+    01bd74  bne.w    $1bde0
+    01bd78  btst.b   #$2, $ad02.w
+    01bd7e  bne.w    $1bdf0
+01bd6e  [AD02]  btst.b   #$2; btst.b   #$4
+    01bd6e  btst.b   #$3, $ad02.w
+    01bd74  bne.w    $1bde0
+    01bd78  btst.b   #$2, $ad02.w
+    01bd7e  bne.w    $1bdf0
+    01bd82  btst.b   #$4, $ad02.w
+    01bd88  bne.w    $1be1c
+01bd78  [AD02]  btst.b   #$4; btst.b   #$6
+    01bd78  btst.b   #$2, $ad02.w
+    01bd7e  bne.w    $1bdf0
+    01bd82  btst.b   #$4, $ad02.w
+    01bd88  bne.w    $1be1c
+    01bd8c  btst.b   #$6, $ad02.w
+    01bd92  bne.w    $1be32
+01bd82  [AD02]  btst.b   #$5; btst.b   #$6
+    01bd82  btst.b   #$4, $ad02.w
+    01bd88  bne.w    $1be1c
+    01bd8c  btst.b   #$6, $ad02.w
+    01bd92  bne.w    $1be32
+    01bd96  btst.b   #$5, $ad02.w
+    01bd9c  bne.w    $1be32
+01bd8c  [AD02]  btst.b   #$5; btst.b   #$7
+    01bd8c  btst.b   #$6, $ad02.w
+    01bd92  bne.w    $1be32
+    01bd96  btst.b   #$5, $ad02.w
+    01bd9c  bne.w    $1be32
+    01bda0  btst.b   #$7, $ad02.w
+    01bda6  bne.w    $1be32
+01bd96  [AD02]  btst.b   #$7
+    01bd96  btst.b   #$5, $ad02.w
+    01bd9c  bne.w    $1be32
+    01bda0  btst.b   #$7, $ad02.w
+    01bda6  bne.w    $1be32
+    01bdaa  rts      
+    01bdac  move.b   #$24, d0
+01bda0  [AD02]  
+    01bda0  btst.b   #$7, $ad02.w
+    01bda6  bne.w    $1be32
+    01bdaa  rts      
+    01bdac  move.b   #$24, d0
+    01bdb0  jsr      $34b6.w
+    01bdb4  lea.l    $9564.w, a0
+01e16e  [AD0A]  
+    01e16e  lea.l    $ad0a.w, a0
+    01e172  move.b   $2(a0), $954f.w
+    01e178  jsr      $3e44.w
+    01e17c  tst.b    $af04.w
+    01e180  bne.w    $1e19a
+    01e184  clr.w    d1

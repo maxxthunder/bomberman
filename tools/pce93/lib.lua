@@ -6,9 +6,9 @@ function watch(a,b,kind,tag) local seen={} emu.addMemoryCallback(function(addr,v
   local k=string.format('%04x',pc()) if not seen[k] then seen[k]=1 print(string.format('%s pc=%s addr=%04x v=%02x mpr=%s',tag or 'W',k,addr,v or 0,mprs())) end end, kind, a, b) end
 -- US title -> password screen
 function to_password() wait(400) press({run=true}) wait(400) for i=1,3 do press({down=true}) wait(20) end press({run=true}) wait(220) end
--- print the Mesen code/data log of the HuCard ROM as 'CDL <name> <hex>' (see cdl2entries.py)
+-- print the Mesen code/data log of the HuCard ROM as 'CDL <name> <hex>' (see cdl2entries.py); the table is 0-based
 function cdl_dump(n) at(function() local c=emu.getCdlData(emu.memType.pcePrgRom) local t={}
-  for i=1,#c do t[#t+1]=string.format('%02x',c[i]) end print('CDLHEX '..(n or 'cdl')..' '..table.concat(t)) end) end
+  for i=(c[0] and 0 or 1),#c do t[#t+1]=string.format('%02x',c[i]) end print('CDLHEX '..(n or 'cdl')..' '..table.concat(t)) end) end
 -- random pad input for n frames (seeded), for coverage runs
 function mash(n,seed) math.randomseed(seed or 1) local k={'up','down','left','right','i','ii'} for f=1,n,8 do local b={} b[k[math.random(#k)]]=true if math.random(4)==1 then b.i=true end for j=1,8 do q[#q+1]=b end end end
 -- type a password with real presses on the entry grid (cursor starts on the first letter, 8 per row, END = 22).

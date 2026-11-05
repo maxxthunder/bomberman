@@ -1,0 +1,200 @@
+[
+ {
+  "code": "Start (first pad) at the splash",
+  "effect": "Starts the one 8-player battle; there are no menus, modes, passwords or CPU players",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "$256 waits for bit 7 of $2F4 (the first pad found); then $3BC sets up the arena. Not in TCRF or GameFAQs",
+  "section": "rules"
+ },
+ {
+  "code": "Sega Team Player in both ports",
+  "effect": "Players 1-8 each on their own pad",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "Team Player protocol only ($30A0, ID $73/$3F, port 1 then port 2). BizHawk GPGX ControlType 4 on both ports: P1-P8 each moved players 1-8 (players.lua)",
+  "section": "input"
+ },
+ {
+  "code": "Fewer pads (plain pads, one Team Player)",
+  "effect": "Pads are packed in order: player n is the nth pad found",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "Empty sockets and mice store nothing ($31D2 table). Two pads: players 1-2; Team Player + pad: players 1-5. Players without a pad stand still",
+  "section": "input"
+ },
+ {
+  "code": "A on your own bomb (with Line Bomb)",
+  "effect": "Lays all remaining bombs in a line ahead",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "$20F6, needs item $14 (+$28). With 4 bombs, 3 were laid in the 3 free cells ahead (powers.lua)",
+  "section": "rules"
+ },
+ {
+  "code": "Walk into a bomb (with Kick)",
+  "effect": "Sends the bomb sliding",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "$168C sets the bomb to the sliding routine $22D2; seen moving one step before a brick stopped it (powers.lua)",
+  "section": "rules"
+ },
+ {
+  "code": "Item $13",
+  "effect": "Unused item: counted on pickup, no effect",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "Never placed ($3554 table); pickup adds 1 to player +$26 ($15DE), which nothing reads. Graphic: a bomb with a yellow lightning bolt (remote control? a guess). Forced onto the floor and walked over: only +$26 changed (items.lua)",
+  "section": "unused"
+ },
+ {
+  "code": "Fixed arena and hidden items",
+  "effect": "Same 16 cleared bricks and the same 65 hidden items on every boot",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "Constant seed $27DE ($434). 27 bomb up, 27 fire up, 7 kick, 4 line bomb (itemmap.lua); arenas pixel-equal with Start on different frames",
+  "section": "hidden"
+ },
+ {
+  "code": "HUD clock and win counters",
+  "effect": "Static: the clock stays 2:00, no round end or winner",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "Part of the arena picture, no code updates them; unchanged after 70 s, and with all 8 dead the empty arena stays (idle.lua). Reset to play again",
+  "section": "rules"
+ },
+ {
+  "code": "Sound driver call $D801C / effects 7-9",
+  "effect": "Never used by the game",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "static",
+  "note": "$D8140 plays song 3 for $180 frames then returns; effect table $DA1D2 entries 7-9 (samples 4-6) are never triggered (the game plays 1, 2, 4, 6). Not listened to",
+  "section": "unused"
+ },
+ {
+  "code": "Code at $212 and $280",
+  "effect": "Development leftovers, unreferenced",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "static",
+  "note": "$212 writes the interrupt addresses into the vector table ($78/$70, only possible from RAM, e.g. a dev kit); $280 blanks the display and executes ILLEGAL ($4AFC)",
+  "section": "debug"
+ },
+ {
+  "code": "More than 63 sprites",
+  "effect": "Game hangs",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "static",
+  "note": "$1F8A: bra.b $1F92 forever; 8 players plus bombs and fires normally stay below it",
+  "section": "debug"
+ },
+ {
+  "code": "CN4T-AADC",
+  "effect": "The 4 line bombs under bricks become the unused item $13 (Game Genie)",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "item table $3562: $14 -> $13. BizHawk client.addcheat: hidden items $13 x4 instead of $14 x4",
+  "section": "cheat"
+ },
+ {
+  "code": "PNLA-BE0E",
+  "effect": "Every player starts with kick (Game Genie)",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "$14C4 clr.w $24(a3) -> addq.w #1. Player 1 +$24 = 1 at the start",
+  "section": "cheat"
+ },
+ {
+  "code": "PNLA-BE0N",
+  "effect": "Every player starts with line bomb (Game Genie)",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "$14CC clr.w $28(a3) -> addq.w #1. Player 1 +$28 = 1",
+  "section": "cheat"
+ },
+ {
+  "code": "BALA-AAHC",
+  "effect": "Start with fire 8 (Game Genie)",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "$14E2 = 8 (was 2). Player 1 +$22 = 8",
+  "section": "cheat"
+ },
+ {
+  "code": "BALA-AAHJ",
+  "effect": "Start with 8 bombs (Game Genie)",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "emu",
+  "note": "$14E8 = 8 (was 1). Player 1 +$20 = 8",
+  "section": "cheat"
+ },
+ {
+  "code": "$30C (unreferenced)",
+  "effect": "CPU-time meter: backdrop red, 16 nops, back to black",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "static",
+  "note": "Nothing calls it (static map plus coverage of boot and 3000 frames of 8-pad play)",
+  "section": "debug"
+ },
+ {
+  "code": "$22A4 (unreferenced)",
+  "effect": "Unused sliding-bomb start that also resets the fuse to 150 and snaps to the cell grid",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "unchecked",
+  "verified": "static",
+  "note": "The kick code sets the slide routine $22D2 directly; nothing references $22A4",
+  "section": "unused"
+ }
+]

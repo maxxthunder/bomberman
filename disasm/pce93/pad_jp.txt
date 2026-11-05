@@ -1,0 +1,63 @@
+00:E459 run           LDA $37                  | CMP $39; CMP $3B; CMP $38; CMP $3A
+00:E45B run           CMP $39                  | CMP $3B; CMP $38; CMP $3A
+00:E45F run           CMP $3B                  | CMP $38; CMP $3A
+00:E463 run           CMP $38                  | CMP $3A
+00:E467 run           CMP $3A                  | 
+00:ED7B run           TAI $E098,$2032,$000F    | 
+00:EDA2 run  TABLE    LDA $32,X                | EOR $2F7E,X; AND #$F0
+00:EDB2 run           AND $32,X                | AND #$F0
+00:EDB6 run           LDA $37,X                | AND #$F0
+00:EDD0 run           LDA $32,X                | AND #$F0; AND #$0F
+00:EDE5 run           LDA $37,X                | AND #$0F; AND #$0F
+00:EDED run           LDA $37,X                | AND #$0F
+00:EE09 run           LDA $32,X                | AND #$0F
+00:EE20 run           LDA $37,X                | AND #$F0; AND #$F0
+01:D133 run           LDA $37                  | 
+01:D135 run           ORA $38                  | 
+01:D137 run           ORA $39                  | 
+01:D139 run           ORA $3A                  | 
+01:D13B run           ORA $3B                  | 
+02:8727 run           LDA $2032,Y              | AND #$0F
+02:872C run           LDA $2037,Y              | AND #$0F
+02:8753 DEAD          LDA $2032,Y              | AND #$F0; AND #$0F
+02:875F DEAD          LDA $2032,Y              | AND #$0F
+02:876C DEAD          LDA $2032,Y              | AND #$C0; AND #$30
+03:AF5B run           BBR3 $37,$AFBF           | 
+03:AF91 run           BBR3 $37,$AFBF           | 
+06:80CA run           BBR3 $37,$80F5           | 
+06:845C run           BBS3 $37,$8414           | 
+06:8475 run           BBS3 $37,$8414           | 
+06:8713 DEAD          BBS3 $37,$8781           | 
+06:8733 DEAD          BBS3 $37,$8781           | 
+06:8749 DEAD          BBS3 $37,$8784           | 
+06:8762 DEAD          BBS3 $37,$8781           | 
+06:8778 DEAD          BBS3 $37,$8784           | 
+06:9274 DEAD          BBR1 $37,$927F           | AND #$7F
+06:927F DEAD          TST #$09,$37             | AND #$7F
+06:9301 DEAD          BBS1 $37,$9311           | 
+06:936B DEAD          BBS1 $37,$9380           | AND #$7F
+06:936E DEAD          TST #$09,$37             | AND #$7F
+06:93D6 DEAD          BBS1 $37,$942E           | AND #$7F
+06:93D9 DEAD          TST #$09,$37             | AND #$7F
+06:9410 DEAD          BBS1 $37,$942E           | AND #$7F
+06:9413 DEAD          TST #$09,$37             | AND #$7F
+06:9459 DEAD          BBS1 $37,$9434           | AND #$7F
+06:945C DEAD          TST #$09,$37             | AND #$7F
+06:9511 DEAD          BBR0 $37,$9521           | 
+06:9521 DEAD          BBR1 $37,$9530           | 
+06:9530 DEAD          BBR3 $37,$954B           | 
+06:9545 DEAD          BBR3 $37,$954B           | 
+06:9898 run  COMBO    BBR0 $37,$98BC           | CMP #$1C; CMP #$1A; CMP #$1B
+06:98BC run           BBR1 $37,$98C5           | 
+06:98C5 run           BBR3 $37,$9920           | 
+06:9B83 run           BBR3 $37,$9BC1           | 
+06:9E8F run           TST #$09,$37             | 
+06:9F42 run           TST #$09,$37             | AND #$01
+07:A204 run           TST #$09,$37             | AND #$7F
+07:A242 DEAD          TST #$09,$37             | AND #$7F
+07:A707 run  COMBO    LDA $36                  | AND #$1F; CMP #$1F
+08:86A6 DEAD          BBS3 $37,$86CB           | 
+08:87F8 DEAD COMBO    BBR0 $37,$8815           | CMP #$0E; CMP #$0D
+08:8A33 run           BBR3 $37,$8A48           | 
+08:8C8A run           BBR0 $32,$8C99           | 
+08:8C8D run           BBR3 $37,$8C99           | 

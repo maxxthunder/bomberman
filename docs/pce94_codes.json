@@ -3,7 +3,8 @@
   "code": "2200",
   "effect": "Start at Area 1 stage 1",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -14,7 +15,8 @@
   "code": "6800",
   "effect": "Start at Area 1 stage 2",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -25,7 +27,8 @@
   "code": "5120",
   "effect": "Start at Area 1 stage 3",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -36,7 +39,8 @@
   "code": "7420",
   "effect": "Start at Area 1 boss (last cleared: stage 3)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -47,7 +51,8 @@
   "code": "4501",
   "effect": "Start at Area 2 stage 1",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -58,7 +63,8 @@
   "code": "8111",
   "effect": "Start at Area 2 stage 2",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -69,7 +75,8 @@
   "code": "7421",
   "effect": "Start at Area 2 stage 3",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -80,7 +87,8 @@
   "code": "1051",
   "effect": "Start at Area 2 stage 4",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -91,7 +99,8 @@
   "code": "3351",
   "effect": "Start at Area 2 boss (last cleared: stage 4)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -102,7 +111,8 @@
   "code": "4502",
   "effect": "Start at Area 3 stage 1",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -113,7 +123,8 @@
   "code": "8112",
   "effect": "Start at Area 3 stage 2",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -124,7 +135,8 @@
   "code": "7422",
   "effect": "Start at Area 3 stage 3",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -135,7 +147,8 @@
   "code": "1052",
   "effect": "Start at Area 3 stage 4",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -146,7 +159,8 @@
   "code": "3352",
   "effect": "Start at Area 3 boss (last cleared: stage 4)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -157,7 +171,8 @@
   "code": "6803",
   "effect": "Start at Area 4 stage 1",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -168,7 +183,8 @@
   "code": "0513",
   "effect": "Start at Area 4 stage 2",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -179,7 +195,8 @@
   "code": "9723",
   "effect": "Start at Area 4 stage 3",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -190,7 +207,8 @@
   "code": "3353",
   "effect": "Start at Area 4 stage 4",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -201,7 +219,8 @@
   "code": "5653",
   "effect": "Start at Area 4 boss (last cleared: stage 4)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -212,7 +231,8 @@
   "code": "8114",
   "effect": "Start at Area 5 stage 1",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -223,7 +243,8 @@
   "code": "2814",
   "effect": "Start at Area 5 stage 2",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -234,7 +255,8 @@
   "code": "1134",
   "effect": "Start at Area 5 stage 3",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -245,7 +267,8 @@
   "code": "5654",
   "effect": "Start at Area 5 stage 4",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -256,7 +279,8 @@
   "code": "7954",
   "effect": "Start at Area 5 boss (last cleared: stage 4)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -267,7 +291,8 @@
   "code": "0515",
   "effect": "Start at final area",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -278,7 +303,8 @@
   "code": "1510",
   "effect": "Start at Area 1, stages 2 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -289,7 +315,8 @@
   "code": "6720",
   "effect": "Start at Area 1, stages 3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -300,7 +327,8 @@
   "code": "0430",
   "effect": "Start at Area 1, stages 1,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -311,7 +339,8 @@
   "code": "2730",
   "effect": "Start at Area 1 boss (last cleared: stage 2)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -322,7 +351,8 @@
   "code": "5040",
   "effect": "Start at Area 1, stages 2,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -333,7 +363,8 @@
   "code": "7340",
   "effect": "Start at Area 1 boss (last cleared: stage 1)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -344,7 +375,8 @@
   "code": "3811",
   "effect": "Start at Area 2, stages 2 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -355,7 +387,8 @@
   "code": "8031",
   "effect": "Start at Area 2, stages 3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -366,7 +399,8 @@
   "code": "2731",
   "effect": "Start at Area 2, stages 1,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -377,7 +411,8 @@
   "code": "7341",
   "effect": "Start at Area 2, stages 2,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -388,7 +423,8 @@
   "code": "2651",
   "effect": "Start at Area 2, stages 4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -399,7 +435,8 @@
   "code": "6261",
   "effect": "Start at Area 2, stages 1,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -410,7 +447,8 @@
   "code": "1961",
   "effect": "Start at Area 2, stages 2,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -421,7 +459,8 @@
   "code": "5571",
   "effect": "Start at Area 2, stages 1,2,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -432,7 +471,8 @@
   "code": "7871",
   "effect": "Start at Area 2 boss (last cleared: stage 3)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -443,7 +483,8 @@
   "code": "6181",
   "effect": "Start at Area 2, stages 3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -454,7 +495,8 @@
   "code": "0881",
   "effect": "Start at Area 2, stages 1,3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -465,7 +507,8 @@
   "code": "2191",
   "effect": "Start at Area 2 boss (last cleared: stage 2)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -476,7 +519,8 @@
   "code": "5491",
   "effect": "Start at Area 2, stages 2,3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -487,7 +531,8 @@
   "code": "7791",
   "effect": "Start at Area 2 boss (last cleared: stage 1)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -498,7 +543,8 @@
   "code": "3812",
   "effect": "Start at Area 3, stages 2 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -509,7 +555,8 @@
   "code": "8032",
   "effect": "Start at Area 3, stages 3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -520,7 +567,8 @@
   "code": "2732",
   "effect": "Start at Area 3, stages 1,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -531,7 +579,8 @@
   "code": "7342",
   "effect": "Start at Area 3, stages 2,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -542,7 +591,8 @@
   "code": "2652",
   "effect": "Start at Area 3, stages 4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -553,7 +603,8 @@
   "code": "6262",
   "effect": "Start at Area 3, stages 1,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -564,7 +615,8 @@
   "code": "1962",
   "effect": "Start at Area 3, stages 2,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -575,7 +627,8 @@
   "code": "5572",
   "effect": "Start at Area 3, stages 1,2,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -586,7 +639,8 @@
   "code": "7872",
   "effect": "Start at Area 3 boss (last cleared: stage 3)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -597,7 +651,8 @@
   "code": "6182",
   "effect": "Start at Area 3, stages 3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -608,7 +663,8 @@
   "code": "0882",
   "effect": "Start at Area 3, stages 1,3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -619,7 +675,8 @@
   "code": "2192",
   "effect": "Start at Area 3 boss (last cleared: stage 2)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -630,7 +687,8 @@
   "code": "5492",
   "effect": "Start at Area 3, stages 2,3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -641,7 +699,8 @@
   "code": "7792",
   "effect": "Start at Area 3 boss (last cleared: stage 1)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -652,7 +711,8 @@
   "code": "5123",
   "effect": "Start at Area 4, stages 2 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -663,7 +723,8 @@
   "code": "0433",
   "effect": "Start at Area 4, stages 3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -674,7 +735,8 @@
   "code": "4043",
   "effect": "Start at Area 4, stages 1,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -685,7 +747,8 @@
   "code": "9643",
   "effect": "Start at Area 4, stages 2,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -696,7 +759,8 @@
   "code": "4953",
   "effect": "Start at Area 4, stages 4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -707,7 +771,8 @@
   "code": "8563",
   "effect": "Start at Area 4, stages 1,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -718,7 +783,8 @@
   "code": "3273",
   "effect": "Start at Area 4, stages 2,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -729,7 +795,8 @@
   "code": "7873",
   "effect": "Start at Area 4, stages 1,2,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -740,7 +807,8 @@
   "code": "9183",
   "effect": "Start at Area 4 boss (last cleared: stage 3)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -751,7 +819,8 @@
   "code": "8483",
   "effect": "Start at Area 4, stages 3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -762,7 +831,8 @@
   "code": "2193",
   "effect": "Start at Area 4, stages 1,3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -773,7 +843,8 @@
   "code": "4493",
   "effect": "Start at Area 4 boss (last cleared: stage 2)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -784,7 +855,8 @@
   "code": "7793",
   "effect": "Start at Area 4, stages 2,3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -795,7 +867,8 @@
   "code": "9004",
   "effect": "Start at Area 4 boss (last cleared: stage 1)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -806,7 +879,8 @@
   "code": "7424",
   "effect": "Start at Area 5, stages 2 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -817,7 +891,8 @@
   "code": "2734",
   "effect": "Start at Area 5, stages 3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -828,7 +903,8 @@
   "code": "6344",
   "effect": "Start at Area 5, stages 1,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -839,7 +915,8 @@
   "code": "1054",
   "effect": "Start at Area 5, stages 2,3 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -850,7 +927,8 @@
   "code": "6264",
   "effect": "Start at Area 5, stages 4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -861,7 +939,8 @@
   "code": "0964",
   "effect": "Start at Area 5, stages 1,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -872,7 +951,8 @@
   "code": "5574",
   "effect": "Start at Area 5, stages 2,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -883,7 +963,8 @@
   "code": "9184",
   "effect": "Start at Area 5, stages 1,2,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -894,7 +975,8 @@
   "code": "1584",
   "effect": "Start at Area 5 boss (last cleared: stage 3)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -905,7 +987,8 @@
   "code": "0884",
   "effect": "Start at Area 5, stages 3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -916,7 +999,8 @@
   "code": "4494",
   "effect": "Start at Area 5, stages 1,3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -927,7 +1011,8 @@
   "code": "6794",
   "effect": "Start at Area 5 boss (last cleared: stage 2)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -938,7 +1023,8 @@
   "code": "9005",
   "effect": "Start at Area 5, stages 2,3,4 cleared",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -949,7 +1035,8 @@
   "code": "1405",
   "effect": "Start at Area 5 boss (last cleared: stage 1)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -960,7 +1047,8 @@
   "code": "4128",
   "effect": "Start at Area 1 stage 1 (alias of 2200)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -971,7 +1059,8 @@
   "code": "8728",
   "effect": "Start at Area 1 stage 2 (alias of 6800)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -982,7 +1071,8 @@
   "code": "3438",
   "effect": "Start at Area 1, stages 2 cleared (alias of 1510)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -993,7 +1083,8 @@
   "code": "7048",
   "effect": "Start at Area 1 stage 3 (alias of 5120)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1004,7 +1095,8 @@
   "code": "9348",
   "effect": "Start at Area 1 boss (last cleared: stage 3) (alias of 7420)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1015,7 +1107,8 @@
   "code": "8648",
   "effect": "Start at Area 1, stages 3 cleared (alias of 6720)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1026,7 +1119,8 @@
   "code": "2358",
   "effect": "Start at Area 1, stages 1,3 cleared (alias of 0430)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1037,7 +1131,8 @@
   "code": "4658",
   "effect": "Start at Area 1 boss (last cleared: stage 2) (alias of 2730)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1048,7 +1143,8 @@
   "code": "7958",
   "effect": "Start at Area 1, stages 2,3 cleared (alias of 5040)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1059,7 +1155,8 @@
   "code": "9268",
   "effect": "Start at Area 1 boss (last cleared: stage 1) (alias of 7340)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1070,7 +1167,8 @@
   "code": "6429",
   "effect": "Start at Area 2 stage 1 (alias of 4501)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1081,7 +1179,8 @@
   "code": "0139",
   "effect": "Start at Area 2 stage 2 (alias of 8111)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1092,7 +1191,8 @@
   "code": "5739",
   "effect": "Start at Area 2, stages 2 cleared (alias of 3811)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1103,7 +1203,8 @@
   "code": "9349",
   "effect": "Start at Area 2 stage 3 (alias of 7421)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1114,7 +1215,8 @@
   "code": "0059",
   "effect": "Start at Area 2, stages 3 cleared (alias of 8031)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1125,7 +1227,8 @@
   "code": "4659",
   "effect": "Start at Area 2, stages 1,3 cleared (alias of 2731)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1136,7 +1239,8 @@
   "code": "9269",
   "effect": "Start at Area 2, stages 2,3 cleared (alias of 7341)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1147,7 +1251,8 @@
   "code": "3969",
   "effect": "Start at Area 2 stage 4 (alias of 1051)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1158,7 +1263,8 @@
   "code": "5279",
   "effect": "Start at Area 2 boss (last cleared: stage 4) (alias of 3351)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1169,7 +1275,8 @@
   "code": "4579",
   "effect": "Start at Area 2, stages 4 cleared (alias of 2651)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1180,7 +1287,8 @@
   "code": "8189",
   "effect": "Start at Area 2, stages 1,4 cleared (alias of 6261)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1191,7 +1299,8 @@
   "code": "3889",
   "effect": "Start at Area 2, stages 2,4 cleared (alias of 1961)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1202,7 +1311,8 @@
   "code": "7499",
   "effect": "Start at Area 2, stages 1,2,4 cleared (alias of 5571)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1213,7 +1323,8 @@
   "code": "9799",
   "effect": "Start at Area 2 boss (last cleared: stage 3) (alias of 7871)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1224,7 +1335,8 @@
   "code": "Title menu: Right, Left, Left+Down, Down, Down+Right, Down+Right+II (held combinations, each within 128 frames of the last)",
   "effect": "Sound Room (WELCOME TO SOUND ROOM): music and sound effect player",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -1235,7 +1347,8 @@
   "code": "ROM patch $3F5B: 89 85 67 A9 9D -> 29 85 67 A9 98, then the Sound Room code",
   "effect": "BOMBERMAN94 DEBUG VERSION menu: STAGE SELECT, BOSS BATTLE, IMPRESSIVE ENDING, SOUND MODE",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "known",
   "verified": "mesen",
@@ -1246,7 +1359,8 @@
   "code": "Restoration: hook the debug pause menu (debugpause.lua)",
   "effect": "Debug pause menu INV_MODE ON/OFF, MAP_CLEAR, ENEMY nn / N / X / Y editor",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1257,7 +1371,8 @@
   "code": "RAM $3709 = $02 during a stage",
   "effect": "Invincibility (INV_MODE)",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1285,5 +1400,53 @@
   "verified": "mesen",
   "note": "Demo $4011 calls the System Card version call $E05A and takes this path when X < 3: it reads data sectors 34-57 into VRAM (read on no other path) and loops, alternating 2 Japanese messages. Shown by forcing X = 0 at $4014 with the 3.0 card",
   "section": "demo"
+ },
+ {
+  "code": "1F1709:02",
+  "effect": "Invincible (INV_MODE): the death check $DA5A skips while $3709 is not 0",
+  "versions": [
+   "retail",
+   "world"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen raw code (RAM F8:1709 = $3709, the flag of the cut debug pause menu). Added with emu.addCheat: stood on its own bomb in area 1, lives stayed 3; with 1F1709:00 the same test took a life",
+  "section": "cheat"
+ },
+ {
+  "code": "003F5B:29 + 003F5F:98",
+  "effect": "The Sound Room code opens the BOMBERMAN94 DEBUG VERSION menu (stage select, boss room, impressive ending, sound mode)",
+  "versions": [
+   "retail",
+   "world"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "TCRF's ROM patch as two Mesen raw ROM codes (the far call in $DF54 to $12:$9829 instead of $9D89); menu shown after the title code",
+  "section": "cheat"
+ },
+ {
+  "code": "patches/pce94_debug_menu.ips",
+  "effect": "Debug Version menu through the Sound Room code",
+  "versions": [
+   "retail",
+   "world"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "file $3F5B: 89 85 67 A9 9D -> 29 85 67 A9 98 (TCRF); the patched file opened the menu",
+  "section": "patch"
+ },
+ {
+  "code": "patches/pce94_debug_pause.ips",
+  "effect": "Restored debug pause menu: INV_MODE, MAP_CLEAR, enemy editor",
+  "versions": [
+   "retail",
+   "world"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "stubs at $3F66 and $3F82 (free bank $01 space) and hooks at $3891 / $389C, as debugpause.lua; on the patched file pausing installs hook $DF66 and I sets $3709 = 2",
+  "section": "patch"
  }
 ]

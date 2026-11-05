@@ -2540,11 +2540,13 @@
   "effect": "Player 2 plays alone with the lives; Player 1 shows PRESS START",
   "versions": [
    "US",
-   "EU"
+   "EU",
+   "JP",
+   "beta"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$C5:5128 / $C5:7350 test controller 2's new presses ($0CFA & $1080 = A or Start) and give the lives to $0DBD instead of $0D7D. Checked in US on the title; JP/beta not run."
+  "note": "$C5:5128 / $C5:7350 test controller 2's new presses ($0CFA & $1080 = A or Start) and give the lives to $0DBD instead of $0D7D. Checked on the title in US, JP and the beta (tools/sb1/test_p2_start.lua)."
  },
  {
   "code": "Game over on a boss stage (x-8)",
@@ -3040,5 +3042,213 @@
   "verified": "mesen",
   "section": "unused",
   "note": "Never read (code, data or DMA) in a CDL sweep of every scene $00-$48 plus 13 stage runs; image docs/img/sb1/unused/C10E40_unread_sprite_tiles_new.png."
+ },
+ {
+  "code": "7E0D7660 7E0D7701",
+  "effect": "Player 1 invincible (the respawn-flash timer +$36 held at $0160)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Mesen cheat engine, unpatched US: bomb laid under player 1 after the start flash ran out; lives stayed 5 (without the codes: 5 -> 4). Enemies and blasts pass through him while he flashes. Player 2: 7E0DB660 7E0DB701 (not run)."
+ },
+ {
+  "code": "7E0D7D09",
+  "effect": "Player 1 always has 9 lives",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Lives byte player +$3D. Died to his own bomb: respawned, still 9."
+ },
+ {
+  "code": "7E0D7180",
+  "effect": "Maximum blast range (the debug menu's FIRE FULL)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Player +$31 bit 7; checked in RAM and on screen (blast across the row)."
+ },
+ {
+  "code": "7E0D7009",
+  "effect": "9 bombs at once",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Player +$30 (BOMB UP). RAM checked; more than one bomb laid."
+ },
+ {
+  "code": "7E0D7963",
+  "effect": "Power bomb, kick, bomb pass and wall pass",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Player +$39 = bits 0, 1, 5, 6 (POWER, KICK, BOMB PASS, WALL PASS of the debug menu). RAM checked only."
+ },
+ {
+  "code": "7E0D7301",
+  "effect": "Remote-control bombs",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Player +$33 (REMOCON). The bombs laid in the test stayed on the board 800 frames without going off."
+ },
+ {
+  "code": "7E0C9001",
+  "effect": "Small Bomberman in Normal Game (same as password 5656)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "$0C90; seen at 1-1. The effect is Known (5656)."
+ },
+ {
+  "code": "7E0C8F01",
+  "effect": "Next Normal Game starts with 9 lives (the prologue-X reward)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "$0C8F, read at $C5:5106; NORMAL GAME then showed 9 lives."
+ },
+ {
+  "code": "7E00A43C",
+  "effect": "Sound test",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "TCRF's code; $00A4 is the next-scene byte. Scene $3C shown from power-on."
+ },
+ {
+  "code": "7E00A4xx",
+  "effect": "Go to scene xx: $00-$2F = stage 1-1 ... 6-8, $30 ending, $33 prologue, $3D-$48 battle stages (list under Debug menu STAGE NO.)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "7E00A42F (6-8) checked: scene $2F loads. Turn it off once the scene has loaded, or every stage clear sends you back. Used from the title the game has no lives set: enable it after starting a game."
+ },
+ {
+  "code": "C30D63A2 C30D64AE",
+  "effect": "1-1 uses the unused arena map $C1:AEA2",
+  "versions": [
+   "US",
+   "EU",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built)."
+ },
+ {
+  "code": "$C1:A1DA, $C1:AEA2",
+  "effect": "Two arena maps no stage header points to: a ring (walls fill the middle) and a plain grid with its own floor",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "section": "unused",
+  "note": "TCRF's two unused level structures; addresses, format and renders new (tools/sb1/maps.py, docs/img/sb1/maps/). $C1:AEA2 loaded into 1-1 with a ROM code and played; $C1:A1DA leaves a black screen."
+ },
+ {
+  "code": "$C6:1093",
+  "effect": "Item handler for a cut 100-point item: byte copy of the kendama handler, skipped by the handler table $C6:0D26",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "static",
+  "section": "unused",
+  "note": "Never runs in any coverage log; nothing points at it."
+ },
+ {
+  "code": "$C4:4FCB",
+  "effect": "Old end-of-explosion routine (clears the fire bit along the four arms); JP still runs it, US/EU/beta never do",
+  "versions": [
+   "US",
+   "EU",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "unused",
+  "note": "JP copy at $C4:48A3 ran in the JP coverage log; the US copy never did."
+ },
+ {
+  "code": "Debug scene labels after DR WIN",
+  "effect": "A second set of labels 2-1 ... 2-8 sits after 'DR WIN' in the debug menu's scene list ($C6:0659)",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "static",
+  "section": "unused",
+  "note": "TCRF's dump stops at DR WIN / X1-X4."
  }
 ]

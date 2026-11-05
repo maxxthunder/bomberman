@@ -1,0 +1,2 @@
+$C012	never set	reads 1	0F:715A
+$C100	never set	reads 2	05:71A1, 05:7217*

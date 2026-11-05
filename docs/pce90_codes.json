@@ -4,11 +4,12 @@
   "effect": "Start at round 1 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "start of round 1 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "note": "start of round 1 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen, US and JP; $284A-$284E read back; Bomberman Collection: decodes the same (re-release check, docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -16,11 +17,12 @@
   "effect": "Start at round 2 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "start of round 2 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "note": "start of round 2 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -28,11 +30,12 @@
   "effect": "Start at round 3 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "start of round 3 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "note": "start of round 3 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -40,11 +43,12 @@
   "effect": "Start at round 4 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "start of round 4 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "note": "start of round 4 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -52,11 +56,12 @@
   "effect": "Start at round 5 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "start of round 5 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "note": "start of round 5 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -64,11 +69,12 @@
   "effect": "Start at round 6 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "start of round 6 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "note": "start of round 6 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -76,11 +82,12 @@
   "effect": "Start at round 7 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "start of round 7 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back",
+  "note": "start of round 7 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen (US); $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -88,11 +95,12 @@
   "effect": "Start at round 8 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "start of round 8 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "note": "start of round 8 with the starting power-ups (flip 0, shift 0); typed with the pad in Mesen, US and JP; $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -100,11 +108,12 @@
   "effect": "Start at round 8 stage 8 with 10 bombs, fire 15, roller skate",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "the last stage with every stored power-up maxed: fire 15 is past the in-game cap of 5 ($09:8784); typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "note": "the last stage with every stored power-up maxed: fire 15 is past the in-game cap of 5 ($09:8784); typed with the pad in Mesen, US and JP; $284A-$284E read back; Bomberman Collection: decodes the same (re-release check, docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -112,11 +121,12 @@
   "effect": "Start at round 1 stage 1 with 10 bombs, fire 15, roller skate",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "stage 1-1 with every stored power-up maxed (fire 15 is past the in-game cap of 5); typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "note": "stage 1-1 with every stored power-up maxed (fire 15 is past the in-game cap of 5); typed with the pad in Mesen, US and JP; $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -124,11 +134,12 @@
   "effect": "Start at round 3 stage 5 with 4 bombs, fire 2, roller skate",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "flip 5, shift 2: a code the game's own encoder can show; typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "note": "flip 5, shift 2: a code the game's own encoder can show; typed with the pad in Mesen, US and JP; $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -136,11 +147,12 @@
   "effect": "Start at round 1 stage 1 with 1 bomb, fire 1",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "flip 3, shift 5: accepted, but the encoder only uses shifts 0-2 ($CB15), so the game never shows it; typed with the pad in Mesen (US); $284A-$284E read back",
+  "note": "flip 3, shift 5: accepted, but the encoder only uses shifts 0-2 ($CB15), so the game never shows it; typed with the pad in Mesen (US); $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -148,11 +160,12 @@
   "effect": "Start at round 1 stage 3 with 3 bombs, fire 14",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "shift 7, the largest the decoder takes (byte 0 bits 0-2); never shown by the game; typed with the pad in Mesen, US and JP; $284A-$284E read back",
+  "note": "shift 7, the largest the decoder takes (byte 0 bits 0-2); never shown by the game; typed with the pad in Mesen, US and JP; $284A-$284E read back; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -160,11 +173,12 @@
   "effect": "Rejected (PASSWORD ERROR)",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "MUVWLNPC with the last letter changed: the bit-count check ($CCCB) fails; typed in Mesen US and JP, $3465 = 2",
+  "note": "MUVWLNPC with the last letter changed: the bit-count check ($CCCB) fails; typed in Mesen US and JP, $3465 = 2; Bomberman Collection: same decoder as US retail (docs/pcevc.md)",
   "section": "Passwords"
  },
  {
@@ -172,11 +186,12 @@
   "effect": "Sound test (after the next valid password)",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "TCRF. $C959 compares the 8 letters with $C96F; a match sets $3451 = $FF and then runs the normal decoder, which rejects it (O, M, S, U, N, D are not in their rows). The next valid code, any one, sees $3451 = $FF at $C76B and jumps to the sound test $C59E instead of starting the game. Typed BOMSOUND then MUVWLNPC in Mesen, US and JP: SOUND-00 screen",
+  "note": "TCRF. $C959 compares the 8 letters with $C96F; a match sets $3451 = $FF and then runs the normal decoder, which rejects it (O, M, S, U, N, D are not in their rows). The next valid code, any one, sees $3451 = $FF at $C76B and jumps to the sound test $C59E instead of starting the game. Typed BOMSOUND then MUVWLNPC in Mesen, US and JP: SOUND-00 screen; Bomberman Collection: opens the sound test too (docs/pcevc.md)",
   "section": "Hidden screens"
  },
  {
@@ -184,11 +199,110 @@
   "effect": "Special Select Room: scene, stage, bombs 1-10, fire 1-15 and four power-up toggles",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "TCRF says 300 or more points and a reset. $01:A001 (called at $00:EAEC after the intro) needs: Down+Run+Select+II+I all held ($2200 & $4F = $4F), $10 != 0 (the last attract demo ran to its end, $0B:CDBE; Run during it clears $10) and $2001 = 3, the hundreds digit of the high score, exactly. In Mesen (US): 300 and 1300 open it, 200 and 400 do not, a demo cut short with Run does not; no reset is needed (high score set at power-on works); JP same code and result for 300/400",
+  "note": "TCRF says 300 or more points and a reset. $01:A001 (called at $00:EAEC after the intro) needs: Down+Run+Select+II+I all held ($2200 & $4F = $4F), $10 != 0 (the last attract demo ran to its end, $0B:CDBE; Run during it clears $10) and $2001 = 3, the hundreds digit of the high score, exactly. In Mesen (US): 300 and 1300 open it, 200 and 400 do not, a demo cut short with Run does not; no reset is needed (high score set at power-on works); JP same code and result for 300/400; Bomberman Collection: opens the same way (docs/pcevc.md)",
   "section": "Hidden screens"
+ },
+ {
+  "code": "012AB3:60 + 014485:60",
+  "effect": "Invincible: fire and enemies never kill (US, Bomberman Collection)",
+  "versions": [
+   "US",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen pceRaw cheats on ROM bytes (physical address = file offset): RTS over the fire check $09:8AB3 and the enemy-contact check $0A:A485. A random-input bot over 6,000 frames: 0 deaths with the cheat, 6 deaths and a game over without; same on the Collection. The timer running out still kills.",
+  "section": "cheat"
+ },
+ {
+  "code": "012AD6:60 + 0144A8:60",
+  "effect": "Invincible: fire and enemies never kill (JP)",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "JP addresses of the same two checks ($09:8AD6, $0A:A4A8); 0 deaths over 6,000 frames of random play",
+  "section": "cheat"
+ },
+ {
+  "code": "1F0438:02",
+  "effect": "Infinite lives",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "RAM $2438 (lives, bank F8 offset $0438; Mesen writes RAM as 1Fxxxx). Read-intercept cheat: DEC $2438 / BMI at $00:EC7F never goes negative. US 8 deaths, JP 9 deaths, no game over (Collection: same shared code, not run)",
+  "section": "cheat"
+ },
+ {
+  "code": "00200B:80 + 00200C:0B",
+  "effect": "Special Select Room opens after every 1P START intro, no buttons, no high score",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$01:A00B BNE $A000 -> BRA $A018 skips the held-button, demo and high-score tests. Run from the title with no buttons held: the room code $01:A063 ran (US, JP, Collection). Same bytes as patches/pce90_select_room.ips",
+  "section": "cheat"
+ },
+ {
+  "code": "1F1451:FF",
+  "effect": "Sound test after any valid password (no BOMSOUND needed)",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "RAM $3451, the BOMSOUND flag, read as $FF: MUVWLNPC went straight to SOUND-00 (US, JP)",
+  "section": "cheat"
+ },
+ {
+  "code": "patches/pce90_select_room.ips",
+  "effect": "Special Select Room opens after every 1P START intro",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $200B: D0 F3 -> 80 0B (the bytes are the same in US, JP and Bomberman Collection); verified with the same bytes as a Mesen cheat on all three",
+  "section": "patch"
+ },
+ {
+  "code": "patches/pce90_invincible_us.ips",
+  "effect": "US / Bomberman Collection: fire and enemies never kill",
+  "versions": [
+   "US",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $12AB3: AD -> 60 and $14485: AD -> 60 (RTS); verified with the same bytes as Mesen cheats on US and the Collection",
+  "section": "patch"
+ },
+ {
+  "code": "patches/pce90_invincible_jp.ips",
+  "effect": "JP: fire and enemies never kill",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $12AD6: AD -> 60 and $144A8: AD -> 60 (RTS); verified with the same bytes as Mesen cheats",
+  "section": "patch"
  }
 ]

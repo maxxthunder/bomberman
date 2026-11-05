@@ -4,7 +4,8 @@
   "effect": "Battle Mode: players start closer to the centre of the stage",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -15,7 +16,8 @@
   "effect": "Battle Mode: alternate hard-block and item layout",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -26,7 +28,8 @@
   "effect": "Battle Mode: start positions moved inward with less open space",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "fixed",
   "verified": "mesen",
@@ -37,7 +40,8 @@
   "effect": "Battle Mode: adds SUPER (スーパー) to COM LEVEL; stays unlocked",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -48,7 +52,8 @@
   "effect": "Battle Mode: every soft block holds a power-up",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -59,18 +64,20 @@
   "effect": "Normal Mode: start with 8 bombs, 8 fire, top speed, remote control, kick and power glove",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Option > PASSWORD (4 digits). Handler $C5:6928, bit 3 of $6274; the stage script reads it ($C2:1ACB) and gives the full-power start ($C4:2926): $17CA=8 bombs, $4EBD=8 fire, speed $15EA:$15D2=$0200 (normal $00E0), and $4ED5=$07 = remote control (bit 0, bomb fuse $0E40=$FF, $C4:3059), kick (bit 1) and power glove (bit 2). Round 1 read $4ED5 as speed; it is the item bitfield. In play a 2657 bomb never went off on its own (900 frames); kick and glove were not exercised in play."
+  "note": "Option > PASSWORD (4 digits). Handler $C5:6928, bit 3 of $6274; the stage script reads it ($C2:1ACB) and gives the full-power start ($C4:2926): $17CA=8 bombs, $4EBD=8 fire, speed $15EA:$15D2=$0200 (normal $00E0), and $4ED5=$07 = remote control (bit 0, bomb fuse $0E40=$FF, $C4:3059), kick (bit 1) and power glove (bit 2). Round 1 read $4ED5 as speed; it is the item bitfield. In play (A drops a bomb) the fuse $0E40 stayed $FF for 300 frames and B set it off; kick and glove were not tried in play."
  },
  {
   "code": "5656",
   "effect": "Normal Mode: 9 lives and an 8:00 stage timer",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -81,7 +88,8 @@
   "effect": "Boss rush: the Normal Mode bosses one after another",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -92,7 +100,8 @@
   "effect": "Watch the good ending",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -103,7 +112,8 @@
   "effect": "Watch the bad ending",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -131,10 +141,11 @@
  },
  {
   "code": "D24GJN",
-  "effect": "Iron Mask Bomber, white palette, 8 bombs, fire 8, speed 8, Heart, Bomb pass, Soft-block pass, Power glove, Punch",
+  "effect": "Iron Mask Bomber, white palette, 8 bombs, fire 8, speed 8, Remote control, Bomb pass, Soft-block pass, Power glove, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -145,7 +156,8 @@
   "effect": "Iron Mask Bomber, yellow palette, 8 bombs, fire 8, speed 8, Pierce bomb, Bomb pass, Soft-block pass, Power glove, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -156,7 +168,8 @@
   "effect": "Iron Mask Bomber, red palette, 8 bombs, fire 8, speed 8, Land mine, Bomb pass, Soft-block pass, Power glove, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -164,10 +177,11 @@
  },
  {
   "code": "W24G0N",
-  "effect": "Iron Mask Bomber, black palette, 8 bombs, fire 8, speed 8, Heart, Soft-block pass, Power glove, Kick, Punch",
+  "effect": "Iron Mask Bomber, black palette, 8 bombs, fire 8, speed 8, Remote control, Soft-block pass, Power glove, Kick, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -175,10 +189,11 @@
  },
  {
   "code": "W24LKN",
-  "effect": "Iron Mask Bomber, black palette, 8 bombs, fire 8, speed 8, Remote bomb, Bomb pass, Soft-block pass, Power glove, Punch",
+  "effect": "Iron Mask Bomber, black palette, 8 bombs, fire 8, speed 8, Homing bomb, Bomb pass, Soft-block pass, Power glove, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -189,7 +204,8 @@
   "effect": "Iron Mask Bomber, yellow palette, 8 bombs, fire 8, speed 8, Pierce bomb, Soft-block pass, Power glove, Kick, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -200,7 +216,8 @@
   "effect": "Iron Mask Bomber, boss (unused) palette, 8 bombs, fire 8, speed 8, Land mine, Soft-block pass, Power glove, Kick, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -208,10 +225,11 @@
  },
  {
   "code": "D24L1A",
-  "effect": "Iron Mask Bomber, white palette, 8 bombs, fire 8, speed 8, Remote bomb, Soft-block pass, Power glove, Kick, Punch",
+  "effect": "Iron Mask Bomber, white palette, 8 bombs, fire 8, speed 8, Homing bomb, Soft-block pass, Power glove, Kick, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -222,7 +240,8 @@
   "effect": "Subordinate Bomber as a boss: Subordinate Bomber, boss (unused) palette, 1 bombs, fire 8, speed 1",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -233,7 +252,8 @@
   "effect": "Plunder Bomber as a boss: Plunder Bomber, boss (unused) palette, 2 bombs, fire 3, speed 6, Bomb pass, Soft-block pass",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -241,10 +261,11 @@
  },
  {
   "code": "QM3PDF",
-  "effect": "Gary Bomber as a boss: Gary Bomber, boss (unused) palette, 3 bombs, fire 3, speed 2, Remote bomb, Kick",
+  "effect": "Gary Bomber as a boss: Gary Bomber, boss (unused) palette, 3 bombs, fire 3, speed 2, Homing bomb, Kick",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -255,7 +276,8 @@
   "effect": "Dave Bomber as a boss: Dave Bomber, boss (unused) palette, 3 bombs, fire 5, speed 1, Kick, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -266,7 +288,8 @@
   "effect": "Bomber Woof as a boss: Bomber Woof, boss (unused) palette, 5 bombs, fire 3, speed 7, Land mine",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -277,7 +300,8 @@
   "effect": "Baron Bombano as a boss: Baron Bombano, boss (unused) palette, 3 bombs, fire 6, speed 4, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -288,7 +312,8 @@
   "effect": "Iron Mask Bomber as a boss: Iron Mask Bomber, boss (unused) palette, 3 bombs, fire 6, speed 4, Pierce bomb, Kick",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -299,7 +324,8 @@
   "effect": "Pirate Bomber as a boss: Pirate Bomber, boss (unused) palette, 4 bombs, fire 5, speed 2, Power glove, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -307,10 +333,11 @@
  },
  {
   "code": "U04GJL",
-  "effect": "Gold Bomberman look-alike: Bomberman, yellow palette, 8 bombs, fire 8, speed 8, Heart, Bomb pass, Soft-block pass, Power glove, Punch",
+  "effect": "Gold Bomberman look-alike: Bomberman, yellow palette, 8 bombs, fire 8, speed 8, Remote control, Bomb pass, Soft-block pass, Power glove, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "fixed",
   "verified": "mesen",
@@ -321,7 +348,8 @@
   "effect": "Muscle Bomber as a boss: Muscle Bomber, boss (unused) palette, 2 bombs, fire 4, speed 2, Power glove, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "fixed",
   "verified": "mesen",
@@ -329,31 +357,34 @@
  },
  {
   "code": "23D830",
-  "effect": "Subordinate Bomber, red palette, 8 bombs, fire 17, speed 8, Heart, Pierce bomb, Land mine, Remote bomb, Bomb pass, Soft-block pass, Power glove, Kick, Punch",
+  "effect": "Subordinate Bomber, red palette, 8 bombs, fire 17, speed 8, Remote control, Pierce bomb, Land mine, Homing bomb, Bomb pass, Soft-block pass, Power glove, Kick, Punch",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. Fire 15 is past the editor's range (fire 8 max), so the fire number draws as junk."
+  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. Fire 15 is past the editor's range (fire 8 max), so the fire number draws as junk. Winning a Battle match as him freezes the VICTORY screen: the victory voice table at $C6:74D1 has 9 entries, so body 9 plays junk voice $EF and the sound CPU stops answering (Mesen)."
  },
  {
   "code": "2YLPVD",
   "effect": "Subordinate Bomber, red palette, 1 bombs, fire 8, speed 1",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. From TCRF."
+  "note": "Battle > Config Battle Mode > コンフィグさくせい > パスワードロード. From TCRF. Winning a Battle match as him freezes the VICTORY screen: the victory voice table at $C6:74D1 has 9 entries, so body 9 plays junk voice $EF and the sound CPU stops answering (Mesen)."
  },
  {
   "code": "Super Joycard turbo X on the title screen",
   "effect": "Unlock battle stages 11-13 (kept in SRAM $1EA)",
   "versions": [
-   "retail"
+   "retail",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -364,27 +395,31 @@
   "effect": "Gold Bomberman joins the Battle Mode character select (replacing the random X)",
   "versions": [
    "retail",
-   "caravan"
+   "caravan",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
   "note": "The end-of-game certificate script ($C6:E07D) unlocks him if the clear rate in $103C is 100: script native 67 ($C0:4880) writes 1 to SRAM $1E9. Native 68 ($C0:4893) reads it at character select. Tested both halves: forcing 100 wrote the flag, and setting the flag showed him."
  },
  {
-  "code": "PAR 7E6253:01",
+  "code": "7E6253:01",
   "effect": "Invincibility (the hit timer never runs out)",
   "versions": [
-   "retail"
+   "retail",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The flag that the orphaned password handler $C5:6951 would have set; $C4:2D2B reads it. Bomberman survived his own blast in Normal Mode with it held at 1. Caravan address is 7E6271 (not tested)."
+  "note": "The flag that the orphaned password handler $C5:6951 would have set; $C4:2D2B reads it. Bomberman survived his own blast in Normal Mode with it held at 1. Caravan address is 7E6271 (not tested). Round 3: run through Mesen's PAR cheat engine on retail and English: the player survives his own bomb at the start of 1-1 (without it he dies). Caravan: 7E6271:01.",
+  "section": "cheat"
  },
  {
   "code": "PAR 7E62DE:09 / 7E62DF:07",
   "effect": "Config Battle editor: body 9 (Subordinate Bomber) / color 7 (boss palette)",
   "versions": [
-   "retail"
+   "retail",
+   "en"
   ],
   "status": "fixed",
   "verified": "static",
@@ -394,43 +429,109 @@
   "code": "0172",
   "effect": "Debug room $AC (battle test): Zone 3 mine layout, players only, no music",
   "versions": [
-   "retail"
+   "retail",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Needs patches/sb5_debug_rooms.ips (tools/sb5/make_ips.py). Typed with real presses on the patched ROM. The patch copies the option password table to $C5:6FA0 and adds 0172/0173/0174.",
+  "note": "Needs patches/sb5_debug_rooms.ips (tools/sb5/make_ips.py). Typed with real presses on the patched ROM. The patch copies the option password table to $C5:6FA0 and adds 0172/0173/0174. Scene $AC runs $C7:170D.",
   "section": "patch"
  },
  {
   "code": "0173",
   "effect": "Debug room $AD (level test): battle stage 1 layout, two enemies, soft blocks with items",
   "versions": [
-   "retail"
+   "retail",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Needs patches/sb5_debug_rooms.ips. Scene $AD runs the room script at $C6:03B8.",
+  "note": "Needs patches/sb5_debug_rooms.ips. Scene $AD runs the room script at $C6:0309 (scene n uses entry n-1 of the table at $C6:0000).",
   "section": "patch"
  },
  {
   "code": "0174",
   "effect": "Debug room $AE (enemy test): one enemy, broken HUD",
   "versions": [
-   "retail"
+   "retail",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Needs patches/sb5_debug_rooms.ips. Scene $AE has no script (its entry in the scene table at $C6:0000 is $FFFFFF), which is why the HUD is broken and the room later goes black.",
+  "note": "Needs patches/sb5_debug_rooms.ips. Scene $AE runs $C6:03B8, the last entry of the scene table; the HUD is broken and the screen goes black about 10 s in.",
   "section": "patch"
  },
  {
-  "code": "7E6248:AC",
-  "effect": "PAR: the next valid option password goes to debug room $AC ($AD, $AE likewise)",
+  "code": "7E6248:xx",
+  "effect": "PAR room/scene select: the next valid option password goes to scene xx (AC, AD, AE = debug rooms; 0D-66 stages, 67-70 bosses, 74-A7 battle stages)",
   "versions": [
-   "retail"
+   "retail",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$6248 is the scene run after the password screen (it becomes $1031); holding it overrides the code's own scene. Verified on retail by writing $6248 after the 4622 handler ran (Caravan keeps $6248 at the same address but was not tried). TCRF's 7E1038:XX was not tried; on the character-password screen $1038 is the cursor X, so it is a shared work byte."
+  "note": "$6248 is the scene run after the password screen (it becomes $1031). Round 3: verified with Mesen's cheat engine on retail and English with AC, AD and 2B after 4622. TCRF's 7E1038:XX is a shared work byte.",
+  "section": "cheat"
+ },
+ {
+  "code": "7E6271:01",
+  "effect": "Invincibility (Caravan address of 7E6253)",
+  "versions": [
+   "caravan"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Mesen PAR cheat engine: the player survives his own bomb at the start of 1-1. Caravan WRAM from $6249 up is $1E higher."
+ },
+ {
+  "code": "7E0E23:01",
+  "effect": "Invincibility and the stage clock stops",
+  "versions": [
+   "retail",
+   "caravan",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "$0E23 is tested at $C4:2D31 (hit check, right after $6253) and $C5:0460 (skips the clock tick $0E1C-$0E1E); no code ever sets it (only STZ at $C5:0404). Verified with Mesen's cheat engine on all three ROMs: survives own bomb, clock frozen."
+ },
+ {
+  "code": "3061E9:01",
+  "effect": "Gold Bomberman on the Battle character select without a 100% clear",
+  "versions": [
+   "retail",
+   "caravan",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Patches the read of SRAM $1E9 (native 68, $C0:4893 LDA $3061E9; Caravan $C0:4899). Verified on retail with Mesen's cheat engine (Gold in the bottom-right slot, SRAM itself stays 0); Caravan and English use the same instruction but were not run."
+ },
+ {
+  "code": "7E6245:0D",
+  "effect": "Battle stages 11-13 without the Super Joycard",
+  "versions": [
+   "retail",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "$6245 = number of battle stages (10 or 13). Verified with Mesen's cheat engine on retail and English ($6245=13 at the Battle menu). Caravan has them unlocked already. TCRF's 7E625A:0B-0D picks the stage instead."
+ },
+ {
+  "code": "C56983:01",
+  "effect": "3879 boss rush starts fully powered (8 bombs, 8 fire, top speed, remote, kick, glove): 0719 on retail",
+  "versions": [
+   "retail",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "ROM code: the operand of LDA #$00 / STA $6254 in the 3879 handler ($C5:6982). A RAM code is too late because 3879 builds the players in the same frame. Verified with Mesen's cheat engine: $17CA=8, $4EBD=8, $15EA=2, $4ED5=7 in the boss arena (without it 2/1/0/0)."
  }
 ]

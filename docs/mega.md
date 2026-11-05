@@ -223,6 +223,126 @@ order as N) and `6429` `0139` `5739` `9349` `0059` `4659` `9269` `3969` `5279` `
   ![](img/mega/unused_frames_white.png) (`$2F` `$30` `$31` `$32` `$33` `$3D`-`$42`). What they were meant for is a
   guess; the other 8 characters' sets (`$B5D4`-`$B7B0`) have the same layout.
 
+## Dead code
+
+Tools: `tools/mega/callgraph.py` (static code map: recursive descent from the vectors, immediate and absolute
+operands that point at clean 68000 code, long-pointer tables, plus "gap runs" = stretches the descent never reaches
+that still decode as clean code ending in `rts`/`bra`/`jmp`; it can be re-seeded with addresses that ran),
+`tools/mega/cover.lua` (routine coverage in BizHawk: one exec callback per candidate, dropped once it runs) and
+`tools/mega/dead.py` (the join). Listing of every never-run candidate with its class, references and first
+instructions: `disasm/mega/deadcode.txt` (USA addresses, Europe ones next to them; Europe is the same code shifted,
+see [Regions](#regions), so its dead code is the same list).
+
+The coverage runs (`tour2.lua`, `tour.lua`, `rooms.lua`) went through: power-on, the logos, the title and its
+attract demo; Normal Game from the title, pause, game over and the continue screen; the password screen (typing, a
+wrong code, B); a Battle Game on all 10 stages (4 combatants, single and tag, the time-up / draw ending on two of
+them); every area from its stage-1 password with random input (areas 1-2: every stage cleared, the boss, the
+area-complete sequence and the next planet); every room of the 15 multi-room stages (all 43 rooms; `rooms.lua`
+moves on through the game's own room change `$9916`); the final area and the ending.
+
+| | count |
+|---|---|
+| routine-level candidates (1,155 entries that are not plain branch targets, plus 536 gap runs) | 1,691 |
+| ran in the tours | 814 |
+| never ran, referenced by code (calls, `move.l #routine` task installs, jump tables): situations not covered | 463 |
+| never ran, only referenced from other never-run code | 64 |
+| never ran, gap run pointed at by a long in data (object tables of enemies and bosses not met) | 116 |
+| never ran, inside a covered routine (a branch not taken) | 48 |
+| never ran, the CPU exception handlers (`$200`-`$25A`, each loops forever: crash only) | 11 |
+| gap runs that are really data (tables that decode as code) | 127 |
+| **no reference anywhere** | 48 |
+
+Not covered by the tours: a Team Player (more than 2 pads), the bosses of areas 3-5 and the final area fought to
+the end, losing a life in the final area, battle wins and the winner screens (only draws), and most power-ups.
+
+★ **New**, routines nothing references (read one by one; about half of the 48 start inside a data table, the rest
+are real code):
+
+- `$160A`: map cell under the camera (`$9EFA`/`$9EFE` ÷ 16 → `$9F08`/`$9F09`), a third sibling of `$15E6`
+  (an object's cell) and `$15F8` (own cell), which are both used. Unreferenced helper.
+- `$3EC4`: looks up to 3 cells ahead in the facing direction (`+$13`, step table `$3F0C`) for cell type 1 and
+  returns carry; `$3F14` does the same for 1 cell. Unreferenced player helper.
+- `$A87A`: starts a palette task (`$A8C2`, 8 steps through `$A904`/`$94B2`) with a given speed and table.
+  Unreferenced (the game's fades use other entries).
+- `$10B5C`: a battle-player loop clearing bits `$50` of `+$2D`, twin of the used `$10B74` (`$F0`) and `$10B8C` (all
+  bits). Unreferenced variant.
+- `$112E0`: a battle-menu sprite setup (`$109FA`, `$10E64`, then sprite `+8`/`+9`/`+$B`). Unreferenced.
+- `$8090`, `$8138`, `$7FC2` are **not** dead: they are the Team Player reader (`$7ED4` in the device table at
+  `$7EC8`, entered with `jsr $7EC8(pc,d0.w)`, so the static pass could not follow it) and its sub-device paths; the
+  game uses Sega's usual peripheral-ID scheme (`$7EE8`) and only plain pads were plugged in.
+- No debug menu, test mode or developer leftover is among them.
+
+## Input codes
+
+`tools/mega/padscan.py` lists every instruction that touches the pad RAM (`$AD02`-`$AD39` and the raw device
+records `$800A`-`$805A`) with what follows it: `disasm/mega/padreads.txt`, 99 sites. The only compares are the
+device-type checks of the reader (`cmpi.w #2`, `$8114`) and the title timeout (`cmpi.w #$F0, $AED0` next to a
+Start test, `$92BE`); everything else tests single bits of the normal buttons. In the whole program there are 12
+compares against an indexed or post-incremented table operand, and none is within 40 instructions of a pad read.
+So the earlier result stands, now checked systematically: **no hidden button code** (known: the GameFAQs sound test
+is the Bomberman '94 one, see above).
+
+## Unset flags
+
+`tools/mega/flags.py` takes every RAM byte the code tests or reads (`tst`, `btst`, `cmp`, any source operand, over
+the 23,172 instructions of the code map re-seeded with the coverage) and looks for any write to it by address,
+widened by the operand size; `lea`/`move.l #` bases count as records written through a pointer.
+
+- 490 addresses are read, 48 never written by address. 45 are fields of pointer-written records (player records
+  `$A432` + 48 n, boss and object records from `$A572`, task records, the VDP register copies `$F004`-`$F028`, the
+  device records `$800A`, the password digits `$9564`), and `$8870` is a misdecoded table.
+- ★ **New:** `$AABC` bit 0 is tested at `$6050` and nothing writes `$AABC`. In an object routine (`$5FC4`, its
+  moving branch `$601E`) it switches the sprite depth from the fixed `$F8` to one computed from the Y position (the
+  formula `$C7C0` always uses). Never set, so that object always draws at fixed depth. The branch ran once in a battle
+  during the coverage tour and could not be brought up again on purpose, so the effect of setting it was **not**
+  seen on screen.
+- ★ **New:** `$ADD8`/`$ADD9` are only read (`$197DC`, added and range-checked), never written; that routine never ran
+  in the tours, so what it belongs to is not known.
+- No dormant debug or cheat flag, so still no IPS patch.
+
+## Text
+
+- ★ **New:** the only encoded text is the ending's staff roll at `$16A8C` (Europe `$16A86`), read by `$16880` /
+  `$1691E`: blocks of `flags, wait, show`, then `01 row col` (cursor), `#` + hex digit (palette), `20` blank and
+  `A`-`Z`, each letter 2 tiles (`(c - $41) * 2`, + `$80` for the other font) on plane A at `$E000`; `80 n` waits,
+  `81` ends. `tools/mega/text.py` decodes it: `disasm/mega/text.txt`, 21 blocks. The reader has no branches, so
+  every block is shown: **no unused text**. The spellings are the ROM's ("PROGRAMERS", "KESUKE MATSUURA").
+- Everything else on screen (menus, planet names, PASSWORD, PAUSE, TIME UP, DRAW GAME, the AREA/STAGE signs) is
+  graphics: 10 of those words searched in ASCII and in 8- and 16-bit relative encodings were not found. Whether the
+  (compressed) graphics hold unused words was not checked.
+
+## Maps
+
+★ **New:** the stage format, decoded by `tools/mega/maps.py`.
+
+- Table `$EB556` (shared by both versions): 59 entries of 6 bytes = data pointer, height, width (cells). `$953F`
+  picks the entry: stage rooms = `$998C[$9984[area] + stage] + room` (`$9966`, room `$953E`), hubs = area + `$2B`
+  (`$BE9E`), battle stages = `$31` + stage (`$112BC`), and `$30` for the scene at `$127C2`.
+- Data: LZSS (`$CF4`/`$D4C`), bits MSB first; `1` + 8 bits = literal, `0` + 8-bit window position + 4-bit length (+2)
+  = copy; 256-byte window from `$EF`. One byte per cell into `$955C`: the index of a 2x2-tile cell in the tileset's
+  cell table (`$9E6C`, 4 name-table words per cell). The decoder output matches RAM (battle stage 1).
+- `$00`-`$2A` are the 43 rooms of the 22 stages (16x13, 32x13 or 16x26 cells), `$2B`-`$2F` the area hubs, `$31`-`$3A`
+  the 10 battle stages. All were seen in play.
+- `$30` (16x26, lower half filler) is the only one not seen: `$127C2` loads it with a tileset of its own (`$C`) when
+  a life is lost in the final area (`$3260`), but in play the room restarted straight away. Drawn as a schematic.
+
+Every map, drawn with the game's own tiles from VRAM dumps of each tileset (`mapdump.lua`), file name = map id,
+title = id, data address, size and use: `img/mega/maps/map_XX.png`; all on one sheet: ![](img/mega/maps_all.png)
+
+## Cheat codes
+
+★ **New** (neither prior-art page has any). Game Genie codes made with `tools/mega/gg.py` and checked through
+BizHawk's own cheat system (`client.addcheat`, `cheats.lua`), with and without the code, in both versions:
+
+| Code (USA) | Code (Europe) | Effect | Patch | Checked |
+|---|---|---|---|---|
+| `HA3A-AYWC` | same | Infinite lives | `$3242` `subq.b #1,$9543` → `tst.b` | own bombs, 2400 frames: 3 lives lost without, none with |
+| `AJ2A-AAB2` | same | Invincible | `$3038`: the hit check `$3032` always says "not hit" | own bombs, 1200 frames: 2 lives lost without, none with. Enemies not tried; the check is shared, so in battle it should cover every player (not tried) |
+| `HC0A-AYZ0` | `HC0A-AYZT` | Clock stops | `$ACB6` (Europe `$ACB0`) frame counter `subq` → `tst` | 600 frames: 3:57 stayed 3:57 |
+| `HCXT-DEV6` `DJV6` `DNV6` `DTV6` `DYV6` | `HCXT-DEV0` `DJV0` `DNV0` `DTV0` `DYV0` | Normal Game starts at area 2, 3, 4, 5, 6 | `$1A73C` (Europe `$1A736`) `clr.b $953B` → `addq.b #n,$953B` | area 3 code: planet map and hub on area 3 (`$953A` = 2, map `$0B`); the other four are the same patch with another n. Use from power-on (it adds to the old value) |
+
+Battle Game has nothing locked (see above), so there is no unlock code.
+
 ## Regions
 
 - The two ROMs have the same graphics, data and passwords. Bytes `$40000`-end are identical; below that the

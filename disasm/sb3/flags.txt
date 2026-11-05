@@ -1,0 +1,28 @@
+$0D88    written only by code that never ran  tested at C1097E  written at C108DA C1093C
+$0D89    written only by code that never ran  tested at C10904  written at C108DA C10942
+$147F    never written                        tested at C253CE C25993 C259F1 C25AC3
+$1480    never written                        tested at C253E7 C25996 C259FB C25A1A C25AD6
+$1B1F    never written                        tested at C43711
+$1C8A    never written                        tested at C16C5F C16E13 C16FB6
+$1C8D    never written                        tested at C16BB8
+$1E54    written only by code that never ran  tested at C44838 C44873  written at C44827 C4482C C4483F C4487A
+$1E64    written only by code that never ran  tested at C355F6 C3562E C3587B C359AE C359D2  written at C35894 C375A7
+$1E98    written only by code that never ran  tested at C35A47  written at C35925 C35A1C
+$1E99    written only by code that never ran  tested at C35994  written at C3595D C35999
+$1E9A    written only by code that never ran  tested at C35A51  written at C35A27 C35A56
+$1E9B    written only by code that never ran  tested at C35A59  written at C35A2A C35A5E
+$1E9E    written only by code that never ran  tested at C35ACA  written at C35A02 C35AD6
+$1EA0    written only by code that never ran  tested at C35AA2  written at C35A08 C35AAF
+$1EA5    written only by code that never ran  tested at C35B35  written at C35AE4 C35B06
+$1EA6    written only by code that never ran  tested at C35B42  written at C35AE7 C35B0A
+$1EA7    written only by code that never ran  tested at C35B4F  written at C35AEA C35B0E
+$1EA8    written only by code that never ran  tested at C35B5C  written at C35AED C35B12
+$1EB0    never written                        tested at C30048
+$1F23    written only by code that never ran  tested at C44E00  written at C44B8D
+$1F25    written only by code that never ran  tested at C44E59 C44EE8 C44F3A  written at C44E1B
+$7E2907  never written                        tested at C12685
+$7E2908  never written                        tested at C12681
+$7E4C0A  written only by code that never ran  tested at C129B2 C12C0F  written at C129A0 C12C00
+$7E64F6  never written                        tested at C154A1
+$7E6BFA  written only by code that never ran  tested at C15729 C15771  written at C15736 C1577A
+$7E6C4D  never written                        tested at C15414

@@ -1,0 +1,147 @@
+ 0 world 1 stage 1              record file $04156 = 00 01 01 01 00  page 0 chunk $00 at file $15C68 (54 bytes)
+    drawn with tiles of record 0
+ 1 world 1 stage 2              record file $0415E = 00 01 01 01 00  page 0 chunk $00 at file $15C68 (54 bytes)  same as 0
+    drawn with tiles of record 1
+ 2 world 1 stage 3              record file $04166 = 00 01 01 01 00  page 0 chunk $00 at file $15C68 (54 bytes)  same as 0
+    drawn with tiles of record 2
+ 3 world 1 stage 4              record file $0416E = 00 01 01 01 00  page 0 chunk $00 at file $15C68 (54 bytes)  same as 0
+    drawn with tiles of record 3
+ 4 world 1 stage 5              record file $04176 = 00 01 01 01 00  page 0 chunk $00 at file $15C68 (54 bytes)  same as 0
+    drawn with tiles of record 4
+ 5 world 1 stage 6              record file $0417E = 02 03 01 01 02  page 0 chunk $02 at file $15CBA (50 bytes)
+    drawn with tiles of record 5
+ 6 world 1 stage 7              record file $04186 = 02 03 01 01 02  page 0 chunk $02 at file $15CBA (50 bytes)  same as 5
+    drawn with tiles of record 6
+ 7 world 1 stage 8              record file $0418E = 00 01 01 01 00  page 0 chunk $00 at file $15C68 (54 bytes)  same as 0
+    drawn with tiles of record 7
+ 8 world 2 stage 1              record file $04196 = 04 04 04 04 00  page 0 chunk $04 at file $15D18 (69 bytes)
+    drawn with tiles of record 8
+ 9 world 2 stage 2              record file $0419E = 05 05 05 05 00  page 0 chunk $05 at file $15D5E (82 bytes)
+    drawn with tiles of record 9
+10 world 2 stage 3              record file $041A6 = 06 07 06 07 02  page 0 chunk $06 at file $15DB1 (85 bytes)
+    drawn with tiles of record 10
+11 world 2 stage 4              record file $041AE = 08 08 09 09 03  page 0 chunk $08 at file $15E50 (107 bytes)
+    drawn with tiles of record 11
+12 world 2 stage 5              record file $041B6 = 0a 0a 0b 0b 03  page 0 chunk $0A at file $15F2C (128 bytes)
+    drawn with tiles of record 12
+13 world 2 stage 6              record file $041BE = 0c 0d 0c 0d 02  page 0 chunk $0C at file $16008 (88 bytes)
+    drawn with tiles of record 13
+14 world 2 stage 7              record file $041C6 = 0e 0e 0f 0f 03  page 0 chunk $0E at file $160AF (145 bytes)
+    drawn with tiles of record 14
+15 world 2 stage 8              record file $041CE = 10 04 04 04 00  page 0 chunk $10 at file $161AB (58 bytes)
+    drawn with tiles of record 15
+16 world 3 stage 1              record file $041D6 = 11 12 11 12 02  page 0 chunk $11 at file $161E6 (52 bytes)
+    drawn with tiles of record 16
+17 world 3 stage 2              record file $041DE = 13 13 14 14 03  page 0 chunk $13 at file $16249 (99 bytes)
+    drawn with tiles of record 17
+18 world 3 stage 3              record file $041E6 = 15 16 15 16 02  page 0 chunk $15 at file $162E0 (98 bytes)
+    drawn with tiles of record 18
+19 world 3 stage 4              record file $041EE = 17 18 17 18 02  page 0 chunk $17 at file $1637C (79 bytes)
+    drawn with tiles of record 19
+20 world 3 stage 5              record file $041F6 = 19 19 1a 1a 03  page 0 chunk $19 at file $16419 (107 bytes)
+    drawn with tiles of record 20
+21 world 3 stage 6              record file $041FE = 1b 1b 1c 1c 03  page 0 chunk $1B at file $164C7 (60 bytes)
+    drawn with tiles of record 21
+22 world 3 stage 7              record file $04206 = 1d 1d 1e 1e 03  page 0 chunk $1D at file $1653F (77 bytes)
+    drawn with tiles of record 22
+23 world 3 stage 8              record file $0420E = 1f 1f 1f 1f 00  page 0 chunk $1F at file $165E3 (73 bytes)
+    drawn with tiles of record 23
+24 world 4 stage 1              record file $04216 = 20 61 21 61 03  page 0 chunk $20 at file $1662D (86 bytes)
+    drawn with tiles of record 24
+25 world 4 stage 2              record file $0421E = 22 23 61 61 02  page 0 chunk $22 at file $166E6 (66 bytes)
+    drawn with tiles of record 25
+26 world 4 stage 3              record file $04226 = 24 25 61 61 02  page 0 chunk $24 at file $16782 (109 bytes)
+    drawn with tiles of record 26
+27 world 4 stage 4              record file $0422E = 26 27 61 61 02  page 0 chunk $26 at file $16841 (103 bytes)
+    drawn with tiles of record 27
+28 world 4 stage 5              record file $04236 = 28 61 29 61 03  page 0 chunk $28 at file $16918 (96 bytes)
+    drawn with tiles of record 28
+29 world 4 stage 6              record file $0423E = 2a 61 2b 61 03  page 0 chunk $2A at file $169DD (96 bytes)
+    drawn with tiles of record 29
+30 world 4 stage 7              record file $04246 = 2c 2d 61 61 02  page 0 chunk $2C at file $16A94 (105 bytes)
+    drawn with tiles of record 30
+31 world 4 stage 8              record file $0424E = 2e 61 61 61 00  page 0 chunk $2E at file $16B64 (99 bytes)
+    drawn with tiles of record 31
+32 world 5 stage 1              record file $04256 = 2f 2f 30 30 03  page 0 chunk $2F at file $16BC8 (59 bytes)
+    drawn with tiles of record 32
+33 world 5 stage 2              record file $0425E = 31 31 32 32 03  page 0 chunk $31 at file $16C39 (61 bytes)
+    drawn with tiles of record 33
+34 world 5 stage 3              record file $04266 = 33 33 34 34 03  page 0 chunk $33 at file $16CAC (55 bytes)
+    drawn with tiles of record 34
+35 world 5 stage 4              record file $0426E = 35 36 35 36 02  page 0 chunk $35 at file $16D19 (51 bytes)
+    drawn with tiles of record 35
+36 world 5 stage 5              record file $04276 = 37 38 37 38 02  page 0 chunk $37 at file $16D7B (46 bytes)
+    drawn with tiles of record 36
+37 world 5 stage 6              record file $0427E = 39 39 3a 3a 03  page 0 chunk $39 at file $16DD5 (62 bytes)
+    drawn with tiles of record 37
+38 world 5 stage 7              record file $04286 = 3b 3c 3b 3c 02  page 0 chunk $3B at file $16E4F (46 bytes)
+    drawn with tiles of record 38
+39 world 5 stage 8              record file $0428E = 3d 3e 3d 3e 04  page 0 chunk $3D at file $16EAC (43 bytes)
+    drawn with tiles of record 39
+40 world 6 stage 1              record file $04296 = 3f 40 3f 40 02  page 0 chunk $3F at file $16EFF (101 bytes)
+    drawn with tiles of record 40
+41 world 6 stage 2              record file $0429E = 41 42 41 42 02  page 0 chunk $41 at file $16FC6 (105 bytes)
+    drawn with tiles of record 41
+42 world 6 stage 3              record file $042A6 = 43 43 44 44 03  page 0 chunk $43 at file $1709E (128 bytes)
+    drawn with tiles of record 42
+43 world 6 stage 4              record file $042AE = 45 45 46 46 03  page 0 chunk $45 at file $17198 (140 bytes)
+    drawn with tiles of record 43
+44 world 6 stage 5              record file $042B6 = 47 48 47 48 02  page 0 chunk $47 at file $1729F (105 bytes)
+    drawn with tiles of record 44
+45 world 6 stage 6              record file $042BE = 49 49 4a 4a 03  page 0 chunk $49 at file $1736F (134 bytes)
+    drawn with tiles of record 45
+46 world 6 stage 7              record file $042C6 = 4b 4c 4b 4c 02  page 0 chunk $4B at file $1746A (121 bytes)
+    drawn with tiles of record 46
+47 world 6 stage 8              record file $042CE = 4d 4e 4d 4e 04  page 0 chunk $4D at file $1755F (47 bytes)
+    drawn with tiles of record 47
+48 world 7 stage 1              record file $042D6 = 4f 50 4f 50 02  page 0 chunk $4F at file $175C1 (79 bytes)
+    drawn with tiles of record 48
+49 world 7 stage 2              record file $042DE = 51 52 51 52 02  page 0 chunk $51 at file $1765A (80 bytes)
+    drawn with tiles of record 49
+50 world 7 stage 3              record file $042E6 = 53 53 54 54 03  page 0 chunk $53 at file $176FB (91 bytes)
+    drawn with tiles of record 50
+51 world 7 stage 4              record file $042EE = 55 55 56 56 03  page 0 chunk $55 at file $177AE (77 bytes)
+    drawn with tiles of record 51
+52 world 7 stage 5              record file $042F6 = 57 58 57 58 02  page 0 chunk $57 at file $17849 (77 bytes)
+    drawn with tiles of record 52
+53 world 7 stage 6              record file $042FE = 59 5a 59 5a 02  page 0 chunk $59 at file $178E1 (61 bytes)
+    drawn with tiles of record 53
+54 world 7 stage 7              record file $04306 = 59 5a 59 5a 02  page 0 chunk $59 at file $178E1 (61 bytes)  same as 53
+    drawn with tiles of record 54
+55 world 7 stage 8              record file $0430E = 59 5b 59 5b 04  page 0 chunk $59 at file $178E1 (61 bytes)
+    drawn with tiles of record 55
+56 world 8 stage 1 (no such world) record file $04316 = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)
+    drawn with tiles of record 64
+57 world 8 stage 2 (no such world) record file $0431E = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)  same as 56
+    drawn with tiles of record 64
+58 world 8 stage 3 (no such world) record file $04326 = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)  same as 56
+    drawn with tiles of record 64
+59 world 8 stage 4 (no such world) record file $0432E = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)  same as 56
+    drawn with tiles of record 64
+60 world 8 stage 5 (no such world) record file $04336 = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)  same as 56
+    drawn with tiles of record 64
+61 world 8 stage 6 (no such world) record file $0433E = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)  same as 56
+    drawn with tiles of record 64
+62 world 8 stage 7 (no such world) record file $04346 = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)  same as 56
+    drawn with tiles of record 64
+63 world 8 stage 8 (no such world) record file $0434E = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)  same as 56
+    drawn with tiles of record 64
+64 battle stage 1               record file $04356 = 5c 5d 5d 5d 00  page 0 chunk $5C at file $17992 (70 bytes)
+    drawn with tiles of record 64
+65 battle stage 2               record file $0435E = 5e 5f 5f 5f 00  page 0 chunk $5E at file $179FB (33 bytes)
+    drawn with tiles of record 65
+66 battle stage 3               record file $04366 = 60 61 61 61 00  page 0 chunk $60 at file $17A38 (56 bytes)  same as 56
+    drawn with tiles of record 66
+67 battle stage 4               record file $0436E = 62 63 63 63 00  page 0 chunk $62 at file $17A90 (96 bytes)
+    drawn with tiles of record 67
+68 battle stage 5               record file $04376 = 64 65 65 65 00  page 0 chunk $64 at file $17B12 (143 bytes)
+    drawn with tiles of record 68
+69 battle stage 6               record file $0437E = 66 67 67 67 00  page 0 chunk $66 at file $17BC0 (177 bytes)
+    drawn with tiles of record 69
+70 battle stage 7               record file $04386 = 69 6a 6a 6a 00  page 0 chunk $69 at file $17D04 (69 bytes)
+    drawn with tiles of record 64
+71 battle stage 8               record file $0438E = 6b 6c 6c 6c 00  page 0 chunk $6B at file $17D6A (83 bytes)
+    drawn with tiles of record 71
+72 battle stage 9               record file $04396 = 5e 5f 5f 5f 10  page 0 chunk $5E at file $179FB (33 bytes)
+    drawn with tiles of record 64
+unused chunk $68 file $17C91 (114 bytes), drawn with tiles of record None (chunk $67 is record 69)

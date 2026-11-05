@@ -232,6 +232,122 @@ block `$C8:0002-$C8:0F11` (DMA'd to VRAM `$4000` in every stage) is drawn in
 clock (row 2, 8th) and question mark (row 2, 7th) (**Known**). The early icon set (fire extinguisher, early
 glove, ice cream, spike bomb) and the filler icons were not located. Palettes were not swept.
 
+## Dead code
+
+Method (`tools/sb2/coverage2.lua`, `tools/sb1/sweep.py dead2`, listing `disasm/sb2/dead_usa.txt`): code/data logs of
+the USA ROM from portable Mesen copies that never had a ROM-code cheat loaded except the debug-menu switch, merged:
+attract mode alone for 9,000 frames; 40,000 frames of random presses on all five pads from the title (menus, battle
+setup, battles, password screen); 30,000 frames of random play in Normal Game with deaths, game over and continue;
+the debug-menu warp through every stage 1-1 ... 5-8 and the ending (`tools/sb2/map_dump.lua`); a SNES Mouse run;
+and the earlier `coverage.lua` routes (stages, game over, battle stages; their logs were dumped one byte early and are
+shifted back when loaded). 115,233 bytes of code ran. Because the debug menu was used, its code counts as run here
+(it is documented above).
+
+- **Reachable, not covered:** 581 places (32,822 bytes) where a conditional branch in code that ran leads to code
+  that did not: rare enemy, boss and battle cases (the largest, `$C0:6A30` and `$C0:C56B`, are battle-player code
+  for situations the random play never produced).
+- **Islands:** 94 runs of plausible code no code that ran leads to (19,050 bytes). 68 of them are referenced by a
+  24-bit pointer, a 16-bit table entry or an `LDA #addr` object-state load: object handlers of enemies, bosses and
+  battle items that the runs did not trigger (for example `$CC:CC4B`, 1,559 bytes, the state a battle-result object
+  enters after `$CC:CBE1`). **26 (2,394 bytes) have no reference of any kind:**
+
+| Address | Bytes | What it does | Class | Status |
+|---|---|---|---|---|
+| `$C0:0E9B`, `$C0:0EDB` | 145 | pad 1 R adds `$0400`, L subtracts `$0200` from every entry of the line-scroll tables `$7E:393C` / `$7E:3730`; `$C0:0EDB` sets HDMA channel 2 on BG1's horizontal scroll from `$C5:FD57` (the copy routine `$C0:0E88` is the only part still called). A raster-scroll test | debug feature | ★ New |
+| `$C0:0C5F` | 75 | a second init path: force blank, the boot init calls (`$C0:209F`, `$C0:0F2C`, `$C0:211A`, `$C0:F60E`, `$C0:159E`, `$C0:096C`), then a frame wait loop | unreferenced | ★ New (minor) |
+| `$CC:C1AE`, `$CC:A440` | 395, 238 | two object routines in the menu/ending bank using the animation tables `$CC:A831`/`$CC:A83D`; `$CC:A440` starts with two `NOP`s, where a call was removed | cut (not identified) | ★ New (minor) |
+| `$C0:F339`, `$C0:20D2`, `$C0:1382` | 27, 40, 28 | clear VRAM `$8000-$9FFF`, upload `$7E:2200` to OAM by CPU, copy two palette rows from `$C1:DB3E`: helpers superseded by DMA versions | unreferenced | |
+| `$C0:35C3`, `$C1:81FC`, `$C0:BE1F`, `$C0:693A` ... | 27-158 | map-cell and collision helpers on the player struct (`[$6A]`, `[$7C]`), e.g. `$C0:35C3` turns a cell of type 1 into `$43` | unreferenced helpers | |
+
+Europe, Japan, beta and Caravan have the same islands at their shifted addresses (byte search); their own coverage
+was not run.
+
+## Unset flags
+
+`tools/sb1/sweep.py flags` with the logs: 21 RAM addresses tested by code that ran but never written by code that ran.
+Most are fields of the player structs at `$7E:8000`+`$100`·n (`+$52`, `+$A8`, `+$F5`) and the object area at
+`$1000`, which the game writes through `[$6A],Y` / `$xx,X`, so the static check cannot see the writes. A write watch
+(`tools/sb1/flagwatch.lua` on a random-play run) confirmed `$7E:80A8` (6,853 writes), `$7E:8152`, `$7E:85A8`, `$1026`,
+`$1036` are all written. What remains:
+
+| Address | Tested at | Written by | Result | Status |
+|---|---|---|---|---|
+| `$1CB5` | `$CC:23AB` | only the turbo-X code `$CC:1505` | stages 11/12 | Known |
+| `$1C76` | `$CC:96C4` | only never-run object code (`$CC:96D4`, `$CC:CC50`) | part of the uncovered battle-result object above | |
+
+No debug or invincibility switch is hidden behind an unset RAM flag; SB2's switches are the `LDA #0` constants in
+ROM (Disabled debug switches).
+
+## Maps
+
+SB2 has no separate arena format: each stage's background tilemap is unpacked to `$7F:E000`, and `$C0:F71B` turns it
+into a collision map at `$7F:C000` through the stage's tile-attribute table (`[$7C]`), one word per 8 × 8 tile; the
+code of a 16 × 16 cell is at word y·64 + x. `tools/sb2/map_dump.lua` warps through every Normal Game stage with the
+debug menu (cheat engine, NO DEATH on) and dumps that buffer plus a screenshot; `tools/sb2/maps.py` draws it
+(`docs/img/sb2/maps/map_<stage>.png`, collision grid left, the game right; `sheet.png`). Codes: `$00` floor, `$C2`
+soft block, `$C5`/`$C6` walls, others special floors. 41 maps: 1-1 ... 5-8 and the ending ($60). The grid is the
+whole stage buffer, so on taller stages it does not line up with the visible screen.
+
+Every stage the debug menu offers was reached (1-0 ... 5-7, 6-0); its STAGE NO. wraps at 6-0, so there is no stage
+index beyond the 40 stages and the ending. Battle stages were not dumped: the scripted way through the battle menus
+lost its place (stage select reached, battle not started). No cut stage was found, but unreferenced stage data could
+not be searched for, since the tilemaps are compressed.
+
+## Cheat codes
+
+Checked with Mesen's cheat engine (`emu.addCheat`) on the unpatched USA ROM, real presses only (`tools/sb2/cheats.lua`,
+`tools/sb2/cheats.sh`): `4361` typed on the password screen, a bomb laid under player 1. All in `sb2_codes.json`
+(`section: "cheat"`); RAM codes apply to every version (same RAM map), only USA was run.
+
+| Code | Effect | Check | Status |
+|---|---|---|---|
+| `7E80EF90` | invincible in Normal Game (144 hearts that never drop, the debug menu's NO DEATH) | own bomb: flashed and played on; control run died | ★ New |
+| `7E80E003` `7E80E109` `7E80E209` | speed 3, 9 bombs, fire 9 | RAM | ★ New |
+| `7E80F304` | spike bombs (`01` remote, `02` power bomb, `08` the fifth type) | RAM | ★ New |
+| `7E80FA01` `7E80FB01` `7E80FE01` `7E80FF01` | both pass items, power glove, kick | RAM | ★ New |
+| `7E1CB5FF` `7E1CB6FF` | battle stages 11 and 12 (not in Caravan) | Left on the stage select: 1 → 12 | ★ New (TCRF has `7E1CCD0A/0B`) |
+| `7E1C6EFF` `7E1C6FFF` | jump in battle (the pad-5 flag) | flag held; jump shown earlier with the same flag | ★ New |
+| `7E1C68FF` `7E1C69FF` | sudden death (the `5656` flag) | flag held; effect shown earlier | ★ New |
+
+The ROM switch codes (debug menu `C15B4001`, soft resets, CPU meter, R power-ups, Normal Game jump, 12 stages) are
+listed under Disabled debug switches.
+
+## Input codes
+
+`tools/sb1/sweep.py pads` (shared with SB1; listing `disasm/sb2/pads.txt`) looks for rhythm windows (a frame
+counter checked against two bounds, then a press counter), held combinations (`AND #m` / `CMP #m`, 2+ buttons),
+sequence tables (compare against a table indexed by a RAM counter) and every test of a fixed pad. Run on USA,
+Europe, Japan, beta and Caravan (each disassembly grown from that version's code/data logs, `disasm/sb2/<ver>`):
+
+| Hit | What | Status |
+|---|---|---|
+| `$CC:14E6` (EU `$CC:1541`, JP `$CC:14D5`, Caravan `$CC:167E`) | the turbo-X rhythm (gap 7-9 frames, counter `$1CD1`): stages 11/12 | Known |
+| `$CC:13A4` | pad 5 A/START on the title menu: battle jump | Known |
+| `$CC:2154`-`$CC:21B4` | SELECT on pads 1-4 at the player screen: colours | Known |
+| `$C0:FB30`, `$C0:FCB4` | `$C3` = SELECT+START exactly: the two disabled soft resets | Known / ★ New (above) |
+| `$C0:0E9B` | pad 1 R / L shift the HDMA scroll tables `$7E:393C` / `$7E:3730` (+`$0400` / −`$0200` per frame); never called (see Dead code) | ★ New |
+| `$C1:0A12`-`$C1:0B51` | each pad's START pauses Battle Mode; `$FFFF` (no pad) skipped | ordinary |
+| `$C1:13F2` ... (`#$2800`), `$C0:DF72`, `$C1:1FF9`, `$C1:C069` | player-struct flags and map counters, not pads | false hits |
+
+Same hits at shifted addresses in all five versions. There is no password-style or button-sequence code beyond the
+password table.
+
+## Text
+
+The game has two encodings: ASCII for the ending credits (`$CC:81F1`-`$CC:84E4` USA) and the debug font for the
+debug menu (letters `$01-$1A`, digits `$20-$29`, space `$2A`, `-` `$34`, each followed by an attribute byte;
+`tools/sb2/textmap.py` for `tools/sb1/text.py`). Everything else on screen (story, menus, PASSWORD, stage cards) is
+graphics. Listing: `disasm/sb2/text_usa.txt`.
+
+| Address | Text | Shown | Status |
+|---|---|---|---|
+| `$C1:6064` | NORMAL GAME, BATTLE GAME, STAGE NO. 0-0, NO DEATH OFF, FIRE 0, BOMB 0, BOMB TYPE 0, ITEM FULL OFF, -, 0123456789 ONOFF | the menu lines only with the debug switch; NORMAL GAME and BATTLE GAME never | Known |
+| `$CC:81F1`-`$CC:84E4` | credits: Game Planner, Graphics Designers, Programmers (TETUROU KIYOMOTO, B.HANAWA, TOSHIYUKI SUZUKI), Sound Producers, Sound Director, Composer, Sound Designer, Special Thanks, Director KYON KYON, Super Producer RAOH SHIMADA, HUDSON SOFT | yes (ending) | |
+| JP `$CC:843D`-`$CC:85B0` | "Special thanks to all our friends for giving us these names:" PLASMA BOMBER (Akihiro Nishida and 3 other kids), MAGNET BOMBER (Tatsuya Shirai and 63), BRAIN BOMBER (Yoshinao Kawai and 4), **PRETTY BOMBER (Kazuma Asakura and 21), GOLEM BOMBER (Hirokazu Takada and 2)** | yes (JP and Caravan only; not in USA/EU/beta at all) | Known |
+
+No string is left over that no code displays, apart from the two debug-menu headings. No Japanese text in any
+version (the Japanese release is the "(En)" dump).
+
 ## RAM
 
 | Address | Meaning |
@@ -336,6 +452,11 @@ colour 0 transparent, crop to the logo above the menu text, save as an indexed P
 | `pw_entry.lua` | password screen controls |
 | `region_tour.lua`, `mouse_title.lua` | region comparison screens; Europe's mouse lock (needs a Mesen with a mouse in port 2) |
 | `coverage.lua`, `unused_gfx.py` | code/data-log coverage runs and the unused-graphics sweep |
+| `coverage2.lua` | coverage runs for the dead-code sweep (attract mode, random play on five pads, Normal Game deaths) |
+| `../sb1/sweep.py` | shared: `dead2` (never-run code), `pads` (input-code scanner), `flags` (tested, never written), `show` |
+| `../sb1/text.py`, `textmap.py` | string dump with the debug-font map |
+| `map_dump.lua`, `maps.py` | collision-map dump of every stage and its render |
+| `cheats.lua`, `cheats.sh` | PAR checks through Mesen's cheat engine |
 
 All Mesen runs use a portable copy (its own `settings.json` next to `Mesen.exe`, so its data folder is its
 own); `MESEN` points at it. The multitap runs need `Snes.Port2.Type = "Multitap"` in that `settings.json`

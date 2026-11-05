@@ -1,14 +1,14 @@
 // Check the built index.html: pull out its data script (codecs, code lists, game setup), run it, and assert
 // known round-trips for each game plus that every password-shaped code in every docs/<g>_codes.json is accepted.
 //   node tools/check_page.mjs
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import assert from 'node:assert/strict';
 
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const src = html.match(/<script id="data">([\s\S]*?)<\/script>/)?.[1];
 assert.ok(src, 'no <script id="data"> in index.html');
-const { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, CODES, GAMES } =
-  new Function(src + '\nreturn { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, CODES, GAMES };')();
+const { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS } =
+  new Function(src + '\nreturn { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS };')();
 
 let n = 0;
 const ok = (cond, msg) => { assert.ok(cond, msg); n++; };
@@ -76,12 +76,32 @@ eq(PCE94.decode('0515').area, 6, "'94 0515 is the final area");
 eq(game('pce94').check('0515').title, 'Final area', "'94 checker: 0515 final area");
 eq(PCE94.validCodes(), MEGA.validCodes(), "'94 and Mega accept the same codes");
 
+// NES
+const n1 = NES1.encode({ stage: 12, bombs: 4, fire: 3, detonator: 1 });
+eq(game('nes1').check(n1).title, 'Stage 12', 'nes1 encode/check round-trip');
+eq(NES1.decode(n1).detonator, 1, 'nes1 keeps the detonator');
+ok(!game('nes1').check('A'.repeat(20)), 'nes1 rejects AAAA...');
+const n2 = NES2.encode({ area: 3, stage: 5, bombs: 2, fire: 4 }, 'us');
+eq(game('nes2').check(n2, 'us').title, 'Stage 3-5', 'nes2 US round-trip');
+ok(game('nes2').check(NES2.convert(n2, 'us', 'jp'), 'jp'), 'nes2 converts to a JP code');
+eq(game('nes2').check('K3456712', 'us').type, 'special', 'nes2 K3456712 is the sound test');
+
+// Game Boy
+eq(game('gb1').check('4696').title, 'Stage 1-1', 'gb1 4696 is 1-1');
+eq(game('gb1').check(GB1.encode(2, 4, 'wario', 'wario')).title, 'Stage 2-4 (boss) as Wario', 'gb1 Wario codes');
+ok(!game('gb1').check(GB1.encode(1, 1, 'wario', 'wario'), 'jp'), 'gb1 Wario codes are Wario Blast only');
+eq(game('gb2').check('5472').title, 'World 8', 'gb2 5472 is world 8');
+ok(!game('gb2').check('7824', 'us'), 'gb2 7824 (unused table) is rejected');
+eq(game('gb3').check('0986400').title, 'Wood stage 1', 'gb3 0986400 is Wood 1');
+eq(GB3.decode(GB3.encode(4, 3, [], 0b101)).shop, 0b101, 'gb3 encode keeps the shop');
+ok(GB3.encode(0, 1, [], 0b1000) === null, 'gb3 F costs more than Wood pays');
+
 // Every password-shaped code in every code list is accepted by the page's checker (which calls the codec), in each
 // version it is listed for; the ones the list itself marks "Rejected" must be rejected.
 for (const g of GAMES) {
   let k = 0, r = 0;
   for (const e of CODES[g.id]) {
-    if (!g.shape.test(e.code) || e.section === 'patch') continue;   // patch-only codes need patches/*.ips
+    if (!g.shape.test(e.code) || e.section === 'patch' || e.section === 'cheat') continue;   // patch-only codes need patches/*.ips; Game Genie codes can look like passwords
     if (/^Rejected/i.test(e.effect)) { ok(!g.check(e.code) || g.check(e.code).type === 'special', `${g.id}: ${e.code} should be rejected`); r++; continue; }
     for (const v of e.versions.length ? e.versions : ['']) {
       const res = g.check(e.code, v.toLowerCase());
@@ -91,5 +111,33 @@ for (const g of GAMES) {
   }
   console.log(`${g.id}: ${k} passwords in the code list, all accepted${r ? `; ${r} listed as rejected, rejected` : ''}`);
 }
-eq(GAMES.map(g => g.id), ['sb1', 'sb2', 'sb3', SB4 && 'sb4', 'sb5', 'mega', 'pce90', 'pce93', 'pce94'].filter(Boolean), 'every built game has a setup');
+eq(GAMES.map(g => g.id), ['sb1', 'sb2', 'sb3', 'sb4', 'sb5', 'mega', 'pce90', 'pceub', 'pce93', 'pce94', 'nes1', 'nes2', 'gb1', 'gb2', 'gb3'], 'every built game has a setup');
+
+// A game with no codec: listed, codes only, no generator
+ok(!GAMES.find(g => g.id === 'mega8') && CODES.mega.some(e => e.section === 'demo8'), 'the 8-player demo sits inside Mega Bomberman');
+
+// Version chips start on the main release
+const MAIN = { sb1: 'US', sb2: 'us', sb3: 'eu', sb4: 'JP', sb5: 'retail', mega: 'US', pce90: 'US', pce93: 'US', pce94: 'retail', nes1: 'US', nes2: 'US', gb1: 'wario', gb2: 'us', gb3: 'jp' };
+for (const [id, v] of Object.entries(MAIN)) eq(defaultVer(GAMES.find(g => g.id === id)), v, `${id} starts on ${v}`);
+eq(logoFor(GAMES.find(g => g.id === 'pce93'), 'SP'), 'pce93_sp', "'93 Special Version chip shows its logo");
+eq(logoFor(GAMES.find(g => g.id === 'sb4'), 'EN'), LOGOS.includes('sb4_en') ? 'sb4_en' : 'sb4_jp', 'a missing logo falls back to the default');
+
+// Patch links: every link points at a file in patches/, every patch file is linked from some code and has a ROM name
+const linked = new Set();
+for (const g of GAMES) for (const e of CODES[g.id]) for (const f of patchLinks(g.id, [e.code, e.effect, e.note].join(' '))) {
+  ok(existsSync(new URL('../patches/' + f, import.meta.url)), `${g.id}: patch link ${f} exists`);
+  linked.add(f);
+}
+for (const f of readdirSync(new URL('../patches/', import.meta.url)).filter(f => f.endsWith('.ips'))) {
+  ok(linked.has(f), `patches/${f} is linked from a code`);
+  ok(PATCH_ROM[f], `patches/${f} names its ROM`);
+}
+// img fields name real screenshots
+for (const g of GAMES) for (const e of CODES[g.id]) if (e.img) ok(existsSync(new URL(`../docs/img/${g.id}/${e.img}`, import.meta.url)), `${g.id}: ${e.img} exists`);
+// generator item icons: every ico("<g>", "<name>") and SB5_ICONS entry names a docs/img/items/<g>/<name>.png
+const sb5Icons = JSON.parse(html.match(/const SB5_ICONS = (\[[^\]]*\])/)[1]);
+eq(sb5Icons.length, SB5.ITEMS.length, 'one SB5 icon per item');
+const icons = [...html.matchAll(/ico\("(\w+)", "(\w+)"\)/g)].map(m => m[1] + '/' + m[2]).concat(sb5Icons.map(x => 'sb5/' + x));
+ok(icons.length > 12, 'the generators use item icons');
+for (const f of icons) ok(existsSync(new URL(`../docs/img/items/${f}.png`, import.meta.url)), `icon docs/img/items/${f}.png exists`);
 console.log(`ok: ${n} checks passed`);

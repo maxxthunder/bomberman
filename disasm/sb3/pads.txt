@@ -1,0 +1,42 @@
+C0009B LDA $4E,X (object) CMP #$01                                                     ran
+C000A0 LDA $53,X (object) CMP #$01                                                     ran
+C000A5 LDA $45,X (object) CMP #$01; AND #$F0                                           ran
+C000C8 ORA $4E,X (object) AND $53,X (table)                                            ran
+C000D3 LDA $53,X (object) AND $53,X (table)                                            ran
+C000D5 EOR $0374,X (pad n) AND $53,X (table)                                            ran
+C00117 LDA $4E,X (object) AND $4E,X (table)                                            ran
+C00119 EOR $036F,X (pad n) AND $4E,X (table); DEC $0383,X (counter)                     ran
+C0011C AND $4E,X (object) DEC $0383,X (counter)                                        ran
+C0013A LDA $004E          CMP #$33                                                     never ran
+C02065 LDA $0045,Y (pad n) CMP #$02                                                     ran
+C0C600 AND $66,X (object) DEC $2F (counter); AND $55,X (table)                         never ran
+C0F4EE LDA $4017          CMP #$FF                                                     ran
+C0F4F8 LDA $004B          CMP #$FF; CMP #$FF                                           ran
+C0F4FE LDA $004A          CMP #$FF; CMP #$FF                                           never ran
+C0F508 LDA $004D          CMP #$FF; CMP #$FF                                           ran
+C0F50E LDA $004C          CMP #$FF                                                     never ran
+C11A9F ORA $0058,Y (pad n) CMP #$00                                                     ran
+C161A3 LDA $000045,X (pad n) CMP #$01                                                     ran
+C16E51 JSR call C16ECD ($000058,X (pad n)) CMP #$40                                                     ran
+C16E6B JSR call C16ECD ($000058,X (pad n)) CMP #$40; CMP #$10                                           ran
+C255B5 ORA $004E,Y (pad n) CMP #$00                                                     ran
+C255B8 ORA $0053,Y (pad n) CMP #$00                                                     ran
+C259B8 LDA $4E,X (object) BIT #$01                                                     ran
+C40872 LDA $4E,X (object) BIT #$84; AND #$F7                                           never ran
+C40890 LDA $58,X (object) BIT #$84                                                     ran
+C408BE LDA $58,X (object) BIT #$80; BIT #$80                                           ran
+C408C4 LDA $4E,X (object) BIT #$80                                                     ran
+C408E4 LDA $58,X (object) BIT #$08; BIT #$40                                           ran
+C408EE LDA $58,X (object) BIT #$40                                                     ran
+C409DD LDA $53,X (object) BIT #$7F                                                     ran
+C40A6D LDA $53,X (object) BIT #$01                                                     never ran
+C40A9B LDA $53,X (object) EOR #$0F                                                     ran
+C40B03 JSR call C40A9B ($53,X (object)) AND $53,X (table); AND $129F,X (table)                       ran
+C40B12 AND $53,X (object) AND $129F,X (table); EOR #$0F                                ran
+C40B51 AND $53,X (object) AND $53,X (table)                                            ran
+C40C10 LDA $53,X (object) CMP #$06; CMP #$FF                                           ran
+C414C8 LDA $58,X (object) BIT #$04                                                     ran
+C42647 LDA $53,X (object) INC $12CF,X (counter)                                        never ran
+C43789 JSR call C44256 ($58,X (object)) INC $03BE (counter)                                          ran
+C4394A JSR call C44256 ($58,X (object)) CMP #$04                                                     ran
+C445D5 LDA $53,X (object) AND #$0F; CMP $12B7,X (table)                                never ran

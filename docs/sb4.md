@@ -240,7 +240,7 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
 - **What a coverage sweep leaves.** `tools/sb4/cover.lua` played every stage 1-1 to 5-6 from its password
   with a random bot (3000 frames each), all 12 battle stages, the ending (1009), two power-up codes and the
   attract mode, and saved Mesen's code/data log; with round 1's logs that is 62 runs. `tools/sb4/unused.py`
-  merges them: 1,338,317 of 2,097,152 bytes were read as code or data (DMA reads count), 758,835 never were (Mesen marks DMA blocks one byte early, so a run listed as `$xx:x7FF-...FFE` is really `$xx:x800-...FFF`).
+  merges them: 1,338,317 of 2,097,152 bytes were read as code or data (DMA reads count), 758,835 never were (that list came from dumps that were off by one byte; see round 3).
   The unread part is not "unused": the bot dies early, never catches a rider, never sees most boss phases
   or the between-world scenes, and many of the unread blocks are enemy and boss sprite sheets of that kind
   (for example `$C5:FF1C`-`$C6:3FFF`, `$C6:8800`-`$C6:FFFF`, `$CD:2F80`-`$CD:717F`, `$CE:FEB6`-`$CF:3D41`,
@@ -261,6 +261,144 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
   of kick, punch, remote and so on each is was not mapped.
 - No sound test or other debug entry was found in the title, password or battle-menu input code; the rest
   of the game was not searched for button combinations.
+
+## Hidden-content sweep (round 3)
+
+Six passes over the Japanese ROM. The English ROM was checked wherever its code is the same (see
+[sb4en.md](sb4en.md)). Tools: `tools/sb3/sweep.py` (dead code, pad scanner, flag scanner; shared with SB3),
+`tools/sb3/strings.py`, `tools/sb3/monkey.lua`, `tools/sb3/watch.lua`, `tools/sb3/sheet.py`, `tools/sb4/maps.lua`
+and `tools/sb4/par.lua`. Raw outputs are in `disasm/sb4/` (`dead.txt`, `pads.txt`, `flags.txt`, `strings.txt`).
+
+**The old logs were off by one byte.** `lib.lua` dumped Mesen's 0-based code/data table from index 1, so every
+flag landed one byte early (see sb3.md). The listing had been grown from those dumps, which is why it decoded
+operands as opcodes in places (for example the title X code at `$C3:C84A`). `lib.lua` is fixed, and `disasm/sb4/`
+was rebuilt from a fresh `entries.txt`. The merged log comes from 70 runs (rounds 1-2, Mesen's `.cdl`, a
+2-player random run and this round's menu runs) and covers 127,720 code bytes. The round-2 note that "Mesen marks
+DMA blocks one byte early" was this bug.
+
+### Dead code
+
+**471 entry points never ran**:
+
+| Class | Count |
+|---|---|
+| only from code that never ran | 327 |
+| pointer/table only (object states, menu handlers) | 68 |
+| no reference | 68 |
+| referenced by code that ran | 8 |
+
+What stands out:
+
+- **The Maniac battle setup (Known content; it was just uncovered).** The battle-menu dispatcher
+  `$C1:9725` indexes a six-entry table at `$C1:BB26` by `$7F:2004`. Entries 3-5 (`$C1:AB08`, `$C1:ADBC`,
+  `$C1:BB40`) had never run. Forcing the index from the title (an exec hook at `$C1:96F5`) brought up these
+  screens:
+  - アイテムを設定してね, "set the items": 15 battle items with a count each, out of 60 (`$7F:2054`+).
+  - 各キャラのHPをきめてね, "decide each character's HP": 1-5PLAYER (`$7F:2045`-`2049`, copied to
+    `$1F16`-`$1F1E` and then to player +`$D2` at `$C1:9117`/`$C2:019A`).
+  - A direct battle start.
+
+  EXIT on either list leads to マニアックステージの設定をしてね ("set up the Maniac stage": アイテムセレクト /
+  ハンデキャップ / バトルスタート). So these are the third battle mode's (Maniac) own setup screens, not hidden
+  ones. Earlier coverage had never entered that mode.
+- **★ New: a dormant exit at `$C3:CF94`.** The screen loop at `$C3:CF16`-`$C3:CF90` (entered from `$C1:11B5`, seen
+  running in the Maniac runs) ends with `JML $C3:CF16`. Right after it is an unreferenced tail: if A, B or Start
+  is pressed (`BIT #$9080`), it fades out over `$30` frames and returns. Nothing jumps there. Static only; which
+  screen it belongs to was not pinned down.
+- **★ New: battle stage table entries 13 and 14.** The four 14-entry tables at `$C3:6233` end with two pointers to
+  stage 1's record (`$C3:62DB`). The stage select stops at 12, so they are never chosen. Forced, they load stage 1
+  (maps below).
+- The other no-reference blocks are object and AI helpers (`$C0:5D57`, `$C1:2CFF`, `$C1:3238`, …) and short stubs.
+
+### Input codes
+
+145 hits; most are object fields read through `$30,X`/`$88,X`. Of the pad reads proper (`$01CE`/`$01D0`, `$0330`
+and up), these never ran:
+
+- `$C1:A52F`, `$C1:AF25`, `$C1:B1E7`, `$C1:BE73`: the Maniac setup menus above (cursor and EXIT).
+- `$C3:3426`-`$C3:36E7`: an interactive scene. B (`$8000`) speeds a scroll up (`$017A`, capped at `$19`), and
+  Left/Right (`$0100`/`$0200`) steer `$0178` through tables at `$C3:367C` and `$C3:36BA`. It belongs to the
+  between-world scene code next to `$7F:70E4`, which no run reached.
+- `$C2:80A9`, `$C2:DAB2`, `$C3:40FC`, `$C3:CF96`: "A/B/Start to continue" checks in uncovered scenes. The last is
+  the dormant exit above.
+
+The known codes come up as expected: the title X counter `$C3:C83E`/`$C3:C871` and the password screen. **No new
+button sequence, held combination or rhythm counter.**
+
+### Unset flags
+
+`sweep.py flags` finds 47 candidates: 9 never written directly and 38 written only by unreached code. A write
+watch (`tools/sb3/watch.lua`) ran through a 1019 game and a battle, 5,000 random frames each. Then each flag that
+was never set non-zero was poked on its own:
+
+| Address | Read at | What it does when set | Status |
+|---|---|---|---|
+| `$0274` | `$C1:0766` | **Start pauses without the PAUSE! label**: the pause code skips loading the label's position into `$0180/$0182`. Checked in Mesen, JP and EN (PAR `7E0274:01`) | ★ New |
+| `$00A0` | `$C41AAC` | a buffer copy at `$C4:1AB4` takes the `EOR #$FFFF` path at `$C4:1B77` (inverted words) | no visible change in a stage or a battle; unverified |
+| `$01C2` | `$C4:1E31` | forces the odd-frame half of a double-buffered table switch (`$0130-$0134`) | no visible change |
+| `$0352`/`$0452` | `$C2:E3CC` | object field +`$52` = 6 for both players ends a wait | object fields, written indexed; not a flag |
+| `$0796` | `$C2:5A5B` | read only by dead code | — |
+| `$7F:70E4` | `$C3:4106` | lets the between-world scene skip itself as if B were pressed (round 2) | scene not reached; unverified |
+
+The 38 "written only by unreached code" are the between-world scene (`$7F:70DF`-`$7F:7111`), the Maniac and
+Championship menus (`$7F:2012`, `$7F:202B`, `$7F:70A6`) and boss code.
+
+### Text
+
+The game draws almost all of its text as tile graphics. The menu-value printer `$C1:BB49`/`$C1:BB76` draws short
+tile-index strings (rule values, counts) through a 3-byte pointer list in `[$5C]` and a tile table in `[$54]`
+(`$D6:89CC`). Five lists were logged on the battle menus (`$C1:C2D4`, `$C1:C2FC`, …). It holds digits and
+symbols, not words. **The only ASCII strings** (`tools/sb3/strings.py`) are:
+- the debug PARAMETER text at `$C4:6E69` (Known; never read);
+- the multitap BIOS IDs at `$C0:FB00`-`$C0:FC9F` (never read);
+- the header.
+
+There are no unused dialogue strings. Japanese seen on the screens this round, with translations:
+- ステージをえらんでね: choose a stage
+- アイテムを設定してね: set the items
+- 各キャラのHPをきめてね: decide each character's HP
+- マニアックステージの設定をしてね: set up the Maniac stage
+- アイテムセレクト / ハンデキャップ / バトルスタート: item select / handicap / battle start
+- あと60コ: 60 left
+- いつもの: "the usual", stage 1's name
+- はたはたとりとり: flag grab, stage 12
+
+### Maps
+
+These are rendered from the game (`tools/sb4/maps.lua`), with the record addresses from the tables. A battle
+stage record is 34 bytes. It holds pointers to the BG and layout data in `$D6`/`$D7` (different for each set) and
+to start-position data in `$C3`. Those streams are compressed and were not decoded.
+
+- **Battle**, sets 0-3 × all 14 table entries (`$024A` and `$7F:202B` written at the stage select):
+  ![Set 0](img/sb4/maps/battle_set0.png)
+  ![Set 1](img/sb4/maps/battle_set1.png)
+  ![Set 2](img/sb4/maps/battle_set2.png)
+  ![Set 3](img/sb4/maps/battle_set3.png)
+  - Entries 13-14 are stage 1 again.
+  - Stages 11 and 12 use the same record in every set.
+  - Stage 9 was still black at the capture frame. It needs a later shot.
+- **Normal game**, all 40 slots of `$0092`, forced at the password hit (`$C2:A9C9`):
+  ![Normal stages](img/sb4/maps/normal_stages.png)
+  Slots 38 and 39 are the empty final-boss arena (TCRF's filler 5-7/5-8, Known), and no other slot is cut.
+
+### Cheat codes (Pro Action Replay)
+
+Each code was checked in Mesen's cheat engine (`tools/sb4/par.lua`) on the unpatched Japanese ROM, and on the
+English ROM where marked:
+
+| Code | Effect | Checked |
+|---|---|---|
+| `7F202D:0C` | battle stages 11 and 12 without the turbo trick | JP: stage select goes from 1 to 12, then 11. EN: `$7F:202D`=12 (stage select not walked) |
+| `C2AEE6:7D` + `C2AEE7:16` | password **5757** starts the filler stage 5-7 (index 38) | JP and EN: `$0092`=38, empty arena |
+| `C2AEE8:E2` + `C2AEE9:16` | password **5858** starts filler 5-8 (index 39) | JP: `$0092`=39 |
+| `7E0274:01` | pause without the PAUSE! label | JP and EN |
+| `7F202B:0A` / `0B` | stage 11 / 12 at the select (TCRF) | Known, not re-run |
+
+The two filler codes rewrite table slots 38/39, which hold 7777 and 4622. Both are caught as special codes before
+the table is searched, so the slots were dead.
+
+No invincibility code: `7E03D2:05` (player 1's extra hits) did not change a random-bot run, and no NODEATH-style
+flag exists.
 
 ## Title logo
 

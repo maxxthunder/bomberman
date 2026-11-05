@@ -1,0 +1,1 @@
+$00FF	never set	reads 1	02:87C7 LDA $FF	untraced stores at 01:AB09, 01:AC71, 01:AE55, 01:B088, 01:B1EF, 01:B22B

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bomberman Codes and Password Generator</title>
-<meta name="description" content="Every password and secret code for Super Bomberman 1 to 5, Mega Bomberman and the TurboGrafx-16 / PC Engine Bombermans, read from the games' own code and tested in emulators, with a password generator and checker for each game.">
+<meta name="description" content="Every password and secret code for the NES, Game Boy, Super Nintendo, Genesis and TurboGrafx-16 / PC Engine Bomberman games, read from the games' own code and tested in emulators, with a password generator and checker for each game.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;600;800&family=JetBrains+Mono:wght@700;800&display=swap">
@@ -22,7 +22,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--body); }
 main { max-width: 1000px; margin: 0 auto; padding: 24px 16px 48px; display: grid; gap: 18px; }
-main > * { min-width: 0; }
+main > *, #game > * { min-width: 0; }
 a { color: var(--pink); }
 h1 { font: 400 clamp(26px, 6.4vw, 44px)/1.08 var(--display); margin: 0; letter-spacing: .01em; }
 h1 span { color: var(--pink); }
@@ -34,9 +34,10 @@ h3 { margin: 0; }
 button, select, input { font: inherit; color: inherit; }
 button { cursor: pointer; }
 :focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-/* game picker: one card per game, aria-pressed marks the chosen one */
-#cards { display: grid; gap: 14px; }
+/* game picker: full logo cards until a game is chosen, then a compact sticky row (a dropdown on phones) */
+#picker { display: grid; gap: 14px; }
 .pgroup { display: grid; gap: 8px; }
 .pgroup h3 { font: 800 13px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .gcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
@@ -48,7 +49,22 @@ button { cursor: pointer; }
 .gcard[aria-pressed=true] { border-color: var(--pink); background: var(--pink-soft); }
 @media (max-width: 760px) { .gcards { grid-template-columns: repeat(3, 1fr); gap: 8px; } }
 @media (max-width: 480px) { .gcard { padding: 8px 4px; font-size: 13px; } .gcard img { height: 52px; } .gcard small { font-size: 12px; } }
+#gsel_wrap { display: none; }
+#picker.compact { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 8px 0; border-bottom: 1px solid var(--line); margin: -8px 0 0; }
+#picker.compact #cards { display: flex; flex-wrap: wrap; gap: 6px; }
+#picker.compact .pgroup, #picker.compact .gcards { display: contents; }
+#picker.compact .pgroup h3, #picker.compact .gcard .nm, #picker.compact .gcard small { display: none; }
+#picker.compact .gcard { padding: 4px 6px; border-radius: 8px; }
+#picker.compact .gcard img { width: 64px; height: 30px; }
+@media (max-width: 600px) {
+  #picker.compact #cards { display: none; }
+  #picker.compact #gsel_wrap { display: flex; gap: 10px; align-items: center; font-weight: 800; min-width: 0; }
+  #gsel { flex: 1; min-width: 0; }
+}
 
+.ghead { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.ghead img { height: 48px; width: auto; image-rendering: pixelated; }
+.ghead h2 { margin: 0; }
 /* version chips: radio buttons drawn as pills */
 .seg { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
 .seg legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
@@ -58,39 +74,39 @@ button { cursor: pointer; }
 .seg label:has(input:checked) { background: var(--pink-soft); color: var(--pink); border-color: var(--pink); }
 .seg label:has(input:focus-visible) { outline: 3px solid var(--fuse); outline-offset: 1px; }
 
-.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+/* the password panel: controls, then the one code box with what it holds beside it */
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 14px; min-width: 0; }
 .panel > h3 { font: 400 17px var(--display); letter-spacing: .02em; }
-.tools { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-@media (max-width: 760px) { .tools { grid-template-columns: 1fr; } }
 .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
 .field { display: grid; gap: 4px; font-size: 14px; color: var(--muted); font-weight: 700; min-width: 0; }
-.field.grow { flex: 1 1 160px; }
+.field.grow { flex: 1 1 140px; }
 select, input[type=text], input[type=search] { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; color: var(--ink); max-width: 100%; min-width: 0; }
 select { padding-right: 4px; }
-input.code-in { font: 800 24px var(--mono); letter-spacing: .2em; text-transform: uppercase; width: 100%; }
 .checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px 12px; margin: 0; padding: 0; border: 0; }
 .checks legend, .group-label { font-size: 14px; color: var(--muted); font-weight: 700; padding: 0; margin-bottom: 4px; }
 .checks label { display: flex; gap: 8px; align-items: center; font-size: 15px; cursor: pointer; }
 .checks input { width: 18px; height: 18px; accent-color: var(--pink); }
-.picks { display: flex; flex-wrap: wrap; gap: 8px; }
-.pick { font: 800 20px var(--mono); padding: 6px 12px; border-radius: 8px; border: 2px solid var(--line); background: var(--bg); letter-spacing: .08em; }
-.pick:hover { border-color: var(--muted); }
-.pick[aria-pressed=true] { border-color: var(--pink); color: var(--pink); }
-.verdict { margin: 0; font-weight: 700; }
+/* in-game power-up icons (docs/img/items/<g>/, 16x16 native) */
+.lbl { display: inline-flex; align-items: center; gap: 6px; }
+.up { width: 24px; height: 24px; flex: none; image-rendering: pixelated; }
+/* Game Boy icons are dark greys: give them the screen's pale backdrop */
+.up[src*="/gb"] { background: #d8e0c0; border-radius: 3px; }
+.out > label { min-width: 0; max-width: 100%; }
+.out { min-width: 0; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; border-top: 1px solid var(--line); padding-top: 14px; }
+input.code-in { background: var(--plate); color: var(--plate-ink); border: 0; border-radius: 10px; padding: 8px 14px;
+  font: 800 max(14px, min(clamp(22px, 7vw, 46px), (100vw - 110px) / (var(--len, 4) * .85)))/1.1 var(--mono); letter-spacing: .14em; text-transform: uppercase; width: calc(var(--len, 4) * 1.2em + 30px); max-width: 100%; }
+input.code-in::placeholder { color: #8a90b0; letter-spacing: .14em; }
+.res { flex: 1 1 240px; display: grid; gap: 4px; }
+.verdict { margin: 0; font-weight: 800; font-size: 19px; }
 .verdict.ok { color: var(--ok); }
 .verdict.bad { color: var(--bad); }
+.detail { margin: 0; color: var(--muted); font-size: 15px; }
 .warn { margin: 0; padding-left: 20px; color: var(--fuse); font-size: 15px; }
-
-/* the current code on a white helmet plate */
-.plate { background: var(--plate); color: var(--plate-ink); border-radius: 12px; padding: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
-.plate .now { font: 800 clamp(32px, 10vw, 64px)/1 var(--mono); letter-spacing: .12em; }
-.plate .what { flex: 1 1 220px; font-weight: 700; }
-.plate .what small { display: block; font-weight: 600; opacity: .75; }
 
 /* typing guide, only for the letter grids: the grid with the next symbol lit */
 .guide { background: var(--screen); color: var(--screen-ink); border-radius: 12px; padding: 18px 16px; display: grid; gap: 16px; justify-items: center;
   text-align: center; container-type: inline-size; }
-.slots { display: flex; gap: .16em; font: 800 min(96px, calc(76cqi / var(--n, 6)))/1.1 var(--mono); }
+.slots { display: flex; gap: .16em; font: 800 min(80px, calc(76cqi / var(--n, 6)))/1.1 var(--mono); }
 .slots span { border: 3px solid var(--screen-line); border-radius: .12em; padding: .02em .12em; }
 .slots .done { opacity: .35; }
 .slots .cur { border-color: var(--fuse); color: var(--fuse); }
@@ -109,6 +125,8 @@ input.code-in { font: 800 24px var(--mono); letter-spacing: .2em; text-transform
 /* codes list */
 .bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .bar input[type=search] { flex: 1 1 200px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
+.vi { width: 16px; height: 16px; vertical-align: -3px; fill: none; stroke: currentColor; stroke-width: 1.6; color: var(--muted); flex: none; }
 .sect { display: grid; gap: 10px; }
 .sect > .hint { margin-top: -4px; }
 .code-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 10px; }
@@ -116,25 +134,44 @@ input.code-in { font: 800 24px var(--mono); letter-spacing: .2em; text-transform
 .code-card h3 { font: 800 17px/1.3 var(--body); overflow-wrap: anywhere; }
 .code-card h3.pw { font: 800 24px/1.1 var(--mono); letter-spacing: .1em; }
 .code-card p { margin: 0; overflow-wrap: anywhere; }
-.code-card .note, .alts { color: var(--muted); font-size: 14px; }
+.code-card .note { color: var(--muted); font-size: 14px; }
+.code-card .home { color: var(--muted); font: 800 11px var(--body); letter-spacing: .1em; text-transform: uppercase; }
 .meta { color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
 .meta .ver { border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; }
-.code-card .use { justify-self: start; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 3px 10px; font-weight: 700; font-size: 14px; }
-.code-card .use:hover { border-color: var(--pink); color: var(--pink); }
+.usecode { all: unset; cursor: pointer; border-radius: 4px; }
+.usecode:hover { color: var(--pink); }
+.usecode:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
+.thumb { all: unset; cursor: zoom-in; justify-self: start; border-radius: 6px; line-height: 0; }
+.thumb img { height: 72px; width: auto; max-width: 100%; border: 1px solid var(--line); border-radius: 6px; image-rendering: pixelated; }
+.thumb:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
+.ips { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 14px; }
+.ips a { font-weight: 800; }
+.ips span { color: var(--muted); }
 /* "★ New" and "Fixed" hang from the card's top edge like tabs */
 .badge { font: 800 11px var(--body); letter-spacing: .1em; text-transform: uppercase; border-radius: 0 0 5px 5px; padding: 3px 9px;
   position: absolute; top: 0; right: 14px; background: var(--fuse); color: var(--plate-ink); }
 .badge.fixed { background: var(--flame); }
 .code-card:has(.badge) { padding-top: 18px; }
 .code-card:has(.badge) h3 { padding-right: 70px; }
-.alts summary { cursor: pointer; color: var(--ink); font-weight: 700; }
-.alts ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
-.alts li { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; }
-.alts li b { font: 800 16px var(--mono); color: var(--ink); letter-spacing: .08em; }
-.alts .tag { color: var(--fuse); font-weight: 800; font-size: 12px; }
-.alts .tag.fixed { color: var(--flame); }
-.alts .tag.v { color: var(--muted); font-weight: 600; }
+/* stage codes: compact rows */
+.stages { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; font-size: 15px; }
+.stages th { text-align: left; color: var(--muted); font-size: 13px; font-weight: 800; padding: 6px 10px; border-bottom: 1px solid var(--line); }
+.stages td { padding: 3px 10px; border-top: 1px solid rgb(255 255 255 / .05); vertical-align: middle; }
+.stages td.c { font: 800 17px var(--mono); letter-spacing: .08em; white-space: nowrap; }
+/* NES Bomberman's 20-letter codes break into two lines on a phone */
+@media (max-width: 520px) { .stages td.c { white-space: normal; word-break: break-all; } }
+.stages td.m { white-space: nowrap; text-align: right; }
+.mk { font: 800 12px var(--body); color: var(--fuse); }
+.mk.fixed { color: var(--flame); }
+.stages .thumb { cursor: zoom-in; margin-left: 6px; vertical-align: middle; }
+.stages .thumb img { height: 20px; }
 .empty { color: var(--muted); }
+#shot { padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--plate-ink); color: var(--ink); max-width: 96vw; max-height: 94vh; }
+#shot::backdrop { background: rgb(0 0 0 / .8); }
+#shot figure { margin: 0; display: grid; gap: 8px; padding: 12px; }
+#shot img { display: block; max-width: calc(96vw - 26px); max-height: calc(94vh - 80px); width: auto; height: auto; image-rendering: pixelated; justify-self: center; }
+#shot figcaption { font-weight: 700; text-align: center; padding-right: 36px; }
+#shot_close { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); font-weight: 800; }
 details.about { color: var(--muted); font-size: 15px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
 details.about summary { cursor: pointer; color: var(--ink); font-weight: 800; }
 footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px; color: var(--muted); flex-wrap: wrap; }
@@ -146,67 +183,69 @@ footer a:hover { text-decoration: underline; }
 <main>
   <header>
     <h1>Bomberman <span>Codes</span></h1>
-    <p class="sub">Every password and secret code for Super Bomberman 1 to 5, Mega Bomberman and the TurboGrafx-16 / PC Engine
-      Bombermans, read from each game's own code and tested in emulators. Make a password or check one.
+    <p class="sub">Every password and secret code for the NES, Game Boy, Super Nintendo, Genesis and TurboGrafx-16 / PC Engine
+      Bomberman games, read from each game's own code and tested in emulators.
       <b>★ New</b> marks codes that no published list had; <b>Fixed</b> marks ones that were posted wrong.</p>
   </header>
 
-  <div id="cards"></div>
+  <nav id="picker" aria-label="Game">
+    <div id="cards"></div>
+    <label id="gsel_wrap">Game <select id="gsel"></select></label>
+  </nav>
 
-  <section aria-labelledby="gname" class="game" style="display:grid;gap:10px">
-    <h2 id="gname"></h2>
-    <p class="hint" id="gintro"></p>
-    <fieldset class="seg" id="vers"><legend>Version</legend></fieldset>
-  </section>
+  <div id="game" hidden style="display:grid;gap:18px">
+    <section aria-labelledby="gname" style="display:grid;gap:10px">
+      <div class="ghead"><img id="glogo" alt=""><h2 id="gname"></h2></div>
+      <p class="hint" id="gintro"></p>
+      <fieldset class="seg" id="vers"><legend>Version</legend></fieldset>
+    </section>
 
-  <div class="tools">
-    <section class="panel" aria-labelledby="gen_h"><h3 id="gen_h">Make a password</h3><div id="gen" style="display:grid;gap:12px"></div></section>
-    <section class="panel" aria-labelledby="chk_h"><h3 id="chk_h">Check a password</h3>
-      <label class="field">Type or paste a code<input type="text" id="check" class="code-in" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="characters"></label>
-      <p class="verdict" id="verdict" aria-live="polite"></p>
-      <ul class="warn" id="cwarn" hidden></ul>
+    <section class="panel" id="pwpanel" aria-labelledby="pw_h"><h3 id="pw_h">Password</h3>
+      <div id="gen" style="display:grid;gap:12px"></div>
+      <div class="out">
+        <label><span class="vh">Code</span><input type="text" id="check" class="code-in" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="characters"></label>
+        <div class="res" aria-live="polite"><p class="verdict" id="verdict"></p><p class="detail" id="detail"></p><ul class="warn" id="cwarn" hidden></ul></div>
+      </div>
+      <div class="guide" id="guide" hidden>
+        <div class="slots" id="slots" aria-hidden="true"></div>
+        <div class="kb" id="kb" aria-hidden="true"></div>
+        <div class="gbtns">
+          <button type="button" class="ghost" id="prev">Back</button>
+          <output id="pos" aria-live="polite"></output>
+          <button type="button" id="next">Next</button>
+        </div>
+        <p class="hint" id="ghint"></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="codes_h" style="display:grid;gap:14px">
+      <h2 id="codes_h">All codes</h2>
+      <div class="bar">
+        <input type="search" id="q" placeholder="Search codes and effects" aria-label="Search codes" autocomplete="off" spellcheck="false">
+        <select id="only" aria-label="Show">
+          <option value="">All codes</option>
+          <option value="new">★ New only</option>
+          <option value="fixed">Fixed only</option>
+        </select>
+      </div>
+      <p class="hint legend" id="legend"></p>
+      <p class="hint" id="sum" aria-live="polite"></p>
+      <div id="codes" style="display:grid;gap:20px"></div>
     </section>
   </div>
-
-  <section aria-label="Current code" style="display:grid;gap:12px">
-    <div class="plate"><span class="now" id="now"></span><span class="what" id="what"></span></div>
-    <div class="guide" id="guide" hidden>
-      <div class="slots" id="slots" aria-hidden="true"></div>
-      <div class="kb" id="kb" aria-hidden="true"></div>
-      <div class="gbtns">
-        <button type="button" class="ghost" id="prev">Back</button>
-        <output id="pos" aria-live="polite"></output>
-        <button type="button" id="next">Next</button>
-      </div>
-      <p class="hint" id="ghint"></p>
-    </div>
-  </section>
-
-  <section aria-labelledby="codes_h" style="display:grid;gap:14px">
-    <h2 id="codes_h">All codes</h2>
-    <div class="bar">
-      <input type="search" id="q" placeholder="Search codes and effects" aria-label="Search codes" autocomplete="off" spellcheck="false">
-      <select id="only" aria-label="Show">
-        <option value="">All codes</option>
-        <option value="new">★ New only</option>
-        <option value="fixed">Fixed only</option>
-      </select>
-    </div>
-    <p class="hint" id="sum" aria-live="polite"></p>
-    <div id="codes" style="display:grid;gap:20px"></div>
-  </section>
 
   <details class="about">
     <summary>Where these come from</summary>
     <p>Each game's password routine was disassembled and rebuilt as a small codec. The generator and checker here
-      run those codecs, and the codes were put through each game's own check in an emulator (Mesen 2 for the Super
-      Nintendo and PC Engine games, BizHawk for Mega Bomberman). "Checked in an emulator" on a card means that code was
-      run in the game; "read from the ROM" means it comes from reading the code only.</p>
+      run those codecs, and the codes were put through each game's own check in an emulator (Mesen 2 for the NES, Game Boy,
+      Super Nintendo and PC Engine games, BizHawk for Mega Bomberman).</p>
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.0.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.1.0</a></footer>
 </main>
+<dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
+  <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
 
 <script id="data">
 "use strict";
@@ -221,7 +260,39 @@ const PCE90_GRID = grid(["ABCDEFGHIJ", "KLMNOPQRST", [..."UVWXYZ", "<", ">", "EN
   "The cursor wraps: Left and Right within a row, Up and Down between rows, and Down from J or T lands on END. It stays where it was between codes.");
 const PCE93_GRID = { us: grid(["BCDFGHJK", "LMNPQRST", [..."VWXZ", "←", "→", "END"]]),
   jp: grid(["ABCDEFGH", "IJKLMNOP", "QRSTUVWX", [..."YZ", "←", "→", "END"]]) };
+const NES2_GRID = { us: grid(["12345678", "BCDFGHJK", ["←", "→", "DEL", "END"]]), jp: grid(["ABCDEFGH", "IJKLMNOP", ["←", "→", "DEL", "END"]]) };
+let NES2_VER = "us";   // the version the Bomberman II generator is set to
 let PCE93_VER = "us";   // the version the '93 generator is set to; a code is tried in it first
+
+// IPS patches in patches/ and the No-Intro ROM each one applies to
+const PATCH_ROM = {
+  "sb1_debug_menu_us.ips": "Super Bomberman (USA)", "sb1_debug_menu_eu.ips": "Super Bomberman (Europe)",
+  "sb1_debug_menu_jp.ips": "Super Bomberman (Japan)", "sb1_debug_menu_beta.ips": "Super Bomberman (USA) (Beta) (1993-05-11)",
+  "sb2_debug_menu_us.ips": "Super Bomberman 2 (USA)", "sb2_debug_menu_eu.ips": "Super Bomberman 2 (Europe)",
+  "sb2_debug_menu_jp.ips": "Super Bomberman 2 (Japan) (En)", "sb2_debug_menu_beta.ips": "Super Bomberman 2 (USA) (Beta)",
+  "sb2_debug_menu_caravan.ips": "Super Bomberman 2 (Japan) (Caravan You Taikenban)",
+  "sb3_soft_reset_eu.ips": "Super Bomberman 3 (Europe)", "sb3_soft_reset_jp.ips": "Super Bomberman 3 (Japan)",
+  "sb3_soft_reset_beta.ips": "Super Bomberman 3 (Europe) (Beta)",
+  "sb5_debug_rooms.ips": "Super Bomberman 5 (Japan)",
+  "pce90_invincible_us.ips": "Bomberman (USA), also the Bomberman Collection dump", "pce90_invincible_jp.ips": "Bomberman (Japan) (En)",
+  "pce90_select_room.ips": "Bomberman (USA)",
+  "pceub_password_1p.ips": "Bomberman - Users Battle (Japan)", "pceub_select_room.ips": "Bomberman - Users Battle (Japan)",
+  "pce93_configration_us.ips": "Bomberman '93 (USA)", "pce93_normal_game_sp.ips": "Bomberman '93 - Special Version (Japan)",
+  "nes1_invincible_us.ips": "Bomberman (USA) (NES)", "nes1_invincible_jp.ips": "Bomberman (Japan) (Famicom)",
+  "nes2_invincible_us.ips": "Bomberman II (USA)", "nes2_invincible_jp.ips": "Bomberman II (Japan)",
+  "gb1_invincible.ips": "Bomberman GB (Japan) or Wario Blast Featuring Bomberman! (USA, Europe)",
+  "gb2_invincible.ips": "Bomberman GB (USA, Europe) or Bomberman GB 2 (Japan)", "gb3_invincible.ips": "Bomberman GB 3 (Japan)",
+  "pce94_debug_menu.ips": "Bomberman '94 (Japan)", "pce94_debug_pause.ips": "Bomberman '94 (Japan)",
+};
+// the patch files a code's text names (patches/sb1_debug_menu_<ver>.ips names every sb1_debug_menu_*.ips)
+const patchLinks = (id, text) => /\bpatch|\.ips/i.test(text)
+  ? PATCHES.filter(f => f.startsWith(id + "_") && (text.includes(f.slice(0, -4)) || text.includes(f.slice(0, -4).replace(/_[^_]+$/, "_")))) : [];
+// version chips start on the main release; a game's logo follows the chip when that version has its own
+const defaultVer = game => {
+  const vs = [...new Set(CODES[game.id].flatMap(e => e.versions))];
+  return vs.find(v => v.toLowerCase() === game.main) || vs[0] || "";
+};
+const logoFor = (game, v) => { const l = game.logos && game.logos[(v || "").toLowerCase()]; return l && LOGOS.includes(l) ? l : game.logo; };
 
 const megaPlace = (NS, d) => {
   if (d.world === 6) return { group: "F", order: 60, title: "Final area" };
@@ -245,19 +316,27 @@ const sb5Char = f => {
   return `${SB5.BODIES[f.body] || "body " + f.body}, ${SB5.COLORS[f.color]}, ${f.bomb + 1} bombs, fire ${f.fire + 2}, speed ${f.speed + 1}` +
     (items.length ? ", " + items.join(", ") : ", no items");
 };
+const ucfirst = s => s.charAt(0).toUpperCase() + s.slice(1);
 const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+// Bomberman GB 3 shop techniques, $C38D bit order: icon file, name
+const GB3_SHOP = [["kick", "Kick"], ["dash", "Dash"], ["line", "Line bomb"], ["full", "Full bombs (F)"], ["moto1", "Motorbike 1"], ["moto2", "Motorbike 2"], ["moto3", "Motorbike 3"], ["moto4", "Motorbike 4"]];
 const PLANETS = m => [1, 2, 3, 4, 5, 6].filter(p => m >> (p - 1) & 1);
 
+// the 8-player demo is its own program but lives at the bottom of Mega Bomberman's page
+if (CODES.mega && CODES.mega8) CODES.mega = CODES.mega.concat(CODES.mega8.map(e => Object.assign({}, e, { section: "demo8", versions: [] })));
+
 const GAMES = [
-  { id: "sb1", ns: SB1, family: "Super Nintendo", year: 1993, name: "Super Bomberman", plat: "Super Nintendo", logo: "sb1_us", len: 4, shape: /^[0-7]{4}$/, form: "4 digits, each 0 to 7",
+  { id: "sb1", ns: SB1, family: "Super Nintendo", year: 1993, name: "Super Bomberman", plat: "Super Nintendo", logo: "sb1_us", logos: { jp: "sb1_jp" }, main: "us",
+    len: 4, shape: /^[0-7]{4}$/, form: "4 digits, 0-7",
     check(c) {
       const d = SB1.decode(c);
       if (d) return { type: "stage", group: d.world + "-" + d.stage, order: d.index, title: `Stage ${d.world}-${d.stage}${d.stage === 8 ? " (boss)" : ""}`,
         detail: "You start with 5 lives; a password stores nothing else." };
       return SB1.SPECIAL[c] ? { type: "special", order: 99, title: SB1.SPECIAL[c] } : null;
     },
-    why: c => /[89]/.test(c) ? "8 and 9 can't be entered: every digit is 0 to 7." : "" },
-  { id: "sb2", ns: SB2, family: "Super Nintendo", year: 1994, name: "Super Bomberman 2", plat: "Super Nintendo", logo: "sb2_us", len: 4, shape: /^\d{4}$/, form: "4 digits",
+    why: c => /[89]/.test(c) ? "Every digit is 0 to 7." : "" },
+  { id: "sb2", ns: SB2, family: "Super Nintendo", year: 1994, name: "Super Bomberman 2", plat: "Super Nintendo", logo: "sb2_us", logos: { jp: "sb2_jp" }, main: "us",
+    len: 4, shape: /^\d{4}$/, form: "4 digits",
     check(c) {
       const d = SB2.decode(c);
       if (!d) return null;
@@ -267,7 +346,8 @@ const GAMES = [
         detail: d.fullPower ? `Speed ${k.speed}, ${k.bombs} bombs, fire ${k.fire + 1}, remote bombs and the power glove.` : "Normal kit: speed 1, 1 bomb." };
     },
     notes: { Passwords: "There is no checksum: the game compares your code with a list of 11, so this is every code there is." } },
-  { id: "sb3", ns: SB3, family: "Super Nintendo", year: 1995, name: "Super Bomberman 3", plat: "Super Nintendo", logo: "sb3_eu", len: 4, shape: /^\d{4}$/, form: "4 digits",
+  { id: "sb3", ns: SB3, family: "Super Nintendo", year: 1995, name: "Super Bomberman 3", plat: "Super Nintendo", logo: "sb3_eu", main: "eu",
+    len: 4, shape: /^\d{4}$/, form: "4 digits",
     where: "Normal Game > 1 or 2 players > PASSWORD.",
     check(c) {
       const d = SB3.decode(c);
@@ -275,15 +355,17 @@ const GAMES = [
       return d.kind === "special" ? { type: "special", order: 99, title: d.effect }
         : { type: "stage", group: d.name, order: d.stage, title: `Stage ${d.name}`, detail: `Area ${d.area}.` };
     } },
-  { id: "sb4", ns: SB4, family: "Super Nintendo", year: 1996, name: "Super Bomberman 4", plat: "Super Nintendo (Japan)", logo: "sb4_jp", len: 4, shape: /^\d{4}$/, form: "4 digits",
+  { id: "sb4", ns: SB4, family: "Super Nintendo", year: 1996, name: "Super Bomberman 4", plat: "Super Nintendo (Japan)", logo: "sb4_jp", logos: { en: "sb4_en" }, main: "jp",
+    len: 4, shape: /^\d{4}$/, form: "4 digits",
     check(c) {
       const d = SB4.decode(c);
       if (!d) return null;
       return d.kind === "special" ? { type: "special", order: 99, title: d.effect }
         : { type: "stage", group: d.stage, order: d.index, title: `Stage ${d.stage}` };
     },
-    notes: { Passwords: "No algorithm: the game looks your number up in a list of 50, so there is one code per stage. The game never shows a password; you note them from a list like this one." } },
-  { id: "sb5", ns: SB5, family: "Super Nintendo", year: 1997, name: "Super Bomberman 5", plat: "Super Nintendo (Japan)", logo: "sb5_jp", len: 6, shape: /^(\d{4}|[0-9A-Z]{6})$/, form: "4 digits (options) or 6 symbols (character)",
+    notes: { Passwords: "No algorithm: the game looks your number up in a list of 50, so there is one code per stage. The game never shows a password." } },
+  { id: "sb5", ns: SB5, family: "Super Nintendo", year: 1997, name: "Super Bomberman 5", plat: "Super Nintendo (Japan)", logo: "sb5_jp", logos: { en: "sb5_en" }, main: "retail",
+    len: 6, shape: /^(\d{4}|[0-9A-Z]{6})$/, form: "4 digits or 6 symbols",
     grid: c => c.length === 6 ? SB5_GRID : null,
     where: c => c.length === 4 ? "Options > PASSWORD." : "Battle > Config Battle > make a config > data load > password load.",
     check(c, ver) {
@@ -299,14 +381,17 @@ const GAMES = [
     why: c => /[IOSZ]/.test(c) ? "The grid has no I, O, S or Z. Try 1, 0, 5 or 2 in their place." : c.length === 6 ? "The checksum doesn't match, so at least one symbol is wrong." : "",
     notes: { "Option passwords": "Each one stays on until you reset; some cancel each other.",
       "Character passwords": "A code holds the whole character except the name. Only the checksum is checked, so out-of-range values load too." } },
-  { id: "mega", ns: MEGA, family: "Genesis", year: 1994, name: "Mega Bomberman", plat: "Genesis", logo: "mega_us", len: 4, shape: /^\d{4}$/, form: "4 digits",
+  { id: "mega", ns: MEGA, family: "Genesis", year: 1994, name: "Mega Bomberman", plat: "Genesis", logo: "mega_us", main: "us",
+    len: 4, shape: /^\d{4}$/, form: "4 digits",
     check: megaCheck(MEGA),
-    notes: { Passwords: "A code stores the area and which of its stages are cleared. Codes are grouped by the stage they start you on. Every one also works in Bomberman '94 on the PC Engine." } },
-  { id: "pce90", ns: PCE90, family: "TurboGrafx-16 / PC Engine", year: 1990, name: "Bomberman", plat: "TurboGrafx-16 / PC Engine", logo: "pce90_us", len: 8, shape: /^[A-Z]{8}$/, form: "8 letters",
+    notes: { Passwords: "A code stores the area and which of its stages are cleared; one code per starting stage is listed. Every one also works in Bomberman '94 on the PC Engine.",
+      "8-Player Demo (prototype)": "Factor 5's separate 8-player battle demo for two Sega Team Players: one endless battle, no passwords, menus or CPU players." } },
+  { id: "pce90", ns: PCE90, family: "TurboGrafx-16 / PC Engine", year: 1990, name: "Bomberman", plat: "TurboGrafx-16 / PC Engine", logo: "pce90_us", logos: { jp: "pce90_jp" }, main: "us",
+    len: 8, shape: /^[A-Z]{8}$/, form: "8 letters",
     grid: () => PCE90_GRID,
     check(c) {
       if (PCE90.SPECIAL[c]) return { type: "special", order: 99, title: "Sound test: the game says PASSWORD ERROR, but the next valid password opens the sound test",
-        verdict: `The game shows PASSWORD ERROR for ${c}, but it sets a flag: enter any valid password next and the sound test opens.` };
+        verdict: "PASSWORD ERROR, but it sets a flag: the next valid password opens the sound test." };
       const d = PCE90.decode(c);
       if (!d) return null;
       return { type: "stage", group: [d.round, d.stage, d.bombs, d.fire, d.speed].join("-"), order: d.round * 10 + d.stage, title: `Round ${d.round} stage ${d.stage}`,
@@ -314,13 +399,16 @@ const GAMES = [
     },
     why: c => {
       const i = [...c].findIndex((ch, k) => !PCE90.ROWS[k >> 1].includes(ch));
-      return i >= 0 ? `Letter ${i + 1} (${c[i]}) can't be used there: letters ${(i & 6) + 1}-${(i & 6) + 2} only take ${PCE90.ROWS[i >> 1].split("").join(" ")}.` : "";
-    },
-    notes: { Passwords: "Codes are grouped by what they hold." } },
-  { id: "pce93", ns: PCE93, family: "TurboGrafx-16 / PC Engine", year: 1992, name: "Bomberman '93", plat: "TurboGrafx-16 / PC Engine", logo: "pce93_us", len: 8, shape: /^[A-Z]{8}$/, form: "8 letters",
+      return i >= 0 ? `Letters ${(i & 6) + 1}-${(i & 6) + 2} only take ${PCE90.ROWS[i >> 1].split("").join(" ")}.` : "";
+    } },
+  { id: "pceub", ns: null, family: "TurboGrafx-16 / PC Engine", year: 1990, name: "Bomberman: Users Battle", plat: "PC Engine (Japan)", logo: "pceub_jp",
+    intro: "The 1990 Bomberman cut down to its battle mode. The password system is still in the ROM, but nothing in the game opens its screen, so there are no codes to enter." },
+  { id: "pce93", ns: PCE93, family: "TurboGrafx-16 / PC Engine", year: 1992, name: "Bomberman '93", plat: "TurboGrafx-16 / PC Engine", logo: "pce93_us", logos: { jp: "pce93_jp", sp: "pce93_sp" }, main: "us",
+    len: 8, shape: /^[A-Z]{8}$/, form: "8 letters",
     grid: (c, k) => PCE93_GRID[k && k.ver === "us" ? "us" : "jp"],
     check(c, ver) {
-      for (const v of ver ? [ver] : [PCE93_VER, "us", "jp", "sp"]) {
+      // the Wii U VC dumps use the cartridges' grids, so "vc" tries them all
+      for (const v of ver && ver !== "vc" ? [ver] : [PCE93_VER, "us", "jp", "sp"]) {
         const d = PCE93.decode(c, v);
         if (!d) continue;
         const other = v === "us" ? `Japanese version: ${PCE93.convert(c, "us", "jp")}.` : `US version: ${PCE93.convert(c, "jp", "us")}.`;
@@ -334,30 +422,114 @@ const GAMES = [
       return null;
     },
     why: (c, ver) => {
+      const other = ["us", "jp", "sp"].find(v => v !== ver && PCE93.validate(c, v));
+      if (other) return `That's a code for the ${{ us: "US", jp: "Japanese", sp: "Special" }[other]} version.`;
       const a = ver ? PCE93.LETTERS[ver] : "";
-      if (a && [...c].some(ch => !a.includes(ch))) return ver === "us" ? "The US grid has no vowels and no Y: its letters are " + a.split("").join(" ") + "." : "This version's codes only use A to T.";
+      if (a && [...c].some(ch => !a.includes(ch))) return ver === "us" ? "The US grid has " + a.split("").join(" ") + "." : "This version's codes only use A to T.";
       return c.length === 8 ? "It fails the game's check, so at least one letter is wrong." : "";
     },
-    notes: { "Stage codes": "Every state has exactly one code per version. US and Japanese codes swap letter for letter by grid position (US B = JP A, C = B, D = C ...), so each stage card holds both." } },
-  { id: "pce94", ns: PCE94, family: "TurboGrafx-16 / PC Engine", year: 1993, name: "Bomberman '94", plat: "PC Engine (Japan)", logo: "pce94_jp", len: 4, shape: /^\d{4}$/, form: "4 digits",
+    notes: { "Stage codes": "Every state has exactly one code per version. US and Japanese codes swap letter for letter by grid position (US B = JP A, C = B, D = C ...)." } },
+  { id: "pce94", ns: PCE94, family: "TurboGrafx-16 / PC Engine", year: 1993, name: "Bomberman '94", plat: "PC Engine (Japan)", logo: "pce94_jp", logos: { demo: "pce94_demo", world: "pce94_world" }, main: "retail",
+    len: 4, shape: /^\d{4}$/, form: "4 digits",
     intro: "Same password system as Mega Bomberman: every code here works in both games.",
     check: megaCheck(PCE94),
-    notes: { Passwords: "A code stores the area and which of its stages are cleared. Codes are grouped by the stage they start you on. Every one also works in Mega Bomberman." } },
-].filter(g => g.ns);
+    notes: { Passwords: "A code stores the area and which of its stages are cleared; one code per starting stage is listed." } },
+  { id: "nes1", ns: NES1, family: "NES / Famicom", year: 1985, name: "Bomberman", plat: "NES / Famicom", logo: "nes1_us", logos: { jp: "nes1_jp" }, main: "us",
+    len: 20, shape: /^[A-P]{20}$/, form: "20 letters, A-P",
+    check(c) {
+      const d = NES1.decode(c);
+      if (!d) return null;
+      const it = [d.speed && "speed", d.wallPass === 1 && "wall pass", d.detonator && "detonator", d.flamePass && "flame pass"].filter(Boolean);
+      const warn = d.stage === 51 ? " Stage 51 freezes." : (d.stage >= 96 && d.stage <= 103) || (d.stage >= 224 && d.stage <= 231) ? " This stage hangs while it places the soft blocks." :
+        d.stage > 50 ? " Past the last stage (50)." : d.stage === 0 ? " Stage 0 is before the first stage." : "";
+      return { type: "stage", fields: d, group: c, order: d.stage, title: `Stage ${d.stage}`,
+        detail: `${plural(d.bombs, "bomb")}, fire ${d.fire}${it.length ? ", " + it.join(", ") : ""}${d.reveal ? ", exit and item marked" : ""}. Score ${d.score === null ? "has non-digits" : d.score.toLocaleString("en-US")}.` +
+          (d.wallPass > 1 ? " Wall pass only works at exactly 1, so it's off." : "") + warn };
+    },
+    why: c => /[Q-Z]/.test(c) ? "The letters are A to P." : c.length === 20 ? "A checksum letter doesn't match, so at least one letter is wrong." : "",
+    notes: { Passwords: "A code stores the stage, score and every power-up; each state has exactly one code. Nothing is range-checked, so out-of-play values load too." } },
+  { id: "nes2", ns: NES2, family: "NES / Famicom", year: 1991, name: "Bomberman II", plat: "NES / Famicom", logo: "nes2_us", logos: { jp: "nes2_jp" }, main: "us",
+    len: 8, shape: /^[0-9A-Z]{8}$/, form: "8 characters",
+    grid: (c, k) => NES2_GRID[(k && k.ver) || NES2_VER],
+    check(c, ver) {
+      for (const v of ver ? [ver] : [NES2_VER, "us", "jp"]) {
+        const d = NES2.decode(c, v);
+        if (!d) continue;
+        if (d.secret) return { type: "special", ver: v, order: 99, title: ucfirst(d.effect.replace(/: \$.*/, "")) };
+        return { type: "stage", ver: v, fields: d, group: [d.area, d.stage, d.bombs, d.fire].join("-"), order: d.area * 10 + d.stage, title: `Stage ${d.area}-${d.stage}`,
+          detail: `${plural(d.bombs, "bomb")}, fire ${d.fire}. ${v === "us" ? "Japanese" : "US"} version: ${NES2.convert(c, v, v === "us" ? "jp" : "us")}.` };
+      }
+      return null;
+    },
+    why: (c, ver) => {
+      const other = ["us", "jp"].find(v => v !== ver && NES2.validate(c, v));
+      return other ? `That's a code for the ${other === "us" ? "US" : "Japanese"} version.` : c.length === 8 ? "It fails the game's check, so at least one character is wrong." : "";
+    },
+    notes: { Passwords: "The first character is a key the rest are scrambled with, so every state has thousands of codes; one per stage and kit is listed." } },
+  { id: "gb1", ns: GB1, family: "Game Boy", year: 1994, name: "Wario Blast featuring Bomberman!", plat: "Game Boy", logo: "gb1_wario", logos: { jp: "gb1_jp" }, main: "wario",
+    len: 4, shape: /^\d{4}$/, form: "4 digits",
+    intro: "Bomberman GB in Japan. Wario Blast keeps every Japanese code and adds a second set that plays as Wario.",
+    check(c, ver) {
+      for (const v of ver ? [ver] : ["wario", "jp"]) {
+        const d = GB1.decode(c, v);
+        if (!d) continue;
+        const who = d.player === "wario" ? " as Wario" : "", only = v === "wario" && !GB1.validate(c, "jp") ? "Wario Blast only." : "";
+        if (d.kind !== "stage") return { type: "special", ver: v, order: 99, title: (d.kind === "powerup" ? "Start at 1-1 with every power-up" : "The extra battle") + who, detail: only };
+        return { type: "stage", ver: v, fields: d, group: d.player + d.round + "-" + d.stage, order: (d.player === "wario" ? 100 : 0) + d.round * 10 + d.stage,
+          title: `Stage ${d.round}-${d.stage}${d.boss ? " (boss)" : ""}${who}`, detail: only };
+      }
+      return null;
+    },
+    notes: { Passwords: "No algorithm: the game looks your number up in a fixed list, so this is every code there is." } },
+  { id: "gb2", ns: GB2, family: "Game Boy", year: 1995, name: "Bomberman GB", plat: "Game Boy", logo: "gb2_us", logos: { jp: "gb2_jp" }, main: "us",
+    len: 4, shape: /^\d{4}$/, form: "4 digits",
+    intro: "Bomberman GB 2 in Japan.",
+    check(c, ver) {
+      for (const v of ver ? [ver] : ["us", "jp"]) {
+        const d = GB2.decode(c, v);
+        if (!d) continue;
+        if (d.kind === "world") return { type: "stage", ver: v, fields: d, group: "w" + d.world, order: d.world, title: `World ${d.world}` };
+        return { type: "special", ver: v, order: 99, title: { soundtest: "Sound test", battle: "Battle mode: the only way into it on a plain Game Boy", powerup: "World 1 with every power-up" }[d.kind] || d.kind };
+      }
+      return null;
+    },
+    notes: { Passwords: "No algorithm: the game compares your code with a list of 11, so this is every code there is." } },
+  { id: "gb3", ns: GB3, family: "Game Boy", year: 1996, name: "Bomberman GB 3", plat: "Game Boy (Japan)", logo: "gb3_jp", main: "jp",
+    len: 7, shape: /^[0-9A-F]{7}$/, form: "7 digits, 0-9 and A-F",
+    check(c) {
+      const d = GB3.decode(c);
+      if (!d) return null;
+      if (d.special) return { type: "special", order: 99, title: "Boss attack: the bosses in a row with K, D, L and F" };
+      const cl = GB3.AREAS.filter((_, i) => d.cleared[i]), shop = GB3_SHOP.filter((_, i) => d.shop >> i & 1).map(x => x[1]);
+      return { type: "stage", fields: d, group: d.area + "-" + d.stage, order: d.area * 10 + d.stage, title: `${d.areaName} stage ${d.stage}`,
+        detail: `Areas cleared: ${cl.length ? cl.join(", ") : "none"}. Bought: ${shop.length ? shop.join(", ") : "nothing"}. ${plural(d.check, "capsule")}.` };
+    },
+    why: c => /[G-Z]/.test(c) ? "Each digit is 0-9 or A-F." : c.length === 7 ? "The capsule check doesn't balance, so at least one digit is wrong." : "",
+    notes: { Passwords: "A code holds the area, stage, areas cleared, shop techniques and capsules. The check is the capsule balance: capsules held plus what you bought must equal what the cleared areas paid." } },
+].filter(g => CODES[g.id] && CODES[g.id].length).map(g => g.ns ? g : Object.assign(g, { check: () => null, shape: /(?!)/, len: 0 }));
 </script>
 
 <script>
 "use strict";
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-const VER = { us: "USA", eu: "Europe", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD" };
+const VER = { us: "USA", eu: "Europe", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast" };
 const verName = v => VER[v.toLowerCase()] || v;
-const VERIFIED = { mesen: "checked in an emulator (Mesen 2)", emu: "checked in an emulator (BizHawk)", fuzz: "accepted by the game's own decoder (fuzz run)", static: "read from the ROM" };
+// verified: a pad (run in an emulator) or a chip (read from the ROM)
+const ICON = {
+  emu: '<path d="M6 8h12a4 4 0 0 1 4 4v1a4 4 0 0 1-7 2.6L14 15h-4l-1 .6A4 4 0 0 1 2 13v-1a4 4 0 0 1 4-4Z"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16.5" cy="11" r=".6"/><circle cx="18" cy="13" r=".6"/>',
+  rom: '<rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 3v3M12 3v3M15 3v3M9 18v3M12 18v3M15 18v3M3 9h3M3 12h3M3 15h3M18 9h3M18 12h3M18 15h3"/>',
+};
+const icon = (k, label) => `<svg class="vi" viewBox="0 0 24 24" role="img" aria-label="${esc(label)}"><title>${esc(label)}</title>${ICON[k]}</svg>`;
+const VERIFIED = { mesen: ["emu", "Tested in an emulator (Mesen 2)"], emu: ["emu", "Tested in an emulator (BizHawk)"],
+  fuzz: ["emu", "Accepted by the game's own decoder in an emulator (fuzz run)"], static: ["rom", "Read from the ROM code"] };
 const SECTION = { stage: "Passwords", special: "Special codes", option: "Option passwords", character: "Character passwords" };
 const NICE = { secret_items: "Secret items", password: "Passwords", secret: "Secrets", debug: "Debug features", demo: "Demo CD",
-  patch: "Patches", region: "Region differences", regional: "Region differences", unused: "Unused content" };
-const ORDER = ["Passwords", "Stage codes", "Power-up codes", "Special codes", "Option passwords", "Character passwords", "Secret items",
-  "Hidden screens", "Secrets", "Tricks", "Debug features", "Patches", "Demo CD", "Cheat codes", "Region differences", "Unused content"];
+  patch: "Patches", cheat: "Cheat codes", demo8: "8-Player Demo (prototype)", region: "Region differences", regional: "Region differences", unused: "Unused content",
+  rules: "How it plays", input: "Controllers", hidden: "Hidden screens" };
+// finds first: highlights, then secrets, tricks, debug and patches; the plain stage-code tables come last
+const ORDER = ["Special codes", "Option passwords", "Character passwords", "Secret items", "Hidden screens", "Secrets", "Tricks", "Cheat codes",
+  "Debug features", "Patches", "Demo CD", "Region differences", "Unused content", "Passwords", "Stage codes", "Power-up codes", "8-Player Demo (prototype)"];
 
 const store = {
   get() { try { return JSON.parse(localStorage.getItem("bomberman")) || {}; } catch { return {}; } },
@@ -366,72 +538,98 @@ const store = {
 const saved = store.get();
 saved.codes = saved.codes || {};
 
-let g = GAMES.find(x => x.id === saved.game) || GAMES[0];
-let ver = "";       // version chip; "" = all
-let cur = "";       // the code in the plate (and the grid guide)
+let g = null;       // the chosen game; null until the first pick
+let ver = "";       // version chip; "" = all versions
+let cur = "";       // the code in the code box (and the grid guide)
 let step = 0;
 
 const norm = s => String(s).toUpperCase().replace(/[\s-]/g, "");
-const isPw = (game, code) => game.shape.test(code);
+// a cheat or patch entry is never a password, even when it has a password's shape (Game Genie codes)
+const isPw = (game, e) => game.shape.test(e.code) && e.section !== "cheat" && e.section !== "patch";
 const vlow = () => ver.toLowerCase();
 const section = (game, e) => {
-  const k = isPw(game, e.code) ? game.check(e.code) : null;
   if (e.section) return NICE[e.section] || e.section;
+  const k = isPw(game, e) ? game.check(e.code) : null;
   if (k) return SECTION[k.type];
+  if (/^IPS |\.ips\b/.test(e.code)) return "Patches";
   if (/^(PAR |RAM |ROM patch|[0-9A-F]{8}\b|7E[0-9A-F]{4})/.test(e.code)) return "Cheat codes";
   return "Tricks";
 };
 
-// ---------- game cards, grouped by platform, in release order ----------
+// ---------- game picker: platform groups in release order ----------
 const families = [...new Set(GAMES.map(x => x.family))];
-$("cards").innerHTML = families.map(f => `<div class="pgroup"><h3 id="pf_${families.indexOf(f)}">${esc(f)}</h3>
-  <div class="gcards" role="group" aria-labelledby="pf_${families.indexOf(f)}">${GAMES.filter(x => x.family === f).sort((a, b) => a.year - b.year).map(x =>
-    `<button type="button" class="gcard" data-g="${x.id}" aria-pressed="false"><img src="docs/img/logos/${x.logo}.png" alt="">${esc(x.name)}<small>${x.year}</small></button>`).join("")}</div></div>`).join("");
+const byFamily = f => GAMES.filter(x => x.family === f).sort((a, b) => a.year - b.year);
+$("cards").innerHTML = families.map((f, i) => `<div class="pgroup"><h3 id="pf_${i}">${esc(f)}</h3>
+  <div class="gcards" role="group" aria-labelledby="pf_${i}">${byFamily(f).map(x =>
+    `<button type="button" class="gcard" data-g="${x.id}" aria-pressed="false" title="${esc(x.name)}"><img src="docs/img/logos/${x.logo}.png" alt=""><span class="nm">${esc(x.name)}</span><small>${x.year}</small></button>`).join("")}</div></div>`).join("");
+$("gsel").innerHTML = families.map(f => `<optgroup label="${esc(f)}">${byFamily(f).map(x => `<option value="${x.id}">${esc(x.name)}</option>`).join("")}</optgroup>`).join("");
 $("cards").onclick = e => { const b = e.target.closest(".gcard"); if (b) pickGame(b.dataset.g); };
+$("gsel").onchange = () => pickGame($("gsel").value);
 $("docs").innerHTML = GAMES.map(x => `<a href="docs/${x.id}.md">${esc(x.name)}</a>`).join(", ");
+$("legend").innerHTML = `<span>${icon("emu", "Tested in an emulator")} tested in an emulator</span><span>${icon("rom", "Read from the ROM code")} read from the ROM code</span>`;
 
+// chips only when the game's codes differ between versions (codes listed for no version don't count)
+const versionsDiffer = game => {
+  const es = CODES[game.id].filter(e => e.versions.length), vs = new Set(es.flatMap(e => e.versions));
+  return es.some(e => [...vs].some(v => !e.versions.includes(v)));
+};
+function setLogo() {
+  const l = logoFor(g, ver);
+  $("glogo").src = `docs/img/logos/${l}.png`;
+  const b = $("cards").querySelector(`.gcard[data-g="${g.id}"] img`);
+  if (b) b.src = `docs/img/logos/${l}.png`;
+}
 function pickGame(id) {
   g = GAMES.find(x => x.id === id) || GAMES[0];
-  for (const b of $("cards").querySelectorAll(".gcard")) b.setAttribute("aria-pressed", b.dataset.g === g.id);
+  $("game").hidden = false;
+  $("picker").classList.add("compact");
+  $("gsel").value = g.id;
+  for (const b of $("cards").querySelectorAll(".gcard")) {
+    b.setAttribute("aria-pressed", b.dataset.g === g.id);
+    const x = GAMES.find(y => y.id === b.dataset.g);
+    b.querySelector("img").src = `docs/img/logos/${x.logo}.png`;
+  }
   $("gname").innerHTML = `${esc(g.name)}<small>${esc(g.plat)}</small>`;
   const unchecked = CODES[g.id].some(e => e.status === "unchecked");
-  $("gintro").textContent = [g.intro, unchecked ? "There's no published code list for this game to compare with, so most codes carry no ★ New or Fixed mark." : ""].filter(Boolean).join(" ");
+  $("gintro").textContent = [g.intro, unchecked && g.ns ? "There's no published code list for this game to compare with, so most codes carry no ★ New or Fixed mark." : ""].filter(Boolean).join(" ");
   $("gintro").hidden = !$("gintro").textContent;
   const vs = [...new Set(CODES[g.id].flatMap(e => e.versions))];
-  ver = "";
-  $("vers").innerHTML = "<legend>Version</legend>" + ["", ...vs].map(v =>
-    `<label><input type="radio" name="ver" value="${esc(v)}"${v ? "" : " checked"}><span>${v ? esc(verName(v)) : "All versions"}</span></label>`).join("");
-  $("check").maxLength = g.len + 4;
-  $("check").placeholder = g.form;
+  ver = defaultVer(g);
+  $("vers").innerHTML = "<legend>Version</legend>" + [...vs, ""].map(v =>
+    `<label><input type="radio" name="ver" value="${esc(v)}"${v === ver ? " checked" : ""}><span>${v ? esc(verName(v)) : "All versions"}</span></label>`).join("");
+  $("vers").hidden = !versionsDiffer(g);
+  setLogo();
+  $("pwpanel").hidden = !g.ns;
   $("q").value = "";
-  const last = saved.codes[g.id];   // read before the generator overwrites it with its default
-  GEN[g.id]();
-  if (last && g.check(last)) { $("check").value = last; runCheck(); }
+  if (g.ns) {
+    $("check").placeholder = "-".repeat(g.len);
+    $("check").maxLength = g.len + 4;
+    $("check").style.setProperty("--len", g.len);
+    const last = saved.codes[g.id];   // read before the generator writes its default
+    GEN[g.id]();
+    syncPv();
+    if (last && g.check(last)) { $("check").value = last; runCheck(); }
+  }
   saved.game = g.id; store.set(saved);
   renderCodes();
 }
-$("vers").onchange = e => {
-  ver = e.target.value;
-  const pv = $("pv");   // the '93 generator follows the chip
-  if (pv && PCE93.LETTERS[vlow()]) { pv.value = vlow(); pv.onchange(); }
-  renderCodes(); runCheck();
-};
+// the '93 generator follows the chip
+function syncPv() { const pv = $("pv"); if (pv && PCE93.LETTERS[vlow()] && pv.value !== vlow()) { pv.value = vlow(); pv.onchange(); } }
+$("vers").onchange = e => { ver = e.target.value; setLogo(); syncPv(); renderCodes(); if (g.ns) runCheck(true); };
 
-// ---------- the current code (plate, and the grid guide for letter codes) ----------
-function setCode(code, from) {
+// ---------- the code box: generators write into it, typing into it checks the code ----------
+function setCode(code, msg) {
+  if ($("check").value !== code) $("check").value = code;
+  runCheck(true, msg);
+}
+function show(code, k) {
   cur = code; step = 0;
-  const k = code ? g.check(code, vlow()) : null;
-  const where = typeof g.where === "function" ? (code ? g.where(code) : "") : g.where || "";
-  $("now").textContent = code || "----";
-  $("what").innerHTML = k ? `${esc(k.title)}${k.detail ? `<small>${esc(k.detail)}</small>` : ""}${where ? `<small>${esc(where)}</small>` : ""}`
-    : "Pick or type a code.";
-  if (code) { saved.codes[g.id] = code; store.set(saved); }
-  if (from !== "check" && $("check").value !== code) { $("check").value = code; runCheck(true); }
-  guide();
+  if (code && k) { saved.codes[g.id] = code; store.set(saved); }
+  guide(k);
 }
 
-function guide() {
-  const k = cur ? g.check(cur, vlow()) : null, gr = k && g.grid ? g.grid(cur, k) : null;
+function guide(k) {
+  const gr = k && !k.bad && g.grid ? g.grid(cur, k) : null;
   $("guide").hidden = !gr;
   if (!gr) return;
   const n = cur.length, last = gr.rows.length - 1, end = [last, gr.rows[last].length - 1];
@@ -448,63 +646,57 @@ function guide() {
   $("ghint").textContent = gr.note;
   $("ghint").hidden = !gr.note;
 }
-$("prev").onclick = () => { step = Math.max(0, step - 1); guide(); };
-$("next").onclick = () => { step++; guide(); };
+const curK = () => cur ? g.check(cur, vlow()) : null;
+$("prev").onclick = () => { step = Math.max(0, step - 1); guide(curK()); };
+$("next").onclick = () => { step++; guide(curK()); };
 $("guide").addEventListener("keydown", e => {
   if (e.key === "ArrowRight" && !$("next").disabled) { e.preventDefault(); $("next").click(); }
   if (e.key === "ArrowLeft" && !$("prev").disabled) { e.preventDefault(); $("prev").click(); }
 });
 
-// ---------- checker ----------
 const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
-function runCheck(quiet) {
+// quiet: the generator wrote the code, so don't write it back into the generator
+function runCheck(quiet, msg) {
   const code = norm($("check").value), out = $("verdict"), warn = $("cwarn");
+  const where = typeof g.where === "function" ? (code ? g.where(code) : "") : g.where || "";
   warn.hidden = true;
-  if (!code) { out.className = "verdict"; out.textContent = `A code is ${g.form}.`; if (!quiet) setCode("", "check"); return; }
+  $("detail").textContent = "";
+  if (!code) { out.className = "verdict"; out.textContent = msg || ""; show("", null); return; }
   const k = g.check(code, vlow());
   if (k && !k.bad) {
     out.className = "verdict ok";
-    out.textContent = k.verdict || `✓ The game accepts ${code}: ${k.title}.${k.detail ? " " + k.detail : ""}`;
-    if (k.warn && k.warn.length) { warn.hidden = false; warn.innerHTML = k.warn.map(w => `<li>${esc(cap(w))}.</li>`).join(""); }
-    if (!quiet) { setCode(code, "check"); if (GEN_LOAD[g.id]) GEN_LOAD[g.id](code, k); }
+    out.textContent = k.verdict || `✓ ${k.title}`;
+    $("detail").textContent = [k.detail, where].filter(Boolean).join(" ");
+    if (k.warn && k.warn.length) { warn.hidden = false; warn.innerHTML = k.warn.map(w => `<li>The in-game editor can't make this: ${esc(w)}.</li>`).join(""); }
+    if (!quiet && GEN_LOAD[g.id]) GEN_LOAD[g.id](code, k);
   } else if (k && k.bad) {
     out.className = "verdict bad";
-    out.textContent = `✗ The retail game rejects ${code}. The Caravan version accepts it: ${k.title}.`;
+    out.textContent = `✗ Rejected by the retail game`;
+    $("detail").textContent = `The Caravan version accepts it: ${k.title}.`;
   } else {
-    out.className = "verdict bad";
     const short = code.length < 4 || (g.len > 4 && code.length > 4 && code.length < g.len);
-    out.textContent = short ? `Keep going: a code is ${g.form}.` : `✗ The game won't accept ${code}. ${(g.why && g.why(code, vlow())) || `A code is ${g.form}, and this isn't one the game takes.`}`;
+    out.className = short ? "verdict" : "verdict bad";
+    out.textContent = short ? "" : "✗ The game won't accept this";
+    $("detail").textContent = short ? "" : (g.why && g.why(code, vlow())) || "";
   }
+  show(code, k && !k.bad ? k : null);
 }
 $("check").addEventListener("input", () => runCheck());
 
-// ---------- generators (one per game) ----------
-const sel = (id, label, opts, value) => `<label class="field grow">${esc(label)}<select id="${id}">${opts.map(([v, t]) =>
+// ---------- generators (one per game): each writes its code into the code box ----------
+// an in-game item icon (docs/img/items/<g>/<name>.png) for a field label
+const ico = (g, name) => `<img class="up" src="docs/img/items/${g}/${name}.png" alt="">`;
+const lbl = (label, icon) => icon ? `<span class="lbl">${icon}${esc(label)}</span>` : esc(label);
+const sel = (id, label, opts, value, icon) => `<label class="field grow">${lbl(label, icon)}<select id="${id}">${opts.map(([v, t]) =>
   `<option value="${esc(v)}"${String(v) === String(value) ? " selected" : ""}>${esc(t)}</option>`).join("")}</select></label>`;
 const range = (a, b, f = String) => Array.from({ length: b - a + 1 }, (_, i) => [a + i, f(a + i)]);
-const box = (id, label) => `<label class="checks" style="display:flex"><input type="checkbox" id="${id}"> ${esc(label)}</label>`;
+const box = (id, label, icon) => `<label class="checks" style="display:flex"><input type="checkbox" id="${id}"> ${lbl(label, icon)}</label>`;
+// docs/img/items/sb5/ icon per SB5.ITEMS entry
+const SB5_ICONS = ["remote", "pierce", "mine", "homing", "bombpass", "softpass", "glove", "kick", "punch"];
 const gen = html => { $("gen").innerHTML = html; };
-const pickBox = '<div class="picks" id="picks" role="group" aria-label="Codes"></div><p class="hint" id="phint"></p>';
-// code buttons: the first few in a row, any more folded away; clicking one makes it the current code
-function drawPicks(codes, inline = 4) {
-  const b = c => `<button type="button" class="pick">${esc(c)}</button>`;
-  $("picks").innerHTML = codes.slice(0, inline).map(b).join("") + (codes.length > inline
-    ? `<details class="alts" style="flex-basis:100%"><summary>${codes.length - inline} more</summary><div class="picks" style="margin-top:8px">${codes.slice(inline).map(b).join("")}</div></details>` : "");
-}
-// show these codes with c pressed (keeps the list if c is already in it)
-function picksFor(c, codes, inline) {
-  if (![...$("picks").querySelectorAll(".pick")].some(b => b.textContent === c)) drawPicks(codes, inline);
-  for (const b of $("picks").querySelectorAll(".pick")) b.setAttribute("aria-pressed", b.textContent === c);
-}
-function picks(codes, hint, inline) {
-  $("picks").innerHTML = "";
-  $("picks").onclick = e => { const b = e.target.closest(".pick"); if (b) { picksFor(b.textContent, []); setCode(b.textContent); } };
-  $("phint").textContent = hint || "";
-  if (codes.length) { picksFor(codes[0], codes, inline); setCode(codes[0]); } else setCode("");
-}
-const specials = list => list.length ? sel("spec", "Or a special code", [["", "Choose…"], ...list]) : "";
-// a special code goes in the special menu, not the stage's code box
-const showSpecial = c => { const s = $("spec"); if (s) s.value = c; drawPicks([]); };
+const specials = list => list.length ? sel("spec", "Special code", [["", "Choose…"], ...list]) : "";
+// a special code goes in the special menu, not the stage controls
+const showSpecial = c => { const s = $("spec"); if (s) s.value = c; };
 const onSpecial = () => { const s = $("spec"); if (s) s.onchange = () => s.value && setCode(s.value); };
 const listOf = obj => Object.entries(obj).map(([c, t]) => [String(c).padStart(4, "0"), `${String(c).padStart(4, "0")}: ${t}`]);
 const val = id => +$(id).value;
@@ -514,10 +706,10 @@ function megaGen(NS) {
   const fn = () => {
     gen(`<div class="row">${sel("w", "Area", range(1, 6, a => a === 6 ? "6 (final)" : a))}${sel("last", "Cleared last", [])}</div>
       <fieldset class="checks" id="cl"><legend>Stages already cleared</legend></fieldset>
-      ${box("alias", "Alias spelling (a bit the game ignores; never shown by the game)")}${pickBox}`);
+      ${box("alias", "Alias spelling (a bit the game ignores)")}`);
     const boxes = () => {
       const n = NS.STAGES[val("w") - 1];
-      $("cl").innerHTML = "<legend>Stages already cleared</legend>" + (n ? range(1, n).map(([s]) => `<label><input type="checkbox" value="${s}">Stage ${s}</label>`).join("") : '<span class="hint">The final area has no stages to clear.</span>');
+      $("cl").innerHTML = "<legend>Stages already cleared</legend>" + (n ? range(1, n).map(([s]) => `<label><input type="checkbox" value="${s}">Stage ${s}</label>`).join("") : '<span class="hint">None in the final area.</span>');
     };
     const lastSel = (cl, all, want) => {
       $("last").innerHTML = all ? cl.map(s => `<option value="${s}">Stage ${s}</option>`).join("") : '<option value="">(boss codes only)</option>';
@@ -529,7 +721,7 @@ function megaGen(NS) {
       const keep = $("last").value;
       lastSel(cl, all, keep && cl.includes(+keep) ? keep : String(n));
       const code = NS.encode(w, cl, all ? val("last") : null, $("alias").checked);
-      picks(code ? [code] : [], code ? "" : "No alias exists for this one (it would be over 9999).");
+      setCode(code || "", code ? "" : "No alias exists for this one (it would be over 9999).");
     };
     $("w").onchange = () => { boxes(); f(); };
     $("cl").onchange = $("last").onchange = $("alias").onchange = f;
@@ -538,7 +730,6 @@ function megaGen(NS) {
       for (const x of $("cl").querySelectorAll("input")) x.checked = d.cleared.includes(+x.value);
       $("alias").checked = d.alias;
       lastSel(d.cleared, !!NS.STAGES[d.world - 1] && d.cleared.length === NS.STAGES[d.world - 1], d.last);
-      $("phint").textContent = "";
     };
     boxes(); f();
   };
@@ -547,24 +738,23 @@ function megaGen(NS) {
 
 const GEN = {
   sb1() {
-    gen(`<div class="row">${sel("w", "World", range(1, 6))}${sel("s", "Stage", range(1, 8, s => s === 8 ? "8 (boss)" : s))}</div>${pickBox}
-      ${specials(listOf(SB1.SPECIAL))}`);
-    const f = () => picks(SB1.codesFor(val("w"), val("s")).slice(0, 1), "After a game over on a boss stage the game shows an x-7 code.");
+    gen(`<div class="row">${sel("w", "World", range(1, 6))}${sel("s", "Stage", range(1, 8, s => s === 8 ? "8 (boss)" : s))}${specials(listOf(SB1.SPECIAL))}</div>`);
+    const f = () => setCode(SB1.encode(val("w"), val("s")));
     $("w").onchange = $("s").onchange = f; onSpecial(); f();
   },
   sb2() {
-    gen(sel("pw", "Start", SB2.CODES.map(c => [c, `${c}: ${g.check(c).title}`])) + pickBox);
-    const f = () => picks([$("pw").value]);
+    gen(sel("pw", "Start", SB2.CODES.map(c => [c, g.check(c).title])));
+    const f = () => setCode($("pw").value);
     $("pw").onchange = f; f();
   },
   sb3() {
-    gen(`${sel("st", "Stage", SB3.STAGES.map(([s]) => [s, SB3.NAMES.get(s)]))}${pickBox}${specials(listOf(SB3.SPECIAL))}`);
-    const f = () => { const s = val("st"); picks([SB3.encode(s, 0)]); };
+    gen(`<div class="row">${sel("st", "Stage", SB3.STAGES.map(([s]) => [s, SB3.NAMES.get(s)]))}${specials(listOf(SB3.SPECIAL))}</div>`);
+    const f = () => setCode(SB3.encode(val("st"), 0));
     $("st").onchange = f; onSpecial(); f();
   },
   sb4() {
-    gen(`${sel("st", "Stage", range(0, 37, i => SB4.decode(SB4.encode(i)).stage + (i === 37 ? " (final boss)" : "")))}${pickBox}${specials(listOf(SB4.SPECIAL))}`);
-    const f = () => picks([SB4.encode(val("st"))]);
+    gen(`<div class="row">${sel("st", "Stage", range(0, 37, i => SB4.decode(SB4.encode(i)).stage + (i === 37 ? " (final boss)" : "")))}${specials(listOf(SB4.SPECIAL))}</div>`);
+    const f = () => setCode(SB4.encode(val("st")));
     $("st").onchange = f; onSpecial(); f();
   },
   sb5() {
@@ -573,29 +763,18 @@ const GEN = {
       <div class="group-label" style="margin-top:6px">Character password (Config Battle)</div>
       <div class="row">${sel("body", "Body", SB5.BODIES.map((b, i) => [i, i === 9 ? b + " (hidden)" : b]))}
         ${sel("color", "Colour", SB5.COLORS.map((c, i) => [i, c]))}</div>
-      <div class="row">${sel("bomb", "Bombs", range(0, 7, v => v + 1))}${sel("fire", "Fire", range(0, 15, v => v + 2))}${sel("speed", "Speed", range(0, 7, v => v + 1))}</div>
+      <div class="row">${sel("bomb", "Bombs", range(0, 7, v => v + 1), 0, ico("sb5", "bomb"))}${sel("fire", "Fire", range(0, 15, v => v + 2), 0, ico("sb5", "fire"))}${sel("speed", "Speed", range(0, 7, v => v + 1), 0, ico("sb5", "speed"))}</div>
       <fieldset class="checks" id="items"><legend>Items</legend>${SB5.ITEMS.map((t, i) =>
-        `<label><input type="checkbox" value="${i}">${esc(t)}</label>`).join("")}</fieldset>
-      <p class="hint">Code: <b id="cc" style="font:800 20px var(--mono);color:var(--ink);letter-spacing:.1em"></b></p>
-      <ul class="warn" id="gwarn" hidden></ul>`);
+        `<label><input type="checkbox" value="${i}">${lbl(t, ico("sb5", SB5_ICONS[i]))}</label>`).join("")}</fieldset>`);
     $("opt").onchange = () => $("opt").value && setCode($("opt").value);
     const fields = () => ({ body: val("body"), color: val("color"), bomb: val("bomb"), fire: val("fire"), speed: val("speed"),
       items: [...$("items").querySelectorAll("input")].reduce((m, x) => m | (x.checked ? 1 << +x.value : 0), 0) });
-    // show the code and the codec's warnings for values the in-game editor can't make
-    const show = fl => {
-      const code = SB5.encode(fl), w = SB5.warnings(fl);
-      $("cc").textContent = code;
-      $("gwarn").hidden = !w.length;
-      $("gwarn").innerHTML = w.map(x => `<li>The in-game editor can't make this: ${esc(x)}.</li>`).join("");
-      return code;
-    };
-    const f = () => setCode(show(fields()));
+    const f = () => { $("opt").value = ""; setCode(SB5.encode(fields())); };
     for (const id of ["body", "color", "bomb", "fire", "speed"]) $(id).onchange = f;
     $("items").onchange = f;
     GEN.sb5.fill = fl => {
       for (const id of ["body", "color", "bomb", "fire", "speed"]) $(id).value = fl[id];
       for (const x of $("items").querySelectorAll("input")) x.checked = !!(fl.items >> +x.value & 1);
-      show(fl);
     };
     f();
   },
@@ -603,27 +782,98 @@ const GEN = {
   pce94: megaGen(PCE94),
   pce90() {
     gen(`<div class="row">${sel("r", "Round", range(1, 8))}${sel("s", "Stage", range(1, 8))}</div>
-      <div class="row">${sel("b", "Bombs", range(1, 10))}${sel("f", "Fire", range(1, 15, v => v > 5 ? v + " (over the in-play 5)" : v))}</div>
-      ${box("sk", "Roller skate")}${pickBox}`);
-    const codes = () => PCE90.gameCodes(val("r"), val("s"), val("b"), val("f"), $("sk").checked ? 1 : 0);
-    const f = () => picks(codes().slice(0, 1));
+      <div class="row">${sel("b", "Bombs", range(1, 10), 1, ico("pce90", "bomb"))}${sel("f", "Fire", range(1, 15, v => v > 5 ? v + " (over the in-play 5)" : v), 1, ico("pce90", "fire"))}</div>
+      ${box("sk", "Roller skate", ico("pce90", "skate"))}`);
+    const f = () => setCode(PCE90.gameCodes(val("r"), val("s"), val("b"), val("f"), $("sk").checked ? 1 : 0)[0]);
     $("r").onchange = $("s").onchange = $("b").onchange = $("f").onchange = $("sk").onchange = f;
-    GEN.pce90.codes = codes;
     f();
+  },
+  nes1() {
+    gen(`<div class="row">${sel("st", "Stage", range(1, 50))}</div>
+      <div class="row">${sel("b", "Bombs", range(1, 16, v => v > 10 ? v + " (over the in-play 10)" : v), 1, ico("nes1", "bomb"))}
+      ${sel("f", "Fire", range(1, 15, v => v > 5 ? v + " (over the in-play 5)" : v), 1, ico("nes1", "fire"))}</div>
+      ${box("sp", "Speed", ico("nes1", "speed"))}${box("wp", "Wall pass", ico("nes1", "wallpass"))}${box("dt", "Detonator", ico("nes1", "detonator"))}
+      ${box("fp", "Flame pass", ico("nes1", "flamepass"))}${box("rv", "Mark the exit and item")}`);
+    const f = () => setCode(NES1.encode({ stage: val("st"), bombs: val("b"), fire: val("f"),
+      speed: +$("sp").checked, wallPass: +$("wp").checked, detonator: +$("dt").checked, flamePass: +$("fp").checked, reveal: +$("rv").checked }));
+    for (const id of ["st", "b", "f", "sp", "wp", "dt", "fp", "rv"]) $(id).onchange = f;
+    GEN.nes1.fill = d => {
+      if (d.stage >= 1 && d.stage <= 50) $("st").value = d.stage;
+      $("b").value = d.bombs; $("f").value = Math.max(1, d.fire);
+      $("sp").checked = !!d.speed; $("wp").checked = d.wallPass === 1; $("dt").checked = !!d.detonator; $("fp").checked = !!d.flamePass; $("rv").checked = !!d.reveal;
+    };
+    f();
+  },
+  nes2() {
+    gen(`<div class="row">${sel("pv", "Version", [["us", "USA"], ["jp", "Japan"]], NES2_VER)}${sel("a", "Area", range(1, 6))}${sel("s", "Stage", range(1, 8))}</div>
+      <div class="row">${sel("b", "Bombs", range(1, 8), 1, ico("nes2", "bomb"))}${sel("f", "Fire", range(1, 5), 1, ico("nes2", "fire"))}</div>
+      <div class="row">${sel("spec", "Secret code", [["", "Choose…"]])}</div>`);
+    const secrets = () => { $("spec").innerHTML = '<option value="">Choose…</option>' + NES2.SECRETS.map(([, e, n]) => {
+      const c = NES2.secretCode(n, NES2_VER);
+      return `<option value="${c}">${c}: ${esc(cap(e.replace(/: \$.*/, "")))}</option>`; }).join(""); };
+    const f = () => { NES2_VER = $("pv").value; showSpecial(""); setCode(NES2.encode({ area: val("a"), stage: val("s"), bombs: val("b"), fire: val("f") }, NES2_VER)); };
+    $("pv").onchange = () => { NES2_VER = $("pv").value; secrets(); f(); };
+    for (const id of ["a", "s", "b", "f"]) $(id).onchange = f;
+    GEN.nes2.fill = (d, v) => { $("pv").value = NES2_VER = v; secrets(); $("a").value = d.area; $("s").value = d.stage; $("b").value = d.bombs; $("f").value = d.fire; };
+    secrets(); onSpecial(); f();
+  },
+  gb1() {
+    const g1 = GAMES.find(x => x.id === "gb1");
+    gen(`<div class="row">${sel("r", "Round", range(1, 8))}${sel("s", "Stage", range(1, 4, s => s === 4 ? "4 (boss)" : s))}
+      ${sel("pl", "Player", [["bomberman", "Bomberman"], ["wario", "Wario (Wario Blast)"]])}</div>
+      <div class="row">${specials(["4622", "5656", "2264", "6565"].map(c => [c, `${c}: ${g1.check(c, "wario").title}`]))}</div>`);
+    const f = () => { showSpecial(""); setCode(GB1.encode(val("r"), val("s"), $("pl").value, "wario")); };
+    $("r").onchange = $("s").onchange = $("pl").onchange = f;
+    onSpecial(); f();
+  },
+  gb2() {
+    const g2 = GAMES.find(x => x.id === "gb2");
+    gen(`<div class="row">${sel("w", "World", range(1, 8))}${specials(["2145", "5656", "4622"].map(c => [c, `${c}: ${g2.check(c).title}`]))}</div>`);
+    const f = () => { showSpecial(""); setCode(GB2.encode(val("w"))); };
+    $("w").onchange = f;
+    onSpecial(); f();
+  },
+  gb3() {
+    gen(`<div class="row">${sel("a", "Area", GB3.AREAS.map((n, i) => [i, n]))}${sel("s", "Stage", range(1, 6))}${specials([[GB3.BOSS_ATTACK, GB3.BOSS_ATTACK + ": boss attack"]])}</div>
+      <fieldset class="checks" id="cl"></fieldset>
+      <fieldset class="checks" id="shop"><legend>Bought in the shop (price)</legend>${GB3_SHOP.map(([icon, n], i) =>
+        `<label><input type="checkbox" value="${i}">${lbl(`${n} (${GB3.SHOP_W[i]})`, ico("gb3", icon))}</label>`).join("")}</fieldset>`);
+    // areas are played in tiers (Wood/City/Ice, then Sand/Lava/Aqua, then Evil): earlier tiers count as cleared, the rest of this one is up to you
+    const boxes = () => {
+      const a = val("a"), t = Math.floor(a / 3) * 3;
+      const free = a < 6 ? [t, t + 1, t + 2].filter(i => i !== a) : [];
+      $("cl").innerHTML = "<legend>Also cleared in this tier</legend>" + (free.length ? free.map(i => `<label><input type="checkbox" value="${i}">${GB3.AREAS[i]}</label>`).join("")
+        : '<span class="hint">Evil comes after every other area.</span>');
+    };
+    const f = () => {
+      showSpecial("");
+      const cl = [0, 0, 0, 0, 0, 0, 0];
+      for (const x of $("cl").querySelectorAll("input:checked")) cl[+x.value] = 1;
+      const shop = [...$("shop").querySelectorAll("input:checked")].reduce((m, x) => m | 1 << +x.value, 0);
+      const code = GB3.encode(val("a"), val("s"), cl, shop);
+      setCode(code || "", code ? "" : "Not enough capsules: the cleared areas don't pay for all of that.");
+    };
+    $("a").onchange = () => { boxes(); f(); };
+    $("s").onchange = $("cl").onchange = $("shop").onchange = f;
+    GEN.gb3.fill = d => {
+      $("a").value = d.area; $("s").value = d.stage; boxes();
+      for (const x of $("cl").querySelectorAll("input")) x.checked = !!d.cleared[+x.value];
+      for (const x of $("shop").querySelectorAll("input")) x.checked = !!(d.shop >> +x.value & 1);
+    };
+    onSpecial(); boxes(); f();
   },
   pce93() {
     gen(`<div class="row">${sel("pv", "Version", [["us", "USA"], ["jp", "Japan"], ["sp", "Special Version"]], PCE93_VER)}${sel("w", "World", range(1, 7))}${sel("s", "Stage", range(1, 8))}</div>
-      <div class="row">${sel("b", "Bombs", range(1, 10))}${sel("f", "Fire", range(1, 5))}${sel("sp", "Speed", [[0, "0 (no skates)"], [1, "1"], [2, "2 (the game's cap)"], [3, "3 (above the cap)"]])}</div>
+      <div class="row">${sel("b", "Bombs", range(1, 10), 1, ico("pce93", "bomb"))}${sel("f", "Fire", range(1, 5), 1, ico("pce93", "fire"))}${sel("sp", "Speed", [[0, "0 (no skates)"], [1, "1"], [2, "2 (the game's cap)"], [3, "3 (above the cap)"]], 0, ico("pce93", "skate"))}</div>
       <fieldset class="checks" id="cl"><legend>Planets already cleared</legend>${range(1, 6).map(([p]) =>
-        `<label><input type="checkbox" value="${p - 1}">Planet ${p}</label>`).join("")}</fieldset>${pickBox}`);
+        `<label><input type="checkbox" value="${p - 1}">Planet ${p}</label>`).join("")}</fieldset>`);
     const f = () => {
       PCE93_VER = $("pv").value;
       const st = { world: val("w"), stage: val("s"), bombs: val("b"), fire: val("f"), speed: val("sp"),
         cleared: [...$("cl").querySelectorAll("input:checked")].reduce((m, x) => m | 1 << +x.value, 0) };
-      let code = null;
+      let code = "";
       try { code = PCE93.encode(st, PCE93_VER); } catch { /* the Special Version can't hold planets 1-4 all cleared, or 5-6 with speed 3 */ }
-      picks(code ? [code] : [], code ? (PCE93_VER === "sp" ? "The Special Version has no password screen of its own." : "")
-        : "The Special Version rejects this: planets 1-4 all cleared, or planets 5-6 with speed 3.");
+      setCode(code, code ? "" : "The Special Version can't hold this: planets 1-4 all cleared, or planets 5-6 with speed 3.");
     };
     for (const id of ["pv", "w", "s", "b", "f", "sp", "cl"]) $(id).onchange = f;
     GEN.pce93.fill = (d, v) => {
@@ -634,90 +884,120 @@ const GEN = {
     f();
   },
 };
-// a valid code typed into the checker also sets the generator to match
+// a valid code typed into the box also sets the generator to match
 const GEN_LOAD = {
-  sb1: c => { const d = SB1.decode(c); if (!d) return showSpecial(c); $("w").value = d.world; $("s").value = d.stage; picksFor(c, [c]); },
-  sb2: c => { $("pw").value = c; picksFor(c, [c]); },
-  sb3: c => { const d = SB3.decode(c); if (d.kind !== "stage") return showSpecial(c); $("st").value = d.stage; picksFor(c, [c]); },
-  sb4: c => { const d = SB4.decode(c); if (d.kind !== "stage") return showSpecial(c); $("st").value = d.index; picksFor(c, [c]); },
-  sb5: (c, k) => { if (k.fields) GEN.sb5.fill(k.fields); else $("opt").value = c; },
-  mega: (c, k) => { GEN.mega.fill(k.fields); picksFor(c, [c]); },
-  pce94: (c, k) => { GEN.pce94.fill(k.fields); picksFor(c, [c]); },
+  sb1: c => { const d = SB1.decode(c); if (!d) return showSpecial(c); $("w").value = d.world; $("s").value = d.stage; showSpecial(""); },
+  sb2: c => { $("pw").value = c; },
+  sb3: c => { const d = SB3.decode(c); if (d.kind !== "stage") return showSpecial(c); $("st").value = d.stage; showSpecial(""); },
+  sb4: c => { const d = SB4.decode(c); if (d.kind !== "stage") return showSpecial(c); $("st").value = d.index; showSpecial(""); },
+  sb5: (c, k) => { if (k.fields) { GEN.sb5.fill(k.fields); $("opt").value = ""; } else $("opt").value = c; },
+  mega: (c, k) => GEN.mega.fill(k.fields),
+  pce94: (c, k) => GEN.pce94.fill(k.fields),
   pce90: (c, k) => {
-    if (!k.fields) return picksFor(c, [c]);
+    if (!k.fields) return;
     const d = k.fields;
     $("r").value = d.round; $("s").value = d.stage; $("b").value = d.bombs; $("f").value = d.fire; $("sk").checked = !!d.speed;
-    picksFor(c, [c]);
   },
-  pce93: (c, k) => { GEN.pce93.fill(k.fields, k.ver); picksFor(c, [c]); },
+  pce93: (c, k) => GEN.pce93.fill(k.fields, k.ver),
+  nes1: (c, k) => GEN.nes1.fill(k.fields),
+  nes2: (c, k) => {
+    if (k.fields) { GEN.nes2.fill(k.fields, k.ver); return showSpecial(""); }
+    if (k.ver && k.ver !== NES2_VER) { $("pv").value = k.ver; $("pv").onchange(); }
+    showSpecial(c);
+  },
+  gb1: (c, k) => { if (!k.fields) return showSpecial(c); $("r").value = k.fields.round; $("s").value = k.fields.stage; $("pl").value = k.fields.player; showSpecial(""); },
+  gb2: (c, k) => { if (!k.fields) return showSpecial(c); $("w").value = k.fields.world; showSpecial(""); },
+  gb3: (c, k) => { if (!k.fields) return showSpecial(c); GEN.gb3.fill(k.fields); showSpecial(""); },
 };
 
 // ---------- codes list ----------
-const shotFor = (id, code) => (SHOTS[id] || []).find(f => new RegExp(`(^|_)${code.replace(/[^\w]/g, "")}(_|\\.)`).test(f));
-const tag = s => s === "new" ? '<span class="tag">★ New</span>' : s === "fixed" ? '<span class="tag fixed">Fixed</span>' : "";
-function card(e, k, alts) {
+// proof screenshot: the code list's img field, or a docs/img/<g>/ file named after the code
+const shotFor = (id, e) => e.img || (isPw(g, e) ? (SHOTS[id] || []).find(f => new RegExp(`(^|_)${e.code.replace(/[^\w]/g, "")}(_|\\.)`).test(f)) : "");
+const thumb = (e, f) => f ? `<button type="button" class="thumb" data-img="docs/img/${g.id}/${esc(f)}" data-cap="${esc(e.code)}"><img src="docs/img/${g.id}/${esc(f)}" alt="Screenshot: ${esc(e.code)}" loading="lazy"></button>` : "";
+const mark = s => s === "new" ? '<span class="mk">★ New</span>' : s === "fixed" ? '<span class="mk fixed">Fixed</span>' : "";
+const ipsList = files => files.length ? `<ul class="ips">${files.map(f =>
+  `<li><a href="patches/${esc(f)}" download>${esc(f)}</a> <span>for ${esc(PATCH_ROM[f] || "?")}</span></li>`).join("")}</ul>` : "";
+// with a version chip on, show only that version's patch when there is one
+const forVer = files => { const v = vlow(), m = files.filter(f => f.endsWith(`_${v}.ips`)); return v && m.length ? m : files; };
+const vtext = e => e.versions.join(" ") + " " + e.code + " " + e.effect + " " + (e.note || "");
+function card(e, k, home, patchesShown) {
   const allV = new Set(CODES[g.id].flatMap(x => x.versions)).size;
-  const pw = isPw(g, e.code) && k;
-  const shot = pw && shotFor(g.id, e.code);
+  const pw = isPw(g, e) && k;
   const badge = e.status === "new" ? '<span class="badge">★ New</span>' : e.status === "fixed" ? '<span class="badge fixed">Fixed</span>' : "";
-  const vers = e.versions.length && e.versions.length < allV ? e.versions.map(v => `<span class="ver">${esc(verName(v))}</span>`).join("")
-    : e.versions.length ? "" : '<span class="ver">no version</span>';
-  const vtext = a => a.versions.join() !== e.versions.join() ? `<span class="tag v">${esc(a.versions.map(verName).join(", "))}</span>` : "";
-  const altHTML = alts && alts.length ? `<details class="alts"><summary>${alts.length} other code${alts.length > 1 ? "s" : ""} for this</summary><ul>${alts.map(a =>
-    `<li><b>${esc(a.code)}</b>${tag(a.status)}${vtext(a)}<span>${esc(a.effect)}</span></li>`).join("")}</ul></details>` : "";
-  return `<article class="code-card">${badge}<h3 class="${pw ? "pw" : ""}">${esc(e.code)}</h3><p>${esc(e.effect)}</p>
-    ${e.note ? `<p class="note">${esc(e.note)}</p>` : ""}
-    <p class="meta">${vers}<span>${esc(VERIFIED[e.verified] || e.verified || "")}</span>${shot ? `<a href="docs/img/${g.id}/${esc(shot)}" target="_blank" rel="noopener">screenshot</a>` : ""}</p>
-    ${pw ? `<button type="button" class="use" data-code="${esc(e.code)}">Use this code</button>` : ""}${altHTML}</article>`;
+  const vers = e.versions.length && e.versions.length < allV && !ver ? e.versions.map(v => `<span class="ver">${esc(verName(v))}</span>`).join("")
+    : e.versions.length || e.section === "demo8" ? "" : '<span class="ver">no version</span>';
+  const vf = VERIFIED[e.verified];
+  const ips = patchesShown ? [] : forVer(patchLinks(g.id, vtext(e)));
+  const title = pw ? `<button type="button" class="usecode" data-code="${esc(e.code)}" title="Put in the code box">${esc(e.code)}</button>` : esc(e.code);
+  return `<article class="code-card">${badge}${home ? `<span class="home">${esc(home)}</span>` : ""}<h3 class="${pw ? "pw" : ""}">${title}</h3><p>${esc(e.effect)}</p>
+    ${e.note ? `<p class="note">${esc(e.note)}</p>` : ""}${thumb(e, shotFor(g.id, e))}${ipsList(ips)}
+    <p class="meta">${vf ? icon(vf[0], vf[1]) : ""}${vers}</p></article>`;
+}
+function table(rows) {
+  // the code list's own words, minus "Start at" and the starting kit every stage code shares
+  const name = x => /^Start at /i.test(x.e.effect) ? cap(x.e.effect.replace(/^Start at /i, "").replace(/ with 1 bomb, fire 1(, normal speed, no planets cleared)?$/, "")) : x.e.effect || x.k.title;
+  return `<table class="stages"><thead><tr><th scope="col">Stage</th><th scope="col">Code</th><th scope="col"><span class="vh">Mark</span></th></tr></thead><tbody>${rows.map(x =>
+    `<tr><td>${esc(name(x))}</td><td class="c"><button type="button" class="usecode" data-code="${esc(x.e.code)}" title="Put in the code box">${esc(x.e.code)}</button></td>
+      <td class="m">${mark(x.e.status)}${thumb(x.e, shotFor(g.id, x.e))}</td></tr>`).join("")}</tbody></table>`;
 }
 function renderCodes() {
   const q = $("q").value.trim().toLowerCase(), only = $("only").value;
-  const list = CODES[g.id].map((e, i) => ({ e, i, k: isPw(g, e.code) ? g.check(e.code, (e.versions[0] || "").toLowerCase()) || g.check(e.code) : null, s: section(g, e) }))
-    .filter(({ e }) => (!ver || e.versions.includes(ver)) && (!only || e.status === only));
+  const list = CODES[g.id].map((e, i) => ({ e, i, k: isPw(g, e) ? g.check(e.code, (e.versions[0] || "").toLowerCase()) || g.check(e.code) : null, s: section(g, e) }))
+    .filter(({ e }) => (!ver || !e.versions.length || e.versions.includes(ver)) && (!only || e.status === only));
   const hit = ({ e, k }) => !q || [e.code, e.effect, e.note, k && k.title].join(" ").toLowerCase().includes(q);
-  const names = [...ORDER, ...new Set(list.map(x => x.s).filter(s => !ORDER.includes(s)))];
-  let html = "", shown = 0, total = 0, nNew = 0;
-  for (const s of names) {
-    const items = list.filter(x => x.s === s);
-    if (!items.length) continue;
-    items.sort((a, b) => ((a.k && a.k.order) || 0) - ((b.k && b.k.order) || 0) || a.i - b.i);
-    let cards = [];
-    total += q ? items.length : 0;
-    if (!q) {
-      // one card per stage (or state): the code the game shows (Known/Fixed) stands for the rest, which the checker still accepts
-      const groups = new Map();
-      for (const x of items) { const key = x.k && x.k.group ? "g" + x.k.group : "c" + x.i; if (!groups.has(key)) groups.set(key, []); groups.get(key).push(x); }
-      for (const grp of groups.values()) {
-        const lead = grp.find(x => x.e.status === "known" || x.e.status === "fixed") || grp[0];
-        cards.push(card(lead.e, lead.k));
-        if (lead.e.status === "new") nNew++;
-      }
-      shown += groups.size;
-    } else {
-      const hits = items.filter(hit);
-      cards = hits.map(x => card(x.e, x.k));
-      shown += hits.length;
-    }
-    if (!cards.length) continue;
-    const note = g.notes && g.notes[s];
-    html += `<section class="sect"><h2>${esc(s)}</h2>${note ? `<p class="hint">${esc(note)}</p>` : ""}<div class="code-list">${cards.join("")}</div></section>`;
+  const isRow = x => x.k && x.k.type === "stage";
+  // one row per stage (or state) unless searching: a Fixed code, else the code the game shows (Known), stands for the rest
+  const collapse = items => {
+    if (q) return items.filter(hit);
+    const groups = new Map();
+    for (const x of items) { const key = x.k && x.k.group ? "g" + x.k.group : "c" + x.i; if (!groups.has(key)) groups.set(key, []); groups.get(key).push(x); }
+    return [...groups.values()].map(grp => grp.find(x => x.e.status === "fixed") || grp.find(x => x.e.status === "known") || grp[0]);
+  };
+  const order = x => (x.k && x.k.order) || 0;
+  const sorted = items => items.sort((a, b) => order(a) - order(b) || a.i - b.i);
+  const names = [...new Set([...ORDER, ...list.map(x => x.s)])];
+  // finds first: New and Fixed codes other than stage codes (those keep their mark in the stage table)
+  const finds = q || only ? [] : list.filter(x => !isRow(x) && (x.e.status === "new" || x.e.status === "fixed"));
+  const rest = list.filter(x => !finds.includes(x));
+  let html = "", shown = 0;
+  const sect = (title, body, note) => `<section class="sect" data-s="${esc(title)}"><h2>${esc(title)}</h2>${note ? `<p class="hint">${esc(note)}</p>` : ""}${body}</section>`;
+  if (finds.length) {
+    const fs = names.flatMap(s => finds.filter(x => x.s === s));
+    shown += fs.length;
+    html += sect("What's new", `<div class="code-list">${fs.map(x => card(x.e, x.k, x.s)).join("")}</div>`);
   }
+  for (const s of names) {
+    const items = rest.filter(x => x.s === s);
+    if (!items.length) continue;
+    const rows = collapse(sorted(items.filter(isRow))), cards = collapse(sorted(items.filter(x => !isRow(x))));
+    if (!rows.length && !cards.length) continue;
+    shown += rows.length + cards.length;
+    const ips = s === "Patches" ? forVer([...new Set(items.flatMap(x => patchLinks(g.id, vtext(x.e))))]) : [];
+    html += sect(s, ipsList(ips) + (rows.length ? table(rows) : "") + (cards.length ? `<div class="code-list">${cards.map(x => card(x.e, x.k, "", s === "Patches")).join("")}</div>` : ""),
+      g.notes && g.notes[s]);
+  }
+  // the stage tables go last
   $("codes").innerHTML = html || '<p class="empty">No codes match.</p>';
-  $("sum").textContent = q ? `${shown} of ${total} codes match.` : `${shown} codes${nNew ? `, ${nNew} of them ★ New` : ""}.`;
+  for (const t of [...$("codes").querySelectorAll(".sect")].filter(x => x.querySelector(".stages"))) $("codes").appendChild(t);
+  // then the 8-player demo, a separate program shown on Mega Bomberman's page
+  for (const t of $("codes").querySelectorAll('.sect[data-s="8-Player Demo (prototype)"]')) $("codes").appendChild(t);
+  $("sum").textContent = q ? `${shown} match.` : "";
+  $("sum").hidden = !q;
 }
 $("q").addEventListener("input", renderCodes);
 $("only").onchange = renderCodes;
 $("codes").onclick = e => {
-  const b = e.target.closest(".use");
-  if (!b) return;
-  $("check").value = b.dataset.code; runCheck();
-  $("now").scrollIntoView({ behavior: "smooth", block: "center" });
+  const b = e.target.closest(".usecode"), t = e.target.closest(".thumb");
+  if (b) { $("check").value = b.dataset.code; runCheck(); $("pwpanel").scrollIntoView({ behavior: "smooth", block: "start" }); }
+  if (t) { $("shot_img").src = t.dataset.img; $("shot_img").alt = "Screenshot: " + t.dataset.cap; $("shot_cap").textContent = t.dataset.cap; $("shot").showModal(); }
 };
+$("shot_close").onclick = () => $("shot").close();
+$("shot").onclick = e => { if (e.target === $("shot")) $("shot").close(); };
 document.addEventListener("keydown", e => {
-  if (e.key === "/" && !e.target.matches("input, select, textarea")) { e.preventDefault(); $("q").focus(); }
+  if (e.key === "/" && !e.target.matches("input, select, textarea") && g) { e.preventDefault(); $("q").focus(); }
 });
 
-pickGame(g.id);
+if (GAMES.some(x => x.id === saved.game)) pickGame(saved.game);
 </script>
 </body>
 </html>

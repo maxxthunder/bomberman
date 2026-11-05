@@ -27,7 +27,7 @@ the menu is さいしょから "from the start", つづきから "continue", フ
 | `$7E:6248` | scene to run after the password screen: 2 back to options, 3 Normal menu, 4 Battle menu, `$67` boss rush, `$AA`/`$AB` good/bad ending, `$AC`-`$AE` debug rooms |
 | `$7E:1031` | scene / room being started; `$102F` is its copy for the running room (`$C5:3BFF`). Scenes index the script table at `$C6:0000` (3-byte pointers) |
 | `$7E:15D2`/`$15EA` | player speed, 16-bit (`$00E0` normal start, `$0200` full power) |
-| `$7E:4ED5` | player item bits: 0x01 remote control (fuse `$FF`, `$C4:3059`), 0x02 kick, 0x04 power glove; 0x10, 0x20, 0x40 are the other bomb types (one at a time, `$C5:438C`) |
+| `$7E:4ED5` | player item bits: 0x01 remote control (fuse `$FF`, `$C4:3059`), 0x02 kick, 0x04 power glove; 0x10 pierce, 0x20 land mine (fuse `$FE`), 0x40 the fourth bomb type (fuse +30, by elimination homing); the bomb types are exclusive (`$C5:438C`) |
 | `$7E:6253` [`$6271`] | invincibility (no password sets it; see "Cut passwords") |
 | `$7E:6254` [`$6272`] | boss rush / battle: start fully powered |
 | `$7E:6273` [`$6291`] | every option code ever entered (bits as in the table below), saved to SRAM `$1E8` |
@@ -58,7 +58,7 @@ ORs the code's bit into `$6273` (masked to 7 bits) and into `$6274` (after clear
 | 4622 | `$C5:68C4` | 0x01 | `$6246=1`, Battle menu: start positions closer to the centre | Known |
 | 0413 | `$C5:68CA` | 0x02 | `$6246=2`, Battle menu: different hard-block/item layout | Known |
 | 0926 | `$C5:68D0` | 0x04 | `$6246=3`, Battle menu: start positions moved in, less open space | **Fixed**: it does not unlock Gold Bomberman |
-| 2657 | `$C5:6928` | 0x08 | Normal menu; stage starts fully powered (`$C4:2926`): 8 bombs (`$17CA`), 8 fire (`$4EBD`), speed `$0200` (`$15EA`:`$15D2`), and `$4ED5`=7 = remote control + kick + power glove. Round 1 read `$4ED5`=7 as "speed 7"; it is the item bitfield (see below) | Known |
+| 2657 | `$C5:6928` | 0x08 | Normal menu; stage starts fully powered (`$C4:2926`): 8 bombs (`$17CA`), 8 fire (`$4EBD`), speed `$0200` (`$15EA`:`$15D2`), and `$4ED5`=7 = remote control + kick + power glove. Round 1 read `$4ED5`=7 as "speed 7"; it is the item bitfield (see below). In play (A drops a bomb), a 2657 bomb's fuse `$0E40` stays `$FF` for 300 frames and B sets it off; without the code the fuse counts down from `$82`. Kick and glove: RAM bits only, not tried in play | Known |
 | 3879 | `$C5:695E` | (0x80) | boss rush: mode `$67`, `$6254=0`, straight into a boss arena | Known |
 | 1103 | `$C5:68E0` | 0x10 | `$6247=4`, Battle menu: COM LEVEL gains スーパー (super). Bit 0x10 of SRAM `$1E8` brings it back at every boot (`$C0:486D`), so it only needs entering once | Known |
 | 0110 | `$C5:6997` | 0x20 | Battle menu: every soft block holds a power-up | Known |
@@ -127,7 +127,7 @@ checksum, `$C5:6789` fields), `$C5:6545` encodes. They are script natives 91 and
 | 7-9 | bomb | `$62E6` | 0-7 | value+1 |
 | 10-13 | fire | `$62E7` | 0-6 | value+2 |
 | 14-16 | speed | `$62E8` | 0-7 | value+1 |
-| 17-25 | items 0-8 | `$62E9-$62F1` | any | Heart, Pierce bomb, Land mine, Remote bomb, Bomb pass, Soft-block pass, Power glove, Kick, Punch (named from the editor icons) |
+| 17-25 | items 0-8 | `$62E9-$62F1` | any | Remote control, Pierce bomb, Land mine, Homing bomb, Bomb pass, Soft-block pass, Power glove, Kick, Punch (round 2: item 0 is the remote control, because it sets `$4ED5` bit 0x01, the never-expiring fuse, and GameFAQs lists a remote for U04GJL; item 3 sets bit 0x40, the fourth bomb type, named homing after the debug menu's BOM HOMI. The order matches the editor's icon row) |
 | 26-29 | checksum | | | sum of every 4-bit nibble of the 26 data bits (bytes 0-2 and bits 0-1 of byte 3), mod 16 (`$C5:6759`) |
 
 - Bodies: 0 Bomberman, 1 Bomber Woof, 2 Dave Bomber, 3 Gary Bomber, 4 Pirate Bomber, 5 Muscle Bomber,
@@ -145,19 +145,22 @@ per-body art and sound (portrait, select icon, victory voice) were never finishe
 Mesen his editor portrait is a stand-in red Bomberman. TCRF blames the freeze when he wins a single
 match on the missing voice clip.
 
-What the code shows (round 2): the in-match body is `$16C2,X` (`$625F,X`−1, `$C4:2A3C`). Two
-per-body animation tables have exactly 9 entries, so body 9 reads the next instruction byte as an
-animation number, which `$C0:11EC` then looks up:
+**Confirmed in Mesen (round 2):** a Battle Royal single match with BATTLE set to 1, P1 set to body 9
+(`$625F`=`$0A`; the in-match body `$16C2` is then 9), the other four killed by bombs placed on their
+tiles (P1 kept alive by forcing `$6253` only for P1 at the hit check `$C4:2D2B`). The VICTORY screen
+(scene 5) appears and then freezes for good: the same frame for 30+ seconds, with the CPU looping at
+`$C0:0E82`-`$C0:0E8E`, waiting for the sound CPU to echo a command on `$2140`. The same run with body 0
+goes on to Bowling Bomber (`$A8`) and back to the Battle menu.
 
-| Reader | Table | Bodies 0-8 | Body 9 reads |
-|---|---|---|---|
-| `$C5:12DD` | `$C5:12FE` | `1E 1F 20 21 22 23 26 24 25` | `$5A` (the `PHY` that follows) |
-| `$C5:1307` | `$C2:1470` | `14 15 16 17 18 19 1C 1A 1B` | `$B7` (an `LDA [$0D],Y`) |
+**Cause: the victory voice table has only 9 entries.** The victory script at `$C6:7963` reads the
+winner's character (`$625F`,X − 1) and looks up the voice in a byte table at `$C6:74D1`: `05 06 07 08
+09 0A 0B 0C 0D` for bodies 0-8. Body 9 reads the next byte, `$EF` (part of the following script),
+and plays "voice" `$EF` (sound call `$03EF`, `$C0:0D5F`). Its entry in the voice-pointer table
+`$80:8765` is junk (`$0010`), so the sample upload that follows sends the sound driver garbage, and
+the next sound command (`$0247`) is never acknowledged. So TCRF is right: it's the missing victory
+voice. The two 9-entry animation tables suggested last round (`$C5:12FE`, `$C2:1470`) are not the cause.
 
-The per-body tables at `$80:BB30`/`BB3A`/`BB44`/`BB4E` have 10 entries and do cover him. **Not
-verified:** I could not get a COM-free win in a scripted match (forcing the other players' state
-bits didn't end the round), so I didn't see the freeze or which of these reads it, and the voice
-upload path was not traced. The two 9-entry tables are the best lead.
+![Battle VICTORY with body 0 (left) and Subordinate Bomber (middle, and right 30 s later, frozen)](img/sb5/subordinate_victory_freeze.png)
 
 ![KR3MT9 (boss palette, junk color name) and 23D830 (body 9, red Bomberman stand-in portrait)](img/sb5/charpw_boss_palette_KR3MT9.png)
 ![23D830](img/sb5/charpw_subordinate_23D830.png)
@@ -181,7 +184,7 @@ and Python codecs agree on all 815 and round-trip 4,096 field sets (`tools/sb5/t
 | D24GJN W04VJ4 D344J6 W24G0N W24LKN W04V0T W1440E D24L1A (Alchav, no effects given) | all OK | Iron Mask Bomber with full stats (8 bombs, fire 8, speed 8) and five items each; see `sb5_codes.json` |
 | JWLPVP | OK | Subordinate Bomber, boss palette, 1 bomb, fire 8, speed 1, no items |
 | KR3MT9 QM3PDF RMHPCN TDK4VU VM6NVQ WM6XC5 YH1PLQ | OK | the posted bosses, boss palette |
-| UO4GJL (Gold Bomberman) | **Fixed**: the letter O can't be typed (no O on the grid) | `U04GJL`, with a zero. It's a yellow Bomberman with full stats plus Heart, Bomb pass, Soft-block pass, Power glove and Punch. It is not the real Gold Bomberman, who isn't a config character |
+| UO4GJL (Gold Bomberman) | **Fixed**: the letter O can't be typed (no O on the grid) | `U04GJL`, with a zero. It's a yellow Bomberman with full stats plus Remote control, Bomb pass, Soft-block pass, Power glove and Punch. It is not the real Gold Bomberman, who isn't a config character |
 | XROPLG (Muscle Bomber) | **Fixed**: same letter-O typo | `XR0PLG` |
 | 23D830 | OK | Subordinate Bomber, red, all stats past max (fire 15 = junk digits), all 9 items |
 | 2YLPVD (TCRF) | OK | Subordinate Bomber, red, 1 bomb, fire 8, speed 1 |
@@ -216,24 +219,51 @@ window is new.)
 
 ## Endings and zone routing
 
-Every room has a script; the scene number (`$1031`) indexes a table of 3-byte pointers at
-`$C6:0000` (rooms `$0D`-`$66` are stages 1-1 … 5-30, `$67`-`$70` the bosses, `$71`-`$73` special
-rooms, `$74`+ battle stages, `$A8` Bowling Bomber, `$AA`/`$AB` the endings, `$AC`/`$AD` debug rooms;
-`$AE` has no entry). The stage name of each room is the word table at `$80:8A8A` (zone×1000 + stage,
-or the boss number). Script op `0F nn` (`$C2:0C20`) starts room/scene *nn*; op `11` (`$C2:0C38`) appears to place a map
-marker whose look (`$41`/`$42`) depends on that room's clear flag (room+3, set by `$C5:3D19`) is set. Script op `05`/`06`/`07`/`08`
-set/clear/toggle/test a flag bit in `$7E:2900`.
+### How rooms are linked
 
-**What decides the ending is the last boss room you clear.** The script of boss room `$6E` ends with
-`0F AA` (`$C7:27D7`, the good ending) and the script of boss room `$6F` ends with `0F AB` (`$C7:28DA`,
-the bad ending). The only other writers of `$AA` are the 1999 handler and a demo native at `$C5:6E26`; `$AB` only comes from 0803 and this script. Following
-the `0F` ops in the room scripts (`tools/sb5/scripts.py rom routes`), the stage maps that lead to `$6F` are
-5-23, 5-24 and 5-25, and the one that leads to `$6E` is 4-14; 4-15 opens zone 5 at 5-2 / 5-9.
+Every scene/room has a script; scene *n* runs entry *n*−1 of the 3-byte pointer table at `$C6:0000`
+(checked in Mesen: scene `$0D` runs `$C6:1ADB`, `$6F` runs `$C7:26B8`). Rooms `$0D`-`$66` are stages
+1-1 … 5-30, `$67`-`$70` bosses 1-10, `$71`-`$73` the three bonus rooms, `$74`+ battle stages, `$A8`
+Bowling Bomber, `$AA`/`$AB` the endings, `$AC`-`$AE` the debug rooms. Stage names come from the word
+table at `$80:8A8A` (zone×1000 + stage, or the boss number). A room's script is a set of event
+handlers. Each exit is a warp: `11 <dest+3> x y` places it (`$C2:0C38`; it looks lit if that room's
+clear flag, room+3, is already set, `$C5:3D19`), and its handler runs `0F <dest>` (`$C2:0C20`, start
+room *dest*), sometimes after `05`/`06` (set/clear flag in `$7E:2900`, which picks a boss-room variant).
+`tools/sb5/scripts.py rom routes` lists every room's exits.
 
-Not verified in Mesen: beating a boss to watch the next scene, and whether the `0F` ops in a room's
-script are its exits or the markers on the map shown before it (the 1-1 script lists 1-1 itself),
-so the route list above is a static reading. GameFAQs' "fight boss 4-F to enter zone 5a" is neither
-confirmed nor ruled out.
+The stage-clear trigger is `$1D50`, the enemies left: each enemy death decrements it (`$C4:3DB3`) and
+at 0 `$C5:3B4E` posts event `$0D`, which opens the warps. Boss rooms instead get event `$1B` when the
+boss dies (`$C3:438D`, `$C1:16A9`).
+
+### Verified in Mesen
+
+- **4-14 and 4-15 lead to boss 8 (room `$6E`).** Loaded each room through `$6248`, killed all
+  enemies (moved them onto P1's blast through the actor arrays `$182A`/`$1872`/`$16AA`, X = 5…), and
+  walked P1 to the exit with real presses (bombing soft blocks on the way). Walking to (11,10) in 4-14
+  and to (7,5) in 4-15 both started room `$6E`.
+- **5-27 leads to boss 10 (room `$70`).** Same method, exit (7,11).
+- **Boss 9 (room `$6F`) → good ending `$AA`; boss 10 (room `$70`) → bad ending `$AB`.** In each boss
+  room, the main script task was sent to its event-`$1B` handler (`$C7:2760` for `$6F`, `$C7:2879` for
+  `$70`), which is what the game does when the boss dies. `$6F` then played `$AA` (the 1999 sequence:
+  the bubble scene, then the staff roll over boss arenas `$67`, `$68`…), and `$70` played `$AB` (the
+  0803 space scene). The scripts end in `0F AA` (`$C7:27D7`) and `0F AB` (`$C7:28DA`).
+
+### Which route gives which ending (from the exit graph)
+
+Zone 4 has three bosses, and each one opens a different part of zone 5:
+
+| Zone-4 boss (room) | Reached from | Opens zone 5 at | Final boss reachable | Ending |
+|---|---|---|---|---|
+| boss 6 (`$6C`) | 4-8, 4-9, 4-10 | 5-1, 5-2, 5-3 | boss 9 (via 5-10 → 5-16/5-18 → 5-24/5-25/5-26) | **good** |
+| boss 7 (`$6D`) | 4-11, 4-12, 4-13 | 5-4, 5-5, 5-6 | boss 10 (via 5-19/5-20/5-21 → 5-27/5-28) | bad |
+| boss 8 (`$6E`) | 4-14, 4-15 | 5-7, 5-8 | boss 10 (via 5-15/5-22 → 5-29/5-30) | bad |
+
+So **the ending is decided by which zone-4 boss you beat**: only boss 6's half of zone 5 contains the
+exits to boss 9. Inside zone 5 the halves don't connect (checked over the whole exit graph by
+`scripts.py routes`, which prints the reachability). GameFAQs' "fight boss 4-F to enter zone 5a" is
+**right in substance** if "4-F" is boss 6 (`$6C`). The stage names don't give zone-4 bosses a
+letter, so I can't confirm which boss the poster meant. The route rows other than 4-14/4-15 → `$6E`
+and 5-27 → `$70` come from the scripts and were not walked.
 
 ## Debug menu and debug rooms
 
@@ -283,14 +313,14 @@ is not made reachable: there is no patch for it.
 ### Debug rooms `$AC`-`$AE` (Known; ★ New: a patch and the scene variable)
 
 They are plain scenes. The password screen's scene variable `$6248` is copied to `$1031` and run, so
-any value works. A sweep of every scene `$00`-`$B2` through `$6248` showed `$A0`-`$A7` boss arenas,
+any value works. A sweep of every scene `$00`-`$B2` through `$6248` showed `$A0`-`$A7` (battle stages 12 and 13, see "Maps"; round 2 called them boss arenas, **fixed**),
 `$A8` Bowling Bomber, `$A9`-`$AB` the ending scenes, and:
 
 | Scene | Script | Name (TCRF) | Seen in Mesen |
 |---|---|---|---|
-| `$AC` | `$C6:0309` | Battle test | Zone 3 mine-cart cave layout, only the player, 2:00 timer |
-| `$AD` | `$C6:03B8` | Single-player level test | battle stage 1 layout, Normal HUD, two enemies, soft blocks |
-| `$AE` | none (`$FFFFFF` in the scene table) | Single-player enemy test | one enemy, broken HUD; black screen about 10 s later |
+| `$AC` | `$C7:170D` | Battle test | Zone 3 mine-cart cave layout, only the player, 2:00 timer |
+| `$AD` | `$C6:0309` | Single-player level test | battle stage 1 layout, Normal HUD, two enemies, soft blocks |
+| `$AE` | `$C6:03B8` (the last entry; `$AF` would read `$FFFFFF`) | Single-player enemy test | one enemy, broken HUD; black screen about 10 s later |
 
 Scenes `$AF` and up are past the table (junk). **Patch:** `patches/sb5_debug_rooms.ips` (retail;
 built and self-checked by `tools/sb5/make_ips.py`) adds three option passwords: **0172 → `$AC`,
@@ -333,6 +363,37 @@ The grid is `ABCDEFGHJKLMN` / `PQRTUVWXY` / `1234567890` + もどる (back) + �
 All of the above was checked in Mesen by pressing the buttons and reading `$6241-$6244`, the cursor
 bytes and the entry buffer.
 
+## Unused graphics sets
+
+Graphics are loaded as numbered sets by `$C0:1B04` (group in `$0AE7`). Each group's table is pointed
+to from `$C0:1C96` (bank `$85`): 8 bytes per set, VRAM address, size, 24-bit source, and flags (bit 7 =
+raw copy, otherwise the same decompressor as the text). `tools/sb5/gfxsets.py` walks the five groups
+(291 sets) and flags every set whose source bytes the Mesen code/data log never touched, then renders
+it as greyscale 4bpp tiles to `docs/img/sb5/unused/` (file name = group, set, source address).
+
+The log is the cumulative one from all this project's Mesen runs: every scene `$00`-`$B2` started
+for 250-400 frames, boot, title, options, both password screens, Battle menus and a match, the Config
+editor, rooms in zones 4 and 5, the boss rooms, both endings and the debug rooms. **61 sets were never
+read.** That is "not reached in our runs", not proof of being unused: the zone maps between stages,
+most cutscenes and most of the staff roll were never played, and sets in formats other than 4bpp
+(flags `$02`/`$03`/`$05`) render scrambled here.
+
+| Set (group/number) | Source (file) | What it looks like | Status |
+|---|---|---|---|
+| 3/10 | `$D3:9915` (0x139915) | The *Super Bomberman 3* logo ("…BER 3") with a plus sign | **Known** (TCRF "Super Bomberman 3 Logo") |
+| 3/11 | `$D3:A7AC` (0x13A7AC) | A font sheet: katakana, big digits 1-12, ∞, MAN / COM / OFF, 1 2 5P 3 4, COMMAND, OK? | New, unconfirmed: looks like an older battle-setup font; not reached |
+| 3/17, 3/18, 3/19 | `$D3:E50E`, `$D3:F0D7`, `$D4:081C` | Zone-map islands (prehistoric, city, machine) | not reached (zone maps weren't run) |
+| 0/8, 0/11-0/15, 0/17, 0/18 | `$C8:0400`-`$C9:3400` (raw) | Character sprite sheets (Bomberman and the bosses in story poses) | not reached (cutscenes) |
+| 0/22, 0/26, 0/29, 0/30, 0/32 | `$C9:A000`-`$CA:9000` (raw) | Large character sprites | not reached |
+| the rest (36 sets, mostly groups 3 and 4) | see `unused/` | stage-piece and effect tiles; many are non-4bpp formats | not reached |
+
+TCRF's other graphics (the scrawled digits in VRAM, the Warooi frames) sit inside sets that are
+loaded, so a set-level sweep can't flag them. A per-tile sweep would need VRAM-read logging, which
+Mesen's code/data log doesn't record.
+
+![Set 3/10: the Super Bomberman 3 logo and the plus sign (greyscale)](img/sb5/unused/g3_set10_D39915.png)
+![Set 3/11: the unreached font sheet (greyscale)](img/sb5/unused/g3_set11_D3A7AC.png)
+
 ## Caravan version: what changes
 
 - Header title `SUPER BOMBERMAN 5G`. Code/script banks `$C0-$C7` and data bank `$D1` differ. `$D1` has
@@ -365,16 +426,192 @@ bytes and the entry buffer.
   set `$6253` is the ending/demo natives at `$C5:6DEC`-`$C5:6E93` (players can't die in those scenes).
 - **Dormant boss-rush full power** in retail (`$6254`, ★ New).
 - The debug menu text and debug rooms: see the next section.
-- Unused graphics: no sweep yet (it needs code/data-log coverage of every graphics load, which this round didn't build).
+- Unused graphics: see "Unused graphics sets" below.
 - Script natives 67/68 (Gold flag) and the SRAM signature strings `CONFIG BATTLE DATA Ver 1.00` /
   `SuperBomberman5 by Hudson ver0.9` (Known, TCRF) are read at boot (`$C0:47F6`, `$C0:4A94`).
+
+## Round 3: hidden-content sweep
+
+Method for this round: 13 new Mesen runs (every room `$0D`-`$AE` loaded through `$6248`, 360 frames of
+looking plus 1,200-1,600 frames of random play with `$6253` held so the player survives; both endings for
+9,000 frames; Bowling Bomber, the certificate and the menu scenes), merged with every earlier retail log and
+the English ROM's log (code bytes copied over only where the two ROMs are byte-identical): 97,779 code bytes,
+up from 71,301. `disasm/sb5/` was regenerated from it (1,180 seeded entries, 63,038 instructions). The
+earlier logs include the orphaned handlers and the debug script, which round 2 forced to run, so those count
+as "ran".
+
+### Dead code
+
+`tools/sb5/deadcode.py disasm/sb5 rom cdl` takes as entry points every JSR/JSL/JMP/JML target, the 251
+script-op handlers (`$C2:04FA`), the native table (`$C2:0650`), and every label right after an exit that no
+call or branch reaches (pointer-table or orphaned code). **2,604 entry points, 720 never ran**: 71 natives,
+55 script-op handlers, 391 labels after an exit and 203 routines whose callers never ran either. Most of the
+391 are data that the disassembler's guesser decoded as code (the sprite tables at `$C5:8000` are the largest),
+so 720 is an upper bound. The ones read and worth reporting:
+
+| Address | What it is | Class | Status |
+|---|---|---|---|
+| `$C0:0AFC` | `LDA $2C / CMP #$33 / BNE / JML $80:F345`: holding L+R+Select+Start jumps to the native-mode reset entry (`$F345` = `SEI SEC XCE`, falling into the RESET code at `$F348`). Nothing calls it and no pointer to it exists (no `FC 0A` operand anywhere). Same bytes at the same address in Caravan and English | truly unreferenced: a **cut soft-reset combo** | ★ New |
+| `$C5:6806` | looks up `$1D1F` (the scene the orphaned handler `$C5:6934` stores) in a byte-pair table at `$C5:6825` to set `$1D22`. The table's first byte is `$00`: it is empty and the lookup always fails | cut feature, the other half of the cut-password handler | ★ New |
+| `$C5:6934`-`$C5:69D8` | the eight orphaned password handlers | truly unreferenced | Known (round 1) |
+| `$C3:4C13` | sets `$1FF3`=`$FF` around a boss-actor step; its only caller `$C5:4321` never ran | reachable in a boss state not covered | not identified |
+| `$C5:6E37` (native `$D0`), `$C5:6D1E`, `$C5:6D9F`, `$C5:6DC1` | the demo/ending natives that set `$6253` and the player blocks | reachable: scene points not played to | — |
+| natives `$29`-`$3E` (`$C1:4747`-`$C1:4B82`), `$8D`-`$90` callers | cutscene and text natives | reachable only in the story scenes between zones, which the room sweep skips | — |
+| the 55 script-op handlers | ops that no script we ran used (mostly 16-bit compare/branch variants) | not covered | — |
+
+No code that applies the debug menu's REST/TIME/POWERMAX lines turned up outside the two orphaned script
+fragments (`$C6:72BB`, `$C6:F13F`).
+
+### Input codes
+
+`tools/sb5/padscan.py <asm dir>` splits banks `$C0`-`$C7` into routines and reports each routine that reads
+`$4016/$4017`, `$4218-$421F` or the game's pad copies (`$19-$1E` raw, `$2C-$30` held buttons A X L R B Y Sel St,
+`$31-$35` held d-pad, `$36-$3A` new presses, `$3B-$3F` new d-pad, `$40-$44` auto-repeat), marking compares with
+a multi-button constant, compares against a table, and counters. On all three listings: **34 pad-reading
+routines in retail and English, 37 in Caravan** (the three extra are listing coverage; the same code is in
+retail), 11-12 flagged. Each flagged one was read:
+
+| Routine | What it is | Verdict |
+|---|---|---|
+| `$C0:0AFC` | L+R+Select+Start → reset (above) | dead, cut combo, ★ New |
+| `$C1:75F9`/`$C1:7677` | the title-screen X-tap counter (stages 11-13) | Known; window measured in round 2 |
+| `$C0:0A56` | builds the pad copies and repeat timers | plumbing |
+| `$C0:F1D7`, `$C0:F29F` | multitap (MULTI5) reading and connect check | plumbing |
+| `$C4:47B1` | escape counter: 20 d-pad presses (`$4EED`) free a trapped player | gameplay |
+| `$C5:05B5` | Normal mode: the partner presses Start (`$2C` bit 0) to spend a shared life (`$1D23`) | gameplay |
+| `$C4:0174`, `$C4:30DD`, `$C0:3A61` | COM AI and cursor code that write the pad copies | not codes |
+| `$C5:3440`, `$C5:8633` | data decoded as code | none |
+
+The script VM has no pad opcodes; a byte scan of the script banks for address-taking ops with a pad address
+found only data. **No hidden button code besides the X-tap and the cut reset combo.**
+
+### Unset flags
+
+`tools/sb5/flags.py <asm dir> rom cdl [--direct]` lists WRAM bytes that are tested (load, compare or BIT then a
+branch) but never set: STZ and stores of 0 don't count; indexed stores count over `base..base+$7F` unless
+`--direct`; script ops that take a WRAM address count as writes, including `7B` (INC). **220 tested
+addresses; 38 with no executed setter under `--direct`.** Most are sound-driver and actor plumbing
+(`$0393-$039C`, `$1782-$1784`, `$17FA/B`). A second run put write watches on all candidates through a 19-scene
+sweep and logged every nonzero write with its PC. The ones that matter, each set in Mesen:
+
+| Address | Tested at | Set by | Effect in Mesen | Status |
+|---|---|---|---|---|
+| `$6253` [`$6271`] | `$C4:2D2B` | orphan `$C5:6951`, demo natives | invincible (round 1); PAR re-tested below | Known (round 1) |
+| **`$0E23`** | `$C4:2D31` (right after the `$6253` check), `$C5:0460` | **nothing**: only `STZ` at `$C5:0404` | **invincible and the stage clock stops**: `$C5:0460` skips the clock tick (`$0E1C-$0E1E`) while `$0E23`, `$0E20` or `$0E21` is nonzero. Same address in all three ROMs. A fit for the debug menu's MUTEKI/TIME lines | ★ New |
+| `$0E20`/`$0E21` | `$C5:041A`, `$C3:4C36` | a countdown (`DEC $0E20`) | a clock-stop timer; `$0E21`=1 held the clock to one second in 300 frames | reachable |
+| **`$6258`** | `$C5:3FAD`; saved per file (`$C0:491C`), loaded at `$C0:49DE` | the certificate script, `7B 58 62` (INC) at `$C6:E08F`, only when the clear rate is 100 and `$6258` is 0 | a per-file **100% flag**. When set (outside Battle) the soft-block item lists come from the second half of the table at `$C5:E5C7` (room index + 155). Holding it with PAR changed nothing visible at the start of 1-1, 2-1 and 5-1 (soft blocks are random anyway). The certificate's うらめん ("back side") comments below go with it | ★ New (item effect not verified in play) |
+| `$0F64` | `$C5:1FC8` | the native at `$C0:450D` (=2) | held at 2 in 1-1 for 900 frames: no visible change | unclear |
+| `$1FF3` | `$C3:4BCA` | `$C3:4C13` (never ran) | held in boss 1: no visible change | unclear |
+| `$1D1F` | `$C5:680F` | orphan `$C5:6934` | lookup table empty, so no effect is possible | dead (above) |
+| `$6254` | `$C4:2908` | script (`$C2:1AF1`) in the Normal menu; 0719 on Caravan | boss-rush full power (round 1) | Known |
+
+### Text
+
+There are only two text tables: the drawer `$C0:0000` reads its base from `$80:8000+3×$0340`, and only tables 4
+(`$D1:0000`) and 6 (`$D1:A000`) are valid. Retail has **254 messages in table 4 and 246 in table 6**. Caravan has
+247 in table 6 (one extra, `$F6`, an 8×2 tile window, by its tiles a small logo or icon). English has 249
+(`$F6`-`$F8`; `$F7` is a 32×30 + 32×12 screen map). All 500 retail messages decode with no error
+(`tools/sb5/textdump.py rom list`). Two fixes to `textwin.py`: the decompressor's history is a zero-filled
+256-byte ring (back references before the start read 0; the old list version raised errors on 241 messages),
+and the header always has the x/y bytes (flag bits only make the drawer ignore them).
+
+**The drawer argument is message+1** (`$C0:0024` DECs it). So the debug script's `FF 8D F1 06` draws index
+`$F0`, a 24×12 frame, and the debug text (index `$F1`, argument `$F2`) is drawn by no script found.
+
+Most "messages" are not strings but tilemaps: whole 32×32 screens, frames, icons, and Japanese text drawn as
+tiles from per-screen fonts. An exec hook on `$C0:0020` logged every (scene, table, message) drawn in all runs:
+**114 drawn (66 + 48), 386 never drawn**. `textdump.py rom sheet dump name table first last out.png` renders
+messages through a VRAM/CGRAM snapshot taken in Mesen (21 scenes). The undrawn ones are mostly story-scene and
+zone-map maps (the sweep never played the cutscenes) whose fonts are in no snapshot, so they render as junk and
+could not be read. The readable block is the certificate (認定状):
+
+- Table 4 `$64`-`$85`: the rank titles, each + ボンバー: あかちゃん (baby), だざだ? (unclear), へなへな (feeble),
+  チキン (chicken), リーダー (leader), グッド (good), よわよわ (weakling), はやどき? (unclear), ボスキラー (boss
+  killer), おみごと (splendid), へろへろ (worn out), つわもの (veteran), あまちゅあ (amateur), まあまあ (so-so),
+  そろそろ (getting there), いまいち (not quite), ちゃくじつ (steady), よくばり (greedy), いじん (great man),
+  へんじん (oddball), たつじん (expert), がまん (patient), ぎりぎり (just made it), ビクトリー (victory),
+  バッドエンド (bad end), まぬー? (unclear), パーフェクト (perfect), こんじょう (guts), しゅうさい (prodigy), めいじん
+  (master), てんさい (genius), せんにん (sage), かみさま (god). Only あかちゃん was drawn in our runs; the rest
+  depend on the clear rate and route, so they are not unused.
+- `$8A`-`$A8`: the comment lines, e.g. クリアするのに10ねんかかりそう ("looks like clearing it will take you 10
+  years"), ボスとたたかってないぜ！にげたな ("you haven't fought the bosses, you ran away!"),
+  ラストがバッドエンドなんてわらっちゃうね ("ending on the bad ending, that's a laugh"),
+  ついにうらめんまできたね こんじょういれてがんばれ ("you finally reached the back side, put your guts into it")
+  and ついにうらめんも100% きみかみさまになれるぞ ("back side at 100% too, you can become a god"). The うらめん lines
+  go with the `$6258` 100% flag.
+
+![Certificate rank titles and comments, table 4, through the certificate's VRAM](img/sb5/text_certificate_ranks.png)
+
+English vs Japanese: 75 messages of table 4 differ, 72 of them in window layout (`$64`-`$A8` = the certificate,
+and `$03`-`$06`, `$DC`); 47 of table 6 differ, 10 in layout. Caravan's tables are byte-identical to retail
+apart from the extra `$F6`.
+
+### Maps
+
+**Format** (found by write-watching the live map `$7E:1052` during a room load; `tools/sb5/maps.py`):
+
+- Script op `0A <layout> <set>` (`$C2:0BED`) stores `$1B7E`=layout and `$1B7D`=set; op `0C <layout>` (`$C2:0C0C`)
+  loads another layout into the same room (the second BG layer); `$C0:3550` builds it.
+- Layout *n*: `$D0:A000+3(n−1)` points to a 3-byte entry that points to a stream for the text/tile decompressor
+  (`$C0:1CB0`): 256 bytes, a 16×16 grid of cell types (field = columns 0-14, rows 0-12), unpacked to `$7E:2500` and
+  copied to `$2400`. The first pointer is `$D0:A297`, so the table has **221 layouts**.
+- Set *s*: `$D0:8000+2(s−1)` → a cell type → attribute table (bank `$D0`). Attributes go to `$2700`/`$2800` and,
+  masked with `$B0`, to the collision map `$7E:1052` (16 bytes per row): bit 7 solid, `$30` soft block. Type 0 is
+  always solid. `$D0:0000+2(s−1)` is the set's metatile table (4 BG tile words per type).
+- Soft blocks are not in the layout: they are placed at room start (randomly in Battle); the per-room item lists
+  are the table at `$C5:E5C7`.
+
+**Room ids:** `$0D`-`$66` stages, `$67`-`$70` bosses, `$71`-`$73` bonus rooms, and **`$74`-`$A7` = the 13 battle
+stages × 4 layout codes** (normal, 4622, 0413, 0926): stage *k*, code *v* is room `$74+4(k−1)+v`, so `$9C`-`$A7`
+are stages 11-13. Then `$A8` Bowling, `$A9`-`$AB` endings, `$AC`-`$AE` debug rooms.
+
+**Coverage:** a run logged every write to `$1B7D/$1B7E` while each room `$0D`-`$AE` loaded: 158 rooms use **220 of
+the 221 layouts**. The one left, `$9A`, points to the same stream as `$9B` (battle stage 1): a duplicate pointer,
+not a cut map. Every Normal room `$0D`-`$73` is reachable from 1-1 in the exit graph (`scripts.py routes`); only
+the debug rooms `$AC`-`$AE` (Known) are outside it. **No cut rooms.**
+
+Renders in `docs/img/sb5/maps/`: `rooms_zone1.png` … `rooms_zone5b.png`, `rooms_bosses_bonus.png`,
+`rooms_battle.png` and `rooms_other.png` are Mesen screenshots of every room, labelled with room id, name, layout
+ids and stream addresses; `room_layouts.png` is the decoded collision grid of every layout each room loads (grey
+solid, green floor, blue other attributes). Second layouts (op `0C`) are BG-layer maps and show mostly solid.
+
+![Zone 1 rooms](img/sb5/maps/rooms_zone1.png)
+
+### Cheat codes
+
+All verified with Mesen's own cheat engine (`emu.addCheat`, PAR type; Mesen takes the 8-digit form without the
+colon) on unpatched ROMs, and added to `sb5_codes.json` with `section: "cheat"`:
+
+| Code | Effect | Verified on | Status |
+|---|---|---|---|
+| `7E6253:01` (Caravan `7E6271:01`) | invincible: own bomb at the start of 1-1, the player survives (without it he dies, `$15A2`=`$81`) | retail, English, Caravan | Known address (round 1), PAR form new |
+| `7E0E23:01` | invincible **and** the stage clock stops | retail, English, Caravan | ★ New |
+| `7E6248:xx` + any option password | room/scene select: `AC`, `AD` and `2B` (3-1) each started after 4622 | retail, English | New (TCRF's `7E1038` is a work byte) |
+| `7E6248:AC` / `AD` / `AE` | the three debug rooms | retail, English | Known rooms, new code |
+| `3061E9:01` | Gold Bomberman on the Battle character select (the read of SRAM `$1E9` is patched; SRAM stays 0) | retail | ★ New |
+| `7E6245:0D` | battle stages 11-13 without a turbo pad (`$6245`=13 at the Battle menu) | retail, English | New (TCRF's `7E625A` sets the chosen stage instead) |
+| `C56983:01` (ROM) | 3879 boss rush starts fully powered (8 bombs, 8 fire, speed `$0200`, items `$07`): Caravan's 0719 on retail | retail, English | ★ New |
+
+![PAR test, own bomb at the start of 1-1: no code, 7E6253:01, 7E0E23:01 (top: blast, bottom: 200 frames later)](img/sb5/par_invincibility_none_6253_0E23.png)
+![3061E9:01: Gold Bomberman bottom right](img/sb5/par_gold_3061E9.png)
+
+### Not verified (round 3)
+
+- What `$6258` changes in play (the item lists), and `$0F64` and `$1FF3`: set in Mesen, no visible change.
+- The soft-reset combo `$C0:0AFC` never runs (nothing reaches it); read only.
+- The 386 undrawn text messages outside the certificate: no font context, not read.
+- `3061E9:01` on Caravan and English (same code bytes, not run).
 
 ## Files
 
 - `tools/sb5/password.py`, `tools/sb5/password.mjs` (+ `test.mjs`): both codecs and the option tables.
 - `tools/sb5/textwin.py`: text-window decompressor and decoder (`textwin.py rom 6 F1`; `textwin.py rom test`).
+- `tools/sb5/textdump.py`: every message of both tables (`list`) and renders through a Mesen VRAM snapshot (`render`, `sheet`).
+- `tools/sb5/deadcode.py`, `tools/sb5/padscan.py`, `tools/sb5/flags.py`: never-run routines, pad-reading routines, tested-but-unset flags (round 3).
+- `tools/sb5/maps.py`: layout decoder and the map renders in `docs/img/sb5/maps/`.
 - `tools/sb5/scripts.py`: script VM listing (`dis`) and the `0F` targets of every room script (`routes`).
 - `tools/sb5/make_ips.py` → `patches/sb5_debug_rooms.ips` (debug-room passwords 0172/0173/0174, retail).
+- `tools/sb5/gfxsets.py`: graphics-set table walker, CDL check and renderer (`docs/img/sb5/unused/`).
 - `tools/sb5/lib.lua` (helpers, boot paths, savestates at the NMI), `typecode.lua`, `fuzz.sh` +
   `fuzzcases.py`, `run.sh`, `xref.py` (finds `$7E:xxxx` long accesses), `cdl2entries_hi.py`,
   `logo.lua` + `bgrender.py` + `croplogo.py` (logo rip).

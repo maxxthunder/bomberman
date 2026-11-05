@@ -1,0 +1,139 @@
+candidates 93, ran 76, never ran 17
+
+000200   [vector]  refs -  longs 4 467 10EF 1147
+    000200  jmp      $22c.l
+    000206  jmp      $362.l
+    00020c  jmp      $1108.l
+    000212  move.l   #$206, $78.l
+    00021c  move.l   #$20c, $70.l
+    000226  jmp      $22c.l
+    00022c  lea.l    $fffffe.l, a7
+    000232  bsr.w    $28e
+
+000212   [gap]  refs -  longs -
+    000212  move.l   #$206, $78.l
+    00021c  move.l   #$20c, $70.l
+    000226  jmp      $22c.l
+    00022c  lea.l    $fffffe.l, a7
+    000232  bsr.w    $28e
+    000236  move.w   #$2700, sr
+    00023a  lea.l    $ff0000.l, a6
+    000240  move.w   #$2700, sr
+
+00028E   [call]  refs -  longs -
+    00028e  move.b   $a10001.l, d0
+    000294  andi.b   #$f, d0
+    000298  beq.w    $2a6
+    00029c  move.l   #$53454741, $a14000.l
+    0002a6  rts
+    0002a8  movea.l  #$ff0000, a0
+    0002ae  move.l   #$3fbf, d4
+    0002b4  move.l   #$0, (a0)+
+
+00030C   [gap]  refs -  longs C9E4C
+    00030c  nop
+    00030e  nop
+    000310  nop
+    000312  nop
+    000314  nop
+    000316  nop
+    000318  move.l   #$c0000000, $c00004.l
+    000322  move.w   #$e, $c00000.l
+
+000E00   [imm]  refs 35d4  longs -
+
+0020EA   [imm]  refs 2fda  longs -
+
+0020F6   [call]  refs -  longs -
+
+0022A4   [gap]  refs -  longs -
+    0022a4  move.l   #$22d2, $8(a0)
+    0022ac  move.w   #$96, $14(a0)
+    0022b2  clr.l    d0
+    0022b4  move.w   $c(a0), d0
+    0022b8  divu.w   #$30, d0
+    0022bc  swap     d0
+    0022be  move.w   d0, $10(a0)
+    0022c2  clr.l    d0
+
+0022D2   [imm]  refs 16a8 17a8 18a8 19a8  longs 16AA 17AA 18AA 19AA
+    0022d2  movea.l  $16(a0), a1
+    0022d6  bset.b   #$0, $c83(a1)
+    0022dc  bclr.b   #$4, $c83(a1)
+    0022e2  move.l   #$0, $12c0(a1)
+    0022ea  move.w   $20(a0), d0
+    0022ee  cmp.w    #$0, d0
+    0022f2  bne.w    $2332
+    0022f6  move.w   $12(a0), d0
+
+002500   [imm]  refs 24e 270  longs -
+
+00256C   [call]  refs -  longs -
+    00256c  bsr.w    $2688
+    002570  bpl.w    $2576
+    002574  rts
+    002576  move.l   #$2592, $8(a0)
+    00257e  move.l   a1, $16(a0)
+    002582  move.w   #$37, $14(a0)
+    002588  move.w   d3, $c(a0)
+    00258c  move.w   d5, $e(a0)
+
+002592   [imm]  refs 2576  longs 2578
+    002592  subq.w   #$1, $14(a0)
+    002596  bpl.w    $25a0
+    00259a  jmp      $26c8.l
+    0025a0  clr.l    d1
+    0025a2  movea.l  $31e(a6), a1
+    0025a6  move.w   $31c(a6), d1
+    0025aa  addq.w   #$1, d1
+    0025ac  move.w   d1, $31c(a6)
+
+0032A6   [table:31d2]  refs -  longs 31D6
+    0032a6  bchg.b   #$0, d6
+    0032aa  bne.w    $32cc
+    0032ae  move.b   #$10, (a0)
+    0032b2  move.w   #$ff, d5
+    0032b6  move.b   (a0), d0
+    0032b8  btst.b   #$4, d0
+    0032bc  dbeq     d5, $32b6
+    0032c0  bpl.w    $32c8
+
+00337A   [table:31d2]  refs -  longs 31DA
+    00337a  bchg.b   #$0, d6
+    00337e  bne.w    $33a0
+    003382  move.b   #$10, (a0)
+    003386  move.w   #$ff, d5
+    00338a  move.b   (a0), d0
+    00338c  btst.b   #$4, d0
+    003390  dbeq     d5, $338a
+    003394  bpl.w    $339c
+
+0034FC   [table:31d2]  refs -  longs 31DE 31E2 31E6 31EA
+    0034fc  rts
+    0034fe  move.b   #$40, $a10009.l
+    003506  move.b   #$40, $a1000b.l
+    00350e  bset.b   #$6, (a0)
+    003512  nop
+    003514  nop
+    003516  nop
+    003518  move.b   (a0), d0
+
+0035FC   [call]  refs -  longs -
+    0035fc  bsr.w    $36dc
+    003600  bsr.w    $2a8
+    003604  bsr.w    $2e6
+    003608  bsr.w    $2c0
+    00360c  bsr.w    $1f44
+    003610  bsr.w    $2ff8
+    003614  jsr      $d8000.l
+    00361a  jsr      $d8018.l
+
+0036DC   [call]  refs -  longs -
+    0036dc  move.w   #$8006, $c00004.l
+    0036e4  move.w   #$8124, $c00004.l
+    0036ec  rts
+    0036ee  move.w   #$8014, $c00004.l
+    0036f6  move.w   #$8174, $c00004.l
+    0036fe  move.w   #$8b00, $c00004.l
+    003706  move.w   #$8c81, $c00004.l
+    00370e  move.w   #$9011, $c00004.l

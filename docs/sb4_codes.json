@@ -3,7 +3,8 @@
   "code": "7352",
   "effect": "Start at stage 1-1",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -13,7 +14,8 @@
   "code": "8831",
   "effect": "Start at stage 1-2",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -23,7 +25,8 @@
   "code": "7255",
   "effect": "Start at stage 1-3",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -33,7 +36,8 @@
   "code": "5714",
   "effect": "Start at stage 1-4",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -43,7 +47,8 @@
   "code": "5289",
   "effect": "Start at stage 1-5",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -53,7 +58,8 @@
   "code": "1352",
   "effect": "Start at stage 1-6",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -63,7 +69,8 @@
   "code": "6892",
   "effect": "Start at stage 1-7",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -73,7 +80,8 @@
   "code": "6722",
   "effect": "Start at stage 1-8",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -83,7 +91,8 @@
   "code": "7793",
   "effect": "Start at stage 2-1",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -93,7 +102,8 @@
   "code": "6428",
   "effect": "Start at stage 2-2",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -103,7 +113,8 @@
   "code": "8492",
   "effect": "Start at stage 2-3",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -113,7 +124,8 @@
   "code": "7490",
   "effect": "Start at stage 2-4",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -123,7 +135,8 @@
   "code": "4370",
   "effect": "Start at stage 2-5",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -133,7 +146,8 @@
   "code": "6682",
   "effect": "Start at stage 2-6",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -143,7 +157,8 @@
   "code": "4677",
   "effect": "Start at stage 2-7",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -153,7 +168,8 @@
   "code": "4692",
   "effect": "Start at stage 2-8",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -163,7 +179,8 @@
   "code": "4680",
   "effect": "Start at stage 3-1",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -173,7 +190,8 @@
   "code": "2247",
   "effect": "Start at stage 3-2",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -183,7 +201,8 @@
   "code": "5725",
   "effect": "Start at stage 3-3",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -193,7 +212,8 @@
   "code": "7821",
   "effect": "Start at stage 3-4",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -203,7 +223,8 @@
   "code": "5890",
   "effect": "Start at stage 3-5",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -213,7 +234,8 @@
   "code": "7258",
   "effect": "Start at stage 3-6",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -223,7 +245,8 @@
   "code": "3379",
   "effect": "Start at stage 3-7",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -233,7 +256,8 @@
   "code": "6009",
   "effect": "Start at stage 3-8",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -243,7 +267,8 @@
   "code": "5389",
   "effect": "Start at stage 4-1",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -253,7 +278,8 @@
   "code": "4080",
   "effect": "Start at stage 4-2",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -263,7 +289,8 @@
   "code": "2501",
   "effect": "Start at stage 4-3",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -273,7 +300,8 @@
   "code": "5736",
   "effect": "Start at stage 4-4",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -283,7 +311,8 @@
   "code": "3211",
   "effect": "Start at stage 4-5",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -293,7 +322,8 @@
   "code": "5589",
   "effect": "Start at stage 4-6",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -303,7 +333,8 @@
   "code": "8902",
   "effect": "Start at stage 4-7",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -313,7 +344,8 @@
   "code": "0721",
   "effect": "Start at stage 4-8",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -323,7 +355,8 @@
   "code": "3703",
   "effect": "Start at stage 5-1",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -333,7 +366,8 @@
   "code": "2679",
   "effect": "Start at stage 5-2",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "fixed",
   "verified": "mesen",
@@ -343,7 +377,8 @@
   "code": "2479",
   "effect": "Start at stage 5-3",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -353,7 +388,8 @@
   "code": "4792",
   "effect": "Start at stage 5-4",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -363,7 +399,8 @@
   "code": "6790",
   "effect": "Start at stage 5-5",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -373,7 +410,8 @@
   "code": "1574",
   "effect": "Start at stage 5-6",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -383,7 +421,8 @@
   "code": "1019",
   "effect": "Start at 1-1 with full power-ups",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -393,7 +432,8 @@
   "code": "1222",
   "effect": "Start at 2-1 with full power-ups",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -403,7 +443,8 @@
   "code": "1107",
   "effect": "Start at 3-1 with full power-ups",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -413,7 +454,8 @@
   "code": "0827",
   "effect": "Start at 4-1 with full power-ups",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -423,7 +465,8 @@
   "code": "0107",
   "effect": "Start at 5-1 with full power-ups",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -433,7 +476,8 @@
   "code": "1009",
   "effect": "View the ending",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -443,7 +487,8 @@
   "code": "7777",
   "effect": "Battle: the last round's winner is gold",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -453,7 +498,8 @@
   "code": "0520",
   "effect": "Battle: start-position/block set 2",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -463,7 +509,8 @@
   "code": "0903",
   "effect": "Battle: start-position/block set 3",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -473,7 +520,8 @@
   "code": "4622",
   "effect": "Battle: start-position/block set 1 (everyone starts in the middle)",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
@@ -483,7 +531,8 @@
   "code": "5656",
   "effect": "Riders never get tired after a super attack",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -493,7 +542,8 @@
   "code": "0164",
   "effect": "Battle: wider random item pool",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
@@ -503,7 +553,8 @@
   "code": "Title: turbo X",
   "effect": "Unlock battle stages 11 and 12",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "known",
   "verified": "mesen",
@@ -513,7 +564,8 @@
   "code": "Title: tap X 16 times",
   "effect": "The villain silhouettes under the logo vanish",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
@@ -523,10 +575,71 @@
   "code": "Confirm with pad 2",
   "effect": "Normal game: play as Black Bomberman on pad 2",
   "versions": [
-   "JP"
+   "JP",
+   "en"
   ],
   "status": "new",
   "verified": "mesen",
   "note": "START/A from a pad other than pad 1 on the title menu or password screen sets $7F70C0, then $1EF2 = 1; only the $0400 player (Black, top right) starts, controlled by pad 2; pad 1 does nothing"
+ },
+ {
+  "code": "7F202D:0C",
+  "effect": "Battle stages 11 and 12 without the turbo X trick",
+  "versions": [
+   "JP",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Stage count (normally 10). JP: the stage select wraps 1 -> 12 -> 11. EN: $7F202D=12 checked; the select was not walked."
+ },
+ {
+  "code": "C2AEE6:7D C2AEE7:16",
+  "effect": "Password 5757 starts filler stage 5-7 (slot 38)",
+  "versions": [
+   "JP",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Rewrites the password-table slot that holds 7777 (caught as a special code first, so the slot was dead). $0092=38; empty final-boss arena."
+ },
+ {
+  "code": "C2AEE8:E2 C2AEE9:16",
+  "effect": "Password 5858 starts filler stage 5-8 (slot 39)",
+  "versions": [
+   "JP",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "Same for slot 39 (4622). Checked on JP: $0092=39. The table is identical in EN."
+ },
+ {
+  "code": "7E0274:01",
+  "effect": "Pause without the PAUSE! label",
+  "versions": [
+   "JP",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "$0274 is tested at $C1:0766 but never written; when non-zero the pause code skips setting the label position. Checked in JP and EN."
+ },
+ {
+  "code": "7F202B:0A / 7F202B:0B",
+  "effect": "Select battle stage 11 / 12",
+  "versions": [
+   "JP",
+   "en"
+  ],
+  "status": "known",
+  "verified": "static",
+  "section": "cheat",
+  "note": "TCRF."
  }
 ]

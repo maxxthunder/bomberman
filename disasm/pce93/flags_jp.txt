@@ -1,0 +1,5 @@
+$2409 NEVER-NONZERO  idx-write-range reads   2: 00:E616 LDA $2409,X 00:E66C LDA $2409,X
+$2449 NEVER-NONZERO  idx-write-range reads   4: 00:E664 LDA $2449,X 01:D2BA LDA $2449,Y 01:D797 LDA $2449,X 01:D6C8 LDA $2449,X
+$2609 NEVER-NONZERO  idx-write-range reads   1: 00:E699 LDA $2609,X
+$2649 NEVER-NONZERO  idx-write-range reads   1: 01:D6CF LDA $2649,X
+$2F99 NEVER-NONZERO  idx-write-range reads   1: 00:ED96 LDA $2F99

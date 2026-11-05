@@ -1,0 +1,47 @@
+$00A0    never written                        tested at C41AAC C41CA6
+$01B4    written only by code that never ran  tested at C015D5 C015DF C01801  written at C015F6 C01809
+$01B6    written only by code that never ran  tested at C015FA C01604 C01818  written at C0161B C01820
+$01C2    never written                        tested at C41E31 C41E8E C41F50
+$0266    written only by code that never ran  tested at C34B8E  written at C34B1F
+$0274    never written                        tested at C10766
+$0330    written only by code that never ran  tested at C2ADCB  written at C0180F
+$0352    never written                        tested at C2E3CC
+$0430    written only by code that never ran  tested at C1987D  written at C01826
+$0452    never written                        tested at C2E3D6
+$05C0    never written                        tested at C10FBB C45941
+$06C0    never written                        tested at C10FCD C45980
+$0796    never written                        tested at C25A5B
+$07C0    written only by code that never ran  tested at C459CE  written at C25A67 C25A73
+$1EB8    written only by code that never ran  tested at C109C0 C447F3  written at C109C7 C1D7E1 C44798 C447FF C4A41B
+$1EF8    written only by code that never ran  tested at C113AA  written at C113F0
+$1EFA    written only by code that never ran  tested at C113B4  written at C113F8
+$1F30    written only by code that never ran  tested at C459B1 C45B26  written at C0F2B8
+$1F48    written only by code that never ran  tested at C175CD C255D2 C28BF8  written at C2AAFE
+$1F50    written only by code that never ran  tested at C34094  written at C19ECE C34619
+$7F1F09  written only by code that never ran  tested at C2E475  written at C2E853 C2E929
+$7F1F12  written only by code that never ran  tested at C1DBA7 C1DBD5 C1DC1C C1DC47 C1DC8D  written at C1DB6C
+$7F202B  written only by code that never ran  tested at C1A2E0  written at C1A61C C1A645
+$7F70BD  written only by code that never ran  tested at C15DC0  written at C2AAF1
+$7F70D1  written only by code that never ran  tested at C28125  written at C285BD C2860A C3C981 C3CAE4
+$7F70D2  written only by code that never ran  tested at C28134  written at C285BD C2864D C3C9C8 C3CB2B
+$7F70D3  written only by code that never ran  tested at C28143  written at C285C1 C28690 C3CA0F C3CB72
+$7F70D4  written only by code that never ran  tested at C28152  written at C285C1 C285C5 C286D3 C3CA56 C3CBB9
+$7F70D5  written only by code that never ran  tested at C28161  written at C285C5 C28716 C3CA9D C3CC00
+$7F70DF  written only by code that never ran  tested at C33C2D C33CB4 C33FF1 C34050 C340F4  written at C33208 C3349D
+$7F70E1  written only by code that never ran  tested at C33C74 C33CDF C340E7  written at C33210 C33373
+$7F70E2  written only by code that never ran  tested at C3420E  written at C33216 C33373 C3343E
+$7F70E3  written only by code that never ran  tested at C333FC C33DD6  written at C3321C C341F6
+$7F70E4  never written                        tested at C34106 C34188
+$7F70F2  written only by code that never ran  tested at C3344C C33C1F  written at C33455 C33519 C33554 C33701 C3371D
+$7F70F4  written only by code that never ran  tested at C33335 C335A8  written at C330B4 C3334C
+$7F70F6  written only by code that never ran  tested at C33E3D  written at C33E1E C33F98 C34503
+$7F70F8  written only by code that never ran  tested at C33290  written at C330AB C33298 C344D0
+$7F70FD  written only by code that never ran  tested at C3347C  written at C33222 C33483
+$7F70FF  written only by code that never ran  tested at C332A2  written at C332AA C34242
+$7F7100  written only by code that never ran  tested at C33280  written at C33255 C33CEE
+$7F7111  written only by code that never ran  tested at C33D7D C33DB1  written at C32FBB
+$7F7153  written only by code that never ran  tested at C2DB2E  written at C2D965 C2DAC3
+$7F7154  written only by code that never ran  tested at C2DA85  written at C2DA8D C2DBC0
+$7F7164  written only by code that never ran  tested at C3D495 C3D4AA  written at C3D465 C3D49E C3D4B1
+$7F7165  written only by code that never ran  tested at C3D39D  written at C3D397
+$7F7167  written only by code that never ran  tested at C3D551 C3D64B C3D675 C3D731 C3D7D4  written at C3D46D C3D511

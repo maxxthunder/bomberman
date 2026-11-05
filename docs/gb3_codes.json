@@ -1,0 +1,993 @@
+[
+ {
+  "code": "0986400",
+  "effect": "Start at Wood stage 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: none; shop: nothing; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "11C4008",
+  "effect": "Start at Wood stage 2",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: none; shop: nothing; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "19C6408",
+  "effect": "Start at Wood stage 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: none; shop: nothing; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2184010",
+  "effect": "Start at Wood stage 4",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: none; shop: nothing; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2986410",
+  "effect": "Start at Wood stage 5",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: none; shop: nothing; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "39C6418",
+  "effect": "Start at Wood stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: none; shop: nothing; capsules 0; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "CEBE426",
+  "effect": "Start at Aqua stage 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand, Lava; shop: K kick, D dash, L line bomb, F full, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D6FC02E",
+  "effect": "Start at Aqua stage 2",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand, Lava; shop: K kick, D dash, L line bomb, F full, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DEFE42E",
+  "effect": "Start at Aqua stage 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand, Lava; shop: K kick, D dash, L line bomb, F full, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E6BC036",
+  "effect": "Start at Aqua stage 4",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand, Lava; shop: K kick, D dash, L line bomb, F full, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EEBE436",
+  "effect": "Start at Aqua stage 5",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand, Lava; shop: K kick, D dash, L line bomb, F full, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "F6FC03E",
+  "effect": "Start at Aqua stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand, Lava; shop: K kick, D dash, L line bomb, F full, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "498A424",
+  "effect": "Start at City stage 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood; shop: K kick; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "51C802C",
+  "effect": "Start at City stage 2",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood; shop: K kick; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "59CA42C",
+  "effect": "Start at City stage 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood; shop: K kick; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "6188034",
+  "effect": "Start at City stage 4",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood; shop: K kick; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "698A434",
+  "effect": "Start at City stage 5",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood; shop: K kick; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "79CA43C",
+  "effect": "Start at City stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood; shop: K kick; capsules 1; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "F775818",
+  "effect": "Start at Evil stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: K kick, D dash, L line bomb, F full, M1, M2, M3, M4; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4BAE406",
+  "effect": "Start at Ice stage 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City; shop: K kick, L line bomb, M2; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "53EC00E",
+  "effect": "Start at Ice stage 2",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City; shop: K kick, L line bomb, M2; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5BEE40E",
+  "effect": "Start at Ice stage 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City; shop: K kick, L line bomb, M2; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "63AC016",
+  "effect": "Start at Ice stage 4",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City; shop: K kick, L line bomb, M2; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "6BAE416",
+  "effect": "Start at Ice stage 5",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City; shop: K kick, L line bomb, M2; capsules 0. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "7BEE41E",
+  "effect": "Start at Ice stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City; shop: K kick, L line bomb, M2; capsules 0; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "CABA4A4",
+  "effect": "Start at Lava stage 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand; shop: K kick, D dash, L line bomb, M1, M2; capsules 5. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D2F80AC",
+  "effect": "Start at Lava stage 2",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand; shop: K kick, D dash, L line bomb, M1, M2; capsules 5. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DAFA4AC",
+  "effect": "Start at Lava stage 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand; shop: K kick, D dash, L line bomb, M1, M2; capsules 5. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E2B80B4",
+  "effect": "Start at Lava stage 4",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand; shop: K kick, D dash, L line bomb, M1, M2; capsules 5. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EABA4B4",
+  "effect": "Start at Lava stage 5",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand; shop: K kick, D dash, L line bomb, M1, M2; capsules 5. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "FAFA4BC",
+  "effect": "Start at Lava stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand; shop: K kick, D dash, L line bomb, M1, M2; capsules 5; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4AA6460",
+  "effect": "Start at Sand stage 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice; shop: K kick, L line bomb, M2; capsules 3. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D2F4028",
+  "effect": "Start at Sand stage 2",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice; shop: K kick, D dash, L line bomb, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DAF6428",
+  "effect": "Start at Sand stage 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice; shop: K kick, D dash, L line bomb, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E2B4030",
+  "effect": "Start at Sand stage 4",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice; shop: K kick, D dash, L line bomb, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EAB6430",
+  "effect": "Start at Sand stage 5",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice; shop: K kick, D dash, L line bomb, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "F2F4038",
+  "effect": "Start at Sand stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Decodes to cleared: Wood, City, Ice; shop: K kick, D dash, L line bomb, M1, M2; capsules 1. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DEB1F7F",
+  "effect": "Boss attack: the bosses in a row with K, D, L and F (no motorbike)",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Compared as a literal before the decode ($0D:6AE3): $C1B8 = 1; $00:13F7 then sets stage 6 and shop $C38D = $0F. Typed with the pad in Mesen. GameFAQs (SaviourV): Boss Attack Code.",
+  "section": "Passwords",
+  "img": "codes_jp.png"
+ },
+ {
+  "code": "CEBFCC6",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D6FD8CE",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DEFFCCE",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E6BD8D6",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EEBFCD6",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "FEFF8DE",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFBBF44",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D7F9B4C",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DFFBF4C",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E7B9B54",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EFBBF54",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "FFFBB5C",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "CF37D40",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D775948",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E735950",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EF37D50",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "F775958",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "CFBFF86",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D7FDB8E",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DFFFF8E",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E7BDB96",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EFBFF96",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "FFFFF9E",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "CEBBC64",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D6F986C",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DEFBC6C",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E6B9874",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EEBBC74",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "FEFB87C",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "CEB7FE0",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D6F5BE8",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DEF7FE8",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E6B5BF0",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EEB7FF0",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "FEF7FF8",
+  "effect": "Rejected (GameFAQs: \"maxed\" password)",
+  "versions": [
+   "jp"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it in the \"Maxed Passwords\" table (every shop technique). The game rejects it: with all 8 shop bits the bought items cost 18 capsules ($0D:6AEA weights), more than the cleared areas give before Evil ($0D:6AF2), so the capsule check $0D:6AD9 fails. Typed with the pad: いかん! まちがっている!. The Evil codes below are the working maxed ones.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0906640",
+  "effect": "Start at Evil stage 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: nothing; capsules 18); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "1144248",
+  "effect": "Start at Evil stage 2",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: nothing; capsules 18); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "1946648",
+  "effect": "Start at Evil stage 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: nothing; capsules 18); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2104250",
+  "effect": "Start at Evil stage 4",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: nothing; capsules 18); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2906650",
+  "effect": "Start at Evil stage 5",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: nothing; capsules 18); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "3144258",
+  "effect": "Start at Evil stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: nothing; capsules 18); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "CF37C00",
+  "effect": "Start at Evil stage 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: K kick, D dash, L line bomb, F full, M1, M2, M3, M4; capsules 0); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "D775808",
+  "effect": "Start at Evil stage 2",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: K kick, D dash, L line bomb, F full, M1, M2, M3, M4; capsules 0); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "DF77C08",
+  "effect": "Start at Evil stage 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: K kick, D dash, L line bomb, F full, M1, M2, M3, M4; capsules 0); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "E735810",
+  "effect": "Start at Evil stage 4",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: K kick, D dash, L line bomb, F full, M1, M2, M3, M4; capsules 0); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "EF37C10",
+  "effect": "Start at Evil stage 5",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice, Sand, Lava, Aqua; shop: K kick, D dash, L line bomb, F full, M1, M2, M3, M4; capsules 0); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "30CC0F8",
+  "effect": "Start at Aqua stage 6",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Built with password.mjs (decodes to cleared: Wood, City, Ice; shop: nothing; capsules 7); typed with the pad in Mesen and accepted. GameFAQs has no Evil 1-5 codes; its maxed Evil codes are rejected.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0101BCC1",
+  "effect": "Invincible (unused debug flag $C1BC)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark. $C1BC is cleared at boot ($00:12FA) and never set, but the player-hit routine $01:4BE6 skips the dying state when it is non-zero. Bot 6,000 frames from Wood 1: 0 hits with it, 11 deaths without.",
+  "section": "cheat"
+ },
+ {
+  "code": "C3B-E6B-081 + E4B-E7B-198 + 4AB-E8B-E6D",
+  "effect": "Invincible (ROM patch)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Game Genie: $01:4BE6 LD A,($C1BC) -> JP $4AE4, the flag's no-death branch. Bot 6,000 frames: 0 hits. IPS: patches/gb3_invincible.ips.",
+  "section": "cheat"
+ },
+ {
+  "code": "010363C3",
+  "effect": "Infinite lives",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark: lives $C363 = 3. Bot 6,000 frames: 14 deaths, lives stay 3.",
+  "section": "cheat"
+ },
+ {
+  "code": "01FF80C4",
+  "effect": "Every stage ends cleared at once",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark: stage result $C480 = $FF, the exit taken ($00:1BE6 -> $00:13A8). With the invincibility flag: Wood 1-6 then City 1 in 6,000 frames; the shop ($0A:7557) follows each area's 6th stage.",
+  "section": "cheat"
+ },
+ {
+  "code": "0101BDC1",
+  "effect": "Clock stops (unused debug flag $C1BD)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark. $C1BD is cleared at boot and never set; $00:29B1 (the per-frame clock update) returns at once when it is non-zero. 1,200 frames of Wood 1: the clock stays 3:00 (2:41 without).",
+  "section": "cheat"
+ }
+]

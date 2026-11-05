@@ -1,0 +1,194 @@
+[
+ {
+  "code": "8566",
+  "effect": "Start at world 1",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table value $80: $C100 = $00; the world's power-up set comes from the world ($C125 = $C126 = $00 read back). Typed with the pad in Mesen (US, JP), then played. This is the code the CONTINUE screen shows for world 1 ($00:1FE5). GameFAQs (Bomberman GB page): Level 1.",
+  "section": "Passwords"
+ },
+ {
+  "code": "9634",
+  "effect": "Start at world 2",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table value $81: $C100 = $10; the world's power-up set comes from the world ($C125 = $C126 = $04 read back). Typed with the pad in Mesen (US, JP), then played. This is the code the CONTINUE screen shows for world 2 ($00:1FE5). GameFAQs (Bomberman GB page): Level 2.",
+  "section": "Passwords"
+ },
+ {
+  "code": "1637",
+  "effect": "Start at world 3",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table value $82: $C100 = $20; the world's power-up set comes from the world ($C125 = $C126 = $0C read back). Typed with the pad in Mesen (US, JP), then played. This is the code the CONTINUE screen shows for world 3 ($00:1FE5). GameFAQs (Bomberman GB page): Level 3.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0320",
+  "effect": "Start at world 4",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table value $83: $C100 = $30; the world's power-up set comes from the world ($C125 = $C126 = $4C read back). Typed with the pad in Mesen (US, JP), then played. This is the code the CONTINUE screen shows for world 4 ($00:1FE5). GameFAQs (Bomberman GB page): Level 4.",
+  "section": "Passwords"
+ },
+ {
+  "code": "6524",
+  "effect": "Start at world 5",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table value $84: $C100 = $40; the world's power-up set comes from the world ($C125 = $C126 = $5C read back). Typed with the pad in Mesen (US, JP), then played. This is the code the CONTINUE screen shows for world 5 ($00:1FE5). GameFAQs (Bomberman GB page): Level 5.",
+  "section": "Passwords"
+ },
+ {
+  "code": "3260",
+  "effect": "Start at world 6",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table value $85: $C100 = $50; the world's power-up set comes from the world ($C125 = $C126 = $7C read back). Typed with the pad in Mesen (US, JP), then played. This is the code the CONTINUE screen shows for world 6 ($00:1FE5). GameFAQs (Bomberman GB page): Level 6.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4783",
+  "effect": "Start at world 7",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table value $86: $C100 = $60; the world's power-up set comes from the world ($C125 = $C126 = $7C read back). Typed with the pad in Mesen (US, JP), then played. This is the code the CONTINUE screen shows for world 7 ($00:1FE5). GameFAQs (Bomberman GB page): Level 7.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5472",
+  "effect": "Start at world 8",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table value $87: $C100 = $70; the world's power-up set comes from the world ($C125 = $C126 = $7F read back). Typed with the pad in Mesen (US, JP), then played. This is the code the CONTINUE screen shows for world 8 ($00:1FE5). GameFAQs (Bomberman GB page): Level 8.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2145",
+  "effect": "Sound test (MUSIC / EFFECT / EXIT)",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Value $88 -> $00:2146. Typed with the pad in US and JP. GameFAQs and TCRF both have it.",
+  "section": "Passwords",
+  "img": "codes_us.png"
+ },
+ {
+  "code": "5656",
+  "effect": "Battle mode (1P-4P, the others CPU; up to 4 humans through the SGB multitap)",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Value $8A: $C11A = 1, $00:2AE8. The plain-GB title has no battle entry (STORY / LESSON / PASSWORD), so this code is the way in; the game sends MLT_REQ for 4 players at boot (tools/emu/sgb.lua log). Typed with the pad in US and JP. GameFAQs: Battle Mode.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4622",
+  "effect": "World 1 with every power-up",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Value $8D: $C100 = 0, $C125 = $C126 = $7F (all power-up bits), $C11E = 1. Typed with the pad in US and JP. GameFAQs: All Power-Ups.",
+  "section": "Passwords"
+ },
+ {
+  "code": "7824",
+  "effect": "Rejected; in an unused copy of the table it meant the ending",
+  "versions": [
+   "us"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "TCRF: 7824 sits among the US passwords and only returns invalid, effect unknown. The US ROM has two copies of the table: the live one at $0F:7F72 (11 codes, used by $00:35CC) and an older, unreferenced one at $0F:5447 with a 12th record 7824 = $89. The dispatcher still handles $89: it jumps to $00:1E3A, the ending sequence the game runs after world 8 ($00:260E). Typed with the pad: rejected (reject exit $00:3602 ran). JP has neither the copy nor 7824.",
+  "section": "unused"
+ },
+ {
+  "code": "Value $00-$7F / $8B / $8C",
+  "effect": "Unused password dispatcher cases: any world/stage, a second sound-test entry, the closing screen",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "$00:3639 (US) handles table values no record holds: bit 7 clear sets $C100 to the value (world << 4 | stage) and starts there; $8B sets $C11B = 1 and opens the sound test; $8C jumps to $00:34E9, the screen after the staff roll. No code reaches them; values above $8D go back to the title.",
+  "section": "unused"
+ },
+ {
+  "code": "C92-96A-6EB + C92-ACA-6EB + C93-03A-6EB",
+  "effect": "Invincible",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Game Genie, compare $60: RET over the three player-death handlers in the hit jump table $01:4913 ($01:5296 fire, $01:52AC and $01:5303), same addresses in both. tools/gb2/test_cheats.lua, bot 6,000 frames in world 1: 0 deaths with the codes, 5 deaths and a game over without. IPS: patches/gb2_invincible.ips.",
+  "section": "cheat"
+ },
+ {
+  "code": "010306C1",
+  "effect": "Infinite lives",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark: lives $C106 = 3. Bot 6,000 frames: 10 deaths, no game over.",
+  "section": "cheat"
+ },
+ {
+  "code": "010103C1 + 010004C1",
+  "effect": "Every stage ends cleared at once",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark: stage-end flag $C103 = 1 and dead flag $C104 = 0, so $00:24E3 runs the end countdown $C105 and $00:254F takes the clear path. Bot run: $C100 went 00, 01, 02, 03, 04, 07 (boss), 10 (world 2) in 5,000 frames.",
+  "section": "cheat"
+ }
+]

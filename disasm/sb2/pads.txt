@@ -1,0 +1,614 @@
+## usa
+C00C3C combo  AND/CMP #0x000f -
+C00E9B test   LDA $C3 / BIT #$0010 R
+C0164F test   LDA $C3 / AND #$0300 Right+Left
+C01653 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C3
+C01664 combo  AND/CMP #0x0c00 Down+Up
+C016A6 test   LDA $C5 / AND #$0300 Right+Left
+C016AA combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C5
+C016BB combo  AND/CMP #0x0c00 Down+Up
+C016FD test   LDA $C7 / AND #$0300 Right+Left
+C01701 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C7
+C01712 combo  AND/CMP #0x0c00 Down+Up
+C0175A combo  AND/CMP #0x0300 Right+Left
+C0176B combo  AND/CMP #0x0c00 Down+Up
+C017F1 test   LDA $C9 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C017F7 test   LDA $CB / AND #$0F lo:-/hi:Right+Left+Down+Up
+C01E52 combo  AND/CMP #0x000f -
+C04026 combo  AND/CMP #0x00ff R+L+X+A
+C05F68 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $0000C3,X
+C05F79 combo  AND/CMP #0x0c00 Down+Up
+C0D114 combo  AND/CMP #0x0003 -
+C0D5F6 combo  AND/CMP #0x00ff R+L+X+A
+C0DF72 window $7FD000,X in [0x17,0x1f) then INC $1C
+C0FB30 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C0FCB4 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C10A12 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C5
+C10A20 test   LDA $C5 / BIT #$1000 Start
+C10A29 test   LDA $C5 / BIT #$1000 Start
+C10A5C exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C7
+C10A6A test   LDA $C7 / BIT #$1000 Start
+C10A73 test   LDA $C7 / BIT #$1000 Start
+C10AA6 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C9
+C10AB4 test   LDA $C9 / BIT #$1000 Start
+C10ABD test   LDA $C9 / BIT #$1000 Start
+C10AF0 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $CB
+C10AFE test   LDA $CB / BIT #$1000 Start
+C10B07 test   LDA $CB / BIT #$1000 Start
+C10B3A exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C3
+C10B48 test   LDA $C3 / BIT #$1000 Start
+C10B51 test   LDA $C3 / BIT #$1000 Start
+C10D79 combo  AND/CMP #0x000f -
+C113F2 combo  AND/CMP #0x2800 Up+Select
+C114C5 combo  AND/CMP #0x2800 Up+Select
+C11598 combo  AND/CMP #0x2800 Up+Select
+C1166B combo  AND/CMP #0x2800 Up+Select
+C11EEB combo  AND/CMP #0x007f R+L+X
+C11FF9 window [$82],Y in [0x1a,0x24) then INC $5C
+C11FFE window ? in [0x24,0x29) then INC $5C
+C150C1 combo  AND/CMP #0x007f R+L+X
+C15B4A test   LDA $C3 / BIT #$2000 Select
+C15BC3 test   LDA $C3 / BIT #$1000 Start
+C15C0E test   LDA $C3 / AND #$0F00 Right+Left+Down+Up
+C15C51 test   LDA $C3 / AND #$0C00 Down+Up
+C15C85 test   LDA $C3 / BIT #$0100 Right
+C15CD8 test   LDA $C3 / BIT #$0100 Right
+C15CEC test   LDA $C3 / BIT #$0100 Right
+C15D20 test   LDA $C3 / BIT #$0100 Right
+C15D54 test   LDA $C3 / BIT #$0100 Right
+C15D90 test   LDA $C3 / BIT #$0100 Right
+C15DE4 test   LDA $C3 / BIT #$0800 Up
+C1B4A3 combo  AND/CMP #0x00ff R+L+X+A
+C1C069 window [$82],Y in [0x1a,0x24) then INC $5C
+C1C06E window [$82],Y in [0x24,0x29) then INC $5C
+C1C543 combo  AND/CMP #0x0003 -
+CC04DB test   LDA $7F402E / BIT #$1080 A+Start
+CC0659 test   LDA $7F402E / BIT #$1080 A+Start
+CC07C9 test   LDA $7F402E / BIT #$1080 A+Start
+CC0E6C test   LDA $7F402E / BIT #$1080 A+Start
+CC139A test   LDA $7F402E / BIT #$1080 A+Start
+CC13A4 test   LDA $7F404A / BIT #$1080 A+Start
+CC14D0 test   LDA $7F4032 / BIT #$0040 X
+CC14E6 window #$0000 in [0x7,0xa) then INC $001CD1
+CC15F7 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC160C test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC161C test   LDA $7F4034 / BIT #$0800 Up
+CC1772 test   LDA $7F402E / BIT #$1080 A+Start
+CC179E test   LDA $7F402E / BIT #$8000 B
+CC19E2 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC19F7 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC1A07 test   LDA $7F4034 / BIT #$0400 Down
+CC1B5C test   LDA $7F402E / BIT #$0300 Right+Left
+CC1B7F test   LDA $7F4034 / BIT #$0300 Right+Left
+CC1B8F test   LDA $7F4034 / BIT #$0200 Left
+CC1F71 test   LDA $7F402E / BIT #$1080 A+Start
+CC2004 test   LDA $7F402E / BIT #$1080 A+Start
+CC20F8 test   LDA $7F402E / BIT #$1080 A+Start
+CC2154 test   LDA $7F4032 / BIT #$2000 Select
+CC2174 test   LDA $7F4038 / BIT #$2000 Select
+CC2194 test   LDA $7F403E / BIT #$2000 Select
+CC21B4 test   LDA $7F4044 / BIT #$2000 Select
+CC21D4 test   LDA $7F402E / BIT #$8000 B
+CC22F9 test   LDA $7F402E / BIT #$1080 A+Start
+CC242C test   LDA $7F402E / BIT #$1080 A+Start
+CC2E58 test   LDA $7F402E / BIT #$1080 A+Start
+CC373D test   LDA $7F402E / BIT #$1080 A+Start
+CC42FC test   LDA $7F402E / BIT #$1080 A+Start
+CC4473 test   LDA $7F402E / BIT #$0300 Right+Left
+CC4496 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC44A6 test   LDA $7F4034 / BIT #$0200 Left
+CC4762 test   LDA $7F402E / BIT #$1080 A+Start
+CC4C0F test   LDA $7F402E / BIT #$1080 A+Start
+CC5389 test   LDA $7F402E / BIT #$1080 A+Start
+CC53CE test   LDA $7F402E / BIT #$1080 A+Start
+CC5D20 test   LDA $7F402C / BIT #$1080 A+Start
+CC5E16 test   LDA $7F402C / BIT #$1080 A+Start
+CC5E6B test   LDA $7F402C / BIT #$1080 A+Start
+CC61B9 test   LDA $7F402E / BIT #$0300 Right+Left
+CC61CE test   LDA $7F4034 / BIT #$0300 Right+Left
+CC61DF test   LDA $7F4034 / BIT #$0200 Left
+CC6565 test   LDA $7F402E / BIT #$0300 Right+Left
+CC657A test   LDA $7F4034 / BIT #$0300 Right+Left
+CC658B test   LDA $7F4034 / BIT #$0200 Left
+CC66E2 test   LDA $7F402E / BIT #$0300 Right+Left
+CC66F7 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC6708 test   LDA $7F4034 / BIT #$0200 Left
+CC689D test   LDA $7F402E / BIT #$0300 Right+Left
+CC68B2 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC68C3 test   LDA $7F4034 / BIT #$0200 Left
+CC6A8C test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6AAF test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6ABF test   LDA $7F4034 / BIT #$0800 Up
+CC6BB0 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6BD3 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6BE3 test   LDA $7F4034 / BIT #$0800 Up
+CCA940 combo  AND/CMP #0x0006 -
+# 124 hits
+## eu
+C00C3C combo  AND/CMP #0x000f -
+C00E9B test   LDA $C3 / BIT #$0010 R
+C0164F test   LDA $C3 / AND #$0300 Right+Left
+C01653 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C3
+C01664 combo  AND/CMP #0x0c00 Down+Up
+C016A6 test   LDA $C5 / AND #$0300 Right+Left
+C016AA combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C5
+C016BB combo  AND/CMP #0x0c00 Down+Up
+C016FD test   LDA $C7 / AND #$0300 Right+Left
+C01701 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C7
+C01712 combo  AND/CMP #0x0c00 Down+Up
+C0175A combo  AND/CMP #0x0300 Right+Left
+C0176B combo  AND/CMP #0x0c00 Down+Up
+C017F1 test   LDA $C9 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C017F7 test   LDA $CB / AND #$0F lo:-/hi:Right+Left+Down+Up
+C01E52 combo  AND/CMP #0x000f -
+C04026 combo  AND/CMP #0x00ff R+L+X+A
+C05F68 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $0000C3,X
+C05F79 combo  AND/CMP #0x0c00 Down+Up
+C0D114 combo  AND/CMP #0x0003 -
+C0D5F6 combo  AND/CMP #0x00ff R+L+X+A
+C0DF72 window $7FD000,X in [0x17,0x1f) then INC $1C
+C0FB30 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C0FCB4 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C10A12 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C5
+C10A20 test   LDA $C5 / BIT #$1000 Start
+C10A29 test   LDA $C5 / BIT #$1000 Start
+C10A5C exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C7
+C10A6A test   LDA $C7 / BIT #$1000 Start
+C10A73 test   LDA $C7 / BIT #$1000 Start
+C10AA6 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C9
+C10AB4 test   LDA $C9 / BIT #$1000 Start
+C10ABD test   LDA $C9 / BIT #$1000 Start
+C10AF0 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $CB
+C10AFE test   LDA $CB / BIT #$1000 Start
+C10B07 test   LDA $CB / BIT #$1000 Start
+C10B3A exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C3
+C10B48 test   LDA $C3 / BIT #$1000 Start
+C10B51 test   LDA $C3 / BIT #$1000 Start
+C10D79 combo  AND/CMP #0x000f -
+C113F2 combo  AND/CMP #0x2800 Up+Select
+C114C5 combo  AND/CMP #0x2800 Up+Select
+C11598 combo  AND/CMP #0x2800 Up+Select
+C1166B combo  AND/CMP #0x2800 Up+Select
+C11EEB combo  AND/CMP #0x007f R+L+X
+C11FF9 window [$82],Y in [0x1a,0x24) then INC $5C
+C11FFE window ? in [0x24,0x29) then INC $5C
+C150C1 combo  AND/CMP #0x007f R+L+X
+C15B4A test   LDA $C3 / BIT #$2000 Select
+C15BC3 test   LDA $C3 / BIT #$1000 Start
+C15C0E test   LDA $C3 / AND #$0F00 Right+Left+Down+Up
+C15C51 test   LDA $C3 / AND #$0C00 Down+Up
+C15C85 test   LDA $C3 / BIT #$0100 Right
+C15CD8 test   LDA $C3 / BIT #$0100 Right
+C15CEC test   LDA $C3 / BIT #$0100 Right
+C15D20 test   LDA $C3 / BIT #$0100 Right
+C15D54 test   LDA $C3 / BIT #$0100 Right
+C15D90 test   LDA $C3 / BIT #$0100 Right
+C15DE4 test   LDA $C3 / BIT #$0800 Up
+C1B4A3 combo  AND/CMP #0x00ff R+L+X+A
+C1C069 window [$82],Y in [0x1a,0x24) then INC $5C
+C1C06E window [$82],Y in [0x24,0x29) then INC $5C
+C1C543 combo  AND/CMP #0x0003 -
+CC04E2 test   LDA $7F402E / BIT #$1080 A+Start
+CC0660 test   LDA $7F402E / BIT #$1080 A+Start
+CC07D0 test   LDA $7F402E / BIT #$1080 A+Start
+CC0E73 test   LDA $7F402E / BIT #$1080 A+Start
+CC13F5 test   LDA $7F402E / BIT #$1080 A+Start
+CC13FF test   LDA $7F404A / BIT #$1080 A+Start
+CC152B test   LDA $7F4032 / BIT #$0040 X
+CC1541 window #$0000 in [0x7,0xa) then INC $001CD1
+CC1652 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC1667 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC1677 test   LDA $7F4034 / BIT #$0800 Up
+CC17CD test   LDA $7F402E / BIT #$1080 A+Start
+CC17F9 test   LDA $7F402E / BIT #$8000 B
+CC1A3D test   LDA $7F402E / BIT #$0C00 Down+Up
+CC1A52 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC1A62 test   LDA $7F4034 / BIT #$0400 Down
+CC1BB7 test   LDA $7F402E / BIT #$0300 Right+Left
+CC1BDA test   LDA $7F4034 / BIT #$0300 Right+Left
+CC1BEA test   LDA $7F4034 / BIT #$0200 Left
+CC1FCC test   LDA $7F402E / BIT #$1080 A+Start
+CC205F test   LDA $7F402E / BIT #$1080 A+Start
+CC2153 test   LDA $7F402E / BIT #$1080 A+Start
+CC21AF test   LDA $7F4032 / BIT #$2000 Select
+CC21CF test   LDA $7F4038 / BIT #$2000 Select
+CC21EF test   LDA $7F403E / BIT #$2000 Select
+CC220F test   LDA $7F4044 / BIT #$2000 Select
+CC222F test   LDA $7F402E / BIT #$8000 B
+CC2354 test   LDA $7F402E / BIT #$1080 A+Start
+CC2487 test   LDA $7F402E / BIT #$1080 A+Start
+CC2EBA test   LDA $7F402E / BIT #$1080 A+Start
+CC379F test   LDA $7F402E / BIT #$1080 A+Start
+CC435E test   LDA $7F402E / BIT #$1080 A+Start
+CC44D5 test   LDA $7F402E / BIT #$0300 Right+Left
+CC44F8 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC4508 test   LDA $7F4034 / BIT #$0200 Left
+CC47C4 test   LDA $7F402E / BIT #$1080 A+Start
+CC4C71 test   LDA $7F402E / BIT #$1080 A+Start
+CC53EB test   LDA $7F402E / BIT #$1080 A+Start
+CC5430 test   LDA $7F402E / BIT #$1080 A+Start
+CC621B test   LDA $7F402E / BIT #$0300 Right+Left
+CC6230 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC6241 test   LDA $7F4034 / BIT #$0200 Left
+CC65C7 test   LDA $7F402E / BIT #$0300 Right+Left
+CC65DC test   LDA $7F4034 / BIT #$0300 Right+Left
+CC65ED test   LDA $7F4034 / BIT #$0200 Left
+CC6744 test   LDA $7F402E / BIT #$0300 Right+Left
+CC6759 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC676A test   LDA $7F4034 / BIT #$0200 Left
+CC68FF test   LDA $7F402E / BIT #$0300 Right+Left
+CC6914 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC6925 test   LDA $7F4034 / BIT #$0200 Left
+CC6AEE test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6B11 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6B21 test   LDA $7F4034 / BIT #$0800 Up
+CC6C12 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6C35 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6C45 test   LDA $7F4034 / BIT #$0800 Up
+# 120 hits
+## jp
+C00C3C combo  AND/CMP #0x000f -
+C00E9B test   LDA $C3 / BIT #$0010 R
+C0164F test   LDA $C3 / AND #$0300 Right+Left
+C01653 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C3
+C01664 combo  AND/CMP #0x0c00 Down+Up
+C016A6 test   LDA $C5 / AND #$0300 Right+Left
+C016AA combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C5
+C016BB combo  AND/CMP #0x0c00 Down+Up
+C016FD test   LDA $C7 / AND #$0300 Right+Left
+C01701 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C7
+C01712 combo  AND/CMP #0x0c00 Down+Up
+C0175A combo  AND/CMP #0x0300 Right+Left
+C0176B combo  AND/CMP #0x0c00 Down+Up
+C017F1 test   LDA $C9 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C017F7 test   LDA $CB / AND #$0F lo:-/hi:Right+Left+Down+Up
+C01E52 combo  AND/CMP #0x000f -
+C04026 combo  AND/CMP #0x00ff R+L+X+A
+C05F68 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $0000C3,X
+C05F79 combo  AND/CMP #0x0c00 Down+Up
+C0D114 combo  AND/CMP #0x0003 -
+C0D5F6 combo  AND/CMP #0x00ff R+L+X+A
+C0DF72 window $7FD000,X in [0x17,0x1f) then INC $1C
+C0FB30 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C0FCB4 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C10A12 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C5
+C10A20 test   LDA $C5 / BIT #$1000 Start
+C10A29 test   LDA $C5 / BIT #$1000 Start
+C10A5C exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C7
+C10A6A test   LDA $C7 / BIT #$1000 Start
+C10A73 test   LDA $C7 / BIT #$1000 Start
+C10AA6 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C9
+C10AB4 test   LDA $C9 / BIT #$1000 Start
+C10ABD test   LDA $C9 / BIT #$1000 Start
+C10AF0 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $CB
+C10AFE test   LDA $CB / BIT #$1000 Start
+C10B07 test   LDA $CB / BIT #$1000 Start
+C10B3A exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C3
+C10B48 test   LDA $C3 / BIT #$1000 Start
+C10B51 test   LDA $C3 / BIT #$1000 Start
+C10D79 combo  AND/CMP #0x000f -
+C113F2 combo  AND/CMP #0x2800 Up+Select
+C114C5 combo  AND/CMP #0x2800 Up+Select
+C11598 combo  AND/CMP #0x2800 Up+Select
+C1166B combo  AND/CMP #0x2800 Up+Select
+C11EEB combo  AND/CMP #0x007f R+L+X
+C11FF9 window [$82],Y in [0x1a,0x24) then INC $5C
+C11FFE window ? in [0x24,0x29) then INC $5C
+C150C1 combo  AND/CMP #0x007f R+L+X
+C15B4A test   LDA $C3 / BIT #$2000 Select
+C15BC3 test   LDA $C3 / BIT #$1000 Start
+C15C0E test   LDA $C3 / AND #$0F00 Right+Left+Down+Up
+C15C51 test   LDA $C3 / AND #$0C00 Down+Up
+C15C85 test   LDA $C3 / BIT #$0100 Right
+C15CD8 test   LDA $C3 / BIT #$0100 Right
+C15CEC test   LDA $C3 / BIT #$0100 Right
+C15D20 test   LDA $C3 / BIT #$0100 Right
+C15D54 test   LDA $C3 / BIT #$0100 Right
+C15D90 test   LDA $C3 / BIT #$0100 Right
+C15DE4 test   LDA $C3 / BIT #$0800 Up
+C1B4A3 combo  AND/CMP #0x00ff R+L+X+A
+C1C069 window [$82],Y in [0x1a,0x24) then INC $5C
+C1C06E window [$82],Y in [0x24,0x29) then INC $5C
+C1C543 combo  AND/CMP #0x0003 -
+CC04DB test   LDA $7F402E / BIT #$1080 A+Start
+CC0659 test   LDA $7F402E / BIT #$1080 A+Start
+CC07C9 test   LDA $7F402E / BIT #$1080 A+Start
+CC0E6C test   LDA $7F402E / BIT #$1080 A+Start
+CC1389 test   LDA $7F402E / BIT #$1080 A+Start
+CC1393 test   LDA $7F404A / BIT #$1080 A+Start
+CC14BF test   LDA $7F4032 / BIT #$0040 X
+CC14D5 window #$0000 in [0x7,0xa) then INC $001CD1
+CC15E6 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC15FB test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC160B test   LDA $7F4034 / BIT #$0800 Up
+CC1761 test   LDA $7F402E / BIT #$1080 A+Start
+CC178D test   LDA $7F402E / BIT #$8000 B
+CC19D1 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC19E6 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC19F6 test   LDA $7F4034 / BIT #$0400 Down
+CC1B4B test   LDA $7F402E / BIT #$0300 Right+Left
+CC1B6E test   LDA $7F4034 / BIT #$0300 Right+Left
+CC1B7E test   LDA $7F4034 / BIT #$0200 Left
+CC1F60 test   LDA $7F402E / BIT #$1080 A+Start
+CC1FF3 test   LDA $7F402E / BIT #$1080 A+Start
+CC20E7 test   LDA $7F402E / BIT #$1080 A+Start
+CC2143 test   LDA $7F4032 / BIT #$2000 Select
+CC2163 test   LDA $7F4038 / BIT #$2000 Select
+CC2183 test   LDA $7F403E / BIT #$2000 Select
+CC21A3 test   LDA $7F4044 / BIT #$2000 Select
+CC21C3 test   LDA $7F402E / BIT #$8000 B
+CC22E8 test   LDA $7F402E / BIT #$1080 A+Start
+CC241B test   LDA $7F402E / BIT #$1080 A+Start
+CC2E47 test   LDA $7F402E / BIT #$1080 A+Start
+CC372C test   LDA $7F402E / BIT #$1080 A+Start
+CC42EB test   LDA $7F402E / BIT #$1080 A+Start
+CC4462 test   LDA $7F402E / BIT #$0300 Right+Left
+CC4485 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC4495 test   LDA $7F4034 / BIT #$0200 Left
+CC4751 test   LDA $7F402E / BIT #$1080 A+Start
+CC4BFE test   LDA $7F402E / BIT #$1080 A+Start
+CC5378 test   LDA $7F402E / BIT #$1080 A+Start
+CC53BD test   LDA $7F402E / BIT #$1080 A+Start
+CC61A8 test   LDA $7F402E / BIT #$0300 Right+Left
+CC61BD test   LDA $7F4034 / BIT #$0300 Right+Left
+CC61CE test   LDA $7F4034 / BIT #$0200 Left
+CC6554 test   LDA $7F402E / BIT #$0300 Right+Left
+CC6569 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC657A test   LDA $7F4034 / BIT #$0200 Left
+CC66D1 test   LDA $7F402E / BIT #$0300 Right+Left
+CC66E6 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC66F7 test   LDA $7F4034 / BIT #$0200 Left
+CC688C test   LDA $7F402E / BIT #$0300 Right+Left
+CC68A1 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC68B2 test   LDA $7F4034 / BIT #$0200 Left
+CC6A7B test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6A9E test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6AAE test   LDA $7F4034 / BIT #$0800 Up
+CC6B9F test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6BC2 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6BD2 test   LDA $7F4034 / BIT #$0800 Up
+# 120 hits
+## beta
+C00C3C combo  AND/CMP #0x000f -
+C00E9B test   LDA $C3 / BIT #$0010 R
+C0164F test   LDA $C3 / AND #$0300 Right+Left
+C01653 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C3
+C01664 combo  AND/CMP #0x0c00 Down+Up
+C016A6 test   LDA $C5 / AND #$0300 Right+Left
+C016AA combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C5
+C016BB combo  AND/CMP #0x0c00 Down+Up
+C016FD test   LDA $C7 / AND #$0300 Right+Left
+C01701 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C7
+C01712 combo  AND/CMP #0x0c00 Down+Up
+C0175A combo  AND/CMP #0x0300 Right+Left
+C0176B combo  AND/CMP #0x0c00 Down+Up
+C017F1 test   LDA $C9 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C017F7 test   LDA $CB / AND #$0F lo:-/hi:Right+Left+Down+Up
+C01E52 combo  AND/CMP #0x000f -
+C04026 combo  AND/CMP #0x00ff R+L+X+A
+C05F68 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $0000C3,X
+C05F79 combo  AND/CMP #0x0c00 Down+Up
+C0D114 combo  AND/CMP #0x0003 -
+C0D5F6 combo  AND/CMP #0x00ff R+L+X+A
+C0DF72 window $7FD000,X in [0x17,0x1f) then INC $1C
+C0FB30 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C0FCB4 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C10A12 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C5
+C10A20 test   LDA $C5 / BIT #$1000 Start
+C10A29 test   LDA $C5 / BIT #$1000 Start
+C10A5C exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C7
+C10A6A test   LDA $C7 / BIT #$1000 Start
+C10A73 test   LDA $C7 / BIT #$1000 Start
+C10AA6 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C9
+C10AB4 test   LDA $C9 / BIT #$1000 Start
+C10ABD test   LDA $C9 / BIT #$1000 Start
+C10AF0 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $CB
+C10AFE test   LDA $CB / BIT #$1000 Start
+C10B07 test   LDA $CB / BIT #$1000 Start
+C10B3A exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C3
+C10B48 test   LDA $C3 / BIT #$1000 Start
+C10B51 test   LDA $C3 / BIT #$1000 Start
+C10D79 combo  AND/CMP #0x000f -
+C113F2 combo  AND/CMP #0x2800 Up+Select
+C114C5 combo  AND/CMP #0x2800 Up+Select
+C11598 combo  AND/CMP #0x2800 Up+Select
+C1166B combo  AND/CMP #0x2800 Up+Select
+C11EEB combo  AND/CMP #0x007f R+L+X
+C11FF9 window [$82],Y in [0x1a,0x24) then INC $5C
+C11FFE window ? in [0x24,0x29) then INC $5C
+C150C1 combo  AND/CMP #0x007f R+L+X
+C15B4A test   LDA $C3 / BIT #$2000 Select
+C15BC3 test   LDA $C3 / BIT #$1000 Start
+C15C0E test   LDA $C3 / AND #$0F00 Right+Left+Down+Up
+C15C51 test   LDA $C3 / AND #$0C00 Down+Up
+C15C85 test   LDA $C3 / BIT #$0100 Right
+C15CD8 test   LDA $C3 / BIT #$0100 Right
+C15CEC test   LDA $C3 / BIT #$0100 Right
+C15D20 test   LDA $C3 / BIT #$0100 Right
+C15D54 test   LDA $C3 / BIT #$0100 Right
+C15D90 test   LDA $C3 / BIT #$0100 Right
+C15DE4 test   LDA $C3 / BIT #$0800 Up
+C1B4A3 combo  AND/CMP #0x00ff R+L+X+A
+C1C069 window [$82],Y in [0x1a,0x24) then INC $5C
+C1C06E window [$82],Y in [0x24,0x29) then INC $5C
+C1C543 combo  AND/CMP #0x0003 -
+CC04DB test   LDA $7F402E / BIT #$1080 A+Start
+CC0659 test   LDA $7F402E / BIT #$1080 A+Start
+CC07C9 test   LDA $7F402E / BIT #$1080 A+Start
+CC0E6C test   LDA $7F402E / BIT #$1080 A+Start
+CC139A test   LDA $7F402E / BIT #$1080 A+Start
+CC13A4 test   LDA $7F404A / BIT #$1080 A+Start
+CC14D0 test   LDA $7F4032 / BIT #$0040 X
+CC14E6 window #$0000 in [0x7,0xa) then INC $001CD1
+CC15F7 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC160C test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC161C test   LDA $7F4034 / BIT #$0800 Up
+CC1772 test   LDA $7F402E / BIT #$1080 A+Start
+CC179E test   LDA $7F402E / BIT #$8000 B
+CC19E2 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC19F7 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC1A07 test   LDA $7F4034 / BIT #$0400 Down
+CC1B5C test   LDA $7F402E / BIT #$0300 Right+Left
+CC1B7F test   LDA $7F4034 / BIT #$0300 Right+Left
+CC1B8F test   LDA $7F4034 / BIT #$0200 Left
+CC1F71 test   LDA $7F402E / BIT #$1080 A+Start
+CC2004 test   LDA $7F402E / BIT #$1080 A+Start
+CC20F8 test   LDA $7F402E / BIT #$1080 A+Start
+CC2154 test   LDA $7F4032 / BIT #$2000 Select
+CC2174 test   LDA $7F4038 / BIT #$2000 Select
+CC2194 test   LDA $7F403E / BIT #$2000 Select
+CC21B4 test   LDA $7F4044 / BIT #$2000 Select
+CC21D4 test   LDA $7F402E / BIT #$8000 B
+CC22F9 test   LDA $7F402E / BIT #$1080 A+Start
+CC242C test   LDA $7F402E / BIT #$1080 A+Start
+CC2E58 test   LDA $7F402E / BIT #$1080 A+Start
+CC373D test   LDA $7F402E / BIT #$1080 A+Start
+CC42FC test   LDA $7F402E / BIT #$1080 A+Start
+CC4473 test   LDA $7F402E / BIT #$0300 Right+Left
+CC4496 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC44A6 test   LDA $7F4034 / BIT #$0200 Left
+CC4762 test   LDA $7F402E / BIT #$1080 A+Start
+CC4C0F test   LDA $7F402E / BIT #$1080 A+Start
+CC5389 test   LDA $7F402E / BIT #$1080 A+Start
+CC53CE test   LDA $7F402E / BIT #$1080 A+Start
+CC61B9 test   LDA $7F402E / BIT #$0300 Right+Left
+CC61CE test   LDA $7F4034 / BIT #$0300 Right+Left
+CC61DF test   LDA $7F4034 / BIT #$0200 Left
+CC6565 test   LDA $7F402E / BIT #$0300 Right+Left
+CC657A test   LDA $7F4034 / BIT #$0300 Right+Left
+CC658B test   LDA $7F4034 / BIT #$0200 Left
+CC66E2 test   LDA $7F402E / BIT #$0300 Right+Left
+CC66F7 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC6708 test   LDA $7F4034 / BIT #$0200 Left
+CC689D test   LDA $7F402E / BIT #$0300 Right+Left
+CC68B2 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC68C3 test   LDA $7F4034 / BIT #$0200 Left
+CC6A8C test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6AAF test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6ABF test   LDA $7F4034 / BIT #$0800 Up
+CC6BB0 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6BD3 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6BE3 test   LDA $7F4034 / BIT #$0800 Up
+# 120 hits
+## caravan
+C00C3C combo  AND/CMP #0x000f -
+C00E9B test   LDA $C3 / BIT #$0010 R
+C0164F test   LDA $C3 / AND #$0300 Right+Left
+C01653 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C3
+C01664 combo  AND/CMP #0x0c00 Down+Up
+C016A6 test   LDA $C5 / AND #$0300 Right+Left
+C016AA combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C5
+C016BB combo  AND/CMP #0x0c00 Down+Up
+C016FD test   LDA $C7 / AND #$0300 Right+Left
+C01701 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $C7
+C01712 combo  AND/CMP #0x0c00 Down+Up
+C0175A combo  AND/CMP #0x0300 Right+Left
+C0176B combo  AND/CMP #0x0c00 Down+Up
+C017F1 test   LDA $C9 / AND #$0F lo:-/hi:Right+Left+Down+Up
+C017F7 test   LDA $CB / AND #$0F lo:-/hi:Right+Left+Down+Up
+C01E52 combo  AND/CMP #0x000f -
+C04026 combo  AND/CMP #0x00ff R+L+X+A
+C05F68 combo  AND/CMP #0x0300 Right+Left   <- pad LDA $0000C3,X
+C05F79 combo  AND/CMP #0x0c00 Down+Up
+C0D114 combo  AND/CMP #0x0003 -
+C0D5F6 combo  AND/CMP #0x00ff R+L+X+A
+C0DFCF window $7FD000,X in [0x17,0x1f) then INC $1C
+C0FB30 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C0FCB4 exact  CMP #0x3000 Start+Select   <- pad LDA $C3
+C10A12 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C5
+C10A20 test   LDA $C5 / BIT #$1000 Start
+C10A29 test   LDA $C5 / BIT #$1000 Start
+C10A5C exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C7
+C10A6A test   LDA $C7 / BIT #$1000 Start
+C10A73 test   LDA $C7 / BIT #$1000 Start
+C10AA6 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C9
+C10AB4 test   LDA $C9 / BIT #$1000 Start
+C10ABD test   LDA $C9 / BIT #$1000 Start
+C10AF0 exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $CB
+C10AFE test   LDA $CB / BIT #$1000 Start
+C10B07 test   LDA $CB / BIT #$1000 Start
+C10B3A exact  CMP #0xffff R+L+X+A+Right+Left+Down+Up+Start+Select+Y+B   <- pad LDA $C3
+C10B48 test   LDA $C3 / BIT #$1000 Start
+C10B51 test   LDA $C3 / BIT #$1000 Start
+C10D79 combo  AND/CMP #0x000f -
+C113F2 combo  AND/CMP #0x2800 Up+Select
+C114C5 combo  AND/CMP #0x2800 Up+Select
+C11598 combo  AND/CMP #0x2800 Up+Select
+C1166B combo  AND/CMP #0x2800 Up+Select
+C11EEB combo  AND/CMP #0x007f R+L+X
+C11FF9 window [$82],Y in [0x1a,0x24) then INC $5C
+C11FFE window ? in [0x24,0x29) then INC $5C
+C150C1 combo  AND/CMP #0x007f R+L+X
+C15B4A test   LDA $C3 / BIT #$2000 Select
+C15BC3 test   LDA $C3 / BIT #$1000 Start
+C15C0E test   LDA $C3 / AND #$0F00 Right+Left+Down+Up
+C15C51 test   LDA $C3 / AND #$0C00 Down+Up
+C15C85 test   LDA $C3 / BIT #$0100 Right
+C15CD8 test   LDA $C3 / BIT #$0100 Right
+C15CEC test   LDA $C3 / BIT #$0100 Right
+C15D20 test   LDA $C3 / BIT #$0100 Right
+C15D54 test   LDA $C3 / BIT #$0100 Right
+C15D90 test   LDA $C3 / BIT #$0100 Right
+C15DE4 test   LDA $C3 / BIT #$0800 Up
+C1B4A3 combo  AND/CMP #0x00ff R+L+X+A
+C1C069 window [$82],Y in [0x1a,0x24) then INC $5C
+C1C06E window [$82],Y in [0x24,0x29) then INC $5C
+C1C543 combo  AND/CMP #0x0003 -
+CC0612 test   LDA $7F402E / BIT #$1080 A+Start
+CC0790 test   LDA $7F402E / BIT #$1080 A+Start
+CC0900 test   LDA $7F402E / BIT #$1080 A+Start
+CC0FA3 test   LDA $7F402E / BIT #$1080 A+Start
+CC1514 test   LDA $7F402E / BIT #$1080 A+Start
+CC151E test   LDA $7F404A / BIT #$1080 A+Start
+CC1668 test   LDA $7F4032 / BIT #$0040 X
+CC167E window #$0000 in [0x7,0xa) then INC $001CD1
+CC178F test   LDA $7F402E / BIT #$0C00 Down+Up
+CC17A4 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC17B4 test   LDA $7F4034 / BIT #$0800 Up
+CC190A test   LDA $7F402E / BIT #$1080 A+Start
+CC1936 test   LDA $7F402E / BIT #$8000 B
+CC1B7A test   LDA $7F402E / BIT #$0C00 Down+Up
+CC1B8F test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC1B9F test   LDA $7F4034 / BIT #$0400 Down
+CC1CF4 test   LDA $7F402E / BIT #$0300 Right+Left
+CC1D17 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC1D27 test   LDA $7F4034 / BIT #$0200 Left
+CC20F2 test   LDA $7F402E / BIT #$1080 A+Start
+CC2185 test   LDA $7F402E / BIT #$1080 A+Start
+CC2279 test   LDA $7F402E / BIT #$1080 A+Start
+CC22D5 test   LDA $7F4032 / BIT #$2000 Select
+CC22F5 test   LDA $7F4038 / BIT #$2000 Select
+CC2315 test   LDA $7F403E / BIT #$2000 Select
+CC2335 test   LDA $7F4044 / BIT #$2000 Select
+CC2355 test   LDA $7F402E / BIT #$8000 B
+CC2468 test   LDA $7F402E / BIT #$1080 A+Start
+CC25A2 test   LDA $7F402E / BIT #$1080 A+Start
+CC2FCE test   LDA $7F402E / BIT #$1080 A+Start
+CC38B3 test   LDA $7F402E / BIT #$1080 A+Start
+CC4472 test   LDA $7F402E / BIT #$1080 A+Start
+CC45E9 test   LDA $7F402E / BIT #$0300 Right+Left
+CC460C test   LDA $7F4034 / BIT #$0300 Right+Left
+CC461C test   LDA $7F4034 / BIT #$0200 Left
+CC48D8 test   LDA $7F402E / BIT #$1080 A+Start
+CC4DA8 test   LDA $7F402E / BIT #$1080 A+Start
+CC5522 test   LDA $7F402E / BIT #$1080 A+Start
+CC5567 test   LDA $7F402E / BIT #$1080 A+Start
+CC6352 test   LDA $7F402E / BIT #$0300 Right+Left
+CC6367 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC6378 test   LDA $7F4034 / BIT #$0200 Left
+CC6702 test   LDA $7F402E / BIT #$0300 Right+Left
+CC6717 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC6728 test   LDA $7F4034 / BIT #$0200 Left
+CC687F test   LDA $7F402E / BIT #$0300 Right+Left
+CC6894 test   LDA $7F4034 / BIT #$0300 Right+Left
+CC68A5 test   LDA $7F4034 / BIT #$0200 Left
+CC6A3A test   LDA $7F402E / BIT #$0300 Right+Left
+CC6A4F test   LDA $7F4034 / BIT #$0300 Right+Left
+CC6A60 test   LDA $7F4034 / BIT #$0200 Left
+CC6C29 test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6C4C test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6C5C test   LDA $7F4034 / BIT #$0800 Up
+CC6D4D test   LDA $7F402E / BIT #$0C00 Down+Up
+CC6D70 test   LDA $7F4034 / BIT #$0C00 Down+Up
+CC6D80 test   LDA $7F4034 / BIT #$0800 Up
+# 120 hits

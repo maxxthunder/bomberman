@@ -1,0 +1,200 @@
+[
+ {
+  "code": "MUVWLNPC",
+  "effect": "Start the 1P game at round 1 stage 1 with 1 bomb, fire 1",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "the zero code (flip 0, shift 0), same as the 1990 card; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "MUVWNEPC",
+  "effect": "Start the 1P game at round 2 stage 1",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "flip 0, shift 0; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "MUGWNNPC",
+  "effect": "Start the 1P game at round 8 stage 1",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "ROUND 8, STAGE 8-1 GAME START shown; the stage itself has no graphics in this card; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "MUOEPHLA",
+  "effect": "Start the 1P game at round 8 stage 8 with 10 bombs, fire 15, roller skate",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "everything maxed; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "MUEEVHVU",
+  "effect": "Start the 1P game at round 1 stage 1 with 10 bombs, fire 15, roller skate",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "RKGEWVHY",
+  "effect": "Start the 1P game at round 3 stage 5 with 4 bombs, fire 2, roller skate",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "flip 5, shift 2; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "ACLCHINN",
+  "effect": "Start the 1P game at round 1 stage 1",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "shift 5: the encoder never makes it, the decoder takes it; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "CUVYVPNP",
+  "effect": "Start the 1P game at round 1 stage 3 with 3 bombs, fire 14",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "shift 7; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "MUVWLNPU",
+  "effect": "Rejected (PASSWORD ERROR)",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "check count wrong; $342F = 2; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)"
+ },
+ {
+  "code": "BOMSOUND",
+  "effect": "Sound test (after the next valid password)",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "TCRF documents this for the 1990 card. Same code here: $02:C656 compares the letters with $C66C and sets $341B = $FF, the decoder rejects BOMSOUND, the next valid code opens the sound test $02:C2A5 (I/II step $00-$39, Run plays, Select stops). Only reachable through the patched-in password screen: BOMSOUND, END, MUVWLNPC, END gave SOUND-00 in Mesen",
+  "section": "Hidden screens (unreachable)"
+ },
+ {
+  "code": "Hi score hundreds digit 3, last attract demo not cut, hold Down+Run+Select+I+II as the 1P intro ends",
+  "effect": "Special Select Room: scene, stage, bombs, fire and four power-up toggles",
+  "versions": [
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "TCRF documents it for the 1990 card. The check $01:A001 is still called from $00:EA43, but only if mode $3380 = 0 and round $2849 != 8; the title always sets $3380 = 1 or 2 and $2849 = 8 ($01:A560/$A572), and $10 is only set by the attract-demo code in bank $0B, which nothing calls. So it cannot open in the shipped game. In Mesen with the password screen patched in, MUVWLNPC, $10 = 1, $2001 = 3 and the five buttons held, the room opened (and set $284D = 1, roller skate); $2001 = 4 or $10 = 0 did not (tools/pceub/test_select_room.lua)",
+  "section": "Hidden screens (unreachable)"
+ },
+ {
+  "code": "Press Run on all five TurboTap pads on the same frame at PUSH RUN BUTTON",
+  "effect": "Tap error screen even with a TurboTap connected",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "$01:A4DD calls $00:E30A when Run starts the title menu: it compares the new presses of the five ports ($220A-$220E) and sets $32 = 0 if all are equal, as they are with no tap. $08:6014 then jumps to the error screen $08:6EDE. Mesen with a TurboTap: Run on pad 1 alone or pad 4 alone gave $32 = 1 and the wins menu; Run on all five gave $32 = 0 and the error (tools/pceub/test_tap.lua)",
+  "section": "Controllers"
+ },
+ {
+  "code": "Any pad",
+  "effect": "Any of the five pads drives the title and the battle menus",
+  "versions": [
+   "JP"
+  ],
+  "status": "unchecked",
+  "verified": "mesen",
+  "note": "New routine $00:E2E9 ORs the held/new/previous bytes of all five ports into $33/$34/$35, and the title ($01:A584) and battle menus ($08:6131, $08:62F6, ...) read $34. The 1990 card's battle menus read pad 1 ($220A, $08:7A8F). In Mesen Run on pad 4 alone started the game",
+  "section": "Controllers"
+ },
+ {
+  "code": "00240A:4C + 00240B:A5 + 00240C:C3",
+  "effect": "Password screen instead of the title; a valid code starts the dropped 1P game",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$01:A40A JSR $E24E -> JMP $C3A5 (the unreachable password screen). Password screen shown; MUVWLNPC -> ROUND 1, stage with broken background tiles. Same bytes as patches/pceub_password_1p.ips",
+  "section": "cheat"
+ },
+ {
+  "code": "00240A:4C + 00240B:A5 + 00240C:C3 + 1F141B:FF",
+  "effect": "Sound test from the patched-in password screen with any valid code",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "RAM $341B (BOMSOUND flag) read as $FF: MUVWLNPC -> SOUND-00",
+  "section": "cheat"
+ },
+ {
+  "code": "00240A:4C + 00240B:A5 + 00240C:C3 + 00200A:80 + 00200B:0B",
+  "effect": "Special Select Room after a password (1P game)",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$01:A00A BNE -> BRA $A017 skips the button/demo/high-score tests; after MUVWLNPC the room code $01:A017 ran",
+  "section": "cheat"
+ },
+ {
+  "code": "patches/pceub_password_1p.ips",
+  "effect": "Password screen on power-on; valid codes start the leftover 1P game, BOMSOUND the sound test",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $240A: 20 4E E2 -> 4C A5 C3; the patched file showed the password screen, MUVWLNPC started ROUND 1 (stage tiles garbled: the 1P stage graphics are gone)",
+  "section": "patch"
+ },
+ {
+  "code": "patches/pceub_select_room.ips",
+  "effect": "As pceub_password_1p.ips, plus the Special Select Room after every password",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "adds file $200A: D0 F4 -> 80 0B; the patched file entered the room ($01:A017 ran) after MUVWLNPC",
+  "section": "patch"
+ }
+]

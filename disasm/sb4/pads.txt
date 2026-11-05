@@ -1,0 +1,145 @@
+C015B8 LDA $30,X (object) AND #$F000; CMP #$F000                                       ran
+C01724 LDA $88,X (object) CMP #$8000; CMP #$FFFD                                       ran
+C0172D LDA $30,X (object) CMP #$FFFD                                                   ran
+C0196A JSL call C015B6 ($30,X (object)) INC $B4,X (counter)                                          ran
+C056CD JSL call C056A7 ($88,X (object)) BIT #$1000; AND #$EFC0; CMP #$0940; CMP #$0980               ran
+C05705 JSL call C056A7 ($88,X (object)) BIT #$8000; BIT #$1000; AND #$EFC0; CMP #$0940               ran
+C0573E LDA $30,X (object) BIT #$0800; BIT #$0400; BIT #$0100                           ran
+C0589D LDA $30,X (object) AND #$0FFF; INC $BC,X (counter)                              ran
+C05DE1 LDA $31,X (object) BIT #$0002; BIT #$0001                                       never ran
+C05DEB LDA $31,X (object) BIT #$0001                                                   never ran
+C05EC6 LDA $31,X (object) BIT #$4000                                                   never ran
+C05F0E LDA $31,X (object) CMP #$0050                                                   ran
+C06823 LDA $31,X (object) CMP #$0050                                                   never ran
+C0FB50 LDA $4017          CMP #$FF                                                     ran
+C10743 LDA $01CE          BIT #$1000                                                   ran
+C196D3 LDA $01CE          BIT #$1080                                                   ran
+C1983F LDA $01CE          BIT #$8000                                                   ran
+C1987D LDA $0430          BIT #$1080                                                   ran
+C199D6 LDA $01CE          BIT #$8000                                                   ran
+C19C02 LDA $01CE          BIT #$8000                                                   ran
+C19D3C LDA $01CE          BIT #$8000                                                   ran
+C19EDE LDA $01CE          BIT #$8000                                                   ran
+C1A170 LDA $01CE          BIT #$8000                                                   ran
+C1A4E2 LDA $01CE          BIT #$8000                                                   ran
+C1A4FA LDA $01CE          BIT #$0300; BIT #$0300                                       ran
+C1A503 LDA $01D0          BIT #$0300                                                   ran
+C1A52F LDA $01D0          BIT #$0100                                                   never ran
+C1A59D LDA $01D0          BIT #$1080; DEC $30,X (counter)                              ran
+C1AAD2 LDA $01CE          BIT #$8000                                                   ran
+C1AC5A LDA $01CE          INC $58 (counter); CMP #$0F                                  ran
+C1AC60 LDA $01D0          INC $58 (counter); CMP #$0F; CMP #$10                        ran
+C1ACB2 LDA $01CE          BIT #$1080                                                   ran
+C1AF25 LDA $01CE          BIT #$1080                                                   ran
+C1B10F LDY $30,X (object) AND #$0F; CMP #$00                                           ran
+C1B1E7 LDA $01CE          BIT #$1080                                                   never ran
+C1BE73 LDA $01CE          BIT #$1080; BIT #$8000; BIT #$9080                           ran
+C1BE85 LDA $01D0          BIT #$9080                                                   ran
+C1BEA3 LDA $01D0          BIT #$1080                                                   never ran
+C1C9DE LDA $31,X (object) BIT #$0080                                                   never ran
+C1CAB3 LDA $31,X (object) BIT #$0080                                                   ran
+C1D8D1 LDA $31,X (object) CMP #$0080                                                   never ran
+C1D8E5 LDA $30,X (object) CMP #$0080                                                   never ran
+C1D977 LDA $31,X (object) CMP #$FFF8                                                   never ran
+C1EEBF LDA $31,X (object) BIT #$0010                                                   ran
+C1F2F2 JSL call C05D04 ($31,X (object)) BIT #$01; AND #$07                                           ran
+C1F2F8 LDA $31,X (object) BIT #$01; AND #$07                                           ran
+C1F5D9 JSL call C1F5A8 ($31,X (object)) BIT #$08; EOR #$08                                           never ran
+C1F5DF LDA $31,X (object) BIT #$08; EOR #$08                                           never ran
+C21224 JSL call C237B9 ($30,X (object)) CMP #$01; CMP #$01                                           ran
+C21398 LDA $88,X (object) BIT #$1000                                                   ran
+C214EA LDA $30,X (object) AND #$0F00; CMP #$07                                         ran
+C2153A LDA $30,X (object) BIT #$0F00                                                   ran
+C21590 LDA $30,X (object) CMP #$2A0D; CMP #$023D                                       ran
+C21592 ORA $88,X (object) CMP #$2A0D; CMP #$023D; CMP #$02E0                           ran
+C21AD7 LDA $88,X (object) BIT #$8000                                                   never ran
+C21CD8 LDA $30,X (object) BIT #$0100                                                   ran
+C23715 LDA $30,X (object) BIT #$8000                                                   ran
+C23724 LDA $30,X (object) BIT #$8000                                                   ran
+C23775 LDA $30,X (object) BIT #$8000                                                   ran
+C237CB LDA $30,X (object) BIT #$0080                                                   ran
+C23D0E LDA $88,X (object) BIT #$0080                                                   ran
+C23F4A LDA $30,X (object) INC $D0,X (counter)                                          ran
+C23F7F LDA $30,X (object) AND #$0F00; AND #$00FF; CMP #$002A                           ran
+C23FA3 LDA $30,X (object) BIT #$0800; EOR #$0C00; BIT #$0400                           never ran
+C23FB0 LDA $30,X (object) BIT #$0400; EOR #$0C00; BIT #$0100                           never ran
+C23FBC LDA $30,X (object) BIT #$0100; EOR #$0300; BIT #$0200                           never ran
+C23FC8 LDA $30,X (object) BIT #$0200; EOR #$0300                                       never ran
+C23FD9 LDA $31,X (object) AND #$000F; CMP #$08                                         ran
+C2441A LDA $88,X (object) BIT #$0F00                                                   ran
+C2442B LDA $88,X (object) BIT #$0800; INC $62,X (counter); BIT #$0100; INC $62,X (counter); BIT #$0400 ran
+C244A0 LDA $88,X (object) BIT #$0F00                                                   ran
+C244FE LDA $88,X (object) BIT #$0F00                                                   ran
+C2450F LDA $88,X (object) BIT #$0800; INC $62,X (counter); BIT #$0100; INC $62,X (counter); BIT #$0400 ran
+C24584 LDA $88,X (object) BIT #$0F00                                                   ran
+C245D1 LDA $88,X (object) BIT #$0F00                                                   ran
+C24630 LDA $88,X (object) BIT #$4000                                                   ran
+C24902 LDA $88,X (object) BIT #$4000                                                   ran
+C249A2 LDA $88,X (object) BIT #$4000                                                   ran
+C24FE6 LDA $30,X (object) BIT #$0080; CMP #$0010; INC $EE,X (counter)                  ran
+C24FFA LDA $88,X (object) BIT #$0080                                                   ran
+C25CBF LDA $88,X (object) BIT #$0080                                                   ran
+C25EDA LDA $30,X (object) BIT #$0800; BIT #$0100                                       ran
+C25EE6 LDA $30,X (object) BIT #$0100; BIT #$0400                                       ran
+C25EF2 LDA $30,X (object) BIT #$0400; BIT #$0200                                       ran
+C25EFE LDA $30,X (object) BIT #$0200                                                   ran
+C280A9 LDA $01CE          BIT #$9080                                                   ran
+C29170 LDA $01CE          BIT #$9080; DEC $30,X (counter)                              ran
+C2923C LDA $30,X (object) CMP #$0005                                                   ran
+C292CC LDA $30,X (object) CMP #$0005                                                   ran
+C29304 LDA $30,X (object) CMP #$0005                                                   ran
+C29661 LDA $30,X (object) CMP #$0005                                                   never ran
+C29B14 LDA $30,X (object) DEC $4A (counter)                                            never ran
+C29B8C LDA $30,X (object) DEC $4A (counter)                                            ran
+C29FD6 LDA $01CE          BIT #$1080                                                   ran
+C2A035 LDA $01CE          BIT #$8000                                                   ran
+C2A1F0 LDA $30,X (object) BIT #$1080                                                   ran
+C2A1F9 LDA $01CE          BIT #$1080                                                   ran
+C2A8C5 LDA $01CE          BIT #$8000; BIT #$1080                                       ran
+C2ADCB LDA $0330          BIT #$1080                                                   ran
+C2B1F8 LDA $01CE          BIT #$0800; BIT #$0400; BIT #$0C00                           ran
+C2B20A LDA $01D0          BIT #$0C00; AND #$00FF                                       ran
+C2B22F LDA $01D0          BIT #$0800                                                   ran
+C2B2EC LDA $01CE          BIT #$0100; BIT #$0200; BIT #$0300                           ran
+C2B2FC LDA $01D0          BIT #$0300                                                   ran
+C2B31E LDA $01D0          BIT #$0100                                                   ran
+C2B6DA LDA $30,X (object) AND #$000E; INC $30,X (counter); CMP #$0004                  ran
+C2B6E9 LDA $30,X (object) CMP #$0004                                                   ran
+C2C148 LDA $30,X (object) DEC $30,X (counter)                                          ran
+C2DAB2 LDA $01CE          BIT #$8080                                                   never ran
+C2DD85 LDA $30,X (object) AND #$00FF; INC $58 (counter)                                never ran
+C2E20A LDA $01CE          INC $58 (counter)                                            ran
+C2E210 LDA $01D0          INC $58 (counter)                                            ran
+C2E35F JSL call C2E491 ($01CE) CMP $18,X (table)                                            ran
+C2E4A1 LDA $01CE          BIT #$1080                                                   ran
+C2E4CC LDA $01CE          BIT #$0100; BIT #$0200; BIT #$0800; BIT #$0400               ran
+C33426 LDA $01D0          BIT #$8000                                                   never ran
+C334FB LDA $01D0          BIT #$8000; CMP #$0019                                       never ran
+C335B2 LDA $01D0          BIT #$0100; CMP #$000F                                       never ran
+C335E9 LDA $01D0          BIT #$0200                                                   never ran
+C336E7 LDA $01D0          BIT #$8000; CMP #$0019                                       never ran
+C340FC LDA $01D0          BIT #$8000                                                   never ran
+C3C2C2 LDA $30,X (object) CMP #$0001                                                   ran
+C3C2CE LDA $30,X (object) CMP #$0001                                                   ran
+C3C3C7 LDA $30,X (object) CMP #$0001                                                   ran
+C3C83E LDA $01CE          BIT #$0040; CMP #$0020                                       ran
+C3C871 LDA $01CE          BIT #$0040; CMP #$8000                                       ran
+C3C907 LDA $30,X (object) CMP #$0005                                                   ran
+C3CF96 LDA $01D0          BIT #$9080                                                   never ran
+C40EDA LDA $30,X (object) INC $54 (counter); INC $54 (counter)                         ran
+C431C7 LDA $30,X (object) CMP #$0140                                                   ran
+C43203 LDA $30,X (object) CMP #$1000                                                   ran
+C43D6E LDA $01D0          BIT #$1080                                                   ran
+C43E47 LDA $01D0          BIT #$1080                                                   ran
+C46468 LDA $30,X (object) CMP #$0004                                                   ran
+C46564 LDA $30,X (object) AND #$00FF; INC $54 (counter)                                ran
+C4659F LDA $31,X (object) INC $3C,X (counter)                                          ran
+C48AC0 LDA $31,X (object) BIT #$0010; AND #$0001                                       never ran
+C491AA LDA $31,X (object) BIT #$08; AND #$03; BIT #$80                                 ran
+C49704 LDA $31,X (object) BIT #$10                                                     never ran
+C497CC LDA $31,X (object) BIT #$80                                                     ran
+C49E05 LDA $31,X (object) BIT #$10                                                     never ran
+C4A01C LDA $31,X (object) BIT #$0010                                                   never ran
+C4A6C5 LDA $31,X (object) BIT #$10                                                     never ran
+C4A870 JSL call C1F2F6 ($31,X (object)) INC $4E,X (counter); CMP #$0008                              never ran
+C4B4DF JSL call C1F2F6 ($31,X (object)) CMP $28,X (table)                                            ran

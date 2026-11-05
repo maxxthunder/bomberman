@@ -1,0 +1,983 @@
+[
+ {
+  "code": "BACDIHCLOAFHABDNMOLG",
+  "effect": "Start at stage 59, 10 bombs, fire 5, speed, score 803,320,000",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "stage 59, past the 50 real stages: item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMIHPPBPCAFHABDPCPCH",
+  "effect": "Start at stage 1, 10 bombs, fire 5, speed, score 3,591,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMIHPPBPCAFHABDPPCCH",
+  "effect": "Start at stage 1, 10 bombs, fire 5, speed, hidden exit and item marked (reveal 1), wall-pass nibble 15 (not 1, so no wall pass), score 3,591,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs: swap the 3rd and 4th letters from the right of any code to highlight the exit and item. The swap keeps the checksum (values 16-18 change by +d, 0, -d, d = the difference of the two letters) but changes two fields: reveal ($94) by d and wall pass ($76) by -d. So it works whenever the two letters differ, and it can also switch wall pass on or off; with two equal letters nothing changes. Here: reveal 1, wall-pass nibble 15 (off). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BABABABABABABABABABA",
+  "effect": "Start at stage 0, 1 bomb, fire 0, score 0",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs: level 00. Every value decodes to 0: stage 0 and fire 0. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJEFPGGKGLPCGKMFEFEG",
+  "effect": "Start at stage 10, 5 bombs, fire 3, speed, score 42,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BADJODAHICDJNMEHIMNF",
+  "effect": "Start at stage 20, 9 bombs, fire 4, speed, score 185,000",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FEABECHCPAFEKGDNMIHJ",
+  "effect": "Start at stage 30, 10 bombs, fire 5, speed, score 522,900",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FEHIMCHPCGJNJDEFECPA",
+  "effect": "Start at stage 40, 10 bombs, fire 5, speed, score 1,606,900",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "JDNMKLGJDJGGCPOLOMNF",
+  "effect": "Start at stage 50, 10 bombs, fire 5, speed, score 3,902,300",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HIJDIJFJDLHFLOPDJDJN",
+  "effect": "Start at stage 2, 10 bombs, fire 5, speed, score 3,592,100",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BAJDINANMJGGCPOOLOLG",
+  "effect": "Start at stage 3, 10 bombs, fire 5, speed, score 3,594,000",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJOLBGLGKGJAHIEMNMNN",
+  "effect": "Start at stage 4, 10 bombs, fire 5, speed, score 3,596,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMKGDDONMHLCGKKGKGKJ",
+  "effect": "Start at stage 5, 10 bombs, fire 5, speed, score 3,601,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABGKKBPHILHFLOPCPCPC",
+  "effect": "Start at stage 6, 10 bombs, fire 5, speed, score 3,603,700",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FEBABGLEFLHFLOPCPCPA",
+  "effect": "Start at stage 7, 10 bombs, fire 5, speed, score 3,606,900",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HIFEMIIABJGGCPOBABAN",
+  "effect": "Start at stage 8, 10 bombs, fire 5, speed, score 3,611,100",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMEFPHCMNJGGCPOBABAF",
+  "effect": "Start at stage 9, 10 bombs, fire 5, speed, score 3,616,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "JDGKKBPHILHFLOPGKGKL",
+  "effect": "Start at stage 10, 10 bombs, fire 5, speed, score 3,623,300",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HIPCOHCMNLHFLOPEFEFG",
+  "effect": "Start at stage 11, 10 bombs, fire 5, speed, score 3,632,100",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABJDIFJKGGJAHIEPCPCN",
+  "effect": "Start at stage 12, 10 bombs, fire 5, speed, score 3,638,700",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "JDBABANOLJGGCPODJDJF",
+  "effect": "Start at stage 13, 10 bombs, fire 5, speed, score 3,650,300",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABNMKNAIHFAJNMMKGKGF",
+  "effect": "Start at stage 14, 10 bombs, fire 5, speed, score 3,658,700",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABIHPGLEFCNNJDBEFEFN",
+  "effect": "Start at stage 15, 10 bombs, fire 5, speed, score 3,672,700",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABABEMKJDAFHABDCPPCN",
+  "effect": "Start at stage 16, 10 bombs, fire 5, speed, score 3,689,700",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "JDDJOIIOLCNNJDBABOLH",
+  "effect": "Start at stage 17, 10 bombs, fire 5, speed, score 3,707,300",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "JDNMKLGHILHFLOPGKEFH",
+  "effect": "Start at stage 18, 10 bombs, fire 5, speed, score 3,722,300",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJABEKMPCFAJNMMOLFEL",
+  "effect": "Start at stage 19, 10 bombs, fire 5, speed, score 3,731,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FEGKKJFNMAFHABDABOLN",
+  "effect": "Start at stage 20, 10 bombs, fire 5, speed, score 3,746,900",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMKGDDOIHJGGCPONMIHN",
+  "effect": "Start at stage 21, 10 bombs, fire 5, speed, score 3,761,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMCPIIIOLFAJNMMGKEFF",
+  "effect": "Start at stage 22, 10 bombs, fire 5, speed, score 3,785,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMPCOIIOLCNNJDBBAHIJ",
+  "effect": "Start at stage 23, 10 bombs, fire 5, speed, score 3,797,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMGKKEEHILHFLOPPCGKL",
+  "effect": "Start at stage 24, 10 bombs, fire 5, speed, score 3,811,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HIKGDODCPGJAHIEPCGKJ",
+  "effect": "Start at stage 25, 10 bombs, fire 5, speed, score 3,835,100",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABHIMGLBANCLFEINMIHH",
+  "effect": "Start at stage 26, 10 bombs, fire 5, speed, score 3,848,700",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MNGKKDOOLGJAHIEKGCPC",
+  "effect": "Start at stage 27, 10 bombs, fire 5, speed, score 3,917,200",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OLDJOIIKGLHFLOPEFLOL",
+  "effect": "Start at stage 28, 10 bombs, fire 5, speed, score 3,937,800",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IHDJOIIKGLHFLOPMNJDA",
+  "effect": "Start at stage 30, 10 bombs, fire 5, speed, score 3,977,600",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJJDIDOOLFAJNMMEFLOC",
+  "effect": "Start at stage 31, 10 bombs, fire 5, speed, score 3,993,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IHIHPBPCPNCBOLIHIJDH",
+  "effect": "Start at stage 32, 10 bombs, fire 5, speed, score 4,005,600",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OLFEMANMNFADDJMABFEF",
+  "effect": "Start at stage 33, 10 bombs, fire 5, speed, score 4,022,800",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MNDJOODJDHLPPCKBAMNA",
+  "effect": "Start at stage 34, 10 bombs, fire 5, speed, score 4,039,200",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJABEMKMNNCMIHIMNDJC",
+  "effect": "Start at stage 35, 10 bombs, fire 5, speed, score 6,519,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BADJOIIIHAFDDJDIHOLA",
+  "effect": "Start at stage 36, 10 bombs, fire 5, speed, score 6,537,000",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJFEMPBPCGJKEFEEFBAC",
+  "effect": "Start at stage 37, 10 bombs, fire 5, speed, score 6,557,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJKGDIIIHJGBOLOABFEH",
+  "effect": "Start at stage 38, 10 bombs, fire 5, speed, score 6,583,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJCPIODFECNOBABABFEN",
+  "effect": "Start at stage 39, 10 bombs, fire 5, speed, score 6,607,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IHEFPPBGKFAIMNMOLKGJ",
+  "effect": "Start at stage 40, 10 bombs, fire 5, speed, score 6,631,600",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IHLOEHCMNNCMIHIIHOLJ",
+  "effect": "Start at stage 41, 10 bombs, fire 5, speed, score 6,658,600",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "DJEFPHCMNJGBOLOABFEH",
+  "effect": "Start at stage 42, 10 bombs, fire 5, speed, score 6,686,400",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "MNGKKIIOLGJKEFEKGPCJ",
+  "effect": "Start at stage 43, 10 bombs, fire 5, speed, score 6,719,200",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BAPCOMKDJJGBOLODJIHJ",
+  "effect": "Start at stage 44, 10 bombs, fire 5, speed, score 6,753,000",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OLNMKDOIHFAIMNMGKLOF",
+  "effect": "Start at stage 45, 10 bombs, fire 5, speed, score 6,787,800",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OLIHPMKNMFAIMNMABFEH",
+  "effect": "Start at stage 46, 10 bombs, fire 5, speed, score 6,827,800",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OLABEMKNMCNOBABPCEFL",
+  "effect": "Start at stage 47, 10 bombs, fire 5, speed, score 6,859,800",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OLOLBFJGKGJKEFEFEPCL",
+  "effect": "Start at stage 48, 10 bombs, fire 5, speed, score 6,902,800",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "OLFEMFJGKLHPPCPLOMNL",
+  "effect": "Start at stage 49, 10 bombs, fire 5, speed, score 6,944,800",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMABEKMKGNCLFEIIHFEL",
+  "effect": "Start at stage 50, 10 bombs, fire 5, speed, score 3,551,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IAHBEKOLLCPCPCPCPCPL",
+  "effect": "Stage 1 with fire 11, detonator and flame pass",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs: 1 bomb, 14-block range, detonator and flame pass. The fire nibble is 11, not 14; the top score digit is 10 (a garbage tile). Decoded: stage 1, 1 bomb, fire 11, detonator, flame pass, score digits A000016 (a digit over 9 shows as a garbage tile). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABKGDODOLAFHABDABLOA",
+  "effect": "Start at stage 131, 10 bombs, fire 5, speed, score 3,545,700",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs (GBA) calls it a new level \"?1\": it is stage 131, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "ABKGDODOLAFHABDBALOA",
+  "effect": "Start at stage 243, 10 bombs, fire 5, speed, score digits 0035D57 (a digit over 9 shows as a garbage tile)",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs (GBA) calls it a new level \"H3\": it is stage 243, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "IHJDIKMEFNCLFEINMIHF",
+  "effect": "Start at stage 29, 10 bombs, fire 5, speed, score 3,949,600",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BOFEDJJDDJGKEFOLFMIH",
+  "effect": "Start at stage 74, 10 bombs, fire 15, speed, wall pass, detonator, flame pass, hidden exit and item marked (reveal 1), score 0",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs lists it as Level 74 and as Level 76: it is stage 74, with fire 15, 10 bombs, every stored power-up and reveal. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "NMIHPLGKGJDJDJDJDJDH",
+  "effect": "Start at stage 1, 1 bomb, fire 5, score 4,500",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BAHIMNABANCPMNMNMNMH",
+  "effect": "Start at stage 1, 10 bombs, fire 5, speed, score 0",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "HJDIKMEFNCLFEINMIHF",
+  "effect": "Rejected: 19 letters",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "GameFAQs \"Level Passwords FDS\" level 29 is missing a letter (the entry screen takes exactly 20). The 20-letter IHJDIKMEFNCLFEINMIHF in the other lists is stage 29.",
+  "section": "Passwords"
+ },
+ {
+  "code": "BAHIMNJDJNMNMNMNMNMF",
+  "effect": "Start at stage 1 with the new-game power-ups",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "the code the game shows at a game over on stage 1 with score 0 (every state has exactly one code); typed with the pad in Mesen (US)",
+  "section": "Passwords"
+ },
+ {
+  "code": "BOBAMNABONCPPCIHIHAN",
+  "effect": "Start at stage 1, 10 bombs, fire 5, speed, wall pass, detonator, flame pass, score 0",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "every power-up a password can hold (bomb pass and the mystery item are never stored); typed with the pad in Mesen (US and JP), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BOHIDJFEKJGKEFOLOMIC",
+  "effect": "Start at stage 50, 10 bombs, fire 5, speed, wall pass, detonator, flame pass, score 0",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "stage 50 with every storable power-up; typed with the pad in Mesen (US and JP), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BAHIMNJDJNMNMNMNJDJF",
+  "effect": "Start at stage 1, 1 bomb, fire 1, hidden exit and item marked (reveal 1), score 0",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "the hidden exit and item show as marked bricks: the $94 debug flag TCRF found in RAM, reachable by password (value 16); typed with the pad in Mesen (US and JP), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BAHIMNHIHNHIHIBABABN",
+  "effect": "Start at stage 1, 16 bombs, fire 15, score 0",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "no range check: fire 15 and 16 bombs, past the in-game caps of fire 5 and 10 bombs; typed with the pad in Mesen (US and JP), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "FEKIDPPDJABBAFBBABAF",
+  "effect": "Start at stage 1, 1 bomb, fire 1, score 999,999,900",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "score 999,999,900, the largest the counter can show; typed with the pad in Mesen (US and JP), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BABABAHIHABABABABABF",
+  "effect": "Start at stage 0, 1 bomb, fire 1, score 0",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "stage 0 plays; typed with the pad in Mesen (US and JP), RAM read back",
+  "section": "Passwords"
+ },
+ {
+  "code": "BAJDIHABAHIHIHIHIDJL",
+  "effect": "Stage 51: the game freezes after drawing the map",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "the enemy row read past the stage-26-50 table gives types $86, $24, $84 ...; the game stops with no timer and no Bomberman (docs/img/nes1/stage51_freeze.png); typed with the pad in Mesen (US)",
+  "section": "Passwords"
+ },
+ {
+  "code": "BABABAHIHABABABABGKN",
+  "effect": "Stage 96: hangs on the STAGE 96 screen",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "242 soft blocks never finish placing; stages 96-103 and 224-231 do the same (docs/img/nes1/stage97_hang.png); typed with the pad in Mesen (US)",
+  "section": "Passwords"
+ },
+ {
+  "code": "IIIIIJJJJJKKKKKNNNNN",
+  "effect": "Start at stage 53 with the hidden exit and item marked",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "fixed",
+  "verified": "mesen",
+  "note": "TCRF says stage 53 and up render the hidden tiles. The marks come from this code's reveal nibble (3), not the stage: stage 53 by a code with reveal 0 shows nothing (img/nes1/stage53_reveal0.png). Decoded: stage 53, 7 bombs, fire 15, speed, detonator, flame pass, hidden exit and item marked (reveal 3), wall-pass nibble 3 (not 1, so no wall pass), score digits 5DDF826 (a digit over 9 shows as a garbage tile); typed with the pad in Mesen (US and JP), RAM read back",
+  "section": "Passwords",
+  "img": "stage53_reveal3.png"
+ },
+ {
+  "code": "007A:FF",
+  "effect": "Invincible (fire and enemies)",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (custom). RAM $7A, the mystery-item timer: the fire check ($C6E9) and the enemy check ($D06F) skip while it is non-zero. Random bot, 12,000 frames: 0 deaths (US and JP; 3 deaths and a game over without)",
+  "section": "cheat"
+ },
+ {
+  "code": "OXTKPV + OZTSYE",
+  "effect": "Invincible (US)",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (Game Genie). $C6E9 and $D06F: LDA $7A -> LDA #$7A (A5 -> A9), so both checks always take the invincible branch. 0 deaths in 12,000 frames. Same bytes as patches/nes1_invincible_us.ips",
+  "section": "cheat"
+ },
+ {
+  "code": "OXTGPV + OZTIYE",
+  "effect": "Invincible (JP)",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (Game Genie). the same two instructions at JP $C6E1 / $D067. 0 deaths in 12,000 frames. Same bytes as patches/nes1_invincible_jp.ips",
+  "section": "cheat"
+ },
+ {
+  "code": "0068:02",
+  "effect": "Infinite lives",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (custom). RAM $68, lives (DEC / BMI at US $C498): 19 deaths in 12,000 frames, no game over (US and JP)",
+  "section": "cheat"
+ },
+ {
+  "code": "005E:01",
+  "effect": "Every stage clears at once",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (custom). RAM $5E, the stage-clear flag ($CCA1 sets it on the open exit): 11 stages cleared in 6,000 frames with no input (US and JP)",
+  "section": "cheat"
+ },
+ {
+  "code": "patches/nes1_invincible_us.ips",
+  "effect": "US: fire and enemies never kill",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $06F9 and $107F: A5 -> A9; the same bytes were verified as the Game Genie codes OXTKPV + OZTSYE",
+  "section": "patch"
+ },
+ {
+  "code": "patches/nes1_invincible_jp.ips",
+  "effect": "JP: fire and enemies never kill",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "file $06F1 and $1077: A5 -> A9; the same bytes were verified as the Game Genie codes OXTGPV + OZTIYE",
+  "section": "patch"
+ }
+]

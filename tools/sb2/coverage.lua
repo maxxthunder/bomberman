@@ -4,7 +4,7 @@
 -- without the menu, blow yourself up until GAME OVER and the continue/password screen. ROUTE=3: Battle Game,
 -- every stage 1-12 ($1CB5 set in RAM), each played for a while, then the results screens.
 -- Prints 'CDL <hex>' at the end; python tools/sb2/run.py tools/sb2/coverage.lua patched.sfc ROUTE=1 > log
-local function cdl() local c=emu.getCdlData(emu.memType.snesPrgRom) local t={} for i=1,#c do t[#t+1]=string.format('%02x',c[i]) end print('CDL '..table.concat(t)) end
+local function cdl() local c=emu.getCdlData(emu.memType.snesPrgRom) local t={} for i=0,#c do t[#t+1]=string.format('%02x',c[i]) end print('CDL '..table.concat(t)) end
 local function bomb() press({a=true},8) wait(200) end
 title(function()
   if ROUTE==1 then

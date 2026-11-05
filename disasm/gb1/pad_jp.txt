@@ -1,0 +1,198 @@
+== 00:07B7  LD A,($CC60)   [COMBO]
+     00:07BA  AND $0F
+     00:07BC  CP $0F
+     00:07BE  JP Z,$06A9
+     00:07C1  CALL $07DE
+     00:07C4  LD A,$01
+     00:07C6  LD ($C186),A
+     00:07C9  POP HL
+     00:07CA  POP DE
+== 00:1F45  LD A,($CC61)  ; <- call   [COMBO]
+     00:1F48  BIT 3,A
+     00:1F4A  RET Z
+     00:1F4B  LD A,($C3E0)
+     00:1F4E  CP $E4
+     00:1F50  RET NZ
+     00:1F51  LD A,($C3E9)
+     00:1F54  OR A
+     00:1F55  RET NZ
+== 01:5FE5  LD A,($CC60)   [COMBO]
+     01:5FE8  BIT 1,A
+     01:5FEA  JR Z,$603E
+     01:5FEC  AND $F0
+     01:5FEE  JR Z,$603E
+     01:5FF0  JR $6028
+     01:5FF2  LD A,H
+     01:5FF3  CP $C0
+     01:5FF5  JR Z,$5FE5
+== 08:5B00  LDH A,($FF00)   [COMBO]
+     08:5B02  AND $03
+     08:5B04  CP $03
+     08:5B06  JR NZ,$5B45
+     08:5B08  LD A,$20
+     08:5B0A  LDH ($FF00),A
+     08:5B0C  LDH A,($FF00)
+     08:5B0E  LDH A,($FF00)
+     08:5B10  LD A,$30
+== 08:5B20  LDH A,($FF00)   [COMBO]
+     08:5B22  LDH A,($FF00)
+     08:5B24  LD A,$30
+     08:5B26  LDH ($FF00),A
+     08:5B28  LDH A,($FF00)
+     08:5B2A  LDH A,($FF00)
+     08:5B2C  LDH A,($FF00)
+     08:5B2E  LDH A,($FF00)
+     08:5B30  AND $03
+== 08:5B22  LDH A,($FF00)   [COMBO]
+     08:5B24  LD A,$30
+     08:5B26  LDH ($FF00),A
+     08:5B28  LDH A,($FF00)
+     08:5B2A  LDH A,($FF00)
+     08:5B2C  LDH A,($FF00)
+     08:5B2E  LDH A,($FF00)
+     08:5B30  AND $03
+     08:5B32  CP $03
+== 08:5B28  LDH A,($FF00)   [COMBO]
+     08:5B2A  LDH A,($FF00)
+     08:5B2C  LDH A,($FF00)
+     08:5B2E  LDH A,($FF00)
+     08:5B30  AND $03
+     08:5B32  CP $03
+     08:5B34  JR NZ,$5B45
+     08:5B36  XOR A
+     08:5B37  LD ($C3FF),A
+== 08:5B2A  LDH A,($FF00)   [COMBO]
+     08:5B2C  LDH A,($FF00)
+     08:5B2E  LDH A,($FF00)
+     08:5B30  AND $03
+     08:5B32  CP $03
+     08:5B34  JR NZ,$5B45
+     08:5B36  XOR A
+     08:5B37  LD ($C3FF),A
+     08:5B3A  LD HL,$5B55
+== 08:5B2C  LDH A,($FF00)   [COMBO]
+     08:5B2E  LDH A,($FF00)
+     08:5B30  AND $03
+     08:5B32  CP $03
+     08:5B34  JR NZ,$5B45
+     08:5B36  XOR A
+     08:5B37  LD ($C3FF),A
+     08:5B3A  LD HL,$5B55
+     08:5B3D  CALL $5AA9
+== 08:5B2E  LDH A,($FF00)   [COMBO]
+     08:5B30  AND $03
+     08:5B32  CP $03
+     08:5B34  JR NZ,$5B45
+     08:5B36  XOR A
+     08:5B37  LD ($C3FF),A
+     08:5B3A  LD HL,$5B55
+     08:5B3D  CALL $5AA9
+     08:5B40  CALL $5AEB
+== 08:5B75  LDH A,($FF00)   [COMBO]
+     08:5B77  LD B,$04
+     08:5B79  LD C,A
+     08:5B7A  JR $5B80
+     08:5B7C  LDH A,($FF00)
+     08:5B7E  CP C
+     08:5B7F  RET Z
+     08:5B80  CPL
+     08:5B81  AND $03
+== 08:5B7C  LDH A,($FF00)   [COMBO]
+     08:5B7E  CP C
+     08:5B7F  RET Z
+     08:5B80  CPL
+     08:5B81  AND $03
+     08:5B83  SLA A
+     08:5B85  LD D,$00
+     08:5B87  LD E,A
+     08:5B88  LD HL,$CC60
+== 08:5B90  LDH A,($FF00)   [COMBO]
+     08:5B92  LDH A,($FF00)
+     08:5B94  CPL
+     08:5B95  AND $0F
+     08:5B97  SWAP A
+     08:5B99  LD D,A
+     08:5B9A  LD A,$30
+     08:5B9C  LDH ($FF00),A
+     08:5B9E  LD A,$10
+== 08:5B92  LDH A,($FF00)   [COMBO]
+     08:5B94  CPL
+     08:5B95  AND $0F
+     08:5B97  SWAP A
+     08:5B99  LD D,A
+     08:5B9A  LD A,$30
+     08:5B9C  LDH ($FF00),A
+     08:5B9E  LD A,$10
+     08:5BA0  LDH ($FF00),A
+== 08:5BA2  LDH A,($FF00)   [COMBO]
+     08:5BA4  LDH A,($FF00)
+     08:5BA6  LDH A,($FF00)
+     08:5BA8  LDH A,($FF00)
+     08:5BAA  LDH A,($FF00)
+     08:5BAC  LDH A,($FF00)
+     08:5BAE  CPL
+     08:5BAF  AND $0F
+     08:5BB1  OR D
+== 08:5BA4  LDH A,($FF00)   [COMBO]
+     08:5BA6  LDH A,($FF00)
+     08:5BA8  LDH A,($FF00)
+     08:5BAA  LDH A,($FF00)
+     08:5BAC  LDH A,($FF00)
+     08:5BAE  CPL
+     08:5BAF  AND $0F
+     08:5BB1  OR D
+     08:5BB2  LD D,A
+== 08:5BA6  LDH A,($FF00)   [COMBO]
+     08:5BA8  LDH A,($FF00)
+     08:5BAA  LDH A,($FF00)
+     08:5BAC  LDH A,($FF00)
+     08:5BAE  CPL
+     08:5BAF  AND $0F
+     08:5BB1  OR D
+     08:5BB2  LD D,A
+     08:5BB3  LD A,(HL+)
+== 08:5BA8  LDH A,($FF00)   [COMBO]
+     08:5BAA  LDH A,($FF00)
+     08:5BAC  LDH A,($FF00)
+     08:5BAE  CPL
+     08:5BAF  AND $0F
+     08:5BB1  OR D
+     08:5BB2  LD D,A
+     08:5BB3  LD A,(HL+)
+     08:5BB4  XOR D
+== 08:5BAA  LDH A,($FF00)   [COMBO]
+     08:5BAC  LDH A,($FF00)
+     08:5BAE  CPL
+     08:5BAF  AND $0F
+     08:5BB1  OR D
+     08:5BB2  LD D,A
+     08:5BB3  LD A,(HL+)
+     08:5BB4  XOR D
+     08:5BB5  AND D
+== 08:5BAC  LDH A,($FF00)   [COMBO]
+     08:5BAE  CPL
+     08:5BAF  AND $0F
+     08:5BB1  OR D
+     08:5BB2  LD D,A
+     08:5BB3  LD A,(HL+)
+     08:5BB4  XOR D
+     08:5BB5  AND D
+     08:5BB6  LD (HL-),A
+== 0A:4194  LD A,($CC61)  ; <- call   [COMBO]
+     0A:4197  BIT 6,A
+     0A:4199  JR Z,$41A9
+     0A:419B  LDH A,($FFD1)
+     0A:419D  INC A
+     0A:419E  LDH ($FFD1),A
+     0A:41A0  CP $0A
+     0A:41A2  JR C,$421F
+     0A:41A4  XOR A
+== 0A:49D7  LD A,($CC61)   [COMBO]
+     0A:49DA  BIT 3,A
+     0A:49DC  RET Z
+     0A:49DD  LD A,($C3E0)
+     0A:49E0  CP $E4
+     0A:49E2  RET NZ
+     0A:49E3  LD A,($C3E9)
+     0A:49E6  OR A
+     0A:49E7  RET NZ

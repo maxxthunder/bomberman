@@ -1,0 +1,22 @@
+016A8C  flags 01 wait  56 show  32  @r10,c9 {pal 0}MEGA BOMBERMAN | @r14,c13 STAFF
+016AAB  flags 02 wait   0 show  80  @r10,c11 PROGRAMERS
+016ABC  flags 01 wait  32 show  16  @r14,c11 YUICHI ITO
+016ACD  flags 01 wait  32 show  16  @r14,c9 HIDEO IWAKAWA
+016AE1  flags 06 wait  40 show  16  @r14,c8 KAZUYUKI KIMURA
+016AF7  flags 02 wait   0 show  80  @r10,c7 GRAPHIC DESIGNERS
+016B0F  flags 01 wait  32 show  16  @r14,c9 TAKUYA AOYAMA
+016B23  flags 01 wait  32 show  16  @r14,c10 YUJI IWAHARA
+016B36  flags 06 wait  40 show  16  @r14,c10 TOMOMI TADA
+016B48  flags 02 wait   0 show  48  @r10,c8 SOUND PROGRAMERS
+016B5F  flags 01 wait  32 show  16  @r14,c10 HAJIME OHARA
+016B72  flags 06 wait  40 show  16  @r14,c9 TAKASHI MORIO
+016B86  flags 02 wait  40 show  16  @r10,c9 SPECIAL THANKS | @r14,c8 KESUKE MATSUURA
+016BAD  flags 01 wait  40 show  16  @r10,c9 MUSIC COMPOSER | @r14,c7 JUN CHIKI CHIKUMA
+016BD6  flags 01 wait  40 show  16  @r10,c10 ART DIRECTOR | @r14,c10 SHOJI MIZUNO
+016BF8  flags 01 wait  40 show  16  @r10,c12 PRODUCER | @r14,c9 HIROKI SHIMADA
+016C18  flags 01 wait  40 show  16  @r10,c11 SUPERVISOR | @r14,c8 TOSHIKI FUJIWARA
+016C3C  flags 01 wait  40 show  16  @r10,c12 DIRECTOR | @r14,c6 YOSHIYUKI KAWAGUCHI
+016C61  flags 01 wait  40 show  16  @r10,c6 BASIC GAME DESIGNER | @r14,c7 SHINICHI NAKAMOTO
+016C8F  flags 01 wait  56 show  16  @r10,c10 PRESENTED BY | @r14,c10 HUDSON SOFT
+016CB0  flags 01 wait  40 show   0  @r12,c12 THE END
+016CBE  end (81: the reader stops here)

@@ -265,6 +265,108 @@ The SCSI log of every run (normal boot, Left held, old-card path, battles) shows
   Mega Bomberman page is this game's code (it ends with II, a PC Engine button), misfiled (**Fixed** in
   `mega.md`).
 
+## Deep sweep (dead code, input codes, unset flags, text, maps, cheats)
+
+Method. 18 HuCard coverage runs in fresh portable Mesen copies (`tools/pce94/cov.py` + `cov.lua`, one run per test):
+title idle and the attract demo; all 25 game-shown passwords with random play and lives kept at 3 (every area,
+every boss, the final area); game over; four Battle Game runs; the Sound Room; the Debug Version menu (TCRF's
+patch in memory) with its stage select (area 6-1), boss room (area 1 and area 6 bosses) and IMPRESSIVE ENDING.
+Each run leaves Mesen's code/data log, a bitmap of RAM bytes ever written non-zero and, for every map loaded, VRAM
+and the palette. Two demo runs trace every instruction executed from CD RAM. The sweeps are the shared
+`tools/pce93/sweep.py` (`dead`, `pad`, `flags` with `94`) and `tools/pce93/text.py`, plus `tools/pce94/maps.py`;
+outputs in `disasm/pce94/dead.txt`, `pad.txt`, `flags.txt`, `text.txt`, `maps.txt`.
+
+### Dead code
+
+348 traced blocks never executed, 8,938 bytes of 71,389 traced: 306 after an executed branch (5.1 KB), 34 called
+only from dead code (2.7 KB), 8 reached only through a jump table (1.1 KB). 448 orphan runs (22 KB) decode as code
+but are reached by nothing the tracer follows; most are task continuations (the game resumes tasks through the
+pointers `$E501` / `$E528` store, which a static trace cannot follow), so the orphan list is an upper bound.
+
+| Code | What it is | Class |
+|---|---|---|
+| `09:B511`-`B7C2` (`$13511`-`$137C2`), `$D8D0`-`$D8FE` | the debug pause menu handler, value printer and editors | debug, cut (known; restored below) |
+| bank `$12` `$9829`, the boss room (`$25C1F` text), the stage select (`$259BB`) | the Debug Version menu and its screens | debug: patch only (known) |
+| `00:E3B2` | soft reset: Select newly pressed while Run is held | not covered (never pressed) |
+| `0C:93EC` (507 bytes), `08:8B40`-`8DCF` (1 KB), `0A:9A9D`, `0A:9B71` | boss phases and stage gimmicks of later areas | reachable, not covered by random play |
+| `13:B012` (293 bytes, called from `12:9DC1`) | Sound Room / sound mode branch not taken | reachable, not covered |
+
+### Input codes
+
+`sweep.py pad` over the pad bytes (`$28`-`$31`) and the menu copies (`$C1`, `$C2`, `$C5`): 96 reads, 10 flagged,
+all ordinary (the pad reader and soft reset `$E369`-`$E3B6`, battle-player input `0B:A403`-`A67E` against a
+direction count, a menu index compare `0C:9190`) except the known Sound Room history table (`$1AC64` / `$1ACCA`).
+No other button code, so still no code for the Debug Version menu.
+
+### Flags that are read but never set
+
+The model is `$3709` (INV_MODE): read by the death check, set only by the cut pause menu. The sweep found no other
+flag of that kind: the 16 RAM candidates in `flags.txt` are table entries reached through indexed or block writes
+(object tables `$2BDB`-`$2E5B`, `$3417`/`$3419`), the debug menu's own cursor bytes `$3BFE`/`$3BFF` (written only by
+the cut handler), and `$20AA` bit 0 (`0A:92BB`, an object's sprite flag): set every frame in area 1, no visible
+change. ★ New, effect unclear.
+
+### Text
+
+`text.py 94` decodes the ASCII text with the control codes (`$01 x y` cursor, `#n` palette, `_` space, `;` drawn as
+`:`, `@` as the copyright sign). 174 strings; the Japanese text of '94 is graphics. Never read in any run, retail or
+with the debug patch:
+
+- `$3844` `>INV_MODE / MAP_CLEAR / ENEMY:00 / N:00 X:00 Y:00` (TCRF's development text, the cut pause menu; Known).
+- The Sound Room's name table (`$25F17`, 32 bytes per entry, `E:00`-`E:67` effects and `M:xx` music): all reachable by
+  scrolling the Sound Room, only the first entries were shown in the runs. Reached with the debug patch: the debug
+  menu, WE NEED BRAVEST BOMBERMAN / STAGE SELECT, WELCOME TO BOSS ROOM (AREA1 SARU AND BANANACHER, AREA2 PYRAMID
+  GAN:G, AREA3 GRUB ROBS, AREA4 KOMORI COUNT, AREA5 QUEEN OYOBEE, AREA6 BUGLEAR) and the bank `$12` staff roll of
+  IMPRESSIVE ENDING. Nothing else is unused.
+
+### Maps
+
+★ Format (`tools/pce94/maps.py`): the stage code (`$F022`) takes the map id `$B7` = `$CBCD[$CBC6[area] + stage]`
++ room `$B6` and looks it up in the table at bank `$1B` `$9DBE` (file `$37DBE`), 5 bytes per map: bank, pointer
+(bank at `$4000`), width, height in 16×16 cells. The map is LZSS-packed (`$EA40` / `$EA60`: bits MSB first; flag 1
+= literal byte, flag 0 = 8-bit ring offset and 4-bit length + 2; 256-byte ring filled with `$20`, writing from `$EF`)
+and unpacked into the cell grid at `$2FB6`; each cell is drawn from 8 bytes (2×2 BAT words) at (`$95`) with bank
+`$341B` at `$4000`.
+
+59 maps, all drawn in `docs/img/pce94/maps/mapNN.png` (ids, file addresses, sizes in `disasm/pce94/maps.txt`), with
+the game's own cell tables and the VRAM and palette dumped when a map of the same tile set was loaded:
+
+| Ids | What | Seen in Mesen |
+|---|---|---|
+| 0-42 | the areas' rooms: area 1 = 0-3, 2 = 4-10, 3 = 11-18, 4 = 19-27, 5 = 28-36, area 6 = 37-42 (6 rooms) | 20 dumped in Mesen (random play does not visit every room); the others drawn with their area's tiles |
+| 43-48 | the boss arenas of areas 1-6 (`$B2` = 0-5) | all |
+| 49 | loaded with `$B2` = 7 (battle setup / boss room) | yes |
+| 50-58 | the nine battle stages | 50 and 58 loaded; the other seven have their own tile sets and are drawn as cell values |
+
+![](img/pce94/maps/map00.png) ![](img/pce94/maps/map01.png) ![](img/pce94/maps/map43.png)
+
+★ **The demo CD's maps.** The demo's engine image (data sectors 98-225) has its own map table (data sector 104,
+offset `$13B` in the sector; 8 maps, bank `$07` of the image) with the maps packed in sector 126. Only Arrow Arena
+can be played; the other seven are unused in the demo. Compared with retail: map 1 = retail 49, 2 = retail 51,
+4 = retail 54, 5 = retail 56 (identical); map 0 is retail area 1-1 with one cell different; maps 3, 6 and 7 are
+older versions of retail battle stages 52, 57 and 58 (30, 18 and 4 cells different). Drawn as cell values in
+`docs/img/pce94/maps/demo_map0.png`-`demo_map7.png`. The never-read sectors 19-25 and 226-310 hold no maps (graphics
+and a stale engine copy, above).
+
+### Cheat codes
+
+Mesen 2's raw PC Engine codes use the 21-bit physical address: RAM F8:x = `1F` + x, ROM file offset = address.
+Each was added with `emu.addCheat(emu.cheatType.pceRaw, ...)` and checked:
+
+| Code (Mesen) | F8 / ROM address | Effect | Check |
+|---|---|---|---|
+| `1F1709:02` | F8:1709 (`$3709`) | invincible (INV_MODE) | stood on its own bomb in area 1: lives stayed 3 (2 with `1F1709:00`) |
+| `003F5B:29` + `003F5F:98` | ROM `$3F5B`, `$3F5F` | the Sound Room code opens the BOMBERMAN94 DEBUG VERSION menu (stage select, boss room, ending, sound) | menu shown ![](img/pce94/debug_menu_romcheat.png) |
+| title: Right, Left, Left+Down, Down, Down+Right, Down+Right+II | | Sound Room | Known (above) |
+
+Patches (IPS, built and checked against the ROM by `tools/pce94/mkpatch.py`):
+
+- `patches/pce94_debug_menu.ips`: TCRF's `$3F5B` change. Verified on the patched file: the Sound Room code opens the
+  debug menu.
+- `patches/pce94_debug_pause.ips`: the `debugpause.lua` stubs (`$3F66`, `$3F82`) and hooks (`$3891`, `$389C`).
+  Verified on the patched file: pausing area 1 installs hook `$DF66`, I turns INV_MODE on (`$3709` = 2):
+  ![](img/pce94/debug_pause_ips.png) (the stage keeps no letters in its font, as above)
+
 ## Files
 
 - `tools/pce94/password.py`, `password.mjs` (no imports), `password.test.mjs`: the codec, self-checks, `--fuzz`.
@@ -277,3 +379,5 @@ The SCSI log of every run (normal boot, Left held, old-card path, battles) shows
   palettes 0 and 2 above screen y 130. Colour 0 transparent, cropped tight. The Japanese-text demo title gives
   a byte-identical logo.
 - `tools/pce94/huc6280.py`, `demo_disasm.py`, `trace.lua`, `rawtiles.py`.
+- `tools/pce94/cov.py` + `cov.lua` (coverage runs), `maps.py` (map decoder and renderer), `mkpatch.py` (IPS);
+  the sweeps `tools/pce93/sweep.py` and `tools/pce93/text.py` take `94`.

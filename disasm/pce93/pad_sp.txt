@@ -1,0 +1,40 @@
+00:E8AB run           LDA $37                  | CMP $39; CMP $3B; CMP $38; CMP $3A
+00:E8AD run           CMP $39                  | CMP $3B; CMP $38; CMP $3A
+00:E8B1 run           CMP $3B                  | CMP $38; CMP $3A
+00:E8B5 run           CMP $38                  | CMP $3A
+00:E8B9 run           CMP $3A                  | 
+00:F1AB run           TAI $E524,$2032,$000F    | 
+00:F1CF run  TABLE    LDA $32,X                | EOR $2F72,X; AND #$F0
+00:F1DF run           AND $32,X                | AND #$F0
+00:F1E3 run           LDA $37,X                | AND #$F0
+00:F1FD run           LDA $32,X                | AND #$F0; AND #$0F
+00:F212 run           LDA $37,X                | AND #$0F; AND #$0F
+00:F21A run           LDA $37,X                | AND #$0F
+00:F236 run           LDA $32,X                | AND #$0F
+00:F24D run           LDA $37,X                | AND #$F0; AND #$F0
+01:D12F run           LDA $37                  | 
+01:D131 run           ORA $38                  | 
+01:D133 run           ORA $39                  | 
+01:D135 run           ORA $3A                  | 
+01:D137 run           ORA $3B                  | 
+02:868A run           LDA $2032,Y              | AND #$0F
+02:868F run           LDA $2037,Y              | AND #$0F
+02:86B6 DEAD          LDA $2032,Y              | AND #$F0; AND #$0F
+02:86C2 DEAD          LDA $2032,Y              | AND #$0F
+02:86CF DEAD          LDA $2032,Y              | AND #$C0; AND #$30
+02:9214 run           BBR2 $37,$9225           | EOR #$01
+06:80C6 run           BBR3 $37,$80F1           | 
+06:84A4 run           BBS3 $37,$84BE           | 
+06:911F DEAD          BBS1 $37,$912F           | 
+06:917E DEAD          BBS1 $37,$91CB           | 
+06:91AF DEAD          BBS1 $37,$91D1           | 
+06:9282 DEAD          BBR0 $37,$9292           | 
+06:9292 DEAD          BBR1 $37,$92A1           | 
+06:92A1 DEAD          BBR3 $37,$92BC           | 
+06:92B6 DEAD          BBR3 $37,$92BC           | 
+06:9609 run  COMBO    BBR0 $37,$9626           | CMP #$1C; CMP #$1A; CMP #$1B
+06:9626 run           BBR1 $37,$962E           | 
+06:962E run           BBR3 $37,$967F           | 
+08:893A DEAD          BBS3 $37,$895F           | 
+08:8A7F DEAD          BBR0 $37,$8A8A           | 
+08:8B3C DEAD          BBR3 $37,$8B51           | 

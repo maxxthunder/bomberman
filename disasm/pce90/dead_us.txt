@@ -1,0 +1,363 @@
+# never-executed code (traced)
+cond  00:E00D-E013     7 bytes    3 ins  from: 00:E00B fall
+cond  00:E11E-E120     3 bytes    1 ins  from: 00:E11B fall
+cond  00:E125-E127     3 bytes    1 ins  from: 00:E123 fall
+dead  00:E1DF-E1F9    27 bytes   15 ins  from: 00:E125 JMP*
+noref 00:E230-E241    18 bytes   12 ins  from: -  ptr@01FFA,0A686,0FBBC
+noref 00:E243-E243     1 bytes    1 ins  from: -  ptr@01FFC
+dead  00:E2B9-E2C0     8 bytes    4 ins  from: 00:E2C5 JSR*
+cond  00:E2C5-E2C7     3 bytes    1 ins  from: 00:E2C3 fall
+cond  00:E2EE-E30B    30 bytes   16 ins  from: 00:E2E1 BEQ
+cond  00:E35F-E36A    12 bytes    5 ins  from: 00:E35D fall
+cond  00:E7B5-E7C7    19 bytes    9 ins  from: 00:E797 BEQ
+cond  00:E80D-E80D     1 bytes    1 ins  from: 00:E81A BEQ
+cond  00:E930-E935     6 bytes    3 ins  from: 00:E92E fall
+dead  00:E94E-E965    24 bytes   13 ins  from: 00:E934 BEQ*
+cond  00:EC5A-EC5E     5 bytes    2 ins  from: 00:EC58 fall
+cond  00:ECA3-ECA5     3 bytes    1 ins  from: 00:ECA0 fall
+cond  00:F2D2-F2EA    25 bytes   11 ins  from: 00:F2D0 fall
+cond  00:F5A4-F5A5     2 bytes    1 ins  from: 00:F5A2 fall
+cond  00:F5C0-F5C1     2 bytes    1 ins  from: 00:F5BE fall
+noref 00:F5E6-F60B    38 bytes   16 ins  from: -  ptr@0155B
+cond  00:F6CA-F6D5    12 bytes    5 ins  from: 00:F6C1 BEQ
+dead  00:F6EF-F70F    33 bytes   15 ins  from: 00:F8A4 JSR*, 01:A438 JSR*
+dead  00:F752-F770    31 bytes   13 ins  from: 00:F89E JSR*, 00:F8A1 JSR*, 00:F94D JSR*, 00:F967 JSR*
+dead  00:F7A6-F88C   231 bytes   91 ins  from: 00:F8EA JMP*, 02:D186 JSR*
+dead  00:F892-F9AF   286 bytes  117 ins  from: 00:F7DE JSR*, 00:F805 JSR*, 00:F814 JMP*, 00:F844 JSR*, 00:F84E BNE*, 00:F856 JMP*
+cond  00:FA4D-FAAF    99 bytes   44 ins  from: 00:F6F9 JSR*, 00:FA3C BNE, 00:FA46 BNE
+dead  00:FAB3-FAB5     3 bytes    1 ins  from: 00:FA64 BNE*
+cond  00:FAD9-FADA     2 bytes    2 ins  from: 00:FAD7 fall
+cond  00:FB3C-FB41     6 bytes    2 ins  from: 00:FB12 BCS, 00:FB18 BCC, 00:FB3A fall, 00:FB94 BCS*
+cond  00:FB58-FB5A     3 bytes    2 ins  from: 00:FB56 fall
+cond  00:FB7A-FB7B     2 bytes    2 ins  from: 00:FB4B BEQ
+cond  00:FB92-FB9E    13 bytes    6 ins  from: 00:FB90 fall
+dead  00:FBA2-FC23   130 bytes   67 ins  from: 00:FB96 BEQ*, 00:FB9A BCC*, 00:FB9C JMP*
+cond  00:FC38-FC3A     3 bytes    1 ins  from: 00:FC64 BCS
+cond  00:FC45-FC5F    27 bytes   15 ins  from: 00:FC43 fall
+cond  00:FCAD-FCEE    66 bytes   30 ins  from: 00:F75C JSR*, 00:FC6B BCC, 00:FD4A BRA*
+dead  00:FD01-FD4E    78 bytes   37 ins  from: 00:F76D JSR*, 00:FCB9 BCS*
+cond  00:FDC3-FDC4     2 bytes    1 ins  from: 00:FDC1 fall
+cond  00:FDF8-FDFB     4 bytes    3 ins  from: 00:FDD3 BNE, 00:FDE6 BCS, 00:FDEE BCS, 00:FDF6 fall, 00:FE01 BNE, 00:FE08 BNE
+dead  00:FE36-FE43    14 bytes    7 ins  from: 00:FA4D JMP*, 00:FAB3 JMP*, 00:FB3C JMP*, 00:FB3F JMP*, 00:FBA2 JMP*, 00:FC38 JMP*, 00:FCAD JMP*, 00:FDFA BRA*
+dead  00:FE80-FEAB    44 bytes   25 ins  from: 00:FC10 JSR*
+cond  00:FEAF-FEB2     4 bytes    2 ins  from: 00:FEAD fall
+cond  00:FEB7-FEB8     2 bytes    1 ins  from: 00:FEB5 fall
+cond  01:A1BB-A1BC     2 bytes    1 ins  from: 01:A1B9 fall
+cond  01:A1CC-A1CD     2 bytes    1 ins  from: 01:A1CA fall
+cond  01:A1ED-A1EE     2 bytes    1 ins  from: 01:A1EB fall
+cond  01:A1FE-A1FF     2 bytes    1 ins  from: 01:A1FC fall
+cond  01:A2D0-A2D6     7 bytes    3 ins  from: 01:A2CE fall
+cond  01:A2ED-A2F2     6 bytes    3 ins  from: 01:A2EB fall
+cond  01:A307-A30D     7 bytes    3 ins  from: 01:A305 fall
+cond  01:A324-A329     6 bytes    3 ins  from: 01:A322 fall, 09:9BA7 JSR, 09:9BF7 JSR, 09:9D21 JSR, 0B:C267 JSR, 0B:C2C4 JSR*, 0B:C490 JSR*
+cond  01:A427-A42D     7 bytes    3 ins  from: 01:A425 fall
+cond  01:A438-A43A     3 bytes    1 ins  from: 01:A436 fall
+cond  01:A56D-A56F     3 bytes    1 ins  from: 01:A56B fall
+noref 01:A685-A68D     9 bytes    4 ins  from: -  ptr@0265E
+cond  01:A6B2-A6B4     3 bytes    1 ins  from: 01:A6B0 fall
+cond  01:A701-A701     1 bytes    1 ins  from: 01:A6FF fall
+cond  01:A750-A755     6 bytes    2 ins  from: 01:A748 BEQ
+cond  01:A7D4-A7D5     2 bytes    1 ins  from: 01:A7D2 fall
+cond  01:A7F4-A7F5     2 bytes    1 ins  from: 01:A7F2 fall
+cond  01:A7FC-A7FD     2 bytes    1 ins  from: 01:A7FA fall
+cond  01:A828-A829     2 bytes    1 ins  from: 01:A826 fall
+cond  01:A830-A831     2 bytes    1 ins  from: 01:A82E fall
+cond  01:A841-A842     2 bytes    1 ins  from: 01:A83F fall
+cond  01:A852-A853     2 bytes    1 ins  from: 01:A850 fall
+cond  01:A862-A863     2 bytes    1 ins  from: 01:A860 fall
+noref 01:AB7C-AB7C     1 bytes    1 ins  from: -  ptr@02B74,02D90,02E01,02E13
+cond  01:B26F-B274     6 bytes    3 ins  from: 01:B26D fall
+cond  02:C7E5-C7E7     3 bytes    1 ins  from: 02:C7E3 fall
+cond  02:C7FE-C800     3 bytes    1 ins  from: 02:C7FC fall
+dead  02:C802-C811    16 bytes    6 ins  from: 02:D137 JSR*
+cond  02:C836-C84C    23 bytes   10 ins  from: 02:C80F BNE*, 02:C831 BEQ
+dead  02:C872-C8B3    66 bytes   28 ins  from: 02:C7E5 JMP*, 02:C7FE JMP*, 02:C808 JMP*
+noref 02:C948-C958    17 bytes    7 ins  from: -  ptr@0492F
+cond  02:CFF0-D000    17 bytes    6 ins  from: 02:CFEE fall
+cond  02:D06D-D06F     3 bytes    1 ins  from: 02:D06B fall
+cond  02:D0E7-D0E9     3 bytes    1 ins  from: 02:D0E5 fall
+cond  02:D106-D191   140 bytes   52 ins  from: 02:D101 BNE
+dead  02:D1BD-D1FF    67 bytes   31 ins  from: 02:D0E7 JMP*, 02:D13A JSR*, 02:D146 BNE*, 02:D162 JSR*
+cond  02:D328-D32A     3 bytes    1 ins  from: 02:D326 fall
+cond  02:D3F5-D413    31 bytes   14 ins  from: 02:D3EC BNE
+cond  02:D42C-D442    23 bytes    9 ins  from: 02:D42A fall
+cond  02:D5D1-D5E2    18 bytes    7 ins  from: 02:D586 BMI
+cond  04:8029-802C     4 bytes    2 ins  from: 04:8019 BCS
+cond  04:80D5-80D6     2 bytes    1 ins  from: 04:80D3 fall
+cond  04:8109-810B     3 bytes    2 ins  from: 04:8100 BCS
+cond  04:81B1-81B3     3 bytes    1 ins  from: 04:81AF fall
+cond  04:81B6-81B8     3 bytes    1 ins  from: 04:81B4 fall
+cond  04:81C3-81C5     3 bytes    1 ins  from: 04:81C1 fall
+cond  04:918E-91B0    35 bytes   18 ins  from: 04:918B fall
+cond  04:91B4-91D3    32 bytes   15 ins  from: 04:91B1 fall
+cond  04:91E7-91F2    12 bytes    7 ins  from: 04:91E4 fall
+cond  04:91F6-9219    36 bytes   21 ins  from: 04:91F3 fall
+cond  04:92C5-92C6     2 bytes    1 ins  from: 04:92C3 fall
+cond  04:955D-955E     2 bytes    1 ins  from: 04:955B fall
+cond  04:9589-958A     2 bytes    1 ins  from: 04:9587 fall
+cond  04:95B3-95B4     2 bytes    1 ins  from: 04:95B1 fall
+cond  04:9670-9671     2 bytes    1 ins  from: 04:966E fall
+cond  04:975E-9765     8 bytes    3 ins  from: 04:975C fall
+cond  04:9774-977B     8 bytes    3 ins  from: 04:9772 fall, 08:605E JSR
+cond  04:97BA-97BB     2 bytes    1 ins  from: 04:97B8 fall
+cond  04:97FB-97FC     2 bytes    1 ins  from: 04:97F9 fall
+cond  04:9852-9860    15 bytes    7 ins  from: 04:9850 fall
+cond  04:9868-9869     2 bytes    1 ins  from: 04:9866 fall
+cond  04:98AB-98AC     2 bytes    1 ins  from: 04:98A9 fall
+cond  04:99B5-99C8    20 bytes    8 ins  from: 04:99B3 fall
+cond  04:9A0E-9A12     5 bytes    2 ins  from: 04:9A0C fall
+cond  04:9AA3-9AAB     9 bytes    5 ins  from: 04:9AA1 fall
+cond  04:9B36-9B37     2 bytes    1 ins  from: 04:9B34 fall
+cond  04:9BA1-9BA2     2 bytes    1 ins  from: 04:9B9C BPL
+cond  04:9C4D-9C69    29 bytes   13 ins  from: 04:9C25 BMI
+cond  08:6098-60BB    36 bytes   17 ins  from: 08:6092 BEQ
+cond  08:60C8-60CC     5 bytes    3 ins  from: 08:60C1 BEQ
+cond  08:60EF-6188   154 bytes   60 ins  from: 08:60ED fall
+dead  08:61F4-62A4   177 bytes   86 ins  from: 08:6112 JSR*, 08:612E JSR*
+cond  08:6522-6539    24 bytes   12 ins  from: 08:6515 BNE, 08:651A BNE, 08:651F BNE
+cond  08:657E-657E     1 bytes    1 ins  from: 08:657C fall
+cond  08:6723-6733    17 bytes    9 ins  from: 08:6720 BNE
+cond  08:673F-6741     3 bytes    2 ins  from: 08:673D fall
+cond  08:6825-6835    17 bytes    7 ins  from: 08:6823 fall
+dead  08:6837-686F    57 bytes   24 ins  from: 08:682A JSR*
+cond  08:6948-6959    18 bytes    9 ins  from: 08:6942 BEQ
+noref 08:6987-6991    11 bytes    5 ins  from: -  ptr@10965
+noref 08:699B-69A5    11 bytes    5 ins  from: -  ptr@10967
+noref 08:69AF-69B1     3 bytes    1 ins  from: -  ptr@10969
+cond  08:6A18-6A2B    20 bytes    8 ins  from: 08:6A02 BEQ
+cond  08:6A94-6A9E    11 bytes    4 ins  from: 08:6A92 fall
+dead  08:6AA0-6AAB    12 bytes    5 ins  from: 08:6A9A BNE*
+cond  08:6B28-6B4B    36 bytes   16 ins  from: 08:6B13 BEQ
+cond  08:6BBE-6BC2     5 bytes    2 ins  from: 08:6BBC fall
+cond  08:6BFF-6C13    21 bytes   10 ins  from: 08:6BFD fall
+cond  08:6C19-6C1B     3 bytes    1 ins  from: 08:6C17 fall
+cond  08:6CAB-6CB3     9 bytes    6 ins  from: 08:6CA9 fall
+dead  08:6CB5-6D15    97 bytes   39 ins  from: 08:6CAC BEQ*, 08:6CAF BEQ*, 08:6CB2 BEQ*
+dead  08:6D63-6DA1    63 bytes   23 ins  from: 08:6C19 JMP*
+dead  08:6DAB-6DB1     7 bytes    3 ins  from: 08:6D63 JSR*
+dead  08:6E0F-6E8E   128 bytes   54 ins  from: 08:6D73 JSR*
+dead  08:6EC9-6EED    37 bytes   17 ins  from: 08:6E62 JSR*
+dead  08:6F2E-6F52    37 bytes   17 ins  from: 08:6E43 JSR*
+dead  08:6F8D-6FB1    37 bytes   17 ins  from: 08:6E4B JSR*
+dead  08:6FF2-7044    83 bytes   37 ins  from: 08:6E20 JSR*
+dead  08:7071-70F1   129 bytes   56 ins  from: 08:7000 JSR*
+dead  08:71E9-722A    66 bytes   31 ins  from: 08:6E23 JSR*, 08:7245 JSR*
+dead  08:723D-72DA   158 bytes   63 ins  from: 08:6D8C JSR*
+dead  08:72F1-73DE   238 bytes   94 ins  from: 08:6D8F JSR*, 08:6D9F JMP*, 08:723D JSR*
+dead  08:7473-7485    19 bytes    9 ins  from: 08:73AD JSR*, 08:73C4 JSR*
+dead  08:74B4-7596   227 bytes   98 ins  from: 08:730C JSR*, 08:731B JSR*, 08:731E JSR*, 08:7337 JSR*, 08:733A JSR*, 08:7360 JSR*, 08:7363 JSR*, 08:737F JSR*, 08:7382 JSR*
+dead  08:759F-75EC    78 bytes   36 ins  from: 08:74D4 JSR*, 08:74F7 JSR*, 08:7534 JSR*
+dead  08:75F5-761E    42 bytes   17 ins  from: 08:75AC JSR*
+dead  08:7623-76A9   135 bytes   61 ins  from: 08:74D7 JSR*, 08:74FA JSR*, 08:750D JSR*, 08:7537 JSR*, 08:754A JSR*
+noref 08:76A9-76AF     7 bytes    3 ins  from: -
+dead  08:76B8-76E7    48 bytes   22 ins  from: 08:7521 JSR*, 08:7560 JSR*
+dead  08:76F0-771F    48 bytes   22 ins  from: 08:7524 JSR*, 08:7563 JSR*
+dead  08:7728-7751    42 bytes   20 ins  from: 08:733D JSR*, 08:7366 JSR*
+dead  08:77D2-77E2    17 bytes    7 ins  from: 08:7376 JSR*
+cond  08:7A50-7A54     5 bytes    3 ins  from: 08:7A4E fall
+cond  08:7A67-7A78    18 bytes    9 ins  from: 08:7A5F BEQ
+cond  08:7CC2-7CC8     7 bytes    4 ins  from: 08:7CC0 fall
+cond  08:7CD1-7CD7     7 bytes    4 ins  from: 08:7CCF fall
+cond  08:7F1E-7F22     5 bytes    2 ins  from: 08:7F1C fall
+cond  08:7FC2-7FFF    62 bytes   24 ins  from: 08:7FC0 fall
+cond  09:81C8-81DB    20 bytes    8 ins  from: 09:81B2 BEQ
+cond  09:824D-8254     8 bytes    4 ins  from: 09:8245 BCS
+cond  09:8288-828C     5 bytes    2 ins  from: 09:8286 fall
+cond  09:82A3-82AD    11 bytes    6 ins  from: 09:82A0 BCS
+cond  09:8341-835B    27 bytes   12 ins  from: 09:8325 BEQ
+cond  09:8422-8422     1 bytes    1 ins  from: 09:841D BEQ
+cond  09:84CA-84CB     2 bytes    1 ins  from: 09:84C8 fall
+cond  09:84EB-84F6    12 bytes    5 ins  from: 09:84E9 fall
+cond  09:851B-851C     2 bytes    1 ins  from: 09:8519 fall
+cond  09:853E-8549    12 bytes    5 ins  from: 09:853C fall
+cond  09:85B7-85C1    11 bytes    5 ins  from: 09:8586 BCC, 09:85A2 BCC
+cond  09:85F1-85FC    12 bytes    5 ins  from: 09:85EF fall
+cond  09:8649-8654    12 bytes    5 ins  from: 09:8647 fall
+cond  09:86C1-86CB    11 bytes    5 ins  from: 09:8690 BCC, 09:86AC BCC
+cond  09:8736-873E     9 bytes    4 ins  from: 09:8728 BEQ
+noref 09:8796-8851   188 bytes   72 ins  from: -  ptr@12759
+noref 09:8866-88F2   141 bytes   55 ins  from: -  ptr@12769
+cond  09:890B-8929    31 bytes   14 ins  from: 09:8909 fall
+cond  09:8B26-8B2D     8 bytes    4 ins  from: 09:8B1E BEQ, 09:8B22 BEQ
+cond  09:8BD6-8BE0    11 bytes    5 ins  from: 09:8BC1 BCC, 09:8BC9 BCC
+cond  09:8CF4-8CFF    12 bytes    6 ins  from: 09:8CF2 fall
+cond  09:8D0B-8D16    12 bytes    6 ins  from: 09:8D09 fall
+cond  09:8D30-8D50    33 bytes   16 ins  from: 09:8D2E fall
+dead  09:8D5E-8D6C    15 bytes    6 ins  from: 09:8D4F BCC*
+dead  09:8D72-8D86    21 bytes   10 ins  from: 09:8D30 JSR*
+cond  09:8EF4-8EF4     1 bytes    1 ins  from: 09:8EC9 BCC
+cond  09:8F3D-8F4E    18 bytes   10 ins  from: 09:8F37 BEQ, 09:8F3B fall
+cond  09:8FFD-8FFD     1 bytes    1 ins  from: 09:8FFB fall
+cond  09:90B5-90C9    21 bytes    8 ins  from: 09:90B3 fall
+cond  09:910B-9111     7 bytes    3 ins  from: 09:9109 fall
+cond  09:9121-9125     5 bytes    2 ins  from: 09:911F fall
+cond  09:916C-9171     6 bytes    3 ins  from: 09:916A fall
+dead  09:91A5-91B4    16 bytes   10 ins  from: 09:916C JSR*
+cond  09:91D9-91DA     2 bytes    2 ins  from: 09:91D7 fall
+cond  09:936C-936F     4 bytes    2 ins  from: 09:936A fall
+noref 09:9372-9375     4 bytes    3 ins  from: -  ptr@132D9
+cond  09:9384-9385     2 bytes    2 ins  from: 09:9382 fall
+noref 09:9388-93CC    69 bytes   31 ins  from: -  ptr@132DD
+cond  09:93DE-93DF     2 bytes    2 ins  from: 09:93DC fall
+cond  09:9519-951C     4 bytes    2 ins  from: 09:9517 fall
+cond  09:9545-9548     4 bytes    2 ins  from: 09:9543 fall
+noref 09:9555-95E3   143 bytes   62 ins  from: -  ptr@09282,13418
+noref 09:95F2-9612    33 bytes   14 ins  from: -  ptr@1341A
+cond  09:964A-964A     1 bytes    1 ins  from: 09:9648 fall
+dead  09:9726-9757    50 bytes   22 ins  from: 09:957E JMP*, 09:9610 JMP*
+cond  09:97D4-97D4     1 bytes    1 ins  from: 09:97D8 BNE
+cond  09:9863-9865     3 bytes    1 ins  from: 09:9861 fall
+cond  09:98C1-98CE    14 bytes    6 ins  from: 09:98BF fall
+cond  09:98FA-9907    14 bytes    6 ins  from: 09:98F8 fall
+cond  09:9931-993E    14 bytes    6 ins  from: 09:992F fall
+cond  09:9968-9975    14 bytes    6 ins  from: 09:9966 fall
+cond  09:99AF-99B8    10 bytes    4 ins  from: 09:999D BCC, 09:99AA BCC
+cond  09:99EA-99F3    10 bytes    4 ins  from: 09:99D8 BCC, 09:99E5 BCC
+cond  09:9A0F-9A11     3 bytes    1 ins  from: 09:9A0D fall
+cond  09:9A2D-9A2F     3 bytes    1 ins  from: 09:9A2B fall
+cond  09:9A69-9A6B     3 bytes    1 ins  from: 09:9A67 fall
+cond  09:9C9C-9CA4     9 bytes    5 ins  from: 09:9C9A fall
+cond  09:9D04-9D05     2 bytes    2 ins  from: 09:9CF0 BCC
+cond  09:9F7B-9F7F     5 bytes    2 ins  from: 09:9F79 fall
+cond  0A:A00F-A012     4 bytes    3 ins  from: 0A:A00D fall
+cond  0A:A059-A074    28 bytes   14 ins  from: 0A:A00A BBR0
+noref 0A:A07D-A0B5    57 bytes   27 ins  from: -  ptr@00BB3,0BD1D,1405A
+noref 0A:A0BF-A112    84 bytes   40 ins  from: -  ptr@14068
+cond  0A:A1F0-A1F3     4 bytes    2 ins  from: 0A:A1EE fall
+cond  0A:A273-A278     6 bytes    3 ins  from: 0A:A271 fall
+cond  0A:A323-A327     5 bytes    2 ins  from: 0A:A31C BEQ
+cond  0A:A352-A354     3 bytes    1 ins  from: 0A:A350 fall
+noref 0A:A4EF-A4FB    13 bytes    6 ins  from: -  ptr@144B4,144B6
+cond  0A:A598-A5C7    48 bytes   20 ins  from: 0A:A596 fall
+dead  0A:A5C9-A656   142 bytes   62 ins  from: 0A:A5A0 JSR*, 0A:AA40 JMP*
+cond  0A:A693-A695     3 bytes    1 ins  from: 0A:A691 fall
+cond  0A:A8A2-A8A2     1 bytes    1 ins  from: 0A:A8A0 fall
+cond  0A:A8C0-A8C8     9 bytes    4 ins  from: 0A:A8BE fall
+cond  0A:A8D4-A8DE    11 bytes    5 ins  from: 0A:A8D2 fall
+cond  0A:A8FC-A912    23 bytes   11 ins  from: 0A:A8FA fall
+cond  0A:A919-A935    29 bytes   13 ins  from: 0A:A917 fall
+cond  0A:A975-A979     5 bytes    4 ins  from: 0A:A973 fall
+dead  0A:A97C-A9BB    64 bytes   32 ins  from: 0A:A693 JMP*
+cond  0A:A9C3-A9D2    16 bytes    8 ins  from: 0A:A9C1 fall
+cond  0A:AA40-AA42     3 bytes    1 ins  from: 0A:AA3E fall
+cond  0A:AC7B-AC7D     3 bytes    1 ins  from: 0A:AC79 fall
+cond  0A:AC8C-AC9A    15 bytes    6 ins  from: 0A:AC8A fall
+cond  0A:ACA1-ACA3     3 bytes    1 ins  from: 0A:AC83 BNE
+cond  0A:ACC4-ACC6     3 bytes    1 ins  from: 0A:ACAF BEQ
+cond  0A:ACFA-AD06    13 bytes    5 ins  from: 0A:ACF4 BEQ
+cond  0A:AD7C-AD81     6 bytes    2 ins  from: 0A:AD67 BEQ, 0A:AD6A BEQ
+cond  0A:AEB3-AEB5     3 bytes    1 ins  from: 0A:AEB1 fall
+cond  0A:AEC4-AEC9     6 bytes    2 ins  from: 0A:AEC2 fall
+cond  0A:AEF8-AEFA     3 bytes    1 ins  from: 0A:AEBB BNE
+cond  0A:AF2E-AF30     3 bytes    1 ins  from: 0A:AF2C fall
+cond  0A:AF3F-AF44     6 bytes    2 ins  from: 0A:AF3D fall
+cond  0A:AF62-AF64     3 bytes    1 ins  from: 0A:AF36 BNE
+cond  0A:AF6F-AF71     3 bytes    2 ins  from: 0A:AF6D fall
+dead  0A:AF78-AF7A     3 bytes    1 ins  from: 0A:AF70 BEQ*
+cond  0A:AFAE-AFB0     3 bytes    1 ins  from: 0A:AFAC fall
+dead  0A:AFB2-AFD4    35 bytes   16 ins  from: 0A:AFAE JMP*
+cond  0A:B04D-B18C   320 bytes  131 ins  from: 0A:B047 BEQ, 0B:C3F6 JSR*
+dead  0A:B195-B1B3    31 bytes   14 ins  from: 0A:B0A4 JSR*, 0A:B0EC JSR*, 0A:B13D JSR*, 0A:B17E JSR*
+dead  0A:B1BC-B1EB    48 bytes   22 ins  from: 0A:AF78 JMP*, 0A:B073 JSR*, 0A:B0BE JSR*, 0A:B116 JSR*, 0A:B157 JSR*
+cond  0A:B244-B246     3 bytes    1 ins  from: 0A:B242 fall
+cond  0A:B255-B25A     6 bytes    2 ins  from: 0A:B253 fall
+cond  0A:B28B-B28D     3 bytes    1 ins  from: 0A:B24C BNE
+cond  0A:B2AC-B2AE     3 bytes    1 ins  from: 0A:B2AA fall
+noref 0A:B2CC-B2F4    41 bytes   17 ins  from: -  ptr@14185
+cond  0A:B379-B37B     3 bytes    1 ins  from: 0A:B377 fall
+cond  0A:B38C-B38C     1 bytes    1 ins  from: 0A:B38A fall
+cond  0A:B3D7-B3E7    17 bytes    8 ins  from: 0A:B3D5 fall
+noref 0A:B3EA-B3EE     5 bytes    2 ins  from: -  ptr@144B8
+noref 0A:B3F0-B3FA    11 bytes    5 ins  from: -  ptr@144BA
+cond  0A:B481-B489     9 bytes    6 ins  from: 0A:B47F fall
+dead  0A:B490-B499    10 bytes    4 ins  from: 0A:B482 BEQ*, 0A:B485 BEQ*, 0A:B488 BEQ*
+cond  0A:B4CE-B4D0     3 bytes    1 ins  from: 0A:B4CC fall
+cond  0A:B51A-B535    28 bytes   11 ins  from: 0A:B518 fall
+dead  0A:B537-B5A4   110 bytes   43 ins  from: 0A:B533 JMP*
+dead  0A:B5B5-B6C3   271 bytes  119 ins  from: 0A:B490 JMP*, 0A:B493 JSR*, 0A:B496 JMP*
+cond  0A:B6CF-B6DD    15 bytes   10 ins  from: 0A:B6CD fall
+dead  0A:B6E1-B6EF    15 bytes    5 ins  from: 0A:B6D0 BEQ*, 0A:B6D3 BEQ*, 0A:B6D6 BEQ*, 0A:B6D9 BEQ*, 0A:B6DC BEQ*
+cond  0A:B731-B73F    15 bytes   10 ins  from: 0A:B72F fall
+dead  0A:B743-B74D    11 bytes    5 ins  from: 0A:B732 BEQ*, 0A:B735 BEQ*, 0A:B738 BEQ*, 0A:B73B BEQ*, 0A:B73E BEQ*
+dead  0A:B75A-B7A1    72 bytes   32 ins  from: 0A:B743 JMP*, 0A:B748 JMP*, 0A:B74B JMP*
+cond  0A:B7A9-B7AB     3 bytes    1 ins  from: 0A:B7A7 fall
+cond  0A:B7CE-B7DF    18 bytes    8 ins  from: 0A:B7B1 BEQ, 0A:B7BD BEQ, 0A:B7C1 BEQ, 0A:B7C5 BEQ, 0A:B7C9 BEQ
+cond  0A:B7E9-B7EB     3 bytes    1 ins  from: 0A:B7E7 fall
+cond  0A:B8A2-B8F0    79 bytes   31 ins  from: 0A:B89F BEQ
+cond  0A:B90D-BB44   568 bytes  222 ins  from: 0A:B8F8 BEQ, 0A:B8FC BEQ, 0A:B900 BEQ, 0A:B904 BEQ, 0A:B908 BEQ
+dead  0A:BBA8-BC94   237 bytes   98 ins  from: 0A:B594 JSR*, 0A:B637 JSR*
+cond  0A:BC9F-BCA3     5 bytes    3 ins  from: 0A:BC97 BNE, 0A:BC9D fall
+dead  0A:BCAD-BCDF    51 bytes   29 ins  from: 0A:B5FD JSR*
+cond  0A:BEAE-BEAE     1 bytes    1 ins  from: 0A:BE92 BNE, 0A:BEAC fall
+cond  0B:C15D-C173    23 bytes   13 ins  from: 0B:C145 BEQ
+cond  0B:C1B5-C1E7    51 bytes   21 ins  from: 0B:C1B3 fall
+cond  0B:C1FD-C22F    51 bytes   23 ins  from: 0B:C1B5 JSR*, 0B:C1F4 BNE
+cond  0B:C237-C24B    21 bytes   14 ins  from: 0B:C235 fall
+dead  0B:C24F-C261    19 bytes    7 ins  from: 0B:C238 BEQ*, 0B:C23B BEQ*, 0B:C23E BEQ*, 0B:C241 BEQ*, 0B:C244 BEQ*, 0B:C247 BEQ*, 0B:C24A BEQ*
+cond  0B:C29E-C2A9    12 bytes    5 ins  from: 0B:C265 BCS
+cond  0B:C2B1-C2C1    17 bytes    9 ins  from: 0B:C2AF fall
+dead  0B:C2C4-C32B   104 bytes   41 ins  from: 0B:C24F JMP*
+dead  0B:C338-C359    34 bytes   16 ins  from: 0B:C2BD JSR*, 0B:C2E0 JSR*, 0B:C305 BEQ*
+dead  0B:C36A-C42B   194 bytes   81 ins  from: 0A:AD04 JMP*, 0B:C252 JMP*, 0B:C255 JMP*, 0B:C258 JMP*
+dead  0B:C430-C4ED   190 bytes   78 ins  from: 0B:C25C JMP*, 0B:C25F JMP*
+cond  0B:C781-C782     2 bytes    1 ins  from: 0B:C77F fall
+cond  0B:C8B6-C8B6     1 bytes    1 ins  from: 0B:C8B4 fall
+cond  0B:C962-C968     7 bytes    5 ins  from: 0B:C960 fall
+dead  0B:C96B-C97A    16 bytes    9 ins  from: 0B:C2B2 JSR*
+cond  0B:C9E8-C9EA     3 bytes    1 ins  from: 0B:C9E6 fall
+cond  0B:C9F2-C9F4     3 bytes    1 ins  from: 0B:C9F0 fall
+cond  0B:C9FC-CA01     6 bytes    2 ins  from: 0B:C9FA fall
+cond  0B:CA0D-CA2D    33 bytes   14 ins  from: 0B:CA07 BEQ, 0B:CA0B fall
+cond  0B:CA53-CA55     3 bytes    1 ins  from: 0B:CA51 fall
+cond  0B:CA64-CA69     6 bytes    2 ins  from: 0B:CA62 fall
+cond  0B:CA70-CA72     3 bytes    1 ins  from: 0B:CA5B BNE
+cond  0B:CA7A-CA7C     3 bytes    1 ins  from: 0B:CA78 fall
+cond  0B:CA99-CA9B     3 bytes    1 ins  from: 0B:CA82 BNE
+cond  0B:CAB4-CAB8     5 bytes    2 ins  from: 0B:CAB2 fall
+cond  0B:CAD2-CAD4     3 bytes    1 ins  from: 0B:CAD0 fall
+cond  0B:CAD8-CB05    46 bytes   19 ins  from: 0B:CAC9 BNE, 0B:CAD2 JMP*
+cond  0B:CBB2-CBB5     4 bytes    2 ins  from: 0B:CBB0 fall
+noref 10:4000-400A    11 bytes    5 ins  from: -  ptr@00012,00EE7,0117A,011B2
+# orphan code candidates (not reached by the trace)
+orphan 00:E684   57 bytes  25 ins  calls 5
+orphan 00:EBA2   45 bytes  25 ins  calls 1
+orphan 02:D474   14 bytes   6 ins  calls 1
+orphan 02:D482   17 bytes   7 ins  calls 1
+orphan 02:D9BC  148 bytes  50 ins  calls 1
+orphan 02:DC44  154 bytes  52 ins  calls 1  ptr@1845E
+orphan 03:6370   65 bytes  33 ins  calls 1
+orphan 03:7013   33 bytes  15 ins  calls 1  ptr@0E9D6,18B86
+orphan 03:7CB2   16 bytes   7 ins  calls 1
+orphan 08:78AE   43 bytes  15 ins  calls 13
+orphan 09:9ACE   14 bytes   6 ins  calls 2
+orphan 0A:ABE5   67 bytes  32 ins  calls 2
+orphan 0A:AC29   63 bytes  32 ins  calls 1  jsr/jmp@0A:0C26
+orphan 0A:ADCC   18 bytes   7 ins  calls 1  jsr/jmp@0A:0DC9
+orphan 0A:ADDE   10 bytes   4 ins  calls 1
+orphan 0A:AE27   40 bytes  15 ins  calls 2  jsr/jmp@0A:0E24
+orphan 0A:AE4F   10 bytes   4 ins  calls 1
+orphan 0A:B1F4   62 bytes  24 ins  calls 2  ptr@13CB1
+orphan 0A:B232   11 bytes   5 ins  calls 1
+orphan 0A:B28E   13 bytes   5 ins  calls 2  ptr@13AD0,13F22,1464D,151DF
+orphan 0A:B804   64 bytes  25 ins  calls 2  ptr@13CB5
+orphan 0A:B844   11 bytes   5 ins  calls 1  ptr@18438
+orphan 0B:C533   32 bytes  13 ins  calls 1  jsr/jmp@0B:0528
+orphan 0B:C553   21 bytes  10 ins  calls 2  jsr/jmp@0B:054B,0B:05B3
+orphan 0B:C568   38 bytes  17 ins  calls 2
+orphan 0B:C58E   13 bytes   6 ins  calls 2
+orphan 0B:C59B   26 bytes  10 ins  calls 1  jsr/jmp@0B:052B
+orphan 0B:C5BB   14 bytes   6 ins  calls 1  jsr/jmp@0B:052E
+orphan 0B:C5C9   33 bytes  14 ins  calls 3
+orphan 0B:C5EA   23 bytes   9 ins  calls 2
+orphan 0B:C61D   22 bytes   9 ins  calls 1  jsr/jmp@0B:0531
+orphan 0B:C8EA   33 bytes  13 ins  calls 2  ptr@13834
+orphan 0B:C90C   63 bytes  28 ins  calls 2  ptr@13CBB,16F4F
+orphan 0B:C985   40 bytes  15 ins  calls 2  jsr/jmp@0B:0983
+orphan 0B:C9AD   10 bytes   4 ins  calls 1
+orphan 0B:C9B7   33 bytes  13 ins  calls 3  ptr@13F2E
+orphan 0B:CE80   37 bytes  21 ins  calls 2
+orphan 0B:CEA5   41 bytes  15 ins  calls 3  jsr/jmp@08:00B9
+orphan 0B:CECE   22 bytes   8 ins  calls 1  jsr/jmp@0B:0EE2
+orphan 0B:CEF5   44 bytes  16 ins  calls 2  jsr/jmp@08:00B2
+orphan 0B:CF21   31 bytes  11 ins  calls 2
+orphan 0B:CFFF  153 bytes  70 ins  calls 1  jsr/jmp@08:0211,08:027C,0B:0E60,0B:0E87

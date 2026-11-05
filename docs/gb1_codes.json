@@ -1,0 +1,810 @@
+[
+ {
+  "code": "4696",
+  "effect": "Start at round 1-1 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 0: $C3F0 = 0; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-1 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "7006",
+  "effect": "Start at round 1-2 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 1: $C3F0 = 1; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-2 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "8774",
+  "effect": "Start at round 1-3 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 2: $C3F0 = 2; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-3 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "5141",
+  "effect": "Start at round 1-Boss (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 3: $C3F0 = 3; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-Boss (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "9185",
+  "effect": "Start at round 2-1 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 4: $C3F0 = 4; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-1 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "4610",
+  "effect": "Start at round 2-2 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 5: $C3F0 = 5; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-2 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "2630",
+  "effect": "Start at round 2-3 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 6: $C3F0 = 6; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-3 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "3569",
+  "effect": "Start at round 2-Boss (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 7: $C3F0 = 7; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-Boss (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "8401",
+  "effect": "Start at round 3-1 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 8: $C3F0 = 8; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-1 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "8264",
+  "effect": "Start at round 3-2 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 9: $C3F0 = 9; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-2 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "0173",
+  "effect": "Start at round 3-3 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 10: $C3F0 = 10; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-3 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "2828",
+  "effect": "Start at round 3-Boss (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 11: $C3F0 = 11; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-Boss (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "4152",
+  "effect": "Start at round 4-1 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 12: $C3F0 = 12; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-1 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "3451",
+  "effect": "Start at round 4-2 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 13: $C3F0 = 13; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-2 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "4312",
+  "effect": "Start at round 4-3 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 14: $C3F0 = 14; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-3 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "0874",
+  "effect": "Start at round 4-Boss (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 15: $C3F0 = 15; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-Boss (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "1909",
+  "effect": "Start at round 5-1 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 16: $C3F0 = 16; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-1 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "5010",
+  "effect": "Start at round 5-2 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 17: $C3F0 = 17; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-2 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "2904",
+  "effect": "Start at round 5-3 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 18: $C3F0 = 18; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-3 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "1726",
+  "effect": "Start at round 5-Boss (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 19: $C3F0 = 19; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-Boss (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "3614",
+  "effect": "Start at round 6-1 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 20: $C3F0 = 20; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-1 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "0610",
+  "effect": "Start at round 6-2 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 21: $C3F0 = 21; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-2 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "9867",
+  "effect": "Start at round 6-3 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 22: $C3F0 = 22; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-3 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "9618",
+  "effect": "Start at round 6-Boss (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 23: $C3F0 = 23; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-Boss (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "1884",
+  "effect": "Start at round 7-1 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 24: $C3F0 = 24; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-1 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "7702",
+  "effect": "Start at round 7-2 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 25: $C3F0 = 25; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-2 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "6925",
+  "effect": "Start at round 7-3 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 26: $C3F0 = 26; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-3 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "7110",
+  "effect": "Start at round 7-Boss (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 27: $C3F0 = 27; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-Boss (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "5814",
+  "effect": "Start at round 8-1 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 28: $C3F0 = 28; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-1 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "8136",
+  "effect": "Start at round 8-2 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 29: $C3F0 = 29; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-2 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "0390",
+  "effect": "Start at round 8-3 (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 30: $C3F0 = 30; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-3 (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "3158",
+  "effect": "Start at round 8-Boss (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 31: $C3F0 = 31; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-Boss (Bomberman).",
+  "section": "Passwords"
+ },
+ {
+  "code": "6964",
+  "effect": "Start at round 1-1 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $20, $C3F0 = 0, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "6007",
+  "effect": "Start at round 1-2 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $21, $C3F0 = 1, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4778",
+  "effect": "Start at round 1-3 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $22, $C3F0 = 2, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "1415",
+  "effect": "Start at round 1-Boss as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $23, $C3F0 = 3, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5819",
+  "effect": "Start at round 2-1 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $24, $C3F0 = 4, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0164",
+  "effect": "Start at round 2-2 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $25, $C3F0 = 5, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0362",
+  "effect": "Start at round 2-3 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $26, $C3F0 = 6, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "9653",
+  "effect": "Start at round 2-Boss as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $27, $C3F0 = 7, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "1048",
+  "effect": "Start at round 3-1 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $28, $C3F0 = 8, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4628",
+  "effect": "Start at round 3-2 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $29, $C3F0 = 9, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "3710",
+  "effect": "Start at round 3-3 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $2A, $C3F0 = 10, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "8282",
+  "effect": "Start at round 3-Boss as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $2B, $C3F0 = 11, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2514",
+  "effect": "Start at round 4-1 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $2C, $C3F0 = 12, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "1543",
+  "effect": "Start at round 4-2 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $2D, $C3F0 = 13, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2134",
+  "effect": "Start at round 4-3 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $2E, $C3F0 = 14, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4780",
+  "effect": "Start at round 4-Boss as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $2F, $C3F0 = 15, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "9091",
+  "effect": "Start at round 5-1 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $30, $C3F0 = 16, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0105",
+  "effect": "Start at round 5-2 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $31, $C3F0 = 17, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4092",
+  "effect": "Start at round 5-3 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $32, $C3F0 = 18, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "6271",
+  "effect": "Start at round 5-Boss as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $33, $C3F0 = 19, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4163",
+  "effect": "Start at round 6-1 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $34, $C3F0 = 20, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0160",
+  "effect": "Start at round 6-2 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $35, $C3F0 = 21, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "7689",
+  "effect": "Start at round 6-3 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $36, $C3F0 = 22, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "8169",
+  "effect": "Start at round 6-Boss as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $37, $C3F0 = 23, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4881",
+  "effect": "Start at round 7-1 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $38, $C3F0 = 24, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "2077",
+  "effect": "Start at round 7-2 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $39, $C3F0 = 25, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5296",
+  "effect": "Start at round 7-3 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $3A, $C3F0 = 26, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0117",
+  "effect": "Start at round 7-Boss as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $3B, $C3F0 = 27, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4185",
+  "effect": "Start at round 8-1 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $3C, $C3F0 = 28, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "6318",
+  "effect": "Start at round 8-2 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $3D, $C3F0 = 29, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "0930",
+  "effect": "Start at round 8-3 as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $3E, $C3F0 = 30, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "8513",
+  "effect": "Start at round 8-Boss as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Wario Blast only: record value $3F, $C3F0 = 31, $C3D5 = 0 (play as Wario). Typed with the pad in Mesen. Not in the JP table. GameFAQs (Wario Blast page) has it.",
+  "section": "Passwords"
+ },
+ {
+  "code": "4622",
+  "effect": "Start at 1-1 with every power-up (Bomberman)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Value $20 (JP) / $40 (Wario): $C3FB = 1, read by the item loaders $00:10A7, $00:2727, $01:405B. Typed with the pad in both versions. GameFAQs lists it for Wario Blast (\"Start game powered up: Bomberman\") and, on its Bomberman GB page, as All Power-Ups (that page is the US Bomberman GB = JP GB 2, which has the same code, see docs/gb2.md).",
+  "section": "Passwords"
+ },
+ {
+  "code": "2264",
+  "effect": "Start at 1-1 with every power-up as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Value $42: $C3FB = 1, $C3D5 = 0. Typed with the pad in Mesen.",
+  "section": "Passwords"
+ },
+ {
+  "code": "5656",
+  "effect": "Extra battle: an elimination run against Black Bombermen (GREAT BATTLE / THE BATTLE)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Value $21 (JP) / $41 (Wario): music $0C and $00:34B2 (JP) / $00:3457 (Wario), the extra-battle mode (JP intro: how many Black Bombermen can you beat before you fall). Typed with the pad; the battle ran in both. GameFAQs (Wario Blast page): Extra Battle / Battle Mode with Bomberman.",
+  "section": "Passwords",
+  "img": "codes_jp.png"
+ },
+ {
+  "code": "6565",
+  "effect": "Extra battle as Wario",
+  "versions": [
+   "wario"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Value $43, $C3D5 = 0. Typed with the pad in Mesen.",
+  "section": "Passwords",
+  "img": "codes_wario.png"
+ },
+ {
+  "code": "C98-37B-D5D",
+  "effect": "Invincible (fire and enemies never kill)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Game Genie, compare $CD: RET over the hit check $01:4837 (same address in both). tools/gb1/test_cheats.lua, random-input bot 6,000 frames from 1-1: 0 hits with the code, 7 hits / 7 lost sets without. IPS: patches/gb1_invincible.ips (file $4837 = $C9).",
+  "section": "cheat"
+ },
+ {
+  "code": "010000C1 + 010000C2 + 010000C3",
+  "effect": "Win every set at once (stage clear)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; the coverage run used it to play through to the ending. GB1 has no lives: a lost match goes to the continue screen.",
+  "section": "cheat"
+ }
+]

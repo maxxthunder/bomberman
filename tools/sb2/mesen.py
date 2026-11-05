@@ -1,4 +1,4 @@
-"""Copy of tools/emu/mesen.py for sb2: same helpers, plus `hold`/`pad` (when the input queue is empty and
+"""Copy of tools/emu/mesen.py for sb2: same helpers, extra Mesen switches from env MESEN_ARGS (e.g. --snes.port2.type=Multitap), plus `hold`/`pad` (when the input queue is empty and
 hold is true, keep running and send `pad` instead of stopping) and `stop()`.
 Run a Mesen 2 Lua snippet headless (Mesen.exe --testrunner). Set MESEN to Mesen.exe.
 Usage: python tools/emu/mesen.py script.lua rom -> writes <name>.png for each shot(name) and <name>.ram for dump(name)."""
@@ -24,7 +24,7 @@ end, emu.eventType.inputPolled)
 src=PRE+open(sys.argv[1]).read()
 open(os.path.join(HERE,'_s.lua'),'w').write(src)
 rom=sys.argv[2]
-p=subprocess.run([os.environ.get("MESEN", "Mesen.exe"),"--testrunner","--timeout=5990",rom,os.path.join(HERE,'_s.lua')],capture_output=True,text=True,timeout=6000)
+p=subprocess.run([os.environ.get("MESEN", "Mesen.exe"),"--testrunner","--timeout=5990"]+os.environ.get("MESEN_ARGS","").split()+[rom,os.path.join(HERE,'_s.lua')],capture_output=True,text=True,timeout=6000)
 for line in p.stdout.splitlines():
     if line.startswith("SHOT "):
         _,n,h=line.split(" ",2); open(os.path.join(HERE,n+".png"),"wb").write(binascii.unhexlify(h)); print("wrote",n)

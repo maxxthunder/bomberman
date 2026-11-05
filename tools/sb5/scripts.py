@@ -34,16 +34,21 @@ if __name__ == "__main__":
             n, nm = oplen(a)
             print("%06X %-8s %s" % (a, nm, " ".join("%02x" % rd(a + i) for i in range(n))))
             a += n
-    else:
+    else:  # exits: a warp is "11 <dest+3> x y 00" followed by its handler "[05/06 flag]... 0F <dest> 00"
+        import re
         starts = sorted({p24(0xC60000 + 3 * i) for i in range(0xAE)})
+        graph = {}
         for r in range(0x0D, 0x75):
             a = p24(0xC60000 + 3 * (r - 1))
-            end = next((s for s in starts if s > a), a + 0x400)
-            outs = []
-            while a < end:
-                n, nm = oplen(a)
-                if nm == "op0F":
-                    t = rd(a + 1)
-                    outs.append("%02X(%s)" % (t, name(t) if t < 0x74 else "scene"))
-                a += n
-            print("%02X %-7s script %06X ->" % (r, name(r), p24(0xC60000 + 3 * (r - 1))), " ".join(outs))
+            end = next((t for t in starts if t > a), a + 0x400)
+            blob = bytes(rd(x) for x in range(a, end))
+            graph[r] = sorted({m.group(1)[0] for m in re.finditer(rb"\x0f(.)\x00", blob, re.S)} - {r})
+            print("%02X %-7s script %06X ->" % (r, name(r), a), " ".join("%02X(%s)" % (t, name(t) if t < 0x75 else "scene") for t in graph[r]))
+        for e in (0x6C, 0x6D, 0x6E):  # zone-4 bosses: which endings their zone-5 entries can reach
+            seen, todo = set(), [t for t in graph[e] if 0x49 <= t <= 0x66]
+            while todo:
+                t = todo.pop()
+                if t not in seen:
+                    seen.add(t)
+                    todo += [u for u in graph.get(t, []) if 0x49 <= u <= 0x70]
+            print("from %s: reaches %s" % (name(e), ", ".join(name(b) for b in (0x6F, 0x70) if b in seen)))

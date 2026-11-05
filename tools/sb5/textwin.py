@@ -17,6 +17,7 @@ class Stream:
 
     def take(self, n):  # n bytes through the decompressor; stops exactly at the last run used
         got, self.out, left = [], [], 0  # each layer starts a fresh history ($C0:1CB0 clears $0200)
+        self.ring = [0] * 256  # 256-byte ring, zero-filled: copies from before the start read 0
         while len(got) < n:
             if not left:
                 c = self.rom[self.p]
@@ -26,9 +27,10 @@ class Stream:
                 v = self.rom[self.p]
                 self.p += 1
             elif mode == 1:
-                v = (self.out[-1] + 1) & 255
+                v = (self.ring[(len(self.out) - 1) & 255] + 1) & 255
             else:
-                v = self.out[-DIST[mode]]
+                v = self.ring[(len(self.out) - DIST[mode]) & 255]
+            self.ring[len(self.out) & 255] = v
             self.out.append(v)
             got.append(v)
             left -= 1

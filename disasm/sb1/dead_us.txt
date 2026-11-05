@@ -1,0 +1,412 @@
+# python tools/sb1/sweep.py dead2 disasm/sb1/us <rom> <merged clean code/data log>
+# logs 1; A) never-run code reachable from code that ran: 339 entries, 6477 bytes
+A C40120    12B    5 ins  from C4011E BNE L_C4012C
+A C4022E    82B   25 ins  from C4022C BNE L_C40280
+A C40752     4B    1 ins  from C40750 BNE L_C40756
+A C4087A   131B   56 ins  from C40878 BNE L_C4087E
+A C40883    35B   15 ins  from C40881 BNE L_C40887
+A C408AF     4B    1 ins  from C408AD BEQ L_C408B3
+A C408C4     4B    1 ins  from C408C2 BEQ L_C408C8
+A C408CF     7B    3 ins  from C408CD BEQ L_C408D6
+A C4093C    23B    9 ins  from C4093A BNE L_C40953
+A C41381    72B   32 ins  from C4137F BEQ L_C41385
+A C413E9     4B    1 ins  from C413E7 BEQ L_C413ED
+A C414EF     6B    2 ins  from C414ED BNE L_C414F5
+A C41566     3B    1 ins  from C41564 BEQ L_C41569
+A C417BE     2B    1 ins  from C417BC BPL L_C417C0
+A C417F2    13B    6 ins  from C417F0 BNE L_C41804
+A C418B5    13B    6 ins  from C418B3 BEQ L_C418C2
+A C419B7    77B   35 ins  from C419B5 BNE L_C419BB
+A C41B14    10B    4 ins  from C41B12 BCC L_C41B1E
+A C41CFB    13B    6 ins  from C41CF9 BEQ L_C41D08
+A C42553    39B   14 ins  from C42533 BCS L_C42553
+A C4259C     4B    1 ins  from C4259A BEQ L_C425A0
+A C427F9     4B    1 ins  from C427F7 BCC L_C427FD
+A C42EAA    79B   35 ins  from C42EA8 BEQ L_C42EB5
+A C42EF2     4B    1 ins  from C42EF0 BEQ L_C42EF6
+A C42FCF     4B    1 ins  from C42FCD BEQ L_C42FD3
+A C430A9    12B    5 ins  from C430A7 BEQ L_C430B5
+A C430DA     4B    1 ins  from C430D8 BNE L_C430DE
+A C43137     7B    2 ins  from C43135 BEQ L_C4313E
+A C4316C     4B    1 ins  from C4316A BEQ L_C43170
+A C431D9   184B   89 ins  from C431D3 BCS L_C431D9
+A C4329B   184B   89 ins  from C43295 BCS L_C4329B
+A C4335D   184B   89 ins  from C43357 BCS L_C4335D
+A C4341F   184B   89 ins  from C43419 BCS L_C4341F
+A C434F1     4B    1 ins  from C434EF BCC L_C434F5
+A C4358D     4B    1 ins  from C4358B BCC L_C43591
+A C43659     4B    1 ins  from C43657 BEQ L_C4365D
+A C43667     4B    1 ins  from C43665 BEQ L_C4366B
+A C43741     4B    1 ins  from C4373F BEQ L_C43745
+A C4376F     4B    1 ins  from C4376D BEQ L_C43773
+A C43829     4B    1 ins  from C43827 BEQ L_C4382D
+A C43883    15B    5 ins  from C43881 BNE L_C43892
+A C43BCD     2B    2 ins  from C43BCB BCS L_C43BCF
+A C43C0C    68B   31 ins  from C43C0A BNE L_C43C10
+A C43C15    68B   31 ins  from C43C13 BNE L_C43C19
+A C43C1E    68B   31 ins  from C43C1C BNE L_C43C22
+A C43C27    68B   31 ins  from C43C25 BNE L_C43C2B
+A C43D5C   111B   58 ins  from C43D5A BCC L_C43D60
+A C43E8F     4B    1 ins  from C43E8D BCC L_C43E93
+A C43F57     2B    1 ins  from C43F55 BEQ L_C43F5B
+A C43F96    44B   23 ins  from C43F94 BEQ L_C43FC3
+A C43FD3    44B   23 ins  from C43FD1 BEQ L_C44000
+A C44051    46B   19 ins  from C4404F BEQ L_C4406B
+A C44152     4B    2 ins  from C44150 BNE L_C44156
+A C44236     1B    1 ins  from C44234 BCC L_C4421E
+A C44237    14B    7 ins  from C44220 BEQ L_C44237
+A C44245     1B    1 ins  from C4420C BEQ L_C44245
+A C442A8     1B    1 ins  from C442A6 BCC L_C44290
+A C442A9    14B    7 ins  from C44292 BEQ L_C442A9
+A C4435A    19B   10 ins  from C44358 BNE L_C4436D
+A C4439E     1B    1 ins  from C4439C BCC L_C44385
+A C44544     4B    1 ins  from C44542 BEQ L_C44548
+A C44553     2B    1 ins  from C44551 BEQ L_C44557
+A C4456A     4B    1 ins  from C44568 BEQ L_C4456E
+A C44582     3B    1 ins  from C44580 BEQ L_C44587
+A C445A9     5B    2 ins  from C445A7 BEQ L_C445AE
+A C446C1     3B    1 ins  from C446BF BEQ L_C446C6
+A C446EA     5B    2 ins  from C446E8 BEQ L_C446EF
+A C44978     4B    1 ins  from C44976 BCC L_C4497C
+A C449A1     4B    1 ins  from C4499F BEQ L_C449A5
+A C44A31     4B    1 ins  from C44A2F BCC L_C44A35
+A C44BB3     4B    1 ins  from C44BB1 BCC L_C44BB7
+A C44BCB     4B    1 ins  from C44BC9 BCC L_C44BCF
+A C44BE1    14B    5 ins  from C44BDF BCC L_C44BE5
+A C44CE3    61B   26 ins  from C44CE1 BNE L_C44CE7
+A C44CEC    34B   11 ins  from C44CEA BNE L_C44CF0
+A C44CF5    34B   11 ins  from C44CF3 BNE L_C44CF9
+A C44CFE    34B   11 ins  from C44CFC BNE L_C44D02
+A C44F00    18B    8 ins  from C44EFE BEQ L_C44F04
+A C44F1A     4B    1 ins  from C44F18 BNE L_C44F1E
+A C44F3B    18B    7 ins  from C44F35 BEQ L_C44F3B
+A C44F95   103B   45 ins  from C44F8F BEQ L_C44F95
+A C45220     4B    1 ins  from C4521E BNE L_C45224
+A C4523C     4B    2 ins  from C4523A BEQ L_C45240
+A C4526D     4B    2 ins  from C4526B BEQ L_C45271
+A C4529E     4B    2 ins  from C4529C BEQ L_C452A2
+A C452CF     4B    2 ins  from C452CD BEQ L_C452D3
+A C452F9    66B   36 ins  from C452F7 BEQ L_C4533B
+A C456BD     4B    1 ins  from C456BB BEQ L_C456C1
+A C4578A    18B   10 ins  from C45788 BEQ L_C4579D
+A C45C36     4B    2 ins  from C45BE2 BEQ L_C45C36
+A C45E12     3B    3 ins  from C45DD5 BEQ L_C45E12
+A C45E22     9B    4 ins  from C45E20 BCC L_C45E26
+A C45F27     4B    1 ins  from C45F25 BEQ L_C45F2B
+A C45F3D     4B    1 ins  from C45F3B BCS L_C45F41
+A C45F51    56B   23 ins  from C45F4F BNE L_C45F1D
+A C4640F     3B    1 ins  from C4640D BEQ L_C46412
+A C4642A    30B   12 ins  from C46428 BCC L_C4642E
+A C464A1     3B    1 ins  from C4649F BEQ L_C464A4
+A C46686     3B    1 ins  from C46684 BEQ L_C46689
+A C466BD     2B    2 ins  from C466BB BNE L_C466A4
+A C4671D    28B   13 ins  from C46717 BNE L_C4671D
+A C46740     4B    1 ins  from C4673E BNE L_C46744
+A C4818C     4B    1 ins  from C4818A BNE L_C48179
+A C48322     2B    1 ins  from C48320 BCC L_C48324
+A C48437     9B    3 ins  from C4844C BEQ L_C48437
+A C48440     9B    3 ins  from C48457 BEQ L_C48440
+A C484A7    20B   11 ins  from C4847D BPL L_C484A7
+A C484AE     7B    2 ins  from C48484 BPL L_C484AE
+A C48580     2B    1 ins  from C4857E BNE L_C48582
+A C485C0     2B    1 ins  from C485BE BNE L_C485C2
+A C4873B     4B    1 ins  from C48739 BNE L_C4873F
+A C4876B     2B    1 ins  from C48769 BNE L_C4876D
+A C487BE     2B    1 ins  from C487BC BNE L_C487C0
+A C4883E     4B    1 ins  from C4883C BNE L_C48842
+A C4886E     2B    1 ins  from C4886C BNE L_C48870
+A C488C1     2B    1 ins  from C488BF BNE L_C488C3
+A C53B2E    46B   21 ins  from C53B2C BPL L_C53B5C
+A C53E9A     4B    1 ins  from C53E98 BCC L_C53E9E
+A C53EF8     4B    1 ins  from C53EF6 BCC L_C53EFC
+A C53F8E    14B    6 ins  from C53F8C BCC L_C53F9C
+A C53FCF    75B   37 ins  from C53FCD BEQ L_C53FDF
+A C54055     4B    1 ins  from C54053 BCC L_C54059
+A C54CEE     4B    1 ins  from C54CEC BCC L_C54CF2
+A C54DC4     4B    1 ins  from C54DC2 BCC L_C54DC8
+A C5510B     7B    3 ins  from C55109 BEQ L_C55112
+A C55130    22B    9 ins  from C5512E BEQ L_C55146
+A C551AC    10B    5 ins  from C55174 BCS L_C551AC
+A C552CD     8B    4 ins  from C552CB BEQ L_C552D5
+A C553B8    23B   11 ins  from C553B6 BEQ L_C55373
+A C553E9     4B    1 ins  from C553E7 BCC L_C553ED
+A C55694    16B    5 ins  from C55692 BCS L_C55698
+A C5587C     4B    1 ins  from C5587A BCC L_C55880
+A C558F6    48B   20 ins  from C558F4 BNE L_C55909
+A C55AD6     4B    1 ins  from C55AD4 BCC L_C55ADA
+A C55E80     4B    1 ins  from C55E7E BCC L_C55E84
+A C55ED2     3B    2 ins  from C55ED0 BEQ L_C55EDA
+A C55F24     4B    1 ins  from C55F22 BCC L_C55F28
+A C55FC5    20B    9 ins  from C55FC3 BCS L_C55FD9
+A C56024     4B    1 ins  from C56022 BCC L_C56028
+A C56035    22B    8 ins  from C56033 BNE L_C5604B
+A C56066     4B    1 ins  from C56064 BCC L_C5606A
+A C56077    12B    4 ins  from C56075 BNE L_C56083
+A C5609E     4B    1 ins  from C5609C BCC L_C560A2
+A C560EA    85B   42 ins  from C560E8 BPL L_C5613F
+A C564F5     4B    1 ins  from C564F3 BCC L_C564F9
+A C56C14     4B    1 ins  from C56C12 BCC L_C56C18
+A C56E81     4B    1 ins  from C56E7F BCC L_C56E85
+A C56ED0     4B    1 ins  from C56ECE BCC L_C56ED4
+A C56FD9    20B    8 ins  from C56FD7 BEQ L_C56FED
+A C57052     4B    1 ins  from C57050 BCC L_C57056
+A C57124     4B    1 ins  from C57122 BCC L_C57128
+A C5716D     4B    1 ins  from C5716B BCC L_C57171
+A C57358    22B    9 ins  from C57356 BEQ L_C5736E
+A C5739C     4B    1 ins  from C5739A BCC L_C573A0
+A C57404     4B    1 ins  from C57402 BCC L_C57408
+A C57449   135B   59 ins  from C57435 BEQ L_C57449
+A C5761C     4B    1 ins  from C5761A BCC L_C57620
+A C57678     5B    2 ins  from C57676 BNE L_C5767D
+A C57AFE    18B    8 ins  from C57AFC BEQ L_C57B10
+A C57BC8     4B    1 ins  from C57BC6 BMI L_C57BCC
+A C57BDF     8B    2 ins  from C57BDD BMI L_C57BE3
+A C57BF5   175B   87 ins  from C57BF3 BNE L_C57BF9
+A C57C1A    33B   17 ins  from C57C18 BNE L_C57C3B
+A C57C43    11B    5 ins  from C57C41 BMI L_C57C53
+A C57CC3    42B   19 ins  from C57C7A BEQ L_C57CC3
+A C5A9EF   289B  135 ins  from C5A9DC BPL L_C5A9EF
+A C60A62     9B    4 ins  from C60A60 BNE L_C60A66
+A C60A6E     4B    1 ins  from C60A6C BNE L_C60A72
+A C60ACB     6B    3 ins  from C60AC9 BNE L_C60ACF
+A C60CB6    14B    7 ins  from C60CB4 BNE L_C60CC4
+A C60CEF    14B    7 ins  from C60CED BNE L_C60CFD
+A C60EC8     3B    1 ins  from C60EC6 BEQ L_C60ECB
+A C6138F     5B    2 ins  from C6138D BCC L_C61393
+A C613A8     4B    1 ins  from C613A6 BEQ L_C613AC
+A C613B0     4B    1 ins  from C613AE BEQ L_C613B4
+A C617DA    20B    7 ins  from C617D8 BNE L_C617EF
+A C617F6     1B    1 ins  from C617F4 BNE L_C617D2
+A C6255F     5B    2 ins  from C6252A BEQ L_C6255F
+A C625F3    13B    5 ins  from C625F1 BEQ L_C62601
+A C62632     2B    1 ins  from C62630 BNE L_C62634
+A C62794    22B    9 ins  from C62792 BEQ L_C627A2
+A C62B66     9B    4 ins  from C62B64 BNE L_C62B71
+A C62BB7     4B    1 ins  from C62BB5 BNE L_C62BBB
+A C62BFC     1B    1 ins  from C62BF6 BEQ L_C62BFC
+A C62C1F     1B    1 ins  from C62C19 BEQ L_C62C1F
+A C62C34     4B    1 ins  from C62C32 BCC L_C62C38
+A C62C3F     4B    1 ins  from C62C3D BCC L_C62C43
+A C62C4A     4B    1 ins  from C62C48 BCC L_C62C4E
+A C62C55     4B    1 ins  from C62C53 BCC L_C62C59
+A C62C60     4B    1 ins  from C62C5E BCC L_C62C64
+A C62C6B     4B    1 ins  from C62C69 BCC L_C62C6F
+A C62C76     4B    1 ins  from C62C74 BCC L_C62C7A
+A C62C81     4B    1 ins  from C62C7F BCC L_C62C85
+A C62C8C     4B    1 ins  from C62C8A BCC L_C62C90
+A C62C97     4B    1 ins  from C62C95 BCC L_C62C9B
+A C62CA2     4B    1 ins  from C62CA0 BCC L_C62CA6
+A C62CAD     4B    1 ins  from C62CAB BCC L_C62CB1
+A C62CB8     4B    1 ins  from C62CB6 BCC L_C62CBC
+A C62CC3     4B    1 ins  from C62CC1 BCC L_C62CC7
+A C62CCE     4B    1 ins  from C62CCC BCC L_C62CD2
+A C62CD9     4B    1 ins  from C62CD7 BCC L_C62CDD
+A C62D29     4B    1 ins  from C62D27 BNE L_C62D2D
+A C62D38     4B    1 ins  from C62D36 BNE L_C62D3C
+A C62D47     4B    1 ins  from C62D45 BNE L_C62D4B
+A C63344     5B    2 ins  from C63342 BCC L_C63348
+A C633F6     4B    1 ins  from C633F4 BEQ L_C633FA
+A C63483     2B    1 ins  from C63481 BCC L_C63485
+A C63A48     9B    3 ins  from C63A46 BEQ L_C63A51
+A C658E2     4B    1 ins  from C658E0 BCC L_C658E6
+A C65A3D     4B    1 ins  from C65A3B BEQ L_C65A41
+A C65A8B     4B    1 ins  from C65A89 BCC L_C65A8F
+A C65B66     4B    1 ins  from C65B64 BEQ L_C65B6A
+A C65BDD     3B    1 ins  from C65BDB BNE L_C65BE0
+A C65C1C     4B    1 ins  from C65C1A BCC L_C65C20
+A C65CE0     4B    1 ins  from C65CDE BNE L_C65CE4
+A C65D32     4B    1 ins  from C65D30 BNE L_C65D36
+A C65D76     4B    1 ins  from C65D74 BCC L_C65D7A
+A C65D8A     2B    1 ins  from C65D88 BNE L_C65D8C
+A C65DBF     4B    1 ins  from C65DBD BNE L_C65DC3
+A C65F23     4B    1 ins  from C65F21 BCC L_C65F27
+A C65FE7     4B    1 ins  from C65FE5 BEQ L_C65FEB
+A C66035     4B    1 ins  from C66033 BCC L_C66039
+A C660F9     4B    1 ins  from C660F7 BEQ L_C660FD
+A C66147     4B    1 ins  from C66145 BCC L_C6614B
+A C6620B     4B    1 ins  from C66209 BEQ L_C6620F
+A C66259     4B    1 ins  from C66257 BCC L_C6625D
+A C6631D     4B    1 ins  from C6631B BEQ L_C66321
+A C6636B     4B    1 ins  from C66369 BCC L_C6636F
+A C66431     4B    1 ins  from C6642F BEQ L_C66435
+A C6647F     4B    1 ins  from C6647D BCC L_C66483
+A C66543     4B    1 ins  from C66541 BEQ L_C66547
+A C66591     4B    1 ins  from C6658F BCC L_C66595
+A C66655     4B    1 ins  from C66653 BEQ L_C66659
+A C66665     4B    1 ins  from C66663 BEQ L_C66669
+A C66673     4B    1 ins  from C66671 BCC L_C66677
+A C666A3     4B    1 ins  from C666A1 BCC L_C666A7
+A C66767     4B    1 ins  from C66765 BEQ L_C6676B
+A C667B5     4B    1 ins  from C667B3 BCC L_C667B9
+A C6687B     4B    1 ins  from C66879 BEQ L_C6687F
+A C6688B     4B    1 ins  from C66889 BEQ L_C6688F
+A C668A4     4B    1 ins  from C668A2 BCC L_C668A8
+A C668BC    61B   30 ins  from C6689C BNE L_C668BC
+A C66919     4B    1 ins  from C66917 BCC L_C6691D
+A C66A04     4B    1 ins  from C66A02 BEQ L_C66A08
+A C66A9C     4B    1 ins  from C66A9A BEQ L_C66AA0
+A C66B32     4B    1 ins  from C66B30 BEQ L_C66B36
+A C66B3A     4B    1 ins  from C66B38 BEQ L_C66B3E
+A C66E82     4B    1 ins  from C66E80 BCC L_C66E86
+A C66F46     4B    1 ins  from C66F44 BEQ L_C66F4A
+A C66F94     4B    1 ins  from C66F92 BCC L_C66F98
+A C6705A     4B    1 ins  from C67058 BEQ L_C6705E
+A C670C2     4B    1 ins  from C670C0 BCC L_C670C6
+A C6718A     4B    1 ins  from C67188 BEQ L_C6718E
+A C671D8     4B    1 ins  from C671D6 BCC L_C671DC
+A C6729C     4B    1 ins  from C6729A BEQ L_C672A0
+A C672AC     4B    1 ins  from C672AA BEQ L_C672B0
+A C672BA     4B    1 ins  from C672B8 BCC L_C672BE
+A C672EA     4B    1 ins  from C672E8 BCC L_C672EE
+A C673B5     4B    1 ins  from C673B3 BEQ L_C673B9
+A C67403     4B    1 ins  from C67401 BCC L_C67407
+A C674CE     4B    1 ins  from C674CC BEQ L_C674D2
+A C6751C     4B    1 ins  from C6751A BCC L_C67520
+A C675E7     4B    1 ins  from C675E5 BEQ L_C675EB
+A C67635     4B    1 ins  from C67633 BCC L_C67639
+A C6770F     4B    1 ins  from C6770D BEQ L_C67713
+A C67747    63B   29 ins  from C67727 BEQ L_C67747
+A C6785E     4B    1 ins  from C6785C BCC L_C67862
+A C678FC     4B    1 ins  from C678FA BCC L_C67900
+A C679D1     4B    1 ins  from C679CF BEQ L_C679D5
+A C67AB6     4B    1 ins  from C67AB4 BEQ L_C67ABA
+A C67B2D     4B    1 ins  from C67B2B BCC L_C67B31
+A C67BFC     4B    1 ins  from C67BFA BEQ L_C67C00
+A C67C5B     4B    1 ins  from C67C59 BEQ L_C67C5F
+A C67C63     4B    1 ins  from C67C61 BEQ L_C67C67
+A C67C9D     4B    1 ins  from C67C9B BEQ L_C67CA1
+A C67CE0    35B   16 ins  from C67CDA BCS L_C67CE0
+A C706FA    12B    6 ins  from C706F8 BNE L_C70706
+A C7070E     4B    2 ins  from C7070C BNE L_C70735
+A C708E6     4B    1 ins  from C708E4 BCC L_C708EA
+A C7113A     4B    1 ins  from C71138 BEQ L_C7113E
+A C711BB     4B    1 ins  from C711B9 BEQ L_C711BF
+A C711C3     4B    1 ins  from C711C1 BEQ L_C711C7
+A C711F1     4B    1 ins  from C711EF BEQ L_C711F5
+A C7128E    13B    6 ins  from C7128C BNE L_C7129B
+A C712A5     4B    1 ins  from C712A3 BEQ L_C712A9
+A C71646     4B    1 ins  from C71644 BEQ L_C7164A
+A C7165B   399B  163 ins  from C71659 BEQ L_C7165F
+A C719D0     4B    1 ins  from C719CE BCC L_C719D4
+A C71AB5     4B    1 ins  from C71AB3 BEQ L_C71AB9
+A C71ADA    64B   26 ins  from C71AD8 BNE L_C71B1A
+A C71B27     4B    1 ins  from C71B25 BEQ L_C71B2B
+A C71BF3     4B    1 ins  from C71BF1 BCC L_C71BF7
+A C71C7B     4B    1 ins  from C71C79 BEQ L_C71C7F
+A C71C90     9B    3 ins  from C71C8E BEQ L_C71C94
+A C71D24     4B    1 ins  from C71D22 BEQ L_C71D28
+A C71DE7     4B    1 ins  from C71DE5 BCC L_C71DEB
+A C72506     4B    1 ins  from C72504 BEQ L_C7250A
+A C72618     4B    1 ins  from C72616 BCC L_C7261C
+A C7262C     8B    4 ins  from C7262A BEQ L_C72640
+A C72678   363B  152 ins  from C72676 BNE L_C7267C
+A C726FA     4B    1 ins  from C726F8 BEQ L_C726FE
+A C72702     4B    1 ins  from C72700 BEQ L_C72706
+A C72956     4B    1 ins  from C72954 BEQ L_C7295A
+A C7295E     4B    1 ins  from C7295C BEQ L_C72962
+A C72A56     4B    1 ins  from C72A54 BEQ L_C72A5A
+A C73DC5     4B    1 ins  from C73DC3 BEQ L_C73DC9
+A C73DFE     4B    2 ins  from C73DFC BNE L_C73E02
+A C73E15     5B    2 ins  from C73E13 BCS L_C73E1A
+A C73E1F     3B    1 ins  from C73E1D BCC L_C73E22
+A C73E39    10B    4 ins  from C73E37 BCC L_C73E43
+A C73E4D     4B    2 ins  from C73E4B BNE L_C73E51
+A C73E64     5B    2 ins  from C73E62 BCS L_C73E69
+A C73E6E     3B    1 ins  from C73E6C BCC L_C73E71
+A C73EB9    16B    7 ins  from C73EB7 BCC L_C73EF0
+A C73EF7   302B  128 ins  from C73EF5 BNE L_C73EFB
+A C747A7     4B    1 ins  from C747A5 BEQ L_C747AB
+A C748CD     4B    1 ins  from C748CB BEQ L_C748D1
+A C74900   152B   66 ins  from C748FE BNE L_C74904
+A C74A4F     4B    1 ins  from C74A4D BEQ L_C74A53
+A C74ACC     4B    1 ins  from C74ACA BEQ L_C74AD0
+A C74AF4    32B   14 ins  from C74AF2 BNE L_C74B14
+A C74BD2     2B    1 ins  from C74BD0 BMI L_C74BD4
+A C74BEC     8B    3 ins  from C74BE6 BCS L_C74BEC
+A C74BF4    20B    9 ins  from C74BDE BMI L_C74BF4
+A C74C0C    19B    9 ins  from C74C0A BMI L_C74C1F
+A C74CC4    14B    7 ins  from C74CBE BCC L_C74CC4
+A C758DD     4B    1 ins  from C758DB BEQ L_C758E1
+A C75903     4B    1 ins  from C75901 BEQ L_C75907
+A C75953    20B    9 ins  from C75951 BNE L_C75967
+A C75993     4B    1 ins  from C75991 BEQ L_C75997
+A C75A05    98B   39 ins  from C75A03 BEQ L_C75A67
+A C75C26    13B    6 ins  from C75BFE BNE L_C75C26
+A C75CAD    13B    6 ins  from C75C80 BNE L_C75CAD
+A C75D67    13B    6 ins  from C75D65 BEQ L_C75D74
+A C75EDB    13B    6 ins  from C75ED9 BEQ L_C75EE8
+A C75F43     4B    1 ins  from C75F41 BEQ L_C75F47
+A C769C8     4B    1 ins  from C769C6 BCC L_C769CC
+A C76A08    44B   19 ins  from C76A06 BNE L_C76A34
+A C7780C    17B    7 ins  from C7780A BNE L_C7781D
+# B) code islands nothing that ran leads to: 70, 8875 bytes
+B C0383C    18B    8 ins  ptr24 0 ptr16 10 LDA# 0 (ran 0)
+B C07A2D    57B   27 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C08E9A    97B   44 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C08F24    31B   14 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C0F87E    34B   16 ins  ptr24 0 ptr16 3 LDA# 0 (ran 0)
+B C0F95B   116B   51 ins  ptr24 0 ptr16 1 LDA# 0 (ran 0)
+B C10306    71B   36 ins  ptr24 0 ptr16 43 LDA# 0 (ran 0)
+B C1696A    77B   31 ins  ptr24 0 ptr16 3 LDA# 0 (ran 0)
+B C1AD00   116B   60 ins  ptr24 0 ptr16 6 LDA# 0 (ran 0)
+B C2D0F8    34B   14 ins  ptr24 0 ptr16 7 LDA# 0 (ran 0)
+B C3006E    65B   35 ins  ptr24 0 ptr16 5 LDA# 0 (ran 0)
+B C33051    42B   19 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C330A5    29B   13 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C330DE    14B    8 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C38110    23B   10 ins  ptr24 0 ptr16 5 LDA# 0 (ran 0)
+B C3812F    21B    8 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C40B6F    70B   29 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C415BE   275B  125 ins  ptr24 0 ptr16 3 LDA# 0 (ran 0)
+B C4273F   162B   70 ins  ptr24 0 ptr16 2 LDA# 0 (ran 0)
+B C44406    57B   25 ins  ptr24 0 ptr16 2 LDA# 0 (ran 0)
+B C44FCB   325B  145 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C45F89   257B  125 ins  ptr24 0 ptr16 1 LDA# 1 (ran 0)
+B C48085    89B   47 ins  ptr24 0 ptr16 7 LDA# 0 (ran 0)
+B C48114    45B   21 ins  ptr24 0 ptr16 1 LDA# 0 (ran 0)
+B C4C8A9    31B   15 ins  ptr24 0 ptr16 1 LDA# 0 (ran 0)
+B C4F801   114B   53 ins  ptr24 0 ptr16 112 LDA# 0 (ran 0)
+B C4F89D    65B   27 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C4FA8F    22B    9 ins  ptr24 0 ptr16 1 LDA# 0 (ran 0)
+B C4FAA6    73B   33 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C539B7    43B   18 ins  ptr24 0 ptr16 2 LDA# 0 (ran 0)
+B C53B7C   123B   50 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C53C16   618B  266 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C559A7   279B  119 ins  ptr24 0 ptr16 3 LDA# 0 (ran 0)
+B C55B5B   131B   64 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C56D64    61B   30 ins  ptr24 1 ptr16 3 LDA# 0 (ran 0)
+B C56DC2   157B   58 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C574A5   348B  153 ins  ptr24 0 ptr16 6 LDA# 1 (ran 0)
+B C59304    23B   11 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C5B1EE    40B   17 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C5B220    20B    9 ins  ptr24 0 ptr16 1 LDA# 0 (ran 0)
+B C5B3DA    23B   11 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C5F70F    31B   13 ins  ptr24 0 ptr16 2 LDA# 0 (ran 0)
+B C5F73D    25B   11 ins  ptr24 0 ptr16 4 LDA# 0 (ran 0)
+B C5F892    16B    8 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C5FC02    62B   28 ins  ptr24 0 ptr16 31 LDA# 0 (ran 0)
+B C600D2   312B  140 ins  ptr24 0 ptr16 5 LDA# 0 (ran 0)
+B C60474   303B  150 ins  ptr24 0 ptr16 1 LDA# 0 (ran 0)
+B C609D9   124B   62 ins  ptr24 1 ptr16 1 LDA# 0 (ran 0)
+B C61093    28B   10 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C611BA   370B  154 ins  ptr24 0 ptr16 10 LDA# 0 (ran 0)
+B C61F68    40B   22 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C6207D   185B   88 ins  ptr24 0 ptr16 2 LDA# 0 (ran 0)
+B C6326B   193B   82 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C638E4    95B   42 ins  ptr24 1 ptr16 1 LDA# 0 (ran 0)
+B C63BF9   279B  141 ins  ptr24 1 ptr16 1 LDA# 0 (ran 0)
+B C64085    27B   12 ins  ptr24 1 ptr16 168 LDA# 0 (ran 0)
+B C67786   187B   84 ins  ptr24 0 ptr16 3 LDA# 1 (ran 0)
+B C67D13    25B   12 ins  ptr24 0 ptr16 2 LDA# 2 (ran 2)
+B C712DB   179B   73 ins  ptr24 0 ptr16 2 LDA# 0 (ran 0)
+B C71396   456B  189 ins  ptr24 0 ptr16 15 LDA# 1 (ran 0)
+B C716F1    69B   29 ins  ptr24 0 ptr16 1 LDA# 1 (ran 0)
+B C7184C   300B  141 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C71B2C   174B   71 ins  ptr24 0 ptr16 4 LDA# 1 (ran 0)
+B C75A70   102B   41 ins  ptr24 0 ptr16 1 LDA# 1 (ran 0)
+B C75FA8    55B   22 ins  ptr24 0 ptr16 4 LDA# 4 (ran 0)
+B C7720C    65B   28 ins  ptr24 1 ptr16 2 LDA# 0 (ran 0)
+B C77277   320B  133 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C773D7   397B  162 ins  ptr24 2 ptr16 2 LDA# 0 (ran 0)
+B C776D4    24B   11 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)
+B C7786A   136B   52 ins  ptr24 0 ptr16 0 LDA# 0 (ran 0)

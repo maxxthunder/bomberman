@@ -1,0 +1,553 @@
+# never-executed code (traced)
+cond  00:0038-003F     8 bytes    8 ins  from: 00:0058 RST
+cond  00:049B-04EF    85 bytes   57 ins  from: 00:043E JP, 00:0443 JP
+cond  00:05D2-05DD    12 bytes    9 ins  from: 00:05D0 fall
+cond  00:0793-079A     8 bytes    4 ins  from: 00:0791 fall
+cond  00:07FC-07FD     2 bytes    2 ins  from: 00:07FB fall
+cond  00:0CA1-0CA7     7 bytes    4 ins  from: 00:0C9F fall
+cond  00:0D25-0D28     4 bytes    3 ins  from: 00:0D23 fall
+cond  00:143B-1454    26 bytes   10 ins  from: 00:142F JR
+cond  00:14F9-1503    11 bytes    6 ins  from: 00:14F4 JR, 00:14F7 fall
+cond  00:154E-1569    28 bytes   11 ins  from: 00:1512 JR, 00:154B fall
+dead  00:16D1-16EE    30 bytes   12 ins  from: 00:1BEE JP*
+dead  00:16F7-173F    73 bytes   34 ins  from: 00:1B87 CALL*
+dead  00:176C-177F    20 bytes    9 ins  from: 00:2A1D CALL*, 0E:7E73 CALL*, 0E:7E95 CALL*
+cond  00:18BC-18BC     1 bytes    1 ins  from: 00:18BA fall
+cond  00:18EA-18F2     9 bytes    6 ins  from: 00:18E8 fall
+cond  00:1905-190D     9 bytes    6 ins  from: 00:1903 fall
+cond  00:19BC-19BD     2 bytes    1 ins  from: 00:19BA fall
+cond  00:1AE2-1AFE    29 bytes   12 ins  from: 00:1AE0 fall
+cond  00:1B87-1B89     3 bytes    1 ins  from: 00:1B85 fall
+cond  00:1BEE-1BF0     3 bytes    1 ins  from: 00:1BE4 JR
+cond  00:229A-22A0     7 bytes    3 ins  from: 00:2299 fall
+cond  00:2342-2342     1 bytes    1 ins  from: 00:2340 fall
+cond  00:2398-2399     2 bytes    1 ins  from: 00:2396 fall
+cond  00:2506-2528    35 bytes   20 ins  from: 00:2505 fall
+cond  00:2557-2559     3 bytes    3 ins  from: 00:2555 fall
+cond  00:25FF-260C    14 bytes   12 ins  from: 00:25EA JP
+cond  00:291D-291E     2 bytes    1 ins  from: 00:291B fall
+cond  00:297F-297F     1 bytes    1 ins  from: 00:297D fall
+cond  00:29D7-29DB     5 bytes    2 ins  from: 00:29D5 fall
+cond  00:2A08-2A24    29 bytes   11 ins  from: 00:2A06 fall
+cond  00:2A4A-2A5F    22 bytes    9 ins  from: 00:2A48 fall
+cond  00:2A74-2A7F    12 bytes    5 ins  from: 00:2A72 fall, 00:2A85 JR
+cond  00:2A8E-2ABD    48 bytes   21 ins  from: 00:2A29 JR, 00:2A8B JR
+cond  00:2AC3-2ACA     8 bytes    4 ins  from: 00:2AC2 fall
+cond  00:303B-303B     1 bytes    1 ins  from: 00:3034 JR
+cond  00:30E0-30E3     4 bytes    2 ins  from: 00:30DA JR
+cond  00:3319-3323    11 bytes    6 ins  from: 00:32EB JR
+cond  00:3364-3367     4 bytes    2 ins  from: 00:3362 fall
+cond  00:3382-3384     3 bytes    2 ins  from: 00:337E JR
+cond  00:33A1-33A6     6 bytes    3 ins  from: 00:339F fall
+cond  00:33B1-33B5     5 bytes    2 ins  from: 00:339B JR
+dead  00:33BB-33C4    10 bytes    4 ins  from: 00:33A3 JR*, 00:33A5 JR*
+cond  00:354D-354E     2 bytes    1 ins  from: 00:3548 JR
+cond  00:36B8-36BA     3 bytes    2 ins  from: 00:36B6 fall
+cond  00:36FE-3705     8 bytes    6 ins  from: 00:36F6 JR
+cond  00:374E-3752     5 bytes    2 ins  from: 00:374C fall
+cond  00:385D-3865     9 bytes    5 ins  from: 00:384F JR
+cond  00:387A-3882     9 bytes    5 ins  from: 00:386C JR
+cond  00:38B9-38D0    24 bytes   14 ins  from: 00:38B8 fall
+cond  00:38E0-394B   108 bytes   65 ins  from: 00:38D6 JR
+cond  00:395B-39A3    73 bytes   49 ins  from: 00:3953 JR
+cond  00:39FC-39FD     2 bytes    1 ins  from: 00:39FA fall
+cond  00:3A12-3A15     4 bytes    2 ins  from: 00:3A10 fall
+cond  00:3A39-3A3C     4 bytes    2 ins  from: 00:3A37 fall
+cond  00:3AD6-3B00    43 bytes   25 ins  from: 00:3AC8 JR
+cond  00:3B9B-3BB8    30 bytes   20 ins  from: 00:3B99 fall
+dead  00:3BC4-3BC7     4 bytes    3 ins  from: 00:3BB3 JR*, 00:3BB7 JR*
+dead  00:3D3A-3D42     9 bytes    5 ins  from: 00:1AF1 CALL*, 00:1AFC CALL*
+cond  01:4141-4147     7 bytes    3 ins  from: 01:413F fall
+cond  01:4150-4150     1 bytes    1 ins  from: 01:414E fall
+cond  01:4168-416A     3 bytes    1 ins  from: 01:4166 fall
+cond  01:41B4-41C4    17 bytes    7 ins  from: 01:41B2 fall
+cond  01:4280-4288     9 bytes    4 ins  from: 01:427F fall
+cond  01:42D8-42E2    11 bytes    5 ins  from: 01:42CB JR
+cond  01:4319-431D     5 bytes    3 ins  from: 01:4317 fall
+dead  01:4330-4333     4 bytes    2 ins  from: 01:431B JR*
+cond  01:433D-4340     4 bytes    2 ins  from: 01:433B fall
+cond  01:4390-4391     2 bytes    1 ins  from: 01:438E fall
+cond  01:43AD-43B9    13 bytes    6 ins  from: 01:43AB fall
+cond  01:43C8-43C9     2 bytes    1 ins  from: 01:43C6 fall
+cond  01:43E8-43EB     4 bytes    2 ins  from: 01:43E6 fall
+cond  01:445A-4464    11 bytes    6 ins  from: 01:4458 fall
+cond  01:446D-447A    14 bytes    8 ins  from: 01:4419 JR
+cond  01:453F-4542     4 bytes    2 ins  from: 01:453E fall
+cond  01:4562-456B    10 bytes    6 ins  from: 01:4560 fall
+cond  01:46AB-46AC     2 bytes    1 ins  from: 01:46A9 fall
+cond  01:4751-475D    13 bytes    7 ins  from: 01:474F fall
+cond  01:484A-484B     2 bytes    2 ins  from: 01:4848 fall
+cond  01:4894-489F    12 bytes    6 ins  from: 01:4892 fall
+cond  01:48AD-48F4    72 bytes   47 ins  from: 01:4896 JR*, 01:489A JR*, 01:489E JR*, 01:48AA JR
+cond  01:4939-493C     4 bytes    2 ins  from: 01:4937 fall
+cond  01:4953-4953     1 bytes    1 ins  from: 01:4951 fall
+cond  01:4AE6-4B91   172 bytes  107 ins  from: 01:4AD5 JP
+cond  01:4B95-4BD6    66 bytes   34 ins  from: 01:4AD0 JP, 01:4ADA JP
+cond  01:4BF9-4C06    14 bytes    6 ins  from: 01:4ABA JP
+cond  01:4F87-4F98    18 bytes    9 ins  from: 01:4F77 JR, 01:4F7B JR
+cond  01:4FAA-4FF1    72 bytes   37 ins  from: 01:4F6F JP
+cond  01:5016-504B    54 bytes   26 ins  from: 01:4FFA JR, 01:5007 JR, 01:500B JR, 01:500F JR
+cond  01:5069-506F     7 bytes    6 ins  from: 01:505E JR
+cond  01:514D-515E    18 bytes    9 ins  from: 01:513D JR, 01:5141 JR
+cond  01:516E-516F     2 bytes    1 ins  from: 01:516C fall
+cond  01:5361-537A    26 bytes   14 ins  from: 01:5345 JR
+dead  01:5571-55E4   116 bytes   67 ins  from: 01:4461 CALL*
+dead  01:55F1-55F5     5 bytes    3 ins  from: 01:41BF CALL*, 01:4C04 CALL*
+cond  01:5823-5827     5 bytes    3 ins  from: 01:5821 fall
+cond  01:5879-5880     8 bytes    5 ins  from: 01:5877 fall
+cond  01:589D-58BA    30 bytes   15 ins  from: 01:589B fall
+cond  01:58CE-58CE     1 bytes    1 ins  from: 01:58CC fall
+cond  01:58F9-5905    13 bytes    7 ins  from: 01:58F3 JR, 01:58F7 fall
+cond  01:5915-5915     1 bytes    1 ins  from: 01:5913 fall
+cond  01:5941-594D    13 bytes    7 ins  from: 01:593B JR, 01:593F fall
+cond  01:59DA-5A31    88 bytes   48 ins  from: 01:59D8 fall
+cond  01:5AA3-5AA4     2 bytes    1 ins  from: 01:5AA1 fall
+cond  01:5AD5-5AD7     3 bytes    2 ins  from: 01:5AB9 JR, 01:5AD1 JR
+cond  01:5B11-5B1B    11 bytes    6 ins  from: 01:5B0D JR
+cond  01:5B8D-5BF9   109 bytes   64 ins  from: 01:5B84 JR, 01:5B8B fall
+cond  01:5C33-5C49    23 bytes   14 ins  from: 01:5C31 fall
+cond  01:5C4C-5C4E     3 bytes    2 ins  from: 01:5C2E JR, 01:5C48 JR*
+cond  01:5C77-5C95    31 bytes   15 ins  from: 01:5C74 fall
+cond  01:5D24-5D31    14 bytes    6 ins  from: 01:5D22 fall
+cond  01:5D3D-5D4B    15 bytes    8 ins  from: 01:5D3B fall
+cond  01:5D6D-5D7A    14 bytes    8 ins  from: 01:5D6B fall
+dead  01:5D84-5DAE    43 bytes   22 ins  from: 01:5D30 JR*
+cond  01:5E7D-5E80     4 bytes    2 ins  from: 01:5E7B fall
+cond  01:5E9A-5EA1     8 bytes    3 ins  from: 01:5E8F JR, 01:5E93 JR
+cond  01:5EC2-5F0C    75 bytes   56 ins  from: 01:5EC0 fall
+cond  01:5FCA-5FCB     2 bytes    1 ins  from: 01:5FC8 fall
+cond  01:5FD3-5FDD    11 bytes    6 ins  from: 01:5FB9 JR, 01:5FD1 fall
+cond  01:5FE5-5FE7     3 bytes    2 ins  from: 01:5FCA JR*, 01:5FD3 JR*, 01:5FDC JR*, 01:5FE3 fall
+cond  01:6097-60AA    20 bytes   13 ins  from: 01:6095 fall
+cond  01:60AF-60C4    22 bytes   13 ins  from: 01:60AD fall
+cond  01:60CC-60E3    24 bytes   16 ins  from: 01:60CA fall
+cond  01:60E8-6149    98 bytes   65 ins  from: 01:60A5 JP*, 01:60A9 JR*, 01:60BE JP*, 01:60C3 JR*, 01:60DE JR*, 01:60E2 JR*, 01:60E6 fall, 01:615B JR*, 01:61A0 JP*
+dead  01:614C-61B1   102 bytes   54 ins  from: 01:612D JR*
+cond  01:646F-6479    11 bytes    4 ins  from: 01:646D fall
+cond  01:64DD-64E7    11 bytes    4 ins  from: 01:64DB fall
+cond  01:6559-655A     2 bytes    1 ins  from: 01:6557 fall
+cond  01:65B5-65C1    13 bytes    6 ins  from: 01:65B3 fall
+cond  01:6600-660A    11 bytes    4 ins  from: 01:65FE fall
+cond  01:662A-662C     3 bytes    1 ins  from: 01:6628 fall
+cond  01:6777-6780    10 bytes    4 ins  from: 01:6775 fall
+cond  01:6A99-6ABC    36 bytes   17 ins  from: 01:6A97 fall
+cond  01:6AC4-6AE7    36 bytes   17 ins  from: 01:6AC2 fall
+cond  01:6BC6-6BD3    14 bytes    8 ins  from: 01:6BC4 fall
+cond  01:6CAF-6CB3     5 bytes    3 ins  from: 01:6CAD fall
+cond  01:6CB9-6CCA    18 bytes   11 ins  from: 01:6CB7 fall
+cond  01:6DFA-6E3E    69 bytes   33 ins  from: 01:6D9C JP, 01:6FEC CALL*
+cond  01:6FDF-700D    47 bytes   23 ins  from: 01:6FDC fall
+cond  01:70AF-70CF    33 bytes   19 ins  from: 01:70AD fall
+cond  01:7300-730C    13 bytes    9 ins  from: 01:72E9 JR
+dead  01:74FA-750F    22 bytes   12 ins  from: 01:4168 CALL*
+cond  01:754B-754E     4 bytes    4 ins  from: 01:7544 JR
+cond  01:7632-7654    35 bytes   23 ins  from: 01:7630 fall
+cond  01:7816-7823    14 bytes    7 ins  from: 01:7814 fall
+cond  01:79C2-79C3     2 bytes    1 ins  from: 01:79C0 fall
+cond  01:7A39-7A3A     2 bytes    2 ins  from: 01:7A38 fall
+cond  01:7AAF-7AAF     1 bytes    1 ins  from: 01:7AAA JR, 01:7AAD fall
+cond  01:7EE9-7EED     5 bytes    4 ins  from: 01:7EE2 JR
+cond  02:769A-76EF    86 bytes   38 ins  from: 02:762A JR
+cond  02:78A5-78B3    15 bytes    8 ins  from: 02:78A3 fall
+dead  02:78DA-7941   104 bytes   48 ins  from: 02:76ED JP*
+cond  02:7C2A-7C40    23 bytes   13 ins  from: 02:7C28 fall
+cond  02:7C58-7C63    12 bytes    5 ins  from: 02:7C56 fall
+cond  02:7D01-7D0A    10 bytes    5 ins  from: 02:7CFF fall
+cond  02:7D40-7D47     8 bytes    4 ins  from: 02:7D3E fall
+cond  02:7D56-7D56     1 bytes    1 ins  from: 02:7D54 fall
+cond  02:7D71-7D72     2 bytes    1 ins  from: 02:7D6F fall
+cond  02:7DC0-7DC5     6 bytes    3 ins  from: 02:7DB0 JR
+cond  05:40ED-4105    25 bytes   12 ins  from: 05:40EA JR
+cond  05:41C1-41D3    19 bytes    9 ins  from: 05:419D JR
+cond  05:42A5-42B0    12 bytes    6 ins  from: 05:429F JR
+cond  05:433E-4340     3 bytes    1 ins  from: 05:4337 JR
+cond  05:4375-437D     9 bytes    6 ins  from: 05:4368 JR
+cond  05:43A0-43AE    15 bytes    8 ins  from: 05:438B JR, 05:4391 JR, 05:4397 JR
+cond  05:442B-442C     2 bytes    1 ins  from: 05:4429 fall
+dead  05:4436-4439     4 bytes    3 ins  from: 05:442B JR*
+cond  05:4597-459C     6 bytes    4 ins  from: 05:4557 JR
+cond  05:45B4-45E0    45 bytes   26 ins  from: 05:45B2 fall
+cond  05:4611-4613     3 bytes    2 ins  from: 05:460D JR
+cond  05:4648-4649     2 bytes    2 ins  from: 05:4646 fall
+cond  05:4667-466C     6 bytes    3 ins  from: 05:4651 JR, 05:4664 fall
+cond  05:46F8-46FB     4 bytes    2 ins  from: 05:46F6 fall
+cond  05:4712-4717     6 bytes    4 ins  from: 05:4710 fall
+cond  05:4776-477A     5 bytes    2 ins  from: 05:4774 fall
+cond  05:47C9-47E8    32 bytes   18 ins  from: 05:4776 CALL*, 05:47C6 JR
+cond  05:47FD-47FE     2 bytes    1 ins  from: 05:47FB fall
+cond  05:4823-4825     3 bytes    2 ins  from: 05:481F JR
+cond  05:4A55-4A61    13 bytes    7 ins  from: 05:4A54 fall
+cond  05:4AA1-4AAA    10 bytes    7 ins  from: 05:4A9F fall
+cond  05:4AB6-4ABA     5 bytes    3 ins  from: 05:4A9B JR
+cond  05:4B3D-4B58    28 bytes   16 ins  from: 05:4B3C fall
+cond  05:4BD2-4BE1    16 bytes    8 ins  from: 05:4BD1 fall
+cond  05:4C54-4C5E    11 bytes    6 ins  from: 05:4C52 fall
+cond  05:4C6F-4C87    25 bytes   12 ins  from: 05:4C6D fall
+dead  05:4C8C-4D06   123 bytes   69 ins  from: 05:4C6F CALL*
+cond  05:4D12-4D18     7 bytes    4 ins  from: 05:4D10 fall
+cond  05:4D26-4D2C     7 bytes    4 ins  from: 05:4D1D JR
+cond  05:4D4F-4D51     3 bytes    1 ins  from: 05:4D48 JR
+cond  05:4DB1-4DB3     3 bytes    2 ins  from: 05:4DA2 JR
+cond  05:4F4B-4F5F    21 bytes   10 ins  from: 05:4F4A fall
+cond  05:4FC1-4FF9    57 bytes   29 ins  from: 05:4FBD JR
+cond  05:5077-507F     9 bytes    4 ins  from: 05:5071 JR
+cond  05:508B-508F     5 bytes    3 ins  from: 05:5087 JR
+cond  05:50DC-50DD     2 bytes    2 ins  from: 05:50DA fall
+cond  05:512D-5131     5 bytes    2 ins  from: 05:5126 JR
+cond  05:513E-5140     3 bytes    1 ins  from: 05:5137 JR
+cond  05:5167-5167     1 bytes    1 ins  from: 05:5165 fall
+cond  05:51EA-51F9    16 bytes    8 ins  from: 05:51E3 JR
+cond  05:526A-5279    16 bytes    8 ins  from: 05:5263 JR
+cond  05:538B-53C7    61 bytes   37 ins  from: 05:538A fall
+cond  05:54E1-54ED    13 bytes    7 ins  from: 05:54DD JR
+cond  05:5604-5634    49 bytes   25 ins  from: 05:55FE JR
+cond  05:5668-5672    11 bytes    6 ins  from: 05:5666 fall
+cond  05:56E6-571A    53 bytes   27 ins  from: 05:56D6 JR
+cond  05:575B-5770    22 bytes   13 ins  from: 05:5754 JR
+cond  05:5838-5886    79 bytes   41 ins  from: 05:5834 JR
+cond  05:5A84-5A8E    11 bytes    6 ins  from: 05:5A73 JR, 05:5A7E JR
+cond  05:5AFE-5B26    41 bytes   22 ins  from: 05:5AFA JR
+dead  05:5B4D-5B66    26 bytes   14 ins  from: 05:5A8B CALL*
+cond  05:5BBA-5BC9    16 bytes   10 ins  from: 05:5BB8 fall
+cond  05:5CA3-5CA7     5 bytes    3 ins  from: 05:5CA1 fall
+cond  05:5CB8-5CCB    20 bytes   10 ins  from: 05:5C9B JR
+cond  05:5DC8-5DD3    12 bytes    6 ins  from: 05:5DC4 JR
+dead  05:5E20-5E7A    91 bytes   56 ins  from: 05:5DC8 CALL*
+cond  05:5EBB-5EDD    35 bytes   16 ins  from: 05:5EAE JR, 05:5EB4 JR
+dead  05:5F5D-5F7A    30 bytes   19 ins  from: 05:5EBE CALL*
+cond  05:6030-6048    25 bytes   12 ins  from: 05:601A JR
+cond  05:604F-6056     8 bytes    5 ins  from: 05:604D fall
+cond  05:60B3-60B8     6 bytes    3 ins  from: 05:60A9 JR
+cond  05:60DF-60DF     1 bytes    1 ins  from: 05:60DD fall
+cond  05:6245-624D     9 bytes    5 ins  from: 05:6244 fall
+cond  05:6294-62AD    26 bytes   12 ins  from: 05:6290 JR
+cond  05:62CE-62D1     4 bytes    2 ins  from: 05:62CA JR
+cond  05:6380-63BB    60 bytes   30 ins  from: 05:62CE CALL*, 05:637C JR
+cond  05:640B-6416    12 bytes    6 ins  from: 05:6407 JR
+cond  05:650D-6564    88 bytes   42 ins  from: 05:6509 JR
+cond  05:681A-6831    24 bytes   11 ins  from: 05:6814 JR
+cond  05:6888-688B     4 bytes    2 ins  from: 05:687D JR, 05:6887 fall
+cond  05:689C-689F     4 bytes    2 ins  from: 05:6894 JR
+cond  05:68A8-68B6    15 bytes   10 ins  from: 05:68A7 fall
+cond  05:68D4-68E8    21 bytes   11 ins  from: 05:68CC JR, 05:68D3 fall
+cond  05:69B1-69CE    30 bytes   14 ins  from: 05:69A6 JR
+cond  05:6B35-6B38     4 bytes    2 ins  from: 05:6B23 JR, 05:6B27 JR, 05:6B2B JR, 05:6B2F JR
+cond  05:6BB0-6BEB    60 bytes   30 ins  from: 05:6BAC JR
+dead  05:6C6C-6C7E    19 bytes    9 ins  from: 05:6B35 CALL*
+cond  05:6E66-6E7A    21 bytes   10 ins  from: 05:6E65 fall
+cond  05:6EB4-6F1B   104 bytes   57 ins  from: 05:6EB0 JR
+cond  05:6F32-6F43    18 bytes   12 ins  from: 05:6F30 fall
+cond  05:6FB6-6FB7     2 bytes    2 ins  from: 05:6FB5 fall
+dead  05:70BB-70D0    22 bytes   13 ins  from: 05:47D6 CALL*
+cond  05:70DD-70E3     7 bytes    4 ins  from: 05:70DA fall
+cond  05:7196-7198     3 bytes    1 ins  from: 05:7194 fall
+cond  05:71A5-71B7    19 bytes    7 ins  from: 05:71A3 fall
+dead  05:71C3-71C9     7 bytes    3 ins  from: 05:71A5 CALL*
+dead  05:720F-72DF   209 bytes  111 ins  from: 05:7196 CALL*
+cond  05:7316-7318     3 bytes    1 ins  from: 05:7314 fall
+cond  05:746C-7484    25 bytes   12 ins  from: 05:741D JR
+cond  05:774C-774E     3 bytes    2 ins  from: 05:774A fall
+cond  09:4006-408A   133 bytes   51 ins  from: 09:4003 fall
+cond  09:614A-614A     1 bytes    1 ins  from: 09:6143 JR, 09:6147 fall
+cond  09:629C-629F     4 bytes    2 ins  from: 09:629A fall
+cond  09:62F0-62FF    16 bytes    9 ins  from: 09:62EE fall
+cond  09:638D-638F     3 bytes    1 ins  from: 09:638B fall
+cond  09:63D6-63EA    21 bytes   10 ins  from: 09:63B7 JR
+cond  09:650E-650F     2 bytes    2 ins  from: 09:650C fall
+cond  09:6605-6608     4 bytes    2 ins  from: 09:6603 fall
+cond  09:6771-6772     2 bytes    2 ins  from: 09:676F fall
+cond  09:6885-6888     4 bytes    2 ins  from: 09:6883 fall
+cond  09:68A5-68B4    16 bytes    8 ins  from: 09:6894 JR
+cond  09:6941-6944     4 bytes    2 ins  from: 09:693F fall
+cond  09:6A5F-6A60     2 bytes    1 ins  from: 09:6A5D fall
+cond  09:6B16-6B19     4 bytes    3 ins  from: 09:6B14 fall
+cond  09:6C90-6C93     4 bytes    2 ins  from: 09:6C8E fall
+cond  09:6E75-6E76     2 bytes    2 ins  from: 09:6E73 fall
+cond  09:703C-703F     4 bytes    2 ins  from: 09:703A fall
+cond  09:704D-7050     4 bytes    2 ins  from: 09:704B fall
+cond  09:7135-7155    33 bytes   17 ins  from: 09:7133 fall
+cond  09:72BD-72BE     2 bytes    1 ins  from: 09:72B7 JR
+cond  09:7357-7358     2 bytes    2 ins  from: 09:7355 fall
+cond  09:747C-7488    13 bytes    7 ins  from: 09:747A fall
+cond  09:756F-7572     4 bytes    2 ins  from: 09:756D fall
+cond  09:783D-7840     4 bytes    2 ins  from: 09:783C fall
+cond  09:7CB2-7CB9     8 bytes    4 ins  from: 09:7CAE JR
+dead  09:7D35-7D62    46 bytes   27 ins  from: 09:7CB2 CALL*
+cond  09:7E61-7E67     7 bytes    3 ins  from: 09:7E5F fall
+dead  09:7E76-7E83    14 bytes    6 ins  from: 09:7E66 JR*
+cond  09:7F1E-7F20     3 bytes    2 ins  from: 09:7F1C fall
+cond  0A:6490-64A6    23 bytes   11 ins  from: 0A:6472 JR
+dead  0A:7539-7556    30 bytes   13 ins  from: 0A:760A JP*
+cond  0A:75CD-760C    64 bytes   28 ins  from: 0A:75C9 JR
+cond  0A:76B3-76C1    15 bytes    6 ins  from: 0A:765A JP
+cond  0A:7893-7897     5 bytes    3 ins  from: 0A:7891 fall
+cond  0D:41F5-41F7     3 bytes    1 ins  from: 0D:41F3 fall
+cond  0D:423D-423F     3 bytes    1 ins  from: 0D:423B fall
+cond  0D:6D00-6D07     8 bytes    4 ins  from: 0D:6CFE fall
+cond  0D:6DAC-6DB9    14 bytes    6 ins  from: 0D:6DAB fall
+cond  0D:7AC0-7AD5    22 bytes   10 ins  from: 0D:7ABD fall
+cond  0D:7B3C-7B3C     1 bytes    1 ins  from: 0D:7B3A fall
+cond  0D:7BAB-7BBE    20 bytes    8 ins  from: 0D:7BA9 fall
+cond  0D:7BCB-7C38   110 bytes   64 ins  from: 0D:7BC9 fall
+cond  0D:7C45-7C5C    24 bytes   12 ins  from: 0D:7C43 fall
+cond  0D:7C8D-7C9C    16 bytes   10 ins  from: 0D:7C8B fall
+cond  0D:7CBC-7CBD     2 bytes    2 ins  from: 0D:7CB3 JR
+cond  0D:7D5F-7D60     2 bytes    2 ins  from: 0D:7D5D fall
+cond  0E:40F7-40FB     5 bytes    2 ins  from: 0E:40F5 fall
+cond  0E:442F-4431     3 bytes    3 ins  from: 0E:442D fall
+cond  0E:487E-4884     7 bytes    4 ins  from: 0E:487C fall
+dead  0E:48F2-4922    49 bytes   25 ins  from: 0E:40F7 CALL*
+cond  0E:7DE8-7DE8     1 bytes    1 ins  from: 0E:7DE5 fall
+cond  0E:7DEF-7DF0     2 bytes    1 ins  from: 0E:7DED fall
+cond  0E:7E0A-7E0B     2 bytes    1 ins  from: 0E:7E08 fall
+cond  0E:7E1F-7E1F     1 bytes    1 ins  from: 0E:7E1D fall
+cond  0E:7E2C-7E2D     2 bytes    1 ins  from: 0E:7E2A fall
+cond  0E:7E34-7E35     2 bytes    1 ins  from: 0E:7E32 fall
+cond  0E:7E44-7E9D    90 bytes   40 ins  from: 0E:7DEF JR*, 0E:7DFC JR, 0E:7E0A JR*, 0E:7E2C JR*, 0E:7E34 JR*, 0E:7E3A JR, 0E:7E41 JR
+cond  0E:7EA4-7ED3    48 bytes   26 ins  from: 0E:7EA2 fall
+dead  0E:7ED5-7EF4    32 bytes   19 ins  from: 0E:7E68 CALL*, 0E:7E70 CALL*, 0E:7E92 CALL*
+cond  0F:5F49-5F4F     7 bytes    4 ins  from: 0F:5F41 JP
+cond  0F:70A1-70AF    15 bytes    6 ins  from: 0F:709F fall
+cond  0F:72D7-72EF    25 bytes   12 ins  from: 0F:7294 JR
+# orphan code candidates (not reached by the trace)
+orphan 00:036E   25 bytes  12 ins  calls 1  ptr@008FC,0D325
+orphan 00:0387   26 bytes  12 ins  calls 1  ptr@184E7,2FCAA
+orphan 00:0823   64 bytes  37 ins  calls 1  call/jp@0F:75D2
+orphan 00:255D   55 bytes  33 ins  calls 2  call/jp@05:71F4
+orphan 00:3554   75 bytes  41 ins  calls 3  ptr@37C50
+orphan 00:359F   45 bytes  25 ins  calls 3  ptr@0781C,18E43
+orphan 00:3896   22 bytes  10 ins  calls 1  call/jp@01:5504
+orphan 00:3D28    9 bytes   5 ins  calls 1  ptr@00559,05ECE,30E79
+orphan 00:3D31    9 bytes   5 ins  calls 1
+orphan 00:3D43    9 bytes   5 ins  calls 1
+orphan 01:426C   12 bytes   7 ins  calls 1  ptr@04207
+orphan 01:4289   24 bytes  10 ins  calls 1  ptr@04201
+orphan 01:45CD   16 bytes  10 ins  calls 1  ptr@0258F,041EF,06E01,06FEF
+orphan 01:45DD   28 bytes  13 ins  calls 1
+orphan 01:45F9   19 bytes   8 ins  calls 2
+orphan 01:4656   62 bytes  34 ins  calls 1  ptr@041FF
+orphan 01:46F6   26 bytes  14 ins  calls 3
+orphan 01:471C   26 bytes  14 ins  calls 3  ptr@01ED2
+orphan 01:49E8   19 bytes  10 ins  calls 2  ptr@02A0F,0802E,2CFE1
+orphan 01:4C7B   24 bytes  11 ins  calls 4  ptr@1B96F,37D8F
+orphan 01:4D64   95 bytes  54 ins  calls 5
+orphan 01:4E81    9 bytes   5 ins  calls 1
+orphan 01:524A   62 bytes  39 ins  calls 1  call/jp@01:45F9
+orphan 01:52DD   46 bytes  24 ins  calls 4
+orphan 01:530B   54 bytes  26 ins  calls 4  ptr@04C64,29C98
+orphan 01:53DD   43 bytes  25 ins  calls 2  call/jp@01:5330
+orphan 01:54B8   22 bytes   9 ins  calls 1  ptr@0549E,0E849,1549C
+orphan 01:67BF  253 bytes 110 ins  calls 23  ptr@0144B,2138B,35273
+orphan 05:4150   50 bytes  27 ins  calls 3
+orphan 05:41B7   10 bytes   5 ins  calls 1  ptr@14195
+orphan 05:4245   10 bytes   5 ins  calls 2  ptr@14231,20B84
+orphan 05:424F   16 bytes   8 ins  calls 1
+orphan 05:425F   18 bytes   9 ins  calls 3  ptr@09F29,0C89D,14233
+orphan 05:4271   12 bytes   8 ins  calls 1  ptr@14239
+orphan 05:42CD   12 bytes   6 ins  calls 1  ptr@1417E,1426D,142F4,1448B
+orphan 05:42D9   31 bytes  17 ins  calls 2  ptr@14297,3C269
+orphan 05:4300   41 bytes  20 ins  calls 2  ptr@01E3B,0A038,0B338,18136
+orphan 05:4459   10 bytes   5 ins  calls 1  ptr@14445
+orphan 05:4463   10 bytes   5 ins  calls 1  ptr@14447
+orphan 05:446D   16 bytes   8 ins  calls 1  ptr@2385C
+orphan 05:447D   18 bytes   9 ins  calls 3  ptr@0847B,14449,1A995
+orphan 05:44AE   10 bytes   5 ins  calls 1  ptr@1449A
+orphan 05:44B8   10 bytes   5 ins  calls 1  ptr@1449C
+orphan 05:44C2   10 bytes   5 ins  calls 1  ptr@1449E,3443E
+orphan 05:44CC   23 bytes  11 ins  calls 2  ptr@1E330
+orphan 05:44E3   18 bytes   9 ins  calls 3  ptr@144A0
+orphan 05:451A   14 bytes   7 ins  calls 1
+orphan 05:4915   16 bytes  10 ins  calls 1  ptr@14910
+orphan 05:4925   90 bytes  55 ins  calls 3  ptr@041F5
+orphan 05:4988   40 bytes  26 ins  calls 1  ptr@1841D
+orphan 05:49CB   87 bytes  54 ins  calls 2  ptr@1490C
+orphan 05:4A22   18 bytes  10 ins  calls 2  ptr@08036,14908,389F4
+orphan 05:4A34   26 bytes  15 ins  calls 1  ptr@389F8,389FA,389FC
+orphan 05:4B59   43 bytes  27 ins  calls 2  ptr@14B34
+orphan 05:4BE2   23 bytes  13 ins  calls 1  ptr@08BE0,14BC7
+orphan 05:4C01   14 bytes   7 ins  calls 1  ptr@00D55,124F7,29A1A,34564
+orphan 05:4C42   12 bytes   6 ins  calls 1  ptr@041E2
+orphan 05:4E14   70 bytes  43 ins  calls 3  ptr@14DC3
+orphan 05:4E5A   12 bytes   8 ins  calls 1  ptr@0C839,14DC5
+orphan 05:4E66   20 bytes  10 ins  calls 1  ptr@1F69F
+orphan 05:4F28   12 bytes   6 ins  calls 1
+orphan 05:4F60   13 bytes   9 ins  calls 1  ptr@0A03C,0A040,14F13
+orphan 05:4F6D   15 bytes   7 ins  calls 1  ptr@23848
+orphan 05:4F7C   33 bytes  18 ins  calls 2  ptr@14F15,1B9D6,1B9D8,1B9DA
+orphan 05:4F9D   12 bytes   8 ins  calls 1  ptr@14F19
+orphan 05:4FA9   16 bytes   8 ins  calls 1
+orphan 05:4FFA   65 bytes  32 ins  calls 6  call/jp@05:4F6D
+orphan 05:5208   16 bytes   8 ins  calls 1  ptr@01741,080DB
+orphan 05:5220   16 bytes   8 ins  calls 1  ptr@05D30,1A5BB,23143
+orphan 05:523E   16 bytes   8 ins  calls 1  ptr@209EF,3D112
+orphan 05:5288   16 bytes   8 ins  calls 1  ptr@0525D
+orphan 05:52A0   16 bytes   8 ins  calls 1
+orphan 05:52BE   16 bytes   8 ins  calls 1
+orphan 05:5357   43 bytes  27 ins  calls 1  ptr@152DD
+orphan 05:53C8   12 bytes   8 ins  calls 1  call/jp@05:41BD
+orphan 05:53D4   20 bytes  10 ins  calls 1
+orphan 05:54A7   17 bytes   8 ins  calls 2  ptr@09493,36490
+orphan 05:54B8   20 bytes  12 ins  calls 1  ptr@0549E,0E849,1549C
+orphan 05:54EE   90 bytes  54 ins  calls 2  ptr@154D7
+orphan 05:5635   12 bytes   8 ins  calls 1  ptr@0CCCD,155F7,2AD03,2AD99
+orphan 05:5641   12 bytes   6 ins  calls 1  ptr@089E2
+orphan 05:56BF   18 bytes   9 ins  calls 1
+orphan 05:571B   12 bytes   8 ins  calls 1  ptr@14235,156A8
+orphan 05:578A   13 bytes   8 ins  calls 1  ptr@0C7FC,1573D
+orphan 05:5797   23 bytes  13 ins  calls 1
+orphan 05:57AE   16 bytes   9 ins  calls 1  ptr@0114E,01180,01199,011B2
+orphan 05:57CD   12 bytes   6 ins  calls 1  ptr@171AF
+orphan 05:57D9   13 bytes   9 ins  calls 1  ptr@15741,3A0F0,3A4DB,3A4E7
+orphan 05:57EA   13 bytes   9 ins  calls 1  ptr@15743
+orphan 05:57FB   12 bytes   8 ins  calls 1  ptr@15747,18F5C,18F6E,1F62F
+orphan 05:5807   21 bytes  10 ins  calls 3  ptr@18D3F,3A4E5
+orphan 05:581C   13 bytes   9 ins  calls 1  ptr@0C808,15749,1D769
+orphan 05:5887   66 bytes  48 ins  calls 1  call/jp@05:5786,05:57AA
+orphan 05:58C9  260 bytes 158 ins  calls 1  ptr@15890
+orphan 05:59CD   79 bytes  45 ins  calls 4  call/jp@05:582C
+orphan 05:5A8F   13 bytes   9 ins  calls 1  ptr@09A31,09A49,09A61,09A79
+orphan 05:5AAF   13 bytes   9 ins  calls 1  ptr@15A51
+orphan 05:5AC5   13 bytes   9 ins  calls 1  ptr@15A53
+orphan 05:5AE2   12 bytes   8 ins  calls 1  ptr@15A57
+orphan 05:5B27   30 bytes  19 ins  calls 1  call/jp@05:5ADE,05:5AF2
+orphan 05:5B67   30 bytes  19 ins  calls 1  call/jp@05:5AA8
+orphan 05:5C09   35 bytes  23 ins  calls 1  call/jp@05:5AD2
+orphan 05:5C2C   80 bytes  45 ins  calls 5  call/jp@05:5AAB
+orphan 05:5CDB   35 bytes  19 ins  calls 2  ptr@09CD5
+orphan 05:5D0B   27 bytes  17 ins  calls 1
+orphan 05:5D26   16 bytes   8 ins  calls 1
+orphan 05:5D42   19 bytes   9 ins  calls 2  ptr@0C868
+orphan 05:5D55   25 bytes  16 ins  calls 1  call/jp@05:5D04
+orphan 05:5DD4   17 bytes  10 ins  calls 1  ptr@15DBC
+orphan 05:5DE5   12 bytes   6 ins  calls 1
+orphan 05:5DF9   15 bytes   7 ins  calls 1
+orphan 05:5E08   24 bytes  12 ins  calls 2  ptr@15DBE
+orphan 05:5E7B   30 bytes  17 ins  calls 2  ptr@0C878,15E3C
+orphan 05:5EDE   12 bytes   8 ins  calls 1  ptr@15EA4,35149
+orphan 05:5EF5   12 bytes   8 ins  calls 1  ptr@15EA6,29CFD,34AC0
+orphan 05:5F0F   30 bytes  19 ins  calls 1  call/jp@05:5F0B
+orphan 05:5F7B  104 bytes  66 ins  calls 1  ptr@15F65
+orphan 05:6152   11 bytes   7 ins  calls 1  ptr@1614D,22122
+orphan 05:615D   41 bytes  25 ins  calls 1
+orphan 05:61B8   23 bytes  14 ins  calls 1  ptr@1614F
+orphan 05:61CF   62 bytes  37 ins  calls 1  ptr@37E20
+orphan 05:624E   18 bytes  11 ins  calls 2  ptr@16235
+orphan 05:6260   15 bytes   7 ins  calls 2  ptr@29C74,3128C
+orphan 05:626F   29 bytes  17 ins  calls 2  ptr@16237,3226C
+orphan 05:62D2   15 bytes   8 ins  calls 3  ptr@162B9,1951C
+orphan 05:62E8   42 bytes  26 ins  calls 1  ptr@0ACC3,0AD6B,0AD9B,0ADCB
+orphan 05:6312   70 bytes  43 ins  calls 3  ptr@162BD
+orphan 05:6358   12 bytes   8 ins  calls 1  ptr@02001,162BF
+orphan 05:6364   20 bytes  10 ins  calls 1
+orphan 05:63BC   35 bytes  18 ins  calls 2  call/jp@05:62E4
+orphan 05:6417   33 bytes  18 ins  calls 2  ptr@14500,163EA
+orphan 05:6447   23 bytes  11 ins  calls 1  ptr@37343,3761C,37628,376F8
+orphan 05:646A   22 bytes  11 ins  calls 2  ptr@08ACC,092B9,093D1,09B0F
+orphan 05:648C   21 bytes   9 ins  calls 3  ptr@1FB08,1FB47,1FB85
+orphan 05:64A1   10 bytes   5 ins  calls 1  ptr@14508,163F2
+orphan 05:64AB   31 bytes  17 ins  calls 1
+orphan 05:64CA   12 bytes   8 ins  calls 1  ptr@1450C,163F6
+orphan 05:64D6   21 bytes  10 ins  calls 2  ptr@0C8F0
+orphan 05:6565   27 bytes  16 ins  calls 1  call/jp@05:64B7
+orphan 05:6580  103 bytes  58 ins  calls 2  call/jp@05:648F,05:64E7
+orphan 05:662C   13 bytes   6 ins  calls 2  ptr@1AFFA
+orphan 05:666B   23 bytes  11 ins  calls 1  ptr@0C900
+orphan 05:6682   12 bytes   8 ins  calls 1  ptr@163FC
+orphan 05:6692   37 bytes  23 ins  calls 2  call/jp@05:668E
+orphan 05:6701  104 bytes  60 ins  calls 5  ptr@166E8,16EEF,1966F,28FD0
+orphan 05:6769   21 bytes  11 ins  calls 2  call/jp@05:6654
+orphan 05:6792   20 bytes  10 ins  calls 1  ptr@38A68
+orphan 05:67B2   12 bytes   6 ins  calls 1
+orphan 05:68F9   23 bytes  10 ins  calls 1
+orphan 05:6910   35 bytes  18 ins  calls 2  ptr@0A90C,168C4
+orphan 05:6943   27 bytes  12 ins  calls 1
+orphan 05:695E   24 bytes  15 ins  calls 1  call/jp@05:6904
+orphan 05:6976   24 bytes  15 ins  calls 1  call/jp@05:6952
+orphan 05:69CF   43 bytes  27 ins  calls 1  ptr@1699B
+orphan 05:69FA   69 bytes  42 ins  calls 3  ptr@0387A,1699D,25EE6
+orphan 05:6A3F   12 bytes   8 ins  calls 1  ptr@1699F
+orphan 05:6A4B   19 bytes   9 ins  calls 1
+orphan 05:6A93   11 bytes   7 ins  calls 1  ptr@16A7E
+orphan 05:6A9E   27 bytes  17 ins  calls 1
+orphan 05:6AC9   21 bytes  10 ins  calls 2  ptr@19497
+orphan 05:6ADE   25 bytes  16 ins  calls 2  call/jp@05:6AB5
+orphan 05:6B39   17 bytes  11 ins  calls 2  call/jp@05:445F
+orphan 05:6B51   13 bytes   9 ins  calls 1  call/jp@05:4469
+orphan 05:6B86   12 bytes   8 ins  calls 1  ptr@1444B,16B0F
+orphan 05:6B92   22 bytes  11 ins  calls 2
+orphan 05:6BEC   41 bytes  26 ins  calls 1  call/jp@05:6B4D
+orphan 05:6C7F   61 bytes  30 ins  calls 6  call/jp@05:6B65
+orphan 05:6CBC   28 bytes  16 ins  calls 2  call/jp@05:6B6A
+orphan 05:6CD8  100 bytes  51 ins  calls 6  ptr@19619,30F3F
+orphan 05:6D9C   49 bytes  29 ins  calls 1  ptr@16D64
+orphan 05:6DCD   11 bytes   5 ins  calls 2
+orphan 05:6DD8   19 bytes  11 ins  calls 2  ptr@0C98A,16D66
+orphan 05:6DEB   12 bytes   8 ins  calls 1  ptr@16D6A
+orphan 05:6DF7   43 bytes  23 ins  calls 2  ptr@0C98E
+orphan 05:6E22    8 bytes   5 ins  calls 1  call/jp@05:6D9C,05:6DD8
+orphan 05:6E2A   21 bytes  10 ins  calls 2  ptr@33D25
+orphan 05:6E7B   13 bytes   9 ins  calls 1  ptr@16E4C
+orphan 05:6E88   15 bytes   7 ins  calls 1  ptr@123E4
+orphan 05:6E97   12 bytes   8 ins  calls 1  ptr@16E50
+orphan 05:6F48   66 bytes  34 ins  calls 6  ptr@16F37
+orphan 05:6FBF   19 bytes   9 ins  calls 1  ptr@0FADE,1D761,1E9B4,1EA1E
+orphan 05:6FD9   19 bytes   9 ins  calls 1
+orphan 05:7088   26 bytes  18 ins  calls 1  ptr@00B02,00BA5,00C47,0C9C0
+orphan 05:7168   10 bytes   4 ins  calls 1
+orphan 09:4582   41 bytes  32 ins  calls 1
+orphan 09:5E8E   45 bytes  23 ins  calls 2  call/jp@09:5F10
+orphan 09:5ED4   30 bytes  13 ins  calls 1
+orphan 09:5EF2   10 bytes   5 ins  calls 1  ptr@25EC6
+orphan 09:5F24   13 bytes   6 ins  calls 1  ptr@0C892
+orphan 09:5F31   13 bytes   6 ins  calls 1
+orphan 09:5F3E   13 bytes   6 ins  calls 1  ptr@13CA4,1C11C,1D619,1D65C
+orphan 09:5F53   22 bytes  11 ins  calls 1  ptr@31020,38431
+orphan 09:5F69   23 bytes  13 ins  calls 1  ptr@25ECA
+orphan 09:5F9C   26 bytes  14 ins  calls 1  ptr@27E77
+orphan 09:601A   73 bytes  42 ins  calls 3  ptr@25FE0,34669
+orphan 09:6063   66 bytes  36 ins  calls 3  ptr@25FC3,3220D,32211,3E258
+orphan 09:60A5   55 bytes  30 ins  calls 3  ptr@25FCD
+orphan 09:71D7   12 bytes   8 ins  calls 1  ptr@25F29,25F36,25F43,27023
+orphan 09:71F3   12 bytes   8 ins  calls 1  ptr@1B009,27025,30D5B,30D7B
+orphan 09:720C   23 bytes  15 ins  calls 1  ptr@27027
+orphan 09:7223   12 bytes   6 ins  calls 1  ptr@3B67B,3B686
+orphan 09:722F   22 bytes  12 ins  calls 1  ptr@17A38,1935F
+orphan 09:7245   18 bytes   9 ins  calls 1
+orphan 09:7257   32 bytes  18 ins  calls 2  ptr@27029
+orphan 09:7277   29 bytes  17 ins  calls 2  ptr@2702B,34CAA
+orphan 09:7409  105 bytes  57 ins  calls 4  call/jp@09:7268
+orphan 09:7B5E   12 bytes   6 ins  calls 1  ptr@0C877,1D388
+orphan 09:7B6A   16 bytes   9 ins  calls 2  ptr@1B97E,27B49
+orphan 09:7B7A   12 bytes   8 ins  calls 1  ptr@071B5,07E6D,07E6F,07E7B
+orphan 09:7B93   12 bytes   8 ins  calls 1  ptr@0B6AB,27B4D
+orphan 09:7BA8    8 bytes   5 ins  calls 1  call/jp@09:7B51,09:7B6A
+orphan 09:7BB0   33 bytes  17 ins  calls 3
+orphan 09:7BD1   24 bytes  11 ins  calls 3
+orphan 09:7BF9   28 bytes  17 ins  calls 1  ptr@255D1,37BF9
+orphan 09:7C15   26 bytes  13 ins  calls 1
+orphan 09:7C2F   12 bytes   8 ins  calls 1  ptr@27BF4,28A91
+orphan 09:7C44   11 bytes   7 ins  calls 1  ptr@1CE7D,27BF6,360BB,36150
+orphan 09:7C54   67 bytes  37 ins  calls 2  call/jp@09:7C26
+orphan 09:7CE6   14 bytes   7 ins  calls 1  ptr@30E5E
+orphan 09:7D18   17 bytes   8 ins  calls 3  ptr@27CA8
+orphan 09:7D29   12 bytes   6 ins  calls 1
+orphan 0A:62A1  239 bytes  96 ins  calls 22
+orphan 0A:7B13   79 bytes  37 ins  calls 7  ptr@2983C
+orphan 0D:42FE   10 bytes   4 ins  calls 2  ptr@081CE,205EE,3254C,32554
+orphan 0D:433E   17 bytes   7 ins  calls 2  ptr@0037F,00399,03DB6,1DB0B
+orphan 0D:434F   10 bytes   4 ins  calls 2  ptr@08F3C,2EE67
+orphan 0D:7D72   66 bytes  36 ins  calls 4  ptr@0B54A,0B56A,0B58A,0B5AA
+orphan 0D:7DF1   67 bytes  38 ins  calls 3  ptr@1DAEC,281C9,33309
+orphan 0E:4528   11 bytes   7 ins  calls 1  ptr@14090,383BD
+orphan 0E:4533   27 bytes  17 ins  calls 1  ptr@383BF
+orphan 0E:45B2    7 bytes   5 ins  calls 1  ptr@383CB
+orphan 0E:5897   40 bytes  29 ins  calls 1
+orphan 0F:41A3   43 bytes  26 ins  calls 1  ptr@1418D,24FFA,3C0B3
+orphan 0F:5DE7   41 bytes  22 ins  calls 3  ptr@3DD48
+orphan 0F:6134   37 bytes  22 ins  calls 2  ptr@2AACE,2AE0E,2B4A6,3E07E
+orphan 0F:6159   18 bytes  11 ins  calls 1  ptr@08A11,315FA,3E086
+orphan 0F:61DF    9 bytes   4 ins  calls 1  ptr@18EB4,3E084
+orphan 0F:6205   22 bytes  10 ins  calls 2  ptr@18F8D,3E08E
+orphan 0F:7651   45 bytes  21 ins  calls 1  call/jp@0F:7557
+orphan 0F:767E   74 bytes  45 ins  calls 2  call/jp@0F:755D
+orphan 0F:76F1   65 bytes  31 ins  calls 3  ptr@25D4A

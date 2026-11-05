@@ -1,0 +1,59 @@
+ 0 file $3A000   75 bytes 16x13 area 1 stage 1 room 0 gfx from map 0
+ 1 file $3A04B  243 bytes 32x13 area 1 stage 2 room 0 gfx from map 1
+ 2 file $3A13E  157 bytes 16x13 area 1 stage 3 room 0 gfx from map 2
+ 3 file $3A1DB  158 bytes 16x13 area 1 stage 3 room 1 gfx from map 0
+ 4 file $3A279  129 bytes 16x13 area 2 stage 1 room 0 gfx from map 4
+ 5 file $3A2FA  232 bytes 16x26 area 2 stage 2 room 0 gfx from map 5
+ 6 file $3A3E2  131 bytes 16x13 area 2 stage 2 room 1 gfx from map 4
+ 7 file $3A465  139 bytes 16x13 area 2 stage 3 room 0 gfx from map 7
+ 8 file $3A4F0  299 bytes 32x13 area 2 stage 3 room 1 gfx from map 4
+ 9 file $3A61B  256 bytes 32x13 area 2 stage 4 room 0 gfx from map 9
+10 file $3A71B  294 bytes 32x13 area 2 stage 4 room 1 gfx from map 4
+11 file $3A841  229 bytes 32x13 area 3 stage 1 room 0 gfx from map 11
+12 file $3A926  226 bytes 16x26 area 3 stage 2 room 0 gfx from map 12
+13 file $3AA08  132 bytes 16x13 area 3 stage 2 room 1 gfx from map 11
+14 file $3AA8C  178 bytes 16x13 area 3 stage 3 room 0 gfx from map 14
+15 file $3AB3E  275 bytes 16x26 area 3 stage 3 room 1 gfx from map 11
+16 file $3AC51  134 bytes 16x13 area 3 stage 3 room 2 gfx from map 11
+17 file $3ACD7  127 bytes 16x13 area 3 stage 4 room 0 gfx from map 17
+18 file $3AD56  239 bytes 32x13 area 3 stage 4 room 1 gfx from map 11
+19 file $3AE45  215 bytes 16x26 area 4 stage 1 room 0 gfx from map 19
+20 file $3AF1C  119 bytes 16x13 area 4 stage 1 room 1 gfx from map 19
+21 file $3AF93  133 bytes 16x13 area 4 stage 2 room 0 gfx from map 21
+22 file $3B018  116 bytes 16x13 area 4 stage 2 room 1 gfx from map 19
+23 file $3B08C  137 bytes 16x13 area 4 stage 2 room 2 gfx from map 19
+24 file $3B115  217 bytes 16x26 area 4 stage 3 room 0 gfx from map 24
+25 file $3B1EE  211 bytes 32x13 area 4 stage 3 room 1 gfx from map 19
+26 file $3B2C1  224 bytes 32x13 area 4 stage 4 room 0 gfx from map 26
+27 file $3B3A1  195 bytes 32x13 area 4 stage 4 room 1 gfx from map 19
+28 file $3B464  215 bytes 32x13 area 5 stage 1 room 0 gfx from map 28
+29 file $3B53B  249 bytes 16x26 area 5 stage 2 room 0 gfx from map 29
+30 file $3B634  240 bytes 32x13 area 5 stage 2 room 1 gfx from map 28
+31 file $3B724  280 bytes 32x13 area 5 stage 3 room 0 gfx from map 31
+32 file $3B83C  176 bytes 16x13 area 5 stage 3 room 1 gfx from map 28
+33 file $3B8EC  242 bytes 16x26 area 5 stage 3 room 2 gfx from map 28
+34 file $3B9DE  234 bytes 32x13 area 5 stage 4 room 0 gfx from map 34
+35 file $3BAC8  262 bytes 32x13 area 5 stage 4 room 1 gfx from map 28
+36 file $3BBCE  113 bytes 16x13 area 5 stage 4 room 2 gfx from map 28
+37 file $3BC3F  119 bytes 16x13 area 6 stage 1 room 0 gfx from map 37
+38 file $3BCB6  227 bytes 32x13 area 6 stage 1 room 1 gfx from map 37
+39 file $3BD99  262 bytes 32x13 area 6 stage 1 room 2 gfx from map 37
+40 file $3BE9F  258 bytes 16x26 area 6 stage 1 room 3 gfx from map 37
+41 file $3BFA1  276 bytes 32x13 area 6 stage 1 room 4 gfx from map 37
+42 file $3C0B5  295 bytes 16x26 area 6 stage 1 room 5 gfx from map 37
+43 file $3C1DC   83 bytes 16x13 not in the stage table gfx from map 43
+44 file $3C22F   83 bytes 16x13 not in the stage table gfx from map 44
+45 file $3C282   83 bytes 16x13 not in the stage table gfx from map 45
+46 file $3C2D5   83 bytes 16x13 not in the stage table gfx from map 46
+47 file $3C328   83 bytes 16x13 not in the stage table gfx from map 47
+48 file $3C37B  120 bytes 16x26 not in the stage table gfx from map 48
+49 file $3C3F3   45 bytes 16x13 not in the stage table gfx from map 49
+50 file $3C420   76 bytes 16x13 not in the stage table gfx from map 50
+51 file $3C46C  155 bytes 16x13 not in the stage table schematic
+52 file $3C507  133 bytes 16x13 not in the stage table schematic
+53 file $3C58C  116 bytes 16x13 not in the stage table schematic
+54 file $3C600  115 bytes 16x13 not in the stage table schematic
+55 file $3C673   93 bytes 16x13 not in the stage table schematic
+56 file $3C6D0   43 bytes 16x13 not in the stage table schematic
+57 file $3C6FB   87 bytes 16x13 not in the stage table schematic
+58 file $3C752  126 bytes 16x13 not in the stage table gfx from map 58

@@ -5,7 +5,7 @@ function wr(a,v) emu.write(a,v,W) end
 -- code/data log as hex for cdl2entries_hirom.py
 function cdl_dump() at(function()
   local c=emu.getCdlData(emu.memType.snesPrgRom) local t={}
-  for i=1,#c do t[#t+1]=string.format('%02x',c[i]) end print('CDLHEX '..table.concat(t)) end) end
+  for i=0,#c do t[#t+1]=string.format('%02x',c[i]) end print('CDLHEX '..table.concat(t)) end) end
 -- power-on -> title menu (cursor on NORMAL GAME)
 function to_title() wait(800) press({start=true}) wait(120) press({start=true}) wait(60) end
 -- title -> PASSWORD screen, cursor on digit 1

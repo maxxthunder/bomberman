@@ -7,7 +7,7 @@ export const ALPHABET = "0123456789ABCDEFGHJKLMNPQRTUVWXY";
 export const BODIES = ["Bomberman", "Bomber Woof", "Dave Bomber", "Gary Bomber", "Pirate Bomber", "Muscle Bomber",
   "Iron Mask Bomber", "Baron Bombano", "Plunder Bomber", "Subordinate Bomber"];
 export const COLORS = ["white", "black", "red", "blue", "green", "yellow", "burnt (unused)", "boss (unused)"];
-export const ITEMS = ["Heart", "Pierce bomb", "Land mine", "Remote bomb", "Bomb pass", "Soft-block pass", "Power glove", "Kick", "Punch"];
+export const ITEMS = ["Remote control", "Pierce bomb", "Land mine", "Homing bomb", "Bomb pass", "Soft-block pass", "Power glove", "Kick", "Punch"];
 
 export const OPTION_CODES = {
   "4622": { versions: ["retail", "caravan"], effect: "Battle: start positions moved in towards the centre" },

@@ -1,0 +1,756 @@
+755 routines never executed
+C0013A    5 ins  pointer/table only               callers   ptr 2  reads $004E | writes  | calls 
+C001C3   29 ins  only from code that never ran    callers C001B2  ptr 4  reads $0067 $006B $03A2 | writes $03A2 | calls $C0020A
+C0020A   11 ins  only from code that never ran    callers C001C3 C001E1  ptr 4  reads $0069 | writes  | calls 
+C003E8    3 ins  only from code that never ran    callers C10106  ptr 2  reads  | writes $0300 | calls 
+C0040B    3 ins  pointer/table only               callers   ptr 12  reads  | writes $0390 | calls $C00456
+C0054B    2 ins  only from code that never ran    callers C01E14  ptr 2  reads  | writes  | calls 
+C0054F   33 ins  pointer/table only               callers   ptr 1  reads $0006 $0007 $035C | writes $0007 $0351 $0355 | calls $C003B3 $C00593
+C00593   35 ins  only from code that never ran    callers C00562  ptr 1  reads $034F $0353 $035B $03A5 | writes $034F $0353 $035B | calls $C005DE $C005FB
+C005DE   12 ins  only from code that never ran    callers C005A0 C005C5  ptr 3  reads $006D $006E $006F $0070 | writes  | calls $C0061F $C00645
+C005FB   20 ins  only from code that never ran    callers C005C0 C005CD  ptr 2  reads $035B | writes $0006 $035B | calls 
+C0061F    9 ins  only from code that never ran    callers C005DE  ptr 5  reads $034F $0351 | writes $0012 $0014 $006D $006E | calls $C00658
+C00645    9 ins  only from code that never ran    callers C005E1  ptr 3  reads $0353 $0355 | writes $0012 $0014 $006F $0070 | calls $C00658
+C00710    1 ins  pointer/table only               callers   ptr 5  reads  | writes  | calls $C00510
+C0073B    4 ins  pointer/table only               callers   ptr 1  reads  | writes $0315 $0316 $0317 | calls 
+C00878    7 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C008AC
+C00B95    2 ins  only from code that never ran    callers C0BC60  ptr 2  reads  | writes  | calls 
+C00D2C   28 ins  referenced by code that ran      callers C023C5  ptr 3  reads $0006 | writes $001A $001B $001C | calls $C00D57
+C00D57    2 ins  only from code that never ran    callers C00D49  ptr 3  reads $0006 | writes  | calls 
+C00DA1    2 ins  pointer/table only               callers   ptr 7  reads  | writes  | calls 
+C00E7E    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C00EBE   14 ins  only from code that never ran    callers C121C1 C123F1 C14942 C4183F  ptr 5  reads $0082 | writes  | calls $C00C1A
+C00EDA   15 ins  no reference                     callers   ptr -33  reads $0082 | writes  | calls $C00C1A
+C00F68    2 ins  no reference                     callers   ptr -21  reads  | writes  | calls 
+C00F87    2 ins  no reference                     callers   ptr -24  reads  | writes  | calls 
+C00F8B    5 ins  no reference                     callers   ptr -13  reads  | writes $0009 $0011 | calls 
+C00F99    2 ins  no reference                     callers   ptr -15  reads  | writes $0009 | calls 
+C010A7    2 ins  no reference                     callers   ptr -16  reads  | writes  | calls 
+C0166C   14 ins  only from code that never ran    callers C2115B  ptr 1  reads $0000 $000F | writes $0000 $000F | calls $C0193F
+C01CEE    4 ins  only from code that never ran    callers C11BD4  ptr 1  reads  | writes $0000 $0DB8 | calls 
+C01D00    4 ins  pointer/table only               callers   ptr 53  reads  | writes $0000 $0DB8 | calls 
+C021D7   32 ins  no reference                     callers   ptr -8  reads $0012 $034F $0351 | writes $0012 $0013 $0DC4 $0DC5 | calls 
+C023CE   27 ins  only from code that never ran    callers C0BC36  ptr 2  reads $000F $0349 $0DC0 | writes $000F | calls $C00514 $C0225C
+C02579    5 ins  no reference                     callers   ptr -5  reads  | writes  | calls 
+C02581   13 ins  no reference                     callers   ptr -9  reads  | writes $0012 $0013 | calls 
+C0BC33   35 ins  pointer/table only               callers   ptr 1  reads $0345 $035F $7E290B | writes $00C1 $0345 $03C1 | calls $C007A1 $C00B95 $C00C79 $C00DC8 $C00E84 $C00E89 $C023CE $C0BCD3
+C0BC92   19 ins  no reference                     callers   ptr -2  reads  | writes  | calls $C00E84 $C00EF7 $C01215 $C200D4
+C0BCD3   14 ins  only from code that never ran    callers C0BC68  ptr 1  reads  | writes $0345 $17E9 | calls 
+C0BF44    1 ins  no reference                     callers   ptr -48  reads  | writes  | calls 
+C0BF48   10 ins  pointer/table only               callers   ptr 2  reads $00FA | writes  | calls 
+C0C666   42 ins  pointer/table only               callers   ptr 1  reads $0000 $0001 $0002 | writes $0000 $0001 $0002 | calls 
+C0CB9E    9 ins  no reference                     callers   ptr -7  reads  | writes  | calls $C0124D
+C0F103   18 ins  referenced by code that ran      callers C0F056 C0F05F  ptr 1  reads  | writes  | calls 
+C0F702   28 ins  only from code that never ran    callers C0F744  ptr 2  reads $0302 $7E6C8E $7E6C90 | writes $0038 | calls $C0F74C $C0F770
+C0F758   11 ins  no reference                     callers   ptr -7  reads $031D $031E | writes  | calls $C0F770
+C1008F    4 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C1013E $C1043F
+C1009A    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C1013E $C1037C
+C100A5    4 ins  only from code that never ran    callers C14D5B C14D75  ptr 18  reads  | writes  | calls $C1013E $C103D9
+C100B0    4 ins  no reference                     callers   ptr -326  reads  | writes  | calls $C1013E $C1031F
+C100BB    4 ins  no reference                     callers   ptr -181  reads  | writes  | calls $C1013E $C1043F
+C100C6    4 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C1013E $C1037C
+C100D1    5 ins  no reference                     callers   ptr -286  reads  | writes $0006 | calls $C10260
+C100DD   23 ins  pointer/table only               callers   ptr 1  reads  | writes $0006 | calls $C003E8 $C003EE $C00E89 $C00EF7 $C10128 $C10295
+C1013E    4 ins  only from code that never ran    callers C1008F C1009A C100A5 C100B0  ptr 10  reads  | writes $0D8C $0D8D | calls 
+C1026B   20 ins  pointer/table only               callers   ptr 3  reads $0006 | writes $0303 | calls 
+C102A0   19 ins  pointer/table only               callers   ptr 12  reads $0006 | writes $0303 | calls 
+C102C8   35 ins  pointer/table only               callers   ptr 5  reads $0012 $0303 | writes $0012 $0303 | calls $C00E89 $C00EF7
+C1031F   41 ins  only from code that never ran    callers C100B5 C45062  ptr 29  reads $0014 | writes $0014 $0D90 $0D91 | calls $C00DC8 $C107E0 $C108BB
+C1037C   42 ins  only from code that never ran    callers C1009F C100CB  ptr 4  reads $0014 | writes $0014 $0D90 $0D91 | calls $C00DC8 $C107E0 $C108BB
+C1043F   46 ins  only from code that never ran    callers C10094 C100C0  ptr 6  reads $0014 | writes $0012 $0013 $0014 $0D90 $0D91 | calls $C00DC8 $C01B8D $C107E0 $C10873 $C108BB
+C105FC   36 ins  no reference                     callers   ptr -72  reads $0009 $000C $000F $0097 $0098 $0D86 $0D87 $0D8A ... | writes $0097 $0D86 $0D8A $0D8B | calls $C00DC8 $C106D7
+C10651   55 ins  pointer/table only               callers   ptr 2  reads $0D86 | writes $0097 $0098 $0D86 $0D87 $0D93 | calls $C00E89 $C00EF7 $C01B8D $C106EE
+C10709   50 ins  no reference                     callers   ptr -426  reads $0009 $000F $0094 $0095 $0096 $0097 $0098 $0099 | writes $0094 $0096 $0097 $0099 | calls $C00DC8
+C10773   20 ins  pointer/table only               callers   ptr 3  reads  | writes $0094 $0095 $0096 $0097 $0098 $0099 $0D93 | calls 
+C107A5   26 ins  pointer/table only               callers   ptr 4  reads  | writes $0D93 | calls $C00E89 $C01B8D
+C108C9   34 ins  pointer/table only               callers   ptr 3  reads $0009 $000F $0D88 $0D89 $0D8A $0D8C $0D8D | writes $0D88 $0D8A $0D8C | calls $C00DAF $C107E0
+C10918   33 ins  pointer/table only               callers   ptr 1  reads $0D8C $0D8D | writes $0D88 $0D89 $0D8C $0D8D $0D93 | calls $C00EF7 $C01B8D $C1096C
+C1096C   28 ins  only from code that never ran    callers C10957  ptr 1  reads $0D88 | writes $0018 | calls $C10998
+C10998   47 ins  only from code that never ran    callers C10988  ptr 1  reads $0012 $0014 $0016 $0018 | writes $0012 $0014 $0016 | calls 
+C10C3E    7 ins  only from code that never ran    callers C1121E C11494 C114BA C114F1  ptr 8  reads $0006 $0007 | writes $0006 $0007 | calls 
+C10C4A   15 ins  only from code that never ran    callers C10BFF C11224 C112D9 C114A4  ptr 9  reads $034F $0351 $0353 $0355 | writes $034F $0351 $0353 $0355 | calls 
+C10C6B   15 ins  only from code that never ran    callers C11221 C1122F C112E4  ptr 3  reads $034F $0351 $0357 $0359 | writes $034F $0351 $0357 $0359 | calls 
+C10C8C   15 ins  only from code that never ran    callers C112EF  ptr 1  reads $0353 $0355 $0357 $0359 | writes $0353 $0355 $0357 $0359 | calls 
+C10CEC   55 ins  only from code that never ran    callers C11D4F  ptr 4  reads $0006 $0008 $0357 $035B $035D $035E | writes $000F $0011 $034F $0350 $0351 $0352 $0353 $0354 ... | calls $C10BF0 $C10CAD $C10CC5 $C10CE3
+C10EA3   75 ins  only from code that never ran    callers C11D91  ptr 2  reads $0006 $034F $0351 $0355 $0357 $0359 $035B $0FE8 | writes $0009 $000B $000C $000E $000F $0011 $0351 $0357 ... | calls $C10CAD $C10CC5 $C10CE3 $C10E50 $C1130F
+C10F4A    8 ins  pointer/table only               callers   ptr 2  reads $0FE9 | writes  | calls $C00EF7 $C10FA4 $C11136 $C111A6
+C10F5E   26 ins  pointer/table only               callers   ptr 2  reads $0FE9 | writes  | calls $C00E9F $C00EF7 $C10FA4 $C10FB2 $C11047 $C11056 $C11136 $C11143 ...
+C10FB2   49 ins  only from code that never ran    callers C10F95  ptr 1  reads $0006 $0018 $035B $035C | writes $0006 $0012 $0014 $0018 $034F $0351 $0353 $0355 ... | calls $C024A2 $C02566 $C02569 $C1103B
+C1103B    7 ins  only from code that never ran    callers C10FDD C10FF6 C11017 C11030  ptr 4  reads $0017 | writes $0016 | calls 
+C11047    6 ins  only from code that never ran    callers C10F5E C10F7E  ptr 5  reads  | writes  | calls 
+C11056   97 ins  only from code that never ran    callers C10F61 C10F92  ptr 2  reads $0000 $0006 $0009 $0018 $0357 $0359 | writes $0000 $0006 $0009 $0014 $0357 $0359 $035B $035C | calls $C024CD $C02566 $C02569
+C11136    5 ins  only from code that never ran    callers C10F55 C10F75  ptr 2  reads  | writes  | calls 
+C11143   34 ins  only from code that never ran    callers C10F9B  ptr 12  reads $0FE8 | writes $0FE8 | calls $C10CAD
+C1119C    4 ins  only from code that never ran    callers C11DB2 C127E5  ptr 4  reads  | writes  | calls $C10CAD $C111A6 $C1126D
+C111A6  101 ins  only from code that never ran    callers C10F52 C10F72 C10F98 C1119F  ptr 5  reads $0000 $0012 $034F $0351 $0353 $0355 $0357 $0359 | writes $0000 $0012 $0013 $0014 | calls $C02536 $C10BF0 $C10C3E $C10C4A $C10C6B $C10CE3 $C112D1 $C112F3
+C1126D   52 ins  only from code that never ran    callers C1119C C1168E  ptr 2  reads $0002 $0006 $000F $0018 $034F $0351 $035B $035C | writes $0002 $0006 $0007 $000F $0010 $0014 | calls $C024CD $C02566 $C02569
+C112D1   13 ins  only from code that never ran    callers C111B4  ptr 1  reads $0351 $0355 $0359 | writes  | calls $C10C4A $C10C6B $C10C8C
+C112F3   14 ins  only from code that never ran    callers C11218 C11234  ptr 2  reads $0006 $0008 $034F $0FE8 | writes $000F $0011 | calls $C10CC5 $C1130F
+C1146F  117 ins  only from code that never ran    callers C11EB2  ptr 2  reads $034F $0351 | writes $0351 $0353 $0357 $0359 | calls $C1000C $C10BF0 $C10C3E $C10C4A $C10CAD $C115AC $C115F4 $C1161B ...
+C115AC   35 ins  only from code that never ran    callers C11481 C114DE C11515 C1154F  ptr 4  reads $0006 $0008 $0017 $0357 $0359 $035C | writes $000F $0011 $0012 $0014 $034F $0351 | calls $C02409 $C10C3E $C10CC5
+C115F4   17 ins  only from code that never ran    callers C11488 C1149B C114AE C114C7  ptr 12  reads $0017 $035B $035C | writes $0012 $0014 $0016 $0017 $0019 | calls $C02409
+C1161B    5 ins  only from code that never ran    callers C1151F C11538 C11559 C1156C  ptr 6  reads $0019 $0357 | writes $0353 | calls 
+C11625    5 ins  only from code that never ran    callers C1148B C1149E C114B1 C114CA  ptr 6  reads $0019 $0357 | writes $0353 | calls 
+C1162F    5 ins  only from code that never ran    callers C114B4 C114CD C114EB C11504  ptr 8  reads $0017 $0359 | writes $0355 | calls 
+C11639    5 ins  only from code that never ran    callers C1148E C114A1 C1155C C1156F  ptr 9  reads $0017 $0359 | writes $0355 | calls 
+C11643   48 ins  pointer/table only               callers   ptr 2  reads $0018 $0FE8 $0FE9 | writes $0014 $034F $0351 $035B $035C $0FE8 | calls $C00EF7 $C024CD $C02566 $C02569 $C10CAD $C111A6 $C1126D
+C116C4   63 ins  pointer/table only               callers   ptr 3  reads  | writes $0009 $000A $000C $000D $034F $0350 $0351 $0352 ... | calls $C00E9F $C00EF7 $C1000C $C10BF0 $C11769 $C1179E $C117D9
+C11769   29 ins  only from code that never ran    callers C11736 C11751  ptr 2  reads $0006 $0008 $034F $0351 | writes $0006 $000F $0011 | calls $C10CC5
+C1179E   32 ins  only from code that never ran    callers C116FD  ptr 1  reads $0006 $0008 $0009 $000C $000D | writes $000A $000F $0011 | calls $C10CC5
+C117D9   37 ins  only from code that never ran    callers C116C7  ptr 1  reads $0006 $0008 | writes $000F $0011 | calls $C1000C $C10CC5
+C118F4   41 ins  pointer/table only               callers   ptr 2  reads $0006 $0008 $7E43C6 | writes $0009 $000F $0011 $0014 | calls $C00EF7 $C1000C $C1194A $C119A6 $C119B1
+C1194A   49 ins  only from code that never ran    callers C1192A  ptr 1  reads $0000 $0006 $0009 $000A $000C $0017 | writes $0000 $000C $0012 | calls $C024A2 $C02569
+C119A6    4 ins  only from code that never ran    callers C11937  ptr 1  reads $7E43C7 | writes $7E43C7 | calls 
+C119B1   13 ins  only from code that never ran    callers C1190B  ptr 1  reads $7E43C7 | writes $0006 $0008 | calls 
+C119CA    1 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C11A31   16 ins  pointer/table only               callers   ptr 1  reads $0300 | writes $0300 | calls $C00E84 $C00E9F $C00EF7
+C11A59   18 ins  pointer/table only               callers   ptr 1  reads $0300 | writes $0300 | calls $C00E84 $C00E9F $C00EF7
+C11AEA    4 ins  pointer/table only               callers   ptr 1  reads  | writes $0FF1 $0FF2 | calls 
+C11AF8    4 ins  pointer/table only               callers   ptr 9  reads  | writes  | calls $C11B57 $C11BB0
+C11B02   13 ins  pointer/table only               callers   ptr 7  reads $035F $0FFD | writes $0FF1 $0FFD | calls $C00EF7 $C11B57 $C11B84 $C2000B $C20035 $C200D4
+C11B57   16 ins  only from code that never ran    callers C11AF8 C11B02  ptr 3  reads $0FF7 $0FF8 $0FF9 $0FFA $0FFB $0FFC | writes $0FF1 $0FF2 | calls 
+C11B84   13 ins  only from code that never ran    callers C11B21  ptr 4  reads  | writes $0FF7 $0FF8 $0FF9 $0FFA $0FFB $0FFC | calls 
+C11BB0    7 ins  only from code that never ran    callers C11AFB  ptr 4  reads  | writes $001A $001C | calls 
+C11BD1    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C01CEE $C11BD9
+C11C1D    7 ins  pointer/table only               callers   ptr 2  reads $0012 | writes $0FF1 | calls $C02569
+C11C2D    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00BA8
+C11C33    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00BCF
+C11D42    8 ins  pointer/table only               callers   ptr 1  reads  | writes $035B $0FE8 | calls $C10CEC
+C11D6F   18 ins  pointer/table only               callers   ptr 1  reads  | writes $034F $0351 $0353 $0355 $035B $0FE8 | calls $C10EA3
+C11D96   15 ins  pointer/table only               callers   ptr 1  reads  | writes $034F $0351 $035B $035C $0FE8 | calls $C1119C
+C11DB7   35 ins  pointer/table only               callers   ptr 2  reads  | writes $0FE9 | calls $C00DC8
+C11E0A    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00DC8
+C11E12   40 ins  pointer/table only               callers   ptr 2  reads  | writes $0FE9 | calls 
+C11E9C   12 ins  pointer/table only               callers   ptr 1  reads  | writes $034F $0351 $035B $035C | calls $C1146F
+C11EB7   22 ins  pointer/table only               callers   ptr 1  reads $0016 $0087 | writes  | calls $C00DC8 $C2131E
+C11FC2    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00DC8
+C11FCA    1 ins  no reference                     callers   ptr -10  reads  | writes  | calls 
+C1200D    9 ins  pointer/table only               callers   ptr 6  reads  | writes $7E43C6 | calls $C10045
+C12132   45 ins  pointer/table only               callers   ptr 1  reads $1699 $169B | writes $0308 $0309 $030A $030B $030C $0312 $034F $0351 ... | calls $C11335
+C12192    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00DAF $C12026
+C1219D   17 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C007A1 $C00E84 $C00EBE $C121C8
+C121C8   24 ins  only from code that never ran    callers C121A8 C121B3 C121BE  ptr 3  reads $00A6 $0DC0 | writes $000F $00A6 | calls $C00514 $C0225C
+C123BB    5 ins  pointer/table only               callers   ptr 1  reads  | writes $0023 | calls $C00DAF $C12026
+C123C6   20 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C007A1 $C00E84 $C00EBE $C123F8
+C123F8   23 ins  only from code that never ran    callers C123E1  ptr 1  reads $00A6 | writes $000F $00A6 | calls $C00508 $C0225C
+C12423    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00DAF $C12026
+C1242E    6 ins  pointer/table only               callers   ptr 4  reads  | writes $000E | calls 
+C1253C    2 ins  no reference                     callers   ptr -25  reads  | writes $031B | calls 
+C126BD   16 ins  pointer/table only               callers   ptr 1  reads  | writes $0308 | calls $C00D90
+C12745   12 ins  only from code that never ran    callers C1271E  ptr 1  reads  | writes $0309 $030A $030B $030C $0310 $0313 $0314 | calls 
+C12763   18 ins  only from code that never ran    callers C1273D  ptr 1  reads  | writes $0308 $030B $030C $0313 $0314 $0315 $0316 $0317 | calls $C10045
+C12796   34 ins  only from code that never ran    callers C1272E  ptr 1  reads $0018 $0034 | writes $0014 $034F $0351 $035B $035C $0FE8 | calls $C024CD $C02566 $C02569 $C1119C
+C127EA   33 ins  only from code that never ran    callers C12731  ptr 1  reads $0034 $0316 | writes $0316 $0317 | calls 
+C12832    5 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C1283F   20 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00E84 $C00EF7 $C2133F
+C1296C   19 ins  only from code that never ran    callers C1291F  ptr 1  reads $7E4BEF | writes $7E4BEF $7E4BF1 $7E4BF2 | calls $C129A0 $C129F0 $C12A59
+C129A0   29 ins  only from code that never ran    callers C12974 C12990  ptr 2  reads $7E4BEF $7E4BF0 $7E4C0A | writes $7E4BEF $7E4BF0 $7E4C0A | calls $C129FF
+C129F0   10 ins  only from code that never ran    callers C1297C C12998  ptr 2  reads $7E4BF0 | writes  | calls 
+C12AD8   26 ins  only from code that never ran    callers C12E7C  ptr 3  reads $7E4BFD $7E4C0B $7E6C71 | writes $0000 $7E4C0B | calls 
+C12BC7   24 ins  only from code that never ran    callers C12BBC  ptr 1  reads $035D $7E4BF8 $7E4BF9 | writes $034F $035D | calls $C01CF7 $C12C00 $C12C29
+C12C00   17 ins  only from code that never ran    callers C12BCE C12BF5  ptr 3  reads $035D $7E4C0A | writes $00BA $035D $7E4C0A | calls $C12C9E
+C12C29   23 ins  only from code that never ran    callers C12BD5 C12BFC  ptr 2  reads $035D | writes $034F $035B $035D $0FEF | calls $C02665
+C12E59   61 ins  pointer/table only               callers   ptr 1  reads $0002 $1AF8 | writes $0002 $0D78 $1AF8 $7E4C0B $7E4C0D | calls $C00E89 $C12AD8 $C12E0B
+C12EFF    2 ins  pointer/table only               callers   ptr 1  reads  | writes $0DBE | calls 
+C12F72    1 ins  no reference                     callers   ptr -11  reads  | writes $000C | calls 
+C12FD4    3 ins  no reference                     callers   ptr -30  reads  | writes  | calls $C12FDB $C12FF3
+C12FDB   12 ins  only from code that never ran    callers C12FD7  ptr 1  reads $0000 $0006 $001A | writes $0000 $001A $0020 | calls $C12F9C
+C1302D   22 ins  pointer/table only               callers   ptr 1  reads $001C | writes  | calls 
+C133C8   16 ins  only from code that never ran    callers C133AB C133BD  ptr 2  reads $0082 | writes $000C $000F | calls $C12F74
+C134F0   15 ins  only from code that never ran    callers C134C7  ptr 2  reads $0082 | writes  | calls $C010BA
+C13690    5 ins  pointer/table only               callers   ptr 1  reads $0086 | writes  | calls $C00EF7 $C01215
+C13899   12 ins  only from code that never ran    callers C13807  ptr 1  reads  | writes  | calls 
+C139FC   19 ins  only from code that never ran    callers C139A9 C139B5  ptr 2  reads $0DC0 | writes $00A6 | calls $C00514 $C13A1F
+C13A1F   14 ins  only from code that never ran    callers C13A0C C13A14 C13A1B  ptr 3  reads $00A6 | writes $000F | calls $C0225C
+C13A37    7 ins  only from code that never ran    callers C139B2  ptr 1  reads  | writes  | calls 
+C13E7D   15 ins  only from code that never ran    callers C13DB9  ptr 1  reads $0000 $0002 | writes $0000 $0002 | calls 
+C13F68   19 ins  only from code that never ran    callers C13F30  ptr 1  reads $0DC0 | writes $000F | calls $C00514 $C0225C
+C141AE    7 ins  pointer/table only               callers   ptr 1  reads  | writes $00BC $1620 | calls 
+C14554   12 ins  only from code that never ran    callers C144DF  ptr 4  reads  | writes  | calls $C1456E
+C1456E   21 ins  only from code that never ran    callers C1455B C14567  ptr 2  reads  | writes  | calls $C14593
+C14593    6 ins  only from code that never ran    callers C14578 C14587  ptr 2  reads  | writes  | calls 
+C1459F   11 ins  only from code that never ran    callers C144E4  ptr 1  reads  | writes  | calls 
+C145B8   25 ins  only from code that never ran    callers C144EB  ptr 1  reads  | writes $034F $0351 $0D78 | calls $C00CE7 $C00D10 $C010BA $C01195 $C2445C
+C145F7   13 ins  only from code that never ran    callers C14510  ptr 1  reads  | writes  | calls 
+C14612   21 ins  only from code that never ran    callers C14513  ptr 1  reads $161A | writes  | calls 
+C14722   10 ins  only from code that never ran    callers C146F6 C1471B  ptr 2  reads  | writes  | calls $C00C44 $C00C79
+C14754   19 ins  only from code that never ran    callers C146B5 C146EE  ptr 2  reads $0012 $0013 | writes $0012 $0013 | calls 
+C14783   17 ins  only from code that never ran    callers C146E6  ptr 1  reads $0DC0 | writes  | calls $C00514 $C147A5
+C147A5   11 ins  only from code that never ran    callers C14797 C1479B C1479F  ptr 3  reads  | writes $000F | calls $C0225C
+C147BB   15 ins  only from code that never ran    callers C146E9  ptr 1  reads  | writes  | calls $C147D6
+C147D6   24 ins  only from code that never ran    callers C147C8 C147CC C147D0  ptr 3  reads  | writes  | calls $C26478
+C14809   15 ins  only from code that never ran    callers C14700  ptr 2  reads  | writes  | calls $C14824
+C14824   10 ins  only from code that never ran    callers C14816 C1481A C1481E  ptr 3  reads  | writes  | calls 
+C14993    3 ins  only from code that never ran    callers C148C5 C148E9 C14915  ptr 3  reads  | writes  | calls 
+C1499A   21 ins  only from code that never ran    callers C148CC C148EF  ptr 4  reads  | writes  | calls 
+C149C3   10 ins  only from code that never ran    callers C148C8  ptr 1  reads  | writes  | calls $C14957 $C14961 $C1496B $C14975 $C14A1A
+C149DD   17 ins  only from code that never ran    callers C148D5  ptr 1  reads  | writes $000F | calls $C14957 $C14961 $C1496B $C14975 $C14A05
+C14A1A   16 ins  only from code that never ran    callers C149C6 C149CC C149D2 C149D8  ptr 6  reads $0000 | writes $0000 | calls 
+C14AB0    9 ins  only from code that never ran    callers C148C2 C148F2  ptr 3  reads  | writes  | calls $C14957 $C14961 $C1496B $C14975 $C14AC9
+C14AC9    9 ins  only from code that never ran    callers C14AB3 C14AB9 C14ABF C14AC5  ptr 4  reads  | writes  | calls 
+C14AD9   11 ins  only from code that never ran    callers C148F5  ptr 1  reads $0DC0 | writes  | calls $C00514 $C14957 $C14961 $C1496B $C14975 $C14AF9
+C14AF9   11 ins  only from code that never ran    callers C14AE3 C14AE9 C14AEF C14AF5  ptr 4  reads  | writes $000F | calls $C0222C $C0225C
+C14B10   13 ins  only from code that never ran    callers C148DA  ptr 1  reads  | writes  | calls $C14957 $C14961 $C1496B $C14975 $C14B39
+C14B39   23 ins  only from code that never ran    callers C14B13 C14B1D C14B27 C14B31  ptr 4  reads $0000 | writes $0000 $034F $0351 $0D78 | calls $C01195 $C14B66 $C2445C
+C14B66   23 ins  only from code that never ran    callers C14B4C  ptr 2  reads $0349 | writes $0D7C | calls $C00CE7 $C00D07 $C010BA
+C14BA3   29 ins  only from code that never ran    callers C148FF  ptr 1  reads  | writes $000F $034F $0351 | calls $C14BE4
+C14BE4   24 ins  only from code that never ran    callers C14BBD C14BC7 C14BD3 C14BDF  ptr 5  reads $000F | writes  | calls $C2445C
+C14F09    8 ins  pointer/table only               callers   ptr 1  reads  | writes $0325 $0327 | calls 
+C14F19    8 ins  pointer/table only               callers   ptr 1  reads  | writes $0329 $032B | calls 
+C15040    2 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C212A3
+C1518C   22 ins  pointer/table only               callers   ptr 1  reads $0006 $0008 $0013 | writes $000F $0011 $0FE8 | calls $C150E6
+C1525D  103 ins  only from code that never ran    callers C1539D C153D4 C15411  ptr 3  reads $0006 $0008 $0012 $0014 $0016 $0018 | writes $0006 $000F $0011 $034F $0351 $0353 $0355 | calls $C1000C $C10BF0 $C10CAD $C10CC5 $C15338 $C15358 $C15370
+C15338   14 ins  only from code that never ran    callers C15260 C152A2 C152C8 C1530B  ptr 4  reads $035B $035C $035D $035E $0FE8 | writes $0012 $0013 $0014 $0015 $0016 $0017 $0018 $0019 | calls 
+C15358   11 ins  only from code that never ran    callers C15290 C152F9  ptr 3  reads $0351 | writes  | calls $C15166
+C15370    9 ins  only from code that never ran    callers C152B8 C15321  ptr 2  reads  | writes  | calls 
+C1537F   16 ins  pointer/table only               callers   ptr 4  reads  | writes $035B $035C $035D $035E $0FE8 | calls $C1525D
+C153A1   15 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00DAF
+C153C0   37 ins  pointer/table only               callers   ptr 1  reads $0016 $0017 $7E6C4D | writes $0012 $0014 $0016 $035B $035C $0FE8 | calls $C00E89 $C00EF7 $C02409 $C02569 $C1525D
+C15420   33 ins  only from code that never ran    callers C1547D  ptr 9  reads $0012 $0016 | writes $0012 $0013 $0016 $0017 | calls 
+C15458   18 ins  only from code that never ran    callers C154E6 C15504 C15535 C15545  ptr 4  reads  | writes $000C $000E | calls $C02595 $C025B1 $C02648 $C15420
+C15482   15 ins  only from code that never ran    callers C154B7 C1550A  ptr 2  reads $035B | writes $0006 $0007 $0008 $035B | calls 
+C154A1    8 ins  no reference                     callers   ptr -22  reads $7E64F6 | writes  | calls 
+C154B1  176 ins  only from code that never ran    callers C15755  ptr 1  reads $0006 $0012 $0013 $0018 $0019 $034F $035B $035C | writes $0006 $0009 $000B $0012 $0013 $0014 $0015 $0018 ... | calls $C02483 $C15458 $C15482
+C15629  109 ins  only from code that never ran    callers C15762  ptr 1  reads $0006 $0008 $0FE8 | writes $000F $0011 | calls $C1000C $C10CAD $C10CC5
+C1570A   15 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C00DAF
+C15729   32 ins  pointer/table only               callers   ptr 1  reads $7E6BFA | writes $034F $035B $035C $0FE8 $7E6BFA | calls $C00E89 $C00EF7 $C154B1 $C15629
+C16145    5 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C01215
+C16152   12 ins  pointer/table only               callers   ptr 1  reads $0012 $0014 | writes $0012 $0014 | calls 
+C1631F   17 ins  pointer/table only               callers   ptr 1  reads $033D | writes $0038 $033D $7E6C8E $7E6C90 | calls 
+C1634A    5 ins  pointer/table only               callers   ptr 1  reads  | writes $7E6C8D $7E6C8F | calls 
+C163B9   12 ins  no reference                     callers   ptr -4  reads $033D | writes $0038 $033D | calls 
+C164C0   11 ins  pointer/table only               callers   ptr 3  reads  | writes $0038 | calls $C00DAF
+C164DA   63 ins  pointer/table only               callers   ptr 2  reads $0014 $0016 $0017 | writes $0014 $0015 $0016 $0319 $031F | calls $C00EF7 $C02409 $C02569
+C16817    1 ins  no reference                     callers   ptr -8  reads  | writes  | calls 
+C168E6    1 ins  no reference                     callers   ptr -5  reads  | writes  | calls 
+C16A96   23 ins  pointer/table only               callers   ptr 1  reads  | writes $0012 $0013 $0014 | calls $C00DAF $C1610E
+C16ACF   18 ins  pointer/table only               callers   ptr 2  reads  | writes $0012 | calls $C160D4
+C16AF8    2 ins  no reference                     callers   ptr -5  reads  | writes  | calls $C00EF7
+C16AFD   24 ins  pointer/table only               callers   ptr 1  reads  | writes $0012 $0013 $0014 | calls $C00DAF $C1610E
+C16B33  137 ins  pointer/table only               callers   ptr 1  reads $0000 $0012 $0013 $1C8A $1C8C $1C8D | writes $0000 $0012 $0013 $1C8C $7E6C7C | calls $C007A1 $C00E89 $C00EF7 $C01215 $C160D4
+C16C7F   58 ins  pointer/table only               callers   ptr 4  reads $0000 | writes $0000 | calls 
+C16CFA   79 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00EF7
+C16DB1    9 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls 
+C16DC3   11 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C00DAF
+C16DDE   51 ins  pointer/table only               callers   ptr 1  reads $0000 $0012 $1C8A | writes $0000 $0012 | calls $C00BA8 $C00EF7
+C16FC9  129 ins  pointer/table only               callers   ptr 1  reads $0016 $034B | writes $0012 $0014 $0D78 | calls $C00CE7 $C00D10 $C00E89 $C00EF7 $C010BA $C01195 $C02409 $C17103 ...
+C17103   53 ins  only from code that never ran    callers C1707A C170B2 C170D0  ptr 4  reads $0013 $0016 $0017 | writes $0012 $0014 $0016 | calls $C01215 $C024A2 $C02566 $C02569
+C1717B   18 ins  only from code that never ran    callers C170AB C170B5  ptr 2  reads $0012 | writes $0012 | calls $C010BA
+C17463   16 ins  pointer/table only               callers   ptr 1  reads $030F | writes $030F $031D | calls $C10045 $C171A8 $C171B9 $C173AD
+C20035   42 ins  only from code that never ran    callers C11B11  ptr 35  reads $0FF7 $0FF9 $0FFA $0FFC | writes $0006 $0008 $0FFA $0FFB $0FFC | calls $C2023D
+C20087   39 ins  pointer/table only               callers   ptr 2  reads $0000 $0029 $0FF7 $0FF9 $0FFA $0FFC | writes $0000 $001A $001C $0FFA $0FFB $0FFC | calls $C2023D
+C20198    2 ins  no reference                     callers   ptr -82  reads  | writes  | calls $C2023D
+C209B6    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C209BA    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C209E1    2 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls 
+C20A0B    2 ins  pointer/table only               callers   ptr 5  reads  | writes  | calls 
+C20A0F    2 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls 
+C20A38    2 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls 
+C20A3C   16 ins  pointer/table only               callers   ptr 1  reads $0012 $00B6 | writes $0012 $0013 $00B6 | calls $C20EAB
+C20AF4    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C20B28    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C20B47    3 ins  pointer/table only               callers   ptr 2  reads $0FF1 | writes  | calls $C20EAB
+C20B53    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C20B59    7 ins  pointer/table only               callers   ptr 1  reads $0FF1 | writes $0FF1 | calls $C20EAB
+C20B6D    3 ins  pointer/table only               callers   ptr 1  reads $0FF1 | writes  | calls $C20EAB
+C20B7C    3 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls 
+C20B82    7 ins  pointer/table only               callers   ptr 1  reads $0FF1 | writes $0FF1 | calls $C20EAB
+C20B92    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C20B96    5 ins  pointer/table only               callers   ptr 1  reads $0FF1 | writes $0FF1 | calls $C20EAB
+C20BA2    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C20BA8    7 ins  pointer/table only               callers   ptr 6  reads $0FF1 | writes $0FF1 | calls $C20EAB
+C20BC8    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C20EAB
+C20BE4    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C20EAB
+C20BF0    4 ins  pointer/table only               callers   ptr 4  reads  | writes  | calls $C20EAB
+C20C16    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C20C24 $C20C8E
+C20C1D    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C20C2F $C20C8E
+C20C53    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C20C65 $C20C8E
+C20C74    4 ins  no reference                     callers   ptr -39  reads $0012 | writes $0FF1 $0FF2 | calls 
+C20C87    3 ins  no reference                     callers   ptr -7  reads  | writes $0FF1 $0FF2 | calls 
+C20CAB    7 ins  pointer/table only               callers   ptr 1  reads $0FF1 | writes $0FF1 | calls 
+C20CBA    6 ins  pointer/table only               callers   ptr 1  reads $0FF1 | writes $0FF1 | calls 
+C20CD7    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C20ED5
+C20CE3    2 ins  pointer/table only               callers   ptr 5  reads  | writes  | calls $C20EC0
+C20CED    2 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C20ED5
+C20D31    2 ins  pointer/table only               callers   ptr 3  reads  | writes  | calls $C20ED5
+C20D3D    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C20EC0
+C20D47    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C20ED5
+C20D62    8 ins  pointer/table only               callers   ptr 2  reads  | writes $0FF1 $0FF3 | calls 
+C20D72    8 ins  pointer/table only               callers   ptr 2  reads  | writes $0FF1 $0FF3 | calls 
+C20D82    9 ins  pointer/table only               callers   ptr 2  reads  | writes $0FF1 $0FF3 | calls $C20EAB
+C20D95    9 ins  pointer/table only               callers   ptr 2  reads  | writes $0FF1 $0FF3 | calls $C20EAB
+C20DA8    9 ins  pointer/table only               callers   ptr 2  reads $0FF1 $0FF3 | writes  | calls $C20EAB
+C20DBB    9 ins  pointer/table only               callers   ptr 2  reads $0FF1 $0FF3 | writes  | calls $C20EAB
+C20DD2    3 ins  pointer/table only               callers   ptr 2  reads  | writes $0012 | calls $C20EAB
+C20DDD    5 ins  pointer/table only               callers   ptr 6  reads  | writes $0012 | calls 
+C20DE7    6 ins  pointer/table only               callers   ptr 2  reads  | writes $0012 | calls $C20EAB
+C20E0D    3 ins  only from code that never ran    callers C20E50 C20E56  ptr 7  reads  | writes $0014 | calls $C20EAB
+C20E18    5 ins  only from code that never ran    callers C20E4A  ptr 4  reads  | writes $0014 | calls 
+C20E22    6 ins  pointer/table only               callers   ptr 6  reads  | writes $0014 | calls $C20EAB
+C20E4A    2 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C20E18
+C20E50    2 ins  pointer/table only               callers   ptr 4  reads  | writes  | calls $C20E0D
+C20E56    3 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C20E0D
+C20E7D   10 ins  pointer/table only               callers   ptr 2  reads $0FF1 | writes $0012 $0014 | calls 
+C20EEA    6 ins  no reference                     callers   ptr -4  reads  | writes $001A | calls 
+C20EF5    1 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C20EF6    1 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C21115    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C21151    7 ins  pointer/table only               callers   ptr 1  reads  | writes $000F | calls $C0166C
+C2118A    2 ins  no reference                     callers   ptr -19  reads  | writes  | calls 
+C2118E    2 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls 
+C2119A    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C212A3   13 ins  only from code that never ran    callers C15040  ptr 3  reads  | writes  | calls $C212BA
+C214A6   13 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C01215 $C21495
+C21541    7 ins  no reference                     callers   ptr -90  reads $0000 | writes $0000 | calls 
+C21552    3 ins  no reference                     callers   ptr -30  reads  | writes  | calls $C01AF7
+C2155B    8 ins  no reference                     callers   ptr -38  reads  | writes $0D78 | calls $C00CE7
+C215D9   28 ins  no reference                     callers   ptr -8  reads $0012 | writes $0012 | calls $C2184B
+C2160F   28 ins  no reference                     callers   ptr -54  reads  | writes  | calls $C2184B
+C2164C    8 ins  pointer/table only               callers   ptr 3  reads  | writes  | calls 
+C2165D    3 ins  no reference                     callers   ptr -8  reads  | writes  | calls 
+C21665    8 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C2169B    3 ins  pointer/table only               callers   ptr 7  reads  | writes  | calls 
+C216E7   11 ins  no reference                     callers   ptr -4  reads  | writes $001A $001B | calls 
+C21709    6 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C21715    6 ins  no reference                     callers   ptr -45  reads  | writes  | calls 
+C2172C    5 ins  no reference                     callers   ptr -13  reads  | writes  | calls 
+C217AB    4 ins  no reference                     callers   ptr -14  reads  | writes  | calls 
+C217B6    4 ins  no reference                     callers   ptr -3  reads  | writes  | calls 
+C21813    5 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C00BCF
+C21861   16 ins  no reference                     callers   ptr -134  reads $100E | writes  | calls $C212BA
+C2195E   59 ins  only from code that never ran    callers C2128B  ptr 1  reads $0000 $0016 | writes $0000 $0012 $0014 | calls $C024A2 $C02566 $C02569
+C219EA   45 ins  no reference                     callers   ptr -6  reads $0000 $0017 | writes $0000 $0012 $0014 | calls $C024A2 $C02566 $C02569
+C241EA    8 ins  no reference                     callers   ptr -24  reads $034F $0351 | writes $00A6 | calls 
+C24D54   24 ins  only from code that never ran    callers C24CF0  ptr 1  reads $0000 | writes $0000 | calls 
+C24EB9   19 ins  only from code that never ran    callers C24EAF  ptr 2  reads $0000 $0002 $00A6 | writes $0000 $0002 | calls $C24EDF
+C25065   13 ins  only from code that never ran    callers C25032  ptr 1  reads $00BA | writes  | calls 
+C250F1   25 ins  only from code that never ran    callers C14347  ptr 2  reads $0007 | writes $034F $0351 | calls $C2445C $C24A37 $C2514C
+C2511F    5 ins  only from code that never ran    callers C13A5F  ptr 1  reads  | writes $0007 | calls 
+C2516E   16 ins  only from code that never ran    callers C14E51 C33E60 C33E7B C41D43  ptr 6  reads $0000 | writes $0000 | calls 
+C251B8   18 ins  pointer/table only               callers   ptr 1  reads $0000 | writes $0000 | calls $C24738 $C24823 $C24839
+C251DB   20 ins  pointer/table only               callers   ptr 3  reads $0000 | writes $0000 | calls 
+C25202   13 ins  only from code that never ran    callers C34AB1  ptr 1  reads  | writes $000F | calls $C007A1 $C2518E $C265C3
+C2526B   15 ins  only from code that never ran    callers C3724C  ptr 1  reads $0000 | writes $0000 | calls 
+C25285   17 ins  only from code that never ran    callers C37554  ptr 1  reads  | writes  | calls 
+C25357    5 ins  no reference                     callers   ptr -33  reads $0343 | writes  | calls $C00C05
+C262D6    4 ins  only from code that never ran    callers C12EFA  ptr 1  reads  | writes  | calls $C262DC
+C2631A    2 ins  no reference                     callers   ptr -18  reads  | writes  | calls 
+C2632A    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26342   10 ins  pointer/table only               callers   ptr 6  reads  | writes  | calls 
+C26374    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C2637D    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26386    8 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls 
+C26399    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C2639F   27 ins  pointer/table only               callers   ptr 1  reads $00BA | writes $0011 $00BA $17E6 | calls $C400EA
+C263D4    6 ins  only from code that never ran    callers C263B9  ptr -24  reads $17E6 $17E7 | writes  | calls $C304FC
+C263E5    9 ins  pointer/table only               callers   ptr 1  reads $034A | writes $034A | calls $C007A1
+C263F9    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C263FD    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26401    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26405    7 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26419    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26452    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26456   12 ins  pointer/table only               callers   ptr 1  reads $0086 $00BA | writes $1619 | calls $C401F8
+C26A97    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26A9B    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26A9F    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26AA3    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26AA7    2 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C26AD5    3 ins  no reference                     callers   ptr -8  reads  | writes $7E2900 | calls 
+C26ADD    1 ins  no reference                     callers   ptr -4  reads  | writes  | calls 
+C30340    4 ins  pointer/table only               callers   ptr 2  reads  | writes $0007 | calls 
+C30478   10 ins  only from code that never ran    callers C3042F  ptr 1  reads $0349 $1F20 | writes $1F20 | calls $C30491 $C34053
+C30491   49 ins  only from code that never ran    callers C3048C  ptr 3  reads $0006 $0086 $0087 $0349 | writes $0006 | calls $C2133F $C3055A
+C304FC   41 ins  only from code that never ran    callers C263DC  ptr 4  reads $0034 $0086 $17E6 $17E7 $1E39 | writes $1E39 | calls $C01159 $C301A8 $C3027A
+C3055A    5 ins  only from code that never ran    callers C304F7  ptr 23  reads  | writes $0345 $17EA | calls 
+C30788    2 ins  no reference                     callers   ptr -46  reads  | writes  | calls 
+C30935   27 ins  only from code that never ran    callers C3091D  ptr -17  reads  | writes $0011 | calls $C3016F $C301A8 $C3032E $C30BB2 $C30BBA $C30C6A $C33E89 $C400EA
+C30A2B    1 ins  no reference                     callers   ptr -20  reads  | writes  | calls 
+C30A75    1 ins  no reference                     callers   ptr -22  reads  | writes  | calls 
+C30AAC    1 ins  no reference                     callers   ptr -12  reads  | writes  | calls 
+C30D05   13 ins  no reference                     callers   ptr -246  reads  | writes $0011 | calls $C00BA8 $C400EA
+C30D1E   11 ins  only from code that never ran    callers C30D13  ptr 6  reads  | writes  | calls $C301A8 $C3027A $C3371F $C33E89
+C30DEB    2 ins  no reference                     callers   ptr -20  reads  | writes  | calls $C3027A
+C30F1E   16 ins  referenced by code that ran      callers C30F0A  ptr -96  reads  | writes $0011 | calls $C010BA $C0237B $C400D4
+C30F45   13 ins  only from code that never ran    callers C30F31  ptr -56  reads  | writes  | calls $C30150 $C301A8 $C30CB4 $C31027
+C30F65   13 ins  only from code that never ran    callers C30F57  ptr -51  reads  | writes $0011 | calls $C400EA
+C30F7E   14 ins  only from code that never ran    callers C30F73  ptr -32  reads  | writes $0011 | calls $C010BA $C400D4
+C30F9E   25 ins  only from code that never ran    callers C30F8A  ptr 1  reads  | writes $0011 | calls $C3100C $C33DDB $C400D4 $C400EA
+C30FD8   17 ins  only from code that never ran    callers C30FC0  ptr -880  reads  | writes $0011 | calls $C010BA $C0237B $C33DF6 $C400D4
+C31002    3 ins  only from code that never ran    callers C30FEE  ptr 1  reads  | writes  | calls $C31027 $C3381D
+C31027    4 ins  only from code that never ran    callers C30F52 C31005  ptr 2  reads  | writes  | calls 
+C3104A   16 ins  referenced by code that ran      callers C3103D  ptr 1  reads $00BA $1E56 | writes $0011 $1E56 | calls $C33E89 $C400D4
+C31126    3 ins  no reference                     callers   ptr -13  reads  | writes  | calls $C31070
+C312F0   36 ins  only from code that never ran    callers C312DD  ptr 3  reads $0086 | writes $0011 $1EBA $1EBE | calls $C010BA $C2518E $C301A8 $C3032E $C30BD8 $C337E4 $C33EB4 $C400EA
+C31401   14 ins  only from code that never ran    callers C3139D  ptr -371  reads  | writes $0011 | calls $C010BA $C400D4
+C31421    8 ins  only from code that never ran    callers C3140D  ptr -91  reads  | writes  | calls $C010BA $C3136C
+C31438   15 ins  only from code that never ran    callers C313DC  ptr -43  reads  | writes $0011 | calls $C010BA $C33DD2 $C400D4
+C3145B    8 ins  only from code that never ran    callers C31447  ptr -4  reads  | writes  | calls $C010BA
+C314D0    8 ins  referenced by code that ran      callers C314BC  ptr 2  reads  | writes  | calls $C010BA $C3136C
+C314E7   15 ins  only from code that never ran    callers C313B1  ptr 1  reads  | writes $0011 | calls $C010BA $C33DDB $C400D4
+C3150A   15 ins  only from code that never ran    callers C314F6  ptr -54  reads  | writes $0011 | calls $C010BA $C33DD2 $C400D4
+C3152D    8 ins  only from code that never ran    callers C31519  ptr -29  reads  | writes  | calls $C010BA
+C316D4    2 ins  no reference                     callers   ptr -14  reads  | writes  | calls 
+C317C2   17 ins  only from code that never ran    callers C317B9  ptr 1  reads  | writes $0011 | calls $C010BA $C400D4 $C400EA
+C317EB   20 ins  only from code that never ran    callers C317D3  ptr -25  reads  | writes $0011 | calls $C010BA $C400D4 $C400EA
+C31819   16 ins  only from code that never ran    callers C31801  ptr 2  reads  | writes $0011 | calls $C31858 $C400D4 $C400EA
+C3183F    6 ins  only from code that never ran    callers C31827  ptr 1  reads  | writes $1EBA $1EBE | calls $C3027A $C30BD8
+C31853    2 ins  no reference                     callers   ptr -4  reads  | writes  | calls $C3027A
+C31858   20 ins  only from code that never ran    callers C31819  ptr 1  reads $00BB | writes $1C8F | calls $C30004 $C3371F
+C3188C   18 ins  pointer/table only               callers   ptr 1  reads  | writes $0011 $1EBA | calls $C301A8 $C30BD8 $C400D4 $C400EA
+C318B8    2 ins  only from code that never ran    callers C318A0  ptr 1  reads  | writes  | calls $C30125
+C318FD   34 ins  only from code that never ran    callers C318EA  ptr -53  reads  | writes  | calls $C010BA $C301A8 $C3027A $C339B5 $C33E89 $C33EB4
+C31AC9   19 ins  only from code that never ran    callers C31AC0  ptr -5  reads $0086 | writes $0011 | calls $C010BA $C33DD2 $C400D4
+C31AF5   17 ins  only from code that never ran    callers C31AE1  ptr -17  reads  | writes $1EBA $1EBE | calls $C30BD8
+C31C39    1 ins  no reference                     callers   ptr -23  reads  | writes  | calls 
+C31FB4   20 ins  only from code that never ran    callers C31FAB  ptr -13  reads  | writes $0011 | calls $C010BA $C400D4 $C400EA
+C31FE2   16 ins  only from code that never ran    callers C31FCA  ptr 2  reads  | writes $0011 | calls $C3201C $C400D4 $C400EA
+C32008    6 ins  only from code that never ran    callers C31FF0  ptr 8  reads  | writes $1EBA $1EBE | calls $C3027A $C30BD8
+C3201C   19 ins  only from code that never ran    callers C31FE2  ptr 33  reads $00BB | writes $1C8F | calls $C30004
+C3204D   20 ins  pointer/table only               callers   ptr 2  reads  | writes $0011 $1EBA | calls $C30125 $C301A8 $C30BD8 $C400D4 $C400EA
+C32239   28 ins  only from code that never ran    callers C3222C  ptr 6  reads  | writes $0011 | calls $C010BA $C301A8 $C3032E $C33DD2 $C33E89 $C400D4 $C400EA
+C32282    9 ins  only from code that never ran    callers C3226A  ptr 2  reads  | writes  | calls $C3381D $C33DED
+C32732    1 ins  no reference                     callers   ptr -6  reads  | writes  | calls 
+C328A2   24 ins  referenced by code that ran      callers C3273D  ptr -3  reads $0087 $00BB $1EBA | writes $1C8F $1EBA | calls $C30004 $C30125 $C3027A $C3371F
+C328D9   41 ins  pointer/table only               callers   ptr 1  reads $1EBA $1EBE | writes $0011 $1EBA | calls $C00BA8 $C301A8 $C3032E $C30BC4 $C400D4 $C400EA
+C3293D    3 ins  only from code that never ran    callers C32925  ptr -5  reads  | writes  | calls $C30CB4
+C3297A   36 ins  only from code that never ran    callers C3296F  ptr 3  reads  | writes $0011 | calls $C007A1 $C301A8 $C3032E $C3381D $C33E89 $C400D4 $C400EA
+C329D0    9 ins  only from code that never ran    callers C329B8  ptr 2  reads  | writes  | calls $C3381D
+C32A2B   19 ins  only from code that never ran    callers C32A1E  ptr -55  reads  | writes $0011 | calls $C010BA $C400D4
+C32A54   14 ins  only from code that never ran    callers C32A40  ptr -7  reads  | writes  | calls $C023AC $C3371F $C3381D
+C32AAA   16 ins  referenced by code that ran      callers C32A96  ptr -69  reads  | writes $0011 | calls $C010BA $C0237B $C400D4
+C32AD1   13 ins  only from code that never ran    callers C32ABD  ptr -10  reads  | writes  | calls $C30150 $C301A8 $C30CB4 $C32B3B
+C32B3B   10 ins  only from code that never ran    callers C32AE9  ptr 2  reads  | writes  | calls $C00BA8
+C32B51   36 ins  only from code that never ran    callers C32AE0  ptr -3  reads $0000 | writes $0000 $0011 | calls $C400EA
+C32B92   19 ins  only from code that never ran    callers C32B87  ptr -4  reads  | writes $0011 | calls $C010BA $C400D4
+C32E7A   33 ins  only from code that never ran    callers C3324D  ptr -4  reads  | writes  | calls $C301A8 $C3328A $C3371F $C3381D $C33DF6
+C33229   44 ins  only from code that never ran    callers C33044 C33218  ptr 2  reads $00BA $1E60 | writes $0011 $00BA $1E60 | calls $C00BA8 $C010BA $C30105 $C3060D $C32EDC $C337C7 $C33DDB $C40198
+C3328A    5 ins  only from code that never ran    callers C32EB7  ptr 1  reads  | writes  | calls 
+C3329B    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C332BB $C332DD
+C332A3    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C332BB $C332EB
+C332AB    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C332CD $C332EB
+C332B3    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C332CD $C332DD
+C332BB    8 ins  only from code that never ran    callers C3329C C332A4  ptr 2  reads  | writes  | calls 
+C332CD    7 ins  only from code that never ran    callers C332AC C332B4  ptr 3  reads  | writes  | calls 
+C332DD    6 ins  only from code that never ran    callers C3329F C332B7  ptr 2  reads  | writes  | calls 
+C332EB    7 ins  only from code that never ran    callers C332A7 C332AF  ptr 2  reads  | writes  | calls 
+C3335E   28 ins  only from code that never ran    callers C33351  ptr -7  reads  | writes $0011 | calls $C010BA $C301A8 $C3032E $C33DD2 $C33E89 $C400D4 $C400EA
+C333A7    9 ins  only from code that never ran    callers C3338F  ptr -5  reads  | writes  | calls $C3381D $C33DED
+C33458    5 ins  only from code that never ran    callers C33444  ptr -4  reads  | writes  | calls $C333C1 $C3381D
+C3354B    9 ins  referenced by code that ran      callers C334A3  ptr -11  reads  | writes $0011 | calls $C3353B $C3371F $C400D4
+C335C6   17 ins  only from code that never ran    callers C336CB  ptr -8  reads  | writes $0011 | calls $C010BA $C33612 $C33648 $C33DD2 $C400D4
+C335EF    3 ins  only from code that never ran    callers C335DB  ptr 1  reads  | writes  | calls $C33612 $C33DED $C33E67
+C336AD   29 ins  referenced by code that ran      callers C33697  ptr -11  reads $00BB | writes $0011 $1C8F | calls $C30004 $C33648 $C33657 $C3371F $C400D4 $C400DD
+C3378D   21 ins  only from code that never ran    callers C362BB  ptr 2  reads $1699 $169B | writes  | calls 
+C337BE    4 ins  no reference                     callers   ptr -29  reads  | writes  | calls 
+C33B7B    3 ins  only from code that never ran    callers C35E2F  ptr 1  reads  | writes  | calls 
+C33DFF    4 ins  only from code that never ran    callers C3536B C362B8  ptr 3  reads  | writes  | calls 
+C33E67    1 ins  only from code that never ran    callers C335F2  ptr 1  reads  | writes  | calls 
+C34030   15 ins  referenced by code that ran      callers C33F24 C33F9B  ptr -158  reads $00BA | writes $0011 $1C8F $1E60 | calls $C30004 $C3371F $C400D4
+C34053   19 ins  only from code that never ran    callers C3047F  ptr 1  reads $00BA | writes  | calls 
+C340BB   14 ins  only from code that never ran    callers C340A8  ptr -18  reads  | writes $0011 | calls $C34884 $C400D4
+C340DA   41 ins  only from code that never ran    callers C340C6  ptr -2  reads $0086 $00BA $1E55 $1E56 | writes $1C8F $1E60 $1EBA | calls $C007A1 $C30004 $C301A8 $C3371F $C3381D $C33E9D $C3488C $C348A4 ...
+C34147   24 ins  only from code that never ran    callers C3409F  ptr 1  reads $0000 $1E57 $1E58 | writes $0000 $1E57 $1E58 $1E59 $1E5E | calls 
+C341CD   24 ins  only from code that never ran    callers C341B9  ptr -46  reads  | writes $0011 | calls $C007A1 $C010BA $C3381D $C3426A $C400D4
+C3426A   19 ins  only from code that never ran    callers C341DB  ptr 1  reads $00BB $1EBA | writes $1C8F $1EBA | calls $C30004 $C3371F
+C342A1   30 ins  pointer/table only               callers   ptr 1  reads  | writes $0011 $1EBA | calls $C30125 $C301A8 $C337E4 $C3381D $C33E6A $C400D4 $C400EA
+C34466    4 ins  no reference                     callers   ptr -45  reads $0083 | writes $0083 | calls $C00EFB
+C3451B   44 ins  only from code that never ran    callers C345C0  ptr -8  reads  | writes $0011 | calls $C010BA $C3489C $C400D4
+C34580   15 ins  only from code that never ran    callers C3456C  ptr -31  reads  | writes  | calls $C30166 $C3381D $C3488C
+C34659   30 ins  pointer/table only               callers   ptr 1  reads $1E5F | writes $0011 $1E61 | calls $C0124D $C30125 $C301A8 $C3027A $C3375C $C33DDB $C33E89 $C346A7 ...
+C346A7   67 ins  only from code that never ran    callers C34682  ptr 1  reads $1E55 $1E56 | writes $1E5F $1ED5 $1ED7 $1ED9 $1EDB | calls $C010BA $C33880 $C348A4 $C348AC
+C3473E   45 ins  only from code that never ran    callers C3467F  ptr 1  reads $0000 $1E3D $1E57 $1E58 $1E5B $1E61 | writes $0000 $0001 $0012 $0013 $0014 $0015 $1E57 | calls $C448A6
+C347A2   15 ins  only from code that never ran    callers C3467C  ptr 1  reads $1E55 $1E60 | writes $1E61 | calls $C348A4 $C348AC
+C347C3   41 ins  only from code that never ran    callers C34679  ptr 1  reads $0000 $0018 $0019 $1E58 | writes $0000 $0014 | calls $C024CD $C02566 $C02569
+C3482A   10 ins  only from code that never ran    callers C3466A  ptr 1  reads $1E5E | writes $1E5B | calls 
+C3483C   15 ins  only from code that never ran    callers C3469F  ptr -7  reads  | writes $0011 | calls $C010BA $C33DD2 $C400D4
+C3485F    2 ins  only from code that never ran    callers C3484B  ptr -9  reads  | writes  | calls $C30125
+C34884    3 ins  only from code that never ran    callers C340BD  ptr 1  reads  | writes  | calls $C010BA $C34877
+C3489C    3 ins  only from code that never ran    callers C3452A  ptr 1  reads  | writes  | calls $C010BA $C3488C
+C34AEC   32 ins  referenced by code that ran      callers C34AD8  ptr -1  reads $1E60 | writes $0011 $1E60 | calls $C010BA $C301A8 $C33E89 $C34C7A $C400D4 $C400EA
+C34C3C   18 ins  pointer/table only               callers   ptr 1  reads  | writes $0011 | calls $C007A1 $C010BA $C400D4
+C34C65    9 ins  only from code that never ran    callers C34C51  ptr -10  reads $1E63 | writes $0011 | calls $C00EFB $C400D4
+C34C7A   38 ins  only from code that never ran    callers C34AFD  ptr 1  reads $00BA $00BB | writes $1C8F $1E5B $1E5C $1E5D $1E5E $1E60 $1E61 $1E63 | calls $C00D90 $C30004 $C3371F
+C34CCF   21 ins  pointer/table only               callers   ptr 1  reads $1E5B $1E5C $1E5D $1E5E | writes $1E5B | calls 
+C34D0A    4 ins  pointer/table only               callers   ptr 2  reads  | writes  | calls $C446A1
+C34D13    6 ins  pointer/table only               callers   ptr 5  reads $1E57 $1E58 $1E59 $1E5A | writes  | calls 
+C34D22   35 ins  pointer/table only               callers   ptr 11  reads $1E60 | writes $0011 | calls $C010BA $C3017C $C301A8 $C3375C $C33DD2 $C33E89 $C34E39 $C400D4 ...
+C34D78   19 ins  only from code that never ran    callers C34D60  ptr -3  reads $1E61 | writes  | calls $C010BA $C301A8 $C3027A $C33DED $C33E89 $C34E39 $C34E92 $C34EA6
+C34DAC    2 ins  only from code that never ran    callers C34D24  ptr -5  reads  | writes  | calls $C34DB2
+C34DB2   19 ins  only from code that never ran    callers C34DAC C34E1D  ptr 5  reads  | writes $0011 | calls $C010BA $C34E21 $C400D4 $C400EA
+C34DDF   23 ins  only from code that never ran    callers C34DC7  ptr -28  reads $1E60 | writes $0011 $1E62 | calls $C010BA $C301A8 $C33E89 $C34E39 $C34EA6 $C400D4
+C34E1A    3 ins  only from code that never ran    callers C34E06  ptr -25  reads  | writes  | calls $C30125 $C34DB2
+C34E21   13 ins  only from code that never ran    callers C34DB2  ptr 1  reads $00BA | writes  | calls 
+C34E39   39 ins  only from code that never ran    callers C34D4E C34D9E C34DF0  ptr 3  reads $0018 $0019 $1E60 | writes $0014 $0015 | calls $C024CD $C02566 $C02569
+C34E92    8 ins  only from code that never ran    callers C34DA1  ptr 1  reads $1E5B $1E5C | writes  | calls 
+C34EA6    3 ins  only from code that never ran    callers C34DA4 C34DF3  ptr 2  reads  | writes  | calls $C3371F $C33E6A
+C34EAD   33 ins  pointer/table only               callers   ptr 1  reads  | writes $0011 $17C2 | calls $C30138 $C3017C $C301A8 $C33E89 $C34F40 $C35335 $C3549F $C400D4 ...
+C34EFC   15 ins  only from code that never ran    callers C34EE8  ptr -3  reads  | writes $0011 | calls $C400D4
+C34F1D   13 ins  only from code that never ran    callers C34F09  ptr -27  reads  | writes $0011 | calls $C400D4
+C34F39    1 ins  only from code that never ran    callers C34F25  ptr -10  reads  | writes  | calls 
+C34F3B    2 ins  no reference                     callers   ptr -5  reads  | writes  | calls $C3027A
+C34F40   13 ins  only from code that never ran    callers C34EDD  ptr 1  reads $0000 $123F $1240 $1EC7 $1EC8 | writes $0000 | calls 
+C34F5D   12 ins  only from code that never ran    callers C34F16  ptr -13  reads  | writes $0011 | calls $C400D4
+C34F77   34 ins  only from code that never ran    callers C34F63  ptr -11  reads $1E46 $1E48 | writes $1E46 $1E47 $1E48 $1E49 | calls $C00BA8 $C00BCF $C446A1
+C34FC6   12 ins  only from code that never ran    callers C34F32  ptr -14  reads  | writes $0011 | calls $C400D4
+C34FE0   47 ins  only from code that never ran    callers C34FCC  ptr -52  reads $1E3D $1E43 $1E45 | writes $0011 $1E3D | calls $C301A8 $C30BB2 $C337C7 $C33E89 $C400D4 $C400EA $C446A1 $C446A9 ...
+C35052    3 ins  only from code that never ran    callers C3503A  ptr -39  reads  | writes  | calls $C3027A
+C3505B   15 ins  only from code that never ran    callers C34F70 C34FD9  ptr 1  reads  | writes $0011 | calls $C010BA $C33DDB $C400D4
+C3507E   11 ins  only from code that never ran    callers C3506A  ptr -8  reads  | writes  | calls $C007A1 $C010BA
+C3509C   14 ins  only from code that never ran    callers C35047  ptr 2  reads  | writes $0011 | calls $C010BA $C400D4
+C350BC    5 ins  only from code that never ran    callers C350A8  ptr -9  reads  | writes  | calls $C010BA $C33DF6
+C350CC   19 ins  only from code that never ran    callers C34EF5  ptr -14  reads  | writes $0011 | calls $C00BA8 $C35306 $C400D4
+C350F5    1 ins  no reference                     callers   ptr -36  reads  | writes  | calls 
+C350F6   14 ins  only from code that never ran    callers C350ED  ptr -28  reads  | writes $0011 | calls $C010BA $C400D4
+C35306   13 ins  only from code that never ran    callers C350CC  ptr 1  reads $0000 | writes $0000 | calls 
+C3531D   13 ins  only from code that never ran    callers C353BC  ptr 1  reads $00BA | writes  | calls 
+C35335   11 ins  only from code that never ran    callers C34ECE  ptr 1  reads  | writes $1E5E | calls 
+C35349   46 ins  pointer/table only               callers   ptr 1  reads  | writes $1E3D | calls $C0124D $C30125 $C30192 $C301A8 $C3027A $C33DD2 $C33DFF $C33E89 ...
+C353C3   17 ins  only from code that never ran    callers C35363  ptr 6  reads $1E5D | writes $1E4E $1E4F $1E50 $1E52 | calls $C44971
+C353EF   15 ins  only from code that never ran    callers C35366  ptr 1  reads $1E5E | writes $1E5E | calls 
+C3540A   30 ins  only from code that never ran    callers C353AF  ptr 2  reads $1E3D | writes $0012 $0013 $0014 $0015 | calls $C00BA8 $C30BB2 $C448A6
+C3544D    3 ins  only from code that never ran    callers C35354  ptr -25  reads  | writes  | calls $C41EEC
+C35453    1 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C35494    5 ins  only from code that never ran    callers C355CE  ptr 1  reads $0082 | writes  | calls 
+C3549F   25 ins  only from code that never ran    callers C34ED1  ptr 1  reads $1699 | writes $030A $030B $030C $1E5F $1E60 $1EA1 $1EA2 | calls $C00D90
+C354D9   76 ins  pointer/table only               callers   ptr 1  reads $0006 | writes $0006 $000F $0011 $7E3BC6 $7E3BC7 $7E3CAF | calls $C00E84 $C00E89 $C1000C
+C355B3   15 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C00E89 $C00EF7 $C35494 $C355DD $C35611 $C35659 $C35870 $C35884 ...
+C355DD   24 ins  only from code that never ran    callers C355B6  ptr 1  reads $1E63 $1E64 | writes  | calls $C356B6 $C35884
+C35611   18 ins  only from code that never ran    callers C355D9  ptr 1  reads $1E63 $1E64 | writes  | calls $C35636
+C35636   16 ins  only from code that never ran    callers C35624  ptr 1  reads  | writes  | calls 
+C35657    1 ins  no reference                     callers   ptr -123  reads  | writes  | calls 
+C35658    1 ins  no reference                     callers   ptr -37  reads  | writes  | calls 
+C35659   16 ins  only from code that never ran    callers C355C3  ptr 1  reads $1E63 $1E64 | writes  | calls $C3567D
+C3567D    3 ins  only from code that never ran    callers C35679  ptr 1  reads  | writes  | calls $C35684 $C35838
+C35684   21 ins  only from code that never ran    callers C35680  ptr 1  reads $0082 $1E63 | writes  | calls $C356B6 $C356F4
+C356B6   17 ins  only from code that never ran    callers C3560C C356AE  ptr 2  reads $1E63 | writes  | calls $C356D8
+C356D8   15 ins  only from code that never ran    callers C356C9  ptr 1  reads  | writes  | calls 
+C356F4   11 ins  only from code that never ran    callers C356B2  ptr 1  reads $1E63 | writes  | calls $C35710 $C3575A $C3577B $C35796
+C35710   36 ins  only from code that never ran    callers C356F7  ptr 1  reads $0006 $0007 $0009 | writes $0006 $0007 $0009 | calls 
+C3575A   19 ins  only from code that never ran    callers C35706  ptr 1  reads $0006 $0007 | writes $0006 $0007 | calls 
+C3577B   13 ins  only from code that never ran    callers C35703  ptr 1  reads  | writes  | calls $C00BA8
+C35796   81 ins  only from code that never ran    callers C356FE  ptr 1  reads $0006 $0007 $0008 $0012 $0014 $0016 $0017 $0018 | writes $0006 $0007 $0008 $0009 $0012 $0014 $0016 $0018 ... | calls 
+C35838   22 ins  only from code that never ran    callers C3567D  ptr 1  reads $1E63 $1E64 | writes  | calls 
+C35870   11 ins  only from code that never ran    callers C355C6  ptr 2  reads $1E63 $1E64 | writes  | calls 
+C35884   10 ins  only from code that never ran    callers C355C0 C355DE  ptr 2  reads  | writes $1E63 $1E64 | calls 
+C35898   19 ins  only from code that never ran    callers C355B9  ptr 1  reads  | writes $0306 $0307 $0308 $030D $0311 $0312 $0313 $0314 ... | calls 
+C358C9   31 ins  only from code that never ran    callers C355D6  ptr 3  reads $00DA $00DC $00DD $00DF | writes $000F $0011 | calls $C1000C $C3591A $C35983 $C35B9C $C35BB3 $C35BE0
+C3590B    7 ins  only from code that never ran    callers C355CB  ptr 2  reads  | writes  | calls $C10045 $C35BE0
+C3591A   32 ins  only from code that never ran    callers C358CE  ptr 1  reads $0000 $0001 $1E64 $1E98 | writes $0000 $0001 $1E98 | calls $C3595A $C35961 $C3596E
+C3595A    4 ins  only from code that never ran    callers C35956 C3598C C35A1F  ptr 3  reads  | writes $1E99 | calls 
+C35966    5 ins  only from code that never ran    callers C35991  ptr 1  reads $169B | writes  | calls 
+C3596E   14 ins  only from code that never ran    callers C35950 C359AB C35ADE  ptr 3  reads $00DA $00DD | writes $00DA $00DD | calls 
+C35983   29 ins  only from code that never ran    callers C358D1  ptr 1  reads $1E63 $1E64 $1E98 $1E99 | writes $1E99 | calls $C3595A $C35961 $C35966 $C3596E $C359FF $C35A71 $C35AE3
+C359CA   27 ins  only from code that never ran    callers C35A2D  ptr 1  reads $1E63 $1E64 | writes  | calls 
+C359FF   47 ins  only from code that never ran    callers C359BE  ptr 7  reads $1E63 $1E98 $1E9A $1E9B $1EA4 | writes $1E98 $1E9A $1E9B $1E9D $1E9E $1E9F $1EA0 $1EA3 ... | calls $C3595A $C35961 $C359CA
+C35A71   59 ins  only from code that never ran    callers C359C4  ptr 1  reads $0006 $0007 $0009 $1E98 $1E99 $1E9A $1E9B $1E9D ... | writes $0006 $0007 $0009 $1E9E $1EA0 $1EA9 $1EAA | calls $C3596E $C35B2A
+C35AE3   11 ins  only from code that never ran    callers C359C1  ptr 1  reads $1EA3 $1EA4 | writes $1EA5 $1EA6 $1EA7 $1EA8 | calls $C35AFE
+C35AFE   12 ins  only from code that never ran    callers C35AF3 C35AF9  ptr 2  reads  | writes $1EA5 $1EA6 $1EA7 $1EA8 | calls 
+C35B2A   29 ins  only from code that never ran    callers C35ADB  ptr 1  reads $1EA5 $1EA6 $1EA7 $1EA8 $1EA9 $1EAA | writes $1EAA | calls $C35B6C $C35B80
+C35B6C   11 ins  only from code that never ran    callers C35B3F C35B59  ptr 2  reads  | writes $0006 | calls 
+C35B80   11 ins  only from code that never ran    callers C35B4C C35B66  ptr 2  reads  | writes $0006 | calls 
+C35B9C   13 ins  only from code that never ran    callers C358D4  ptr 2  reads  | writes  | calls 
+C35BB3   24 ins  only from code that never ran    callers C358CB C358D7  ptr 2  reads $0082 | writes $00DA $00DC $00DD $00DF | calls 
+C35BE0    6 ins  only from code that never ran    callers C358E6 C3590B  ptr 2  reads $0082 | writes  | calls 
+C35BEB   46 ins  pointer/table only               callers   ptr 1  reads  | writes $0011 | calls $C30150 $C3017C $C301A8 $C3027A $C3032E $C30BBA $C33E89 $C33EB4 ...
+C35C5F    5 ins  only from code that never ran    callers C35C0B  ptr 1  reads  | writes  | calls $C30BB2 $C33B22
+C35C68   47 ins  only from code that never ran    callers C35BF9  ptr 1  reads $1EC0 | writes $0011 | calls $C33B75 $C33D2F $C400EA
+C35CC5   15 ins  only from code that never ran    callers C35BF1  ptr 1  reads $0086 $00BA | writes $0087 | calls $C2133F $C30125 $C33E89
+C35CE9   14 ins  only from code that never ran    callers C35C8C  ptr -1  reads  | writes $0011 | calls $C010BA $C400D4
+C35D09   15 ins  only from code that never ran    callers C35CF5  ptr -15  reads  | writes $0011 | calls $C010BA $C35F7C $C400D4
+C35D2C   15 ins  only from code that never ran    callers C35D18  ptr -6  reads  | writes $0011 | calls $C400D4 $C400EA
+C35D4F   25 ins  only from code that never ran    callers C35D37  ptr -5  reads  | writes $0011 | calls $C007A1 $C010BA $C301A8 $C30BB2 $C33B26 $C400D4
+C35D87   10 ins  only from code that never ran    callers C35D73  ptr -8  reads  | writes $0011 | calls $C3381D $C400D4
+C35DA0   14 ins  only from code that never ran    callers C35CA3  ptr -9  reads  | writes $0011 | calls $C010BA $C400D4
+C35DC0   33 ins  only from code that never ran    callers C35D95 C35DAC  ptr -17  reads $1E56 | writes $1E56 | calls $C007A1 $C00BA8 $C010BA $C301A8 $C3381D $C33E89 $C36079
+C35E16   27 ins  only from code that never ran    callers C35CBC  ptr -19  reads $1E56 | writes $0011 $1E56 | calls $C010BA $C301A8 $C30BB2 $C33B7B $C400D4
+C35E55   24 ins  only from code that never ran    callers C35E41  ptr -25  reads  | writes $0011 $1E56 | calls $C007A1 $C010BA $C3371F $C36235 $C400D4 $C400EA
+C35E90   19 ins  only from code that never ran    callers C35E78  ptr -11  reads $1E56 | writes $0011 $1E56 | calls $C010BA $C400D4
+C35EBD   23 ins  only from code that never ran    callers C35EA9  ptr -5  reads  | writes $0011 $1E56 | calls $C007A1 $C010BA $C361B5 $C400D4 $C400EA
+C35EF5   16 ins  only from code that never ran    callers C35EDD  ptr 1  reads $1E56 | writes $0011 $1E56 | calls $C400D4
+C35F19   14 ins  only from code that never ran    callers C35F05  ptr -23  reads  | writes $0011 | calls $C010BA $C400D4
+C35F39   19 ins  only from code that never ran    callers C35F25  ptr -8  reads  | writes $0011 | calls $C007A1 $C010BA $C400D4
+C35F64    8 ins  only from code that never ran    callers C35F50  ptr 1  reads  | writes  | calls $C010BA $C3381D
+C35F7C   45 ins  only from code that never ran    callers C35D09  ptr 1  reads $00BA $00BB $034F $1EBA | writes $034F $0351 $1C8F $1EBA | calls $C007A1 $C30004 $C3371F
+C35FDD   43 ins  pointer/table only               callers   ptr 2  reads  | writes $0011 | calls $C010BA $C301A8 $C3032E $C33E89 $C400D4 $C400EA $C42437
+C36049   18 ins  only from code that never ran    callers C36031  ptr -12  reads  | writes $0011 | calls $C33E89 $C400D4 $C400EA
+C36075    2 ins  only from code that never ran    callers C3605D  ptr -16  reads  | writes  | calls $C30125
+C36079   38 ins  only from code that never ran    callers C35DD1  ptr 1  reads $00BA $00BB $1E56 $1EBA | writes $00BA $1C8F $1E56 $1EBA | calls $C30004 $C3371F
+C360CC   68 ins  pointer/table only               callers   ptr 1  reads $1E56 | writes $1E50 $1E52 | calls $C00BA8 $C30125 $C301A8 $C3027A $C33DDB $C33E52 $C33E89 $C3616E ...
+C36178    6 ins  only from code that never ran    callers C36160  ptr 1  reads $1E56 | writes $1E4E $1E4F | calls $C44971
+C36189   13 ins  only from code that never ran    callers C36129  ptr 1  reads  | writes  | calls 
+C361A6    8 ins  only from code that never ran    callers C360DD C360FD  ptr 2  reads  | writes  | calls 
+C361B5   13 ins  only from code that never ran    callers C35ECF  ptr 1  reads $00BA $00BB | writes $1C8F | calls $C30004 $C3371F
+C361CE   40 ins  pointer/table only               callers   ptr 1  reads  | writes $1E3D | calls $C007A1 $C0124D $C30125 $C301A8 $C33DDB $C33E52 $C33E89 $C447BC
+C36235   14 ins  only from code that never ran    callers C35E6A  ptr 1  reads $0087 | writes $1C8F | calls $C30004
+C36252   71 ins  pointer/table only               callers   ptr 1  reads $0086 $00BA | writes $0011 $0087 $0D78 | calls $C00CE7 $C010BA $C2133F $C30125 $C301A8 $C3378D $C33DD2 $C33DFF ...
+C362FF   35 ins  only from code that never ran    callers C3627D  ptr 13  reads $0087 | writes $0D78 $0D7C | calls $C00CE7 $C00D07 $C01195
+C3634D    6 ins  only from code that never ran    callers C362B3 C362FB  ptr 2  reads  | writes  | calls $C01215
+C36497   15 ins  referenced by code that ran      callers C36362  ptr -2  reads $00BA | writes $0087 | calls $C010BA $C2133F $C30125 $C33E89
+C365C9   14 ins  only from code that never ran    callers C3654A  ptr -8  reads  | writes $0011 | calls $C010BA $C400D4
+C365E9   26 ins  only from code that never ran    callers C365D5  ptr -6  reads  | writes $0011 | calls $C007A1 $C010BA $C301A8 $C33E89 $C36884 $C368F8 $C400D4
+C36629    3 ins  only from code that never ran    callers C36615  ptr -5  reads  | writes  | calls $C3027A
+C3667E    9 ins  referenced by code that ran      callers C3666A  ptr -21  reads  | writes  | calls $C301A8 $C3381D $C33E89 $C36A3A
+C36884   48 ins  only from code that never ran    callers C365F2  ptr 1  reads $0006 $00BB | writes $0006 $0351 $1C8F | calls $C30004 $C3371F
+C368E0   13 ins  only from code that never ran    callers C369E3  ptr 1  reads $00BA | writes  | calls 
+C368F8   10 ins  only from code that never ran    callers C36604  ptr 1  reads  | writes  | calls 
+C36909   29 ins  pointer/table only               callers   ptr 2  reads  | writes $0011 | calls $C010BA $C3017C $C3371F $C33DD2 $C400D4
+C36949   23 ins  only from code that never ran    callers C36935  ptr -2  reads $0086 | writes $0011 | calls $C010BA $C3032E $C400D4
+C36980   14 ins  only from code that never ran    callers C3696C  ptr -16  reads  | writes $0011 | calls $C010BA $C400D4
+C369A0   15 ins  only from code that never ran    callers C3698C  ptr -10  reads  | writes $0011 | calls $C010BA $C33DED $C400D4
+C369C3   15 ins  only from code that never ran    callers C369AF  ptr -10  reads $0086 | writes $00A6 | calls $C24F5B $C368E0
+C36A22   13 ins  only from code that never ran    callers C36A6E  ptr 1  reads $00BA | writes  | calls 
+C36A3A   10 ins  only from code that never ran    callers C3668A  ptr 1  reads  | writes  | calls 
+C36B1F   13 ins  only from code that never ran    callers C36B08  ptr 1  reads $0000 | writes $0000 | calls 
+C36B6D    5 ins  only from code that never ran    callers C36B59  ptr -16  reads  | writes  | calls $C010BA $C33DF6
+C3715B   39 ins  no reference                     callers   ptr 0  reads  | writes $0011 $1EBA | calls $C00B99 $C3032E $C30BCE $C30C36 $C3371F $C3375C $C337C7 $C33E89 ...
+C371BD   15 ins  only from code that never ran    callers C371AC  ptr -5  reads $0007 | writes  | calls $C00BA8 $C30337 $C3375C $C371E0
+C371E0   26 ins  only from code that never ran    callers C371DC  ptr 1  reads $0000 $0087 | writes $0000 | calls $C00BA8 $C2133F
+C3721C   19 ins  pointer/table only               callers   ptr 1  reads $1E58 | writes  | calls $C00BA8 $C00BCF $C37245 $C3726D $C37FB9
+C37245   20 ins  only from code that never ran    callers C37223 C3734F  ptr 2  reads  | writes $1E59 | calls $C25251 $C2526B
+C3726D   12 ins  only from code that never ran    callers C37240  ptr 1  reads  | writes $0011 $1E56 $1E57 | calls $C400EA
+C37331   17 ins  only from code that never ran    callers C37151 C37540 C37B37  ptr 3  reads $0006 | writes $0006 | calls 
+C3734F   49 ins  pointer/table only               callers   ptr 1  reads $0000 $1E59 | writes $0000 $0011 $1EBA | calls $C010BA $C3032E $C30BCE $C30C36 $C3371F $C37101 $C37245 $C400D4 ...
+C373C0   27 ins  only from code that never ran    callers C373AC  ptr 1  reads  | writes $0011 | calls $C010BA $C301A8 $C3027A $C3381D $C33E89 $C37405 $C37FB9 $C400D4
+C37405   40 ins  only from code that never ran    callers C373C6  ptr 1  reads $0087 $00BA $00BB | writes $1C8F | calls $C007A1 $C30004 $C3371F $C3375C
+C37459   46 ins  pointer/table only               callers   ptr 1  reads $1E38 | writes  | calls $C010BA $C0124D $C30125 $C3017C $C301A8 $C3027A $C302AC $C3032E ...
+C374CE    9 ins  only from code that never ran    callers C3749A  ptr 1  reads  | writes  | calls $C33D05
+C374E3   26 ins  only from code that never ran    callers C3749D  ptr 1  reads  | writes  | calls $C33E55
+C37513   13 ins  only from code that never ran    callers C37492  ptr 1  reads  | writes  | calls 
+C37529   14 ins  only from code that never ran    callers C374BB  ptr 1  reads  | writes  | calls $C3371F
+C37540   44 ins  pointer/table only               callers   ptr 1  reads $0086 $1E63 $1E64 | writes $0011 $001E $17C3 $1E63 $1E64 | calls $C00D90 $C25285 $C3371F $C3381D $C33E89 $C37331 $C375B5 $C400EA
+C375B5   29 ins  only from code that never ran    callers C3756C C3757A  ptr 2  reads $00BA $00BB $1E63 | writes $1C8F | calls $C007A1 $C30004
+C375F3   45 ins  pointer/table only               callers   ptr 1  reads $0034 | writes  | calls $C00BA8 $C0124D $C30125 $C3017C $C301A8 $C3027A $C33DDB $C33E52 ...
+C37660   12 ins  only from code that never ran    callers C37611 C3764F C37A19 C37B17  ptr 4  reads $1E3E $1E3F $1E40 $1E41 | writes $1E3D | calls $C446A9
+C37683   29 ins  only from code that never ran    callers C3761D C37A35  ptr 2  reads $0006 | writes $0006 | calls 
+C376CC   48 ins  pointer/table only               callers   ptr 1  reads $0315 $1E64 | writes $0011 $0315 $1E63 $1E78 | calls $C00E89 $C00EF7 $C3371F $C37748 $C400D4 $C400EA
+C37741    2 ins  only from code that never ran    callers C37729  ptr -17  reads  | writes  | calls $C3381D
+C37748   30 ins  only from code that never ran    callers C37715 C3771B  ptr 2  reads $00BA $00BB $1E63 | writes $1C8F | calls $C007A1 $C30004
+C37788   44 ins  pointer/table only               callers   ptr 2  reads  | writes $0011 | calls $C0124D $C3017C $C30192 $C3032E $C3371F $C33DD2 $C37855 $C400D4 ...
+C377E9   20 ins  only from code that never ran    callers C377D1  ptr -6  reads  | writes $0011 | calls $C3032E $C400D4 $C400EA
+C37817   25 ins  only from code that never ran    callers C377FF  ptr -15  reads $1E78 | writes $000F $00A6 $1619 | calls $C2478E $C30125 $C301A8 $C37FCA
+C3784F    3 ins  only from code that never ran    callers C37792  ptr -12  reads  | writes  | calls $C41F7E
+C37855   31 ins  only from code that never ran    callers C377A6 C3789E  ptr 2  reads $0083 $0086 | writes $0D78 | calls $C00CE7 $C00D10 $C00D90 $C00EFB $C01195
+C37898   72 ins  pointer/table only               callers   ptr 1  reads $0086 | writes $0011 | calls $C00E89 $C00EF7 $C010BA $C01215 $C37855 $C400D4
+C3794F   37 ins  only from code that never ran    callers C3793B  ptr -2  reads $1E63 | writes $0011 $1E63 | calls $C010BA $C3371F $C3381D $C33E89 $C379AF $C400D4 $C400EA
+C379AF   37 ins  only from code that never ran    callers C3795F C37965  ptr 2  reads $00BA $00BB $1E63 | writes $1C8F | calls $C007A1 $C30004
+C37A00   69 ins  pointer/table only               callers   ptr 3  reads  | writes $0011 $0D78 $0D7C | calls $C007A1 $C00CE7 $C00D07 $C010BA $C0124D $C30125 $C3017C $C301A8 ...
+C37AAD   13 ins  only from code that never ran    callers C37A1F  ptr 4  reads $00BA | writes  | calls 
+C37AC2   43 ins  only from code that never ran    callers C37A53  ptr 3  reads $0000 $1E3D | writes $0000 $0012 $0013 $0014 $0015 | calls $C37660 $C37B1E $C448A6
+C37B1E   15 ins  only from code that never ran    callers C37A1C C37B1A  ptr 2  reads  | writes  | calls $C010BA
+C37B37   17 ins  pointer/table only               callers   ptr 1  reads  | writes $0011 | calls $C010BA $C37331 $C400D4
+C37B5F   17 ins  only from code that never ran    callers C37B4B  ptr -4  reads  | writes $0011 | calls $C010BA $C400D4 $C400EA
+C37FB9   13 ins  only from code that never ran    callers C3721E C373D4  ptr 6  reads  | writes  | calls 
+C37FCA   13 ins  only from code that never ran    callers C374C7 C37659 C37848 C37AA6  ptr 4  reads $00BA | writes  | calls 
+C3D43F    1 ins  no reference                     callers   ptr -39  reads  | writes  | calls 
+C401D1   17 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls 
+C402E4   14 ins  only from code that never ran    callers C40201  ptr 2  reads $0012 $1616 | writes $0012 $1616 | calls 
+C40E2C   27 ins  only from code that never ran    callers C40832  ptr 1  reads  | writes $0011 | calls $C41E0D
+C41011   33 ins  only from code that never ran    callers C26446  ptr 3  reads $0002 $0012 | writes $0002 $0012 | calls $C00BCF $C41050
+C41050   54 ins  only from code that never ran    callers C41047  ptr 1  reads  | writes  | calls 
+C414A5   14 ins  only from code that never ran    callers C41120  ptr 9  reads  | writes $1693 | calls $C24231 $C400B8
+C41594   46 ins  pointer/table only               callers   ptr 1  reads $0006 $00A6 $00BA | writes $0006 $00A6 | calls $C007A1 $C4197B
+C41748  155 ins  pointer/table only               callers   ptr 1  reads $0082 $00A6 $0349 | writes $00A6 $034F $0351 $0D78 | calls $C007A1 $C00CE7 $C00D10 $C00E84 $C00E89 $C00EBE $C00EF7 $C010BA ...
+C418E5   13 ins  only from code that never ran    callers C417F9  ptr 1  reads  | writes  | calls 
+C41900   13 ins  only from code that never ran    callers C417D9 C41819 C4185B C41862  ptr 12  reads  | writes  | calls 
+C4191D   16 ins  only from code that never ran    callers C417F5 C41827 C418BE  ptr 3  reads $0000 $0002 | writes $0000 $0002 | calls 
+C4193C   15 ins  only from code that never ran    callers C417C1 C418A5  ptr 2  reads  | writes  | calls $C26478
+C41958    8 ins  only from code that never ran    callers C41858 C4186B C41885 C41896  ptr 4  reads  | writes  | calls 
+C41965    9 ins  only from code that never ran    callers C418B8 C418D3  ptr 4  reads $0DC0 | writes $000F | calls $C00514 $C0225C
+C419A0   13 ins  only from code that never ran    callers C40858  ptr -14  reads  | writes $0014 $0015 | calls $C41BDD
+C419BD    7 ins  only from code that never ran    callers C42685  ptr -6  reads  | writes $0014 $0015 | calls $C41BDD
+C419CC    3 ins  only from code that never ran    callers C41C64  ptr -3  reads  | writes  | calls $C41AEB
+C419D3    8 ins  only from code that never ran    callers C41CC7  ptr -7  reads  | writes $0014 $0015 | calls $C41B0D $C41BDD
+C419E5    7 ins  only from code that never ran    callers C4232F  ptr -31  reads  | writes $0014 $0015 | calls $C41BDD
+C419F4    7 ins  only from code that never ran    callers C41ABB  ptr -18  reads  | writes $0014 $0015 | calls $C41BDD
+C41A03    2 ins  pointer/table only               callers   ptr 10  reads  | writes  | calls 
+C41C4C   14 ins  only from code that never ran    callers C406E4  ptr -6  reads  | writes $0011 $1B81 | calls $C400D4
+C41C6B   27 ins  only from code that never ran    callers C41C57  ptr -6  reads $00BA | writes $0011 | calls $C400D4 $C40FF4 $C41472 $C41BD3
+C41CAC   15 ins  only from code that never ran    callers C41C98  ptr -4  reads  | writes $0011 | calls $C400D4
+C41CCE    5 ins  only from code that never ran    callers C41CBA  ptr -17  reads  | writes $1B81 | calls 
+C41CDD   90 ins  only from code that never ran    callers C41CA5  ptr -33  reads $0087 $00A6 $00BA $161A | writes $034F $0351 $1695 $17E5 | calls $C0237B $C2133F $C2445C $C244E8 $C244FC $C2516E $C40A3D $C40FF4
+C41DB1   28 ins  only from code that never ran    callers C34A9E  ptr 1  reads $00BA | writes $0011 $00BA | calls $C400EA $C41DE9 $C41E0D
+C41E0D   17 ins  only from code that never ran    callers C40E52 C41DE3  ptr 3  reads  | writes  | calls $C007A1 $C00DAF
+C41E2D   36 ins  pointer/table only               callers   ptr 1  reads  | writes $0D78 | calls $C00CE7 $C00E89 $C00EF7 $C010BA $C01195 $C01215
+C41E8A   41 ins  only from code that never ran    callers C40E5F C41DD8  ptr -9  reads  | writes $0011 $0D78 $0D7C | calls $C01BDE $C01C98 $C400D4 $C40FF4 $C41472 $C41BD3
+C41EEC   10 ins  only from code that never ran    callers C3544E  ptr 1  reads  | writes  | calls $C00DAF
+C41EFE   50 ins  pointer/table only               callers   ptr 2  reads $0082 | writes $0D78 $0D7C | calls $C00CE7 $C00D07 $C00E89 $C00EF7 $C010BA $C01195 $C01215
+C41F7E   17 ins  only from code that never ran    callers C37850  ptr 3  reads $00BA | writes $0011 $00BA | calls $C400EA $C41DE9
+C421B3   10 ins  only from code that never ran    callers C42152 C42176  ptr 2  reads $0DC0 | writes $000F | calls $C00514 $C0225C
+C421C9   11 ins  only from code that never ran    callers C4214D C422C4  ptr 3  reads  | writes $034F $0351 | calls $C2445C
+C42243   53 ins  only from code that never ran    callers C142B5  ptr 1  reads $00BA | writes $0011 $00BA | calls $C007A1 $C0124D $C400EA $C41DE9 $C42338 $C427E6
+C422AD   30 ins  only from code that never ran    callers C4225B  ptr 7  reads  | writes $0011 | calls $C0124D $C400D4 $C40A3D $C421C9 $C427E6
+C422F9    1 ins  only from code that never ran    callers C1398F  ptr 1  reads  | writes  | calls 
+C422FA   27 ins  only from code that never ran    callers C13A7B  ptr 3  reads $0006 | writes $0011 $00BA | calls $C400EA $C41DE9 $C42338
+C4235D    9 ins  only from code that never ran    callers C14E58  ptr 2  reads  | writes  | calls $C42338
+C4236E   18 ins  pointer/table only               callers   ptr 1  reads  | writes $0011 $00BA | calls $C400EA $C41DE9 $C42338
+C4238F   16 ins  only from code that never ran    callers C42382  ptr -11  reads  | writes $0011 | calls $C0124D $C400D4
+C423B4   39 ins  only from code that never ran    callers C423A0  ptr -7  reads  | writes $0011 | calls $C007A1 $C00C79 $C400D4 $C427E6
+C4240D   17 ins  only from code that never ran    callers C423AD C42405 C42781 C427A1  ptr 5  reads  | writes $0011 | calls $C00C79 $C400D4 $C427E6
+C42437    8 ins  only from code that never ran    callers C3601E  ptr 1  reads $0006 | writes  | calls $C007A1 $C00DAF
+C42448   46 ins  pointer/table only               callers   ptr 1  reads $0012 $0013 $031B $0321 $1698 | writes $0012 $0013 $0053 $0054 $005D $005E $0062 $0063 ... | calls $C00E89 $C00EF7
+C425FF   33 ins  referenced by code that ran      callers C13AFD C425F7  ptr 1  reads  | writes $0011 $00BA | calls $C244DF $C400EA $C41DE9 $C42338
+C42647   30 ins  only from code that never ran    callers C4262E  ptr -2  reads $00BA | writes $0011 | calls $C400D4 $C40B8F
+C42712   18 ins  pointer/table only               callers   ptr 1  reads  | writes $0011 $00BA | calls $C400EA $C41DE9 $C42338
+C42733   18 ins  only from code that never ran    callers C1227F  ptr 2  reads  | writes $0011 $00BA | calls $C400EA $C41DE9 $C42338
+C42754   23 ins  only from code that never ran    callers C42726  ptr -5  reads  | writes $0011 | calls $C400D4
+C42788    1 ins  only from code that never ran    callers C42774  ptr -3  reads  | writes  | calls 
+C42789   14 ins  only from code that never ran    callers C42747 C42774  ptr -4  reads  | writes $0011 | calls $C400D4
+C427A8    1 ins  only from code that never ran    callers C42794  ptr -7  reads  | writes  | calls 
+C4288E    9 ins  only from code that never ran    callers C42852 C42873  ptr 2  reads  | writes  | calls $C012AB $C4146C $C41BD3
+C433CC    4 ins  only from code that never ran    callers C43FB3  ptr 2  reads  | writes  | calls $C4341C $C437BA
+C4373F    2 ins  no reference                     callers   ptr -70  reads $00BA | writes  | calls 
+C437F1   13 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C438B3 $C438C5 $C439C8 $C43A36 $C43AD0 $C43D09 $C43D3F $C43E03 ...
+C4383F    4 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C438B3 $C43E03 $C43E4D
+C43849    6 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C438B3 $C438C5 $C43961 $C43C1C $C44028
+C43859    6 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C438B3 $C438C5 $C439C8 $C43CA4 $C43E89
+C43961   30 ins  only from code that never ran    callers C4384C  ptr 1  reads $00BA | writes $000F $1B80 | calls $C437AB $C437CB $C43883 $C44180 $C44265 $C443CA $C443F1
+C439A8   14 ins  only from code that never ran    callers C43999  ptr 1  reads $00BA | writes $000F | calls $C437AB $C43883 $C43898
+C43A36   24 ins  only from code that never ran    callers C43800  ptr 1  reads $00A6 $00C7 | writes $000F $1B80 | calls $C437AB $C44265 $C442E0 $C4449D
+C43A6D    8 ins  only from code that never ran    callers C43A62  ptr 1  reads  | writes $000F | calls $C437CB $C44180 $C442EF
+C43A80   26 ins  only from code that never ran    callers C43A6F  ptr 3  reads $00BA $00C7 | writes $000F | calls $C437AB $C443F1
+C43ABA    9 ins  only from code that never ran    callers C43AAF  ptr 1  reads  | writes $000F | calls $C437CB $C44180 $C442EF
+C43AD0   18 ins  only from code that never ran    callers C437FA  ptr 1  reads  | writes $000F $1B80 | calls $C437AB $C43AF8 $C44265 $C442E0 $C4449D
+C43AF8   24 ins  only from code that never ran    callers C43ADA C43B2A  ptr 2  reads $00A6 $1B3A | writes  | calls 
+C43B25   13 ins  only from code that never ran    callers C43AED  ptr 1  reads $00BA | writes $000F | calls $C437CB $C43AF8 $C44180 $C442EF
+C43B45    8 ins  only from code that never ran    callers C43B34  ptr 2  reads  | writes $000F | calls $C437CB $C44180 $C442EF
+C43B58    8 ins  only from code that never ran    callers C43B47  ptr 1  reads  | writes $000F | calls $C437AB $C442B8 $C442D8
+C43B6B   20 ins  only from code that never ran    callers C43B60  ptr 1  reads $00BA $00C7 | writes $000F | calls $C437AB $C442D8 $C442EF
+C43B99   18 ins  only from code that never ran    callers C43B8E  ptr 1  reads $00BA | writes $000F | calls $C437AB $C44256 $C442C7
+C43BC2   20 ins  only from code that never ran    callers C43BB7  ptr 1  reads $00BA $00C7 | writes $000F | calls $C437CB $C44180 $C442EF $C443F1
+C43BEF    8 ins  only from code that never ran    callers C43BDE  ptr 2  reads  | writes $000F | calls $C437CB $C4414C $C442C7
+C43C02   12 ins  only from code that never ran    callers C43BF4  ptr 1  reads  | writes $000F | calls $C437AB
+C43C3D   11 ins  only from code that never ran    callers C43C32 C43C8B  ptr 2  reads  | writes $000F | calls $C437CB $C44211 $C443CA $C44460
+C43C58   33 ins  only from code that never ran    callers C43C49  ptr 1  reads $0086 $00BA | writes $000F | calls $C437AB $C437CB $C43883 $C43898
+C43CA4   15 ins  only from code that never ran    callers C4385C  ptr 1  reads $00BA | writes $000F $1B80 | calls $C437AB $C4428C $C442E0
+C43CC5   11 ins  only from code that never ran    callers C43CBA C43CF1  ptr 2  reads  | writes $000F | calls $C437CB $C44211 $C443CA $C44460
+C43CDF   19 ins  only from code that never ran    callers C43CD1  ptr 1  reads $0086 $00BA | writes $000F | calls $C437AB
+C43DC1   12 ins  only from code that never ran    callers C43D62  ptr 5  reads  | writes $000F $1B80 | calls $C437AB $C442E0
+C43DDB   18 ins  only from code that never ran    callers C43DD0  ptr 2  reads $00C7 | writes $000F | calls $C437AB $C437CB $C44211 $C443CA
+C43E03   35 ins  only from code that never ran    callers C43809 C43842  ptr 2  reads $00A6 $00BA | writes $000F $1B80 | calls $C437AB $C437CB $C4428C $C442E0 $C4449D
+C43E4D   28 ins  only from code that never ran    callers C4383F  ptr 1  reads $00BA | writes $000F $1B80 | calls $C437AB $C437CB $C4428C $C442E0 $C4449D
+C441FC    1 ins  no reference                     callers   ptr -43  reads  | writes  | calls 
+C44211   23 ins  only from code that never ran    callers C43C53 C43CDB C43DF2 C43D34  ptr 6  reads $00A6 $00BA | writes $000F | calls $C433FA $C437AB $C44256
+C44248    6 ins  only from code that never ran    callers C4423C  ptr 1  reads $00BA | writes  | calls $C437BA
+C442B8    7 ins  only from code that never ran    callers C43B58  ptr 1  reads $00BA | writes $1B80 | calls $C442E0
+C442C7    9 ins  only from code that never ran    callers C43BB2 C43BEF  ptr 2  reads $00BA | writes $1B80 | calls $C442E0
+C44468   27 ins  only from code that never ran    callers C442AE  ptr 1  reads $0012 $00A6 $00BA $00C1 $00C7 $1B80 | writes $0012 $0013 | calls 
+C44512   37 ins  pointer/table only               callers   ptr 1  reads $00BA $03BE | writes $03BE | calls $C44256
+C445C8   21 ins  no reference                     callers   ptr -24  reads $00BA $161A | writes  | calls 
+C44744    9 ins  only from code that never ran    callers C34FE9  ptr 2  reads  | writes $1E46 $1E47 $1E48 $1E49 | calls 
+C44825   57 ins  only from code that never ran    callers C353A6  ptr 1  reads $0012 $0014 $0015 $1E3D $1E54 | writes $0012 $0014 $1E54 | calls $C02566 $C02569
+C448CD   13 ins  pointer/table only               callers   ptr 1  reads $0014 $1E3D | writes $0014 $1E3D | calls $C44922
+C44901   16 ins  pointer/table only               callers   ptr 7  reads $0012 $0014 $1E3D | writes $0012 $0014 $1E3D | calls $C44922
+C44971   56 ins  only from code that never ran    callers C353EA C36184  ptr 2  reads $0013 $0016 $0017 $1E4E $1E4F $1E50 $1E52 | writes $0012 $0014 $0016 $0018 | calls $C024A2 $C02566 $C02569
+C44B4B   29 ins  pointer/table only               callers   ptr 1  reads  | writes $0306 $0307 $0308 $0309 $030A $030B $030C $0310 ... | calls $C44DBF $C44E16
+C44DBF   24 ins  only from code that never ran    callers C44B90  ptr 4  reads $1F23 | writes  | calls $C44DED
+C44DED   18 ins  only from code that never ran    callers C44DC9 C44DD0 C44DD7 C44DDE  ptr 4  reads $0017 $1F23 | writes $0012 $0013 $0014 $0015 | calls $C024CD $C02536
+C44E16   33 ins  only from code that never ran    callers C44B94  ptr 1  reads $1F25 | writes $1F25 $1F26 $1F27 $1F28 $1F2A $1F2C $1F2D $1F2F ... | calls $C00D90 $C00EF7 $C10045 $C44E70 $C44F20
+C44E70   43 ins  only from code that never ran    callers C44E5E  ptr 1  reads $00DA $00DC $1F26 $1F27 $1F2C | writes $000F $0011 $00DA $00DC $1F26 | calls $C1000C $C44EC7
+C44EC7   48 ins  only from code that never ran    callers C44E8D C44E94  ptr 2  reads $0000 $000C $000F $0010 $1F25 | writes $0000 $000C $000F $0010 | calls 
+C44F20   31 ins  only from code that never ran    callers C44E61  ptr 8  reads $1F25 | writes  | calls 
+C44FFA   10 ins  pointer/table only               callers   ptr 1  reads  | writes $0D78 | calls $C01BDE
+C4505F    3 ins  pointer/table only               callers   ptr 1  reads  | writes  | calls $C1031F $C45099
+C45067   21 ins  pointer/table only               callers   ptr 1  reads $0006 $0D8D | writes $0006 $0D78 $0D7C | calls $C01BDE $C01C98 $C103D9 $C45099
+C45099   26 ins  only from code that never ran    callers C4505F C45067  ptr 22  reads  | writes $0000 $0D8C $0D8D | calls 
+C450C6   26 ins  pointer/table only               callers   ptr 1  reads  | writes $0000 $0001 | calls 

@@ -1,0 +1,37 @@
+# never-executed code (traced)
+cond  00:C121-C122     2 bytes    1 ins  from: 00:C11F fall
+cond  00:C329-C332    10 bytes    5 ins  from: 00:C327 fall
+cond  00:C4D2-C4D4     3 bytes    1 ins  from: 00:C4CD BEQ
+cond  00:C624-C642    31 bytes   14 ins  from: 00:C622 fall
+cond  00:C654-C65D    10 bytes    4 ins  from: 00:C652 fall
+cond  00:CC48-CC4B     4 bytes    2 ins  from: 00:CC46 fall
+cond  00:CC8B-CC94    10 bytes    4 ins  from: 00:CC89 fall
+cond  00:CC9F-CCA2     4 bytes    2 ins  from: 00:CC9D fall
+dead  00:CEE9-CF5F   119 bytes   68 ins  from: 00:CC92 JMP*
+dead  00:CFED-D005    25 bytes   13 ins  from: 00:E3BD JSR*
+cond  00:D07F-D08A    12 bytes    6 ins  from: 00:D07D fall
+cond  00:D0E1-D0E2     2 bytes    1 ins  from: 00:D0DF fall
+cond  00:D991-D992     2 bytes    1 ins  from: 00:D98F fall
+cond  00:DB1A-DB1D     4 bytes    2 ins  from: 00:DB13 BEQ
+cond  00:DB39-DB3C     4 bytes    2 ins  from: 00:DB32 BEQ
+dead  00:DD6B-DD82    24 bytes   12 ins  from: 00:E3D9 JSR*, 00:E3DF JSR*
+cond  00:DDA6-DDA9     4 bytes    2 ins  from: 00:DDA4 fall
+cond  00:DEE4-DEF0    13 bytes    7 ins  from: 00:DED6 BNE, 00:DEE2 fall
+dead  00:E398-E398     1 bytes    1 ins  from: 00:E3AD BEQ*
+cond  00:E39D-E3A6    10 bytes    5 ins  from: 00:E39B fall
+cond  00:E3AB-E3E6    60 bytes   28 ins  from: 00:E3A9 fall
+cond  00:E3FC-E400     5 bytes    2 ins  from: 00:E3FA fall
+cond  00:E405-E415    17 bytes    8 ins  from: 00:E403 fall
+cond  00:E447-E447     1 bytes    1 ins  from: 00:E445 fall
+cond  00:E450-E466    23 bytes   11 ins  from: 00:E44E fall, 00:E47A BNE*, 00:E483 BEQ*, 00:E48A BCS, 00:E495 BCS*, 00:E4AC BEQ*
+cond  00:E46C-E47C    17 bytes    9 ins  from: 00:E46A fall
+cond  00:E481-E485     5 bytes    3 ins  from: 00:E47F fall
+cond  00:E491-E497     7 bytes    4 ins  from: 00:E48F fall
+cond  00:E4A8-E4AE     7 bytes    4 ins  from: 00:E4A4 BEQ, 00:E4A6 fall
+cond  00:E4C2-E4C5     4 bytes    2 ins  from: 00:E4D3 BCS
+cond  00:E571-E572     2 bytes    1 ins  from: 00:E56F fall
+cond  00:E58D-E59C    16 bytes    8 ins  from: 00:E58B fall
+cond  00:E5AA-E5AA     1 bytes    1 ins  from: 00:E5A8 fall
+noref 00:FFF9-FFF9     1 bytes    1 ins  from: -  ptr@03FFE
+# orphan code candidates (not reached by the trace)
+orphan 00:E61B   11 bytes   5 ins  calls 1

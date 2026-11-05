@@ -1,0 +1,96 @@
+00:E37C run           LDA $28,X                | 
+00:E394 run  COMBO    ORA $28,X                | EOR #$FF; EOR $32,X; CPX #$05
+00:E39C run           AND $28,X                | CPX #$05; CMP #$04
+00:E3A2 run  COMBO    ORA $28,X                | CPX #$05; CMP #$04; CMP #$0C
+00:E3AC run  COMBO    LDA $2D,X                | CMP #$04; CMP #$0C; CPX #$05
+00:E3B2 DEAD COMBO    LDA $28,X                | CMP #$0C; CPX #$05
+01:D602 run           LDA $2D                  | AND #$0F
+01:D604 run           ORA $2E                  | AND #$0F
+01:D606 run           ORA $2F                  | AND #$0F
+01:D608 run           ORA $30                  | AND #$0F
+01:D60A run           ORA $31                  | AND #$0F
+01:D60E run           ORA $C5                  | 
+01:D628 run           LDA $28                  | 
+01:D62A run           ORA $29                  | 
+01:D62C run           ORA $2A                  | 
+01:D62E run           ORA $2B                  | 
+01:D630 run           ORA $2C                  | 
+01:D633 run           LDA $2D                  | 
+01:D635 run           ORA $2E                  | 
+01:D637 run           ORA $2F                  | 
+01:D639 run           ORA $30                  | 
+01:D63B run           ORA $31                  | 
+01:D647 run           BBR6 $C5,$D64E           | 
+01:D64E run           BBR4 $C5,$D653           | 
+01:D657 run           BBR5 $C5,$D65E           | 
+01:D65E run           BBR7 $C5,$D663           | CMP $0D
+08:8DED DEAD          LDA $2D                  | AND #$02
+09:A5DF run           LDA $C5                  | 
+09:A6DA run           LDA $C5                  | 
+09:A7AE run           LDA $C5                  | 
+09:A7C2 run           LDA $C5                  | 
+09:A8A7 run           LDA $C5                  | 
+09:AA56 run           LDA $C5                  | 
+09:B5DC DEAD          LDA $C5                  | 
+0A:8CB2 run           BBR1 $C2,$8CCB           | 
+0A:8CCB run           BBS0 $C2,$8CE1           | 
+0A:8CDA run           BBS0 $C1,$8CE1           | AND #$F0
+0A:8D1C run           BBR0 $C2,$8D29           | 
+0B:A144 run           LDA $28,X                | AND #$03
+0B:A148 run           LDA $2D,X                | AND #$03
+0B:A2BE run           LDA $C1                  | 
+0B:A2E0 run           LDA $C1                  | 
+0B:A324 run           LDA $C1                  | 
+0B:A35A run           LDA $C1                  | 
+0B:A365 run           BBS5 $C1,$A37E           | 
+0B:A36D run           BBS7 $C1,$A37E           | 
+0B:A375 DEAD          BBS4 $C1,$A37E           | 
+0B:A396 run           BBS4 $C1,$A37E           | 
+0B:A39E run           BBS6 $C1,$A37E           | 
+0B:A3A6 DEAD          BBS5 $C1,$A37E           | 
+0B:A3BB run           AND $C1                  | 
+0B:A3D6 run           BBR5 $C1,$A3DE           | 
+0B:A403 run  COMBO    BBR5 $C1,$A402           | CMP #$07
+0B:A4AB run           BBR7 $C1,$A4B3           | 
+0B:A4D8 run  COMBO    BBR7 $C1,$A4D7           | CMP #$07
+0B:A580 run           BBR4 $C1,$A586           | 
+0B:A5AB run  COMBO    BBR4 $C1,$A5AA           | CMP #$07
+0B:A651 run           BBR6 $C1,$A659           | 
+0B:A67E run  COMBO    BBR6 $C1,$A67D           | CMP #$07
+0B:A777 run           BBR4 $C1,$A783           | 
+0B:A784 run           BBR5 $C1,$A790           | 
+0B:A791 run           BBR6 $C1,$A79D           | 
+0B:A79E run           BBR7 $C1,$A7AA           | 
+0B:AACB run           LDA $2D                  | AND #$F0
+0B:B136 run           LDA $C1                  | 
+0B:B6B0 run           BBS1 $C2,$B6B4           | 
+0B:B835 run           LDA $28,X                | AND #$0B; AND #$0B
+0B:B83B run           LDA $2D,X                | AND #$0B; AND #$03
+0B:B85C run           ORA $2028,Y              | AND #$03; AND #$0F
+0B:B9BF run           LDA $C1                  | 
+0C:83A0 run           LDA $C5                  | 
+0C:83D7 run           LDA $C5                  | CMP $B2
+0C:855C run           LDA $C5                  | 
+0C:9110 run           LDA $C5                  | CMP $2200
+0C:9144 run           LDA $C5                  | 
+0C:9190 run  COMBO    LDA $C5                  | CMP #$06
+0C:9DFE run           TST #$10,$C5             | 
+0C:9E03 run           TST #$40,$C5             | 
+0C:9E08 run           TST #$09,$C5             | 
+0C:9EFA run           LDA $28                  | 
+0D:AC68 run  TABLE    LDA $28                  | CMP #$00; CPY #$00; CMP $305D,Y
+0D:AED2 run           TST #$50,$C5             | 
+0D:AED7 run           TST #$09,$C5             | AND #$01
+0D:B20E run           TST #$10,$C5             | 
+0D:B213 run           TST #$40,$C5             | 
+0D:B218 run           TST #$20,$C5             | 
+0D:B21D run           TST #$80,$C5             | 
+0D:B222 run           TST #$02,$C5             | 
+0D:B227 run           TST #$09,$C5             | 
+0E:9C40 run           LDA $28                  | AND #$01; AND #$01
+0E:9C46 run           LDA $2D                  | AND #$01
+10:93F2 run           LDA $28                  | 
+12:991C run           LDA $C5                  | 
+12:9B35 run           LDA $C5                  | 
+12:9D27 run           LDA $C5                  | 
+12:9E7B run           LDA $C5                  | 

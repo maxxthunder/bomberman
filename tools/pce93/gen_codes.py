@@ -13,7 +13,7 @@ for ver, V in (("us", "US"), ("jp", "JP")):
             if w == 7: note += ". World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)"
             if ver == "jp" and w == 1 and s == 1: note += "; also accepted by the Special Version's leftover password screen"
             out.append({"code": encode(ver, world=w, stage=s), "effect": stage_effect(w, s),
-                        "versions": [V] + (["SP"] if ver == "jp" else []), "status": "unchecked",
+                        "versions": [V] + (["SP"] if ver == "jp" else []) + ["vc"], "status": "unchecked",
                         "verified": "mesen" if t or w == 7 and s == 1 else "fuzz", "note": note, "section": "Stage codes"})
 special = [
  (dict(world=7, stage=8, bombs=10, fire=5, cleared=63, speed=3), "Final stage (7-8) with 10 bombs, fire 5, every planet cleared and speed 3 (one above the skates' maximum)", "US_MAX"),
@@ -29,9 +29,9 @@ for st, eff, note in special:
         if note == "US_MAX": n = "typed in Mesen: decoded as listed; the planet map then starts the final stage (the four Bombers on karts)"
         fz = ver == "jp" and st.get("speed") in (1, 2) and st.get("world") == 1
         if fz: n = "accepted by the game's own decoder in the fuzz run with exactly these values (typed in the US version)"
-        out.append({"code": encode(ver, **st), "effect": eff, "versions": [V], "status": "unchecked", "verified": "fuzz" if fz else "mesen",
+        out.append({"code": encode(ver, **st), "effect": eff, "versions": [V, "vc"], "status": "unchecked", "verified": "fuzz" if fz else "mesen",
                     "note": n, "section": "Power-up codes"})
-out.append({"code": "BBBBBBBB / AAAAAAAA", "effect": "Rejected (letters below the key)", "versions": ["US", "JP"], "status": "unchecked",
+out.append({"code": "BBBBBBBB / AAAAAAAA", "effect": "Rejected (letters below the key)", "versions": ["US", "JP", "vc"], "status": "unchecked",
             "verified": "mesen", "note": "typed in Mesen (US); the screen stays", "section": "Stage codes"})
 secrets = [
  ("Beat the game, hold I and press Run on the end screen, reset (Select+Run), start a Normal Game", "CONFIGRATION screen after each planet map: stage, scene, bombs, fire, power-ups, lives, sound/music test", ["JP"], "known", "mesen",
@@ -43,6 +43,28 @@ secrets = [
  ("(none: patch the title menu table 06:984C to $94A0)", "Leftover password screen; a valid code starts the leftover Normal Game through an old CONFIGRATION screen with a SOUND test", ["SP"], "new", "mesen",
   "all five menu entries are $A34E (battle), so the Special Version cannot reach it; 02:8435 calls the old screen 08:88BD with no flag"),
 ]
+secrets += [
+ ("Finish the game from a new game with no password and no continue", "The ending shows CONGRATULATIONS!, CLEAR TIME and CLEAR SCORE before the credits", ["US", "JP", "vc"], "new", "mesen",
+  "08:8CB8 shows the page only when $38B1 = 0; a continue (07:A191) or a password (01:D93B) sets it. Shown in Mesen by clearing $38B1 at the ending (cheat 1F18B1:00)"),
+ ("Title item 3 (VS GAME / COM-LINK)", "Link-cable screen: both players press Run, the first is White Bomberman; then waits for the other console", ["US", "JP"], "new", "mesen",
+  "world 9 mode, 07:AC61; the serial handshake through the pad port never completes without a second console. On the Wii U VC the item starts the Battle Game instead (pcevc.md)"),
+]
+cheats = [
+ ("1F0091:20", "Invincible: player 1 ability bit 5, read by the death check 02:8C79, never set by the game", ["US", "JP", "vc"], "new", "mesen", "Mesen raw code (RAM F8:0091 = $2091). Stood on its own bomb: lives kept; without it the same test lost a life (US)"),
+ ("1F189F:09", "9 lives in reserve", ["US", "JP", "vc"], "new", "mesen", "RAM F8:189F = $389F; HUD showed 9 (US)"),
+ ("1F189A:03", "Speed 3, one above the skates' maximum", ["US", "JP", "vc"], "new", "mesen", "RAM F8:189A = $389A, copied to the player at the stage start: $9B = $30 (US)"),
+ ("1F1895:0w + 1F1896:0s", "World / stage select: every Normal Game stage is world w+1, stage s+1", ["US", "JP", "vc"], "new", "mesen", "RAM F8:1895 / F8:1896; 1F1895:03 + 1F1896:04 made a new game load record 28 (4-5) (US). Turn off after the stage starts"),
+ ("1F1FFB:01", "CONFIGRATION screen after every planet map (stage, scene, power-ups, lives, sound)", ["JP"], "known", "mesen", "RAM F8:1FFB = $3FFB, the flag the ending's I+Run sets; screen shown (JP). US: use the patch"),
+ ("1F18B1:00", "The ending's clear-time page even after a password or continue", ["US", "JP", "vc"], "new", "mesen", "RAM F8:18B1 = $38B1; page shown with the RAM cleared as the ending reads it"),
+]
+for code, eff, vers, status, ver, note in cheats:
+    out.append({"code": code, "effect": eff, "versions": vers, "status": status, "verified": ver, "note": note, "section": "cheat"})
+patches = [
+ ("patches/pce93_configration_us.ips", "US: CONFIGRATION screen after every planet map", ["US"], "new", "mesen", "file $4432: 08 20 E7 EA 9A AB 06 -> 00 20 E7 EA 20 86 08 (far call to 08:8620 put back); the patched file showed the screen"),
+ ("patches/pce93_normal_game_sp.ips", "Special Version: Run on the title opens the leftover password screen and Normal Game", ["SP"], "new", "mesen", "file $D84C: 4E A3 -> A0 94 (title menu entry 0 = $94A0); verified with the same bytes written in memory"),
+]
+for code, eff, vers, status, ver, note in patches:
+    out.append({"code": code, "effect": eff, "versions": vers, "status": status, "verified": ver, "note": note, "section": "patch"})
 for code, eff, vers, status, ver, note in secrets:
     out.append({"code": code, "effect": eff, "versions": vers, "status": status, "verified": ver, "note": note, "section": "Hidden screens"})
 json.dump(out, open(sys.argv[1], "w"), indent=1, ensure_ascii=False)

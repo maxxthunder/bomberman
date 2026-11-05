@@ -1,0 +1,20 @@
+$C19CF4  254B  extra walls  +0  1-1, 1-2, battle 3
+$C19DF2  246B  extra walls  +0  1-3, 1-4, 1-5, battle 2
+$C19EE8  246B  extra walls  +0  1-6, 1-7, 1-8, scene 36, battle 4
+$C19FDE  246B  extra walls  +0  4-1, 4-2, 4-3, 4-4, 4-5, 4-6, 4-7, scene 34, battle 9
+$C1A0D4  262B  extra walls  +0  2-1, 2-2, 2-3, 2-4, 2-5, battle 7
+$C1A1DA  330B  extra walls +23  UNREFERENCED
+$C1A324  246B  extra walls  +0  2-6, 2-7, 2-8
+$C1A41A  262B  extra walls  +0  3-4, 3-5, 3-6, 3-7
+$C1A520  266B  extra walls +33  3-8
+$C1A62A  290B  extra walls +20  5-1, 5-2, 5-3, 5-4, 5-5, 5-6, 5-7, 5-8
+$C1A74C  258B  extra walls  +0  3-1, 3-2, 3-3, battle 8
+$C1A84E  262B  extra walls  +0  4-8, battle 10
+$C1A954  254B  extra walls  +0  6-4, 6-5, 6-6, 6-7, 6-8
+$C1AA52  286B  extra walls  +0  6-1, 6-2, 6-3, battle 12
+$C1AB70  238B  extra walls  +0  battle 1
+$C1AC5E  294B  extra walls  +0  scene 35, battle 11
+$C1AD84  286B  extra walls  +0  battle 6
+$C1AEA2  238B  extra walls  +0  UNREFERENCED
+$C1C28C  334B  extra walls  +0  battle 5
+$C3DAC1  110B  extra walls +14  scene 30
