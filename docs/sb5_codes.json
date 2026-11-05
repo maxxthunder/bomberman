@@ -442,7 +442,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Needs patches/sb5_debug_rooms.ips (tools/sb5/make_ips.py). Typed with real presses on the patched ROM. The patch copies the option password table to $C5:6FA0 and adds 0172/0173/0174. Scene $AC runs $C7:170D.",
-  "section": "patch"
+  "section": "patch",
+  "img": "debug_rooms_AC_AD_AE.png"
  },
  {
   "code": "0173",
@@ -454,7 +455,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Needs patches/sb5_debug_rooms.ips. Scene $AD runs the room script at $C6:0309 (scene n uses entry n-1 of the table at $C6:0000).",
-  "section": "patch"
+  "section": "patch",
+  "img": "debug_rooms_AC_AD_AE.png"
  },
  {
   "code": "0174",
@@ -466,7 +468,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Needs patches/sb5_debug_rooms.ips. Scene $AE runs $C6:03B8, the last entry of the scene table; the HUD is broken and the screen goes black about 10 s in.",
-  "section": "patch"
+  "section": "patch",
+  "img": "debug_rooms_AC_AD_AE.png"
  },
  {
   "code": "7E6248:xx",
@@ -481,7 +484,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "$6248 is the scene run after the password screen (it becomes $1031). Round 3: verified with Mesen's cheat engine on retail and English with AC, AD and 2B after 4622. The known 7E1038:XX is a shared work byte.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "debug_rooms_AC_AD_AE.png"
  },
  {
   "code": "7E6271:01",

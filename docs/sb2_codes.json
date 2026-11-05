@@ -211,7 +211,8 @@
   "devices": {
    "Pro Action Replay": "C15B4001",
    "Game Genie": "DF90-EDD1"
-  }
+  },
+  "img": "debug_menu.png"
  },
  {
   "code": "C0FB2B01",
@@ -358,7 +359,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "\\ values; each has its own item counter (\\ type 4, \\ type 8) and pickup handler (\\, \\). Type 4 checked in Mesen next to soft blocks; type 8 checked in Mesen (7E80F308 + glove): a thrown type-8 bomb takes a new random direction on its bounces, a type-0 bomb keeps the throw direction; kicking not exercised."
+  "note": "\\ values; each has its own item counter (\\ type 4, \\ type 8) and pickup handler (\\, \\). Type 4 checked in Mesen next to soft blocks; type 8 checked in Mesen (7E80F308 + glove): a thrown type-8 bomb takes a new random direction on its bounces, a type-0 bomb keeps the throw direction; kicking not exercised.",
+  "img": "debug_bomb_types.png"
  },
  {
   "code": "SNES Mouse in any port (Europe)",

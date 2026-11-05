@@ -928,7 +928,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). $C6E9 and $D06F: LDA $7A -> LDA #$7A (A5 -> A9), so both checks always take the invincible branch. 0 deaths in 12,000 frames. Same bytes as patches/nes1_invincible_us.ips. Pro Action Replay 007AFF: the RAM code above, same bot test.",
+  "note": "Mesen 2 cheat engine (Game Genie). $C6E9 and $D06F: LDA $7A -> LDA #$7A (A5 -> A9), so both checks always take the invincible branch. 0 deaths in 12,000 frames. Pro Action Replay 007AFF: the RAM code above, same bot test.",
   "section": "cheat"
  },
  {
@@ -943,7 +943,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). the same two instructions at JP $C6E1 / $D067. 0 deaths in 12,000 frames. Same bytes as patches/nes1_invincible_jp.ips. Pro Action Replay 007AFF: the RAM code above, same bot test.",
+  "note": "Mesen 2 cheat engine (Game Genie). the same two instructions at JP $C6E1 / $D067. 0 deaths in 12,000 frames. Pro Action Replay 007AFF: the RAM code above, same bot test.",
   "section": "cheat"
  },
  {
@@ -977,27 +977,5 @@
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). RAM $5E, the stage-clear flag ($CCA1 sets it on the open exit): 11 stages cleared in 6,000 frames with no input (US and JP). Game Genie: the main loop's LDA $5E -> LDA #$5E ($C46E, JP $C466); 11 stages cleared in 6,000 frames with no input (US and JP).",
   "section": "cheat"
- },
- {
-  "code": "patches/nes1_invincible_us.ips",
-  "effect": "US: fire and enemies never kill",
-  "versions": [
-   "US"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "file $06F9 and $107F: A5 -> A9; the same bytes were verified as the Game Genie codes OXTKPV + OZTSYE",
-  "section": "patch"
- },
- {
-  "code": "patches/nes1_invincible_jp.ips",
-  "effect": "JP: fire and enemies never kill",
-  "versions": [
-   "JP"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "file $06F1 and $1077: A5 -> A9; the same bytes were verified as the Game Genie codes OXTGPV + OZTIYE",
-  "section": "patch"
  }
 ]

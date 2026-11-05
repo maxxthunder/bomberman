@@ -258,7 +258,7 @@ footer a:hover { text-decoration: underline; }
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.6.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.7.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -284,15 +284,11 @@ const PATCH_ROM = {
   "pce90_select_room.ips": "Bomberman (USA)",
   "pceub_password_1p.ips": "Bomberman - Users Battle (Japan)", "pceub_select_room.ips": "Bomberman - Users Battle (Japan)",
   "pce93_configration_us.ips": "Bomberman '93 (USA)", "pce93_normal_game_sp.ips": "Bomberman '93 - Special Version (Japan)",
-  "nes1_invincible_us.ips": "Bomberman (USA) (NES)", "nes1_invincible_jp.ips": "Bomberman (Japan) (Famicom)",
-  "nes2_invincible_us.ips": "Bomberman II (USA)", "nes2_invincible_jp.ips": "Bomberman II (Japan)",
   "gb1_invincible.ips": "Bomberman GB (Japan) or Wario Blast Featuring Bomberman! (USA, Europe)",
   "gb2_invincible.ips": "Bomberman GB (USA, Europe) or Bomberman GB 2 (Japan)", "gb3_invincible.ips": "Bomberman GB 3 (Japan)",
   "max_invincible_blue.ips": "Bomberman Max - Blue Champion (USA)", "max_invincible_red.ips": "Bomberman Max - Red Challenger (USA)",
   "max_invincible_hikari.ips": "Bomberman Max - Hikari no Yuusha (Japan)", "max_invincible_yami.ips": "Bomberman Max - Yami no Senshi (Japan)",
   "max_invincible_ain.ips": "Bomberman Max - Ain Version (Japan)",
-  "quest_invincible_us.ips": "Bomberman Quest (USA)", "quest_invincible_jp.ips": "Bomber Man Quest (Japan)",
-  "quest_debug_us.ips": "Bomberman Quest (USA)", "quest_debug_jp.ips": "Bomber Man Quest (Japan)",
   "pocket_invincible.ips": "Pocket Bomberman (USA, Europe)", "pocket_debug_password.ips": "Pocket Bomberman (USA, Europe)",
   "pce94_debug_menu.ips": "Bomberman '94 (Japan)", "pce94_debug_pause.ips": "Bomberman '94 (Japan)",
 };
@@ -543,23 +539,32 @@ const GAMES = [
     },
     why: c => /^80/.test(c) ? "Not a Charabom roster address ($A110 + 8 x id, id 0-29)." : "Charabom codes start with 80 (a GameShark cart-RAM write).",
     notes: { Charaboms: "GameShark codes for the roster table in cart RAM. The game reads it in place, so a Charabom shows on Charabom Select at once and stays after you save." } },
-  { id: "quest", ns: QUEST, family: "Game Boy", year: 1998, name: "Bomberman Quest", plat: "Game Boy Color", logo: "quest_us", main: "us",
-    len: 8, shape: /^01[0-9A-F]{6}$/, form: "GameShark code, 8 hex digits starting 01", panel: "Item codes", rowLabel: "Item",
-    intro: "An action RPG that saves to the cartridge (one file, kept at the Kepo statue in the Bomber Shuttle). There is no password, so the codes here are GameShark codes for the weapons, equipment and items in the save block the game plays from. The two versions keep that block one byte apart, so each item has a US and a Japanese code.",
-    check(c, ver) {
-      const d = QUEST.decode(c, ver || "us");
+  { id: "sel", ns: SEL, family: "Game Boy", year: 2003, name: "Bomberman Selection", plat: "Game Boy Color (Korea)", logo: "sel", main: "kr",
+    len: 8, maxLen: 20, shape: /^(\d{4}|[1-8A-HJ-UW-Z]{8}|[A-P]{20})$/, form: "8 characters (Bomber Boy), 20 letters (Bomber Man mode) or 4 digits (Bomberman)",
+    intro: "A Korea-only cart with two games: Bomber Boy (1990, with its Bomber Man mode) and Bomberman GB (1994) in colour, its Japanese text in English. Each game keeps its own password screen.",
+    check(c) {
+      if (c.length === 4) {
+        const d = GB1.decode(c, "jp");
+        if (!d) return null;
+        if (d.kind !== "stage") return { type: "special", order: 99, title: "Bomberman: " + (d.kind === "powerup" ? "start at 1-1 with every power-up" : "the extra battle") };
+        return { type: "stage", fields: d, group: "gb" + d.value, order: 300 + d.value, title: `Bomberman: stage ${d.round}-${d.stage}${d.boss ? " (boss)" : ""}` };
+      }
+      if (c.length === 20) {
+        const d = NES1.decode(c);
+        return d && { type: "stage", fields: d, group: c, order: 100 + d.stage, title: `Bomber Man mode: stage ${d.stage}`,
+          detail: `${plural(d.bombs, "bomb")}, fire ${d.fire}. The same code works in NES Bomberman.` };
+      }
+      const d = SEL.decode(c);
       if (!d) return null;
-      if (d.kind === "hearts" || d.kind === "hp") return { type: "special", fields: d, order: 99,
-        title: d.kind === "hearts" ? `Maximum hearts held at ${d.value}` : `Hearts filled to ${d.value}` };
-      const k = { weapon: ["Weapon", 0], equipment: ["Equipment", 100], item: ["Item", 200] }[d.kind];
-      return { type: "stage", fields: d, group: d.kind[0] + d.id, order: k[1] + d.id,
-        title: d.kind === "item" && d.id <= 8 ? `${d.name} x ${d.value}` : `Own the ${d.name}`,
-        detail: `${k[0]} ${d.id}${d.kind === "item" && d.id <= 8 ? ", a bomb component (count 1-15)" : ""}.` };
+      const n = SEL.ISLANDS.filter((_, i) => d.islands >> i & 1);
+      return { type: "stage", fields: d, group: c, order: n.length, title: d.islands === 255 ? "Bomber Boy: the ending" : `Bomber Boy: ${n.length ? n.length + " of 8 islands cleared" : "no islands cleared"}`,
+        detail: `${n.length ? "Cleared: " + n.join(", ") + ". " : ""}Gold ${d.gold.toLocaleString("en-US")}${d.gold > 9999 ? " (the game caps it at 9,999 when gold next changes)" : ""}.` };
     },
-    why: c => /^01/.test(c) ? "Not an item address of this version, or not the value an owned item has ($1n)." : "Item codes start with 01 (a GameShark WRAM write each frame).",
-    notes: { Weapons: "GameShark codes for the save block in WRAM. The bag page shows the item while the code is on; it is the same byte the game sets when you find it.",
-      Equipment: "GameShark codes for the save block in WRAM. The bag page shows the item while the code is on.",
-      Items: "GameShark codes for the save block in WRAM. Bomb components (Rubber to Fire) carry a count: the code's last digit before the address." } },
+    why: c => c.length === 8 && /[IV90]/.test(c) ? "Bomber Boy's grid has no I, V, 9 or 0." : c.length === 20 && /[Q-Z]/.test(c) ? "Bomber Man mode's letters are A to P." :
+      c.length === 8 || c.length === 20 ? "A check doesn't match, so at least one character is wrong." : c.length === 4 ? "Not in Bomberman's list of codes." : "",
+    notes: { "Bomber Boy": "8 characters: the islands you've cleared and your gold, with two check bytes. Every combination has exactly one code; all eight islands cleared goes straight to the ending.",
+      "Bomber Man mode": "NES Bomberman's code system, unchanged: stage, score and power-ups in 20 letters.",
+      Bomberman: "The Japanese Bomberman GB's list of codes, unchanged." } },
 ].filter(g => CODES[g.id] && CODES[g.id].length);
 </script>
 
@@ -612,7 +617,7 @@ const section = (game, e) => {
 };
 
 // ---------- game picker: platform groups in release order ----------
-const families = [...new Set(GAMES.map(x => x.family))];
+const families = ["Super Nintendo", "TurboGrafx-16 / PC Engine", "Game Boy", "NES / Famicom", "Genesis"];
 const byFamily = f => GAMES.filter(x => x.family === f).sort((a, b) => a.year - b.year);
 const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy": "gb" };
 $("cards").innerHTML = families.map((f, i) => `<div class="pgroup" data-fam="${FAM[f] || ""}"><h3 id="pf_${i}">${esc(f)}</h3>
@@ -662,7 +667,7 @@ function pickGame(id) {
   $("pw_h").textContent = g.panel || "Password";
   $("q").value = "";
   $("check").placeholder = "-".repeat(g.len);
-  $("check").maxLength = g.len + 4;
+  $("check").maxLength = (g.maxLen || g.len) + 4;
   $("check").style.setProperty("--len", g.len);
   const last = saved.codes[g.id];   // read before the generator writes its default
   GEN[g.id]();
@@ -884,6 +889,28 @@ const GEN = {
     GEN.pocket.fill = d => { $("w").value = d.world; $("s").value = d.stage; $("pw").checked = d.kind === "power"; $("s").disabled = d.kind === "power"; };
     onSpecial(); f();
   },
+  sel() {
+    gen(`<div class="row">${sel("m", "Game", [["boy", "Bomber Boy"], ["man", "Bomber Man mode"], ["gb", "Bomberman"]])}</div><div id="selm"></div>`);
+    const gb = Object.entries(GB1.TABLES.jp).sort((a, b) => a[1] - b[1]);
+    const modes = {
+      boy: [`<div class="row"><label class="field grow">${lbl("Gold")}<input id="gold" type="number" min="0" max="9999" value="100"></label></div>
+        ${SEL.ISLANDS.map((n, i) => box("is" + i, n + (i === 6 ? " (opens once the other seven are cleared)" : ""))).join("")}`,
+        () => setCode(SEL.encode(SEL.ISLANDS.reduce((t, _, i) => t | ($("is" + i).checked ? 1 << i : 0), 0), Math.max(0, Math.min(9999, val("gold") | 0))))],
+      man: [`<div class="row">${sel("st", "Stage", range(1, 50))}</div>${box("kit", "Every power-up (10 bombs, fire 5, speed, wall pass, detonator, flame pass)")}`,
+        () => setCode($("kit").checked ? NES1.encode({ stage: val("st"), bombs: 10, fire: 5, speed: 1, wallPass: 1, detonator: 1, flamePass: 1 }) : NES1.encode({ stage: val("st"), bombs: 1, fire: 1 }))],
+      gb: [`<div class="row">${sel("gs", "Stage", gb.filter(([, v]) => v < 32).map(([c, v]) => [c, `${(v >> 2) + 1}-${(v & 3) + 1}${(v & 3) === 3 ? " (boss)" : ""}`]))}
+        ${sel("gx", "Special code", [["", "Choose…"], ...gb.filter(([, v]) => v >= 32).map(([c, v]) => [c, c + (v === 32 ? ": every power-up" : ": the extra battle")])])}</div>`,
+        () => setCode($("gx").value || $("gs").value)],
+    };
+    const show = () => {
+      const [html, f] = modes[$("m").value];
+      $("selm").innerHTML = html;
+      $("selm").querySelectorAll("select, input").forEach(x => { x.onchange = x.oninput = f; });
+      f();
+    };
+    $("m").onchange = show;
+    show();
+  },
   max() {
     const name = c => (["hikari", "yami", "ain"].includes(vlow()) ? c.jp : c.us);
     gen(`<div class="row">${sel("cb", "Charabom", MAX.CHARABOMS.map(c => [c.id, name(c) + (c.home === "unused" ? " (unused)" : "")]))}
@@ -898,24 +925,6 @@ const GEN = {
     $("cb").onchange = $("fld").onchange = $("lv").onchange = f;
     GEN.max.fill = d => { $("cb").value = d.id; $("fld").value = d.field === "level" ? "level" : "own"; if (d.field === "level") $("lv").value = d.value; pic(); };
     f();
-  },
-  quest() {
-    const kinds = [["weapon", "Weapon"], ["equipment", "Equipment"], ["item", "Item"]];
-    const list = k => ({ weapon: QUEST.WEAPONS, equipment: QUEST.EQUIPMENT, item: QUEST.ITEMS })[k];
-    gen(`<div class="row">${sel("qk", "Kind", kinds)}${sel("qi", "Which", [])}${sel("qn", "Count", range(1, 15), 9)}</div>
-      <div class="row" id="qico"></div>`);
-    const opts = () => { $("qi").innerHTML = list($("qk").value).map(e => `<option value="${e.id}">${esc(e.name)}</option>`).join(""); };
-    const f = () => {
-      const k = $("qk").value, id = val("qi"), e = list(k)[id - 1], counted = k === "item" && id <= 8;
-      $("qn").disabled = !counted;
-      $("qico").innerHTML = lbl(e.name, ico("quest", e.icon));
-      setCode(QUEST.encode({ [k]: { [id]: counted ? val("qn") : 1 } }, vlow() || "us")[0]);
-    };
-    $("qk").onchange = () => { opts(); f(); };
-    $("qi").onchange = $("qn").onchange = f;
-    GEN.quest.fill = d => { if (!d.id) return; $("qk").value = d.kind; opts(); $("qi").value = d.id; if (d.kind === "item" && d.id <= 8) $("qn").value = d.value; f(); };
-    GEN.quest.onver = f;
-    opts(); f();
   },
   gb3() {
     gen(`<div class="row">${sel("a", "Area", GB3.AREAS.map((n, i) => [i, n]))}${sel("s", "Stage", range(1, 6))}${specials([[GB3.BOSS_ATTACK, GB3.BOSS_ATTACK + ": boss attack"]])}</div>
@@ -993,7 +1002,6 @@ const GEN_LOAD = {
   gb2: (c, k) => { if (!k.fields) return showSpecial(c); $("w").value = k.fields.world; showSpecial(""); },
   pocket: (c, k) => { const d = k.fields; if (!d || d.kind === "boss") return showSpecial(c); GEN.pocket.fill(d); showSpecial(""); },
   max: (c, k) => { if (k.fields) GEN.max.fill(k.fields); },
-  quest: (c, k) => { if (k.fields && k.fields.id) GEN.quest.fill(k.fields); },
   gb3: (c, k) => { if (!k.fields) return showSpecial(c); GEN.gb3.fill(k.fields); showSpecial(""); },
 };
 

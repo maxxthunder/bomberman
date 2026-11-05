@@ -186,8 +186,7 @@ and the seven secrets, in both carts. **22,186 of 23,616 traced code bytes ran**
 All verified in Mesen 2's cheat engine (`tools/nes2/test_cheats.lua`, NORMAL MODE, random bot, US and JP):
 `04E6:01` invincible (0 deaths in 12,000 frames; 10-11 without), Game Genie `AVZGKT` + `AVGGKT` (JP `ATPGET` +
 `ATLGET`) invincible by RTS over both kill routines, `04E5:02` infinite lives (12 deaths, no game over), `00B7:F0`
-(JP `00A9:F0`) every stage clears at once (16 stages in 8,000 frames). Patches: `patches/nes2_invincible_us.ips`,
-`_jp.ips` (`tools/nes2/mkpatch.py`).
+(JP `00A9:F0`) every stage clears at once (16 stages in 8,000 frames).
 
 Both devices, the same tests: Pro Action Replay (address + value) `04E601` invincible, `04E502` infinite lives,
 `00B7F0` (JP `00A9F0`) stage clear; Game Genie `SXKGKXVK` (JP `SZUGEXVK`) infinite lives (`DEC $04E5` -> `LDA` at

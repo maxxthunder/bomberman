@@ -7,8 +7,8 @@ import assert from 'node:assert/strict';
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const src = html.match(/<script id="data">([\s\S]*?)<\/script>/)?.[1];
 assert.ok(src, 'no <script id="data"> in index.html');
-const { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, POCKET, MAX, QUEST, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS } =
-  new Function(src + '\nreturn { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, POCKET, MAX, QUEST, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS };')();
+const { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, POCKET, MAX, SEL, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS } =
+  new Function(src + '\nreturn { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, POCKET, MAX, SEL, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS };')();
 
 let n = 0;
 const ok = (cond, msg) => { assert.ok(cond, msg); n++; };
@@ -105,11 +105,6 @@ eq(game('max').check('8001F0A1').title, 'Own Heat Rock', 'max 8001F0A1 owns Heat
 eq(game('max').check(MAX.encode({ level: { 3: 50 } }, 'blue')[0]).title.endsWith('level 50'), true, 'max level code round-trip');
 ok(!game('max').check('8001F0A2'), 'max rejects a non-roster address');
 
-// Bomberman Quest: GameShark codes for the save block
-eq(game('quest').check('01102BCF', 'us').title, 'Own the Normal Bomb', 'quest US Normal Bomb code');
-  eq(game('quest').check('01102ACF', 'jp').title, 'Own the Normal Bomb', 'quest Japanese Normal Bomb code (one byte lower)');
-  eq(game('quest').check(QUEST.encode({ item: { 1: 9 } }, 'us')[0], 'us').title, 'Rubber x 9', 'quest counted item');
-  ok(!game('quest').check('01202BCF', 'us'), 'quest rejects a value that is not an owned item');
 
 // Every password-shaped code in every code list is accepted by the page's checker (which calls the codec), in each
 // version it is listed for; the ones the list itself marks "Rejected" must be rejected.
@@ -126,7 +121,14 @@ for (const g of GAMES) {
   }
   console.log(`${g.id}: ${k} passwords in the code list, all accepted${r ? `; ${r} listed as rejected, rejected` : ''}`);
 }
-eq(GAMES.map(g => g.id), ['sb1', 'sb2', 'sb3', 'sb4', 'sb5', 'mega', 'pce90', 'pce93', 'pce94', 'nes1', 'nes2', 'gb1', 'gb2', 'gb3', 'pocket', 'max', 'quest'], 'every built game has a setup');
+// Bomberman Selection: three password screens on one cart
+eq(game('sel').check('J6O1JOJ1').detail, 'Gold 100.', 'sel Bomber Boy new-game code');
+eq(game('sel').check('33DMPZGZ').title, 'Bomber Boy: the ending', 'sel Bomber Boy ending code');
+eq(game('sel').check(SEL.encode(0x3F, 1234)).title, 'Bomber Boy: 6 of 8 islands cleared', 'sel Bomber Boy islands');
+eq(game('sel').check('BOHIDJFEKJGKEFOLFHAC').title, 'Bomber Man mode: stage 50', 'sel Bomber Man mode takes NES Bomberman codes');
+eq(game('sel').check('9867').title, 'Bomberman: stage 6-3', 'sel Bomberman stage code');
+ok(!game('sel').check('J6O1JOJ2') && !game('sel').check('1234'), 'sel rejects bad codes');
+eq(GAMES.map(g => g.id), ['sb1', 'sb2', 'sb3', 'sb4', 'sb5', 'mega', 'pce90', 'pce93', 'pce94', 'nes1', 'nes2', 'gb1', 'gb2', 'gb3', 'pocket', 'max', 'sel'], 'every built game has a setup');
 
 // A game with no codec: listed, codes only, no generator
 ok(!GAMES.find(g => g.id === 'mega8') && CODES.mega.some(e => e.section === 'demo8'), 'the 8-player demo sits inside Mega Bomberman');
@@ -134,7 +136,7 @@ ok(!GAMES.find(g => g.id === 'mega8') && CODES.mega.some(e => e.section === 'dem
 ok(!GAMES.find(g => g.id === 'pceub') && CODES.pce90.some(e => e.section === 'ub'), 'Users Battle sits inside the 1990 Bomberman');
 
 // Version chips start on the main release
-const MAIN = { sb1: 'US', sb2: 'us', sb3: 'eu', sb4: 'JP', sb5: 'retail', mega: 'US', pce90: 'US', pce93: 'US', pce94: 'retail', nes1: 'US', nes2: 'US', gb1: 'wario', gb2: 'us', gb3: 'jp', pocket: 'us', quest: 'us' };
+const MAIN = { sb1: 'US', sb2: 'us', sb3: 'eu', sb4: 'JP', sb5: 'retail', mega: 'US', pce90: 'US', pce93: 'US', pce94: 'retail', nes1: 'US', nes2: 'US', gb1: 'wario', gb2: 'us', gb3: 'jp', pocket: 'us' };
 for (const [id, v] of Object.entries(MAIN)) eq(defaultVer(GAMES.find(g => g.id === id)), v, `${id} starts on ${v}`);
 eq(logoFor(GAMES.find(g => g.id === 'pce93'), 'SP'), 'pce93_sp', "'93 Special Version chip shows its logo");
 eq(logoFor(GAMES.find(g => g.id === 'sb4'), 'EN'), 'sb4_jp', 'a game without per-version logos keeps its default');

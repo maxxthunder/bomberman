@@ -2573,7 +2573,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Nothing calls the toggle $C6:00D2, the input handler $C6:01B9 or the VRAM upload $C4:0B6F in any version. patches/sb1_debug_menu_<us|eu|jp|beta>.ips (tools/sb1/make_debug_ips.py) add them (plus a NO DEATH check); tested in all four.",
-  "section": "debug"
+  "section": "debug",
+  "img": "debug_menu.png"
  },
  {
   "code": "1-2: Make the enemy count go up (bomb the exit)",
@@ -2883,7 +2884,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "90 one-byte ROM codes. Entered as Mesen PAR cheats on the unpatched US ROM: menu opens, cursor moves, values change. EU uses the same codes (its ROM differs from US only in the header and the battle timer). Game Genie: the same 90 bytes; Mesen, US and EU: menu opens, cursor moves, values change."
+  "note": "90 one-byte ROM codes. Entered as Mesen PAR cheats on the unpatched US ROM: menu opens, cursor moves, values change. EU uses the same codes (its ROM differs from US only in the header and the battle timer). Game Genie: the same 90 bytes; Mesen, US and EU: menu opens, cursor moves, values change.",
+  "img": "debug_menu.png"
  },
  {
   "code": "C600115C C6001200 C600137F C60014C6 C401D422 C401D530 C401D67F C401D7C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F3565 C67F3609 C67F37C4 C67F386B C4118140 C411827F C41183C6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4587 C67F4617 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B92 C67F4C11 C67F4DC4 C411E950 C411EA7F C411EBC6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5587 C67F5617 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5BFA C67F5C11 C67F5DC4",
@@ -2898,7 +2900,8 @@
   "status": "new",
   "verified": "static",
   "section": "debug",
-  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen. Game Genie: the same 90 bytes; Mesen, JP: menu opens, cursor moves, values change."
+  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen. Game Genie: the same 90 bytes; Mesen, JP: menu opens, cursor moves, values change.",
+  "img": "debug_menu.png"
  },
  {
   "code": "C600115C C6001200 C600137F C60014C6 C401CF22 C401D030 C401D17F C401D2C6 C67F00AD C67F0114 C67F0203 C67F0389 C67F0401 C67F05F0 C67F0606 C67F0722 C67F08B9 C67F0901 C67F0AC6 C67F0BE2 C67F0C20 C67F0D22 C67F0E81 C67F0F00 C67F10C6 C67F1190 C67F1213 C67F1389 C67F1420 C67F15D0 C67F160B C67F17AD C67F1814 C67F1903 C67F1A89 C67F1B01 C67F1CD0 C67F1D08 C67F1E5C C67F1F1B C67F2000 C67F21C6 C67F225C C67F23D2 C67F2400 C67F25C6 C67F266B C67F3022 C67F3160 C67F3224 C67F33C6 C67F3422 C67F3560 C67F3609 C67F37C4 C67F386B C4117C40 C4117D7F C4117EC6 C67F40B5 C67F412E C67F42D0 C67F4304 C67F445C C67F4582 C67F4617 C67F47C4 C67F4874 C67F492F C67F4A5C C67F4B8D C67F4C11 C67F4DC4 C411E450 C411E57F C411E6C6 C67F50B5 C67F512E C67F52D0 C67F5304 C67F545C C67F5582 C67F5617 C67F57C4 C67F5874 C67F592F C67F5A5C C67F5BF5 C67F5C11 C67F5DC4",
@@ -2913,7 +2916,8 @@
   "status": "new",
   "verified": "static",
   "section": "debug",
-  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen. Game Genie: the same 90 bytes; Mesen, beta: menu opens, cursor moves, values change."
+  "note": "90 one-byte ROM codes. Same hooks at this version's addresses; the IPS patch with the identical bytes was tested in Mesen. Game Genie: the same 90 bytes; Mesen, beta: menu opens, cursor moves, values change.",
+  "img": "debug_menu.png"
  },
  {
   "code": "Debug menu STAGE NO.",
@@ -2969,7 +2973,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "A fire-3 bomb burned the whole row."
+  "note": "A fire-3 bomb burned the whole row.",
+  "img": "debug_fire_full.png"
  },
  {
   "code": "Debug menu SKULL",
@@ -3011,7 +3016,8 @@
   "status": "known",
   "verified": "mesen",
   "section": "debug",
-  "note": "$C6:3A40 sets bit $0200 in the map buffer $04F4; the clear routine $C4:0B9F is uncalled."
+  "note": "$C6:3A40 sets bit $0200 in the map buffer $04F4; the clear routine $C4:0B9F is uncalled.",
+  "img": "debug_vs_check.png"
  },
  {
   "code": "Debug menu BGM NO. / SE NO. + A",
@@ -3107,7 +3113,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$31 bit 7; checked in RAM and on screen (blast across the row). Game Genie: the five FIRE FULL tests (BEQ over LDA #$09 at $C4:3F5F, $C4:458C, $C4:46CB, $C4:4A50, $C4:4C44; JP and beta lower) -> BEQ +0 (every player); Mesen, all four: each bomb is laid with range 10, the PAR code's value (1 without)."
+  "note": "Player +$31 bit 7; checked in RAM and on screen (blast across the row). Game Genie: the five FIRE FULL tests (BEQ over LDA #$09 at $C4:3F5F, $C4:458C, $C4:46CB, $C4:4A50, $C4:4C44; JP and beta lower) -> BEQ +0 (every player); Mesen, all four: each bomb is laid with range 10, the PAR code's value (1 without).",
+  "img": "debug_fire_full.png"
  },
  {
   "code": "7E0D7009",

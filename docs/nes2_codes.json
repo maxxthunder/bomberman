@@ -1864,7 +1864,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). RTS at $CEA4 and $CEC4, the two kill routines. 0 deaths in 12,000 frames. Same bytes as patches/nes2_invincible_us.ips. Pro Action Replay 04E601: the RAM code above, same bot test.",
+  "note": "Mesen 2 cheat engine (Game Genie). RTS at $CEA4 and $CEC4, the two kill routines. 0 deaths in 12,000 frames. Pro Action Replay 04E601: the RAM code above, same bot test.",
   "section": "cheat"
  },
  {
@@ -1879,7 +1879,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). RTS at JP $CE10 and $CE30. 0 deaths in 12,000 frames. Same bytes as patches/nes2_invincible_jp.ips. Pro Action Replay 04E601: the RAM code above, same bot test.",
+  "note": "Mesen 2 cheat engine (Game Genie). RTS at JP $CE10 and $CE30. 0 deaths in 12,000 frames. Pro Action Replay 04E601: the RAM code above, same bot test.",
   "section": "cheat"
  },
  {
@@ -1941,27 +1941,5 @@
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). ROM byte $D2F7 (JP $D263) is 1 = play the recorded demo ($05:9A01). Set to 0, the demo code stores (button, frame count) pairs at ($B9),Y, the demo's own ROM table, instead: in Mesen the demo stood still and the store at $05:9A22 ran on each button change (3 times in 3,000 frames; 0 without the code, 915 playback calls). On a cart those stores hit the MMC1 registers; the recorder needs RAM there (development hardware)",
   "section": "cheat"
- },
- {
-  "code": "patches/nes2_invincible_us.ips",
-  "effect": "US: fire and enemies never kill",
-  "versions": [
-   "US"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "file $1CEB4 and $1CED4: AD -> 60 (RTS); the same bytes were verified as the Game Genie codes AVZGKT + AVGGKT",
-  "section": "patch"
- },
- {
-  "code": "patches/nes2_invincible_jp.ips",
-  "effect": "JP: fire and enemies never kill",
-  "versions": [
-   "JP"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "file $1CE20 and $1CE40: AD -> 60; the same bytes were verified as the Game Genie codes ATPGET + ATLGET",
-  "section": "patch"
  }
 ]

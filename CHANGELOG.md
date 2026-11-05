@@ -2,6 +2,13 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.7.0 (2026-11-05)
+- New game: Bomberman Selection (Korea), with a password generator for Bomber Boy (islands cleared and gold), its
+  Bomber Man mode (NES Bomberman's codes) and Bomberman (Bomberman GB's codes).
+- Game picker order: Super Nintendo, TurboGrafx-16 / PC Engine, Game Boy, NES, Genesis.
+- Debug menu patches and cheats now show a screenshot of the menu they open.
+- Removed Bomberman Quest, and the invincibility patches for Bomberman and Bomberman II (NES).
+
 ## 1.6.0 (2026-11-05)
 - New fonts: Lilita One for headings, Fredoka for text, Azeret Mono for codes.
 - Each game has its own link (for example `#sb2`); picking a game updates the address.

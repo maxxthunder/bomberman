@@ -195,8 +195,7 @@ codes, and the out-of-range stages. **7,313 of the 7,510 traced code bytes ran**
 All verified in Mesen 2's cheat engine (`tools/nes1/test_cheats.lua`, random bot): `007A:FF` invincible (0 deaths in
 12,000 frames; 3 and a game over without), Game Genie `OXTKPV` + `OZTSYE` (JP `OXTGPV` + `OZTIYE`) invincible by
 patching `LDA $7A` to `LDA #$7A` in both death checks, `0068:02` infinite lives (19 deaths, no game over), `005E:01`
-every stage clears at once (11 stages in 6,000 frames). Patches: `patches/nes1_invincible_us.ips`, `_jp.ips`
-(`tools/nes1/mkpatch.py`, the Game Genie bytes).
+every stage clears at once (11 stages in 6,000 frames).
 
 Both devices, the same tests: Pro Action Replay (address + value) `007AFF` invincible, `006802` infinite lives,
 `005E01` stage clear; Game Genie `SXPKAG` (JP `SXPGAG`) infinite lives (`DEC $68` -> `LDA $68` at `$C498`, JP
