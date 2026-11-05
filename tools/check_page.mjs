@@ -31,16 +31,14 @@ ok(/hard mode/i.test(SB3.decode('6514').effect), 'SB3 6514 is hard mode');
 eq(SB3.decode('5358').name, '1-1', 'SB3 5358 is 1-1');
 eq(SB3.encode(0x0B), '5358', 'SB3 encode 1-1');
 
-// SB4 (if the build has it): two codes from its JSON
-if (SB4) {
-  for (const code of ['7352', '1574']) {
-    const e = CODES.sb4.find(x => x.code === code);
-    ok(e, 'SB4 ' + code + ' in the JSON');
-    const d = SB4.decode(code);
-    ok(d && e.effect.includes(d.stage), `SB4 ${code} is ${d && d.stage} (${e.effect})`);
-    eq(SB4.encode(d.stage), code, 'SB4 re-encodes ' + code);
-  }
-} else console.log('SB4 not in the build: skipped');
+// SB4: two codes from its JSON
+for (const code of ['7352', '1574']) {
+  const e = CODES.sb4.find(x => x.code === code);
+  ok(e, 'SB4 ' + code + ' in the JSON');
+  const d = SB4.decode(code);
+  ok(d && e.effect.includes(d.stage), `SB4 ${code} is ${d && d.stage} (${e.effect})`);
+  eq(SB4.encode(d.stage), code, 'SB4 re-encodes ' + code);
+}
 
 // SB5
 const f = SB5.decode('D24GJN');

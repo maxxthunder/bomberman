@@ -3,27 +3,13 @@
 The switch is at the same offset in all five dumps; each patch is checked against its ROM first.
 Usage: python tools/sb2/make_ips.py [roms_dir] [patches_dir]"""
 import os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "emu"))
+from ips import ips, apply  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 ROMS = {"us": "Super Bomberman 2 (USA).sfc", "eu": "Super Bomberman 2 (Europe).sfc", "jp": "Super Bomberman 2 (Japan) (En).sfc",
         "beta": "Super Bomberman 2 (USA) (Beta).sfc", "caravan": "Super Bomberman 2 (Japan) (Caravan You Taikenban).sfc"}
 OFF, WANT = 0x15B3E, bytes.fromhex("a90000d0016b")  # LDA #$0000 / BNE +1 / RTL
-
-
-def ips(records):
-    out = b"PATCH"
-    for off, data in records:
-        out += off.to_bytes(3, "big") + len(data).to_bytes(2, "big") + data
-    return out + b"EOF"
-
-
-def apply(rom, patch):  # minimal IPS reader, for the self-check
-    rom, i = bytearray(rom), 5
-    while patch[i:i + 3] != b"EOF":
-        off, n = int.from_bytes(patch[i:i + 3], "big"), int.from_bytes(patch[i + 3:i + 5], "big")
-        rom[off:off + n] = patch[i + 5:i + 5 + n]
-        i += 5 + n
-    return bytes(rom)
 
 
 if __name__ == "__main__":

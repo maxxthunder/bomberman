@@ -5,8 +5,8 @@ logs via `tools/sb5/cdl2entries_hi.py`) and `tools/lin65.py`, and was checked in
 (`tools/sb5/run.sh`, helpers in `tools/sb5/lib.lua`). Codes were injected into the entry buffers and
 confirmed, and a sample of each kind was also typed with real button presses. Two ROMs:
 
-- **retail**: `Super Bomberman 5 (Japan).sfc`, header title `SUPER BOMBERMAN 5`.
-- **Caravan**: `Super Bomberman 5 (Japan) (Caravan Event Ban).sfc`, header title `SUPER BOMBERMAN 5G`.
+- **retail**: `Super Bomberman 5 (Japan).sfc` (MD5 `3103de24bd9b46aad3e211574e5a0621`), header title `SUPER BOMBERMAN 5`.
+- **Caravan**: `Super Bomberman 5 (Japan) (Caravan Event Ban).sfc` (MD5 `772ca292857d5bcf1f8776009fa1d280`), header title `SUPER BOMBERMAN 5G`.
   Its RAM layout matches the published addresses for the gold cartridge (`$627D` for retail `$625F`).
 
 Prior art: GameFAQs and other published notes (`res/`). Marks: ★ **New** = in neither; **Fixed** = posted wrong;

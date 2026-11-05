@@ -6,6 +6,14 @@ logs via `tools/sb2/cdl2entries_hirom.py`) and checking the results in Mesen 2. 
 bank `$CC` code sits at a different offset in each (Europe +`$5B`, Japan -`$11`, Caravan +`$198`), so the
 tools find routines by their bytes instead of by address.
 
+| Dump | MD5 |
+|---|---|
+| `Super Bomberman 2 (USA).sfc` | `0990cda295bd51587c6e3f173bdadba8` |
+| `Super Bomberman 2 (Europe).sfc` | `084a8595dd56c37358f80edf6427938c` |
+| `Super Bomberman 2 (Japan) (En).sfc` | `3e0481ede2ce82e5faf297cc501e8b7d` |
+| `Super Bomberman 2 (USA) (Beta).sfc` | `3126555b2d68b07f5e828b374c358d68` |
+| `Super Bomberman 2 (Japan) (Caravan You Taikenban).sfc` | `7dd89c3f953b4e507274e428b1250ecb` |
+
 Prior art: the GameFAQs codes page and a published article on the game (both in `res/`). Finds are marked
 **★ New** (in neither), **Fixed** (posted wrong) or **Known**. None of the posted codes was wrong.
 

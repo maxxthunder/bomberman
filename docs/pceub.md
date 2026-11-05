@@ -259,7 +259,7 @@ differs.
 ## Title logo
 
 `docs/img/logos/pceub_jp.png` (192×64). Unlike the 1990 card's logo (BG tiles), USERS BATTLE is **sprites**: the
-title's VRAM, VCE palette and SAT were dumped at frame 400 (`tools/pceub/vdump.lua`), and the BG map holds only
+title's VRAM, VCE palette and SAT were dumped at frame 400 (`tools/pce90/vdump.lua`), and the BG map holds only
 the flames and the five Bombermen. SAT entries 0-3 (32×64, `USERS` over `ATTL`, attribute `$2182`) and 4-5 (32×32,
 `B` and `E`, `$1182`) are the logo, all sprite palette 2; entries 6-15 are PUSH RUN BUTTON!, the menu labels and
 the copyright. `tools/pceub/logo.py spr <dump> <png> 2 0 60` draws the palette-2 sprites whose tops are in rows

@@ -7,8 +7,8 @@ Usage: python tools/sb5/make_ips.py [rom] [out.ips]"""
 import os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "sb2"))
-from make_ips import ips, apply  # noqa: E402  (same minimal IPS writer/reader)
+sys.path.insert(0, os.path.join(HERE, "..", "emu"))
+from ips import ips, apply  # noqa: E402
 
 OLD, NEW, HAND = 0x56875, 0x56FA0, 0x56FF0   # file offsets (bank $C5 = file $50000)
 CODES = {"0172": 0xAC, "0173": 0xAD, "0174": 0xAE}

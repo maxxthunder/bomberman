@@ -1,8 +1,29 @@
-"""Write a tiny IPS patch: python tools/emu/ips.py <out.ips> <rom offset hex>:<bytes hex> [...]  (shared by tools/gb1-gb3)"""
+"""Minimal IPS writer and reader, shared by the patch makers.
+As a script, writes a tiny patch: python tools/emu/ips.py <out.ips> <rom offset hex>:<bytes hex> [...]  (tools/gb1-gb3)"""
 import sys
-out = bytearray(b"PATCH")
-for a in sys.argv[2:]:
-    o, b = a.split(":")
-    o, b = int(o, 16), bytes.fromhex(b)
-    out += o.to_bytes(3, "big") + len(b).to_bytes(2, "big") + b
-open(sys.argv[1], "wb").write(out + b"EOF")
+
+
+def ips(records):
+    """[(file offset, bytes), ...] -> IPS: 'PATCH', then 3-byte offset, 2-byte length, data, then 'EOF'."""
+    out = bytearray(b"PATCH")
+    for off, data in records:
+        out += off.to_bytes(3, "big") + len(data).to_bytes(2, "big") + data
+    return bytes(out + b"EOF")
+
+
+def apply(rom, patch):
+    rom, i = bytearray(rom), 5
+    assert patch[:5] == b"PATCH"
+    while patch[i:i + 3] != b"EOF":
+        off, n = int.from_bytes(patch[i:i + 3], "big"), int.from_bytes(patch[i + 3:i + 5], "big")
+        rom[off:off + n] = patch[i + 5:i + 5 + n]
+        i += 5 + n
+    return bytes(rom)
+
+
+if __name__ == "__main__":
+    recs = []
+    for a in sys.argv[2:]:
+        o, b = a.split(":")
+        recs.append((int(o, 16), bytes.fromhex(b)))
+    open(sys.argv[1], "wb").write(ips(recs))

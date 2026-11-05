@@ -12,6 +12,8 @@ What is missing in every dump, and what the patch adds (hook code in the zero-fi
 Each patch is checked against its ROM first. Also prints the patch as Pro Action Replay ROM codes (AAAAAADD).
 Usage: python tools/sb1/make_debug_ips.py [roms_dir] [patches_dir] [patched_rom_dir]"""
 import os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "emu"))
+from ips import ips, apply  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 ROMS = {"us": "Super Bomberman (USA).sfc", "eu": "Super Bomberman (Europe).sfc", "jp": "Super Bomberman (Japan).sfc",
@@ -51,22 +53,6 @@ def records(ver, rom):
         # LDA $2E,X / BNE +4 / JML die / STZ $2F,X / JML cont
         recs += [(i + 7, long(nd)), (o(nd), bytes.fromhex("b52e d004") + b"\x5c" + long(die) + bytes.fromhex("742f") + b"\x5c" + long(cont))]
     return recs
-
-
-def ips(recs):
-    out = b"PATCH"
-    for off, data in recs:
-        out += off.to_bytes(3, "big") + len(data).to_bytes(2, "big") + data
-    return out + b"EOF"
-
-
-def apply(rom, patch):  # minimal IPS reader, for the self-check
-    rom, i = bytearray(rom), 5
-    while patch[i:i + 3] != b"EOF":
-        off, n = int.from_bytes(patch[i:i + 3], "big"), int.from_bytes(patch[i + 3:i + 5], "big")
-        rom[off:off + n] = patch[i + 5:i + 5 + n]
-        i += 5 + n
-    return bytes(rom)
 
 
 def par(recs):

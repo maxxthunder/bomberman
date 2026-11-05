@@ -156,7 +156,7 @@ at is tile, text, pointer or script data.
 ## Title logo
 
 `img/logos/sb5_en.png` (233×107, 24 colours, transparent): BG1 of the English title (`tools/sb5en/logo.lua`
-dump → `bgrender.py` → `croplogo.py`). Its shape matches `sb5_jp.png` pixel for pixel. The 5,470
+dump → `tools/sb5/bgrender.py` → `croplogo.py`). Its shape matches `sb5_jp.png` pixel for pixel. The 5,470
 pixels that differ are shades of the cycling yellows and greens (the colour-cycle phase), so the art is
 unchanged.
 
@@ -185,6 +185,6 @@ unchanged.
 
 - `tools/sb5en/`: `run.sh` (English ROM by default, `jp` for the Japanese retail ROM), `../sb5/lib.lua`,
   `fuzz.sh` + `fuzzcases.py` (compare with `tools/sb5/password.py`), `typecode.lua`, `logo.lua`,
-  `bgrender.py`, `croplogo.py`.
+  `croplogo.py` (with `tools/sb5/bgrender.py`).
 - `disasm/sb5en/`: banks `$C0-$E3` (`$E4-$FF` are `$FF`), with the Japanese `entries.txt`.
 - `img/sb5en/`, `img/logos/sb5_en.png`.

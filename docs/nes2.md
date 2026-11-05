@@ -143,7 +143,7 @@ its cross only in JP; checked in Mesen (`H8666HBH` / `NHFFFNIN` = 6-8, then `$B7
 
 ## Title logo and item icons
 
-`docs/img/logos/nes2_us.png` and `nes2_jp.png` (the JP one without ™): title-screen PPU dumps (`tools/nes2/vdump.lua`)
+`docs/img/logos/nes2_us.png` and `nes2_jp.png` (the JP one without ™): title-screen PPU dumps (`tools/nes1/vdump.lua`)
 rendered with `tools/nes1/logo.py crop ... 0 1`, which keys out the green backdrop and draws the sprites (the bomb on
 the O is one). The password holds bombs and fire only: `docs/img/items/nes2/bomb.png` and `fire.png` (16 x 16, tiles
 `$60 $61 $70 $71` and `$62 $63 $72 $73` of the area-1 metatile table `$04:8080`) come from the stage 1-1 PPU dump with

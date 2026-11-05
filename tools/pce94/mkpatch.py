@@ -1,7 +1,9 @@
 """Build the '94 ROM patches as IPS files: python tools/pce94/mkpatch.py  (writes patches/pce94_*.ips)
 Each patch is checked against the ROM it is for: the bytes it replaces must be the expected originals.
 IPS: 'PATCH', then records of 3-byte offset, 2-byte length, data, then 'EOF'."""
-import os
+import os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "emu"))
+from ips import ips, apply  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..", "..")
 ROMS = {"jp": "Bomberman '94 (Japan).pce"}
@@ -16,24 +18,6 @@ PATCHES = {
         "Restores the cut debug pause menu (INV_MODE, MAP_CLEAR, enemy editor): two stubs in free bank $01 space"
         " ($DF66 handler wrapper, $DF82 text printer) hooked into the pause slide-in ($D891) and paused handler ($D89C)"),
 }
-
-
-def ips(recs):
-    out = bytearray(b"PATCH")
-    for off, data in recs:
-        out += off.to_bytes(3, "big") + len(data).to_bytes(2, "big") + data
-    return bytes(out + b"EOF")
-
-
-def apply(rom, patch):
-    rom = bytearray(rom)
-    assert patch[:5] == b"PATCH"
-    i = 5
-    while patch[i:i + 3] != b"EOF":
-        off, n = int.from_bytes(patch[i:i + 3], "big"), int.from_bytes(patch[i + 3:i + 5], "big")
-        rom[off:off + n] = patch[i + 5:i + 5 + n]
-        i += 5 + n
-    return bytes(rom)
 
 
 if __name__ == "__main__":

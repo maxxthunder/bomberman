@@ -168,7 +168,7 @@ addresses above, it reads only RAM, ROM and the usual registers.
 
 `img/logos/sb4_en.png` (249×118, 26 colours, transparent) is BG1 of the English title screen. It was
 rebuilt from VRAM and CGRAM dumped in Mesen (`vdump` in `tools/sb4en/lib.lua`, then
-`tools/sb4en/bgrender.py vram.bin cgram.bin 32768 0 1`), cut above the menu and cropped tight
+`tools/sb4/bgrender.py vram.bin cgram.bin 32768 0 1`), cut above the menu and cropped tight
 (`tools/sb5en/croplogo.py`). Compared with `sb4_jp.png`, every pixel has the same shape. The 2,433 that
 differ in colour are all in the "4" (x 151-220), whose colours cycle, so the art is unchanged.
 
@@ -193,7 +193,7 @@ differs. The code/data dump in `tools/sb4en/lib.lua` had the same off-by-one as 
 ## Files
 
 - `tools/sb4en/`: `run.sh` (English ROM by default; `ROM=` overrides), `job.sh`, `lib.lua` (Left on the
-  players screen), `fuzz.lua`, `pwcheck.lua`, `bgrender.py`, `hooks.py` (lists the redirected JSL/JML
+  players screen), `fuzz.lua`, `pwcheck.lua`, `hooks.py` (lists the redirected JSL/JML
   sites).
 - `disasm/sb4en/`: banks `$C0-$E2` (`$E3-$FF` are `$FF`); `entries.txt` is the Japanese one plus the
   added routines.

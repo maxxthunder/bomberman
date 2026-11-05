@@ -2,6 +2,13 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.6.0 (2026-11-05)
+- New fonts: Lilita One for headings, Fredoka for text, Azeret Mono for codes.
+- Each game has its own link (for example `#sb2`); picking a game updates the address.
+- Fixed: with the Japan version chosen, the Bomberman GB generator offered Wario and his codes, which that cart rejects.
+- README rewritten: how to use it, a games table with links, highlights, and which ROM each patch needs.
+- Tools: one shared IPS writer for the patch makers; duplicate scripts removed.
+
 ## 1.5.0 (2026-11-05)
 - New game: Bomberman Quest (US and Japan), with an item code builder, its debug switches, cheats and patches.
 - Cheat codes for both devices: Game Genie and Pro Action Replay (GameShark on Game Boy) side by side on each card,

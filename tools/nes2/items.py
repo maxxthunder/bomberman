@@ -1,5 +1,5 @@
 """Rip the Bomberman II power-up icons stored in the password (bomb up, fire up) from in-game PPU dumps
-(vdump.lua lines, taken by items.lua when the item is on screen), native size, real palette, colour 0 transparent:
+(tools/nes1/vdump.lua lines, taken by items.lua when the item is on screen), native size, real palette, colour 0 transparent:
 python tools/nes2/items.py <dump.txt> <outdir> [palette]   -> <outdir>/bomb.png, fire.png
 
 The item metatiles (bank 4, per-area tables from $8000; the area 1 copy: $8080 bomb = tiles 60 61 70 71, $8084

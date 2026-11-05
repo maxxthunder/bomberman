@@ -8,7 +8,7 @@
 <meta name="description" content="Every password and secret code for the NES, Game Boy, Game Boy Color, Super Nintendo, Genesis and TurboGrafx-16 / PC Engine Bomberman games, read from the games' own code and tested in emulators, with a password generator and checker for each game.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;600;800&family=JetBrains+Mono:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Fredoka:wght@400;500;600;700&family=Azeret+Mono:wght@700;800&display=swap">
 <style>
 :root {
   /* "Bomber night": navy arena, white helmet plates, the antenna's pink for controls, fuse yellow for New */
@@ -16,8 +16,8 @@
   --pink: #ff5c9d; --pink-soft: #3b1d4d; --fuse: #ffd23f; --flame: #ff8a3d; --ok: #5ee08b; --bad: #ff6f6f;
   --plate: #f4f6ff; --plate-ink: #111735; --rule: rgb(255 255 255 / .05); --hold: #8a90b0;
   --cheat: #5aa9ff; --debug: #6d78b0;
-  --display: "Bungee", Impact, system-ui, sans-serif; --body: "Nunito", system-ui, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace; color-scheme: dark;
+  --display: "Lilita One", Impact, system-ui, sans-serif; --body: "Fredoka", system-ui, sans-serif;
+  --mono: "Azeret Mono", ui-monospace, Consolas, monospace; color-scheme: dark;
   /* the accent and the code plate follow the console (set per platform group and on the game page) */
   --acc: var(--pink); --code-bg: var(--plate); --code-ink: var(--plate-ink);
 }
@@ -258,7 +258,7 @@ footer a:hover { text-decoration: underline; }
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.5.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.6.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -669,6 +669,7 @@ function pickGame(id) {
   syncPv();
   if (last && g.check(last)) { $("check").value = last; runCheck(); }
   saved.game = g.id; store.set(saved);
+  if (location.hash !== "#" + g.id) history.replaceState(null, "", "#" + g.id);   // a link to the game
   renderCodes();
 }
 // the '93 generator follows the chip
@@ -852,12 +853,14 @@ const GEN = {
     secrets(); onSpecial(); f();
   },
   gb1() {
-    const g1 = GAMES.find(x => x.id === "gb1");
+    // follows the version chip: the Japanese cart has no Wario and none of his codes
+    const g1 = GAMES.find(x => x.id === "gb1"), v = vlow() === "jp" ? "jp" : "wario";
     gen(`<div class="row">${sel("r", "Round", range(1, 8))}${sel("s", "Stage", range(1, 4, s => s === 4 ? "4 (boss)" : s))}
-      ${sel("pl", "Player", [["bomberman", "Bomberman"], ["wario", "Wario (Wario Blast)"]])}</div>
-      <div class="row">${specials(["4622", "5656", "2264", "6565"].map(c => [c, `${c}: ${g1.check(c, "wario").title}`]))}</div>`);
-    const f = () => { showSpecial(""); setCode(GB1.encode(val("r"), val("s"), $("pl").value, "wario")); };
+      ${sel("pl", "Player", [["bomberman", "Bomberman"], ...(v === "wario" ? [["wario", "Wario (Wario Blast)"]] : [])])}</div>
+      <div class="row">${specials(["4622", "5656", "2264", "6565"].filter(c => g1.check(c, v)).map(c => [c, `${c}: ${g1.check(c, v).title}`]))}</div>`);
+    const f = () => { showSpecial(""); setCode(GB1.encode(val("r"), val("s"), $("pl").value, v)); };
     $("r").onchange = $("s").onchange = $("pl").onchange = f;
+    GEN.gb1.onver = () => GEN.gb1();
     onSpecial(); f();
   },
   gb2() {
@@ -1088,7 +1091,12 @@ document.addEventListener("keydown", e => {
   if (e.key === "/" && !e.target.matches("input, select, textarea") && g) { e.preventDefault(); $("q").focus(); }
 });
 
-if (GAMES.some(x => x.id === saved.game)) pickGame(saved.game);
+// #<game> opens that game (the add-ons open their host page); else the last game seen
+const linked = id => ({ pceub: "pce90", mega8: "mega" })[id] || id;
+const fromHash = () => linked(location.hash.slice(1));
+if (GAMES.some(x => x.id === fromHash())) pickGame(fromHash());
+else if (GAMES.some(x => x.id === saved.game)) pickGame(saved.game);
+addEventListener("hashchange", () => { if (GAMES.some(x => x.id === fromHash()) && (!g || g.id !== fromHash())) pickGame(fromHash()); });
 </script>
 </body>
 </html>
