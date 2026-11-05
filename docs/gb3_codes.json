@@ -962,7 +962,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Game Genie: $01:4BE6 LD A,($C1BC) -> JP $4AE4, the flag's no-death branch. Bot 6,000 frames: 0 hits. IPS: patches/gb3_invincible.ips. GameShark 0101BCC1: the flag above, same bot test.",
+  "note": "Game Genie: $01:4BE6 LD A,($C1BC) -> JP $4AE4, the flag's no-death branch. Bot 6,000 frames: 0 hits. GameShark 0101BCC1: the flag above, same bot test.",
   "section": "cheat"
  },
  {

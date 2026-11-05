@@ -83,8 +83,6 @@ the addresses.
 | `010306C1` | infinite lives (`$C106` = 3) | 10 deaths, no game over | Game Genie `B75-58D` + `B75-98D` (jp `B75-85D` + `B75-C5D`): DEC A -> OR A at both decrements; 10 deaths, no game over |
 | `010103C1` + `010004C1` | every stage ends cleared | `$C100` 00, 01, 02, 03, 04, 07 (boss), 10 in 5,000 frames | Game Genie `C34-EDD` + `185-53D` (jp `C35-1AD` + `185-80D`): `$00:24ED` JP NZ -> JP, `$00:2553` JR Z -> JR; the same `$C100` sequence |
 
-Patch: `patches/gb2_invincible.ips` (`$5296`, `$52AC`, `$5303` = `$C9`, both versions).
-
 ## Hidden-content sweep
 
 Coverage (`tools/gb2/cov.sh`): intro and title, LESSON, the sound test with every number, battle, 4622, MODE-A and

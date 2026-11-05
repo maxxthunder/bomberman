@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis and PC Engine
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.7.0](https://img.shields.io/badge/version-1.7.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.7.1](https://img.shields.io/badge/version-1.7.1-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 17 Bomberman games, read from each game's own code and tested in emulators, with a
 password generator and checker for each one.
@@ -43,12 +43,12 @@ The page follows your device's light or dark setting, and works offline: save [`
 | <img src="docs/img/logos/nes1_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#nes1) | 1985 | password generator, cheats |
 | <img src="docs/img/logos/nes2_us.png" alt="" height="28"> | [Bomberman II](https://maxxthunder.github.io/bomberman/#nes2) | 1991 | password generator, cheats |
 | **Game Boy** | | | |
-| <img src="docs/img/logos/gb1_wario.png" alt="" height="28"> | [Wario Blast / Bomberman GB](https://maxxthunder.github.io/bomberman/#gb1) | 1994 | password generator, cheats, invincibility patch |
-| <img src="docs/img/logos/gb2_us.png" alt="" height="28"> | [Bomberman GB / GB 2](https://maxxthunder.github.io/bomberman/#gb2) | 1995 | password generator, cheats, invincibility patch |
-| <img src="docs/img/logos/gb3_jp.png" alt="" height="28"> | [Bomberman GB 3](https://maxxthunder.github.io/bomberman/#gb3) | 1996 | password generator, cheats, invincibility patch |
+| <img src="docs/img/logos/gb1_wario.png" alt="" height="28"> | [Wario Blast / Bomberman GB](https://maxxthunder.github.io/bomberman/#gb1) | 1994 | password generator, cheats |
+| <img src="docs/img/logos/gb2_us.png" alt="" height="28"> | [Bomberman GB / GB 2](https://maxxthunder.github.io/bomberman/#gb2) | 1995 | password generator, cheats |
+| <img src="docs/img/logos/gb3_jp.png" alt="" height="28"> | [Bomberman GB 3](https://maxxthunder.github.io/bomberman/#gb3) | 1996 | password generator, cheats |
 | **Game Boy Color** | | | |
-| <img src="docs/img/logos/pocket.png" alt="" height="28"> | [Pocket Bomberman](https://maxxthunder.github.io/bomberman/#pocket) | 1998 | password generator, cheats, patches |
-| <img src="docs/img/logos/max_blue.png" alt="" height="28"> | [Bomberman Max](https://maxxthunder.github.io/bomberman/#max) | 1999 | Charabom code builder (the game saves), cheats, patches |
+| <img src="docs/img/logos/pocket.png" alt="" height="28"> | [Pocket Bomberman](https://maxxthunder.github.io/bomberman/#pocket) | 1998 | password generator, cheats |
+| <img src="docs/img/logos/max_blue.png" alt="" height="28"> | [Bomberman Max](https://maxxthunder.github.io/bomberman/#max) | 1999 | Charabom code builder (the game saves), cheats |
 | <img src="docs/img/logos/sel.png" alt="" height="28"> | [Bomberman Selection](https://maxxthunder.github.io/bomberman/#sel) | 2003 | password generator for Bomber Boy, its Bomber Man mode and Bomberman |
 
 Every password checker was fuzzed against the game's own decoder in Mesen 2 (NES, Game Boy, SNES, PC Engine) or
@@ -155,7 +155,7 @@ The details, with ROM addresses, are in the research notes.
 
 ## Using the patches
 
-The IPS patches in [`patches/`](patches) restore debug menus and unused features or make you invincible. Each one
+The IPS patches in [`patches/`](patches) restore debug menus and unused features. Each one
 is for one exact ROM: the No-Intro name below (the checksums are in the game's research note). Apply it to a copy of
 your ROM with any IPS patcher, such as Floating IPS or a browser-based ROM patcher, and keep the original.
 
@@ -164,15 +164,9 @@ your ROM with any IPS patcher, such as Floating IPS or a browser-based ROM patch
 | `sb1_debug_menu_us` / `_eu` / `_jp` / `_beta` | Super Bomberman (USA), (Europe), (Japan), (USA) (Beta) (1993-05-11) |
 | `sb2_debug_menu_us` / `_eu` / `_jp` / `_beta` / `_caravan` | Super Bomberman 2 (USA), (Europe), (Japan) (En), (USA) (Beta), (Japan) (Caravan You Taikenban) |
 | `sb5_debug_rooms` | Super Bomberman 5 (Japan) |
-| `pce90_invincible_us` / `_jp`, `pce90_select_room` | Bomberman (USA) (also the Bomberman Collection dump), (Japan) (En); the Select Room patch is USA |
 | `pceub_password_1p`, `pceub_select_room` | Bomberman - Users Battle (Japan) |
 | `pce93_configration_us`, `pce93_normal_game_sp` | Bomberman '93 (USA); Bomberman '93 - Special Version (Japan) |
 | `pce94_debug_menu`, `pce94_debug_pause` | Bomberman '94 (Japan) |
-| `gb1_invincible` | Bomberman GB (Japan) or Wario Blast Featuring Bomberman! (USA, Europe) |
-| `gb2_invincible` | Bomberman GB (USA, Europe) or Bomberman GB 2 (Japan) |
-| `gb3_invincible` | Bomberman GB 3 (Japan) |
-| `pocket_invincible`, `pocket_debug_password` | Pocket Bomberman (USA, Europe) |
-| `max_invincible_blue` / `_red` / `_hikari` / `_yami` / `_ain` | Bomberman Max - Blue Champion (USA), Red Challenger (USA), Hikari no Yuusha, Yami no Senshi, Ain Version (Japan) |
 
 What each patch does, and how it was tested, is on the game's page under Patches.
 

@@ -258,7 +258,7 @@ footer a:hover { text-decoration: underline; }
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.7.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.7.1</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -280,16 +280,8 @@ const PATCH_ROM = {
   "sb2_debug_menu_jp.ips": "Super Bomberman 2 (Japan) (En)", "sb2_debug_menu_beta.ips": "Super Bomberman 2 (USA) (Beta)",
   "sb2_debug_menu_caravan.ips": "Super Bomberman 2 (Japan) (Caravan You Taikenban)",
   "sb5_debug_rooms.ips": "Super Bomberman 5 (Japan)",
-  "pce90_invincible_us.ips": "Bomberman (USA), also the Bomberman Collection dump", "pce90_invincible_jp.ips": "Bomberman (Japan) (En)",
-  "pce90_select_room.ips": "Bomberman (USA)",
   "pceub_password_1p.ips": "Bomberman - Users Battle (Japan)", "pceub_select_room.ips": "Bomberman - Users Battle (Japan)",
   "pce93_configration_us.ips": "Bomberman '93 (USA)", "pce93_normal_game_sp.ips": "Bomberman '93 - Special Version (Japan)",
-  "gb1_invincible.ips": "Bomberman GB (Japan) or Wario Blast Featuring Bomberman! (USA, Europe)",
-  "gb2_invincible.ips": "Bomberman GB (USA, Europe) or Bomberman GB 2 (Japan)", "gb3_invincible.ips": "Bomberman GB 3 (Japan)",
-  "max_invincible_blue.ips": "Bomberman Max - Blue Champion (USA)", "max_invincible_red.ips": "Bomberman Max - Red Challenger (USA)",
-  "max_invincible_hikari.ips": "Bomberman Max - Hikari no Yuusha (Japan)", "max_invincible_yami.ips": "Bomberman Max - Yami no Senshi (Japan)",
-  "max_invincible_ain.ips": "Bomberman Max - Ain Version (Japan)",
-  "pocket_invincible.ips": "Pocket Bomberman (USA, Europe)", "pocket_debug_password.ips": "Pocket Bomberman (USA, Europe)",
   "pce94_debug_menu.ips": "Bomberman '94 (Japan)", "pce94_debug_pause.ips": "Bomberman '94 (Japan)",
 };
 // the patch files a code's text names (patches/sb1_debug_menu_<ver>.ips names every sb1_debug_menu_*.ips)
@@ -588,7 +580,7 @@ const NICE = { secret_items: "Secret items", password: "Passwords", secret: "Sec
   rules: "How it plays", input: "Controllers", hidden: "Hidden screens", Cheats: "Cheat codes", Debug: "Debug features" };
 // what players type in the game comes first: special codes and passwords, then secrets; debug, region notes, cheat
 // devices and patches come last, then the add-on games. Sections named only in a code list go in between.
-const ORDER = ["Special codes", "Option passwords", "Character passwords", "Passwords", "Stage codes", "Power-up codes", "Charaboms", "Weapons", "Equipment", "Items",
+const ORDER = ["Special codes", "Option passwords", "Character passwords", "Passwords", "Stage codes", "Power-up codes", "Charaboms",
   "Secret items", "Hidden screens", "Secrets", "Button codes", "Tricks"];
 const LAST = ["Debug features", "How it plays", "Controllers", "Region differences", "Unused content", "Demo CD", "Cheat codes", "Patches",
   "8-Player Demo (prototype)", "Bomberman: Users Battle (Japan)"];

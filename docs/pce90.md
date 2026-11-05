@@ -390,9 +390,6 @@ these were verified in Mesen and are in `docs/pce90_codes.json` (`section: "chea
 | `00200B:80` + `00200C:0B` | the Special Select Room after every 1P START intro, with no buttons held and any high score (round select) | the room code `$01:A063` ran in US, JP and the Collection |
 | `1F1451:FF` | the sound test after any valid password | MUVWLNPC → SOUND-00 (US, JP) |
 
-Patches: `patches/pce90_select_room.ips` (file `$200B`: `D0 F3` → `80 0B`, the same bytes in all three cards),
-`patches/pce90_invincible_us.ips` (US and Collection) and `patches/pce90_invincible_jp.ips`.
-
 ## Open
 
 - The full 2^24 `fuzz_all.py` sweep was not run: it needs hours of emulator time on this machine.

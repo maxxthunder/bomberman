@@ -34,7 +34,7 @@ export function encode(world, stage = 1, power = false) {
   if (power) return stage === 1 ? TABLE[25 + world] : null;
   return TABLE[world * 5 + stage - 1];
 }
-// The unused second decoder at $01:66CD (no caller; patches/pocket_debug_password.ips calls it when the table check
+// The unused second decoder at $01:66CD (no caller; calling it when the table check
 // fails): digit 1 = 0/1 invincible ($C2CC), digit 2 = world 0-4, digit 3 = 0/1 Start stops the clock instead of
 // pausing ($C2CD), digit 4 = stage 0-4 (0 = stage 1). -> {invincible, world, clockStop, stage 1-5} | null
 export function debugDecode(code) {

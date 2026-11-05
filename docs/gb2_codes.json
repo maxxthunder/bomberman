@@ -167,7 +167,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Game Genie, compare $60: RET over the three player-death handlers in the hit jump table $01:4913 ($01:5296 fire, $01:52AC and $01:5303), same addresses in both. tools/gb2/test_cheats.lua, bot 6,000 frames in world 1: 0 deaths with the codes, 5 deaths and a game over without. IPS: patches/gb2_invincible.ips.",
+  "note": "Game Genie, compare $60: RET over the three player-death handlers in the hit jump table $01:4913 ($01:5296 fire, $01:52AC and $01:5303), same addresses in both. tools/gb2/test_cheats.lua, bot 6,000 frames in world 1: 0 deaths with the codes, 5 deaths and a game over without.",
   "section": "cheat"
  },
  {

@@ -163,21 +163,6 @@
   "section": "cheat"
  },
  {
-  "code": "patches/max_invincible_<ver>.ips",
-  "effect": "Invincible (ROM patch)",
-  "versions": [
-   "blue",
-   "red",
-   "hikari",
-   "yami",
-   "ain"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "file $92EB: CA -> C3 ($02:52EB, the Game Genie code's byte); one file per version, the same byte in each. Patched Blue and Ain ROMs: 0 hits in 6,000 bot frames.",
-  "section": "patch"
- },
- {
   "code": "Ain Version: any new game",
   "effect": "A new game flags all 95 stages of both versions, against 75 in each retail version",
   "versions": [

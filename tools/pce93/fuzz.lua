@@ -27,3 +27,7 @@ function fuzz_arm()
     rec(string.format('A%02x%02x%02x%02x%02x%02x', r(ST), r(ST+1), r(ST+2), r(ST+3), r(ST+5), r(ST+0x1A))) end end, emu.callbackType.exec, OK, OK)
   emu.addMemoryCallback(function() if st and inbank() then rec('X') end end, emu.callbackType.exec, BAD, BAD)
 end
+-- open the password screen (Special Version: the unused one), enter AAAAAAAA, END (index 28 on the JP grid); the
+-- decoder runs with fuzz_arm()'s callbacks in place, about 160 codes per frame
+if VER=='sp' then sp_password() else to_password() end
+at(fuzz_arm) type_pw({0,0,0,0,0,0,0,0}) if VER=='us' then submit() else submit(28) end wait(15000)

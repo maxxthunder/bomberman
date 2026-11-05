@@ -2,6 +2,11 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.7.1 (2026-11-05)
+- Removed the patches for Bomberman (PC Engine, 1990) and every Game Boy and Game Boy Color game; their cheat codes
+  stay.
+- Tools: unused scripts and screenshots removed, and the Mega Bomberman demo shares Mega Bomberman's VDP reader.
+
 ## 1.7.0 (2026-11-05)
 - New game: Bomberman Selection (Korea), with a password generator for Bomber Boy (islands cleared and gold), its
   Bomber Man mode (NES Bomberman's codes) and Bomberman (Bomberman GB's codes).

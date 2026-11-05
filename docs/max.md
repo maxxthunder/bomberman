@@ -141,9 +141,6 @@ Red and Yami 20 others, and Ain has all 95 (read from cart RAM after a new game 
 The hit branch sits at the same address with the same bytes in all five versions (only the CALL target before it
 moves), so one Game Genie code works everywhere.
 
-Patches: `patches/max_invincible_<ver>.ips` for `blue`, `red`, `hikari`, `yami`, `ain` (file `$92EB` = `C3`; the
-byte is the same in all five, so the files are too). Patched Blue and Ain: 0 hits in 6,000 bot frames.
-
 The player object is the `$C700` page: `$C705` state (`$14` playing, `$3C` hit, `$1C`/`$1D` dying, `$08` respawn,
 `$20` and up game over), `$C716`/`$C717` timers, `$C750` bit 2 a shield that turns a hit into `$02:67A1`.
 

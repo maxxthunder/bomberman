@@ -145,11 +145,11 @@ digits as switches:
 Anything out of range is rejected. The real check clears `$C2CC` and `$C2CD` first (`$01:6549`), and nothing else ever
 sets them, so both debug features are dead in the retail game.
 
-`patches/pocket_debug_password.ips` (file `$6588` = `CD CD 66 FA BD C1 C9`) calls the decoder when a code is not in
-the table, so the 32 real codes still work and none of them is also a debug code. Mesen: **1010** starts Forest
+Calling the decoder when a code is not in the table (file `$6588` = `CD CD 66 FA BD C1 C9`) keeps the 32 real codes
+working, and none of them is also a debug code. Mesen: **1010** starts Forest
 area 1 invincible with the Start clock toggle; **0214** starts the Wind boss, not invincible.
 
-![1010 with the patch; the clock held by Start](img/pocket/debug_password.png)
+![1010 with the decoder called; the clock held by Start](img/pocket/debug_password.png)
 
 - **`$C2CC` invincible**: both player-death checks skip when it is set (`$02:436B`, which also covers the clock running
   out, and `$02:4DC3`).
@@ -167,8 +167,7 @@ area 1 invincible with the Start clock toggle; **0214** starts the Wind boss, no
 | `0101CDC2` | Start stops / restarts the clock (the debug flag) | clock held at 3:55 for 600 frames, then ran on | Game Genie `380-CCB-4CA` (`$02:40CC` JR Z -> JR C, never taken): the same |
 | `0F9-C1A-E62` (Game Genie, Known) | the debug menu in place of the title menu | the numbered test menu shows, text partly garbled | no GameShark form: holding the scene byte `$C1A8` at `$0F` skips the setup the title hands over, the screen stays blank |
 
-Patch: `patches/pocket_invincible.ips` (file `$836F` = `C3`, `$8DC7` = `18`): 0 deaths in 2 x 20,000 frames. The
-Game Genie pair needs both codes: with only the first, the bot still died 3 times in 20,000 frames (the second death
+The Game Genie pair needs both codes: with only the first, the bot still died 3 times in 20,000 frames (the second death
 check, `$02:4DC3`).
 
 ![The debug menu (0F9-C1A-E62)](img/pocket/debug_menu.png)

@@ -135,8 +135,6 @@ Boot clears `$C1B9-$C1BD` (`$00:12F7`-`$00:12FD`). Two of them are read but neve
 | `01FF80C4` | every stage ends cleared (`$C480` = `$FF`) | Wood 1-6 then City 2 in 6,000 frames | Game Genie `18B-A2E` + `C3B-E8E` (`$00:1BA2` JR NZ -> JR, `$00:1BE8` JP Z -> JP): Wood 1-6 then City 1 |
 | `0101BDC1` | clock stops (the debug flag) | 3:00 after 1,200 frames | Game Genie `C99-B5D` (`$00:29B5` RET NZ -> RET): 3:00 |
 
-Patch: `patches/gb3_invincible.ips` (file `$4BE6` = `C3 E4 4A`).
-
 ## Hidden-content sweep
 
 Coverage (`tools/gb3/cov.sh`): intro and title, STORY, the 3rd title mode (ちゃれんじ, challenge mode: score attack on はらはら / どきどき stages, 2 or 5 minutes), the boss

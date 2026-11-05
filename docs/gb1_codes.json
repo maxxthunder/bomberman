@@ -796,7 +796,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Game Genie, compare $CD: RET over the hit check $01:4837 (same address in both). tools/gb1/test_cheats.lua, random-input bot 6,000 frames from 1-1: 0 hits with the code, 7 hits / 7 lost sets without. IPS: patches/gb1_invincible.ips (file $4837 = $C9). GameShark: player +$4F (the after-hit flash flag) = 1 and its counter +$49 = 0, so $01:4866 always reports the flash; same bot: 0 hits (jp and wario).",
+  "note": "Game Genie, compare $CD: RET over the hit check $01:4837 (same address in both). tools/gb1/test_cheats.lua, random-input bot 6,000 frames from 1-1: 0 hits with the code, 7 hits / 7 lost sets without. GameShark: player +$4F (the after-hit flash flag) = 1 and its counter +$49 = 0, so $01:4866 always reports the flash; same bot: 0 hits (jp and wario).",
   "section": "cheat"
  },
  {

@@ -253,7 +253,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$01:A00B BNE $A000 -> BRA $A018 skips the held-button, demo and high-score tests. Run from the title with no buttons held: the room code $01:A063 ran (US, JP, Collection). Same bytes as patches/pce90_select_room.ips",
+  "note": "$01:A00B BNE $A000 -> BRA $A018 skips the held-button, demo and high-score tests. Run from the title with no buttons held: the room code $01:A063 ran (US, JP, Collection).",
   "section": "cheat"
  },
  {
@@ -268,41 +268,5 @@
   "verified": "mesen",
   "note": "RAM $3451, the BOMSOUND flag, read as $FF: MUVWLNPC went straight to SOUND-00 (US, JP)",
   "section": "cheat"
- },
- {
-  "code": "patches/pce90_select_room.ips",
-  "effect": "Special Select Room opens after every 1P START intro",
-  "versions": [
-   "US",
-   "JP",
-   "collection"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "file $200B: D0 F3 -> 80 0B (the bytes are the same in US, JP and Bomberman Collection); verified with the same bytes as a Mesen cheat on all three",
-  "section": "patch"
- },
- {
-  "code": "patches/pce90_invincible_us.ips",
-  "effect": "US / Bomberman Collection: fire and enemies never kill",
-  "versions": [
-   "US",
-   "collection"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "file $12AB3: AD -> 60 and $14485: AD -> 60 (RTS); verified with the same bytes as Mesen cheats on US and the Collection",
-  "section": "patch"
- },
- {
-  "code": "patches/pce90_invincible_jp.ips",
-  "effect": "JP: fire and enemies never kill",
-  "versions": [
-   "JP"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "file $12AD6: AD -> 60 and $144A8: AD -> 60 (RTS); verified with the same bytes as Mesen cheats",
-  "section": "patch"
  }
 ]

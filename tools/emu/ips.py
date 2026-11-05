@@ -1,6 +1,4 @@
-"""Minimal IPS writer and reader, shared by the patch makers.
-As a script, writes a tiny patch: python tools/emu/ips.py <out.ips> <rom offset hex>:<bytes hex> [...]  (tools/gb1-gb3)"""
-import sys
+"""Minimal IPS writer and reader, shared by the patch makers."""
 
 
 def ips(records):
@@ -20,10 +18,3 @@ def apply(rom, patch):
         i += 5 + n
     return bytes(rom)
 
-
-if __name__ == "__main__":
-    recs = []
-    for a in sys.argv[2:]:
-        o, b = a.split(":")
-        recs.append((int(o, 16), bytes.fromhex(b)))
-    open(sys.argv[1], "wb").write(ips(recs))

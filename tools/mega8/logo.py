@@ -5,8 +5,8 @@ Bomberman logo; its title is the two text lines at the top ("Mega Bomberman" / "
 here down to the first blank pixel row after them. Colour 0 is transparent. Usage: python logo.py DUMPDIR out.png
 """
 import sys, os
-sys.path.insert(0, os.path.dirname(__file__))
-import vdp
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'mega'))
+import vdp  # noqa: E402  (shared with tools/mega)
 d, out = sys.argv[1], sys.argv[2]
 v = open(os.path.join(d, 'VRAM.bin'), 'rb').read(); P = vdp.palette(open(os.path.join(d, 'CRAM.bin'), 'rb').read())
 im, _ = vdp.plane(v, 0xC000, 64, 32)

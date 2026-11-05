@@ -404,7 +404,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $02:436F JP NZ -> JP and $02:4DC7 JR NZ -> JR, the branches that skip when $C2CC is set. The same bytes as patches/pocket_invincible.ips. Mesen: 0 deaths in 2 x 20,000 frames of the bot. GameShark 0101CCC2: the flag above, same bot test."
+  "note": "Game Genie: $02:436F JP NZ -> JP and $02:4DC7 JR NZ -> JR, the branches that skip when $C2CC is set. Mesen: 0 deaths in 2 x 20,000 frames of the bot. GameShark 0101CCC2: the flag above, same bot test."
  },
  {
   "code": "0103F1C1",
@@ -450,28 +450,5 @@
   "section": "Cheats",
   "note": "Game Genie, already documented for the Game Boy Color release. In Mesen the title leads to the numbered test menu (1-7), its text partly garbled.",
   "img": "debug_menu.png"
- },
- {
-  "code": "patches/pocket_invincible.ips",
-  "effect": "Invincible",
-  "versions": [
-   "us"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "section": "Patches",
-  "note": "File $836F = C3, $8DC7 = 18 (the two death checks always skip). Mesen: 0 deaths in 2 x 20,000 frames of the bot."
- },
- {
-  "code": "patches/pocket_debug_password.ips",
-  "effect": "Restores the unused debug password: digit 1 invincible (0/1), 2 world (0-4), 3 Start stops the clock (0/1), 4 area (0-4)",
-  "versions": [
-   "us"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "section": "Patches",
-  "note": "The second decoder at $01:66CD has no caller. The patch ($6588 = CD CD 66 FA BD C1 C9) calls it when a code is not in the table, so the 32 table codes still work. Mesen: 1010 starts Forest area 1 invincible with the Start clock toggle (clock held at 3:54 for 300 frames, then ran on); 0214 starts Wind area 5 (boss), not invincible.",
-  "img": "debug_password.png"
  }
 ]
