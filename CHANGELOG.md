@@ -2,6 +2,10 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.7.3 (2026-11-05)
+- Game picker: space between the console groups, bigger group headings on desktop, and "Game Boy / Game Boy Color".
+- Patch downloads have a download icon.
+
 ## 1.7.2 (2026-11-05)
 - Bomberman Selection: cheat codes for 9,999 gold in Bomber Boy, and invincibility and instant set wins in Bomberman,
   each tested in an emulator.

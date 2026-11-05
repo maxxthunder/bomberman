@@ -60,8 +60,10 @@ button { cursor: pointer; }
 
 /* game picker: full logo cards until a game is chosen, then a compact sticky row (a dropdown on phones) */
 #picker { display: grid; gap: 14px; }
+#cards { display: grid; gap: 22px; }
 .pgroup { display: grid; gap: 8px; }
 .pgroup h3 { font: 800 13px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--acc); }
+@media (min-width: 761px) { .pgroup h3 { font-size: 17px; } .pgroup { gap: 10px; } }
 .gcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
 .gcard { background: var(--panel); border: 2px solid var(--line); border-top: 4px solid var(--acc); border-radius: 12px; padding: 12px 8px 10px; display: grid; gap: 4px;
   justify-items: center; align-content: start; font: 800 15px/1.2 var(--body); text-align: center; min-width: 0; }
@@ -175,6 +177,7 @@ h3.pw .usecode:hover, .stages td.c .usecode:hover { color: var(--code-ink); box-
 .thumb:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
 .ips { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 14px; }
 .ips a { font-weight: 800; }
+.ips .dl { color: inherit; stroke-width: 2.2; margin-right: 5px; }
 .ips span { color: var(--muted); }
 /* "★ New" hangs from the card's top edge like tabs */
 .badge { font: 800 11px var(--body); letter-spacing: .1em; text-transform: uppercase; border-radius: 0 0 5px 5px; padding: 3px 9px;
@@ -258,7 +261,7 @@ footer a:hover { text-decoration: underline; }
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.7.2</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.7.3</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -1505,7 +1508,7 @@ const GAMES = [
       return other ? `That's a code for the ${other === "us" ? "US" : "Japanese"} version.` : c.length === 8 ? "It fails the game's check, so at least one character is wrong." : "";
     },
     notes: { Passwords: "The first character is a key the rest are scrambled with, so every state has thousands of codes; one per stage and kit is listed." } },
-  { id: "gb1", ns: GB1, family: "Game Boy", year: 1994, name: "Wario Blast featuring Bomberman!", plat: "Game Boy", logo: "gb1_wario", logos: { jp: "gb1_jp" }, main: "wario",
+  { id: "gb1", ns: GB1, family: "Game Boy / Game Boy Color", year: 1994, name: "Wario Blast featuring Bomberman!", plat: "Game Boy", logo: "gb1_wario", logos: { jp: "gb1_jp" }, main: "wario",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     intro: "Bomberman GB in Japan. Wario Blast keeps every Japanese code and adds a second set that plays as Wario.",
     check(c, ver) {
@@ -1520,7 +1523,7 @@ const GAMES = [
       return null;
     },
     notes: { Passwords: "No algorithm: the game looks your number up in a fixed list, so this is every code there is." } },
-  { id: "gb2", ns: GB2, family: "Game Boy", year: 1995, name: "Bomberman GB", plat: "Game Boy", logo: "gb2_us", main: "us",
+  { id: "gb2", ns: GB2, family: "Game Boy / Game Boy Color", year: 1995, name: "Bomberman GB", plat: "Game Boy", logo: "gb2_us", main: "us",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     intro: "Bomberman GB 2 in Japan.",
     check(c, ver) {
@@ -1533,7 +1536,7 @@ const GAMES = [
       return null;
     },
     notes: { Passwords: "No algorithm: the game compares your code with a list of 11, so this is every code there is." } },
-  { id: "gb3", ns: GB3, family: "Game Boy", year: 1996, name: "Bomberman GB 3", plat: "Game Boy (Japan)", logo: "gb3_jp", main: "jp",
+  { id: "gb3", ns: GB3, family: "Game Boy / Game Boy Color", year: 1996, name: "Bomberman GB 3", plat: "Game Boy (Japan)", logo: "gb3_jp", main: "jp",
     len: 7, shape: /^[0-9A-F]{7}$/, form: "7 digits, 0-9 and A-F",
     check(c) {
       const d = GB3.decode(c);
@@ -1545,7 +1548,7 @@ const GAMES = [
     },
     why: c => /[G-Z]/.test(c) ? "Each digit is 0-9 or A-F." : c.length === 7 ? "The capsule check doesn't balance, so at least one digit is wrong." : "",
     notes: { Passwords: "A code holds the area, stage, areas cleared, shop techniques and capsules. The check is the capsule balance: capsules held plus what you bought must equal what the cleared areas paid." } },
-  { id: "pocket", ns: POCKET, family: "Game Boy", year: 1998, name: "Pocket Bomberman", plat: "Game Boy Color (US, Europe)", logo: "pocket", main: "us",
+  { id: "pocket", ns: POCKET, family: "Game Boy / Game Boy Color", year: 1998, name: "Pocket Bomberman", plat: "Game Boy Color (US, Europe)", logo: "pocket", main: "us",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     check(c) {
       const d = POCKET.decode(c);
@@ -1559,7 +1562,7 @@ const GAMES = [
     },
     why: c => c.length === 4 ? "The game compares your code with a list of 32; this isn't one of them." : "",
     notes: { Passwords: "No algorithm: the game compares your code with a list of 32 (25 stages, 5 powered-up world starts, the boss rush and the ending), so this is every code there is." } },
-  { id: "max", ns: MAX, family: "Game Boy", year: 1999, name: "Bomberman Max", plat: "Game Boy Color", logo: "max_blue", main: "blue",
+  { id: "max", ns: MAX, family: "Game Boy / Game Boy Color", year: 1999, name: "Bomberman Max", plat: "Game Boy Color", logo: "max_blue", main: "blue",
     len: 8, shape: /^80[0-9A-F]{6}$/, form: "GameShark code, 8 hex digits starting 80", panel: "Charabom codes",
     intro: "Blue Champion and Red Challenger in the US, Hikari no Yuusha and Yami no Senshi in Japan, plus the Japanese Ain Version, which opens every stage of both. There is no password: the game saves, so the codes here are GameShark codes for the Charabom roster in the save.",
     check(c, ver) {
@@ -1574,7 +1577,7 @@ const GAMES = [
     },
     why: c => /^80/.test(c) ? "Not a Charabom roster address ($A110 + 8 x id, id 0-29)." : "Charabom codes start with 80 (a GameShark cart-RAM write).",
     notes: { Charaboms: "GameShark codes for the roster table in cart RAM. The game reads it in place, so a Charabom shows on Charabom Select at once and stays after you save." } },
-  { id: "sel", ns: SEL, family: "Game Boy", year: 2003, name: "Bomberman Selection", plat: "Game Boy Color (Korea)", logo: "sel", main: "kr",
+  { id: "sel", ns: SEL, family: "Game Boy / Game Boy Color", year: 2003, name: "Bomberman Selection", plat: "Game Boy Color (Korea)", logo: "sel", main: "kr",
     len: 8, maxLen: 20, shape: /^(\d{4}|[1-8A-HJ-UW-Z]{8}|[A-P]{20})$/, form: "8 characters (Bomber Boy), 20 letters (Bomber Man mode) or 4 digits (Bomberman)",
     intro: "A Korea-only cart with two games: Bomber Boy (1990, with its Bomber Man mode) and Bomberman GB (1994) in colour, its Japanese text in English. Each game keeps its own password screen.",
     check(c) {
@@ -1612,6 +1615,7 @@ const verName = v => VER[v.toLowerCase()] || v;
 // verified: a pad (run in an emulator) or a chip (read from the ROM)
 const ICON = {
   emu: '<path d="M6 8h12a4 4 0 0 1 4 4v1a4 4 0 0 1-7 2.6L14 15h-4l-1 .6A4 4 0 0 1 2 13v-1a4 4 0 0 1 4-4Z"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16.5" cy="11" r=".6"/><circle cx="18" cy="13" r=".6"/>',
+  download: '<path d="M12 3v11M7 9.5l5 5 5-5"/><path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/>',
   rom: '<rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 3v3M12 3v3M15 3v3M9 18v3M12 18v3M15 18v3M3 9h3M3 12h3M3 15h3M18 9h3M18 12h3M18 15h3"/>',
 };
 const icon = (k, label) => `<svg class="vi" viewBox="0 0 24 24" role="img" aria-label="${esc(label)}"><title>${esc(label)}</title>${ICON[k]}</svg>`;
@@ -1652,9 +1656,9 @@ const section = (game, e) => {
 };
 
 // ---------- game picker: platform groups in release order ----------
-const families = ["Super Nintendo", "TurboGrafx-16 / PC Engine", "Game Boy", "NES / Famicom", "Genesis"];
+const families = ["Super Nintendo", "TurboGrafx-16 / PC Engine", "Game Boy / Game Boy Color", "NES / Famicom", "Genesis"];
 const byFamily = f => GAMES.filter(x => x.family === f).sort((a, b) => a.year - b.year);
-const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy": "gb" };
+const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb" };
 $("cards").innerHTML = families.map((f, i) => `<div class="pgroup" data-fam="${FAM[f] || ""}"><h3 id="pf_${i}">${esc(f)}</h3>
   <div class="gcards" role="group" aria-labelledby="pf_${i}">${byFamily(f).map(x =>
     `<button type="button" class="gcard" data-g="${x.id}" aria-pressed="false" title="${esc(x.name)}"><img src="docs/img/logos/${x.logo}.png" alt=""><span class="nm">${esc(x.name)}</span><small>${x.year}</small></button>`).join("")}</div></div>`).join("");
@@ -2046,7 +2050,7 @@ const shotFor = (id, e) => e.img || (isPw(g, e) ? (SHOTS[id] || []).find(f => ne
 const thumb = (e, f) => f ? `<button type="button" class="thumb" data-img="docs/img/${g.id}/${esc(f)}" data-cap="${esc(e.code)}"><img src="docs/img/${g.id}/${esc(f)}" alt="Screenshot: ${esc(e.code)}" loading="lazy"></button>` : "";
 const mark = s => s === "new" ? '<span class="mk">★ New</span>' : "";
 const ipsList = files => files.length ? `<ul class="ips">${files.map(f =>
-  `<li><a href="patches/${esc(f)}" download>${esc(f)}</a> <span>for ${esc(PATCH_ROM[f] || "?")}</span></li>`).join("")}</ul>` : "";
+  `<li><a href="patches/${esc(f)}" download><svg class="vi dl" viewBox="0 0 24 24" aria-hidden="true">${ICON.download}</svg>${esc(f)}</a> <span>for ${esc(PATCH_ROM[f] || "?")}</span></li>`).join("")}</ul>` : "";
 // with a version chip on, show only that version's patch when there is one
 const forVer = files => { const v = vlow(), m = files.filter(f => f.endsWith(`_${v}.ips`)); return v && m.length ? m : files; };
 const vtext = e => e.versions.join(" ") + " " + e.code + " " + Object.values(e.devices || {}).join(" ") + " " + e.effect + " " + (e.note || "");
