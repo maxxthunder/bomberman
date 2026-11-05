@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Game Boy Color, Super Nintendo, Genesis and PC Engine
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.2.0](https://img.shields.io/badge/version-1.2.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.2.1](https://img.shields.io/badge/version-1.2.1-ff4f9a)](CHANGELOG.md)
 
 <p align="center">
   <img src="docs/img/logos/nes1_us.png" alt="Bomberman (NES)" height="72">
@@ -23,22 +23,25 @@
 </p>
 
 Every password and secret code for Bomberman and Bomberman II (NES / Famicom), Wario Blast / Bomberman GB 1–3 (Game
-Boy), Pocket Bomberman and Bomberman Max (Game Boy Color), Super Bomberman 1 to 5 (Super Nintendo), Mega Bomberman and its 8-player demo (Genesis), and Bomberman, Users
-Battle, Bomberman '93 and Bomberman '94 (TurboGrafx-16 / PC Engine), read from each game's own code and tested in
-emulators. For every game, the page has:
+Boy), Pocket Bomberman and Bomberman Max (Game Boy Color), Super Bomberman 1 to 5 (Super Nintendo), Mega Bomberman
+and its 8-player demo (Genesis), and Bomberman, Users Battle, Bomberman '93 and Bomberman '94 (TurboGrafx-16 / PC
+Engine), read from each game's own code and tested in emulators. For every game, the page has:
 
 - **Make a password** for any stage, and **check** one: it says whether the game takes it and what it holds.
 - **Item icons** ripped from each game next to the power-ups a password holds.
 - **Cheat codes** (Game Genie, Pro Action Replay, GameShark) and **IPS patches** for invincibility, debug menus and
   restored features, each tested in an emulator.
-- **Every code** with ★ New for codes no published list had, and Fixed for ones that were posted wrong.
+- **Every code**, with ★ New on the ones no published list had.
 - **Super Bomberman 5 character builder:** pick body, colour, bombs, fire, speed and items for a 6-symbol Config
   Battle password, or paste one to see what it holds.
+- **Bomberman Max Charabom builder:** the game has no password, so the page makes GameShark codes that give you any
+  Charabom at any level.
 
 The page works offline too: save [`index.html`](index.html) with the `docs/img/` folder next to it.
 
-Every password checker was fuzzed against the game's own decoder: every possible code was fed to the real game in
-Mesen 2 (NES, Game Boy, SNES, PC Engine) or BizHawk (Genesis), and the game accepted exactly the codes the page accepts, in every version.
+Every password checker was fuzzed against the game's own decoder in Mesen 2 (NES, Game Boy, SNES, PC Engine) or
+BizHawk (Genesis): every possible code for the 4-digit games, and tens of thousands of codes (every state, plus random
+and one-letter-off codes) for the longer ones. The game accepted exactly the codes the page accepts, in every version.
 
 Contents: [What's new](#whats-new) · [How the passwords work](#how-the-passwords-work) ·
 [Research notes](#research-notes) · [Tools](#tools) · [Credits and legal](#credits-and-legal)
@@ -48,8 +51,8 @@ Contents: [What's new](#whats-new) · [How the passwords work](#how-the-password
 **Bomberman** (NES / Famicom, US and Japan)
 - The 20-letter password fully decoded: stage, score and every power-up, with no range check, so fire 0–15, 16 bombs
   and stages 0–255 load. Stage 51 freezes; stages 96–103 and 224–231 hang.
-- The "highlight" letter swap moves a value from wall pass to the reveal flag, which marks the exit and item; stage 53
-  has nothing to do with it. Several posted codes corrected (stage 74, stages 131 and 243, fire 11).
+- The "highlight" letter swap moves a value from wall pass to the reveal flag, which marks the exit and item on any
+  stage. Codes that reach stage 74, 131 and 243, and fire 11.
 
 **Bomberman II** (NES / Famicom, US and Japan)
 - The password: the first letter is a key the rest are scrambled with, so every state has thousands of codes, and US
@@ -59,6 +62,7 @@ Contents: [What's new](#whats-new) · [How the passwords work](#how-the-password
 
 **Wario Blast / Bomberman GB** (Game Boy)
 - Wario Blast is the Japanese Bomberman GB: it keeps every Japanese code and adds 32 that play as Wario.
+- An unused early title logo, and the 4-player battle on a Super Game Boy multitap, played in an emulator.
 
 **Bomberman GB** (Game Boy, US; Bomberman GB 2 in Japan)
 - 7824 is in an unused older copy of the password table, where it meant the ending; the game rejects it.
@@ -66,7 +70,7 @@ Contents: [What's new](#whats-new) · [How the passwords work](#how-the-password
 
 **Bomberman GB 3** (Game Boy, Japan)
 - The 28-bit password decoded: its check is a capsule balance between what the cleared areas paid and what you
-  bought. GameFAQs' 36 "maxed" codes are all rejected; working ones are listed.
+  bought. Codes for every area with the shop items its capsules can pay for.
 - Two unused debug flags, invincibility and a stopped clock.
 
 **Pocket Bomberman** (Game Boy Color, US / Europe)
@@ -81,10 +85,9 @@ Contents: [What's new](#whats-new) · [How the passwords work](#how-the-password
 
 **Super Bomberman** (US, Europe, Japan, 1993-05-11 beta)
 - 140 stage passwords no list had: every stage takes four codes, and the game shows one at random.
-- `7632`, posted as "Level 7-1", is a 6-7 code; there is no world 7.
 - The game never gives you a boss-stage password: a game over on x-8 shows an x-7 code.
-- Secret items: the 20 known stages are the complete list. The 1-7 heart's trigger is pressing nothing for 21.3
-  seconds, not standing on the exit. Each item's prize, including the cake's 999,900 points.
+- Secret items: the 20 known stages are the complete list. The 1-7 heart appears after 21.3 seconds of
+  pressing nothing. Each item's prize, including the cake's 999,900 points.
 - The prologue 9-lives trick's exact rhythm, and the unused debug menu shown running without a ROM patch.
 - The first look at the 1993-05-11 beta.
 
@@ -93,34 +96,33 @@ Contents: [What's new](#whats-new) · [How the passwords work](#how-the-password
 - The hidden battle stages need no Joycard: any steady X tap at 7–9 frames does it. The Caravan version turns the
   trick off.
 - 5656 explained: in battle the hurry-up blocks fill the whole arena.
+- The Caravan cartridge has its own stage-select limit; a Pro Action Replay code opens all 12 stages there too.
 
 **Super Bomberman 3** (Europe, Japan, beta)
 - `6514`: hard mode, every enemy takes one more hit.
 - 78 stage passwords no list had, four for every stage.
-- 5656's "yellow character" doesn't happen; 4622, 1616 and 3194 pick one of four block layouts for every battle
-  stage and lock stages 11 and 12 again.
+- 4622, 1616 and 3194 pick one of four block layouts for every battle stage and lock stages 11 and 12 again.
 
 **Super Bomberman 4** (Japan)
 - `4622` (everyone starts in the middle) and `0164` (a wider battle item pool).
-- `2609`, posted for 5-2, is `2679`. No 5-7 or 5-8 code can exist.
+- `2679` starts 5-2. No 5-7 or 5-8 code can exist.
 - The hidden battle stages need no Joycard, and tapping X 16 times clears the villain silhouettes from the title.
 
 **Super Bomberman 5** (Japan, Caravan)
 - Eight password handlers nothing points to, one of them invincibility.
-- `0719` and `4737` only work on the Caravan cartridge, and 4737 starts everyone fully powered (no power-ups every 10
-  seconds).
-- `UO4GJL` and `XROPLG` need a zero, not the letter O; U04GJL is a yellow Bomberman, not Gold. 0926 doesn't unlock
-  Gold: reaching 100% does, and how the game records it.
+- `0719` and `4737` only work on the Caravan cartridge, and 4737 starts everyone fully powered.
+- `U04GJL` and `XR0PLG` are typed with a zero (the grid has no letter O); U04GJL is a yellow Bomberman. Gold
+  Bomberman unlocks at 100%, and how the game records it.
 
 **Mega Bomberman** (US, Europe, 8-player demo)
 - The password stores which stages you cleared, so 50 codes skip stages, and each boss has several codes.
 - The stage map format, every map rendered, and Game Genie codes for invincibility, lives, the clock and area select.
 - The 8-player demo's unused CPU-time meter and item, with codes to start powered up.
-- `2200`, `7422` and `6803`, listed only for the TurboGrafx-16, are the Genesis codes missing from the list.
-- The TurboGrafx sound test isn't in the Genesis game; nothing is locked or hidden behind a code.
+- `2200`, `7422` and `6803` work on the Genesis as well as the TurboGrafx-16.
+- The Genesis game has no sound test, and nothing is locked or hidden behind a code.
 
 **Bomberman** (TurboGrafx-16 / PC Engine, US and Japan)
-- The Special Select Room needs a high score whose hundreds digit is exactly 3 (300 or 1,300, not "300 or more"),
+- The Special Select Room needs a high score whose hundreds digit is exactly 3 (300 or 1,300),
   all five buttons held, and the last demo played to its end.
 - Fire up to 15 by password, past the in-play cap of 5. Music 2D and 39 aren't unused: they play on the losing console
   in a link-cable battle.
@@ -160,26 +162,21 @@ Contents: [What's new](#whats-new) · [How the passwords work](#how-the-password
 | Bomberman GB (US) / GB 2 | 4 digits | a fixed list | 11 |
 | Bomberman GB 3 | 7 hex digits | area, stage, areas cleared, shop items, capsules, with a capsule balance | 20,329 |
 | Pocket Bomberman | 4 digits | a fixed list | 32 |
+| Bomberman Max | none: the game saves | (GameShark codes for the Charabom roster) | 30 Charaboms × levels 1–99 |
 
 The details, with ROM addresses, are in the research notes.
 
 ## Research notes
 
-- [Super Bomberman](docs/sb1.md)
-- [Super Bomberman 2](docs/sb2.md)
-- [Super Bomberman 3](docs/sb3.md)
-- [Super Bomberman 4](docs/sb4.md)
-- [Super Bomberman 5](docs/sb5.md)
-- [Mega Bomberman](docs/mega.md)
-- [Bomberman (PC Engine)](docs/pce90.md)
-- [Bomberman '93](docs/pce93.md)
-- [Bomberman '94](docs/pce94.md)
-- [Bomberman: Users Battle](docs/pceub.md) and the [Wii U and Collection re-releases](docs/pcevc.md)
-- [Mega Bomberman 8-Player Demo](docs/mega8.md)
-- [Super Bomberman 4](docs/sb4en.md) and [5](docs/sb5en.md) English (Super Bomberman Collection)
-- [Bomberman (NES)](docs/nes1.md) and [Bomberman II](docs/nes2.md)
-- [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md) and [Bomberman GB 3](docs/gb3.md)
-- [Pocket Bomberman](docs/pocket.md) and [Bomberman Max](docs/max.md)
+- NES: [Bomberman](docs/nes1.md), [Bomberman II](docs/nes2.md)
+- Game Boy: [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md),
+  [Bomberman GB 3](docs/gb3.md)
+- Game Boy Color: [Pocket Bomberman](docs/pocket.md), [Bomberman Max](docs/max.md)
+- Super Nintendo: [Super Bomberman](docs/sb1.md), [2](docs/sb2.md), [3](docs/sb3.md), [4](docs/sb4.md),
+  [5](docs/sb5.md), and the English [4](docs/sb4en.md) and [5](docs/sb5en.md) (Super Bomberman Collection)
+- Genesis: [Mega Bomberman](docs/mega.md) and its [8-player demo](docs/mega8.md)
+- PC Engine: [Bomberman](docs/pce90.md), [Users Battle](docs/pceub.md), [Bomberman '93](docs/pce93.md),
+  [Bomberman '94](docs/pce94.md), and the [Wii U and Collection re-releases](docs/pcevc.md)
 
 Each code list is also in `docs/<game>_codes.json`, and the screenshots that prove the finds are in `docs/img/<game>/`.
 
@@ -201,11 +198,11 @@ ROMs aren't included. Put them in `roms/` with their No-Intro names.
 ## Credits and legal
 
 *Bomberman*, *Bomberman II*, *Bomberman GB* 1–3, *Pocket Bomberman*, *Bomberman Max*, *Bomberman '93*, *Bomberman
-'94* and *Super Bomberman* 1–5 are © 1985–1999 Hudson Soft, *Mega Bomberman* is © 1994 Hudson Soft and Sega, and *Wario Blast* is © 1994 Hudson Soft and
-Nintendo; Bomberman now belongs to Konami. This project isn't affiliated with or endorsed by Konami, Hudson Soft, Sega
-or Nintendo. The game art on the page and in this repo (logos and
-screenshots) belongs to them and is used here for reference. The disassembly listings are for research; no ROMs or game data are
-included.
+'94* and *Super Bomberman* 1–5 are © 1985–1999 Hudson Soft, *Mega Bomberman* is © 1994 Hudson Soft and Sega, and
+*Wario Blast* is © 1994 Hudson Soft and Nintendo; Bomberman now belongs to Konami. This project isn't affiliated with
+or endorsed by Konami, Hudson Soft, Sega or Nintendo. The game art on the page and in this repo (logos and
+screenshots) belongs to them and is used here for reference. The disassembly listings are for research; no ROMs or
+game data are included.
 
 Published codes were checked against the GameFAQs cheat pages and other published notes for each game.
 

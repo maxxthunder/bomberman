@@ -126,9 +126,8 @@ unpatched Mesen run (code/data log: 0 bytes).
   holds: 8 letters, 4 bytes, rows `MUROYAGCQXSKIWHB` / `WRECKFVBYHOZNAGL` / `NEWSLOGIMPHJTVBQ` / `NUCLEARHPSTVZYGK`,
   header byte with flip and shift, round 1-8, stage 1-8, bombs 1-10, fire 1-15, speed, a check count;
   **5,930,496** valid codes for 19,200 states.
-- `tools/pceub/password.py` (`--test`, `--count`) and the self-contained `tools/pceub/password.mjs`
-  (`node tools/pceub/test_password.mjs`) are the pce90 codec with this card's addresses; both round-trip all
-  19,200 states.
+- `tools/pceub/password.py` (`--test`, `--count`) is the pce90 codec with this card's addresses; it round-trips all
+  19,200 states. The codes page checks these codes with the 1990 game's codec.
 
 ### Fuzz against the game's own decoder
 

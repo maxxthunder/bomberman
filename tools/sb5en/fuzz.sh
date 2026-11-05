@@ -10,7 +10,7 @@ off=0   # the English ROM keeps the Japanese RAM layout
 if [ -n "$CASES" ]; then printf "%s
 " $CASES > "$d/cases.txt"; else PYTHONPATH="$here/../sb5" python "$here/fuzzcases.py" "$d/cases.txt" ${N:+$N}; fi
 {
-  cat "$here/lib.lua"
+  cat "$here/../sb5/lib.lua"
   echo "OFF=$off"
   echo 'function inj(s) for i=1,6 do wr(0x62F1+OFF+i, A:find(s:sub(i,i),1,true)-1) end end'
   echo 'to_config_pw() save()'

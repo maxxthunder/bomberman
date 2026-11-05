@@ -3,7 +3,7 @@
 This is the English ROM of Super Bomberman 5 from Konami's Super Bomberman Collection, compared with the
 Japanese retail ROM documented in [sb5.md](sb5.md). Method: a function-by-function diff of the two ROMs
 (`tools/disasm.py`, `tools/lin65.py`, `tools/sb4en/hooks.py`, `tools/sb5/textwin.py`), then Mesen 2 runs
-with `tools/sb5en/` (`run.sh`, `lib.lua`, `fuzz.sh`, `typecode.lua`). Addresses and RAM are the same as
+with `tools/sb5en/` (`run.sh`, `fuzz.sh`, `typecode.lua`, with `tools/sb5/lib.lua`). Addresses and RAM are the same as
 in the Japanese retail ROM unless stated.
 
 **Short version:** a data-only localization. I found no added code. The password routines, the option
@@ -183,7 +183,7 @@ unchanged.
 
 ## Files
 
-- `tools/sb5en/`: `run.sh` (English ROM by default, `jp` for the Japanese retail ROM), `lib.lua`,
+- `tools/sb5en/`: `run.sh` (English ROM by default, `jp` for the Japanese retail ROM), `../sb5/lib.lua`,
   `fuzz.sh` + `fuzzcases.py` (compare with `tools/sb5/password.py`), `typecode.lua`, `logo.lua`,
   `bgrender.py`, `croplogo.py`.
 - `disasm/sb5en/`: banks `$C0-$E3` (`$E4-$FF` are `$FF`), with the Japanese `entries.txt`.

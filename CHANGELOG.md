@@ -2,6 +2,12 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.2.1 (2026-11-05)
+- Fixed: switching the Bomberman '93 or Bomberman II generator to another version made codes the checker rejected;
+  Pocket Bomberman's ending code was missing from its special-code menu.
+- Leaner page script: unused codec, logo and code-less-game paths removed.
+- README: Bomberman Max's Charabom builder, a Bomberman Max row in the password table, notes grouped by console.
+
 ## 1.2.0 (2026-11-05)
 - New games: Pocket Bomberman and Bomberman Max (all five versions, with a Charabom code builder).
 - Users Battle moved to the bottom of the 1990 Bomberman page.
