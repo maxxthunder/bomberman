@@ -1,6 +1,7 @@
 # Super Bomberman: Panic Bomber W (Super Famicom, Japan, 1995): passwords
 
-Read from the ROM and checked in Mesen 2. Prior art: the GameFAQs "Super Bomberman: Panic Bomber W" page (in `res/`).
+Read from the ROM and checked in Mesen 2. The cart is SA-1 (map mode `$23`): the game's variables live in the SA-1's
+I-RAM (`$00:3000-$37FF`), not in work RAM. Prior art: the GameFAQs "Super Bomberman: Panic Bomber W" page (in `res/`).
 Marks: ★ **New**, **Known**.
 
 | Dump | Header title | MD5 |
@@ -31,6 +32,16 @@ of 4-digit records at file `$4AB5` (`$00:CAB5`), one row of 8 per difficulty:
 - With L and R held, typed in Mesen: `3445` sound test, `0901` stage select, `5963` the ending; `2200` and `4404` are
   taken (their rule changes, bombs exploding at once and four bombs to clear a line, are GameFAQs'). Without L and R
   the cheats are refused.
+
+## ★ Warning screens
+
+The boot code (`$80:E54B`) checks the console before the title. On a PAL console (`$213F` bit 4) it shows "This Game
+pak is not designed for your SUPER FAMICOM or SUPER NES." on a yellow screen; with a SNES Mouse in either port (device
+ID 1) it shows "You can not use a mouse with this Game." Both seen in Mesen (region PAL; a mouse in port 2). A patch at
+file `$6585` (`D0` → `80`) skips the check. ![PAL](img/pbw/pal_warning.png) ![Mouse](img/pbw/mouse_warning.png)
+
+The character-swap codes set `$37CC` to 1-4; its table (`$80:8D93`) has two more slots, which give a black or garbled
+board. Table slots 6-7 of each row and the last `0005` repeat earlier codes, so they can never be reached.
 
 The PC Engine Super CD-ROM² version (Bomberman: Panic Bomber, 1994) has no password: it saves to the System Card's
 backup memory instead. Its Story mode goes straight to the difficulty choice; the save routine near the start of the

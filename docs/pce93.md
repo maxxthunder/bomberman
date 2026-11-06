@@ -227,6 +227,25 @@ Run on that screen starts stage 1-1 of the Normal Game, which plays normally (`$
 
 ![](img/pce93/sp_battle_setup.png) ![](img/pce93/sp_password.png) ![](img/pce93/sp_config.png) ![](img/pce93/sp_normal_game.png)
 
+## ★ Items no stage gives you
+
+An item's kind is `$A0` + its entry in the pickup table `03:A89F`; the per-stage lists (`03:AD9A` → `$ADAB`) use `$A0`-
+`$AD`, `$AF` (the exit) and `$B0`-`$B3`, never `$AE` or `$B4`-`$B7`. (`$AA` is the alarm clock, which freezes enemies,
+`04:80B5`; `$AC` speed-down, used once.)
+
+- **Pierce fire, `$AE`** (orange flame): sets player bit 6 of `$91` (`03:AAFA`), and bomb fire no longer stops at the
+  first soft block (`02:96D3`). Its only source is a hidden spawn (`03:AD4F`) from the enemy-spawn check `03:B4F2`:
+  on world 2 stage 3, with 16 or more enemies on the field (`$3C5E` ≥ 16), bombing an item or the exit gives it instead
+  of another enemy. Checked in Mesen (US) by holding `$3C5E` at 16. Cheats: `1F0091:40` (the effect: one bomb broke 3
+  blocks against 1 without), or `006E3D:AE` (US; JP `006E43:AE`), which makes it 1-1's item.
+  ![Pierce fire on 2-3](img/pce93/pierce_item_2-3.png) ![Off and on](img/pce93/pierce_effect_off_on.png)
+- **Red ribbon, `$B7`**: a bonus item with a pickup handler (`03:AB28`) that no list or spawn ever uses, in US, JP or
+  SP. `006E3D:B7` puts it in 1-1. ![The ribbon in 1-1](img/pce93/ribbon_1-1_cheat.png)
+- **Onigiri `$B4`, chick `$B5`, tulip `$B6`**: bonus items spawned on a random floor cell once per stage (`03:AD74`).
+  Tulip: the exit is uncovered when no soft blocks are left (not on stage 8), like 1990's item 13. Chick: fire hits
+  cell type 6 while the clock reads exactly 2:22. Onigiri: counter `$3C54` reaches 200 (`03:AF65`). From the code;
+  not triggered. ![The unlisted items](img/pce93/unlisted_items.png)
+
 ## Unused content
 
 | What | Where | Versions | Reachable? |
@@ -293,7 +312,7 @@ plus the bits of the player's ability byte that no code sets. Each was set in Me
 
 | Flag | Read at | Set by the game? | Set in Mesen | Status |
 |---|---|---|---|---|
-| player ability `$91,X` bit 5 (`$2091` for player 1) | death check `02:8C79` (skips death), sprite flash `02:9171` | never; only cleared (`03:ACD6`) | **invincible**: stood on its own bomb, lives stayed 2; with the bit clear the same test lost a life | ★ New |
+| player ability `$91,X` bit 5 (`$2091` for player 1) | death check `02:8C79` (skips death), sprite flash `02:9171` | set for about 120 frames after a hit (`03:ACE8`, the blink when the heart item absorbs one); cleared `03:ACD6` | **invincible**: stood on its own bomb, lives stayed 2; with the bit clear the same test lost a life | ★ New |
 | `$91,X` bit 4 | `02:96DF` (sets `$B1` bit 0) | never | survived its own bomb once, then died to an enemy; no clear effect | ★ New, effect unclear |
 | `$91,X` bit 3 | fire check `02:8C9D` | yes: the vest item (`03:A9BF`, with a timer) | fire-proof | item effect |
 | `$2F99` | pad reader `00:EDAF`: non-zero skips the pad read | never (cleared at `00:ED9B`) | input kept working; no visible effect | ★ New, effect unclear |

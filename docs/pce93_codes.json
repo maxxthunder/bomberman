@@ -1558,7 +1558,7 @@
  },
  {
   "code": "1F0091:20",
-  "effect": "Invincible: player 1 ability bit 5, read by the death check 02:8C79, never set by the game",
+  "effect": "Invincible: player 1 ability bit 5 (the blink after a hit) held on; the death check 02:8C79 skips while it is set",
   "versions": [
    "US",
    "JP",
@@ -1566,7 +1566,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen raw code (RAM F8:0091 = $2091). Stood on its own bomb: lives kept; without it the same test lost a life (US)",
+  "note": "Mesen raw code (RAM F8:0091 = $2091). Stood on its own bomb: lives kept; without it the same test lost a life (US) The game itself sets the bit for about 120 frames after a hit (03:ACE8, from the death check 02:8CAD when the heart item absorbs one).",
   "section": "cheat"
  },
  {
@@ -1729,5 +1729,73 @@
   "verified": "mesen",
   "note": "world 9 mode, 07:AC61; the serial handshake through the pad port never completes without a second console. On the Wii U VC the item starts the Battle Game instead (pcevc.md)",
   "section": "Hidden screens"
+ },
+ {
+  "code": "World 2 stage 3: with 16 or more enemies on the field, bomb an item or the exit",
+  "effect": "Pierce fire: a flame item that no stage list contains; with it, fire goes through soft blocks",
+  "versions": [
+   "US",
+   "JP",
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item $AE (pickup table 03:A89F) sets player bit 6 of $91 (03:AAFA), and fire then no longer stops at the first soft block (02:96D3). Its only source is a hidden spawn (03:AD4F) from the enemy-spawn check 03:B4F2 on 2-3 when $3C5E >= 16. In Mesen (US): warped to 2-3, held 16 enemies, bombed a revealed item: the slot became $AE.",
+  "section": "Secret items",
+  "img": "pierce_item_2-3.png"
+ },
+ {
+  "code": "1F0091:40",
+  "effect": "Pierce fire from the start: bomb fire goes through soft blocks",
+  "versions": [
+   "US",
+   "JP",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen raw code (RAM F8:0091 = $2091): player bit 6, the pierce-fire item's effect. In Mesen one bomb broke 3 soft blocks with it, 1 without.",
+  "section": "cheat",
+  "img": "pierce_effect_off_on.png"
+ },
+ {
+  "code": "006E3D:AE",
+  "effect": "Stage 1-1's item becomes the pierce-fire item (US, US VC; JP 006E43:AE)",
+  "versions": [
+   "US",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen pceRaw cheat on the ROM byte of 1-1's item list. In Mesen (US): the item slot was $AE and picking it up set $2091 = $48.",
+  "section": "cheat",
+  "img": "pierce_item_1-1_cheat.png"
+ },
+ {
+  "code": "006E3D:B7",
+  "effect": "Stage 1-1's item becomes the unused red ribbon (US, US VC)",
+  "versions": [
+   "US",
+   "vc"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item $B7 has a pickup handler (03:AB28, a bonus score) but no stage list or spawn ever uses it, in US, JP or SP. The ROM cheat puts it in 1-1: shown in the stage in Mesen.",
+  "section": "unused",
+  "img": "ribbon_1-1_cheat.png"
+ },
+ {
+  "code": "Bonus items $B4 / $B5 / $B6",
+  "effect": "Hidden bonus items (onigiri, chick, tulip) spawned on a random floor cell once per stage",
+  "versions": [
+   "US",
+   "JP",
+   "SP"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Spawned by 03:AD74. $B6 (tulip, 03:AD33): the exit is uncovered when no soft blocks are left, not on stage 8 (like 1990's item 13). $B5 (chick, 03:AD17): fire hits cell type 6 while the clock reads exactly 2:22. $B4 (onigiri, 03:AD00): counter $3C54 reaches 200 (03:AF65). From the code; not triggered in Mesen.",
+  "section": "Secret items",
+  "img": "unlisted_items.png"
  }
 ]

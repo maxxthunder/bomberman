@@ -144,7 +144,7 @@ multitap battle.
   coverage needed a forced-win run, `tools/gb1/cov_win.lua`, as the earlier bot runs stopped at the 1-boss). Two
   strings never showed in the runs: Wario's `TIME UP` (JP's did, after `$C585-$C587` = 0) and **PERFECT! /
   CONGRATULATIONS!** (`$0A:4EE4`, drawn by `$0A:4DFF`, which the extra battle (5656) runs when the defeated count
-  `$C1D1-$C1D3` reaches 240, `$0A:4EFC`; in JP its tile copy was queued once, in a time-up run, without showing on screen). The bank 9
+  `$C1D1-$C1D3` reaches 240, `$0A:4EFC`; shown since: see the 240-win screen below). The bank 9
   strings (TECHNIQUE / ROUND SELECT, nPLAYER WIN!) belong to the multitap battle (below); the VICTORY! lines (match
   won) didn't come up in the battle runs. ★ New: the Wario ROM has no trace of the JP story (no script records).
 - **Stages** (`tools/gb1/stages.py`, `disasm/gb1/stages_<ver>.tsv`): `$00:1608` looks up `$C3F0` in the word table
@@ -207,8 +207,20 @@ Logos: `docs/img/logos/gb1_jp.png`, `gb1_wario.png` (`tools/gb1/logo.py`: BG til
 
 Item icons: the password stores no items (a table index only), so none were ripped for this game.
 
+
+## ★ The extra battle's 240-win screen
+
+After each round the extra battle (5656; Wario Blast 6565 as Wario, `$00:35A4`) calls `$0A:4EFC` (Wario `$0A:5398`),
+which checks the defeat count `$C1D1-$C1D3` (one decimal digit per byte). At 240 it jumps to `$0A:4DFF` (Wario
+`$0A:528B`): a screen drawn from `$08:40D2` with **PERFECT!**, **ENEMY 240**, a fixed **CODE -SVJV-** and
+**CONGRATULATIONS!** (the first and last blinking); A or Start goes back to the title, and `$00:3662` (Wario
+`$00:362A`) leaves the count at 240. The code is the same in both carts and nothing else uses it, so it was most
+likely a contest proof code. In Mesen (JP): the count set to 239 during the battle, one more round won, and the
+screen came up. GameShark `0102D1C1` + `0104D2C1`, switched on after the battle code is accepted (the same bytes are
+the password digit buffer), brings it up after the first round in both carts.
+![The 240-win screen](img/gb1/perfect_240_jp.png)
+
 ## Open
 
-- The multitap battle's VICTORY! screen, arenas 2-8 and TECHNIQUE OFF weren't played through; PERFECT! /
-  CONGRATULATIONS! (240 in the extra battle) wasn't seen on screen.
+- The multitap battle's VICTORY! screen, arenas 2-8 and TECHNIQUE OFF weren't played through.
 - Why the logo at `$03:6911` was dropped (an earlier palette design is a guess).

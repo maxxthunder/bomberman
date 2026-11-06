@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis, PC Engine and Virtual Boy
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.10.0](https://img.shields.io/badge/version-1.10.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.11.0](https://img.shields.io/badge/version-1.11.0-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 19 Bomberman games, read from each game's own code and tested in emulators, with a
 password generator and checker for each one.
@@ -53,7 +53,7 @@ bar); the games you've looked at keep their screenshots.
 | **Genesis** | | | |
 | <img src="docs/img/logos/mega_us.png" alt="" height="28"> | [Mega Bomberman](https://maxxthunder.github.io/bomberman/#mega) and its 8-player demo | 1994 | password generator, cheats |
 | **Virtual Boy** | | | |
-| <img src="docs/img/logos/pbvb.png" alt="" height="28"> | [Panic Bomber](https://maxxthunder.github.io/bomberman/#pbvb) | 1995 | password generator, special codes |
+| <img src="docs/img/logos/pbvb.png" alt="" height="28"> | [Panic Bomber](https://maxxthunder.github.io/bomberman/#pbvb) | 1995 | password generator, special codes, debug menu, developer menu patch |
 
 Every password checker was fuzzed against the game's own decoder in Mesen 2 (NES, Game Boy, SNES, PC Engine) or
 BizHawk (Genesis): every possible code for the 4-digit games, and tens of thousands of codes (every state, plus
@@ -171,6 +171,7 @@ your ROM with any IPS patcher, such as Floating IPS or a browser-based ROM patch
 | `pceub_password_1p`, `pceub_select_room` | Bomberman - Users Battle (Japan) |
 | `pce93_configration_us`, `pce93_normal_game_sp` | Bomberman '93 (USA); Bomberman '93 - Special Version (Japan) |
 | `pce94_debug_menu`, `pce94_debug_pause` | Bomberman '94 (Japan) |
+| `pbvb_dev_menu` | Panic Bomber (USA) (Virtual Boy) |
 
 What each patch does, and how it was tested, is on the game's page under Patches.
 

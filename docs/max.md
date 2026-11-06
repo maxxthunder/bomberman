@@ -183,3 +183,14 @@ Logos: `docs/img/logos/max_<ver>.png`, cut from the title screens (`tools/max/lo
 - Pitch Area's infrared packet format (needs a second console).
 - How the legendary Charaboms are earned, and Battle Game with a saved Charabom; both outside the coverage runs.
 - A wider coverage run (worlds 2-5, minigames, ending) for the dead-code and graphics sweep, and the Japanese text table.
+
+## Battle against the computer (★ New)
+
+On the Charabom Battle "OK?" screen (Selected highlighted), press Up, Down, Select, Start, Down, Up, Start, Select,
+Up, Down, then A. Instead of the infrared NETWORK screen the battle starts against a computer rival (in Mesen, for
+example Draco against "Rival1: Shell Lv 4", through to Round 1 Start!). The battle module is bank `$08`: its OK? scene
+(`$08:4A65`) calls a sequence checker (`$08:4B28`, a copy of the title's sound-test checker, table `$08:4B77`) that
+sets `$C4E3` = 1 after ten right presses; on A, `$08:4D3F` goes to scene `$15` and `$08:4B81` loads the rival from
+`$08:4C24`, indexed by a frame counter. The table is the same in all five versions; tested on Blue Champion and Red
+Challenger. ![Battle against the computer](img/max/battle_vs_computer.png)
+

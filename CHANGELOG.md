@@ -2,6 +2,17 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.11.0 (2026-11-06)
+- Panic Bomber (Virtual Boy): an unused developer menu (VERSION 1995/07/21), opened by a new patch; what the DEBUG
+  MENU's 13 settings do; and what 4476, 0911, 9782, 0704 and 0612 really do (one pad moves both sides, a RESULT
+  screen after every round, other pieces, skull blocks, slow animation).
+- Bomberman (PC Engine, 1990): six hidden bonus items, worth 18,800 to 10,000,000 points, and what spawns each.
+- Bomberman '93: the hidden pierce-fire item, an unused ribbon item and three hidden bonus items, with cheats.
+- Wario Blast / Bomberman GB: the extra battle's 240-win PERFECT! screen with its CODE -SVJV-, and a cheat for it.
+- Panic Bomber W: its PAL-console and SNES Mouse warning screens.
+- Bomberman Max: a button sequence for a Charabom battle against the computer; Atomic Punk / Bomber Boy: the sound
+  test and a soft reset.
+
 ## 1.10.0 (2026-11-06)
 - The page works offline once opened, and installs as an app (Add to Home Screen).
 - Panic Bomber (Virtual Boy): 0825 and 0513, with L, R, right-pad Up and left-pad Left held, open a hidden DEBUG MENU;

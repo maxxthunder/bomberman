@@ -270,5 +270,88 @@
   "verified": "mesen",
   "note": "RAM $3451, the BOMSOUND flag, read as $FF: MUVWLNPC went straight to SOUND-00 (US, JP)",
   "section": "cheat"
+ },
+ {
+  "code": "Destroy every soft block on the stage",
+  "effect": "Hidden bonus item 9: 18,800 points",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item 9 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($65 = 0 ($0A:A8CA)), once per stage, never on x-8 stages or in battle. Forced in Mesen (US, from password MUVWLNPC) and picked up: the score rose by exactly that much.",
+  "section": "Secret items",
+  "img": "bonus_item_9.png"
+ },
+ {
+  "code": "Let the clock fall below 1:00",
+  "effect": "Hidden bonus item 10: 24,800 points",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item 10 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($2D8D = 0 ($0A:A8E0)), once per stage, never on x-8 stages or in battle. Forced in Mesen (US, from password MUVWLNPC) and picked up: the score rose by exactly that much.",
+  "section": "Secret items",
+  "img": "bonus_item_10.png"
+ },
+ {
+  "code": "Kill every enemy without breaking a soft block",
+  "effect": "Hidden bonus item 11: 39,800 points",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item 11 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($2D96 = 1 with $65 = $66 ($0A:A8F7)), once per stage, never on x-8 stages or in battle. Forced in Mesen (US, from password MUVWLNPC) and picked up: the score rose by exactly that much.",
+  "section": "Secret items",
+  "img": "bonus_item_11.png"
+ },
+ {
+  "code": "Clear stage 8-7 (every enemy dead) in a game begun with 1P START, not a password, LOAD or the Select Room",
+  "effect": "Hidden bonus item 12: 10,000,000 points",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item 12 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($71 = 1, set at $01:A694 ($0A:A914)), once per stage, never on x-8 stages or in battle. Spawned in Mesen by forcing the condition; the points are from the code.",
+  "section": "Secret items",
+  "img": "bonus_item_12.png"
+ },
+ {
+  "code": "Make the last soft block you break the one hiding the exit",
+  "effect": "Hidden bonus item 13: 111,110 points",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item 13 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($72 = 1 via $09:9368 ($0A:A8BA)), once per stage, never on x-8 stages or in battle. Forced in Mesen (US, from password MUVWLNPC) and picked up: the score rose by exactly that much.",
+  "section": "Secret items",
+  "img": "bonus_item_13.png"
+ },
+ {
+  "code": "Stand on the exit at exactly 3:33 with enemies still alive",
+  "effect": "Hidden bonus item 14: 123,450 points",
+  "versions": [
+   "US",
+   "JP",
+   "collection"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Item 14 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($09:8906), once per stage, never on x-8 stages or in battle. From the code; not reproduced in Mesen.",
+  "section": "Secret items"
  }
 ]

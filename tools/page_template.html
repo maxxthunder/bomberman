@@ -304,7 +304,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.10.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.11.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -329,6 +329,7 @@ const PATCH_ROM = {
   "pceub_password_1p.ips": "Bomberman - Users Battle (Japan)", "pceub_select_room.ips": "Bomberman - Users Battle (Japan)",
   "pce93_configration_us.ips": "Bomberman '93 (USA)", "pce93_normal_game_sp.ips": "Bomberman '93 - Special Version (Japan)",
   "pce94_debug_menu.ips": "Bomberman '94 (Japan)", "pce94_debug_pause.ips": "Bomberman '94 (Japan)",
+  "pbvb_dev_menu.ips": "Panic Bomber (USA) (Virtual Boy)",
 };
 // the patch files a code's text names (patches/sb1_debug_menu_<ver>.ips names every sb1_debug_menu_*.ips)
 const patchLinks = (id, text) => /\bpatch|\.ips/i.test(text)
@@ -624,7 +625,8 @@ const GAMES = [
       if (!d) return null;
       if (d.kind === "zach") return { type: "special", order: 90, title: "Play The Scary Ruins against Zach the Were-Bomberman", detail: "Choose a level first." };
       if (d.kind === "cheat") return { type: "special", order: 95, title: d.name, detail: "Hold L and R while you enter it." };
-      if (d.kind === "debug") return { type: "special", order: 96, title: "The DEBUG MENU", detail: "Hold L, R, Up on the right pad and Left on the left pad while you press A." };
+      if (d.kind === "debug") return { type: "special", order: 96, title: d.name, detail: "Hold L, R, Up on the right pad and Left on the left pad while you press A." };
+      if (d.kind === "extra") return { type: "special", order: 91, title: d.name };
       return { type: "stage", fields: d, cell: { r: PBVB.LEVELS[d.level], c: d.stage + 1 }, group: c, order: d.level * 10 + d.stage,
         title: `${PBVB.STAGES[d.stage]}, ${PBVB.LEVELS[d.level]}` };
     },

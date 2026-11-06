@@ -125,7 +125,8 @@ for (const g of GAMES) {
 eq(game('pbvb').check('6835').title, 'The Sinister Forest, Easy', 'pbvb 6835');
 eq(game('pbvb').check('4000').title, 'The Scary Ruins, Hard', 'pbvb d000 is stage 1');
 eq(game('pbvb').check('1298').type, 'special', 'pbvb Zach code');
-ok(!game('pbvb').check('9782') && !game('pbvb').check('0612') && !game('pbvb').check('1234'), 'pbvb leaves out codes that do nothing');
+eq(game('pbvb').check('4476').title, 'Your pad moves both sides', 'pbvb 4476');
+ok(!game('pbvb').check('1234'), 'pbvb rejects');
 eq(game('pbw').check('0819').title, 'Round 6, Hardest', 'pbw 0819');
 eq(game('pbw').check('0003').title, 'Round 1, Normal', 'pbw 000d');
 eq(game('pbw').check('5963').title, 'The ending', 'pbw cheat');

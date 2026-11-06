@@ -814,5 +814,34 @@
   "verified": "mesen",
   "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; boss sets don't end with it (the 1-boss waits; $01:48C7 needs the boss itself, $C3F7 = 1). GB1 has no lives: a lost match goes to the continue screen. Game Genie: $01:488A OR A -> XOR A, so the enemy check sees every page empty; with C98-37B-D5D: 12 sets won, 1-1 to 1-4 in 6,000 frames (jp and wario).",
   "section": "cheat"
+ },
+ {
+  "code": "Win 240 rounds of the extra battle (5656; Wario Blast 6565 as Wario)",
+  "effect": "PERFECT! ENEMY 240 screen with a fixed CODE -SVJV-, then CONGRATULATIONS!",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "After each round the extra battle ($00:35A4) calls $0A:4EFC (Wario $0A:5398), which checks the defeat count $C1D1-$C1D3 (one decimal digit per byte); at 240 it jumps to $0A:4DFF (Wario $0A:528B), which draws PERFECT! / ENEMY 240 / CODE -SVJV- / CONGRATULATIONS! (tile map $08:40D2); A or Start goes back to the title. The code is the same in both carts, likely a contest proof code. In Mesen (JP): the count set to 239 during the battle, one more round won, and the screen came up.",
+  "section": "Secrets",
+  "img": "perfect_240_jp.png"
+ },
+ {
+  "code": "0102D1C1 + 0104D2C1",
+  "effect": "The extra battle's 240-win PERFECT! screen at once (turn on after the 5656 / 6565 code is accepted)",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "devices": {
+   "GameShark": "0102D1C1 + 0104D2C1"
+  },
+  "note": "GameShark: the defeat count $C1D1-$C1D3 held at 2-4-x, so the first check after a round sees 240+. $C1D1-$C1D3 is also the password digit buffer, so switch the codes on only after the password is accepted, then press A on the GREAT BATTLE intro. Tested in Mesen on both carts.",
+  "section": "cheat",
+  "img": "perfect_240_wario_cheat.png"
  }
 ]

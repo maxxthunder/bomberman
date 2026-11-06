@@ -70,3 +70,13 @@ Only the RAM moved: stage `$C40B`, bombs `$C402`, fire `$C403`, speed `$C404`, w
 `$C406`-`$C408`. Typed in Mesen and read back: `BOHIDJFEKJGKEFOLFHAC` (Bomber Boy) and `B3H2DJF1KJGK1F3LFH0C`
 (Atomic Punk) both start stage 50 with 10 bombs, fire 5 and every power-up, and `NM2HPPBPC0FH0BDPCPCH` (Atomic Punk)
 stage 1 with 10 bombs, fire 5 and speed. The 20th letter submits the code.
+
+## Button codes
+
+- **Sound test** (Known): on Game A's stage select, choose MY TOWN with A + B + Select + Right held, and keep them held
+  through the fade. `$00:2A95` checks for exactly that combination (`$17`) and jumps to the sound test (`$03:471A`).
+  Typed in Mesen on both carts. ![Sound test](img/bb/sound_test_us.png)
+- ★ **Soft reset**: hold Start and press Select. The joypad reader (`$00:04D7`) jumps back to the boot code (`$0179`);
+  the bytes are the same in both carts, tested on Atomic Punk.
+- No password check reads the joypad, so no code needs buttons held while it is entered.
+

@@ -466,5 +466,29 @@
   "note": "Typed in Mesen with L and R held: the the ending opens. Without L and R it is refused.",
   "section": "Special codes",
   "img": "ending_5963.png"
+ },
+ {
+  "code": "Play it on a PAL (50 Hz) console",
+  "effect": "Warning screen: \"This Game pak is not designed for your SUPER FAMICOM or SUPER NES.\"",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The boot check $80:E54B reads $213F bit 4 (PAL) and shows this yellow screen instead of the game. Seen in Mesen with the region set to PAL. A one-byte patch at file $6585 (D0 -> 80) skips the check.",
+  "section": "hidden",
+  "img": "pal_warning.png"
+ },
+ {
+  "code": "Plug a SNES Mouse into either port",
+  "effect": "Warning screen: \"You can not use a mouse with this Game.\"",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The same boot check ($80:E54B) shows this when a controller port reports device ID 1 (the SNES Mouse). Seen in Mesen with a mouse in port 2.",
+  "section": "hidden",
+  "img": "mouse_warning.png"
  }
 ]

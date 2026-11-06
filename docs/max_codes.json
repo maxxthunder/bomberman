@@ -172,5 +172,18 @@
   "verified": "mesen",
   "note": "The new-game template copied to cart RAM $A030 (a word per stage, 19 per world, read by $53:4D0E) has every stage's flag set in the Ain Version. Each retail version clears the flag of the 20 stages only the other version has (55 are shared); Blue matches Hikari and Red matches Yami. Read from cart RAM after a new game in Mesen in all five versions; not played through to those stages.",
   "section": "Secrets"
+ },
+ {
+  "code": "↑ ↓ Select Start ↓ ↑ Start Select ↑ ↓, then A",
+  "effect": "Charabom Battle against a computer rival instead of over the infrared link",
+  "versions": [
+   "blue",
+   "red"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "On the Charabom Battle OK? screen (Selected highlighted). The sequence checker $08:4B28 (table $08:4B77, the same in all five versions) sets $C4E3 = 1 after ten right presses; A then goes to scene $15 instead of the NETWORK screen and loads a rival from $08:4C24 (indexed by a frame counter). Typed in Mesen on Blue and Red: e.g. Draco against Rival1: Shell Lv 4, through to Round 1 Start!",
+  "section": "Button codes",
+  "img": "battle_vs_computer.png"
  }
 ]

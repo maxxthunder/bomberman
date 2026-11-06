@@ -250,5 +250,31 @@
   "note": "NES Bomberman's code with A, E, I, O shown as 0, 1, 2, 3 (Game B's letter table, $02:44D5). Typed in Mesen (shown: the STAGE 50 card it starts): $C40B = 50, $C402 = 10, $C403 = 5, every power-up flag 1.",
   "section": "Bomber Man mode",
   "img": "us_bm_B3H2DJF1KJGK1F3LFH0C_stage.png"
+ },
+ {
+  "code": "Hold A + B + Select + Right, choose MY TOWN",
+  "effect": "Sound test (Game A stage select)",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "$00:2A95 checks that the held buttons are exactly A + B + Select + Right ($17) when MY TOWN is chosen, and jumps to the sound test at $03:471A; the buttons must stay held through the fade. Typed in Mesen on both carts. GameFAQs lists it.",
+  "section": "Button codes",
+  "img": "sound_test_us.png"
+ },
+ {
+  "code": "Hold Start, press Select",
+  "effect": "Soft reset, back to the Hudson logo",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The joypad reader $00:04D7 jumps to $0179 when Select is newly pressed with Start held (the same bytes in both carts). Tested in Mesen on Atomic Punk from the stage select.",
+  "section": "Button codes",
+  "img": "soft_reset_us.png"
  }
 ]
