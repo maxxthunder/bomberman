@@ -78,12 +78,17 @@ button { cursor: pointer; }
 :focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-/* game picker: full logo cards until a game is chosen, then a compact sticky row (a dropdown on phones) */
+/* game picker: a tab per console over that console's logo cards; once a game is open, a compact sticky row that drops them down */
 #picker { display: grid; gap: 14px; }
-#cards { display: grid; gap: 22px; }
-.pgroup { display: grid; gap: 8px; }
-.pgroup h3 { font: 800 13px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--acc); }
-@media (min-width: 761px) { .pgroup h3 { font-size: 17px; } .pgroup { gap: 10px; } }
+#cards { display: grid; gap: 14px; }
+#ctabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.ctab { background: var(--panel); border: 2px solid var(--line); border-radius: 999px; padding: 6px 14px; font: 800 14px var(--body); color: var(--muted); }
+.ctab small { font: 600 12px var(--body); margin-left: 4px; }
+.ctab:hover { border-color: var(--muted); }
+.ctab[aria-selected=true] { border-color: var(--acc); color: var(--ink); background: color-mix(in srgb, var(--acc) 22%, var(--panel)); }
+.ctab .narrow { display: none; }
+#picker.open .ctab .wide { display: none; } #picker.open .ctab .narrow { display: inline; }   /* short names in the drop-down panel */
+.pgroup[hidden] { display: none; }
 .gcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
 .gcard { background: var(--panel); border: 2px solid var(--line); border-top: 4px solid var(--acc); border-radius: 12px; padding: 12px 8px 10px; display: grid; gap: 4px;
   justify-items: center; align-content: start; font: 800 15px/1.2 var(--body); text-align: center; min-width: 0; }
@@ -110,9 +115,8 @@ button { cursor: pointer; }
 #picker.open .gcards { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; }
 #picker.open .gcard { padding: 8px 4px 6px; font-size: 13px; }
 #picker.open .gcard img { height: 48px; }
-#picker.open .pgroup { gap: 6px; }
 #pbtn .narrow { display: none; }
-@media (max-width: 600px) { #pbtn .wide { display: none; } #pbtn .narrow { display: inline; } #picker.open .gcards { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { #pbtn .wide, .ctab .wide { display: none; } #pbtn .narrow, .ctab .narrow { display: inline; } #picker.open .gcards { grid-template-columns: repeat(3, 1fr); } }
 
 /* the game's header band: console-colour edge, big logo, name and one screenshot */
 .ghead { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: center; background: var(--panel);
@@ -304,7 +308,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.12.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.12.1</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -718,10 +722,23 @@ const HERO = { sb1: ["sb1", "debug_fire_full"], sb2: ["sb2", "battle_stage11"], 
   pce94: ["pce94", "battle_5players"], nes1: ["nes1", "title_us"], nes2: ["nes2", "title_us"], gb1: ["gb1", "title_wario"], gb2: ["gb2", "title_us"],
   gb3: ["gb3", "title_jp"], pocket: ["pocket", "title"], max: ["max", "charaboms_blue"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"] };
 const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb", "Virtual Boy": "vb" };
-$("cards").innerHTML = families.map((f, i) => `<div class="pgroup" data-fam="${FAM[f] || ""}"><h3 id="pf_${i}">${esc(f)}</h3>
-  <div class="gcards" role="group" aria-labelledby="pf_${i}">${byFamily(f).map(x =>
+const SHORT = { "TurboGrafx-16 / PC Engine": "PC Engine", "Game Boy / Game Boy Color": "Game Boy", "NES / Famicom": "NES", "Super Nintendo": "SNES" };
+$("cards").innerHTML = `<div id="ctabs" role="tablist" aria-label="Console">${families.map((f, i) =>
+  `<button type="button" class="ctab" role="tab" id="pt_${i}" data-fam="${FAM[f] || ""}" aria-controls="pf_${i}" aria-selected="false" tabindex="-1"><span class="wide">${esc(f)}</span><span class="narrow">${esc(SHORT[f] || f)}</span><small>${byFamily(f).length}</small></button>`).join("")}</div>`
+  + families.map((f, i) => `<div class="pgroup" id="pf_${i}" role="tabpanel" aria-labelledby="pt_${i}" data-fam="${FAM[f] || ""}" hidden>
+  <div class="gcards">${byFamily(f).map(x =>
     `<button type="button" class="gcard" data-g="${x.id}" aria-pressed="false" title="${esc(x.name)}"><img src="docs/img/logos/${x.logo}.png" alt=""><span class="nm">${esc(x.name)}</span><small>${x.year}</small></button>`).join("")}</div></div>`).join("");
-$("cards").onclick = e => { const b = e.target.closest(".gcard"); if (b) { const was = $("picker").classList.contains("open"); pickGame(b.dataset.g); if (was) $("game").scrollIntoView(); } };
+const showFam = i => document.querySelectorAll(".ctab").forEach((t, j) => {
+  t.setAttribute("aria-selected", i === j); t.tabIndex = i === j ? 0 : -1; $("pf_" + j).hidden = i !== j; });
+showFam(0);
+$("ctabs").onkeydown = e => {   // arrow keys move between the console tabs
+  const n = families.length, i = [...$("ctabs").children].indexOf(document.activeElement);
+  const k = { ArrowRight: i + 1, ArrowLeft: i - 1 + n, Home: 0, End: n - 1 }[e.key];
+  if (i < 0 || k === undefined) return;
+  e.preventDefault(); showFam(k % n); $("pt_" + (k % n)).focus(); };
+$("cards").onclick = e => {
+  const t = e.target.closest(".ctab"); if (t) return showFam(+t.id.slice(3));
+  const b = e.target.closest(".gcard"); if (b) { const was = $("picker").classList.contains("open"); pickGame(b.dataset.g); if (was) $("game").scrollIntoView(); } };
 const openPicker = on => { $("picker").classList.toggle("open", on); $("pbtn").setAttribute("aria-expanded", on); };
 $("pbtn").onclick = () => openPicker(!$("picker").classList.contains("open"));
 document.addEventListener("keydown", e => { if (e.key === "Escape" && $("picker").classList.contains("open")) { openPicker(false); $("pbtn").focus(); } });
@@ -747,6 +764,7 @@ function pickGame(id) {
   $("picker").classList.add("compact");
   openPicker(false);
   $("game").dataset.fam = $("picker").dataset.fam = FAM[g.family] || "";
+  showFam(families.indexOf(g.family));
   $("pname").innerHTML = `${esc(g.name)}<small>${esc(g.plat)}</small>`;
   for (const b of $("cards").querySelectorAll(".gcard")) {
     b.setAttribute("aria-pressed", b.dataset.g === g.id);

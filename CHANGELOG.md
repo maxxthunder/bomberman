@@ -2,6 +2,9 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.12.1 (2026-11-06)
+- The game picker has a tab per console and shows that console's games, so it takes far less room.
+
 ## 1.12.0 (2026-11-06)
 - Region differences, new on many pages: Super Bomberman 5 Caravan's hidden HYPER Misobon setting (a returning player
   takes the stats of the one they blew up); Super Bomberman 2 Caravan's SNES Mouse lock; Super Bomberman 3's
