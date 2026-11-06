@@ -558,20 +558,20 @@ const GAMES = [
     },
     why: c => /[G-Z]/.test(c) ? "Each digit is 0-9 or A-F." : c.length === 7 ? "The capsule check doesn't balance, so at least one digit is wrong." : "",
     notes: { Passwords: "A code holds the area, stage, areas cleared, shop techniques and capsules. The check is the capsule balance: capsules held plus what you bought must equal what the cleared areas paid." } },
-  { id: "bb", ns: SEL, family: "Game Boy / Game Boy Color", year: 1990, name: "Atomic Punk", plat: "Game Boy", logo: "bb_us", logos: { jp: "bb_jp" }, main: "us",
+  { id: "bb", ns: BB, family: "Game Boy / Game Boy Color", year: 1990, name: "Atomic Punk", plat: "Game Boy", logo: "bb_us", logos: { jp: "bb_jp" }, main: "us",
     len: 8, maxLen: 20, shape: /^([1-8A-Z?!.=]{8}|[A-P0-3]{20})$/, form: "8 characters (Game A), or 20 letters (Game B, Bomber Man)",
     intro: "Bomber Boy in Japan. Game A's password holds the islands you've cleared and your gold; Game B is NES Bomberman, and takes its codes (Atomic Punk shows A, E, I and O as 0, 1, 2 and 3).",
     check(c, ver) {
       for (const v of ver ? [ver] : ["us", "jp"]) {
         if (c.length === 20) {
-          const nes = v === "us" ? SEL.fromUS(c) : c, d = /^[A-P]{20}$/.test(nes) && !(v === "us" ? /[AEIO]/ : /[0-3]/).test(c) ? NES1.decode(nes) : null;
+          const nes = v === "us" ? BB.fromUS(c) : c, d = /^[A-P]{20}$/.test(nes) && !(v === "us" ? /[AEIO]/ : /[0-3]/).test(c) ? NES1.decode(nes) : null;
           if (d) return { type: "stage", ver: v, fields: d, group: c, order: 100 + d.stage, title: `Bomber Man mode: stage ${d.stage}`,
             detail: `${plural(d.bombs, "bomb")}, fire ${d.fire}. ${v === "us" ? "On NES Bomberman: " + nes : "The same code works in NES Bomberman"}.` };
           continue;
         }
-        const d = SEL.decode(c, v === "us" ? SEL.SYMBOLS_US : SEL.SYMBOLS);
+        const d = BB.decode(c, v === "us" ? BB.SYMBOLS_US : BB.SYMBOLS);
         if (!d) continue;
-        const n = SEL.ISLANDS.filter((_, i) => d.islands >> i & 1);
+        const n = BB.ISLANDS.filter((_, i) => d.islands >> i & 1);
         return { type: "stage", ver: v, fields: d, group: c, order: n.length, title: d.islands === 255 ? "The ending" : n.length ? `${n.length} of 8 islands cleared` : "No islands cleared",
           detail: `${n.length && d.islands !== 255 ? "Cleared: " + n.join(", ") + ". " : ""}Gold ${d.gold.toLocaleString("en-US")}${d.gold > 9999 ? " (the game caps it at 9,999 when gold next changes)" : ""}.` };
       }
@@ -613,32 +613,6 @@ const GAMES = [
     },
     why: c => /^80/.test(c) ? "Not a Charabom roster address ($A110 + 8 x id, id 0-29)." : "Charabom codes start with 80 (a GameShark cart-RAM write).",
     notes: { Charaboms: "GameShark codes for the roster table in cart RAM. The game reads it in place, so a Charabom shows on Charabom Select at once and stays after you save." } },
-  { id: "sel", ns: SEL, family: "Game Boy / Game Boy Color", year: 2003, name: "Bomberman Selection", plat: "Game Boy Color (Korea)", logo: "sel", main: "kr",
-    len: 8, maxLen: 20, shape: /^(\d{4}|[1-8A-HJ-UW-Z]{8}|[A-P]{20})$/, form: "8 characters (Bomber Boy), 20 letters (Bomber Man mode) or 4 digits (Bomberman)",
-    intro: "A Korea-only cart with two games: Bomber Boy (1990, with its Bomber Man mode) and Bomberman GB (1994) in colour, its Japanese text in English. Each game keeps its own password screen.",
-    check(c) {
-      if (c.length === 4) {
-        const d = GB1.decode(c, "jp");
-        if (!d) return null;
-        if (d.kind !== "stage") return { type: "special", order: 99, title: "Bomberman: " + (d.kind === "powerup" ? "start at 1-1 with every power-up" : "the extra battle") };
-        return { type: "stage", cell: { r: "Round " + d.round, c: d.stage, boss: d.boss }, fields: d, group: "gb" + d.value, order: 300 + d.value, title: `Bomberman: stage ${d.round}-${d.stage}${d.boss ? " (boss)" : ""}` };
-      }
-      if (c.length === 20) {
-        const d = NES1.decode(c);
-        return d && { type: "stage", fields: d, group: c, order: 100 + d.stage, title: `Bomber Man mode: stage ${d.stage}`,
-          detail: `${plural(d.bombs, "bomb")}, fire ${d.fire}. The same code works in NES Bomberman.` };
-      }
-      const d = SEL.decode(c);
-      if (!d) return null;
-      const n = SEL.ISLANDS.filter((_, i) => d.islands >> i & 1);
-      return { type: "stage", fields: d, group: c, order: n.length, title: d.islands === 255 ? "Bomber Boy: the ending" : `Bomber Boy: ${n.length ? n.length + " of 8 islands cleared" : "no islands cleared"}`,
-        detail: `${n.length ? "Cleared: " + n.join(", ") + ". " : ""}Gold ${d.gold.toLocaleString("en-US")}${d.gold > 9999 ? " (the game caps it at 9,999 when gold next changes)" : ""}.` };
-    },
-    why: c => c.length === 8 && /[IV90]/.test(c) ? "Bomber Boy's grid has no I, V, 9 or 0." : c.length === 20 && /[Q-Z]/.test(c) ? "Bomber Man mode's letters are A to P." :
-      c.length === 8 || c.length === 20 ? "A check doesn't match, so at least one character is wrong." : c.length === 4 ? "Not in Bomberman's list of codes." : "",
-    notes: { "Bomber Boy": "8 characters: the islands you've cleared and your gold, with two check bytes. Every combination has exactly one code; all eight islands cleared goes straight to the ending.",
-      "Bomber Man mode": "NES Bomberman's code system, unchanged: stage, score and power-ups in 20 letters.",
-      Bomberman: "The Japanese Bomberman GB's list of codes, unchanged." } },
   { id: "pbvb", ns: PBVB, family: "Virtual Boy", year: 1995, name: "Panic Bomber", plat: "Virtual Boy", logo: "pbvb", main: "us",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     intro: "Hudson's falling-block Bomberman puzzle game. A password starts any of the four stages on any of the four levels; a few more open the sound test, stage select and more.",
@@ -734,7 +708,7 @@ const byFamily = f => GAMES.filter(x => x.family === f);   // in list order
 const HERO = { sb1: ["sb1", "debug_fire_full"], sb2: ["sb2", "battle_stage11"], sb3: ["sb3", "arena_variants"], sb4: ["sb4", "stages_11_12"],
   sb5: ["sb5", "battle_0926"], mega: ["mega", "stage_intro_5120"], pce90: ["pce90", "title_us"], pce93: ["pce93", "sp_normal_game"],
   pce94: ["pce94", "battle_5players"], nes1: ["nes1", "title_us"], nes2: ["nes2", "title_us"], gb1: ["gb1", "title_wario"], gb2: ["gb2", "title_us"],
-  gb3: ["gb3", "title_jp"], pocket: ["pocket", "title"], max: ["max", "charaboms_blue"], sel: ["sel", "menu"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"] };
+  gb3: ["gb3", "title_jp"], pocket: ["pocket", "title"], max: ["max", "charaboms_blue"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"] };
 const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb", "Virtual Boy": "vb" };
 $("cards").innerHTML = families.map((f, i) => `<div class="pgroup" data-fam="${FAM[f] || ""}"><h3 id="pf_${i}">${esc(f)}</h3>
   <div class="gcards" role="group" aria-labelledby="pf_${i}">${byFamily(f).map(x =>
@@ -1015,38 +989,17 @@ const GEN = {
     gen(`<div class="row">${sel("m", "Game", [["boy", "Game A (Bomber Boy)"], ["man", "Game B (Bomber Man)"]])}</div><div id="bbm"></div>`);
     const modes = {
       boy: [`<div class="row"><label class="field grow">${lbl("Gold")}<input id="gold" type="number" min="0" max="9999" value="100"></label></div>
-        ${SEL.ISLANDS.map((n, i) => box("is" + i, n + (i === 6 ? " (opens once the other seven are cleared)" : ""))).join("")}`,
-        () => setCode(SEL.encode(SEL.ISLANDS.reduce((t, _, i) => t | ($("is" + i).checked ? 1 << i : 0), 0), Math.max(0, Math.min(9999, val("gold") | 0)), us() ? SEL.SYMBOLS_US : SEL.SYMBOLS))],
+        ${BB.ISLANDS.map((n, i) => box("is" + i, n + (i === 6 ? " (opens once the other seven are cleared)" : ""))).join("")}`,
+        () => setCode(BB.encode(BB.ISLANDS.reduce((t, _, i) => t | ($("is" + i).checked ? 1 << i : 0), 0), Math.max(0, Math.min(9999, val("gold") | 0)), us() ? BB.SYMBOLS_US : BB.SYMBOLS))],
       man: [`<div class="row">${sel("st", "Stage", range(1, 50))}</div>${box("kit", "Every power-up (10 bombs, fire 5, speed, wall pass, detonator, flame pass)")}`,
         () => { const c = $("kit").checked ? NES1.encode({ stage: val("st"), bombs: 10, fire: 5, speed: 1, wallPass: 1, detonator: 1, flamePass: 1 }) : NES1.encode({ stage: val("st"), bombs: 1, fire: 1 });
-          setCode(us() ? SEL.toUS(c) : c); }],
+          setCode(us() ? BB.toUS(c) : c); }],
     };
     const show = () => {
       const [html, f] = modes[$("m").value];
       $("bbm").innerHTML = html;
       $("bbm").querySelectorAll("select, input").forEach(x => { x.onchange = x.oninput = f; });
       GEN.bb.onver = f;
-      f();
-    };
-    $("m").onchange = show;
-    show();
-  },
-  sel() {
-    gen(`<div class="row">${sel("m", "Game", [["boy", "Bomber Boy"], ["man", "Bomber Man mode"], ["gb", "Bomberman"]])}</div><div id="selm"></div>`);
-    const gb = Object.entries(GB1.TABLES.jp).sort((a, b) => a[1] - b[1]);
-    const modes = {
-      boy: [`<div class="row"><label class="field grow">${lbl("Gold")}<input id="gold" type="number" min="0" max="9999" value="100"></label></div>
-        ${SEL.ISLANDS.map((n, i) => box("is" + i, n + (i === 6 ? " (opens once the other seven are cleared)" : ""))).join("")}`,
-        () => setCode(SEL.encode(SEL.ISLANDS.reduce((t, _, i) => t | ($("is" + i).checked ? 1 << i : 0), 0), Math.max(0, Math.min(9999, val("gold") | 0))))],
-      man: [`<div class="row">${sel("st", "Stage", range(1, 50))}</div>${box("kit", "Every power-up (10 bombs, fire 5, speed, wall pass, detonator, flame pass)")}`,
-        () => setCode($("kit").checked ? NES1.encode({ stage: val("st"), bombs: 10, fire: 5, speed: 1, wallPass: 1, detonator: 1, flamePass: 1 }) : NES1.encode({ stage: val("st"), bombs: 1, fire: 1 }))],
-      gb: [`<div class="row">${sel("gs", "Stage", gb.filter(([, v]) => v < 32).map(([c, v]) => [c, `${(v >> 2) + 1}-${(v & 3) + 1}${(v & 3) === 3 ? " (boss)" : ""}`]))}</div>`,
-        () => setCode($("gs").value)],
-    };
-    const show = () => {
-      const [html, f] = modes[$("m").value];
-      $("selm").innerHTML = html;
-      $("selm").querySelectorAll("select, input").forEach(x => { x.onchange = x.oninput = f; });
       f();
     };
     $("m").onchange = show;

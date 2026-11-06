@@ -3,7 +3,7 @@
 # [ver] [...] is this for its game. Mesen 2: MESEN = a portable Mesen.exe (a settings.json beside it keeps saves,
 # states and CDLs in its own folder, off C:). mega, mega8: BizHawk (EMUHAWK). tools/<game>/lib.lua is prepended
 # (after the VER/REG/MODE/GAME/STATES lines; sb3-sb5en run the script as is). Output lands next to the script (pce90,
-# pce93, pceub, sb1, sb3-sb5en), in $OUT or $SCRATCH/<game>/<script>_<ver>/ (gb1-gb3, max, pocket, sel), or in
+# pce93, pceub, sb1, sb3-sb5en), in $OUT or $SCRATCH/<game>/<script>_<ver>/ (gb1-gb3, max, pocket, bb), or in
 # $SCRATCH/<script>_<ver>/. ROM overrides the ROM (gb, max, pocket, sb4); sb1 takes it as a third argument, sb5/sb5en
 # as the second.
 g=$1; s=$2; shift 2; T=$(cd "$(dirname "$0")/.." && pwd); here=$T/$g; R=$(cd "$T/../roms" && pwd -W); n=$(basename "$s" .lua)
@@ -15,7 +15,7 @@ case $g in
   max) pick "$1" blue blue "Bomberman Max - Blue Champion (USA).gbc" red "Bomberman Max - Red Challenger (USA).gbc" \
     hikari "Bomberman Max - Hikari no Yuusha (Japan).gbc" yami "Bomberman Max - Yami no Senshi (Japan).gbc" ain "Bomberman Max - Ain Version (Japan).gbc";;
   pocket) pick "$1" us us "Pocket Bomberman (USA, Europe) (SGB Enhanced) (GB Compatible).gbc";;
-  sel) pick "$1" kr kr "Bomberman Selection (Korea).gbc";;
+  bb) pick "$1" us us "Atomic Punk (USA).gb" jp "Bomber Boy (Japan).gb";;
   nes1) pick "$1" us us "Bomberman (USA).nes" jp "Bomberman (Japan).nes";;
   nes2) pick "$1" us us "Bomberman II (USA).nes" jp "Bomberman II (Japan).nes";;
   mega) pick "$1" us us "Mega Bomberman (USA).md" eu "Mega Bomberman (Europe, Korea) (En).md";;
@@ -34,7 +34,7 @@ case $g in
   *) echo "unknown game $g" >&2; exit 1;;
 esac
 case $g in
-  gb*|max|pocket|sel)
+  gb*|max|pocket|bb)
     : "${MESEN:?set MESEN to a portable Mesen.exe}"; export MESEN
     case $g in max|pocket) : "${SCRATCH:?set SCRATCH to a scratch folder}";; esac
     o=${OUT:-${SCRATCH:-/d/tmp/bomberman/gb}/$g/${n}_$v}; mkdir -p "$o"
