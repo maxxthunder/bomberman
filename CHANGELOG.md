@@ -2,6 +2,13 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.10.0 (2026-11-06)
+- The page works offline once opened, and installs as an app (Add to Home Screen).
+- Panic Bomber (Virtual Boy): 0825 and 0513, with L, R, right-pad Up and left-pad Left held, open a hidden DEBUG MENU;
+  the other button codes are read from the disassembled password check.
+- Bomberman: Panic Bomber (PC Engine CD) has no password: it saves to the System Card.
+- Removed Bomberman Selection; Atomic Punk / Bomber Boy has its own notes and tools.
+
 ## 1.9.0 (2026-11-05)
 - New games: Atomic Punk / Bomber Boy (Game Boy), Panic Bomber (Virtual Boy) and Super Bomberman: Panic Bomber W
   (Super Famicom), each with a password generator and every listed code typed in an emulator.

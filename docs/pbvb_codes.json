@@ -252,14 +252,38 @@
   "img": "ending_0716.png"
  },
  {
-  "code": "0612 / 0911 / 0704 / 4476",
-  "effect": "Unused cheat slots: taken with L and R held, but nothing changes",
+  "code": "0825",
+  "effect": "DEBUG MENU: SCROLL, ANIMATION, DOKURO, TUBU, ENEMY, WORLD, SPEED, COLOR, ERASE, ITEM, EVENT, WIN, CPU (hold L, R, Up on the right pad and Left on the left pad while pressing A)",
   "versions": [
    "us"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "The L+R list has ten codes; these four return to the menu like the working ones, and work RAM afterwards matches simply backing out. 0825 and 0513 (also in the list) are refused, and 9782 in the row after the levels is taken and changes nothing.",
+  "note": "The last two entries of the button-code list ($27EB6). The check ($0702_00F0) wants pad bits L, R, right-pad Up and left-pad Left; with them held in BizHawk the [ DEBUG MENU ] opens with 13 settings, and A starts a game with them. GameFAQs doesn't have it.",
+  "section": "Special codes",
+  "img": "debug_menu_0825.png"
+ },
+ {
+  "code": "0513",
+  "effect": "DEBUG MENU: SCROLL, ANIMATION, DOKURO, TUBU, ENEMY, WORLD, SPEED, COLOR, ERASE, ITEM, EVENT, WIN, CPU (hold L, R, Up on the right pad and Left on the left pad while pressing A)",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The last two entries of the button-code list ($27EB6). The check ($0702_00F0) wants pad bits L, R, right-pad Up and left-pad Left; with them held in BizHawk the [ DEBUG MENU ] opens with 13 settings, and A starts a game with them. GameFAQs doesn't have it.",
+  "section": "Special codes",
+  "img": "debug_menu_0513.png"
+ },
+ {
+  "code": "0612 / 0911 / 0704 / 4476 / 9782",
+  "effect": "Taken, but nothing seen changes: each sets or clears a flag",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "0612, 0911, 0704 and 4476 (with L and R) and 9782 return to the menu. Their handlers ($0702_01EC on) clear $0500_2500 (0612) or set $0500_24E0, $24E4, $24E8 and $24F4 to 1; those are read when a stage starts, each frame, and when a stage code is entered, but a game played after each in BizHawk looked the same as a normal one.",
   "section": "unused"
  }
 ]

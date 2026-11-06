@@ -32,5 +32,7 @@ of 4-digit records at file `$4AB5` (`$00:CAB5`), one row of 8 per difficulty:
   taken (their rule changes, bombs exploding at once and four bombs to clear a line, are GameFAQs'). Without L and R
   the cheats are refused.
 
-The PC Engine Super CD-ROM² version (Bomberman: Panic Bomber, 1994) has no password: its Story mode goes straight to
-the difficulty choice.
+The PC Engine Super CD-ROM² version (Bomberman: Panic Bomber, 1994) has no password: it saves to the System Card's
+backup memory instead. Its Story mode goes straight to the difficulty choice; the save routine near the start of the
+data track calls the System Card's backup-memory functions with the file name `P.BOMBER` and a 166-byte buffer, and
+after one boot in Mesen the backup memory holds that file.

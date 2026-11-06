@@ -33,10 +33,19 @@ looked up in a list of 4-digit records at ROM `$27DFE` (`$0702_7DFE`):
 
 ## Special codes
 
+The decoder (`$0701_FFDC`, from the MAME `unidasm` V810 listing) walks all 48 entries and returns the first match;
+entries 38-45 also need L and R held (`$0702_00D0`, pad copy `$0500_2510`), and entries 46-47 L, R, Up on the right
+pad and Left on the left pad (`$0702_00F0`). The handlers start at `$0702_01EC`.
+
 - ★ **`1298`**: the level choice comes up, then THE SCARY RUINS against **Zach the Were-Bomberman** ("My name is
   Zach. I am a Were-Bomberman!") instead of Drifty. ![1298](img/pbvb/zach_1298.png)
 - With L and R held: `0130` auto play, `1001` sound test, `0720` stage select, `0716` the ending (all Known, all
   typed in BizHawk).
-- ★ The other six L+R codes are dead slots: `0612`, `0911`, `0704` and `4476` return to the menu like the working
-  ones, but work RAM afterwards is byte for byte what backing out of the screen leaves; `0825` and `0513` are refused.
-  `9782` (the row after the levels) behaves like the first four.
+- ★ **`0825` and `0513`** with L, R, right-pad Up and left-pad Left held open the **[ DEBUG MENU ]**: SCROLL,
+  ANIMATION, DOKURO, TUBU, ENEMY, WORLD, SPEED, COLOR, ERASE, ITEM, EVENT, WIN and CPU, each with a value; A starts a
+  game with them. The two handlers differ only in a sub-mode byte; both menus look the same.
+  ![0825](img/pbvb/debug_menu_0825.png)
+- ★ `0612`, `0911`, `0704` and `4476` (with L and R) and `9782` (no buttons) are taken and return to the menu. Their
+  handlers set flags at `$0500_24E0`, `$24E4`, `$24E8` and `$24F4` (`0612` clears `$0500_2500`); the game reads them
+  when a stage starts, each frame, and when a stage code is entered, but a game started after each looked the same as a
+  normal one in BizHawk. (BizHawk's Virtual Boy core exposes no work RAM, so the flags were read from the code only.)

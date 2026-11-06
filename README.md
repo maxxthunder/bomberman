@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis, PC Engine and Virtual Boy
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.9.0](https://img.shields.io/badge/version-1.9.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.10.0](https://img.shields.io/badge/version-1.10.0-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 19 Bomberman games, read from each game's own code and tested in emulators, with a
 password generator and checker for each one.
@@ -20,8 +20,9 @@ Contents: [How to use it](#how-to-use-it) · [The games](#the-games) · [Highlig
 
 Below the generator, every known code for the game is listed: passwords first, then secrets, then cheat codes for
 Game Genie and Pro Action Replay (GameShark on Game Boy) and IPS patches. ★ New marks codes no published list had.
-The page follows your device's light or dark setting, and works offline: save [`index.html`](index.html) with the
-`docs/img/` folder next to it.
+The page follows your device's light or dark setting (the button in the corner switches it). Once you've opened it,
+it keeps working offline, and you can install it as an app (Add to Home Screen, or the install icon in the address
+bar); the games you've looked at keep their screenshots.
 
 ## The games
 

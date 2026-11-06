@@ -1,0 +1,15 @@
+{
+  "name": "Bomberman Codes",
+  "short_name": "Bomberman",
+  "description": "Every password and secret code for 19 Bomberman games, with a generator and checker for each.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0c1130",
+  "theme_color": "#0c1130",
+  "icons": [
+    { "src": "docs/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "docs/img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "docs/img/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

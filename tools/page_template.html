@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bomberman Codes and Password Generator</title>
 <meta name="description" content="Every password and secret code for the NES, Game Boy, Game Boy Color, Super Nintendo, Genesis, TurboGrafx-16 / PC Engine and Virtual Boy Bomberman games, read from the games' own code and tested in emulators, with a password generator and checker for each game.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0c1130">
+<link rel="apple-touch-icon" href="docs/img/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NWL552ST"></script>
@@ -301,7 +304,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.9.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.10.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -621,6 +624,7 @@ const GAMES = [
       if (!d) return null;
       if (d.kind === "zach") return { type: "special", order: 90, title: "Play The Scary Ruins against Zach the Were-Bomberman", detail: "Choose a level first." };
       if (d.kind === "cheat") return { type: "special", order: 95, title: d.name, detail: "Hold L and R while you enter it." };
+      if (d.kind === "debug") return { type: "special", order: 96, title: "The DEBUG MENU", detail: "Hold L, R, Up on the right pad and Left on the left pad while you press A." };
       return { type: "stage", fields: d, cell: { r: PBVB.LEVELS[d.level], c: d.stage + 1 }, group: c, order: d.level * 10 + d.stage,
         title: `${PBVB.STAGES[d.stage]}, ${PBVB.LEVELS[d.level]}` };
     },
@@ -683,6 +687,8 @@ function applyTheme() {
 $("theme").onclick = () => { const light = saved.theme ? saved.theme === "light" : OS_LIGHT.matches; saved.theme = light ? "dark" : "light"; store.set(saved); applyTheme(); };
 OS_LIGHT.addEventListener("change", applyTheme);
 applyTheme();
+// keep a copy for offline use (sw.js); file:// and old browsers just skip it
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("sw.js").catch(() => {});
 saved.codes = saved.codes || {};
 
 let g = null;       // the chosen game; null until the first pick
