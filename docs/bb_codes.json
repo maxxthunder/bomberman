@@ -1,0 +1,254 @@
+[
+ {
+  "code": "L62QTG6R",
+  "effect": "Hevol cleared, 1,119 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $08, gold 1,119. GameFAQs (US list): \"Hevol Completed\".",
+  "section": "Bomber Boy",
+  "img": "us_L62QTG6R_map_shop.png"
+ },
+ {
+  "code": "661P4W6R",
+  "effect": "Hevol and Jagoraz cleared, 1,219 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $18, gold 1,219. GameFAQs: \"Jagoraz Completed\".",
+  "section": "Bomber Boy",
+  "img": "us_661P4W6R_map_shop.png"
+ },
+ {
+  "code": "LL283F5G",
+  "effect": "Thulia, Hevol and Jagoraz cleared, 1,299 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $1C, gold 1,299. GameFAQs: \"Thulia Completed\".",
+  "section": "Bomber Boy",
+  "img": "us_LL283F5G_map_shop.png"
+ },
+ {
+  "code": "557RL25G",
+  "effect": "Grad cleared, 499 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $20, gold 499. GameFAQs: \"Grad Completed\".",
+  "section": "Bomber Boy",
+  "img": "us_557RL25G_map_shop.png"
+ },
+ {
+  "code": "T58Q5H57",
+  "effect": "Cuolece, Grad and Wather cleared, 1,279 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $A1, gold 1,279. GameFAQs: \"Wather Completed\".",
+  "section": "Bomber Boy",
+  "img": "us_T58Q5H57_map_shop.png"
+ },
+ {
+  "code": "TL77S.3=",
+  "effect": "Every island but Faria cleared, 1,469 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 1,469: Faria opens. GameFAQs: \"Windria Completed\".",
+  "section": "Bomber Boy",
+  "img": "us_TL77Sd3E_map_shop.png"
+ },
+ {
+  "code": "!!HH!H!G",
+  "effect": "65,535 gold (no islands cleared)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 65,535; the game caps gold at 9,999 the next time it changes. GameFAQs: \"Max Gold 65535\".",
+  "section": "Bomber Boy",
+  "img": "us_xxHHxHxG_map_shop.png"
+ },
+ {
+  "code": "LMQQ5GC1",
+  "effect": "1,596 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 1,596. GameFAQs (listed as EU): \"1596 Gold\".",
+  "section": "Bomber Boy",
+  "img": "us_LMQQ5GC1_map_shop.png"
+ },
+ {
+  "code": "6612?1L1",
+  "effect": "2,248 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 2,248. GameFAQs (EU): \"2248 Gold\".",
+  "section": "Bomber Boy",
+  "img": "us_6612q1L1_map_shop.png"
+ },
+ {
+  "code": "4L11C2?W",
+  "effect": "Wather cleared, 2,818 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $80, gold 2,818. GameFAQs (EU): \"2818 Gold\".",
+  "section": "Bomber Boy",
+  "img": "us_4L11C2qW_map_shop.png"
+ },
+ {
+  "code": "6612?2BG",
+  "effect": "3,017 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 3,017. GameFAQs (EU): \"3017 Gold\".",
+  "section": "Bomber Boy",
+  "img": "us_6612q2BG_map_shop.png"
+ },
+ {
+  "code": "SMQQ!G6W",
+  "effect": "Wather cleared, 3,518 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $80, gold 3,518. GameFAQs (EU): \"3518 Gold\".",
+  "section": "Bomber Boy",
+  "img": "us_SMQQxG6W_map_shop.png"
+ },
+ {
+  "code": "XM88TFTD",
+  "effect": "Every island but Faria cleared, 34,106 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 34,106. GameFAQs (EU): \"Last level with 34106 gold\".",
+  "section": "Bomber Boy",
+  "img": "us_XM88TFTD_map_shop.png"
+ },
+ {
+  "code": "LLW25H!G",
+  "effect": "9,999 gold, the most the game keeps",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 9,999.",
+  "section": "Bomber Boy",
+  "img": "us_LLW25HxG_map_shop.png"
+ },
+ {
+  "code": "4MFPS=J=",
+  "effect": "Every island but Faria cleared, 9,999 gold",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 9,999.",
+  "section": "Bomber Boy",
+  "img": "us_4MFPSEJE_map_shop.png"
+ },
+ {
+  "code": "33FPS=J=",
+  "effect": "The ending (every island cleared)",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Typed in Mesen; RAM read back after END: $C0E9 = $FF: the game goes from the password screen to the ending ($00:0D07).",
+  "section": "Bomber Boy",
+  "img": "ending_us.png"
+ },
+ {
+  "code": "JJS25FXE",
+  "effect": "9,999 gold, the most the game keeps",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 9,999.",
+  "section": "Bomber Boy",
+  "img": "jp_JJS25FXE_map_shop.png"
+ },
+ {
+  "code": "4KDMPZGZ",
+  "effect": "Every island but Faria cleared, 9,999 gold",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 9,999.",
+  "section": "Bomber Boy",
+  "img": "jp_4KDMPZGZ_map_shop.png"
+ },
+ {
+  "code": "33DMPZGZ",
+  "effect": "The ending (every island cleared)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Typed in Mesen; RAM read back after END: $C0E9 = $FF: straight to the ending.",
+  "section": "Bomber Boy",
+  "img": "ending_jp.png"
+ },
+ {
+  "code": "BOHIDJFEKJGKEFOLFHAC",
+  "effect": "Bomber Man mode: stage 50, 10 bombs, fire 5, speed, wall pass, detonator, flame pass, exit and item marked",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "NES Bomberman's code, unchanged. Typed in Mesen (shown: the STAGE 50 card it starts): $C40B = 50, $C402 = 10, $C403 = 5, every power-up flag 1.",
+  "section": "Bomber Man mode",
+  "img": "jp_bm_BOHIDJFEKJGKEFOLFHAC_stage.png"
+ },
+ {
+  "code": "B3H2DJF1KJGK1F3LFH0C",
+  "effect": "Bomber Man mode: stage 50, 10 bombs, fire 5, speed, wall pass, detonator, flame pass, exit and item marked",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "NES Bomberman's code with A, E, I, O shown as 0, 1, 2, 3 (Game B's letter table, $02:44D5). Typed in Mesen (shown: the STAGE 50 card it starts): $C40B = 50, $C402 = 10, $C403 = 5, every power-up flag 1.",
+  "section": "Bomber Man mode",
+  "img": "us_bm_B3H2DJF1KJGK1F3LFH0C_stage.png"
+ }
+]

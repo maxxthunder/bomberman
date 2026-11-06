@@ -492,7 +492,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs; $1F48 = 1; seen in a COM battle (round-1 winner gold in round 2). Occupies the 5-7 stage slot"
+  "note": "GameFAQs; $1F48 = 1; seen in a COM battle (round-1 winner gold in round 2). Occupies the 5-7 stage slot",
+  "img": "gold_winner.png"
  },
  {
   "code": "0520",

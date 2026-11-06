@@ -17,6 +17,10 @@ MMC1, 128 KB PRG, 8 KB CHR RAM. Bank 7 calls the other banks through **`$C852`**
 bytes, a bank number and a target address minus 1 (`$05 $61 $95` calls `$05:9562`); `m6502.py --far C852` lists those
 bytes as `.far` and traces the target (JP: `--far C7BE`).
 
+Hudson Best Collection Vol. 1: Bomberman Collection (Game Boy Advance, Japan) has Bomberman II too. Its GameFAQs
+page (in `res/`) lists Famicom codes: the eight checked (1-1 to 1-4, 2-1, 3-1, 6-1, 6-8) all decode with the
+Japanese codec. The cart itself was not available to type them in.
+
 ## RAM that matters
 
 | Address (US) | JP | Meaning | Evidence |

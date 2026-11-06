@@ -2,6 +2,18 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.9.0 (2026-11-05)
+- New games: Atomic Punk / Bomber Boy (Game Boy), Panic Bomber (Virtual Boy) and Super Bomberman: Panic Bomber W
+  (Super Famicom), each with a password generator and every listed code typed in an emulator.
+- New finds: Panic Bomber's 1298 (play against Zach the Were-Bomberman) and its dead cheat slots; Panic Bomber W's
+  round-1 codes; Atomic Punk's Game B takes NES Bomberman codes with A, E, I, O shown as 0-3.
+- The NES Bomberman page notes the Game Boy Advance re-releases, which take the same codes.
+- A Virtual Boy section in the game picker; within each system the games follow the list order.
+- The generators' special-code menus are gone (the codes are listed below them).
+- Special codes and secrets show what they do: the screens they open, and for Atomic Punk the island map and gold.
+- Empty cells in a stage grid are marked as stages the game doesn't have.
+- Images recompressed without loss (about 3 MB smaller).
+
 ## 1.8.1 (2026-11-05)
 - Every section heading has an icon (a key for passwords, a bomb for cheat codes, and so on).
 - Country flags beside version and region names.

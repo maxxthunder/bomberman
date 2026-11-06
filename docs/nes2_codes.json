@@ -1735,7 +1735,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Sound Test\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K3456712",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "sound_room.png"
  },
  {
   "code": "LAELEJBG",

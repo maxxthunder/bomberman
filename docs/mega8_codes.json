@@ -8,7 +8,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "$256 waits for bit 7 of $2F4 (the first pad found); then $3BC sets up the arena. Not in GameFAQs or other published notes",
-  "section": "rules"
+  "section": "rules",
+  "img": "../mega8/battle_8p.png"
  },
  {
   "code": "Sega Team Player in both ports",
@@ -41,7 +42,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "$20F6, needs item $14 (+$28). With 4 bombs, 3 were laid in the 3 free cells ahead (powers.lua)",
-  "section": "rules"
+  "section": "rules",
+  "img": "../mega8/line_bomb.png"
  },
  {
   "code": "Walk into a bomb (with Kick)",
@@ -63,7 +65,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "Never placed ($3554 table); pickup adds 1 to player +$26 ($15DE), which nothing reads. Graphic: a bomb with a yellow lightning bolt (remote control? a guess). Forced onto the floor and walked over: only +$26 changed (items.lua)",
-  "section": "unused"
+  "section": "unused",
+  "img": "../mega8/items.png"
  },
  {
   "code": "Fixed arena and hidden items",
@@ -74,7 +77,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "Constant seed $27DE ($434). 27 bomb up, 27 fire up, 7 kick, 4 line bomb (itemmap.lua); arenas pixel-equal with Start on different frames",
-  "section": "hidden"
+  "section": "hidden",
+  "img": "../mega8/item_map.png"
  },
  {
   "code": "HUD clock and win counters",
@@ -85,7 +89,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "Part of the arena picture, no code updates them; unchanged after 70 s, and with all 8 dead the empty arena stays (idle.lua). Reset to play again",
-  "section": "rules"
+  "section": "rules",
+  "img": "../mega8/all_dead.png"
  },
  {
   "code": "Sound driver call $D801C / effects 7-9",

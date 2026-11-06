@@ -164,7 +164,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$CC:14C0: 48 X presses in a row, each 7-9 frames after the last (49 presses; about 6.5 s at 8 frames), set $1CB5 and play sound $0D (the jingle GameFAQs mentions). Any turbo pad or fast tapping works, not just the Joycard. 6 or 10 frames apart fails. The Caravan version clears $1CB5 at the stage select, so it never works there."
+  "note": "$CC:14C0: 48 X presses in a row, each 7-9 frames after the last (49 presses; about 6.5 s at 8 frames), set $1CB5 and play sound $0D (the jingle GameFAQs mentions). Any turbo pad or fast tapping works, not just the Joycard. 6 or 10 frames apart fails. The Caravan version clears $1CB5 at the stage select, so it never works there.",
+  "img": "battle_stage11.png"
  },
  {
   "code": "A or START on multitap pad 5 at the title menu",
@@ -178,7 +179,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "\\ sets \\ when the pad 5 press that chooses any menu item is A or START. \\ then allows the jump everywhere but battle stages 2 and 3 (without the flag, only stage 12 has it). Lasts until reset. Checked with an emulated multitap in port 2 (Mesen), A on multitap port D: \\ = \\ in all five versions; A on pad 4 or pad 1 leaves it 0."
+  "note": "\\ sets \\ when the pad 5 press that chooses any menu item is A or START. \\ then allows the jump everywhere but battle stages 2 and 3 (without the flag, only stage 12 has it). Lasts until reset. Checked with an emulated multitap in port 2 (Mesen), A on multitap port D: \\ = \\ in all five versions; A on pad 4 or pad 1 leaves it 0.",
+  "img": "pad5_jump.png"
  },
  {
   "code": "SELECT on the battle player screen",

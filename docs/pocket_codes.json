@@ -363,7 +363,8 @@
   "status": "known",
   "verified": "mesen",
   "section": "Button codes",
-  "note": "On the \"Area n\" screen of areas 1-4 (it follows the world select for area 1 and the password for the others), with bombs and fire both under 3 ($02:48D5, sequence $02:4983). Bombs to place (table $02:4943, areas 1-4): Forest 10/20/30/15, Ocean 20/30/40/15, Wind 20/30/30/15, Cloud 15/20/30/20, Evil 20/30/10/20. GameFAQs lists the code. Mesen (tools/pocket/test_flower.lua): typed on the Ocean 3 screen it arms the counter with 40 ($C35B = 1, $C35C = 40), and the flower is spawned ($02:680C) at the 40th bomb; Wind 3 arms 30, Ocean 2 30."
+  "note": "On the \"Area n\" screen of areas 1-4 (it follows the world select for area 1 and the password for the others), with bombs and fire both under 3 ($02:48D5, sequence $02:4983). Bombs to place (table $02:4943, areas 1-4): Forest 10/20/30/15, Ocean 20/30/40/15, Wind 20/30/30/15, Cloud 15/20/30/20, Evil 20/30/10/20. GameFAQs lists the code. Mesen (tools/pocket/test_flower.lua): typed on the Ocean 3 screen it arms the counter with 40 ($C35B = 1, $C35C = 40), and the flower is spawned ($02:680C) at the 40th bomb; Wind 3 arms 30, Ocean 2 30.",
+  "img": "flower.png"
  },
  {
   "code": "A + B + Select + Start",

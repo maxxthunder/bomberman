@@ -1,0 +1,265 @@
+[
+ {
+  "code": "1000",
+  "effect": "Start at The Scary Ruins (Very Easy)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 1, slot 1. Typed in BizHawk: the game starts The Scary Ruins.",
+  "section": "Passwords",
+  "img": "1000.png"
+ },
+ {
+  "code": "4390",
+  "effect": "Start at The Sinister Forest (Very Easy)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 1, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Star Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row.",
+  "section": "Passwords",
+  "img": "4390.png"
+ },
+ {
+  "code": "3281",
+  "effect": "Start at Desert of Desolation (Very Easy)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 1, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Moon Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row.",
+  "section": "Passwords",
+  "img": "3281.png"
+ },
+ {
+  "code": "5607",
+  "effect": "Start at Doom Castle (Very Easy)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 1, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Sun Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row.",
+  "section": "Passwords",
+  "img": "5607.png"
+ },
+ {
+  "code": "2000",
+  "effect": "Start at The Scary Ruins (Easy)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 2, slot 1. Typed in BizHawk: the game starts The Scary Ruins.",
+  "section": "Passwords",
+  "img": "2000.png"
+ },
+ {
+  "code": "6835",
+  "effect": "Start at The Sinister Forest (Easy)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 2, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest (Easy)\".",
+  "section": "Passwords",
+  "img": "6835.png"
+ },
+ {
+  "code": "9081",
+  "effect": "Start at Desert of Desolation (Easy)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 2, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation (Easy)\".",
+  "section": "Passwords",
+  "img": "9081.png"
+ },
+ {
+  "code": "2473",
+  "effect": "Start at Doom Castle (Easy)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 2, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle (Easy)\".",
+  "section": "Passwords",
+  "img": "2473.png"
+ },
+ {
+  "code": "3000",
+  "effect": "Start at The Scary Ruins (Normal)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 3, slot 1. Typed in BizHawk: the game starts The Scary Ruins.",
+  "section": "Passwords",
+  "img": "3000.png"
+ },
+ {
+  "code": "2695",
+  "effect": "Start at The Sinister Forest (Normal)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 3, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest (Normal)\".",
+  "section": "Passwords",
+  "img": "2695.png"
+ },
+ {
+  "code": "1038",
+  "effect": "Start at Desert of Desolation (Normal)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 3, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation (Normal)\".",
+  "section": "Passwords",
+  "img": "1038.png"
+ },
+ {
+  "code": "6934",
+  "effect": "Start at Doom Castle (Normal)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 3, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle (Normal)\".",
+  "section": "Passwords",
+  "img": "6934.png"
+ },
+ {
+  "code": "4000",
+  "effect": "Start at The Scary Ruins (Hard)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 4, slot 1. Typed in BizHawk: the game starts The Scary Ruins. GameFAQs lists it as \"The Scary Ruins (Hard)\".",
+  "section": "Passwords",
+  "img": "4000.png"
+ },
+ {
+  "code": "8647",
+  "effect": "Start at The Sinister Forest (Hard)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 4, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest / Star Medal (Hard)\".",
+  "section": "Passwords",
+  "img": "8647.png"
+ },
+ {
+  "code": "0538",
+  "effect": "Start at Desert of Desolation (Hard)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 4, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation / Moon Medal (Hard)\".",
+  "section": "Passwords",
+  "img": "0538.png"
+ },
+ {
+  "code": "9316",
+  "effect": "Start at Doom Castle (Hard)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27DFE, level row 4, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle / Sun Medal (Hard)\".",
+  "section": "Passwords",
+  "img": "9316.png"
+ },
+ {
+  "code": "1298",
+  "effect": "Pick a level, then play The Scary Ruins against Zach the Were-Bomberman instead of Drifty",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Table $27E7E, the row after the four levels. Typed in BizHawk: the level choice comes up, then THE SCARY RUINS with \"My name is Zach. I am a Were-Bomberman!\"; a normal start (1000) gives Drifty.",
+  "section": "Special codes",
+  "img": "zach_1298.png"
+ },
+ {
+  "code": "0130",
+  "effect": "Auto play: the game plays itself (hold L and R while entering)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: auto play opens. GameFAQs lists it.",
+  "section": "Special codes",
+  "img": "autoplay_0130.png"
+ },
+ {
+  "code": "1001",
+  "effect": "Sound test (BGM, SE) (hold L and R while entering)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: sound test opens. GameFAQs lists it.",
+  "section": "Special codes",
+  "img": "sound_test_1001.png"
+ },
+ {
+  "code": "0720",
+  "effect": "Stage select (hold L and R while entering)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: stage select opens. GameFAQs lists it.",
+  "section": "Special codes",
+  "img": "stage_select_0720.png"
+ },
+ {
+  "code": "0716",
+  "effect": "The ending and credits (hold L and R while entering)",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: the ending opens. GameFAQs lists it.",
+  "section": "Special codes",
+  "img": "ending_0716.png"
+ },
+ {
+  "code": "0612 / 0911 / 0704 / 4476",
+  "effect": "Unused cheat slots: taken with L and R held, but nothing changes",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The L+R list has ten codes; these four return to the menu like the working ones, and work RAM afterwards matches simply backing out. 0825 and 0513 (also in the list) are refused, and 9782 in the row after the levels is taken and changes nothing.",
+  "section": "unused"
+ }
+]

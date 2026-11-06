@@ -31,7 +31,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "img": "bomberboy_33DMPZGZ.png",
+  "img": "ending_33DMPZGZ.png",
   "note": "$C0E9 = $FF, every island. The game goes from the password screen to the ending and the staff roll ($00:0D07); checked in Mesen.",
   "section": "Bomber Boy"
  },

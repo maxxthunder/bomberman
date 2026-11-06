@@ -7,8 +7,8 @@ import assert from 'node:assert/strict';
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const src = html.match(/<script id="data">([\s\S]*?)<\/script>/)?.[1];
 assert.ok(src, 'no <script id="data"> in index.html');
-const { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, POCKET, MAX, SEL, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS } =
-  new Function(src + '\nreturn { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, POCKET, MAX, SEL, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS };')();
+const { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, POCKET, MAX, SEL, PBVB, PBW, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS } =
+  new Function(src + '\nreturn { SB1, SB2, SB3, SB4, SB5, MEGA, PCE90, PCE93, PCE94, GB1, GB2, GB3, NES1, NES2, POCKET, MAX, SEL, PBVB, PBW, CODES, GAMES, defaultVer, logoFor, patchLinks, PATCH_ROM, LOGOS };')();
 
 let n = 0;
 const ok = (cond, msg) => { assert.ok(cond, msg); n++; };
@@ -121,6 +121,22 @@ for (const g of GAMES) {
   }
   console.log(`${g.id}: ${k} passwords in the code list, all accepted${r ? `; ${r} listed as rejected, rejected` : ''}`);
 }
+// Panic Bomber (Virtual Boy) and Panic Bomber W (Super Famicom): fixed tables
+eq(game('pbvb').check('6835').title, 'The Sinister Forest, Easy', 'pbvb 6835');
+eq(game('pbvb').check('4000').title, 'The Scary Ruins, Hard', 'pbvb d000 is stage 1');
+eq(game('pbvb').check('1298').type, 'special', 'pbvb Zach code');
+ok(!game('pbvb').check('9782') && !game('pbvb').check('0612') && !game('pbvb').check('1234'), 'pbvb leaves out codes that do nothing');
+eq(game('pbw').check('0819').title, 'Round 6, Hardest', 'pbw 0819');
+eq(game('pbw').check('0003').title, 'Round 1, Normal', 'pbw 000d');
+eq(game('pbw').check('5963').title, 'The ending', 'pbw cheat');
+ok(!game('pbw').check('1234'), 'pbw rejects');
+// Atomic Punk / Bomber Boy: Selection's codec with each cart's grid; Game B is NES Bomberman (Atomic Punk: A E I O as 0 1 2 3)
+eq(game('bb').check('!!HH!H!G').detail, 'Gold 65,535 (the game caps it at 9,999 when gold next changes).', 'bb Atomic Punk max gold');
+eq(game('bb').check('TL77S.3=').ver, 'us', 'bb Atomic Punk code');
+eq(game('bb').check('4KDMPZGZ').ver, 'jp', 'bb Bomber Boy code');
+eq(game('bb').check('B3H2DJF1KJGK1F3LFH0C').title, 'Bomber Man mode: stage 50', 'bb Atomic Punk Game B');
+eq(game('bb').check('BOHIDJFEKJGKEFOLFHAC').ver, 'jp', 'bb Bomber Boy Game B');
+ok(!game('bb').check('TL77S.3=', 'jp') && !game('bb').check('L62QTG6S'), 'bb rejects');
 // Bomberman Selection: three password screens on one cart
 eq(game('sel').check('J6O1JOJ1').detail, 'Gold 100.', 'sel Bomber Boy new-game code');
 eq(game('sel').check('33DMPZGZ').title, 'Bomber Boy: the ending', 'sel Bomber Boy ending code');
@@ -128,7 +144,7 @@ eq(game('sel').check(SEL.encode(0x3F, 1234)).title, 'Bomber Boy: 6 of 8 islands 
 eq(game('sel').check('BOHIDJFEKJGKEFOLFHAC').title, 'Bomber Man mode: stage 50', 'sel Bomber Man mode takes NES Bomberman codes');
 eq(game('sel').check('9867').title, 'Bomberman: stage 6-3', 'sel Bomberman stage code');
 ok(!game('sel').check('J6O1JOJ2') && !game('sel').check('1234'), 'sel rejects bad codes');
-eq(GAMES.map(g => g.id), ['sb1', 'sb2', 'sb3', 'sb4', 'sb5', 'mega', 'pce90', 'pce93', 'pce94', 'nes1', 'nes2', 'gb1', 'gb2', 'gb3', 'pocket', 'max', 'sel'], 'every built game has a setup');
+eq(GAMES.map(g => g.id), ['sb1', 'sb2', 'sb3', 'sb4', 'sb5', 'pbw', 'mega', 'pce90', 'pce93', 'pce94', 'nes1', 'nes2', 'gb1', 'gb2', 'gb3', 'bb', 'pocket', 'max', 'sel', 'pbvb'], 'every built game has a setup');
 
 // A game with no codec: listed, codes only, no generator
 ok(!GAMES.find(g => g.id === 'mega8') && CODES.mega.some(e => e.section === 'demo8'), 'the 8-player demo sits inside Mega Bomberman');

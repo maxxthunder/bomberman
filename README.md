@@ -1,8 +1,8 @@
-# Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis and PC Engine
+# Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis, PC Engine and Virtual Boy
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.8.1](https://img.shields.io/badge/version-1.8.1-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.9.0](https://img.shields.io/badge/version-1.9.0-ff4f9a)](CHANGELOG.md)
 
-Every password and secret code for 17 Bomberman games, read from each game's own code and tested in emulators, with a
+Every password and secret code for 20 Bomberman games, read from each game's own code and tested in emulators, with a
 password generator and checker for each one.
 
 Contents: [How to use it](#how-to-use-it) · [The games](#the-games) · [Highlights](#highlights) ·
@@ -33,11 +33,13 @@ The page follows your device's light or dark setting, and works offline: save [`
 | <img src="docs/img/logos/sb3_eu.png" alt="" height="28"> | [Super Bomberman 3](https://maxxthunder.github.io/bomberman/#sb3) | 1995 | password generator, cheats |
 | <img src="docs/img/logos/sb4_jp.png" alt="" height="28"> | [Super Bomberman 4](https://maxxthunder.github.io/bomberman/#sb4) | 1996 | password generator, cheats |
 | <img src="docs/img/logos/sb5_jp.png" alt="" height="28"> | [Super Bomberman 5](https://maxxthunder.github.io/bomberman/#sb5) | 1997 | option codes, character builder, cheats, debug rooms patch |
+| <img src="docs/img/logos/pbw.png" alt="" height="28"> | [Super Bomberman: Panic Bomber W](https://maxxthunder.github.io/bomberman/#pbw) | 1995 | password generator, character and cheat codes |
 | **TurboGrafx-16 / PC Engine** | | | |
 | <img src="docs/img/logos/pce90_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#pce90) and Users Battle | 1990 | password generator, cheats, patches |
 | <img src="docs/img/logos/pce93_us.png" alt="" height="28"> | [Bomberman '93](https://maxxthunder.github.io/bomberman/#pce93) | 1992 | password generator, cheats, patches |
 | <img src="docs/img/logos/pce94_jp.png" alt="" height="28"> | [Bomberman '94](https://maxxthunder.github.io/bomberman/#pce94) | 1993 | password generator, cheats, debug patches |
 | **Game Boy** | | | |
+| <img src="docs/img/logos/bb_us.png" alt="" height="28"> | [Atomic Punk / Bomber Boy](https://maxxthunder.github.io/bomberman/#bb) | 1990 | password generator for Game A and Game B |
 | <img src="docs/img/logos/gb1_wario.png" alt="" height="28"> | [Wario Blast / Bomberman GB](https://maxxthunder.github.io/bomberman/#gb1) | 1994 | password generator, cheats |
 | <img src="docs/img/logos/gb2_us.png" alt="" height="28"> | [Bomberman GB / GB 2](https://maxxthunder.github.io/bomberman/#gb2) | 1995 | password generator, cheats |
 | <img src="docs/img/logos/gb3_jp.png" alt="" height="28"> | [Bomberman GB 3](https://maxxthunder.github.io/bomberman/#gb3) | 1996 | password generator, cheats |
@@ -50,6 +52,8 @@ The page follows your device's light or dark setting, and works offline: save [`
 | <img src="docs/img/logos/nes2_us.png" alt="" height="28"> | [Bomberman II](https://maxxthunder.github.io/bomberman/#nes2) | 1991 | password generator, cheats |
 | **Genesis** | | | |
 | <img src="docs/img/logos/mega_us.png" alt="" height="28"> | [Mega Bomberman](https://maxxthunder.github.io/bomberman/#mega) and its 8-player demo | 1994 | password generator, cheats |
+| **Virtual Boy** | | | |
+| <img src="docs/img/logos/pbvb.png" alt="" height="28"> | [Panic Bomber](https://maxxthunder.github.io/bomberman/#pbvb) | 1995 | password generator, special codes |
 
 Every password checker was fuzzed against the game's own decoder in Mesen 2 (NES, Game Boy, SNES, PC Engine) or
 BizHawk (Genesis): every possible code for the 4-digit games, and tens of thousands of codes (every state, plus
@@ -149,7 +153,8 @@ The best finds for each game; the research notes have the rest.
 | Bomberman GB 3 | 7 hex digits | area, stage, areas cleared, shop items, capsules, with a capsule balance | 20,329 |
 | Pocket Bomberman | 4 digits | a fixed list | 32 |
 | Bomberman Max | none: the game saves | (GameShark codes for the Charabom roster) | 30 Charaboms × levels 1–99 |
-| Bomberman Selection: Bomber Boy | 8 characters | islands cleared, gold, with a sum and an XOR check | one code per state |
+| Atomic Punk / Bomber Boy, and Selection | 8 characters | islands cleared, gold, with a sum and an XOR check | one code per state |
+| Panic Bomber (Virtual Boy), Panic Bomber W | 4 digits | a fixed list | 16 + 5 special; 30 + 9 special |
 
 The details, with ROM addresses, are in the research notes.
 
@@ -173,14 +178,16 @@ What each patch does, and how it was tested, is on the game's page under Patches
 ## Research notes
 
 - Super Nintendo: [Super Bomberman](docs/sb1.md), [2](docs/sb2.md), [3](docs/sb3.md), [4](docs/sb4.md),
-  [5](docs/sb5.md), and the English [4](docs/sb4en.md) and [5](docs/sb5en.md) (Super Bomberman Collection)
+  [5](docs/sb5.md), the English [4](docs/sb4en.md) and [5](docs/sb5en.md) (Super Bomberman Collection), and
+  [Panic Bomber W](docs/pbw.md)
 - PC Engine: [Bomberman](docs/pce90.md), [Users Battle](docs/pceub.md), [Bomberman '93](docs/pce93.md),
   [Bomberman '94](docs/pce94.md), and the [Wii U and Collection re-releases](docs/pcevc.md)
-- Game Boy: [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md),
+- Game Boy: [Atomic Punk / Bomber Boy](docs/bb.md), [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md),
   [Bomberman GB 3](docs/gb3.md)
 - Game Boy Color: [Pocket Bomberman](docs/pocket.md), [Bomberman Max](docs/max.md), [Bomberman Selection](docs/sel.md)
 - NES: [Bomberman](docs/nes1.md), [Bomberman II](docs/nes2.md)
 - Genesis: [Mega Bomberman](docs/mega.md) and its [8-player demo](docs/mega8.md)
+- Virtual Boy: [Panic Bomber](docs/pbvb.md)
 
 Each code list is also in `docs/<game>_codes.json`, and the screenshots that prove the finds are in `docs/img/<game>/`.
 
@@ -201,8 +208,8 @@ ROMs aren't included. Put them in `roms/` with their No-Intro names.
 
 ## Credits and legal
 
-*Bomberman*, *Bomberman II*, *Bomberman GB* 1–3, *Pocket Bomberman*, *Bomberman Max*, *Bomber Boy*,
-*Bomberman '93*, *Bomberman '94* and *Super Bomberman* 1–5 are © 1985–2003 Hudson Soft, *Mega Bomberman* is © 1994
+*Bomberman*, *Bomberman II*, *Bomberman GB* 1–3, *Pocket Bomberman*, *Bomberman Max*, *Bomber Boy* / *Atomic Punk*,
+*Bomberman '93*, *Bomberman '94*, *Panic Bomber*, *Super Bomberman: Panic Bomber W* and *Super Bomberman* 1–5 are © 1985–2003 Hudson Soft, *Mega Bomberman* is © 1994
 Hudson Soft and Sega, and *Wario Blast* is © 1994 Hudson Soft and Nintendo; Bomberman now belongs to Konami. This
 project isn't affiliated with or endorsed by Konami, Hudson Soft, Sega or Nintendo. The game art on the page and in
 this repo (logos and screenshots) belongs to them and is used here for reference. The disassembly listings are for

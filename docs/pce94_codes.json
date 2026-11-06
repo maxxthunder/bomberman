@@ -1341,7 +1341,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs (TG16) and other published notes. Checked by $1AC64 against the table $1ACCA (20 80 C0 40 60 62 FF, PC Engine pad bits) from the title menu handler $19DF3; on a match $19E97 calls $DF54, a far call to bank $12:$9D89. The only button sequence in the ROM. Shown with soundtest.lua",
-  "section": "secret"
+  "section": "secret",
+  "img": "sound_room.png"
  },
  {
   "code": "ROM patch $3F5B: 89 85 67 A9 9D -> 29 85 67 A9 98, then the Sound Room code",
@@ -1390,7 +1391,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "The screen was already known; the check is one read of the System Card pad byte $2228 bit 7 at demo $5640, right after the last program sector is loaded, selecting the text set ($1A/$1B = 6/4 instead of 5/8). The Japanese text does not say \"Special Version\"",
-  "section": "demo"
+  "section": "demo",
+  "img": "demo_title_jp.png"
  },
  {
   "code": "Demo on a System Card below 3.0",
@@ -1401,7 +1403,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Demo $4011 calls the System Card version call $E05A and takes this path when X < 3: it reads data sectors 34-57 into VRAM (read on no other path) and loops, alternating 2 Japanese messages. Shown by forcing X = 0 at $4014 with the 3.0 card",
-  "section": "demo"
+  "section": "demo",
+  "img": "demo_supercd_warning.png"
  },
  {
   "code": "1F1709:02",

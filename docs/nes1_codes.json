@@ -873,7 +873,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "the enemy row read past the stage-26-50 table gives types $86, $24, $84 ...; the game stops with no timer and no Bomberman (docs/img/nes1/stage51_freeze.png); typed with the pad in Mesen (US)",
-  "section": "Passwords"
+  "section": "Passwords",
+  "img": "stage51_freeze.png"
  },
  {
   "code": "BABABAHIHABABABABGKN",

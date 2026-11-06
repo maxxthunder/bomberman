@@ -156,6 +156,13 @@ in Mesen**.
 
 Both match what was known. ![US title](img/nes1/title_us.png) ![JP title](img/nes1/title_jp.png) ![US ending](img/nes1/ending_us.png) ![JP ending](img/nes1/ending_jp.png)
 
+## Game Boy Advance re-releases
+
+Classic NES Series: Bomberman (USA, Europe; MD5 `e674bef244d677e175f5694a7006bfde`) and Famicom Mini 09: Bomberman
+(Japan; `d37986c7067ec557b771cfb661c923ee`) run the NES game, codes and all: in BizHawk (mGBA), CONTINUE and
+`BOHIDJFEKJGKEFOLFHAC` start STAGE 50 in both. The Game Boy's Bomber Boy and Atomic Punk carry it as Game B too
+([bb.md](bb.md)).
+
 ## Title logo and item icons
 
 `docs/img/logos/nes1_us.png` and `nes1_jp.png` (the JP one with its frame): a PPU dump at the title
