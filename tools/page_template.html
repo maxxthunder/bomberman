@@ -200,6 +200,7 @@ h3.pw .usecode:hover, .tile .usecode:hover { color: var(--code-ink); box-shadow:
 .thumb:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
 .mapgrid { display: grid; grid-template-columns: auto repeat(var(--n), minmax(0, 1fr)); gap: 6px; align-items: stretch; }
 .mapgrid .ch { text-align: center; font: 800 12px var(--body); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.mapgrid .gap { align-self: center; text-align: center; color: var(--muted); opacity: .5; }
 .mapgrid .rh { align-self: center; font-weight: 800; font-size: 14px; padding-right: 6px; white-space: nowrap; }
 .tile { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 4px; display: grid; gap: 4px; justify-items: center; align-content: center; min-width: 0; }
 .tile.boss { background: color-mix(in srgb, #e5484d 20%, var(--panel)); border-color: color-mix(in srgb, #e5484d 45%, var(--line)); }
@@ -1113,7 +1114,7 @@ function table(rows) {
   const at = (r, c) => cells.find(y => y.c.r === r && (y.c.c === 99 ? n + 1 : y.c.c) === c);
   return `<div class="mapgrid${g.len > 6 ? " long" : ""}" style="--n:${cols}"><span class="ch">${esc(cells[0].c.ax || "")}</span>${Array.from({ length: cols }, (_, i) =>
     `<span class="ch">${boss && i === n ? "Boss" : i + 1}</span>`).join("")}${rs.map(r => `<span class="rh">${esc(r)}</span>` +
-    Array.from({ length: cols }, (_, i) => { const y = at(r, i + 1); return y ? tile(y.x, "", y.c.boss) : "<span></span>"; }).join("")).join("")}</div>` +
+    Array.from({ length: cols }, (_, i) => { const y = at(r, i + 1); return y ? tile(y.x, "", y.c.boss) : '<span class="gap" title="No such stage in this game">—</span>'; }).join("")).join("")}</div>` +
     (rest.length ? tiles(rest) : "");
 }
 // the code list's own words, minus "Start at" and the starting kit every stage code shares
