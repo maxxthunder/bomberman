@@ -204,6 +204,13 @@ The known Pro Action Replay route (`7E6C6E:0B`/`0C`) pokes the selected stage di
 - **Credits** (EU vs JP and beta, ★ New): EU says PROGRAMMERS (JP: PROGRAM), NAOTO YOSHIMI (YOSIMI), AKIHIKO AZUMA
   (AKIHIRO), CHARACTER DESIGN (PLAYER CHARACTER DESIGN), SOUND PROGRAMMERS (SOUND PROGRAM), SOUND FX (SOUND
   EFFECT), and adds a nickname to HIDEKI "DRUMMERBOY" MIFUJI under SPECIAL THANKS.
+- ★ **A random-number log in JP and the beta.** Their RNG routine (`$C0:0BA8`) ends with 22 more bytes
+  (`$C0:0BCE-$C0:0BE3`) that store every result in a 256-byte ring at `$7E:2AFC` (index `$7E:2AFB`). Nothing reads it,
+  so it looks like a debug trace; EU ends the routine with `RTL` at `$C0:0BCE`, which is the `$15`-byte shift in its
+  bank `$C0`. In Mesen, 20 START presses from power-on left index 84 in JP and the beta, 0 in EU.
+- ★ **Continues in two-player Normal Game (beta).** The rejoin check at `$C2:599D` lets a pressing player rejoin and
+  spend a continue when either player is out (`$147F|$1480`); JP and EU test only the pressing player's own slot
+  (`LDX $BA` / `LDA $147F,X`). From the code; not played.
 
 ### Screen by screen (EU vs JP vs beta)
 

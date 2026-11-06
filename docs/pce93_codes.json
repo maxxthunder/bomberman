@@ -1785,17 +1785,58 @@
   "img": "ribbon_1-1_cheat.png"
  },
  {
-  "code": "Bonus items $B4 / $B5 / $B6",
-  "effect": "Hidden bonus items (onigiri, chick, tulip) spawned on a random floor cell once per stage",
+  "code": "Pause the game 200 times in one stage",
+  "effect": "Hidden bonus item: an onigiri, worth 200 points",
   "versions": [
    "US",
    "JP",
    "SP"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Spawned by 03:AD74. $B6 (tulip, 03:AD33): the exit is uncovered when no soft blocks are left, not on stage 8 (like 1990's item 13). $B5 (chick, 03:AD17): fire hits cell type 6 while the clock reads exactly 2:22. $B4 (onigiri, 03:AD00): counter $3C54 reaches 200 (03:AF65). From the code; not triggered in Mesen.",
+  "verified": "mesen",
+  "note": "Item $B4. The pause task (03:AF4D) counts each pause in $3C54 (03:AF82), cleared at stage start; at 200, 03:AD00 spawns the onigiri on a random floor cell. In Mesen (US 1-1): 200 real Run presses on and off, no RAM written, and the onigiri appeared.",
   "section": "Secret items",
-  "img": "unlisted_items.png"
+  "img": "bonus_onigiri.png"
+ },
+ {
+  "code": "Bomb an uncovered exit or a revealed item while the clock reads exactly 2:22",
+  "effect": "Hidden bonus item: a chick, worth 2,000 points",
+  "versions": [
+   "US",
+   "JP",
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item $B5. Fire on a revealed item or exit (cell type 6, 02:97D9) calls the usual enemy spawn and then 03:AD17, which spawns the chick at 2:22 ($20B7 = 2, $20B6 = 22). In Mesen (US 1-1): the exit uncovered, the clock set once to 2:30, a bomb whose fire reached the exit at 2:22; the chick appeared beside the exit's extra enemies.",
+  "section": "Secret items",
+  "img": "bonus_chick.png"
+ },
+ {
+  "code": "Make the last soft block you break the one hiding the exit (not on stage 8)",
+  "effect": "Hidden bonus item: a tulip, worth 500 points",
+  "versions": [
+   "US",
+   "JP",
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Item $B6. 03:AD33 runs when the exit's block breaks (02:9803) and spawns the tulip if no soft blocks are left ($3BE7 = 0) and the stage is not 8, like 1990's item 13. In Mesen (US 1-1): the block count set to 2, then one real bomb broke the last other block and the exit's; the tulip appeared.",
+  "section": "Secret items",
+  "img": "bonus_tulip.png"
+ },
+ {
+  "code": "LOAD with an unformatted backup RAM (US)",
+  "effect": "FILE CABINET ISN'T FORMATTED, FORMAT IT NOW? YES formats it; Japan instead says the data is broken and offers to erase it, which does nothing",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The US LOAD screen adds a case for read result $FF (06:92E4, CMP #$FF) that shows message $0B and calls the format routine $F2D2 on YES. Japan's 06:92E4 is CMP #$01 only: every read error shows データーガ コワレテイマス / データーヲ ケシマスカ?, and YES calls the delete routine $F351, which fails on an unformatted cabinet, so the prompt stays. In Mesen, backup RAM zeroed at the file list, file 1 chosen. Image: US prompt, YES, the file list again.",
+  "section": "region",
+  "img": "load_unformatted_us.png"
  }
 ]

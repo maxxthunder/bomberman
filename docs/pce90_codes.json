@@ -323,7 +323,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Item 12 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($71 = 1, set at $01:A694 ($0A:A914)), once per stage, never on x-8 stages or in battle. Spawned in Mesen by forcing the condition; the points are from the code.",
+  "note": "Item 12 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($71 = 1, set at $01:A694 ($0A:A914)), once per stage, never on x-8 stages or in battle. Spawned in Mesen by forcing the condition ($71 = 1 on 8-7) and picked up: the score rose by exactly 10,000,000.",
   "section": "Secret items",
   "img": "bonus_item_12.png"
  },
@@ -342,7 +342,7 @@
   "img": "bonus_item_13.png"
  },
  {
-  "code": "Stand on the exit at exactly 3:33 with enemies still alive",
+  "code": "Stand on the uncovered exit while the clock reads exactly 3:33, with enemies still alive",
   "effect": "Hidden bonus item 14: 123,450 points",
   "versions": [
    "US",
@@ -350,8 +350,9 @@
    "collection"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Item 14 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($09:8906), once per stage, never on x-8 stages or in battle. From the code; not reproduced in Mesen.",
-  "section": "Secret items"
+  "verified": "mesen",
+  "note": "Item 14 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($09:8906), once per stage, never on x-8 stages or in battle. $09:88FB checks every frame: the player's cell is the uncovered exit, the clock is 3:33 ($2D8D = 3, $2D8E = 33), an enemy is left. In Mesen (US, 1-1 from MUVWLNPC, clock set once to 3:35): the item appeared at 3:33 and picking it up added 123,450. Image: the item at 3:33, then the score.",
+  "section": "Secret items",
+  "img": "bonus_item_14.png"
  }
 ]

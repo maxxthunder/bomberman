@@ -197,8 +197,10 @@ JP and Wario (`tools/gb1/multitap.lua`, run with `tools/emu/sgb_dump.py`).
 | Title | BOMBERMAN GB, START / PASSWORD | WARIO BLAST featuring BOMBERMAN!, same menu |
 | Player | Bomberman only | Bomberman or Wario for the whole game (`$C3D5`); the other one is the enemy (Known) |
 | Passwords | 34 codes | the same 34 + 32 Wario stage codes + 2264, 6565 |
-| Story | attract story about the stolen techniques (Known) | removed, no trace in the ROM |
+| Story | attract story about the stolen techniques (Known), after about 36 s on the title (★ countdown `$3C20`, `$0A:40A7`) | removed, no trace in the ROM; the title waits forever ([img](img/gb1/title_idle.png)) |
 | SGB border | blue Bombermen | Wario in the top centre |
+| Title credit | LICENSED BY NINTENDO | ©1994 NINTENDO |
+| ★ Arena code | | cells marked `$20` instead of `$01` (`$00:3272`, `$32E6`, `$3313`), an extra collision test (`$00:2F82`) and a saved `$19` cell cleared to floor (`$01:5D39`): bomb and technique fixes, read from the code only |
 
 ![JP and Wario titles](img/gb1/title_jp.png) ![](img/gb1/title_wario.png)
 

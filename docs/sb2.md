@@ -431,7 +431,7 @@ Images: [title and password](img/sb2/region_title_password.png) (rows US, EU, JP
 | Title logo | "TM" | "TM" | no "TM" | no "TM" | Known (see Logos) |
 | Title bottom lines | "TM & © 1994 HUDSONSOFT" / "Licensed by Nintendo" | same as USA | "© 1994 HUDSON SOFT", no Nintendo line (tilemap `$C7:C4CD` and `$CB:E822`/`$CB:EB32` blanked) | as Japan | ★ New |
 | Title menu delay | `$1FFE` counts to 224 | same | no counter | no counter | Known (published as 253 and 31 frames) |
-| Title menu with a SNES Mouse plugged in | works | **locked**: START/A do nothing, `$1FFE` stays 0 ([img](img/sb2/eu_mouse_title.png), left USA, right Europe) | works | works | ★ New |
+| Title menu with a SNES Mouse plugged in | works | **locked**: START/A do nothing, `$1FFE` stays 0 ([img](img/sb2/eu_mouse_title.png), left USA, right Europe) | works | **locked**, the same check at `$CC:1494` ([img](img/sb2/mouse_lock_caravan.png), left mouse, right pad) | ★ New |
 | Password screen title | "PASSWORD" | "PASSWORD" | "PASS  WORD" | "PASS  WORD" | ★ New |
 | Password entry, codes | same | same | same | same | (above) |
 | Normal Game: story, "1-1 START!" card, HUD, 4:00 timer | same | same | same | same | checked to 10 s in |

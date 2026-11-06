@@ -179,7 +179,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "\\ sets \\ when the pad 5 press that chooses any menu item is A or START. \\ then allows the jump everywhere but battle stages 2 and 3 (without the flag, only stage 12 has it). Lasts until reset. Checked with an emulated multitap in port 2 (Mesen), A on multitap port D: \\ = \\ in all five versions; A on pad 4 or pad 1 leaves it 0.",
+  "note": "$CC:13B0 sets $1C6E when the pad 5 press that chooses any menu item is A or START. $C0:65F1 then allows the jump everywhere but battle stages 2 and 3 (without the flag, only stage 12 has it). Lasts until reset. Checked with an emulated multitap in port 2 (Mesen), A on multitap port D: $1C6E = $FFFF in all five versions; A on pad 4 or pad 1 leaves it 0.",
   "img": "pad5_jump.png"
  },
  {
@@ -208,7 +208,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Flips the disabled switch at \\. Same byte as patches/sb2_debug_menu_<ver>.ips (ROM offset \\ = 01). Up/Down picks a line (wraps over 9 lines), Right/Left steps the value, START closes it (and pauses; START again to play). NO DEATH sets 144 hearts, which never decrease (\\ only takes hearts below \\). BOMB TYPE 4 = spike bomb (burns through soft blocks), 8 = an unnamed fifth type. The last three lines (-) do nothing. Every line checked on the patched ROMs in Mesen. The Game Genie code patches the same ROM byte.",
+  "note": "Flips the disabled switch at $C1:5B40. Same byte as patches/sb2_debug_menu_<ver>.ips (ROM offset $15B40 = 01). Up/Down picks a line (wraps over 9 lines), Right/Left steps the value, START closes it (and pauses; START again to play). NO DEATH sets 144 hearts, which never decrease ($C0:A644 only takes hearts below $80). BOMB TYPE 4 = spike bomb (burns through soft blocks), 8 = an unnamed fifth type. The last three lines (-) do nothing. Every line checked on the patched ROMs in Mesen. The Game Genie code patches the same ROM byte.",
   "section": "debug",
   "devices": {
    "Pro Action Replay": "C15B4001",
@@ -361,19 +361,21 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "\\ values; each has its own item counter (\\ type 4, \\ type 8) and pickup handler (\\, \\). Type 4 checked in Mesen next to soft blocks; type 8 checked in Mesen (7E80F308 + glove): a thrown type-8 bomb takes a new random direction on its bounces, a type-0 bomb keeps the throw direction; kicking not exercised.",
+  "note": "$80F3 values; each has its own item counter ($80E5 type 4, $80E8 type 8) and pickup handler ($C0:9965, $C0:9C19). Type 4 checked in Mesen next to soft blocks; type 8 checked in Mesen (7E80F308 + glove): a thrown type-8 bomb takes a new random direction on its bounces, a type-0 bomb keeps the throw direction; kicking not exercised.",
   "img": "debug_bomb_types.png"
  },
  {
-  "code": "SNES Mouse in any port (Europe)",
+  "code": "SNES Mouse in any port (Europe, Caravan)",
   "effect": "The title menu ignores all input while a mouse is plugged in",
   "versions": [
-   "eu"
+   "eu",
+   "caravan"
   ],
   "status": "new",
   "verified": "mesen",
   "section": "regional",
-  "note": "Europe only: \\ reads the controller IDs \\-\\ and, on a mouse (AND #\\ = 2), skips the menu. Checked in Mesen with a mouse in port 2: Europe stays on the title, USA works."
+  "note": "Europe ($CC:1364) and Caravan ($CC:1494) read the controller IDs $CD-$D1 and, on a mouse (AND #$1E = 2), skip the menu. Checked in Mesen with a mouse in port 2: Europe and Caravan stay on the title, USA and Japan work; Caravan with a pad in port 2 plays normally. Image: Caravan with the mouse (left) and with a pad (right).",
+  "img": "mouse_lock_caravan.png"
  },
  {
   "code": "Password screen controls",
@@ -388,7 +390,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "password",
-  "note": "\\ (digits), \\ (cursor), \\ (submit, BIT #\\). A wrong code resets the digits to 0000. After a game over the screen starts with the current world's code (\\-\\, from \\; static)."
+  "note": "$7F:0028-$7F:002E (digits), $7F:0032 (cursor), $CC:1767 (input loop; submit is BIT #$1080). A wrong code resets the digits to 0000. After a game over the screen starts with the current world's code ($1C60-$1C66, written by $CC:4216)."
  },
  {
   "code": "7E80EF90",

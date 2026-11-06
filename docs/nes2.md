@@ -136,6 +136,8 @@ from Lua).
 |---|---|---|
 | Password letters | `K3DH6J8B75214CFG` (no vowels) | `PCKNFOHIGEBADJLM` |
 | Pad 3 | Four Score, else expansion port | expansion port |
+| ★ BATTLE MODE | needs a Four Score (`$05:A874`: no Four Score flag `$48`, a buzz), so the expansion-port pad 3 is never used | any pads ([img](img/nes2/battle_no_four_score_us.png)) |
+| ★ Start in the title intro | ignored until the intro ends (`$0521`, about 285 frames) | skips to the menu at once ([img](img/nes2/intro_skip.png)) |
 | Title | ™ on the logo, TM AND © 1992 HUDSON SOFT, LICENSED BY NINTENDO | no ™, ©1991 HUDSON SOFT |
 | Sound room title | BOMBERMAN2 SOUND ROOM | BOMBER MAN 2 SOUND ROOM |
 | Build string at `$07:FFE0` | `BOMBERMAN2 92817` | `BOMBER MAN 2` |

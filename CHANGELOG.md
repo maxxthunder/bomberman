@@ -2,6 +2,20 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.12.0 (2026-11-06)
+- Region differences, new on many pages: Super Bomberman 5 Caravan's hidden HYPER Misobon setting (a returning player
+  takes the stats of the one they blew up); Super Bomberman 2 Caravan's SNES Mouse lock; Super Bomberman 3's
+  random-number log; Bomberman '93's format prompt on LOAD (US); Bomberman GB's attract story (Japan); Bomberman Max's
+  certificate seal, Pentel logo and Game Boy boot screens; the NES Bomberman GBA releases' password screen; Bomberman
+  II's Four Score check for BATTLE MODE and its intro skip.
+- Bomberman (1990): items 12 and 14 seen and collected. Bomberman '93: the onigiri (pause 200 times), chick and tulip,
+  each with its real trigger and points.
+- Panic Bomber: what 0704 and 0612 really do, and the DEBUG MENU's EVENT, DOKURO, ANIMATION and CPU settings seen in
+  play, with a card for the four forced events.
+- Bomberman Max: the battle against the computer works on all five versions. Atomic Punk / Bomber Boy: the soft reset
+  works on both carts.
+- Super Bomberman 2: five card notes show their addresses again.
+
 ## 1.11.0 (2026-11-06)
 - Panic Bomber (Virtual Boy): an unused developer menu (VERSION 1995/07/21), opened by a new patch; what the DEBUG
   MENU's 13 settings do; and what 4476, 0911, 9782, 0704 and 0612 really do (one pad moves both sides, a RESULT

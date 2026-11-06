@@ -203,6 +203,13 @@ A shift-tolerant diff (16-byte runs of one ROM found nowhere in the other, as `t
 - Title: ™ added, "VS [ ][ ] GAME" → COM-LINK, © 1992 → TM & © 1993 (Known). The logo graphic is otherwise
   pixel-identical: the only difference is the ™ sprite.
 - Text box 8 px wider, eyecatches redrawn (Known; not re-checked here).
+- ★ **LOAD with an unformatted backup RAM.** The US build adds a case for read result `$FF` (`06:92E4`) that shows
+  FILE CABINET ISN'T FORMATTED, FORMAT IT NOW? and formats it on YES (`$F2D2`). Japan has only `CMP #$01` there:
+  every read error shows データーガ コワレテイマス / データーヲ ケシマスカ?, and YES calls the delete routine `$F351`,
+  which fails on an unformatted cabinet, so the prompt stays up. Both builds still offer a format on the SAVE path
+  (US `07:A226`, JP `07:A255`). Seen in Mesen with the backup RAM zeroed at the file list; a fresh Mesen backup RAM
+  (`HUBM`, end pointer `$A000`) also counts as unformatted to the US check.
+  ![US](img/pce93/load_unformatted_us.png) ![JP](img/pce93/load_unformatted_jp.png)
 
 ### ★ The Special Version
 
@@ -242,9 +249,16 @@ An item's kind is `$A0` + its entry in the pickup table `03:A89F`; the per-stage
 - **Red ribbon, `$B7`**: a bonus item with a pickup handler (`03:AB28`) that no list or spawn ever uses, in US, JP or
   SP. `006E3D:B7` puts it in 1-1. ![The ribbon in 1-1](img/pce93/ribbon_1-1_cheat.png)
 - **Onigiri `$B4`, chick `$B5`, tulip `$B6`**: bonus items spawned on a random floor cell once per stage (`03:AD74`).
-  Tulip: the exit is uncovered when no soft blocks are left (not on stage 8), like 1990's item 13. Chick: fire hits
-  cell type 6 while the clock reads exactly 2:22. Onigiri: counter `$3C54` reaches 200 (`03:AF65`). From the code;
-  not triggered. ![The unlisted items](img/pce93/unlisted_items.png)
+  All three seen in Mesen (US 1-1) and picked up for the points (table `03:AB69`, points list `01:DA9F`):
+
+  | Item | Trigger | Points |
+  |---|---|---|
+  | Onigiri `$B4` | pause 200 times in one stage: the pause task (`03:AF4D`) counts pauses in `$3C54` (`03:AF82`), `03:AD00` spawns it at 200. Done with 200 real presses | 200 |
+  | Chick `$B5` | bomb an uncovered exit or a revealed item (cell type 6, `02:97D9`) while the clock reads exactly 2:22 (`03:AD17`) | 2,000 |
+  | Tulip `$B6` | the last soft block broken is the exit's (`03:AD33`, from `02:9803`; `$3BE7` = 0), not on stage 8, like 1990's item 13 | 500 |
+
+  ![The unlisted items](img/pce93/unlisted_items.png) ![Onigiri](img/pce93/bonus_onigiri.png)
+  ![Chick](img/pce93/bonus_chick.png) ![Tulip](img/pce93/bonus_tulip.png)
 
 ## Unused content
 

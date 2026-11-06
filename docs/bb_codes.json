@@ -273,7 +273,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The joypad reader $00:04D7 jumps to $0179 when Select is newly pressed with Start held (the same bytes in both carts). Tested in Mesen on Atomic Punk from the stage select.",
+  "note": "The joypad reader $00:04D7 jumps to $0179 when Select is newly pressed with Start held (the same bytes in both carts). Tested in Mesen on both carts during a stage: the boot code ran on that frame and the Hudson logo came back.",
   "section": "Button codes",
   "img": "soft_reset_us.png"
  }

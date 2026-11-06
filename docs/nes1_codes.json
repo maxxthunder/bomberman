@@ -978,5 +978,19 @@
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). RAM $5E, the stage-clear flag ($CCA1 sets it on the open exit): 11 stages cleared in 6,000 frames with no input (US and JP). Game Genie: the main loop's LDA $5E -> LDA #$5E ($C46E, JP $C466); 11 stages cleared in 6,000 frames with no input (US and JP).",
   "section": "cheat"
+ },
+ {
+  "code": "Up or Down on ENTER SECRET CODE (GBA releases)",
+  "effect": "Nothing: on Classic NES Series and Famicom Mini only Left and Right change the letter; on the cart Up and Down step it back like Left",
+  "versions": [
+   "US",
+   "JP",
+   "cns",
+   "fm"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The GBA builds mask the pad with AND #$83 instead of the cart's AND #$8F in both blink loops (Classic NES Series $DACE/$DAEE, Famicom Mini $DAC6/$DAE6). In BizHawk three Ups left the slot blank and three Lefts gave N; on the US cart in Mesen three Ups gave N.",
+  "section": "region"
  }
 ]

@@ -304,7 +304,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.11.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.12.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -640,12 +640,12 @@ const GAMES = [
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const VER = { us: "USA", eu: "Europe", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast",
-  blue: "Blue Champion", red: "Red Challenger", hikari: "Hikari no Yuusha", yami: "Yami no Senshi", ain: "Ain Version", kr: "Korea" };
+  blue: "Blue Champion", red: "Red Challenger", hikari: "Hikari no Yuusha", yami: "Yami no Senshi", ain: "Ain Version", kr: "Korea", cns: "Classic NES Series (GBA)", fm: "Famicom Mini (GBA)" };
 const verName = v => VER[v.toLowerCase()] || v;
 // a version's country flag (flag-icons): the world flag for the World release; Beta is Super Bomberman 3's European beta
 // or the US betas of 1 and 2; the English Collection releases get none
 const FLAG = { us: "us", eu: "eu", jp: "jp", kr: "kr", caravan: "jp", retail: "jp", sp: "jp", demo: "jp", world: "un", vc: "us",
-  collection: "us", wario: "us", blue: "us", red: "us", hikari: "jp", yami: "jp", ain: "jp", "eu proto": "eu" };
+  collection: "us", wario: "us", blue: "us", red: "us", hikari: "jp", yami: "jp", ain: "jp", cns: "us", fm: "jp", "eu proto": "eu" };
 const flag = v => { const f = v.toLowerCase() === "beta" ? (g.id === "sb3" ? "eu" : "us") : FLAG[v.toLowerCase()];
   return f ? `<span class="fi fi-${f}" aria-hidden="true"></span>` : ""; };
 // verified: a pad (run in an emulator) or a chip (read from the ROM)

@@ -1942,5 +1942,31 @@
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). ROM byte $D2F7 (JP $D263) is 1 = play the recorded demo ($05:9A01). Set to 0, the demo code stores (button, frame count) pairs at ($B9),Y, the demo's own ROM table, instead: in Mesen the demo stood still and the store at $05:9A22 ran on each button change (3 times in 3,000 frames; 0 without the code, 915 playback calls). On a cart those stores hit the MMC1 registers; the recorder needs RAM there (development hardware)",
   "section": "cheat"
+ },
+ {
+  "code": "BATTLE MODE without a Four Score (US)",
+  "effect": "A buzz and nothing else: the US game needs a Four Score for BATTLE MODE; Japan starts it with any pads",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "US $05:A874-$A882: mode 2 (BATTLE) with the Four Score flag $48 = 0 plays sound $04 and stays on the menu; $48 is set each frame when the Four Score signature matches ($07:C382). Japan's menu ($05:A818) has no check. In Mesen with no Four Score the US game stayed on the menu; with one it went to the match select, as Japan does without.",
+  "section": "region",
+  "img": "battle_no_four_score_us.png"
+ },
+ {
+  "code": "Press Start during the title intro",
+  "effect": "Japan skips straight to the mode menu; the US game ignores Start until the intro is over (about 5 s)",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "US $05:A20D skips the A/Start test while the intro flag $0521 is set ($05:A19E, cleared at $05:A566 after about 285 frames); Japan ($05:A1FE) tests from the first frame. Start pressed 60 frames in, in Mesen. Image: US (left), Japan.",
+  "section": "region",
+  "img": "intro_skip.png"
  }
 ]

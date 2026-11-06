@@ -313,24 +313,25 @@
  },
  {
   "code": "0704",
-  "effect": "Skull blocks in every game (hold L and R while entering)",
+  "effect": "DOKURO blocks in every game: the attack rows you get are brick blocks instead of Bomberman heads (hold L and R while entering)",
   "versions": [
    "us"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Sets $0500_24E4, which turns DOKURO on at every stage start ($0700_7BBA): the 8-block attack row uses the skull block (type 11, $0700_97F2) instead of type 6. Read from the code; the attack row needs chains, which a short test game didn't make.",
-  "section": "Special codes"
+  "verified": "emu",
+  "note": "Sets $0500_24E4, which turns DOKURO ($0500_2540) on at every stage start ($0700_7BBA): the 8-block attack row uses block kind $B instead of 6 ($0700_97F2). Clearing one next to a chain releases an item ($0701_2322 -> $0701_5E14). Typed in BizHawk with L and R held, then Normal, The Scary Ruins: the CPU's chains sent brick rows into your field. Image: without the code (left) and with it.",
+  "section": "Special codes",
+  "img": "dokuro_rows_0704.png"
  },
  {
   "code": "0612",
-  "effect": "Slowest animation in every game (hold L and R while entering)",
+  "effect": "Fewer idle animations in every game: the blocks in the fields blink and wink half as often (hold L and R while entering)",
   "versions": [
    "us"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Clears $0500_2500, so every game runs with ANIMATION 0 (an animation step every 4th frame, $0700_EC68). Read from the code.",
+  "verified": "emu",
+  "note": "Clears $0500_2500, so ANIMATION ($0500_24C4) is 0 instead of 1. $0700_EC68 starts a block's idle animation on a random cell; ANIMATION 0 tries on every 4th frame, 1 on every 2nd, 2 on every frame. Typed in BizHawk with L and R held and counted over 5,000 frames: with the code every start fell on one frame in four, without it on two.",
   "section": "Special codes"
  },
  {
@@ -353,8 +354,20 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Left-pad Right and Left change a value. SCROLL background scroll on/off; ANIMATION rate (0 slowest); DOKURO skull attack blocks; TUBU piece set 0-5; ENEMY the opponent 0-10; WORLD the background 0-3; SPEED drop speed 0-5; COLOR block kinds 1-5; ERASE blocks in a row to clear 1-6; ITEM forces one item type; EVENT forces one event and lowers the chain thresholds; WIN rounds to win; CPU the CPU level of both sides. Seen in BizHawk: SCROLL, TUBU, ENEMY, WORLD, SPEED, COLOR and ERASE; the rest read from the code (menu $0700_64B0, stage tables from $0702_6588).",
+  "note": "Left-pad Right and Left change a value. SCROLL background scroll on/off; ANIMATION how often blocks start an idle animation (0 every 4th frame, 1 every 2nd, the normal value, 2 every frame); DOKURO brick attack rows, which drop items when cleared; TUBU piece set 0-5; ENEMY the opponent 0-10; WORLD the background 0-3; SPEED drop speed 0-5; COLOR block kinds 1-5; ERASE blocks in a row to clear 1-6; ITEM n makes every item type n-1 (items come only from DOKURO blocks); EVENT n forces event n-1 and makes a 2-chain enough to start it, for the left player only (a giant spiked robot, rolling explosions, a vortex, a red flood); WIN rounds to win; CPU the opponent's level (0F chains and attacks fast, 00 only clears). All seen in BizHawk except WIN; ITEM's types were seen as numbers, not identified (menu $0700_64B0, stage tables from $0702_6588).",
   "section": "debug",
   "img": "debug_menu_0825.png"
+ },
+ {
+  "code": "DEBUG MENU: EVENT 1-4 (with 0513)",
+  "effect": "A forced event on your first 2-chain: a giant spiked robot, rolling explosions, a vortex, or a red flood that refills the field",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "EVENT n > 0 sets the chain thresholds $254A/$254C to 1 and 2 (normally 4 and 5) and forces event n-1, but only for the left player (struct $5954, whose +8 is 0), so the CPU opponent of 0825 never starts one; with 0513 the left side plays itself. In BizHawk with CPU 0F: each event started on the left side's 2-chain. Image: EVENT 1, 2 (top), 3, 4.",
+  "section": "debug",
+  "img": "debug_events.png"
  }
 ]

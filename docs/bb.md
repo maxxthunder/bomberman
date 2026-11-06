@@ -77,6 +77,6 @@ stage 1 with 10 bombs, fire 5 and speed. The 20th letter submits the code.
   through the fade. `$00:2A95` checks for exactly that combination (`$17`) and jumps to the sound test (`$03:471A`).
   Typed in Mesen on both carts. ![Sound test](img/bb/sound_test_us.png)
 - ★ **Soft reset**: hold Start and press Select. The joypad reader (`$00:04D7`) jumps back to the boot code (`$0179`);
-  the bytes are the same in both carts, tested on Atomic Punk.
+  the bytes are the same in both carts, and both were tested in Mesen.
 - No password check reads the joypad, so no code needs buttons held while it is entered.
 

@@ -47,8 +47,8 @@ pad and Left on the left pad (`$0702_00F0`). The handlers start at `$0702_01EC`.
 | `0716` | L R | the ending (Known) |
 | ★ `4476` | L R | sets `$0500_24E8`: the opponent's control word becomes 1 (`$0700_6DDE`), so **your pad moves both fields** and the CPU never moves ![](img/pbvb/one_pad_both_sides_4476.png) |
 | ★ `0911` | L R | sets `$0500_24E0`: a **RESULT** screen (`$0700_7E46`: level, chains, giant bombs, stage times) after every round, normally only after the ending ![](img/pbvb/result_screen_0911.png) |
-| ★ `0704` | L R | sets `$0500_24E4`: DOKURO on at every stage (skull attack blocks); from the code |
-| ★ `0612` | L R | clears `$0500_2500`: ANIMATION 0 (slowest) in every game; from the code |
+| ★ `0704` | L R | sets `$0500_24E4`: DOKURO on at every stage, so attack rows are brick blocks (kind `$B`), which drop items when cleared ![](img/pbvb/dokuro_rows_0704.png) |
+| ★ `0612` | L R | clears `$0500_2500`: ANIMATION 0 in every game, so blocks start their idle animations on every 4th frame instead of every 2nd (counted over 5,000 frames) |
 | ★ `0825` | L R, right Up, left Left | the **[ DEBUG MENU ]**, then a game with its settings ![](img/pbvb/debug_menu_0825.png) |
 | ★ `0513` | L R, right Up, left Left | the DEBUG MENU, then a game where the CPU plays **both** sides (`$0700_6D64`) and the round replays ![](img/pbvb/cpu_vs_cpu_0513.png) |
 
@@ -61,18 +61,18 @@ defaults `$0700_6B46`) lets you set them by hand.
 | Setting | RAM | Range | Effect |
 |---|---|---|---|
 | SCROLL | `$0500_24C0` | 0-1 | background scroll; 0 = still (seen) |
-| ANIMATION | `$0500_24C4` | 0-2 | animation step every 4th / 2nd / every frame (`$0700_EC68`; code only) |
-| DOKURO | `$0500_2540` | 0-1 | the 8-block attack row uses the skull block (`$0700_97F2`; code only) |
+| ANIMATION | `$0500_24C4` | 0-2 | how often a random block starts its idle animation (`$0700_EC68`): every 4th / 2nd (the default, 1) / every frame (counted) |
+| DOKURO | `$0500_2540` | 0-1 | the 8-block attack row uses brick blocks, kind `$B` (`$0700_97F2`), which drop items when cleared (`$0701_2322`) (seen) |
 | TUBU | `$0500_254E` | 0-5 | the piece set (seen) |
 | ENEMY | `$0500_252E` | 0-10 | the opponent and portrait (seen: 10 is a girl in place of Drifty) |
 | WORLD | `$0500_26E0` | 0-3 | the background (seen) |
 | SPEED | `$0500_2536` | 0-5 | drop speed (seen) |
 | COLOR | `$0500_2532` | 1-5 | how many kinds of block (seen: 1 = all the same face) |
 | ERASE | `$0500_2534` | 1-6 | blocks in a row to clear (seen) |
-| ITEM | `$0500_26E3` | 0-16 | n > 0 makes every item type n-1 (`$0701_5FEC`; code only) |
-| EVENT | `$0500_26E4` | 0-4 | n > 0 forces event n-1 and lowers the chain thresholds (code only) |
+| ITEM | `$0500_26E3` | 0-16 | n > 0 makes every item type n-1 (`$0701_5FEC`); items come only from DOKURO blocks (seen as type values; what each type does is open) |
+| EVENT | `$0500_26E4` | 0-4 | n > 0 forces event n-1 on a 2-chain (thresholds `$254A`/`$254C` 1 and 2, normally 4 and 5), for the left player only (struct `$5954`), so use `0513` to see it: a giant spiked robot, rolling explosions, a vortex, a red flood (seen) ![](img/pbvb/debug_events.png) |
 | WIN | `$0500_2538` | 1-2 | rounds to win (code only) |
-| CPU | `$0500_253C`, `$253A` | 0-15 | CPU level, opponent and your side |
+| CPU | `$0500_253C`, `$253A` | 0-15 | CPU level: at 15 the opponent drops fast and chains, at 0 it only clears (seen); your side stays yours unless `0513` |
 
 ## ★ The developer menu (patch)
 

@@ -567,5 +567,18 @@
   "verified": "mesen",
   "section": "cheat",
   "note": "ROM code: the operand of LDA #$00 / STA $6254 in the 3879 handler ($C5:6982). A RAM code is too late because 3879 builds the players in the same frame. Verified with Mesen's cheat engine: $17CA=8, $4EBD=8, $15EA=2, $4ED5=7 in the boss arena (without it 2/1/0/0). Game Genie: the same ROM byte; Mesen with 3879, retail and English: $17CA=8, $4EBD=8, $15EA=2, $4ED5=7 in the boss arena."
+ },
+ {
+  "code": "Battle rules: みそボン, Right from スーパー (Caravan)",
+  "effect": "A fourth Misobon setting, ハイパー (HYPER): a Misobon player who blows someone up comes back with that player's bombs, fire and speed",
+  "versions": [
+   "caravan",
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Caravan adds bit $40 to the rules byte ($7E627B; retail $7E625D uses $10 スーパー and $08 ON) and a HYPER case to the menu script ($C6:9187, label graphic $83), so the row cycles ハイパー, スーパー, ON, OFF; in retail Right on スーパー does nothing. $C4:37F9 saves each player's stats when they die ($4EBD bombs, $17CA fire, $15EA speed, $15D2, $4ED5), $C4:37EB records who made a Misobon kill, and with HYPER $C4:3822 hands the killer the victim's saved stats on return. In Mesen (5-player Battle Royale, the setting chosen in the menu): the returning player got the victim's 5 bombs, fire 6 (7 when the victim had picked up a fire-up) and speed 3, against 1 / 2 / 1 with スーパー. Image: Caravan (left) and retail after the same press.",
+  "section": "region",
+  "img": "hyper_misobon_caravan.png"
  }
 ]

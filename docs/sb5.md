@@ -409,7 +409,14 @@ Mesen's code/data log doesn't record.
 - Same character-password codec, at addresses shifted by `$18` (`$C5:6579` reads the buffer), with the
   same XOR and checksum: the routine differs only in address operands.
 - Same title logo, same default timers seen in Mesen (battle 2:00, Normal stages 3:00).
-- Nothing else found: no new ASCII text and no extra menu.
+- No new ASCII text.
+- ★ **A fourth Misobon setting, ハイパー (HYPER).** On the battle rules screen, Right from スーパー on the みそボン row
+  gives ハイパー (rules byte `$7E627B` bit `$40`; menu script `$C6:9187`, label graphic `$83`); retail stops at スーパー.
+  With it, a player who returns from the Misobon cart takes the stats of the player they blew up: `$C4:37F9` saves
+  each player's bombs (`$4EBD`), fire (`$17CA`), speed (`$15EA`), `$15D2` and `$4ED5` at death, `$C4:37EB` records
+  the Misobon kill, and `$C4:3822` (HYPER only, from `$C4:2B75`) copies them to the returning player. Seen in Mesen:
+  the victim had 5 bombs, fire 6, speed 3, and the killer came back with exactly those (スーパー: 1 / 2 / 1).
+  ![Caravan HYPER and retail](img/sb5/hyper_misobon_caravan.png)
 - Screen by screen (round 2): the same input script ran on both ROMs (Hudson logo, intro, title,
   options, option password, battle menu, single/tag, player select, character select, rules, stage
   select, battle start, Config Battle menu, Normal menu, file select, zone map, stage 1-1) and the

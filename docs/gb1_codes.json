@@ -843,5 +843,18 @@
   "note": "GameShark: the defeat count $C1D1-$C1D3 held at 2-4-x, so the first check after a round sees 240+. $C1D1-$C1D3 is also the password digit buffer, so switch the codes on only after the password is accepted, then press A on the GREAT BATTLE intro. Tested in Mesen on both carts.",
   "section": "cheat",
   "img": "perfect_240_wario_cheat.png"
+ },
+ {
+  "code": "Leave the title screen alone",
+  "effect": "Japan plays the attract story after about 36 seconds; Wario Blast stays on the title",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Japan's title loop counts BC = $3C20 down ($0A:40A7-$40B7) and then jumps to the story ($0A:4106). Wario Blast's loop ($0A:40AA-$40E1) has no counter, as the story is gone. In Mesen with no input: Japan showed the story 36 s after the title, Wario Blast was still on the title at 56 s. Image: Japan (top) and Wario Blast at the title, +36 s and +56 s.",
+  "section": "region",
+  "img": "title_idle.png"
  }
 ]

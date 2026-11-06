@@ -216,9 +216,9 @@ met (never on x-8 stages, never in battle); picking one up adds the points below
 | 9 | every soft block destroyed (`$65` = 0, `$0A:A8CA`) | 18,800 | Mesen: spawned and collected |
 | 10 | the clock falls below 1:00 (`$2D8D` = 0, `$0A:A8E0`) | 24,800 | Mesen: spawned and collected |
 | 11 | every enemy dead with no soft block broken (`$2D96` = 1, `$65` = `$66`, `$0A:A8F7`) | 39,800 | Mesen: spawned and collected |
-| 12 | stage 8-7 cleared in a game begun with 1P START, not a password, LOAD or the Select Room (`$71` = 1, set at `$01:A694`; `$0A:A914`) | 10,000,000 | Mesen: spawned; points from the code |
+| 12 | stage 8-7 cleared in a game begun with 1P START, not a password, LOAD or the Select Room (`$71` = 1, set at `$01:A694`; `$0A:A914`) | 10,000,000 | Mesen: spawned and collected |
 | 13 | the last soft block broken is the one hiding the exit (`$72` = 1 via `$09:9368`, `$0A:A8BA`) | 111,110 | Mesen: spawned and collected |
-| 14 | standing on the exit at exactly 3:33 with enemies alive (`$09:8906`) | 123,450 | code only |
+| 14 | standing on the uncovered exit at exactly 3:33 with enemies alive (`$09:88FB`, every frame) | 123,450 | Mesen: spawned and collected ([img](img/pce90/bonus_item_14.png)) |
 
 In Mesen (US, from password `MUVWLNPC`) one RAM write forces each: `1F0065:00` (9), `1F0D8D:00` (10), `1F1D96:01` (11),
 `1F0072:01` (13). JP gives the same for item 9. Users Battle has the same code, inside its dead 1P game.

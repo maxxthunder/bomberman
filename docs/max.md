@@ -175,6 +175,20 @@ the minigames and the ending were not reached, so this sweep is partial.
 
 Logos: `docs/img/logos/max_<ver>.png`, cut from the title screens (`tools/max/logo.py`). The Ain logo has no ™.
 
+## ★ Regions
+
+Every joypad test, the mode table and the debug text in bank `$0A` are the same in all five. What differs:
+
+- **Game-over certificate.** Hikari and Yami draw a red seal by the signature (sprite group `$0B` at X `$7C`, Y `$70`,
+  `$02:712B`; Ain `$02:715C`) and one of 7 rating pictures (VRAM `$88C0`, `$02:713E`). In Blue and Red `$02:712B` is a
+  bare `RET` and the rating is text, picked from `$C198` in steps of 10. Seen on real game overs (a random-input bot,
+  Blue and Hikari). ![Blue and Hikari](img/max/certificate_blue_hikari.png)
+- **Ain: a Pentel logo at boot** after the Hudson one (`$00:0258-$026A`, loader `$01:4000` with `$C198` = 1).
+  ![Pentel logo](img/max/boot_pentel_ain.png)
+- **On an original Game Boy** Blue and Red go straight to the "Game Boy Color only" screen; Hikari and Yami show the
+  Hudson logo first (`$00:029B-$02C5`), Ain both logos (`$00:02B8-$02DD`). Seen in Mesen set to Game Boy.
+  ![Blue, Hikari, Ain](img/max/dmg_boot.png)
+
 ## Open
 
 - Play the Ain Version to a stage only the other side has (e.g. 1-9 on the Hikari side), and see whether a GameShark
@@ -191,6 +205,7 @@ Up, Down, then A. Instead of the infrared NETWORK screen the battle starts again
 example Draco against "Rival1: Shell Lv 4", through to Round 1 Start!). The battle module is bank `$08`: its OK? scene
 (`$08:4A65`) calls a sequence checker (`$08:4B28`, a copy of the title's sound-test checker, table `$08:4B77`) that
 sets `$C4E3` = 1 after ten right presses; on A, `$08:4D3F` goes to scene `$15` and `$08:4B81` loads the rival from
-`$08:4C24`, indexed by a frame counter. The table is the same in all five versions; tested on Blue Champion and Red
-Challenger. ![Battle against the computer](img/max/battle_vs_computer.png)
+`$08:4C24`, indexed by a frame counter. A wrong press sets `$C4E3` = `$FF`, which locks the code out until the screen
+is opened again. Battle Game needs a saved file (the title skips it on a fresh save). The table is the same in all five
+versions, and the code works in all five: typed in Mesen through to Round 1 Start! (Japan: 1かいせんめ かいし!). ![Battle against the computer](img/max/battle_vs_computer.png)
 

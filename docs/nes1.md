@@ -163,6 +163,18 @@ Classic NES Series: Bomberman (USA, Europe; MD5 `e674bef244d677e175f5694a7006bfd
 `BOHIDJFEKJGKEFOLFHAC` start STAGE 50 in both. The Game Boy's Bomber Boy and Atomic Punk carry it as Game B too
 ([bb.md](bb.md)).
 
+★ The NES program inside each (its 16 KB PRG read from EWRAM `$0000` after boot) against the carts:
+
+- **Up and Down do nothing on ENTER SECRET CODE.** Both blink loops mask the pad with `AND #$83` instead of `AND #$8F`
+  (Classic NES Series `$DACE`/`$DAEE`, Famicom Mini `$DAC6`/`$DAE6`), so only A, Left and Right count; on the carts
+  Left, Up and Down all step the letter back. Checked: three Ups leave the slot blank on both GBA builds, N on the US cart.
+- **Title credit** (Classic NES Series): © 1987 HUDSON SOFT / LICENSED TO NINTENDO, rewritten in the string block
+  (US cart `$E1FE-$E241`, LICENSED BY NINTENDO OF AMERICA INC.). Famicom Mini keeps the JP text.
+- **Emulator hooks**: opcode `$42` (not a 6502 instruction) at the decoder entry (`$DB7A` / `$DB72`), its accept
+  (`$DBCF` / `$DBC7`), the encoder end (`$E322` / `$E2F6`), the title nametable clear (`$DE86` / `$DE1E`) and the
+  entry-screen pad read (`$DAEC` / `$DAE4`), plus a sprite-0 Y of `$1F` instead of `$19`. Passwords behave as on the cart
+  (`BAHIMNJDJNMNMNMNJDJF` and `BABABAHIHABABABABGKN` checked); what the hooks do on the ARM side was not read.
+
 ## Title logo and item icons
 
 `docs/img/logos/nes1_us.png` and `nes1_jp.png` (the JP one with its frame): a PPU dump at the title
