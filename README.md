@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis and PC Engine
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.8.0](https://img.shields.io/badge/version-1.8.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.8.1](https://img.shields.io/badge/version-1.8.1-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 17 Bomberman games, read from each game's own code and tested in emulators, with a
 password generator and checker for each one.
@@ -209,5 +209,7 @@ this repo (logos and screenshots) belongs to them and is used here for reference
 research; no ROMs or game data are included.
 
 Published codes were checked against the GameFAQs cheat pages and other published notes for each game.
+
+Icons on the page are from [Font Awesome Free](https://fontawesome.com) 6.5.2 ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
 
 The code in this repo (the page, codecs, tests and tools) is released under the [MIT License](LICENSE).

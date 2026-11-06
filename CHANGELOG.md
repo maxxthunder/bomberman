@@ -2,6 +2,12 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.8.1 (2026-11-05)
+- Every section heading has an icon (a key for passwords, a bomb for cheat codes, and so on).
+- Country flags beside version and region names.
+- Fixed: Bomberman Max and Bomberman Selection versions showed as short keys ("blue", "kr") instead of their names.
+- README credits Font Awesome.
+
 ## 1.8.0 (2026-11-05)
 - Each game opens with a header band: console-colour edge, big logo, name, system, year and a screenshot.
 - Stage passwords show as a map grid (rounds or worlds down, stages across, boss stages tinted); codes that don't fit

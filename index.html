@@ -15,6 +15,7 @@
   gtag('js', new Date());
 </script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Fredoka:wght@400;500;600;700&family=Azeret+Mono:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" integrity="sha384-aQuvIWWIbpu/mSqULLDiUveyYiPoJzPKAWjUmGJ+Elm+N/LJhzfZqsutsfw870JS" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/fontawesome.min.css" integrity="sha384-5t0634b3BeTSoxIIgd8lhUy22xY2BGs89gw0vReAMGcfJXXfA7fblIRGVkRFWRDL" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/solid.min.css" integrity="sha384-+CMpNM/Tv3YfWmU43LPsvXlIdOUnxSooWv5fY/Tkap65JU4QTLBHp8nMrEkIEb3u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/brands.min.css" integrity="sha384-hu7sKftLeB/8IYmWPfl2Jo6MTRHquwXVmGPT/08RqhuANVZrbNFBIsvWPOiUduYX" crossorigin="anonymous">
@@ -166,6 +167,8 @@ input.code-in::placeholder { color: var(--hold); letter-spacing: .14em; }
 .vi { font-size: 15px; width: 1.25em; text-align: center; color: var(--muted); flex: none; }
 .sect { display: grid; gap: 10px; }
 .sect > .hint { margin-top: -4px; }
+.fi { border-radius: 2px; margin-right: 6px; vertical-align: -1px; box-shadow: 0 0 0 1px rgb(0 0 0 / .25); }
+.sect > h2 i { color: var(--pink); margin-right: 10px; font-size: .8em; width: 1.2em; text-align: center; }
 .code-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 10px; }
 .code-card { position: relative; min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 6px; align-content: start; }
 .code-card h3 { font: 800 17px/1.3 var(--body); overflow-wrap: anywhere; }
@@ -296,7 +299,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.8.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.8.1</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -1645,8 +1648,15 @@ const GAMES = [
 "use strict";
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-const VER = { us: "USA", eu: "Europe", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast" };
+const VER = { us: "USA", eu: "Europe", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast",
+  blue: "Blue Champion", red: "Red Challenger", hikari: "Hikari no Yuusha", yami: "Yami no Senshi", ain: "Ain Version", kr: "Korea" };
 const verName = v => VER[v.toLowerCase()] || v;
+// a version's country flag (flag-icons): the world flag for the World release; Beta is Super Bomberman 3's European beta
+// or the US betas of 1 and 2; the English Collection releases get none
+const FLAG = { us: "us", eu: "eu", jp: "jp", kr: "kr", caravan: "jp", retail: "jp", sp: "jp", demo: "jp", world: "un", vc: "us",
+  collection: "us", wario: "us", blue: "us", red: "us", hikari: "jp", yami: "jp", ain: "jp", "eu proto": "eu" };
+const flag = v => { const f = v.toLowerCase() === "beta" ? (g.id === "sb3" ? "eu" : "us") : FLAG[v.toLowerCase()];
+  return f ? `<span class="fi fi-${f}" aria-hidden="true"></span>` : ""; };
 // verified: a pad (run in an emulator) or a chip (read from the ROM)
 const ICON = { emu: "fa-gamepad", rom: "fa-microchip", download: "fa-download" };   // Font Awesome Free (solid)
 const icon = (k, label) => `<i class="vi fa-solid ${ICON[k]}" role="img" aria-label="${esc(label)}" title="${esc(label)}"></i>`;
@@ -1660,6 +1670,14 @@ const NICE = { secret_items: "Secret items", password: "Passwords", secret: "Sec
 // devices and patches come last, then the add-on games. Sections named only in a code list go in between.
 const ORDER = ["Special codes", "Option passwords", "Character passwords", "Passwords", "Stage codes", "Power-up codes", "Charaboms",
   "Secret items", "Hidden screens", "Secrets", "Button codes", "Tricks"];
+// Font Awesome icons beside section headings (the password sections all take the key)
+const SECT_ICON = { Passwords: "fa-key", "Stage codes": "fa-key", "Option passwords": "fa-key", "Character passwords": "fa-key",
+  "Bomber Boy": "fa-key", "Bomber Man mode": "fa-key", Bomberman: "fa-key",
+  "Special codes": "fa-wand-magic-sparkles", Tricks: "fa-hat-wizard", "Cheat codes": "fa-bomb", "Secret items": "fa-gem",
+  Secrets: "fa-user-secret", "Hidden screens": "fa-eye-slash", "Button codes": "fa-arrows-up-down-left-right",
+  "Power-up codes": "fa-arrow-up-right-dots", "Debug features": "fa-bug", "Region differences": "fa-earth-asia",
+  "Unused content": "fa-scissors", Patches: "fa-file-code", "Demo CD": "fa-compact-disc", "8-Player Demo (prototype)": "fa-users",
+  "Bomberman: Users Battle (Japan)": "fa-user-group", Charaboms: "fa-paw" };
 const LAST = ["Debug features", "How it plays", "Controllers", "Region differences", "Unused content", "Demo CD", "Cheat codes", "Patches",
   "8-Player Demo (prototype)", "Bomberman: Users Battle (Japan)"];
 
@@ -1749,7 +1767,7 @@ function pickGame(id) {
   const vs = [...new Set(CODES[g.id].flatMap(e => e.versions))];
   ver = versionsDiffer(g) ? defaultVer(g) : "";
   $("vers").innerHTML = "<legend>Version</legend>" + [...vs, ""].map(v =>
-    `<label><input type="radio" name="ver" value="${esc(v)}"${v === ver ? " checked" : ""}><span>${v ? esc(verName(v)) : "All versions"}</span></label>`).join("");
+    `<label><input type="radio" name="ver" value="${esc(v)}"${v === ver ? " checked" : ""}><span>${v ? flag(v) + esc(verName(v)) : "All versions"}</span></label>`).join("");
   $("vers").hidden = !versionsDiffer(g);
   setLogo();
   $("pw_h").textContent = g.panel || "Password";
@@ -2116,7 +2134,7 @@ function card(e, k, patchesShown) {
   const allV = new Set(CODES[g.id].flatMap(x => x.versions)).size;
   const pw = isPw(g, e) && k;
   const badge = e.status === "new" ? '<span class="badge">★ New</span>' : "";
-  const vers = e.versions.length && e.versions.length < allV && !ver ? e.versions.map(v => `<span class="ver">${esc(verName(v))}</span>`).join("")
+  const vers = e.versions.length && e.versions.length < allV && !ver ? e.versions.map(v => `<span class="ver">${flag(v)}${esc(verName(v))}</span>`).join("")
     : e.versions.length || (e.section === "demo8" || e.section === "ub") ? "" : '<span class="ver">no version</span>';
   const vf = VERIFIED[e.verified];
   const ips = patchesShown ? [] : forVer(patchLinks(e.game || g.id, vtext(e)));
@@ -2167,7 +2185,7 @@ function renderCodes() {
   const pw = s => !LAST.includes(s) && list.some(x => x.s === s && isRow(x));
   const names = [...all.filter(pw), ...all.filter(s => !pw(s))];
   let html = "", shown = 0;
-  const sect = (title, body, note) => `<section class="sect" data-s="${esc(title)}"><h2>${esc(title)}</h2>${note ? `<p class="hint">${esc(note)}</p>` : ""}${body}</section>`;
+  const sect = (title, body, note) => `<section class="sect" data-s="${esc(title)}"><h2>${SECT_ICON[title] ? `<i class="fa-solid ${SECT_ICON[title]}" aria-hidden="true"></i>` : ""}${esc(title)}</h2>${note ? `<p class="hint">${esc(note)}</p>` : ""}${body}</section>`;
   for (const s of names) {
     const items = list.filter(x => x.s === s);
     if (!items.length) continue;
