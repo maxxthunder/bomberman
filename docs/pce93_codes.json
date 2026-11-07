@@ -1900,5 +1900,17 @@
   "note": "The Normal Game the Special Version can't reach still has its world-clear pictures and staff roll, with art of its own: world 6's clear (screen 8, graphics #90 and #91: Bomberman asleep at a kotatsu) and the staff roll's opening scene (screen 15, #64: the city at night with the ship, BOMBERMAN '93 STAFF). With the Normal Game menu patch and a world 6 or 7 password, a forced clear ($3898 = 4, $388D = 7 at $02:83BF) runs them. Mesen.",
   "section": "unused",
   "img": "sp_world6_staff_pictures.png"
+ },
+ {
+  "code": "Config screen SE 16, MUSIC 69",
+  "effect": "A sound effect and a jingle the game never plays",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Sounds are requested at $F243 / $F25C (JP $F22A / $F243). The 130 requests with the number written in, $07:AD54 (68, 6A) and the scene table at $09:A9FA (56 58 57 59 5A 5B 5C 5D 65) never give 16 or 69. The config screen's SE and MUSIC items play anything: 16 is a short click close to the cursor sound, 69 a jingle of about 2.6 s. Recorded in Mesen.",
+  "section": "unused"
  }
 ]

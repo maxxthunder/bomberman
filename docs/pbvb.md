@@ -96,10 +96,6 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
   line for the left eye and two short vertical bars for the right, which cross when seen together, like a chart for
   lining up the screens. A or Start returns to the intro. Seen in MAME and BizHawk.
   ![Left eye, right eye](img/pbvb/title_code_lines.png)
-- ★ **LICENSED BY NINTENDO.** `$0701_77FE` has no reference: a copy of the test-screen routine that shows LICENSED BY
-  NINTENDO for 116 frames (the retail title says Licensed to Nintendo). Pointing the test screen's call at it (file
-  `$8B8`: `01 AC BC 75` → `01 AC 46 6F`) shows it after the title code (BizHawk).
-  ![LICENSED BY NINTENDO](img/pbvb/licensed_by_nintendo.png)
 - **Won stages** (BizHawk, the player's side handed to the CPU at level 15 and the opponent at 0, so the game decides
   the win itself, `$0700_6EBC`): `$0701_D99A` is the medal card after each world boss (opponents 6-8, e.g. "Bomberman
   got the Star Medal. Password 4390"); `$0701_CC90` the Gold Bomber lines after Count Dracu-boom and Ms. Flashy (9,
@@ -114,3 +110,10 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
   released and the mode-7 skip. Nothing else.
 - **Text:** the ASCII strings are the developer menu, sound test, stage select, DEBUG MENU and RESULT labels, all
   above, and the sound driver's banner.
+
+## Unused sounds
+
+- ★ Music goes through `$0700_63B8` (table `$0707_4024`, 00-15), effects through `$0700_63C8` (table `$0707_4080`,
+  00-28). Tune 0E and effects 00 and 1F are never requested; only the sound test plays them. Tunes 13-15 and effects
+  24-28 lie past the test's range (BGM 0-12, SE 0-23), so nothing plays them: 0E is a full tune, 13 and 14 two
+  versions of another, 15 a short rising run into a held note (likely a test tone); the effects last 0.2-0.8 s.

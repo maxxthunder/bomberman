@@ -537,5 +537,16 @@
   "note": "In 2P VS a set only ends after 10 match wins ($80:9561); the results screen ($80:9714) then stamps 名人 next to the winner's 1P or 2P label (object $A79C, drawn only in 2P). 3P and 4P sets end sooner and show VICTORY! without it. Reached in Mesen with the win counts poked ($3131 or $3200 = $26).",
   "section": "hidden",
   "img": "vs_meijin.png"
+ },
+ {
+  "code": "Sound test EFFECT 3 and 8 (effects 0C and 11)",
+  "effect": "Two sound effects only the hidden sound test plays",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Effects go through $82:C22F. The numbers written into its calls and the table at $82:BFFB give 02, 07-0B, 0D-10, 12-18 and 1A-23. 0C is a tiny quiet blip, 11 a low thud of about half a second. Every tune and voice is used. Recorded in Mesen.",
+  "section": "unused"
  }
 ]

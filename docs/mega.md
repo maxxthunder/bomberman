@@ -345,6 +345,13 @@ codes for RAM only, so those ran the same tests with the word written to `MD CAR
 
 Battle Game has nothing locked (see above), so there is no unlock code.
 
+## Unused sounds
+
+- ★ Sounds go through `$34B6` (197 callers) to `$B84E` (EU `$B848`), queued for the Z80 at `$A01C30`; the Z80 table at
+  `$FA1EF` has IDs 00-9B (88-9B are silent). The call sites and the tables at `$4B58`, `$69B2`, `$9C74` and `$C868`
+  never give 2E, 43, 55 or 63: 2E is a three-second effect in parts, 43 a short sound that runs into 42's data, 55 a
+  short high blip, 63 a short low one. Every tune is used.
+
 ## Regions
 
 - The two ROMs have the same graphics, data and passwords. Bytes `$40000`-end are identical; below that the

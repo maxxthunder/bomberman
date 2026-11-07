@@ -76,3 +76,9 @@ players, Options, every code, the ending, two random-input runs); the SA-1's cod
 - **Unset flags:** only `$3000`, `$3002` and `$3203`, written by index or by the other CPU.
 - **Tables:** every menu's item count matches its table; stage numbers `$00-$10` are Story, `$11-$12` the bonus
   stages, `$13-$15` VS. No unused entry beyond the character-swap slots above.
+
+## Unused sounds
+
+- ★ Effects go through `$82:C22F`; its calls and the table `$82:BFFB` give 02, 07-0B, 0D-10, 12-18 and 1A-23. Effects
+  0C and 11 (the sound test's EFFECT 3 and 8) are never requested: a tiny quiet blip and a low thud. Every tune
+  (`$82:C508`) and voice (`$82:C1E4`) is used.

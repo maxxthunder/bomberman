@@ -354,5 +354,17 @@
   "note": "Item 14 of the 15-entry item table ($09:8757); no stage list uses items 9-14, they are spawned only by $0A:A937 under this condition ($09:8906), once per stage, never on x-8 stages or in battle. $09:88FB checks every frame: the player's cell is the uncovered exit, the clock is 3:33 ($2D8D = 3, $2D8E = 33), an enemy is left. In Mesen (US, 1-1 from MUVWLNPC, clock set once to 3:35): the item appeared at 3:33 and picking it up added 123,450. Image: the item at 3:33, then the score.",
   "section": "Secret items",
   "img": "bonus_item_14.png"
+ },
+ {
+  "code": "BOMSOUND sound test 0E and 1E",
+  "effect": "Two sound effects the game never plays",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Every request to the sound routine ($EA57, JP $EA3E) loads its number right before the call, apart from the battle table at $08:7D6F (25 26 25 26 25 27 26 27) and the sound test. None gives 0E or 1E. 0E is a fading effect of about 0.7 s; 1E a steady tone that holds until another sound replaces it. 00, 15 and 16 are empty entries and 26 is used through the battle table. Recorded in Mesen.",
+  "section": "unused"
  }
 ]

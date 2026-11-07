@@ -133,6 +133,12 @@ counts the trophies. Played with random input on all four pads (`tools/gb2/multi
 
 ![US border](img/gb2/sgb_border_us.png) ![JP border](img/gb2/sgb_border_jp.png)
 
+## Unused sounds
+
+- ★ Effects go through `$03DF` (music `$03D2`). Effects 0D, 17, 1C, 21, 22, 23, 25 and 26 are never asked for; only the
+  hidden sound test plays them. 0D and 17 are looping low drones, 1C a burst then a repeating alarm, 21-23 and 26
+  under a second, 25 about 1.8 s. Every tune 01-18 is used (a stray `LD A,$19 / CALL $03D2` sits in bank `$0F`).
+
 ## Regions
 
 | | JP | US/EU |

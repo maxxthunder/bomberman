@@ -2,6 +2,13 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.16.0 (2026-11-07)
+- Unused music and sounds in 11 more games: sound effects in Bomberman GB, Bomberman '90, '93 and '94, Mega
+  Bomberman, Bomberman GB 2 and Panic Bomber W; two rewritten jingles in Users Battle; a tune and ten effects in
+  Atomic Punk; a tune no world plays in Pocket Bomberman; tunes and effects beyond the sound test in Panic Bomber.
+- The Bomberman head as the favicon and home-screen icon.
+- Panic Bomber: the LICENSED BY NINTENDO screen is gone from the list.
+
 ## 1.15.0 (2026-11-07)
 - Unused music and sounds: seven Super Bomberman tracks only the debug menu plays, eight Super Bomberman 2 sound
   effects, a jingle and four effects in Super Bomberman 4, Bomberman GB 3's music for the cut extra areas, and two

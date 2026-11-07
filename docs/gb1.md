@@ -227,6 +227,9 @@ the password digit buffer), brings it up after the first round in both carts.
 - ★ Music goes through the request byte `$C3F1` (`CALL $0AC4`): constants 00-06 and 0B, and 09-12 from the stage
   table at `$00:1F04` (Wario `$1E99`). Songs 07 and 08 of the table at `$07:4A0E` have their own data but no request:
   07 is about 11 s, loud, not looping; 08 about 11 s, quiet and rhythmic, not looping. Same in Wario Blast.
+- ★ Effects go through `CALL $0AE1` (driver `$4009`), also with the ID in `$C3F1`. No call asks for 06, 0E or 13-18
+  (11 only in Wario Blast). Swapped into the title cursor's sound (`$0AF0`), each plays: blips of 0.2-0.7 s, 0E about
+  1.4 s, 18 nearly 3 s of high noise.
 
 ## Open
 

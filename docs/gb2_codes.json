@@ -201,5 +201,17 @@
   "verified": "mesen",
   "note": "GameShark: stage-end flag $C103 = 1 and dead flag $C104 = 0, so $00:24E3 runs the end countdown $C105 and $00:254F takes the clear path. Bot run: $C100 went 00, 01, 02, 03, 04, 07 (boss), 10 (world 2) in 5,000 frames. Game Genie: $00:24ED JP NZ -> JP (the end countdown runs every frame) and $00:2553 JR Z -> JR (the clear path); jp $251A, $2580. Bot: $C100 went 00-04, 07, 10 in 5,071 frames (us and jp).",
   "section": "cheat"
+ },
+ {
+  "code": "Sound test 2145: effects 0D, 17, 1C, 21, 22, 23, 25, 26",
+  "effect": "Eight sound effects only the hidden sound test plays",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Effects go through $03DF. No call asks for 0D, 17, 1C, 21, 22, 23, 25 or 26. 0D and 17 are looping low drones, 1C a burst then a repeating alarm; 21, 22, 23 and 26 last under a second and 25 about 1.8 s. Every tune 01-18 is used. Recorded in Mesen.",
+  "section": "unused"
  }
 ]

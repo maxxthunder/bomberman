@@ -126,3 +126,10 @@ island picked in turn from a save with islands `$5A` (not each checked to reach 
   untraced bank 4 code. Nothing that looks like a debug switch.
 - **Input codes** (`disasm/bb/pad_us.txt`): menus, movement, the shop, the sound test's selector, the high-score
   check and the two codes above (sound test, soft reset). No other button combination.
+
+## Unused sounds
+
+- ★ Music goes through `$0475` (`$FFBE`), effects through `$0480` (`$FFC0`) and `$1931`. Tune 04 is never requested (the
+  island table `$02B8` covers 0B-13); only the stage-select sound test plays it. That test is music only, so effects
+  02, 06, 07, 0C, 0E, 11 and 16-19, also never requested, can't be heard at all: 02 a held tone, the rest 0.1-0.9 s
+  (06/07 and 0C/0E are pairs at different pitches). Same in Bomber Boy.

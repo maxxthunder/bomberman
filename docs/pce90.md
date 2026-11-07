@@ -238,6 +238,11 @@ In Mesen (US, from password `MUVWLNPC`) one RAM write forces each: `1F0065:00` (
   wouldn't show; the absent `$0E`-`$26` are probably stage tunes picked that way.
 - **Black Bomberman sliding sprite (Known):** already known, not located in the ROM here.
 
+- ★ **Sound effects 0E and 1E.** A scan of every bank finds only `LDA #n` before the sound routine's calls, apart from
+  the battle table at `$08:7D6F` (25 26 25 26 25 27 26 27) and the sound test (`$3440`). 0E and 1E are never asked
+  for: 0E is a fading effect of about 0.7 s, 1E a steady tone that holds until another sound replaces it. 00, 15 and
+  16 are empty entries; 26 comes from the battle table.
+
 ## Regions
 
 | | US | JP |

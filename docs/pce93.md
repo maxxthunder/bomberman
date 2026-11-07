@@ -463,6 +463,13 @@ Patches (IPS, built and checked against the ROM by `tools/pce93/mkpatch.py`):
 - `patches/pce93_normal_game_sp.ips` (Special Version): file `$D84C` `4E A3` → `A0 94`; Run on the title opens the
   leftover password screen and the Normal Game (the bytes of the in-memory test above; the IPS file itself was not run).
 
+## Unused sounds
+
+- ★ Sound requests go through `$F243` / `$F25C` (JP `$F22A` / `$F243`), ID in `$2FA0`, table `$54C2` (effects 01-3D,
+  music 51-6B). The 130 requests with the number written in, `$07:AD54` (68, 6A) and the scene table `$09:A9FA`
+  (56 58 57 59 5A 5B 5C 5D 65) never give effect 16 or tune 69. The config screen's SE and MUSIC items are a full
+  sound test: 16 is a short click close to the cursor sound, 69 a jingle of about 2.6 s.
+
 ## Title logos
 
 `docs/img/logos/pce93_us.png`, `pce93_jp.png`, `pce93_sp.png` (all three differ: US has the ™, SP the SPECIAL VERSION

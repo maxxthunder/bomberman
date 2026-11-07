@@ -233,8 +233,9 @@ card doesn't touch backup RAM (none of it is in the code/data logs).
 The 1990 card's two-console C-LINK BATTLE is gone: nothing reads the mode for it, and the battle result code plays
 `$31` (`$08:68D8`) and `$32` (`$08:6BE7`) unconditionally where the 1990 card chose `$39` / `$2D` for the losing
 console (JP `$08:6E7F`, `$08:73E1`). **No `LDA #$39` is left anywhere in the code banks**, so tune `$39` is only in
-the (unreachable) sound test; `$2D` is loaded only at `$09:9EDC` / `$0A:BC04`, code that didn't run in battle (not
-traced). Tunes `$36` and `$37`/`$38` stay as in the 1990 card (no immediate load of `$36`). A scan of `LDA #n / JSR
+the (unreachable) sound test; `$2D` is loaded at `$09:9EDC` / `$0A:BC04`, but neither load is a sound request.
+★ So neither 2D nor 39 is ever played, and both were rewritten from the 1990 card: 2D is a jingle of about 3.5 s (the
+1990 one runs about 11 s), 39 one of about 1.8 s with all six channels new. Tunes `$36` and `$37`/`$38` stay as in the 1990 card (no immediate load of `$36`). A scan of `LDA #n / JSR
 $E9AE` against the code/data logs: tunes and effects `$01-$04`, `$08`, `$13`, `$14`, `$19`, `$1A`, `$1D`, `$20`,
 `$24`, `$25`, `$30-$33` were played in battle and title runs; the rest of the immediates sit in 1P-game code.
 

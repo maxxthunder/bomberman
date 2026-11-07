@@ -227,6 +227,11 @@ DMG capture.
 
 ![Title and Forest 1 on a Game Boy Color](img/pocket/cgb.png)
 
+## Unused music
+
+- ★ Music goes through `$254E` (`$C1C1` = 2, `$C1C2` = tune). The world table at `$02:4BD8` reads 01 02 03 04 06 and
+  nothing else asks for 05, a full tune that loops after about 19 s. There's no sound test.
+
 ## Title
 
 ![Title](img/pocket/title.png)

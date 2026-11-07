@@ -1439,5 +1439,17 @@
   "verified": "emu",
   "note": "$ACB0 (USA $ACB6) frame counter subq.b -> tst.b. 600 frames: clock stayed 3:57. Pro Action Replay 00ACB0:4A38: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): 600 frames in area 1 stage 1: the clock stayed 3:57.",
   "section": "cheat"
+ },
+ {
+  "code": "Sound effects 2E, 43, 55, 63",
+  "effect": "Four sound effects the game never plays",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Sounds go through $34B6 (197 callers) to $B84E (EU $B848), which queues them for the Z80 at $A01C30. Neither the numbers written into those calls nor the tables at $4B58, $69B2, $9C74 and $C868 give 2E, 43, 55 or 63. 2E is a three-second effect in several parts, 43 a short sound whose data runs into 42's, 55 a short high blip and 63 a short low one. Recorded in BizHawk.",
+  "section": "unused"
  }
 ]

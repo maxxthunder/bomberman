@@ -314,5 +314,17 @@
   "verified": "mesen",
   "note": "After an island's last round the game plays the rescue scene ($00:3CB9, THANK YOU! KID!). Before it (not on Faria), it adds the owned panels' prices to the gold as game over does, runs the password encoder ($01:4650, JP $01:4635) into the screen map at $9C0A, and puts the gold back. That map is never displayed (the window is off and the palette blank) and is wiped before the next screen, so only game over ever shows a password. Read from VRAM in Mesen after clearing Jagoraz with 300 gold and 600 in panels: 6L1PLRCW (Atomic Punk) and 6J1MJOBS (Bomber Boy), which decode to Jagoraz cleared, 900 gold.",
   "section": "unused"
+ },
+ {
+  "code": "Tune 04; effects 02, 06, 07, 0C, 0E, 11, 16-19",
+  "effect": "A tune only the hidden sound test plays, and ten effects nothing plays",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Music goes through $0475 and effects through $0480 (and $1931). No request gives tune 04 (the island table at $02B8 covers 0B-13); only the stage-select sound test plays it, a full tune. That test plays music only, so effects 02, 06, 07, 0C, 0E, 11 and 16-19 can't be heard at all. 02 is a held tone; the rest last 0.1 to 0.9 s, 06/07 and 0C/0E being pairs at different pitches. Recorded in Mesen.",
+  "section": "unused"
  }
 ]

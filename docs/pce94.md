@@ -380,6 +380,12 @@ Patches (IPS, built and checked against the ROM by `tools/pce94/mkpatch.py`):
   Verified on the patched file: pausing area 1 installs hook `$DF66`, I turns INV_MODE on (`$3709` = 2):
   ![](img/pce94/debug_pause_ips.png) (the stage keeps no letters in its font, as above)
 
+## Unused sounds
+
+- ★ Effect 43, named "BOSS1 LANDING" in the ROM's own sound list, is never requested: of 210 calls to `$F9DF`, 204
+  have the number written in and the rest come from `$01:C0A1`, `$0A:9536`, `$08:86F5` and the item handlers. Only
+  the Sound Room plays it, a loud thud of about 80 ms. Every tune is used.
+
 ## Files
 
 - `tools/pce94/password.py`, `password.mjs` (no imports), `password.test.mjs`: the codec, self-checks, `--fuzz`.

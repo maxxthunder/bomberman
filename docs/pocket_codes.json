@@ -463,5 +463,16 @@
   "note": "The loader ($00:163C) copies 2 KB blocks from the table at $0C:6F44. Four blocks are Japanese text the release replaced with English ones, and the code still loads the Japanese number first and overwrites it on the next instruction: LD B,$19 then LD B,$43 ($01:5E10, $01:5EE9, $02:5865), $2E then $44 ($01:6B2B, $03:482F), $2F then $45 ($03:483B), and $3F for $46 at $02:4629. Changing the operand back (file $5E12, $5EEB, $6467 to $19; $6B2E, $C832 to $2E; $862A to $3F) shows them in Mesen (Game Boy Color): the New Game menu reads はじめから / パスワード and LICENSED BY NINTENDO, the world plates show kana (モリ for Forest), and LEVEL SELECT reads かんたん / ふつう / むずかしい. The menu that names the modes comes out scrambled, as the English layout points at other tiles. Block $2F's first 768 bytes (ただいまのけっか, ranking text) were not shown.",
   "section": "Cheats",
   "img": "japanese_blocks.png"
+ },
+ {
+  "code": "Tune 05",
+  "effect": "A looping tune no world plays",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Music goes through $254E ($C1C1 = 2, $C1C2 = tune). The world music table at $02:4BD8 reads 01 02 03 04 06, skipping 05, and nothing else asks for it; there's no sound test. 05 is a full tune that loops after about 19 s. Recorded in Mesen.",
+  "section": "unused"
  }
 ]
