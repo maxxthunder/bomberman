@@ -2,6 +2,12 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.14.0 (2026-11-07)
+- Unused graphics, shown in the games: Bomberman GB 3's TIME OVER screen and another PAUSE picture; a mechanical boss
+  sprite set and four small machines in Bomberman '93; Pocket Bomberman's Japanese menu text; a starfield picture in
+  Bomberman Max.
+- Graphics notes for Bomberman, Bomberman GB and Bomberman '94.
+
 ## 1.13.0 (2026-11-07)
 - Panic Bomber: a title-screen button code opens a hidden screen-alignment test; an unused LICENSED BY NINTENDO
   screen (patch); all 16 ITEM types of the DEBUG MENU, each with its effect; WIN confirmed.

@@ -306,6 +306,13 @@ flag of that kind: the 16 RAM candidates in `flags.txt` are table entries reache
 the cut handler), and `$20AA` bit 0 (`0A:92BB`, an object's sprite flag): set every frame in area 1, no visible
 change. ★ New, effect unclear.
 
+### Graphics
+
+Graphics scripts (`00:EB16`) name blocks in four directories in bank `$1B` (`$9EE5`, `$81B4`, `$A866`, `$A318`; 5-byte
+entries: bank, pointer, size). The unread blocks are stage and battle tile sets for the battle stages the runs didn't
+pick, a copy of a used Bomberman sprite set, and a few small blocks not identified (an EX label, menu tiles). Nothing
+shown as unused yet; battle runs over all nine stages would settle it.
+
 ### Text
 
 `text.py 94` decodes the ASCII text with the control codes (`$01 x y` cursor, `#n` palette, `_` space, `;` drawn as

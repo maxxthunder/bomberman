@@ -192,6 +192,16 @@ over, the ending, and every one of the 32 passwords played invincible with the b
 - **Input codes** (`disasm/pocket/pad_us.txt`, 35 hits): menus, the password cursor, movement, the soft reset and the
   stage-intro code. No other hidden pad code.
 - **Text**: drawn from tile records, not ASCII; no text dump.
+- ★ **Graphics: Japanese blocks left in.** The loader (`$00:163C`) copies 2 KB blocks from the table at `$0C:6F44` (76
+  entries). Coverage runs in Game Boy Color mode, checked against the table, leave four Japanese text blocks unread,
+  each replaced by an English one. The code still loads the Japanese number first and overwrites it on the next
+  instruction: `LD B,$19` / `LD B,$43` (`$01:5E10`, `$01:5EE9`, `$02:5865`), `$2E` / `$44` (`$01:6B2B`, `$03:482F`),
+  `$2F` / `$45` (`$03:483B`), and `$3F` in place of `$46` (`$02:4629`). Changing the operands back (file `$5E12`,
+  `$5EEB`, `$6467` → `$19`; `$6B2E`, `$C832` → `$2E`; `$862A` → `$3F`) shows はじめから / パスワード and LICENSED BY
+  NINTENDO on the title menu, kana world plates (モリ for Forest), and かんたん / ふつう / むずかしい on LEVEL SELECT
+  (Mesen); the mode menu comes out scrambled, as its English layout points at other tiles. Block `$2F` is loaded only
+  from offset `$400` (`$01:52B6`); its first 768 bytes (ただいまのけっか, ranking text) were not shown.
+  ![The title menu, world plates and LEVEL SELECT with the Japanese blocks](img/pocket/japanese_blocks.png)
 - **Stage format**: not decoded.
 
 ### Super Game Boy

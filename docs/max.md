@@ -165,8 +165,12 @@ the minigames and the ending were not reached, so this sweep is partial.
   1 NORMAL / 2 JUMP / 3 GB KISS, PASSWORD STRAT 0000, NORMAL GAME ... STAGE EVENT, TEST MENU 1-7, ROM DISPLAY), and
   the test-menu strings at `$52:6107` next to the sound test's (0 SCREEN TEST ... 6 EXIT); the sound test draws only
   its own two lines. No new text found.
-- **Graphics.** The unread banks above are dominated by what the runs didn't reach, so no graphics are claimed unused
-  beyond the two unused Charaboms' cards (Known), which are complete with art, stats and names.
+- **Graphics.** Blocks come from the table at `$1A:705A` (254 entries of 2 KB, the same in all five versions). The
+  unread ones are mostly screens the runs didn't reach (Charabom battles, combining, VICTORY). ★ One slot has no entry
+  at all: `$46:4000-$47FF`, a starfield with galaxies, sparkles and a planet's edge (entries 199 and 200 both point at
+  `$46:4800`, and no code reads bank `$46` directly). Pointed to from the title's entry (`$43`, file `$6B123`) and laid
+  out as tiles 0-127, in the title's palette: ![The starfield](img/max/starfield_46_4000.png) Also unused: the two
+  unused Charaboms' cards (Known), complete with art, stats and names.
 
 ## Title
 

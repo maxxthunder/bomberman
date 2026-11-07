@@ -342,6 +342,13 @@ that only code that never ran writes. US and JP give **one** address: `$2074`, r
 Forced to `$FF` every frame in Mesen for 3,000 frames of play, it changed nothing. Every other flag that live code
 reads is set somewhere.
 
+### Graphics
+
+Graphics are LZSS blocks listed in directories at the start of banks `$03` (screen maps), `$0E`, `$0F`, `$10` and
+`$18`, named by the set tables at `00:F057` (BG) and `00:F09D` (sprites). Every block is in a set, and the merged
+coverage logs read all but one: `$18` #34 (file `$3F0A8`), loaded only by the C-Link battle (`08:6D63`) with screen
+map `$0B`. No unused graphics.
+
 ### Text
 
 `tools/pce90/textdump.py` decodes every text list (records `x y text`, ending in `$FE` / `$FF`; ASCII plus half-width

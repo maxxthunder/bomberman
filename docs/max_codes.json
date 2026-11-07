@@ -232,5 +232,21 @@
   "note": "Hikari and Yami call the logo ($00:050F) at $00:029B-$02C5 before the lockout; Blue and Red lack those 18 bytes; Ain shows both logos ($00:02B8-$02DD). Seen in Mesen with the model set to Game Boy. Image: Blue's lockout, the Hudson logo of Hikari and Ain, Ain's Pentel logo.",
   "section": "region",
   "img": "dmg_boot.png"
+ },
+ {
+  "code": "Graphics bank $46:4000-$47FF",
+  "effect": "An unused starfield picture: galaxies, sparkles and the edge of a planet",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Max loads 2 KB graphics blocks from the table at $1A:705A (254 entries, the same in all five versions). Of all the 2 KB slots in the graphics banks, $46:4000 is the only one no entry points to (entries 199 and 200 both point at $46:4800), and no code reads bank $46 directly; the data is the same in all five. Shown in Mesen (Blue) by pointing entry $43 (file $6B123, loaded by the title) at it and writing tiles 0-127 into the title's BG map, in the title's palette (its own palette is unknown).",
+  "section": "Secrets",
+  "img": "starfield_46_4000.png"
  }
 ]

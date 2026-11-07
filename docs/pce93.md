@@ -270,6 +270,26 @@ An item's kind is `$A0` + its entry in the pickup table `03:A89F`; the per-stage
 | Old CONFIGRATION screen with SOUND test | `08:88BD` | Special Version | patch only |
 | Clear-time page of the ending | `08:8CBE` | US, JP | without passwords and continues |
 | Map chunks `$3E`, `$6C` (SP `$68`) | file `$17014`, `$17EA0` (SP `$17C91`) | all | no |
+| ★ Graphics entries 35 and 37 (a mechanical boss set, four small machines) | file `$49E31`, `$4BDD3` | US, JP | no |
+
+### ★ Unused graphics
+
+The graphics directory (bank `$0A` at `$4000`: 122 entries in parallel arrays of pointer, bank, size, layout and
+packing; loader `01:C000`, A = entry) was checked against the merged coverage logs and against every reference to an
+entry (`LDA #n / JSR $C000`, the stage lists at `03:A518`, the boss tables `03:A4FE` / `A505` and `06:A169`, the
+screen scripts in bank `$0C`). Unread entries 11, 12, 22, 36, 40, 78, 83-93 and 113 are named and belong to screens
+the runs skipped (battle stages, the planet pictures). Six are named nowhere and never load: 24, 35, 37, 81, 96, 108.
+
+- **Entry 35** (file `$49E31`): a boss sprite set packed like bosses 25-34, about 63 cells of robot arms, ring joints
+  and hydraulic parts; only 5 of its 186 pieces are in a used boss. No sprite layout exists for it. Loaded in place of
+  the world 1 boss (US 1-8) and laid out as 32 x 32 sprites with that boss's palette:
+  ![Entry 35](img/pce93/unused_boss_sprites.png)
+- **Entry 37** (file `$4BDD3`): four 32 x 16 machines (a figure in a pod, a box with goggles, a dome, a pot), like
+  entry 36 but sharing only 2 pieces with it; the palette is unknown (three tried):
+  ![Entry 37](img/pce93/unused_machines.png)
+- Entries 24 (small White Bomberman figures and an arrow, close to the player set 23), 81 and 96 (background tiles,
+  96 drawn as a scrambled world 1 stage when swapped in) and 108 (packed like the boss extra set 107) weren't shown as
+  clean art. The Special Version's directory wasn't checked.
 
 ## Deep sweep (dead code, input codes, unset flags, text, maps, cheats)
 

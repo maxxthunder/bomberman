@@ -111,8 +111,10 @@ MODE-B through the ending with the cheats, a game over. Executed: **28,498 bytes
 - **Graphics** (CDL incl. the SGB and multitap runs): graphics are raw blocks (2-byte length + tiles, `$00:02DB`)
   listed in 32 sets (`$00:3F7E`, loader `$00:3EDD`). Every unread block belongs to a set the code loads: sets 20-21
   (battle stages 3-4, `$12` + `$C1A8` at `$00:2BEE`; the battle runs played stages 1-2) and sets 3 and 10 (loaded by
-  `$00:2AD4` and `$00:1F1A`, screens the runs didn't reach). Sets 12 and 13 repeat set 5. No unreferenced tiles
-  found.
+  `$00:2AD4` and `$00:1F1A`, screens the runs didn't reach). Sets 12 and 13 repeat set 5. A tile log over the runs
+  (every VRAM tile against the BG, window and sprites) finds one leftover: the US staff roll loads the Japanese
+  version's whole kana font with the English letters, and no US screen uses it (seen by pointing the BG map at it
+  during the staff roll). The rest are stage and boss tile variants.
 - **Debug features**: none found.
 
 ### Super Game Boy

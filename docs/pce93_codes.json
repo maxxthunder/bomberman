@@ -1838,5 +1838,31 @@
   "note": "The US LOAD screen adds a case for read result $FF (06:92E4, CMP #$FF) that shows message $0B and calls the format routine $F2D2 on YES. Japan's 06:92E4 is CMP #$01 only: every read error shows データーガ コワレテイマス / データーヲ ケシマスカ?, and YES calls the delete routine $F351, which fails on an unformatted cabinet, so the prompt stays. In Mesen, backup RAM zeroed at the file list, file 1 chosen. Image: US prompt, YES, the file list again.",
   "section": "region",
   "img": "load_unformatted_us.png"
+ },
+ {
+  "code": "Graphics entry 35 (bank $24, file $49E31)",
+  "effect": "An unused boss sprite set: robot arm segments, ring joints and hydraulic parts",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The graphics directory (bank $0A, $4000, 122 entries; loader 01:C000) has entries no code, stage list, boss table or screen script names, and no run loads. Entry 35 is packed like the boss sets 25-34 (mode $12) and holds about 63 cells of mechanical art; only 5 of its 186 pieces appear in any used boss set. There is no sprite layout for it, so only the loose cells can be shown. Mesen, US 1-8: the boss loader's first call switched from 25 to 35 and the cells laid out as 32 x 32 sprites with the world 1 boss palette (the palette is borrowed).",
+  "section": "unused",
+  "img": "unused_boss_sprites.png"
+ },
+ {
+  "code": "Graphics entry 37 (bank $25, file $4BDD3)",
+  "effect": "Four unused small machines: a helmeted figure in a pod, a box with goggles, a dome, a pot-shaped machine",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Another directory entry nothing names or loads. Its four 32 x 16 objects look like entry 36 (used by one screen script) but share only 2 pieces with it. Mesen, US 1-8: the boss loader's second call switched to 37 and the cells laid out as sprites; three palettes tried, the right one is unknown.",
+  "section": "unused",
+  "img": "unused_machines.png"
  }
 ]

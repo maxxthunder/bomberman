@@ -155,8 +155,19 @@ attack, all three area tiers with the cheats, a game over. Executed: **44,079 by
   the shop all show in the runs. Not shown: message 19 (an area that moves) and 68 (rocks that stop moving), the
   shop help for F and M1-M4 and its M2-M4 prompts; all are picked by the same tables, so none is known to be unused.
   The title, password and challenge-mode words are BG tile maps (not in this dump).
-- **Graphics** (CDL incl. an SGB run): the unread blocks are small, plus two pictures at `$0B:4BBE` / `$0C:7308`
-  that graphics sets do load (set records at `$00:0B52`, `$00:0AAF`) on screens the runs didn't reach. Nothing unreferenced found.
+- **Graphics.** Sets load through `$00:09A1` (table `$00:09A7`, 29 sets of 6-byte records: bank, source, VRAM address,
+  tile count) and maps through `$00:2F03` (table `$00:2D7E`). Every call passes a constant (or area + `$0D`), and sets
+  9, 11, 12 and 27 and maps 1 and `$12` are never loaded. Sets 12 and 27 are parts of sets that are; map 1 matched no
+  set. The two others are pictures:
+  - ★ **TIME OVER** (set 9, `$0B:4BBE` and `$0B:51D9`, with map `$12`): the game-over set with a dizzy, spiral-eyed
+    Bomberman and TIME OVER lettering. Making the game-over screen (`$05:7D3E`) load set 9 and map `$12` (file
+    `$17D54` `08` → `09`, `$17D59` `11` → `12`; `$17D6B-$17D6D` → `00 00 00` drops the OVER sprites drawn on top)
+    shows it in Mesen. Why it was cut (a clock that ran out?) is a guess. ![TIME OVER, and GAME OVER](img/gb3/time_over.png)
+  - ★ **Another PAUSE picture** (set 11, `$0C:73EB` and `$0C:7308`): PAUSE, a big Bomberman and a robot-like one,
+    unlike the pause screen the game shows. No map draws it; shown as tiles 0-127 in order.
+    ![Set 11's tiles](img/gb3/pause_unused_tiles.png)
+  - A tile log over the coverage runs (every VRAM tile against the BG, window and sprites) found only fragments
+    besides these: stage-tile variants, unused font letters and the shop icons for M1-M4.
 - **Stage format**: not decoded.
 
 ### Super Game Boy
