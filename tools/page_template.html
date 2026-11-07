@@ -129,9 +129,9 @@ button { cursor: pointer; }
 .gtext { display: grid; gap: 8px; justify-items: start; min-width: 0; }
 #glogo { height: 64px; max-width: 100%; width: auto; image-rendering: pixelated; }
 .ghead h2 { margin: 0; }
-#ghero { width: 192px; aspect-ratio: 10 / 9; object-fit: cover; object-position: left top; image-rendering: pixelated;
+#ghero { height: 173px; width: auto; aspect-ratio: 10 / 9; object-fit: cover; object-position: left top; image-rendering: pixelated;
   border: 4px solid color-mix(in srgb, var(--acc) 55%, #000); border-radius: 8px; background: #000; }
-@media (max-width: 600px) { #ghero { width: 104px; border-width: 3px; } #glogo { height: 48px; } .ghead { padding: 12px; gap: 10px; } }
+@media (max-width: 600px) { #ghero { height: 94px; border-width: 3px; } #glogo { height: 48px; } .ghead { padding: 12px; gap: 10px; } }
 /* version chips: radio buttons drawn as pills */
 .seg { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
 .seg legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
@@ -313,7 +313,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.14.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.15.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -799,6 +799,8 @@ function pickGame(id) {
     b.querySelector("img").src = `docs/img/logos/${x.logo}.png`;
   }
   $("gname").innerHTML = `${esc(g.name)}<small>${esc(g.plat)} · ${g.year}</small>`;
+  // a single screenshot keeps its own shape (Virtual Boy is wide); a sheet of several stays cropped to its first panel
+  $("ghero").onload = e => { const r = e.target.naturalWidth / e.target.naturalHeight; e.target.style.aspectRatio = r <= 2 ? r : ""; };
   $("ghero").src = `docs/img/${HERO[g.id][0]}/${HERO[g.id][1]}.png`;
   $("gintro").textContent = g.intro || "";
   $("gintro").hidden = !$("gintro").textContent;

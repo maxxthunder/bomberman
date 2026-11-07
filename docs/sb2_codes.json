@@ -551,5 +551,48 @@
   "verified": "static",
   "section": "unused",
   "note": "Looks like an older reset path; nothing jumps to it."
+ },
+ {
+  "code": "CC03E401 or CC03E408, then battle stage 1",
+  "effect": "Two battle stages the Caravan was thought to have removed: the ice arena (2) and the warp-hedge arena (7)",
+  "versions": [
+   "caravan"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Battle maps its stage number to an internal stage through a 16-byte table at $CC:03E4 (retail 00 01 02 05 06 07 08 09 0A 0B 04 03 ...). The Caravan's reads 00 09 0A 0B 0B ..., so only 4 stages are reachable, and even its 12-stage select code can't get further. Its entry 0 set to 1 or 8 loads retail stage 2 or 7 complete and playable; internal 2-7 (retail 3, 12, 11, 4, 5, 6) load with junk tiles, so their data is gone. Mesen.",
+  "section": "unused",
+  "img": "caravan_leftover_stages.png"
+ },
+ {
+  "code": "World 2: password 6442 + CC19C027 C5E0E8A6 C5E0E98F C5E0EAC3",
+  "effect": "Four unused boss arenas, one per world 2-5, in that world's own tiles and frame",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "beta",
+   "caravan"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Each stage's struct ($C5:DF41 + stage x 3) points at an area layout. Every world has its own eighth layout after area 7 (world 2 $C3:8FA6, 3 $C4:2105, 4 $C4:4A82, 5 $C4:724B), but all five boss stages point at world 1's ($C3:6ACE), so each boss fights in the grey arena. Nothing points at the four. Repointing a boss stage's struct to its world's layout loads it: the arena in that world's tiles and border, and the boss plays as normal (the pillar grid is the same). Codes: CC19C0xx sends the password to area 8 (table $CC:19BE); world 3: 3903 + CC19C237 C5E13005 C5E13121 C5E132C4; world 4: 9564 + CC19C447 C5E17882 C5E1794A C5E17AC4; world 5: 7735 + CC19C657 C5E1C04B C5E1C172 C5E1C2C4. The layouts are the same in all five versions; seen in Mesen (USA). Image: the real 2-8, then worlds 2-5's own arenas.",
+  "section": "unused",
+  "img": "unused_boss_arenas.png"
+ },
+ {
+  "code": "Sound effects 46, 60, 62, 63, 65, 6B, 6C, 6E",
+  "effect": "Eight sound effects the game never plays",
+  "versions": [
+   "us",
+   "eu",
+   "jp",
+   "beta",
+   "caravan"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Effects are queued through $C3:A4B5: immediates before each call, the wrapper $CC:815D (A + $40) and the table $C5:D54E. Together they request 41-45, 47-5F, 61, 64, 66, 68-6A, 6D and 6F-72. 46, 60, 62, 63, 65, 6B, 6C and 6E are never asked for, and each plays: 46 two short notes, 60 and 62 two-voice hits, 63 a fast rattle, 65 a hit like 64 at another pitch, 6B a half-second multi-part effect, 6C repeated pulses, 6E the first note of 68. Played one at a time in Mesen.",
+  "section": "unused"
  }
 ]

@@ -405,5 +405,16 @@
   "note": "$0701_77FE, with no reference anywhere, is a copy of the test-screen routine that shows LICENSED BY NINTENDO (drawn as tiles) for 116 frames or until A or Start, then fades out. The retail title says Licensed to Nintendo instead. The patch points the test screen's call ($0700_08B8) at it; seen in BizHawk.",
   "section": "patch",
   "img": "licensed_by_nintendo.png"
+ },
+ {
+  "code": "Hold A, B, L, R, Start and Select during the ending",
+  "effect": "Skips the ending scenes: the castle door and the statue end at once",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Mode 7 ($0701_8088) checks the held buttons at each scene's steps ($0701_87EA): with exactly A, B, L, R, Start and Select held (and no d-pad) it ends the scene ($0700_63EE). In BizHawk after a real Doom Castle win: the door scene ended after about 38 frames instead of 525 and the bonus stage began; at the statue, about 37 frames instead of about 966, straight to RESULT.",
+  "section": "Special codes"
  }
 ]

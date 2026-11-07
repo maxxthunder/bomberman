@@ -856,5 +856,17 @@
   "note": "Japan's title loop counts BC = $3C20 down ($0A:40A7-$40B7) and then jumps to the story ($0A:4106). Wario Blast's loop ($0A:40AA-$40E1) has no counter, as the story is gone. In Mesen with no input: Japan showed the story 36 s after the title, Wario Blast was still on the title at 56 s. Image: Japan (top) and Wario Blast at the title, +36 s and +56 s.",
   "section": "region",
   "img": "title_idle.png"
+ },
+ {
+  "code": "Music 07 and 08",
+  "effect": "Two tunes the game never plays",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Music goes through the request byte $C3F1 (CALL $0AC4). The game asks for 00-06 and 0B as constants and 09-12 from the stage table at $00:1F04 (Wario $1E99). The song table at $07:4A0E has 00-12, and 07 and 08 have channel data of their own but no request. 07 is about 11 s, loud, and doesn't loop; 08 is about 11 s, quiet and rhythmic, and doesn't loop either. Recorded in BizHawk.",
+  "section": "Secrets"
  }
 ]

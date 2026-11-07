@@ -309,9 +309,15 @@ change. ★ New, effect unclear.
 ### Graphics
 
 Graphics scripts (`00:EB16`) name blocks in four directories in bank `$1B` (`$9EE5`, `$81B4`, `$A866`, `$A318`; 5-byte
-entries: bank, pointer, size). The unread blocks are stage and battle tile sets for the battle stages the runs didn't
-pick, a copy of a used Bomberman sprite set, and a few small blocks not identified (an EX label, menu tiles). Nothing
-shown as unused yet; battle runs over all nine stages would settle it.
+entries: bank, pointer, size); every load goes through `00:EB2A`. With all ten battle stages forced (`$3BED` 0-9),
+the Buglear fight played, TAG battle's team screen (T0 #15) and a revisited area on the map (T1 #27, the EX label),
+every block loads but these:
+- ★ **T0 #158** (file `$8FD1D`): six sprite cells of a blue jet ship, in no other block. Its script (`$0F:A9FF`) is
+  loaded only by a task entry at `$0F:AA90` that nothing points to. Started by pointing Buglear's object slot at it
+  in the boss's space phase, it sets off explosions, stops the clock and shows the jet:
+  ![The forced task, and the jet](img/pce94/unused_jet.png)
+- T2 #33: a palette set (8 palettes), the first 32 bytes the same as #34's, which the scripts use instead.
+- T2 #22: a copy of the used Bomberman sprite set #23.
 
 ### Text
 

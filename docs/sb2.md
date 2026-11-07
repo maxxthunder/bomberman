@@ -303,8 +303,23 @@ whole stage buffer, so on taller stages it does not line up with the visible scr
 
 Every stage the debug menu offers was reached (1-0 ... 5-7, 6-0); its STAGE NO. wraps at 6-0, so there is no stage
 index beyond the 40 stages and the ending. Battle stages were not dumped: the scripted way through the battle menus
-lost its place (stage select reached, battle not started). No cut stage was found, but unreferenced stage data could
-not be searched for, since the tilemaps are compressed.
+lost its place (stage select reached, battle not started).
+
+The stage data is packed with two simple run-length schemes: per-world background layers (table `$C5:F86B`, unpacked
+by `$C0:F2A0`) and per-area layouts (Normal Game structs at `$C5:DF41`, battle at `$C5:F9E5`; each layout is a header
+of three words, a 64 x 64 map of (count - 1) << 10 | tile words, and two attribute tables). All 12 battle layouts and
+every world's areas 1-7 are used.
+
+- ★ **Four unused boss arenas.** Worlds 2-5 each have an eighth layout of their own (`$C3:8FA6`, `$C4:2105`,
+  `$C4:4A82`, `$C4:724B`), but every boss stage points at world 1's (`$C3:6ACE`), so all bosses fight in the grey
+  arena. Pointed at instead, each loads with its world's tiles and border and the boss plays as normal; the pillar
+  grid is the same (codes on the card). ![2-8 as shipped, then worlds 2-5's own arenas](img/sb2/unused_boss_arenas.png)
+- One more layout follows world 5's eighth (`$C4:7798`): mostly empty floor with the boss pillar grid. Every area
+  layout loads through `$C0:F36F` → `$C0:F672`, and no index into either table reaches it; a read watch over every
+  Normal Game stage, the ending and the credits never touched it. It has no tiles of its own: in a boss slot it takes
+  that world's (here 1-8's, codes `CC19C017 C5E0A098 C5E0A177 C5E0A2C4`), and in an area slot the screen stays black.
+  ![The layout in 1-8's slot](img/sb2/unused_layout_C47798.png)
+- The stage data is byte-identical in the USA, Japan, Europe, beta and Caravan carts.
 
 ## Cheat codes
 
@@ -345,6 +360,16 @@ Europe, Japan, beta and Caravan (each disassembly grown from that version's code
 
 Same hits at shifted addresses in all five versions. There is no password-style or button-sequence code beyond the
 password table.
+
+## Unused sounds
+
+- ★ Effects are queued through `$C3:A4B5` (immediates before each call, the wrapper `$CC:815D` with A + `$40`, the
+  table `$C5:D54E`), which asks for 41-45, 47-5F, 61, 64, 66, 68-6A, 6D and 6F-72. 46, 60, 62, 63, 65, 6B, 6C and 6E
+  are never requested and each plays (46 two short notes, 60 and 62 two-voice hits, 63 a fast rattle, 65 like 64 at
+  another pitch, 6B a half-second effect, 6C repeated pulses, 6E the first note of 68). 67 and 73-75 were silent,
+  as were some used ones, so they're undecided; 76 and up hang the driver.
+- Music: all 14 song sets are loaded (world `$C5:D580`, battle `$C5:D560`, boss `$C1:0319`, set 7 at `$CC:0401`)
+  and every song in them is requested. Nothing unused.
 
 ## Text
 
@@ -412,7 +437,11 @@ Which of `$FA`/`$FB` is bomb pass and which wall pass wasn't checked.
   never accepts input (below).
 - **Caravan** (**Known**: sponsor screens, locked battle settings, 4 stages, hurry-up at 1:00): Normal
   Game and the password screen still work with all 11 codes; the debug switches are the same. New: it clears
-  `$1CB5` at the stage select, so the Joycard trick does nothing (above).
+  `$1CB5` at the stage select, so the Joycard trick does nothing (above). ★ Two of the "removed" battle stages are
+  still complete: the stage table (`$CC:03E4`, retail `00 01 02 05 06 07 08 09 0A 0B 04 03`) reads `00 09 0A 0B 0B ...`
+  in the Caravan, but internal stages 1 and 8 (retail 2, the ice arena, and 7, the warp hedges) load and play when its
+  first entry points at them (`CC03E401`, `CC03E408`). Internal 2-7 load with junk tiles: their data is gone.
+  ![The ice and warp-hedge arenas in the Caravan](img/sb2/caravan_leftover_stages.png)
 
 ### Region comparison, screen by screen
 

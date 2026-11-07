@@ -200,7 +200,10 @@ over, the ending, and every one of the 32 passwords played invincible with the b
   `$5EEB`, `$6467` → `$19`; `$6B2E`, `$C832` → `$2E`; `$862A` → `$3F`) shows はじめから / パスワード and LICENSED BY
   NINTENDO on the title menu, kana world plates (モリ for Forest), and かんたん / ふつう / むずかしい on LEVEL SELECT
   (Mesen); the mode menu comes out scrambled, as its English layout points at other tiles. Block `$2F` is loaded only
-  from offset `$400` (`$01:52B6`); its first 768 bytes (ただいまのけっか, ranking text) were not shown.
+  from offset `$400` (`$01:52B6`); its first 768 bytes hold ただいまのけっか ("current results") and kana that the
+  results screen once loaded (`$03:483B`, now `$45`). Loading `$2E` and `$2F` from offset 0 there (file `$C832` → `2E`,
+  `$C83E` → `2F`, `$C842` → `00`) draws ただいまの… in the RESULTS title bar after a Jump Game, scrambled and cut short
+  by the English layout: ![RESULTS with the Japanese blocks](img/pocket/results_japanese_title.png)
   ![The title menu, world plates and LEVEL SELECT with the Japanese blocks](img/pocket/japanese_blocks.png)
 - **Stage format**: not decoded.
 

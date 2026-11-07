@@ -289,7 +289,22 @@ the runs skipped (battle stages, the planet pictures). Six are named nowhere and
   ![Entry 37](img/pce93/unused_machines.png)
 - Entries 24 (small White Bomberman figures and an arrow, close to the player set 23), 81 and 96 (background tiles,
   96 drawn as a scrambled world 1 stage when swapped in) and 108 (packed like the boss extra set 107) weren't shown as
-  clean art. The Special Version's directory wasn't checked.
+  clean art.
+- **The Special Version** uses the same loader and bank with 117 entries (arrays at `$4000`, `$4075`, `$40EA`,
+  `$415F`/`$41D4`, `$4249`): entries 0-23 match US, then SP #24 = US #25 on, without US 24, 81 and 108. US 37 and 96
+  are there unchanged and US 35 as a variant (27 of 215 tiles differ), all unread. Five SP-only entries (#21, #22, #64,
+  #90, #91) are never read either. ★ They are screens of the Special Version's own, and each was shown in the game:
+  - Screens 8 and 15 (#90, #91, #64) belong to the leftover Normal Game: world 6's clear picture (Bomberman asleep at
+    a kotatsu) and the staff roll's opening (the city at night, BOMBERMAN '93 STAFF). With the Normal Game menu patch,
+    a world 6 or 7 password and a forced clear (`$3898` = 4, `$388D` = 7 at `$02:83BF`) they run.
+    ![World 6's clear and the staff roll](img/pce93/sp_world6_staff_pictures.png)
+  - Screens 37 and 28 (#21, #22) belong to a cut COM-LINK mode (`$388C` = 9) whose only start, `$07:A8B3`, nothing
+    calls: a pairing screen (both players bring up this screen; whoever presses RUN first is White Bomberman) and a
+    VICTORY! results screen. ![The pairing and VICTORY! screens](img/pce93/sp_comlink_screens.png)
+- ★ **The Special Version's SELECT STAGE map.** It shows CONFIGRATION where US and JP show the planet map, but the
+  map routine is still there (`$06:985C`). Calling it (file `$4438`: `BD 88 08` → `5C 98 06`, with the Normal Game
+  menu patch and a password) shows a starfield with SELECT STAGE, six planets and red names that change with Right:
+  ![SELECT STAGE](img/pce93/sp_select_stage_map.png)
 
 ## Deep sweep (dead code, input codes, unset flags, text, maps, cheats)
 

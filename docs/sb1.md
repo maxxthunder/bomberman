@@ -526,7 +526,8 @@ those were not run there. All in `sb1_codes.json` (`section: "cheat"`).
 | `7E00A43C` | sound test | scene `$3C` from power-on | Known | `7A10-E4BD` (JP `7A17-572D`, beta `7A17-54BD`): the boot's title scene `$31` → `$3C` (`$C4:6349`); scene `$3C` from power-on |
 | `7E00A4xx` | go to scene xx (list under Debug menu, STAGE NO.); switch it off once the scene has loaded | `7E00A42F` loads 6-8 | Known | `xx10-E4BD` (JP `xx17-572D`, beta `xx17-54BD`), xx in Game Genie letters: power-on goes to scene xx; `4E10-E4BD` loads 6-8 |
 | `C30D63A2` `C30D64AE` | ROM codes: 1-1 is built from the unused map `$C1:AEA2` (US/EU/beta; the JP header table is elsewhere) | loads and plays ![](img/sb1/maps/unused_C1AEA2_in_1-1.png) | ★ New | `C4D1-5DAE` `C3D1-5FDE` (the same bytes): loads and plays (US, EU, beta) |
-| (`C30D63DA` `C30D64A1`) | the same for the ring map `$C1:A1DA` | black screen, the stage never starts: not useful | ★ New (fails) | not run |
+| (`C30D63DA` `C30D64A1`) | the same for the ring map `$C1:A1DA` | hangs: Normal Game's soft-block placer (`$C6:1DC7`) needs 112 free cells reachable from the start (`$C6:1E93`), the ring has 90 | ★ New | not run |
+| `C32226DA` `C32227A1` + `7E00A43F` | battle 3 built from the ring map `$C1:A1DA` (battle mode skips that check, `$C6:1DC9`) | loads and plays; the floor tiles are wrong with battle 3's and battle 7's sets ![](img/sb1/maps/ring_C1A1DA_battle3.png) | ★ New | not run |
 
 The debug-menu ROM codes (90 per version) are listed under Debug menu. Their Game Genie forms (the same bytes, in
 `sb1_codes.json`) open the menu and change values in all four versions.
@@ -538,10 +539,21 @@ The debug-menu ROM codes (90 per version) are listed under Debug menu. Their Gam
 - No other hard-coded password: the only compare on the raw digits is `$C5:7287` (5656).
 - Password-screen button holds: the decoder reads only the digits and controller 2's new presses.
 
+## Unused music
+
+- ★ Every track request goes through `$C3:002C` (Y = track): the stage and scene table `$C3:2F83`, the jingle tables
+  `$C4:1874` and `$C4:6C04`, constants `0F`, `11`, `1B` and the sound test's list at `$C7:07C9` (00 01 07 02 04 06
+  0B 14 08 0A 12 16 0D 0E 0C 0F 10 11). Tracks 03, 05, 09, 13, 15, 28 and 29 are in none of them; only the debug
+  menu's BGM NO. plays them (same in US, EU, JP and the beta).
+  - 03 is another arrangement of the world 1 theme (02), denser, with parts an octave apart.
+  - 05, 09, 13 and 15 are 04, 08, 12 and 14 starting past their intros (by about 3.3, 1.1, 0.55 and 0.65 s).
+  - 28 and 29 copy the two per-world jingles (`0D`... at `$C4:6BFF`, `0E`... at `$C4:189C`) note for note; they sit in
+    the demo's song set, where no table index reaches them.
+- 1C and 1D belong to no song set: unassigned numbers, not music.
+
 ## Open
 
 - Unset flag `$0304`: what setting it does was not tried.
-- The ring map `$C1:A1DA` could not be loaded (black screen); why the stage never starts was not traced.
 - Debug menu: REMOCON, WALL PASS, BOMB PASS, BREAK THR., POWER and KICK checked as RAM bits only; GAME SPEED and
   TIME CHECK have no code left to restore.
 - Unused palettes: needs the palette tables mapped (see Unused graphics).

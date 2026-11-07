@@ -1456,5 +1456,17 @@
   "note": "stubs at $3F66 and $3F82 (free bank $01 space) and hooks at $3891 / $389C, as debugpause.lua; on the patched file pausing installs hook $DF66 and I sets $3709 = 2",
   "section": "patch",
   "img": "debug_pause_ips.png"
+ },
+ {
+  "code": "Graphics T0 #158 (file $8FD1D), via script 0F:A9FF",
+  "effect": "An unused blue jet ship sprite, loaded by a task nothing starts",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Every graphics load goes through 00:EB2A. With battle stages 0-9 forced and the Buglear fight played, every block loads except T0 #158: six sprite cells of a blue jet or bird ship, in no other block. Its only script ($0F:A9FF) is loaded by a task entry at $0F:AA90 that nothing points to. Forced in Mesen (debug menu patch, boss battle, area 6; once the space phase has loaded, Buglear's object slot 6 pointed at $AA90): explosions, the clock stops, and the jet appears as a 32 x 32 sprite. Image: the frame, and the jet enlarged.",
+  "section": "secret",
+  "img": "unused_jet.png"
  }
 ]

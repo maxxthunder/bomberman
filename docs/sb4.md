@@ -380,6 +380,15 @@ to start-position data in `$C3`. Those streams are compressed and were not decod
 - **Normal game**, all 40 slots of `$0092`, forced at the password hit (`$C2:A9C9`):
   ![Normal stages](img/sb4/maps/normal_stages.png)
   Slots 38 and 39 are the empty final-boss arena (the known filler 5-7/5-8), and no other slot is cut.
+- ★ **Records no slot uses.** The slot list (`$C3:5840`) points at 48-byte records from `$C3:58B8`; it skips three.
+  `$C3:5EB8` is a copy of the 4-8 boss record. `$C3:5FA8` and `$C3:5FD8`, between 5-4 and 5-5, are two cut World 5
+  stages with a layout stream nothing else uses (`$D7:1C45`): a thick ring of blocks around the pillars. Slot 38
+  pointed at either (`C358B2A8` or `C358B2D8`, with `C358B35F`) loads and plays it. So World 5 seems to have had seven
+  stages, and the filler 5-7 and 5-8 fill the gap. ![5-4, the two cut stages, 5-5](img/sb4/cut_world5.png)
+- ★ **A battle record nothing points to.** The battle sets (`$C4:0074`, four of 14 records each, `$C3:62DB-$C3:686E`)
+  are followed by one more record at `$C3:686F`: stage 6's background and start positions with its own layout
+  (`$D7:5576`) and no gimmicks. Set 0's first entry pointed at it (`C362336F C3623468`) loads it:
+  ![Stage 6, and the unreferenced record](img/sb4/unref_battle_C3686F.png)
 
 ### Cheat codes (Pro Action Replay)
 
@@ -399,6 +408,15 @@ the table is searched, so the slots were dead.
 
 No invincibility code: `7E03D2:05` (player 1's extra hits) did not change a random-bot run, and no NODEATH-style
 flag exists.
+
+### Unused sounds
+
+- ★ Music requests (`$C3:4A44`, track table `$C0:0739`) come from constants and byte +`$15` of the stage headers
+  (`$C3:5840`, the battle groups at `$C4:0074`): every track but 0E. 0E is a non-looping jingle of about 8.8 s, as
+  long as jingles 04 and 0D, using samples 1E-21.
+- ★ Effect requests (`$C3:4A7F`) cover 01-04, 07-1E, 20, 22, 24-28 and 2A-30. 06, 1F and 29 (two-voice hits) and 23
+  (two hits about 7 frames apart) are never asked for. 05 and 21 were silent, like some used ones; 34 and up hang the
+  driver. The English version has the same 22 music call sites.
 
 ## Title logo
 

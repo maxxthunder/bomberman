@@ -661,5 +661,40 @@
   "verified": "static",
   "section": "cheat",
   "note": "Already known."
+ },
+ {
+  "code": "C358B2A8 C358B35F (or C358B2D8 C358B35F) on slot 38",
+  "effect": "Two cut World 5 stages, between 5-4 and 5-5, with their own layout",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The Normal Game records (48 bytes from $C3:58B8, listed at $C3:5840) include two the list skips: $C3:5FA8 and $C3:5FD8, between 5-4 ($C3:5F78) and 5-5 ($C3:6008). They use World 5's graphics and a layout stream no listed stage uses ($D7:1C45): a thick ring of blocks around the pillars. With slot 38 (the filler 5-7) pointed at either, and $0092 = 38, they load and play. World 5 seems to have had 7 stages, which would explain the filler 5-7 and 5-8. Image: 5-4, the two cut stages, 5-5.",
+  "section": "unused",
+  "img": "cut_world5.png"
+ },
+ {
+  "code": "C362336F C3623468, then battle with set 0",
+  "effect": "An unreferenced battle stage: stage 6's arena with a striped floor and no gimmicks",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Battle stage records (34 bytes, $C3:62DB-$C3:686E) are picked from four sets at $C4:0074. One more record follows them at $C3:686F, and nothing points to it: stage 6's start positions and background with its own layout stream ($D7:5576, between stage 6's two) and no gimmick objects. Pointing set 0, entry 0 at it ($024A = 0) loads it in Mesen. Image: retail stage 6 (left), the unreferenced record (right).",
+  "section": "unused",
+  "img": "unref_battle_C3686F.png"
+ },
+ {
+  "code": "BGM 0E; sound effects 06, 1F, 23, 29",
+  "effect": "A jingle and four sound effects the game never plays",
+  "versions": [
+   "JP"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Music requests ($C3:4A44) come from constants and the stage headers' byte +$15: 01-0D, 0F-19, never 0E. 0E is a non-looping jingle of about 8.8 s, the length of jingles 04 and 0D, with samples of its own (1E-21). Effect requests ($C3:4A7F) cover 01-04, 07-1E, 20, 22, 24-28 and 2A-30; 06, 1F and 29 are two-voice hits and 23 two hits about 7 frames apart. Played in Mesen.",
+  "section": "unused"
  }
 ]

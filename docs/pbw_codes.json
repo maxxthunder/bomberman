@@ -513,5 +513,29 @@
   "verified": "mesen",
   "note": "The menu loop ($80:D588) calls $80:D61D every frame: with L or R held, the d-pad moves the background's scroll ($70E7 across, $70EB down) by 4 a frame. In Mesen on the main menu, 20 frames of L+Right took $70E7 from 128 to 208, and R+Down moved $70EB the same; the d-pad alone only moves the cursor. Looks like a test control left in.",
   "section": "hidden"
+ },
+ {
+  "code": "Story on Normal or harder, after stage 8 + random 0-6",
+  "effect": "A surprise match against シャドウボンバー (Shadow Bomber), named ???, who cuts into the next intro",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "On Normal or harder ($37CE >= 2) the game picks two bonus stages at the start: $11 after stage $3492 (3 + random 0-4) and $12 after stage $3493 (8 + random 0-6). Stage $12 ($82:D4CD) is a match against Shadow Bomber: the next opponent's intro is cut off and a dark Bomberman named ??? says !!, 問答無用! and 勝負ナリ!, then the match starts. Reached in Mesen by setting $3493 to the next stage at a forced win.",
+  "section": "hidden",
+  "img": "shadow_bomber.png"
+ },
+ {
+  "code": "Win 10 matches in 2P VS",
+  "effect": "VICTORY! with a 名人 (Master) stamp beside the winner",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "In 2P VS a set only ends after 10 match wins ($80:9561); the results screen ($80:9714) then stamps 名人 next to the winner's 1P or 2P label (object $A79C, drawn only in 2P). 3P and 4P sets end sooner and show VICTORY! without it. Reached in Mesen with the win counts poked ($3131 or $3200 = $26).",
+  "section": "hidden",
+  "img": "vs_meijin.png"
  }
 ]

@@ -1968,5 +1968,18 @@
   "note": "US $05:A20D skips the A/Start test while the intro flag $0521 is set ($05:A19E, cleared at $05:A566 after about 285 frames); Japan ($05:A1FE) tests from the first frame. Start pressed 60 frames in, in Mesen. Image: US (left), Japan.",
   "section": "region",
   "img": "intro_skip.png"
+ },
+ {
+  "code": "ROM $13BA1 (6-1's map variant): 01 -> 00",
+  "effect": "An unused Area 6 map: nearly all soft blocks, a different pillar grid and enemy positions",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The map is (area - 1) x 2 + a variant from the table at $04:BB69 ($04:BBC9); map pointers at $04:BBF7. Area 6's variant row is all 1, so map 10 ($04:9EDE) is never used, and no mode or demo reaches it. JP has the same data 8 and 17 bytes lower. With the variant byte for 6-1 set to 0 (iNES file $13BA1, JP $13B89) and password 36363333, 6-1 loads it in Mesen. Image: the unused map (left), the real 6-1 (right).",
+  "section": "Secrets",
+  "img": "area6_unused_map.png"
  }
 ]

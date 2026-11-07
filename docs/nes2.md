@@ -182,9 +182,11 @@ and the seven secrets, in both carts. **22,186 of 23,616 traced code bytes ran**
   a sound-driver command table where the neighbours load masked values. Nothing writes `$FF`, so this stores the
   power-on 0. ★ It looks like `LDA #$FF` (`A9 FF`) with the wrong opcode (`A5 FF`); from the code only.
 - **Text** (`textdump.py`, `disasm/nes2/text_us.tsv`): every string ran. The unread hits are map and tile data.
-- **Maps**: the stage layouts are blocks in bank 4 (`$04:9BE6-$A6xx`, records starting `2A 2B`); there are two
-  copies of the area tables, and in the runs one copy of area 6's blocks (`$04:9F1F-$9FD4`) was never read while the
-  other copy was. Not decoded further.
+- **Maps**: the stage layouts are blocks in bank 4 (`$04:9BE6-$A6xx`, records starting `2A 2B`). `$04:BBC9` picks
+  map (area - 1) x 2 + variant, the variant from `$04:BB69` (area x 8 + stage), pointers at `$04:BBF7`; VS and BATTLE
+  use map 12. ★ Area 6's variants are all 1, so its map 10 (`$04:9EDE`, rows `$04:9F1E-$9FD9`) is never used: nearly
+  all soft blocks, another pillar grid and other enemy spots. With 6-1's variant byte set to 0 (file `$13BA1`, JP
+  `$13B89`) it loads in Mesen. ![The unused map, and the real 6-1](img/nes2/area6_unused_map.png)
 - **Graphics**: CHR is RAM, loaded from PRG per screen, so Mesen keeps no CHR log; the known unused Kondoria graphic was
   not located.
 

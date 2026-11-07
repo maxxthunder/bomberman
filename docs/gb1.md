@@ -222,6 +222,12 @@ screen came up. GameShark `0102D1C1` + `0104D2C1`, switched on after the battle 
 the password digit buffer), brings it up after the first round in both carts.
 ![The 240-win screen](img/gb1/perfect_240_jp.png)
 
+## Unused music
+
+- ★ Music goes through the request byte `$C3F1` (`CALL $0AC4`): constants 00-06 and 0B, and 09-12 from the stage
+  table at `$00:1F04` (Wario `$1E99`). Songs 07 and 08 of the table at `$07:4A0E` have their own data but no request:
+  07 is about 11 s, loud, not looping; 08 about 11 s, quiet and rhythmic, not looping. Same in Wario Blast.
+
 ## Open
 
 - The multitap battle's VICTORY! screen, arenas 2-8 and TECHNIQUE OFF weren't played through.

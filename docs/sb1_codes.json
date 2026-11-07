@@ -3312,5 +3312,31 @@
   "verified": "static",
   "section": "unused",
   "note": "The known list stops at DR WIN / X1-X4."
+ },
+ {
+  "code": "C32226DA C32227A1, then 7E00A43F at power-on",
+  "effect": "The unused ring map $C1:A1DA as battle stage 3",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The ROM codes point battle 3's map ($C3:2215, pointer at +$11) at the ring map, and $7E:00A4 = $3F held for the first frames starts battle 3. It loads and plays: a ring of floor around a block of walls. The floor comes out in the wrong tiles with this and battle 7's tile set (C32478DA C32479A1, scene $43), so its own tile set is gone. In Normal Game it hangs because the soft-block placer ($C6:1DC7) needs 112 free cells reachable from the start (flood fill $C6:1E93) and the ring has 90; battle mode skips that check ($C6:1DC9).",
+  "section": "unused",
+  "img": "maps/ring_C1A1DA_battle3.png"
+ },
+ {
+  "code": "Debug menu BGM NO. 03, 05, 09, 13, 15, 28, 29",
+  "effect": "Seven music tracks the game never plays: a different take on the world 1 theme, four tunes that start past their intro, and two copies of the world jingles",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Every track request goes through $C3:002C (Y = track), fed by the stage/scene table $C3:2F83, the jingle tables $C4:1874 and $C4:6C04, a few constants and the sound test's 18-entry list at $C7:07C9. None of them gives 03, 05, 09, 13, 15, 28 or 29; only the debug menu's BGM NO. plays them. 03 is another arrangement of the world 1 theme (02), denser and with parts an octave apart. 05, 09, 13 and 15 are tracks 04, 08, 12 and 14 starting past their intros. 28 and 29 copy the two per-world jingles note for note and sit in the demo's song set. Recorded in BizHawk.",
+  "section": "unused"
  }
 ]

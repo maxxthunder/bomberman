@@ -186,6 +186,13 @@ code reads pads 2-4; with 4 players answered and pads 2-4 fed (`sgb.lua`), the t
 
 Logo: `docs/img/logos/gb3_jp.png` (`tools/gb3/logo.py`).
 
+## Unused music
+
+- ★ Music is requested with `CALL $3D0E` (song table `$0E:49F0`). The area table at `$00:1BF1` has 9 entries
+  (09 09 0B 09 09 0B 0C 12 12) but the area never goes past 6, so song 12, the music of entries 7 and 8, is never
+  played. It has its own channel data (the last in the bank, from `$78C0`) and is a full looping tune. Songs 05, 06
+  and 0A point at other songs' data, so they're aliases, not lost music.
+
 ## Open
 
 - What `$C38E` (the stage-7 password form) changes in play.

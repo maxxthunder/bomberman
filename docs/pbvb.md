@@ -100,9 +100,14 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
   NINTENDO for 116 frames (the retail title says Licensed to Nintendo). Pointing the test screen's call at it (file
   `$8B8`: `01 AC BC 75` → `01 AC 46 6F`) shows it after the title code (BizHawk).
   ![LICENSED BY NINTENDO](img/pbvb/licensed_by_nintendo.png)
-- **Never run, normal play:** the stage-clear sequence (`$0701_D99A`, `$0701_CC90`; no run won a stage), mode 7 after
-  the last stage (`$0701_8088`, which skips ahead when A, B, L, R, Start and Select are all held), object handlers for
-  situations the runs didn't reach, the cartridge and link-port interrupt handlers, and unused commands of the sound
+- **Won stages** (BizHawk, the player's side handed to the CPU at level 15 and the opponent at 0, so the game decides
+  the win itself, `$0700_6EBC`): `$0701_D99A` is the medal card after each world boss (opponents 6-8, e.g. "Bomberman
+  got the Star Medal. Password 4390"); `$0701_CC90` the Gold Bomber lines after Count Dracu-boom and Ms. Flashy (9,
+  10). After Doom Castle a perfect run shows the castle door, then stage 10, Ms. Flashy's bonus stage. Mode 7
+  (`$0701_8088`) is the ending: the door, the statue, then the next level's name (Very Easy and Easy) or the staff roll
+  ending on END 1298 (Normal and Hard), then RESULT, and the level goes up by one. ★ Holding A, B, L, R, Start and
+  Select (`$0701_87EA`) cuts each ending scene short, seen on screen.
+- **Never run, normal play:** object handlers for situations the runs didn't reach, the cartridge and link-port interrupt handlers, and unused commands of the sound
   driver (its banner: "VSU DRIVER Version 0.19a ... Hudson Soft ... Prototype"). Other unreferenced routines are the
   developer menu above, two object handlers (`$0701_1D88`, `$0701_1E30`) and library helpers.
 - **Input codes:** the passwords, the L+R and debug-menu checks, the title code above, the boot wait for buttons to be

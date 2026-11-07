@@ -2,6 +2,19 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.15.0 (2026-11-07)
+- Unused music and sounds: seven Super Bomberman tracks only the debug menu plays, eight Super Bomberman 2 sound
+  effects, a jingle and four effects in Super Bomberman 4, Bomberman GB 3's music for the cut extra areas, and two
+  Bomberman GB tunes.
+- Cut stages, played: Super Bomberman's ring map as a battle stage; four unused boss arenas and two battle stages kept
+  in the Caravan in Super Bomberman 2; stage 12's three cut variants in Super Bomberman 3; two cut World 5 stages and
+  an unreferenced battle stage in Super Bomberman 4; an unused Area 6 map in Bomberman II.
+- Bomberman '93 Special Version: the leftover SELECT STAGE map, a cut COM-LINK mode's screens, and its own world 6
+  and staff-roll pictures. Bomberman '94: an unused jet sprite.
+- Panic Bomber W: a surprise match against Shadow Bomber and the 名人 stamp after 10 VS wins. Panic Bomber: a button
+  code that cuts the ending short. Atomic Punk: the password every island clear writes but never shows.
+- The game picture keeps a wide title screen's own shape.
+
 ## 1.14.0 (2026-11-07)
 - Unused graphics, shown in the games: Bomberman GB 3's TIME OVER screen and another PAUSE picture; a mechanical boss
   sprite set and four small machines in Bomberman '93; Pocket Bomberman's Japanese menu text; a starfield picture in

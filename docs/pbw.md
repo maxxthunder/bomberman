@@ -64,10 +64,13 @@ players, Options, every code, the ending, two random-input runs); the SA-1's cod
 - ★ **L or R + d-pad scrolls the menu background.** `$80:D61D`, run every frame by the menu loop (`$80:D588`): with L or
   R held, the d-pad moves the scroll of the pattern behind the menu (`$70E7`, `$70EB`) by 4 a frame (read back in
   Mesen: 128 → 208 after 20 frames of L+Right).
-- **Never run, normal play:** the VS set results (`$80:9714`), Story game over after declining to continue
-  (`$80:9D9B`), the VS match-decided flow (`$81:85C8`), four opponent attacks in the table at `$81:F49E` (entries 4,
-  5, 7, 9; 6 and 12 are empty), the second bonus stage `$12` (`$82:D4CD`; after stage 8 + random 0-6 on Normal or
-  harder), and a warm-boot entry at `$80:805F` with no reference.
+- **Reached with pokes:** the VS match-decided CONTINUE? (`$81:85C8`) and set results (`$80:9714`: VICTORY!, and ★ in
+  2P, where a set takes 10 match wins, a 名人 stamp by the winner), Story GAME OVER after declining to continue
+  (`$80:9D9B`), and opponent attacks 4, 5, 7 and 9 of `$81:F49E` (picked as random & 15, so just rare; 7 sends
+  tumbling Bombermen, 9 raises a row of stones; what 4 and 5 do wasn't clear). ★ Bonus stage `$12` (`$82:D4CD`) is a
+  surprise match against Shadow Bomber. ![2P VICTORY! with 名人](img/pbw/vs_meijin.png)
+  ![Shadow Bomber cuts into the intro](img/pbw/shadow_bomber.png)
+- **Never run:** a warm-boot entry at `$80:805F`, with no reference.
 - **Input codes:** besides the L+R password check (`$80:CA66`) and the scroll above, the pads are only compared with
   single directions and the usual confirm and cancel masks. No other button code.
 - **Unset flags:** only `$3000`, `$3002` and `$3203`, written by index or by the other CPU.

@@ -113,10 +113,15 @@ island picked in turn from a save with islands `$5A` (not each checked to reach 
 
 - **Dead code** (`disasm/bb/dead_us.txt`): branch-reachable never-run 2,219 bytes, dead 4,883, no reference 14; 85
   orphan candidates, mostly data. The largest pieces are VS MODE's link-cable game in bank 4 (it needs a second Game
-  Boy), the round-clear and results path (`$00:33A6`, reached when a round is won, bit 4 of `$FFA2`; the runs lost or
-  left rounds instead), and branches of play the bot didn't hit. The routines at `$00:10DC-$127B` are the commands of a
-  small script interpreter (`$00:10B0`, opcode & `$3F`); the runs used two of them. Start in the Panel Shop opens YOUR
-  PANELS (`$00:2B13`), a list of the panels you own. Nothing found is cut beyond HATISUKE and TYUUSUU above.
+  Boy) and branches of play the bot didn't hit. A round is won on the exit with no enemies left (`$00:0B8E`, bit 4 of
+  `$FFA2`): the results (`$00:33A6`) tally TIME, BLOCK and GOLD into gold and score. An island's last round leads to
+  the rescue scene (`$00:3CB9`, THANK YOU! KID!). `$00:10B0` is the enemy movement dispatcher (enemy type & `$3F`,
+  called per enemy from `$00:152F`); all 12 handlers run in ordinary rounds. Start in the Panel Shop opens YOUR
+  PANELS (`$00:2B13`), a list of the panels you own.
+- ★ **A password nobody sees.** Before the rescue scene (not on Faria) the game adds the owned panels' prices to the
+  gold, as game over does, writes a CONTINUE password into the screen map at `$9C0A` and puts the gold back. That
+  map is never displayed and is wiped before the next screen, so only game over shows a password. After clearing
+  Jagoraz with 300 gold and 600 in panels it held 6L1PLRCW (Bomber Boy 6J1MJOBS): Jagoraz cleared, 900 gold.
 - **Unset flags** (`disasm/bb/flags_us.txt`): only bank 7's sound-driver fields and two VS MODE bytes written by
   untraced bank 4 code. Nothing that looks like a debug switch.
 - **Input codes** (`disasm/bb/pad_us.txt`): menus, movement, the shop, the sound test's selector, the high-score

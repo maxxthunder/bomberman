@@ -398,7 +398,8 @@ match).
 - Soft-block counts climb from 30 (1-1) to 144 (8-7); every x-8 boss stage has 0.
 - ★ **New: an unused layout.** Round 1's block table has blocks 0 and 1, a full two-screen-wide arena in the round-1
   tiles (`$0D:4ED8`, `$0D:4F39`; `unused_r1_blk0.png`, `unused_r1_blk1.png`). Every round-1 stage is type 1 or 2,
-  so nothing loads them. Rounds 2-8 use their blocks 0/1 for their wide stages.
+  so nothing loads them. Rounds 2-8 use their blocks 0/1 for their wide stages. Made type 3 (Mesen cheat
+  `0180BC:03`, 1-1's header `$0C:40BC`), 1-1 loads it in the game: ![Round 1's wide layout in the game](img/pce90/unused_r1_wide_ingame.png)
 
 ![All layouts](img/pce90/maps/_all.png)
 

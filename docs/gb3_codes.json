@@ -1033,5 +1033,16 @@
   "note": "Set 11 ($00:0A97) loads a different pause picture from the one the game shows (PAUSE モリモリ, Bomberman in a spotlight). No call loads the set and no tilemap draws it, so its layout is unknown. Shown in Mesen by loading set 11 on the game-over screen (patch $17D54 -> 0B) and writing tiles 0-127 into the BG map in order (16 a row).",
   "section": "unused",
   "img": "pause_unused_tiles.png"
+ },
+ {
+  "code": "Music 12",
+  "effect": "A full looping tune meant for the two cut extra areas",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The area music table at $00:1BF1 has 9 entries (09 09 0B 09 09 0B 0C 12 12), but the area number never goes past 6 (the password check rejects higher ones), so entries 7 and 8, song 12, are never read. 12 has its own channel data, the last in the bank (from $78C0), and plays as a full looping tune. Recorded in BizHawk.",
+  "section": "unused"
  }
 ]

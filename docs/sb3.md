@@ -217,6 +217,14 @@ The known Pro Action Replay route (`7E6C6E:0B`/`0C`) pokes the selected stage di
   the continue itself). It is a one-frame window. Beta 300 frames after the hit (left), EU after the restart (right).
   ![Beta and EU](img/sb3/beta_rejoin.png)
 
+- **Battle data sets.** The switch at `$C6:62EF` (JP `$C6:62DB`, beta `$C6:62E5`, the same bytes) gives each battle
+  stage four data sets (base + `$542E`), except stages 11 and 12, fixed at `$75` and `$6D`. Sets `$6E-$70` are named by
+  no case: ★ they are stage 12's three missing variants. With the set byte (EU file `$6636C`, JP `$66358`, beta
+  `$66362`) changed to each, stage 12 plays with its arrow panels in other places, the same in all three versions.
+  ![Stage 12 as shipped, then sets $6E, $6F, $70](img/sb3/stage12_cut_variants.png)
+  The beta has no layouts of its own (its extra bytes are moved code and script). (A portable Mesen with an empty
+  settings file has no pad in port 1, which is why the battle menus seemed stuck before.)
+
 ### Screen by screen (EU vs JP vs beta)
 
 Each screen was reached in all three ROMs with the same button presses and compared on screenshots; the graphics

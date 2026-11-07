@@ -1519,5 +1519,19 @@
   "verified": "static",
   "section": "cheat",
   "note": "Already known."
+ },
+ {
+  "code": "ROM $6636C (stage 12's data set): 6D -> 6E, 6F or 70",
+  "effect": "Stage 12's three cut battle variants: the balloon arena with the arrow panels in other places",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The battle switch at $C6:62EF gives every stage four data sets (base + $542E) except stage 11 ($75) and stage 12, fixed at $6D, so stage 12 always plays the same way. Sets $6E-$70 follow it and no case names them. With the set byte (EU file $6636C, JP $66358, beta $66362) changed to each, stage 12 loads and plays with its own arrow-panel layout, the same in all three versions. Mesen. Image: $6D as shipped, then $6E, $6F, $70.",
+  "section": "unused",
+  "img": "stage12_cut_variants.png"
  }
 ]

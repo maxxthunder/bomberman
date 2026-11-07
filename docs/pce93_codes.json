@@ -1864,5 +1864,41 @@
   "note": "Another directory entry nothing names or loads. Its four 32 x 16 objects look like entry 36 (used by one screen script) but share only 2 pieces with it. Mesen, US 1-8: the boss loader's second call switched to 37 and the cells laid out as sprites; three palettes tried, the right one is unknown.",
   "section": "unused",
   "img": "unused_machines.png"
+ },
+ {
+  "code": "ROM patch $4438: BD 88 08 -> 5C 98 06, then a password (with the menu patch)",
+  "effect": "The Special Version's leftover SELECT STAGE planet map",
+  "versions": [
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The Special Version shows the CONFIGRATION screen where US and JP show the planet map, but its map routine is still there ($06:985C, US $06:9A2C). The patch points the far call at it; with the Normal Game menu patch and password BABBAACA it shows a starfield with SELECT STAGE, six planets and red planet names that change with Right (アジアンスター ...), and PUSH RUN BUTTON. The graphics are the US ones; the layout and text are the Special Version's own. Mesen.",
+  "section": "unused",
+  "img": "sp_select_stage_map.png"
+ },
+ {
+  "code": "Title menu entry 0 (bank 6 $984C) -> B3 A8",
+  "effect": "A cut COM-LINK mode's screens: the cable pairing screen and its VICTORY! results",
+  "versions": [
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The Special Version keeps a mode with $388C = 9 whose only start, $07:A8B3, nothing calls. It shows White and Black Bomberman joined by a cable: both players bring up this screen, and whoever presses RUN first becomes White Bomberman (screen 37, graphics #21). The results routine ($07:AE07) shows a VICTORY! screen only in that mode: White Bomberman with a trophy, Black Bomberman waving a white flag, RETRY.. PUSH RUN BUTTON (screen 28, #22). Pointing the title menu's first entry at $07:A8B3 shows the first; at $07:AE07 with $388C = 9 written at $07:AE15, the second. These are the screens, not a real link session. Mesen.",
+  "section": "unused",
+  "img": "sp_comlink_screens.png"
+ },
+ {
+  "code": "Menu patch and password IBBBAAHA or KCCBAAIA, then clear the world",
+  "effect": "The Special Version's own world 6 clear picture and staff-roll opening, from the leftover Normal Game",
+  "versions": [
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The Normal Game the Special Version can't reach still has its world-clear pictures and staff roll, with art of its own: world 6's clear (screen 8, graphics #90 and #91: Bomberman asleep at a kotatsu) and the staff roll's opening scene (screen 15, #64: the city at night with the ship, BOMBERMAN '93 STAFF). With the Normal Game menu patch and a world 6 or 7 password, a forced clear ($3898 = 4, $388D = 7 at $02:83BF) runs them. Mesen.",
+  "section": "unused",
+  "img": "sp_world6_staff_pictures.png"
  }
 ]
