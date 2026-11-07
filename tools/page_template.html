@@ -722,10 +722,10 @@ const section = (game, e) => {
 const families = ["Super Nintendo", "TurboGrafx-16 / PC Engine", "Game Boy / Game Boy Color", "NES / Famicom", "Genesis", "Virtual Boy"];
 const byFamily = f => GAMES.filter(x => x.family === f);   // in list order
 // the screenshot in each game's header band
-const HERO = { sb1: ["sb1", "debug_fire_full"], sb2: ["sb2", "battle_stage11"], sb3: ["sb3", "arena_variants"], sb4: ["sb4", "stages_11_12"],
-  sb5: ["sb5", "battle_0926"], mega: ["mega", "stage_intro_5120"], pce90: ["pce90", "title_us"], pce93: ["pce93", "sp_normal_game"],
-  pce94: ["pce94", "battle_5players"], nes1: ["nes1", "title_us"], nes2: ["nes2", "title_us"], gb1: ["gb1", "title_wario"], gb2: ["gb2", "title_us"],
-  gb3: ["gb3", "title_jp"], pocket: ["pocket", "title"], max: ["max", "charaboms_blue"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"] };
+const HERO = { sb1: ["sb1", "title"], sb2: ["sb2", "title"], sb3: ["sb3", "title"], sb4: ["sb4", "title"],
+  sb5: ["sb5", "title"], mega: ["mega", "title"], pce90: ["pce90", "title_us"], pce93: ["pce93", "title"],
+  pce94: ["pce94", "title"], nes1: ["nes1", "title_us"], nes2: ["nes2", "title_us"], gb1: ["gb1", "title_wario"], gb2: ["gb2", "title_us"],
+  gb3: ["gb3", "title_jp"], pocket: ["pocket", "title"], max: ["max", "title"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"] };
 const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb", "Virtual Boy": "vb" };
 // 16 x 16 pixel icons for the console tabs: filled rects, then holes, then fixed-colour pixels ([x, y, w, h])
 const PXICON = {
