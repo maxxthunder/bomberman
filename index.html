@@ -57,11 +57,15 @@
 [hidden] { display: none !important; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--body); }
+/* a faint dithered Bomberman in the bottom-right corner, behind everything (art (c) 2000 Hudson Soft, logos removed) */
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .35;
+  background: url("docs/img/bg_onsen.png") right bottom / min(1023px, 92vw) auto no-repeat; image-rendering: pixelated; }
+@media (prefers-color-scheme: light) { body::before { opacity: .12; } }
 main { max-width: 1000px; margin: 0 auto; padding: 24px 16px 48px; display: grid; gap: 18px; }
 main > *, #game > * { min-width: 0; }
 a { color: var(--pink); }
-header { position: relative; padding: 20px 64px 18px 18px; border-radius: 14px; border: 1px solid var(--line); background: var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='%23ffffff' fill-opacity='.05'%3E%3Ccircle cx='22' cy='32' r='11'/%3E%3Crect x='27' y='17' width='7' height='6' rx='1.5' transform='rotate(45 30.5 20)'/%3E%3C/g%3E%3Cpath d='M33 17c2-5 7-6 11-3' stroke='%23ffffff' stroke-opacity='.07' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 0 0 / 56px 56px; }
-@media (prefers-color-scheme: light) { header { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='%23151b3d' fill-opacity='.05'%3E%3Ccircle cx='22' cy='32' r='11'/%3E%3Crect x='27' y='17' width='7' height='6' rx='1.5' transform='rotate(45 30.5 20)'/%3E%3C/g%3E%3Cpath d='M33 17c2-5 7-6 11-3' stroke='%23151b3d' stroke-opacity='.07' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); } }
+header { position: relative; padding: 20px 64px 18px 18px; border-radius: 14px; border: 1px solid var(--line); background: var(--panel) url("docs/img/header_dither.png") right top / 640px 16px repeat-y; image-rendering: pixelated; }
+@media (prefers-color-scheme: light) { header { background-image: url("docs/img/header_dither_light.png"); } }   /* the dither gets denser toward the right */
 #theme { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; display: grid; place-items: center; background: var(--panel-2);
   border: 1px solid var(--line); border-radius: 10px; color: var(--ink); cursor: pointer; }
 #theme:hover { border-color: var(--pink); }
@@ -91,7 +95,7 @@ button { cursor: pointer; }
 #picker.open .ctab .wide { display: none; } #picker.open .ctab .narrow { display: inline; }   /* short names in the drop-down panel */
 .pgroup[hidden] { display: none; }
 .gcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-.gcard { background: var(--panel); border: 2px solid var(--line); border-top: 4px solid var(--acc); border-radius: 12px; padding: 12px 8px 10px; display: grid; gap: 4px;
+.gcard { background: var(--panel); border: 2px solid var(--line); border-radius: 12px; padding: 12px 8px 10px; display: grid; gap: 4px;
   justify-items: center; align-content: start; font: 800 15px/1.2 var(--body); text-align: center; min-width: 0; }
 .gcard img { width: 100%; height: 72px; object-fit: contain; image-rendering: pixelated; }
 .gcard small { color: var(--muted); font: 600 13px var(--body); }
