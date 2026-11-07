@@ -80,3 +80,44 @@ stage 1 with 10 bombs, fire 5 and speed. The 20th letter submits the code.
   the bytes are the same in both carts, and both were tested in Mesen.
 - No password check reads the joypad, so no code needs buttons held while it is entered.
 
+## Text
+
+- ★ **TYUUSUU**: Panel Select (`$00:30DA`) and the round results (`$00:35B5`) name the island from a second list
+  (`$00:3630`, names `$3642`): CUOLECE, WINDRIA, THULIA, HEVOL, **TYUUSUU**, JAGORAZ, GRAD, FARIA, WATHER. The map uses
+  the first list (`$00:0F79`), where island 4 is MY TOWN. My Town has no rounds (choosing it opens the Panel Shop), so
+  TYUUSUU never shows. With `$C0EA` = 4 poked as Panel Select opens it reads TYUUSUU 1/0 (both carts, Mesen).
+  ![JAGORAZ, and TYUUSUU forced](img/bb/tyuusuu_panel_select.png)
+- ★ **HATISUKE**, a 10th panel. The panel tables have 10 entries: names (`$00:301F`: ELIXER, BOMB UP, FIRE UP,
+  SPEED UP, REMOCON, WALLPASS, BOMBPASS, TIMER, FIREPASS, HATISUKE), prices (`$00:1CEC`, stored negated: 100, 50, 50,
+  20, 30, 50, 40, 50, 100, **200**) and the island each one waits for (`$00:335B`, from REMOCON on). The shop's BUY
+  cursor wraps after 9 (`$00:2E18`), and HATISUKE's mask is 0, so it would show ??? anyway. A round's panel comes
+  from the jump table `$01:49D4`, which points at the stubs for panels 0-8 but not at the one for 9 (`$01:4A44`,
+  Bomber Boy `$01:4A29`, both unreferenced). SELL and Panel Select step through 10 slots (`$00:2E0F`). So nothing
+  gives it, and it does nothing: the round setup (`$00:0827`) counts panels 1-3 (bombs, fire, speed) and flags 4-8
+  (REMOCON to FIREPASS), ELIXER is used on death, and nothing checks 9; after a round `$00:0924` removes it like the
+  other one-round panels. Pointing the shop's lookups at slot 9 in Mesen draws PRICE = 200, EFFECT = HATISUKE (both
+  carts); put in the inventory (`$C4C0` = 9) and equipped, it shows as a ? icon and the round starts with the same
+  bombs, fire, speed and flags as with no panel.
+  ![HATISUKE in the shop](img/bb/hatisuke_shop.png)
+- The other strings belong to screens normal play reaches: menus, map, shop, the sound test and Game B's code screen
+  were read in Mesen data logs; the round results, game over, Game B's bonus stage and the staff roll weren't reached
+  in those runs (the staff roll shows in the ending above).
+  VS MODE's strings (bank 4: PANEL MODE, POWERFUL MODE, HOW MANY TIMES, VS MODE NOT READY) need a link cable and
+  weren't run.
+
+## Hidden-content sweep
+
+Atomic Punk, with `tools/gbsweep.py` on Mesen code/data logs from 20 runs: title and attract, a new game, every
+island picked in turn from a save with islands `$5A` (not each checked to reach a round), the Panel Shop, passwords and the ending, the sound test, Game B
+(several stages), game over and the VS MODE menu. 20,616 bytes ran as code.
+
+- **Dead code** (`disasm/bb/dead_us.txt`): branch-reachable never-run 2,219 bytes, dead 4,883, no reference 14; 85
+  orphan candidates, mostly data. The largest pieces are VS MODE's link-cable game in bank 4 (it needs a second Game
+  Boy), the round-clear and results path (`$00:33A6`, reached when a round is won, bit 4 of `$FFA2`; the runs lost or
+  left rounds instead), and branches of play the bot didn't hit. The routines at `$00:10DC-$127B` are the commands of a
+  small script interpreter (`$00:10B0`, opcode & `$3F`); the runs used two of them. Start in the Panel Shop opens YOUR
+  PANELS (`$00:2B13`), a list of the panels you own. Nothing found is cut beyond HATISUKE and TYUUSUU above.
+- **Unset flags** (`disasm/bb/flags_us.txt`): only bank 7's sound-driver fields and two VS MODE bytes written by
+  untraced bank 4 code. Nothing that looks like a debug switch.
+- **Input codes** (`disasm/bb/pad_us.txt`): menus, movement, the shop, the sound test's selector, the high-score
+  check and the two codes above (sound test, soft reset). No other button combination.

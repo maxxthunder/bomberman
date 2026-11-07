@@ -2,6 +2,16 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.13.0 (2026-11-07)
+- Panic Bomber: a title-screen button code opens a hidden screen-alignment test; an unused LICENSED BY NINTENDO
+  screen (patch); all 16 ITEM types of the DEBUG MENU, each with its effect; WIN confirmed.
+- Panic Bomber W: the cut STAGE CLEAR tally screen (patch), and L or R with the d-pad scrolls the menu background.
+- Atomic Punk / Bomber Boy: HATISUKE, a 10th panel the game never gives out, and TYUUSUU, My Town's unused name.
+- Super Bomberman 3: the beta's extra continue case, played in both versions.
+- NES Bomberman: all six bonus items made to appear, with their checks, stages and points. Bomberman II: the bomb-up
+  seen in a stage.
+- Hidden-content sweeps for Atomic Punk, Panic Bomber and Panic Bomber W.
+
 ## 1.12.1 (2026-11-06)
 - The game picker has a tab per console and shows that console's games, so it takes far less room.
 

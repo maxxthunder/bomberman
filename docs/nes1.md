@@ -142,9 +142,23 @@ set the map draw skips turning cell types 4 (item) and 5 (exit) into plain brick
 
 GameFAQs and other published notes list the six bonus items (target, goddess mask, cola, Famicom, Nakamoto-san, Dezeniman-san) and their
 conditions. The checks are `$E399-$E4AE`, called every frame from the main loop (`$C467`); the bonus item index per
-stage is `$E4AF` (`$58 & 7`, 6 and 7 folded to 0-1). None of the runs met the
-conditions, so this code never ran (it is the biggest `cond` stretch in `disasm/nes1/dead_us.txt`); **not reproduced
-in Mesen**.
+stage is `$E4AF` (`$58 & 7`, 6 and 7 folded to 0-1). When a check passes, `$E450` drops the item on a random empty
+tile (`$CACF`, into `$AA`/`$AB`) for 512 frames, drawn as metasprite `$2C` + index (`$CFED`); walking onto it adds the
+points from `$E4BC` and allows no second one that stage (`$A8` = 2). None of the coverage runs met a condition (it is
+the biggest `cond` stretch in `disasm/nes1/dead_us.txt`), so each was met by setting the RAM its check reads:
+
+| Index | Stages | Item | Check | Set in Mesen | Points |
+|---|---|---|---|---|---|
+| 0 | 6, 8, 14, 16, 22, 24, 30, 32, 38, 40, 46, 48 | target (a framed B) | `$9F`, times the exit was stepped on | `$9F` = 1 | 10,000 |
+| 1 | 1, 7, 9, 15, 17, 23, 25, 31, 33, 39, 41, 47, 49 | goddess mask | no enemies left, `$A0-$A3` all set (the four corners reached without leaving the outer ring or killing) | enemies removed, `$A0-$A3` = 1 | 20,000 |
+| 2 | 2, 10, 18, 26, 34, 42, 50 | Nakamoto-san (the face with glasses) | no enemies left and `$A4` (bricks destroyed) = 0 | enemies removed | 10,000,000 |
+| 3 | 3, 11, 19, 27, 35, 43 | Famicom | `$A5` (bomb explosions) reaches `$F8` | `$A5` = `$F8` | 500,000 |
+| 4 | 4, 12, 20, 28, 36, 44 | cola (the bottle marked C) | `$9F` set and `$A6` (a movement counter, `$CE3A`) reaches `$F8` | `$9F` = 1, `$A6` = `$F8` | 30,000 |
+| 5 | 5, 13, 21, 29, 37, 45 | Dezeniman-san | `$A4` = stage × 2 + 50, `$A7` (exit bombed) = 3 and `$9E` (enemies killed by fire) = 0 | `$A4`, `$A7` | 20,000,000 |
+
+Each stage was started from its password, the RAM set for 4 frames, and the game's own check spawned the item; moved
+next to Bomberman and walked into, it added its points to the score. The same in US and JP.
+![The six bonus items](img/nes1/bonus_items.png)
 
 ## Regions
 
@@ -223,7 +237,6 @@ Both devices, the same tests: Pro Action Replay (address + value) `007AFF` invin
 
 ## Open
 
-- The bonus items were read from the code only; none was made to appear in Mesen.
 - The hang limit (stage 96, 242 blocks, not 244) was measured, not derived: a model of the random number generator
   `$D670` reached all 246 cells, so the cause is not settled.
 - The FDS version was not available.

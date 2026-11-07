@@ -208,9 +208,14 @@ The known Pro Action Replay route (`7E6C6E:0B`/`0C`) pokes the selected stage di
   (`$C0:0BCE-$C0:0BE3`) that store every result in a 256-byte ring at `$7E:2AFC` (index `$7E:2AFB`). Nothing reads it,
   so it looks like a debug trace; EU ends the routine with `RTL` at `$C0:0BCE`, which is the `$15`-byte shift in its
   bank `$C0`. In Mesen, 20 START presses from power-on left index 84 in JP and the beta, 0 in EU.
-- ★ **Continues in two-player Normal Game (beta).** The rejoin check at `$C2:599D` lets a pressing player rejoin and
-  spend a continue when either player is out (`$147F|$1480`); JP and EU test only the pressing player's own slot
-  (`LDX $BA` / `LDA $147F,X`). From the code; not played.
+- ★ **Continues in two-player Normal Game (beta).** The rejoin task (`$C2:5964`) picks which player gets PUSH START
+  (`$BA`, beta `$C2:5AC1`, JP/EU `$C2:5AC3`). JP and EU leave `$BA` unset when both players are down and refuse the
+  press (`CPX #$02`, then `LDA $147F,X`); the beta needs only someone out (`$147F|$1480` bit 7), a continue and Start.
+  The one case that differs: P1 is out and P2 is hit, and P1 presses Start on that frame (before the round-end flag
+  `$0345` bit 1 is set on the next). In Mesen with real inputs: in the beta P1 comes back, a continue is spent (3 to 2)
+  and the round goes on; in JP and EU the press is ignored, the round is lost and restarts with P2 (the game spends
+  the continue itself). It is a one-frame window. Beta 300 frames after the hit (left), EU after the restart (right).
+  ![Beta and EU](img/sb3/beta_rejoin.png)
 
 ### Screen by screen (EU vs JP vs beta)
 

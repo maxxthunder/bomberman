@@ -354,7 +354,7 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Left-pad Right and Left change a value. SCROLL background scroll on/off; ANIMATION how often blocks start an idle animation (0 every 4th frame, 1 every 2nd, the normal value, 2 every frame); DOKURO brick attack rows, which drop items when cleared; TUBU piece set 0-5; ENEMY the opponent 0-10; WORLD the background 0-3; SPEED drop speed 0-5; COLOR block kinds 1-5; ERASE blocks in a row to clear 1-6; ITEM n makes every item type n-1 (items come only from DOKURO blocks); EVENT n forces event n-1 and makes a 2-chain enough to start it, for the left player only (a giant spiked robot, rolling explosions, a vortex, a red flood); WIN rounds to win; CPU the opponent's level (0F chains and attacks fast, 00 only clears). All seen in BizHawk except WIN; ITEM's types were seen as numbers, not identified (menu $0700_64B0, stage tables from $0702_6588).",
+  "note": "Left-pad Right and Left change a value. SCROLL background scroll on/off; ANIMATION how often blocks start an idle animation (0 every 4th frame, 1 every 2nd, the normal value, 2 every frame); DOKURO brick attack rows, which drop items when cleared; TUBU piece set 0-5; ENEMY the opponent 0-10; WORLD the background 0-3; SPEED drop speed 0-5; COLOR block kinds 1-5; ERASE blocks in a row to clear 1-6; ITEM n makes every item type n-1 (items come only from DOKURO blocks); EVENT n forces event n-1 and makes a 2-chain enough to start it, for the left player only (a giant spiked robot, rolling explosions, a vortex, a red flood); WIN the round wins that end a match (1, the default, or 2); CPU the opponent's level (0F chains and attacks fast, 00 only clears). All seen in BizHawk (menu $0700_64B0, stage tables from $0702_6588).",
   "section": "debug",
   "img": "debug_menu_0825.png"
  },
@@ -369,5 +369,41 @@
   "note": "EVENT n > 0 sets the chain thresholds $254A/$254C to 1 and 2 (normally 4 and 5) and forces event n-1, but only for the left player (struct $5954, whose +8 is 0), so the CPU opponent of 0825 never starts one; with 0513 the left side plays itself. In BizHawk with CPU 0F: each event started on the left side's 2-chain. Image: EVENT 1, 2 (top), 3, 4.",
   "section": "debug",
   "img": "debug_events.png"
+ },
+ {
+  "code": "DEBUG MENU: ITEM 1-16 (with DOKURO)",
+  "effect": "Every item is one type: ITEM n gives type n-1, 16 items in all",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Items come only from cleared DOKURO brick rows, and their type is normally random & 15 ($0701_5FEC); the effects are a switch at $0701_6632 and work on the owner's field. ITEM 1 bricks become bombs; 2 left and right swapped for about 500 frames; 3 pieces fall at full speed for about 500 frames; 4 blasts use level 0 for about 500 frames (from the code); 5 bombs become rocks; 6 every bomb explodes; 7 the next piece is a giant bomb; 8 a big Bomberman bounces in front of your field; 9 a row of bricks pushed up; 10 four rocks pushed up; 11 STOP: a 5-4-3-2-1 countdown with no pieces falling; 12 bricks drop into the outer columns; 13 the next piece is rocks; 14 every face block cleared; 15 a row of bombs pushed up; 16 every bomb removed. In BizHawk with 0513, DOKURO 1 and CPU 0F: each icon seen, and each effect seen in the field except 2-4 and 16 (seen in RAM). Image: ITEM 1-8 (top) and 9-16.",
+  "section": "debug",
+  "img": "debug_items.png"
+ },
+ {
+  "code": "Title screen: right-pad Left, B, right-pad Down, A, right-pad Up",
+  "effect": "A test screen: one horizontal line for the left eye, two short vertical bars for the right",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$0701_B1DC follows the sequence on the PANIC BOMBER title (any other new press starts it over) and sets the main mode $0500_26D6 = 6 ($0701_B270), which runs $0701_7E74. Seen together, the bars cross the line: it looks like a chart for lining up the two screens. A or Start goes back to the intro ($0701_7FF2). Entered before the demo starts, seen in MAME (both eyes; image: left eye, right eye) and BizHawk (left eye).",
+  "section": "Special codes",
+  "img": "title_code_lines.png"
+ },
+ {
+  "code": "ROM patch $8B8: 01 AC BC 75 -> 01 AC 46 6F, then the title code",
+  "effect": "An unused LICENSED BY NINTENDO screen",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$0701_77FE, with no reference anywhere, is a copy of the test-screen routine that shows LICENSED BY NINTENDO (drawn as tiles) for 116 frames or until A or Start, then fades out. The retail title says Licensed to Nintendo instead. The patch points the test screen's call ($0700_08B8) at it; seen in BizHawk.",
+  "section": "patch",
+  "img": "licensed_by_nintendo.png"
  }
 ]

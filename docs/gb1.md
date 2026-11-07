@@ -200,7 +200,7 @@ JP and Wario (`tools/gb1/multitap.lua`, run with `tools/emu/sgb_dump.py`).
 | Story | attract story about the stolen techniques (Known), after about 36 s on the title (★ countdown `$3C20`, `$0A:40A7`) | removed, no trace in the ROM; the title waits forever ([img](img/gb1/title_idle.png)) |
 | SGB border | blue Bombermen | Wario in the top centre |
 | Title credit | LICENSED BY NINTENDO | ©1994 NINTENDO |
-| ★ Arena code | | cells marked `$20` instead of `$01` (`$00:3272`, `$32E6`, `$3313`), an extra collision test (`$00:2F82`) and a saved `$19` cell cleared to floor (`$01:5D39`): bomb and technique fixes, read from the code only |
+| ★ Arena code | | the stage bombs of round 6 stages 1-3 (`$00:31FB`) mark their cell `$20` instead of `$01` (`$00:3272`, `$32E6`, `$3313`; seen in RAM, same run in both), and the flame test (`$00:2F82`) lets a player's flame pass over them (JP stops it like a wall) and over soft blocks `$0D-$0F`; a saved `$19` (burning block) cell is cleared to floor when an object leaves it (`$01:5D39`), and a finished burn no longer clears a cell an object holds (`$00:3413`). The effects in play are read from the code: no flame reached a stage bomb in the runs |
 
 ![JP and Wario titles](img/gb1/title_jp.png) ![](img/gb1/title_wario.png)
 

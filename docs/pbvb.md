@@ -69,9 +69,9 @@ defaults `$0700_6B46`) lets you set them by hand.
 | SPEED | `$0500_2536` | 0-5 | drop speed (seen) |
 | COLOR | `$0500_2532` | 1-5 | how many kinds of block (seen: 1 = all the same face) |
 | ERASE | `$0500_2534` | 1-6 | blocks in a row to clear (seen) |
-| ITEM | `$0500_26E3` | 0-16 | n > 0 makes every item type n-1 (`$0701_5FEC`); items come only from DOKURO blocks (seen as type values; what each type does is open) |
+| ITEM | `$0500_26E3` | 0-16 | n > 0 makes every item type n-1 (`$0701_5FEC`, normally random & 15); items come only from DOKURO blocks. Effects (switch `$0701_6632`), each icon seen: 1 bricks → bombs, 2 left/right swapped, 3 full drop speed, 4 blast level 0 (code), 5 bombs → rocks, 6 all bombs explode, 7 next piece a giant bomb, 8 a big Bomberman hides your field, 9 a brick row pushed up, 10 four rocks pushed up, 11 STOP countdown, 12 bricks dropped in the outer columns, 13 next piece rocks, 14 face blocks cleared, 15 a bomb row pushed up, 16 bombs removed; 2-4 last about 500 frames ![](img/pbvb/debug_items.png) |
 | EVENT | `$0500_26E4` | 0-4 | n > 0 forces event n-1 on a 2-chain (thresholds `$254A`/`$254C` 1 and 2, normally 4 and 5), for the left player only (struct `$5954`), so use `0513` to see it: a giant spiked robot, rolling explosions, a vortex, a red flood (seen) ![](img/pbvb/debug_events.png) |
-| WIN | `$0500_2538` | 1-2 | rounds to win (code only) |
+| WIN | `$0500_2538` | 1-2 | round wins that end a match (`$0700_6EBC` compares each side's win count): with 1 (the default) one win ends it, with 2 a 1-0 round goes on and 2-1 ends it (seen with `0513`) |
 | CPU | `$0500_253C`, `$253A` | 0-15 | CPU level: at 15 the opponent drops fast and chains, at 0 it only clears (seen); your side stays yours unless `0513` |
 
 ## ★ The developer menu (patch)
@@ -83,3 +83,29 @@ sub-mode word the finished game reads (`$0500_24F8`; the menu still writes the o
 (MD5 `8799f344054ba0088d399684902eefa1`) in BizHawk: GAME START boots normally, DEBUG GAME PLAY and DEBUG AUTO PLAY give
 the DEBUG MENU and then a game (as `0825` and `0513`), SOUND TEST and ENDING open those.
 ![The developer menu](img/pbvb/dev_menu_patch.png)
+
+## Hidden-content sweep
+
+BizHawk's Virtual Boy core reports no executed addresses, so coverage came from MAME (`vboy`, debugger breakpoints
+on every block start found by a V810 tracer, logged to unused work RAM) over about 35 runs: attract, normal games on
+Very Easy and Hard, passwords, every special code, the DEBUG MENU with several settings, auto play, sound test, stage
+select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
+
+- ★ **Title-screen code: a test screen.** On the PANIC BOMBER title, press right-pad Left, B, right-pad Down, A,
+  right-pad Up (`$0701_B1DC`; any other press starts over). It sets mode 6 (`$0500_26D6`, `$0701_B270`): one horizontal
+  line for the left eye and two short vertical bars for the right, which cross when seen together, like a chart for
+  lining up the screens. A or Start returns to the intro. Seen in MAME and BizHawk.
+  ![Left eye, right eye](img/pbvb/title_code_lines.png)
+- ★ **LICENSED BY NINTENDO.** `$0701_77FE` has no reference: a copy of the test-screen routine that shows LICENSED BY
+  NINTENDO for 116 frames (the retail title says Licensed to Nintendo). Pointing the test screen's call at it (file
+  `$8B8`: `01 AC BC 75` → `01 AC 46 6F`) shows it after the title code (BizHawk).
+  ![LICENSED BY NINTENDO](img/pbvb/licensed_by_nintendo.png)
+- **Never run, normal play:** the stage-clear sequence (`$0701_D99A`, `$0701_CC90`; no run won a stage), mode 7 after
+  the last stage (`$0701_8088`, which skips ahead when A, B, L, R, Start and Select are all held), object handlers for
+  situations the runs didn't reach, the cartridge and link-port interrupt handlers, and unused commands of the sound
+  driver (its banner: "VSU DRIVER Version 0.19a ... Hudson Soft ... Prototype"). Other unreferenced routines are the
+  developer menu above, two object handlers (`$0701_1D88`, `$0701_1E30`) and library helpers.
+- **Input codes:** the passwords, the L+R and debug-menu checks, the title code above, the boot wait for buttons to be
+  released and the mode-7 skip. Nothing else.
+- **Text:** the ASCII strings are the developer menu, sound test, stage select, DEBUG MENU and RESULT labels, all
+  above, and the sound driver's banner.

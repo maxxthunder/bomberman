@@ -47,3 +47,29 @@ The PC Engine Super CD-ROM² version (Bomberman: Panic Bomber, 1994) has no pass
 backup memory instead. Its Story mode goes straight to the difficulty choice; the save routine near the start of the
 data track calls the System Card's backup-memory functions with the file name `P.BOMBER` and a 166-byte buffer, and
 after one boot in Mesen the backup memory holds that file.
+
+## Hidden-content sweep
+
+Mesen code/data logs from 18 runs (attract, Story from the start and from `0819`, forced Story wins, VS for 2, 3 and 4
+players, Options, every code, the ending, two random-input runs); the SA-1's code is in the log too (its reset vector
+`$00:8517` is set at `$80:84B8`). 56,737 bytes ran as code; a static trace with SA-1 banking finds 67,503.
+
+- ★ **STAGE CLEAR.** Every Story win calls `$82:C897` (`$81:81A9`), and its first instruction is `BRL` to its own `RTL`.
+  The skipped body shows two pages from tilemaps `$EE` and `$EF`, used nowhere else: STAGE CLEAR with CLEAR BONUS and
+  TIME BONUS, then SCORE and TOTAL, each waiting for a button. Nothing writes the numbers, so they read 00000000. With
+  the `BRL` NOPed (file `$14897`: `82 2A 01` → `EA EA EA`) the game hangs on a black screen in the object task's RAM
+  routines; NOPing their two calls as well (`$10038` `22 21 00 7F`, `$10048` `22 72 00 7F` → `EA EA EA EA`) shows both
+  pages, and the next opponent's intro follows as normal (Mesen, after a forced win, `$7E:009B` = 1).
+  ![STAGE CLEAR, pages 1 and 2](img/pbw/stage_clear.png)
+- ★ **L or R + d-pad scrolls the menu background.** `$80:D61D`, run every frame by the menu loop (`$80:D588`): with L or
+  R held, the d-pad moves the scroll of the pattern behind the menu (`$70E7`, `$70EB`) by 4 a frame (read back in
+  Mesen: 128 → 208 after 20 frames of L+Right).
+- **Never run, normal play:** the VS set results (`$80:9714`), Story game over after declining to continue
+  (`$80:9D9B`), the VS match-decided flow (`$81:85C8`), four opponent attacks in the table at `$81:F49E` (entries 4,
+  5, 7, 9; 6 and 12 are empty), the second bonus stage `$12` (`$82:D4CD`; after stage 8 + random 0-6 on Normal or
+  harder), and a warm-boot entry at `$80:805F` with no reference.
+- **Input codes:** besides the L+R password check (`$80:CA66`) and the scroll above, the pads are only compared with
+  single directions and the usual confirm and cancel masks. No other button code.
+- **Unset flags:** only `$3000`, `$3002` and `$3203`, written by index or by the other CPU.
+- **Tables:** every menu's item count matches its table; stage numbers `$00-$10` are Story, `$11-$12` the bonus
+  stages, `$13-$15` VS. No unused entry beyond the character-swap slots above.

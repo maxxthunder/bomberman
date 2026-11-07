@@ -156,7 +156,8 @@ the O is one). The password holds bombs and fire only: `docs/img/items/nes2/bomb
 `tools/nes2/items.py` with BG palette 0. Palette 0 is right: the metatile update `$07:CF34` takes the slot from a
 nibble table at `($66)` (area 1 byte `$10` = `$00`: bomb low nibble, fire high nibble, both 0), and in Mesen a
 fire-up revealed in 1-1 queued its attribute byte as `$00` (`$23DA`) and showed in the playfield colours (`$18`
-`$10` `$30` `$0F`), matching `fire.png`. The bomb-up was not seen on screen.
+`$10` `$30` `$0F`), matching `fire.png`. With 1-1's item slot changed from fire (`$81`) to bomb (`$80`, `$04:BA4C`), the bomb-up showed in
+the playfield exactly as `bomb.png`, pixel for pixel.
 
 ## Hidden-content sweep
 

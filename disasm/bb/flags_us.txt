@@ -1,0 +1,17 @@
+$C4C9	never set	reads 1	02:454B	untraced stores at 04:49A4, 04:4BA4, 04:4CFC
+$C4CE	never set	reads 1	02:4552	untraced stores at 04:4033, 04:404F, 04:47B0, 04:47D3
+$D805	never set	reads 1	07:45B9
+$D806	never set	reads 1	07:45F6
+$D825	never set	reads 1	07:45BE
+$D826	never set	reads 1	07:45C3
+$D827	never set	reads 1	07:45FB
+$D828	never set	reads 1	07:4600
+$D829	never set	reads 1	07:4647
+$D82A	never set	reads 1	07:4650
+$D837	never set	reads 1	07:459B
+$D838	never set	reads 1	07:45DC
+$D839	never set	reads 1	07:4629
+$D83A	never set	reads 1	07:4687
+$D853	never set	reads 1	07:45AC
+$D854	never set	reads 1	07:45ED
+$D855	never set	reads 1	07:4638

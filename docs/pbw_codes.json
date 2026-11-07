@@ -490,5 +490,28 @@
   "note": "The same boot check ($80:E54B) shows this when a controller port reports device ID 1 (the SNES Mouse). Seen in Mesen with a mouse in port 2.",
   "section": "hidden",
   "img": "mouse_warning.png"
+ },
+ {
+  "code": "ROM patch $14897: 82 2A 01 -> EA EA EA, and $10038 / $10048: 4 bytes -> EA EA EA EA",
+  "effect": "The cut STAGE CLEAR screen after each Story win: CLEAR BONUS, TIME BONUS, then SCORE and TOTAL",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Every Story win calls $82:C897 (from $81:81A9), whose first instruction is BRL to its own RTL, so the screen is skipped. Its body loads graphics set $D4 and tilemaps $EE and $EF (used nowhere else), fades in, waits for a button, shows the second page, waits again and fades out. Nothing fills in the numbers, so they stay 00000000. Removing the BRL alone leaves a black screen (the object task's RAM routines at $7F:0021 / $7F:0072 hang), so the two calls to them ($10038, $10048) are also NOPed. In Mesen after a forced win: both pages, then the next opponent's intro as normal.",
+  "section": "unused",
+  "img": "stage_clear.png"
+ },
+ {
+  "code": "Hold L or R + the d-pad on a menu",
+  "effect": "Scrolls the ぱにっくボンバー pattern behind the menu",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The menu loop ($80:D588) calls $80:D61D every frame: with L or R held, the d-pad moves the background's scroll ($70E7 across, $70EB down) by 4 a frame. In Mesen on the main menu, 20 frames of L+Right took $70E7 from 128 to 208, and R+Down moved $70EB the same; the d-pad alone only moves the cursor. Looks like a test control left in.",
+  "section": "hidden"
  }
 ]
