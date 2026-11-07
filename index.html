@@ -2281,7 +2281,7 @@ function table(rows) {
 // the code list's own words, minus "Start at" and the starting kit every stage code shares
 const tname = x => /^Start at /i.test(x.e.effect) ? cap(x.e.effect.replace(/^Start at /i, "").replace(/ with 1 bomb, fire 1(, normal speed, no planets cleared)?$/, "")) : x.e.effect || x.k.title;
 const tile = (x, label, boss) => `<div class="tile${boss ? " boss" : ""}" title="${esc(tname(x))}">${label ? `<span class="tl">${esc(label)}</span>` : ""}
-  <button type="button" class="usecode" data-code="${esc(x.e.code)}" title="Put in the code box">${esc(x.e.code)}</button>${mark(x.e.status)}${thumb(x.e, shotFor(g.id, x.e))}</div>`;
+  <button type="button" class="usecode" data-code="${esc(x.e.code)}" title="Put in the code box">${esc(x.e.code)}</button>${mark(x.e.status)}</div>`;   // password tables carry no screenshots
 const tiles = rows => `<div class="tiles${g.len > 10 ? " long" : ""}">${rows.map(x => tile(x, tname(x))).join("")}</div>`;
 function renderCodes() {
   const q = $("q").value.trim().toLowerCase(), only = $("only").value;
