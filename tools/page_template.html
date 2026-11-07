@@ -83,7 +83,6 @@ button { cursor: pointer; }
 #cards { display: grid; gap: 14px; }
 #ctabs { display: flex; flex-wrap: wrap; gap: 8px; }
 .ctab { background: var(--panel); border: 2px solid var(--line); border-radius: 999px; padding: 6px 14px; font: 800 14px var(--body); color: var(--muted); }
-.ctab small { font: 600 12px var(--body); margin-left: 4px; }
 .ctab:hover { border-color: var(--muted); }
 .ctab[aria-selected=true] { border-color: var(--acc); color: var(--ink); background: color-mix(in srgb, var(--acc) 22%, var(--panel)); }
 .ctab .narrow { display: none; }
@@ -724,7 +723,7 @@ const HERO = { sb1: ["sb1", "debug_fire_full"], sb2: ["sb2", "battle_stage11"], 
 const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb", "Virtual Boy": "vb" };
 const SHORT = { "TurboGrafx-16 / PC Engine": "PC Engine", "Game Boy / Game Boy Color": "Game Boy", "NES / Famicom": "NES", "Super Nintendo": "SNES" };
 $("cards").innerHTML = `<div id="ctabs" role="tablist" aria-label="Console">${families.map((f, i) =>
-  `<button type="button" class="ctab" role="tab" id="pt_${i}" data-fam="${FAM[f] || ""}" aria-controls="pf_${i}" aria-selected="false" tabindex="-1"><span class="wide">${esc(f)}</span><span class="narrow">${esc(SHORT[f] || f)}</span><small>${byFamily(f).length}</small></button>`).join("")}</div>`
+  `<button type="button" class="ctab" role="tab" id="pt_${i}" data-fam="${FAM[f] || ""}" aria-controls="pf_${i}" aria-selected="false" tabindex="-1"><span class="wide">${esc(f)}</span><span class="narrow">${esc(SHORT[f] || f)}</span></button>`).join("")}</div>`
   + families.map((f, i) => `<div class="pgroup" id="pf_${i}" role="tabpanel" aria-labelledby="pt_${i}" data-fam="${FAM[f] || ""}" hidden>
   <div class="gcards">${byFamily(f).map(x =>
     `<button type="button" class="gcard" data-g="${x.id}" aria-pressed="false" title="${esc(x.name)}"><img src="docs/img/logos/${x.logo}.png" alt=""><span class="nm">${esc(x.name)}</span><small>${x.year}</small></button>`).join("")}</div></div>`).join("");
