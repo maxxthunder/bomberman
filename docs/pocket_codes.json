@@ -473,6 +473,23 @@
   "status": "new",
   "verified": "emu",
   "note": "Music goes through $254E ($C1C1 = 2, $C1C2 = tune). The world music table at $02:4BD8 reads 01 02 03 04 06, skipping 05, and nothing else asks for it; there's no sound test. 05 is a full tune that loops after about 19 s. Recorded in Mesen.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "pocket/Music_05.mp3"
+  ]
+ },
+ {
+  "code": "Sound effect 0F",
+  "effect": "A rising whoosh the game never plays",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Sounds go through $00:254E ($C1C1 = function, $C1C2 = number): 212 calls with the number written in and two music tables, none giving effect 0F. Its data ($12:48DC, noise channel) is the only unrequested effect not shared with Hudson's other Game Boy games. About 0.55 s, a noise burst rising in pitch. Recorded in BizHawk with the music muted.",
+  "section": "unused",
+  "audio": [
+   "pocket/SE_0F.mp3"
+  ]
  }
 ]

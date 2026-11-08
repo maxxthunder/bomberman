@@ -227,10 +227,12 @@ DMG capture.
 
 ![Title and Forest 1 on a Game Boy Color](img/pocket/cgb.png)
 
-## Unused music
+## Unused music and sounds
 
 - ★ Music goes through `$254E` (`$C1C1` = 2, `$C1C2` = tune). The world table at `$02:4BD8` reads 01 02 03 04 06 and
   nothing else asks for 05, a full tune that loops after about 19 s. There's no sound test.
+- ★ Of the 212 effect calls (all with the number written in), none asks for effect 0F (`$12:48DC`, noise), a 0.55 s
+  whoosh rising in pitch. It's the one unrequested effect not shared with Hudson's other Game Boy games.
 
 ## Title
 

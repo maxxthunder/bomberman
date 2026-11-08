@@ -94,14 +94,19 @@
  },
  {
   "code": "Sound driver call $D801C / effects 7-9",
-  "effect": "Never used by the game",
+  "effect": "A song-break call the game never makes, and three sound effects it never plays: two short ticks and a bell-like ping",
   "versions": [
    "EU proto"
   ],
-  "status": "unchecked",
-  "verified": "static",
-  "note": "$D8140 plays song 3 for $180 frames then returns; effect table $DA1D2 entries 7-9 (samples 4-6) are never triggered (the game plays 1, 2, 4, 6). Not listened to",
-  "section": "unused"
+  "status": "new",
+  "verified": "emu",
+  "note": "$D8140 plays song 3 for $180 frames then returns; nothing calls it. Effects go through $D8010, called only with 1, 2, 4 and 6 ($1618, $1B28, $215A/$218E/$21F0, $2FF0). Entries 7-9 of the table at $DA1D2 have sequences of their own ($DAB56, $DAB6E, $DAB8A): 7 is a 2-frame PSG tick (about 4 kHz, then 1.2 kHz), 8 the same two notes reversed, 9 an FM ping of about 0.8 s. 7 and 8 have no waits, so they last 2-3 frames. Played in BizHawk in a battle with the music held, each entry written into its channel the way $D81EC does.",
+  "section": "unused",
+  "audio": [
+   "mega8/SE_07.mp3",
+   "mega8/SE_08.mp3",
+   "mega8/SE_09.mp3"
+  ]
  },
  {
   "code": "Code at $212 and $280",
@@ -221,5 +226,29 @@
   "verified": "static",
   "note": "The kick code sets the slide routine $22D2 directly; nothing references $22A4",
   "section": "unused"
+ },
+ {
+  "code": "Arena tiles $15, $16, $17",
+  "effect": "Three cut item panels: a skull and blue panels numbered 6 and 7",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "They follow the five real items in the arena tiles (resource $2031C, tiles from $203A2; the skull at file $20642). A cell's tile is its item number, and items come only from the brick table $3554 ($10, $11, $12, $14) and the death drop at $1BEC-$1DEC; the pickup code $15B6-$15F2 knows only $10-$14, and no other cell write or sprite names $15-$17. The numbered panels look like stand-ins for items 6 and 7. Written into a cell the game's own way in BizHawk, all three show on the floor.",
+  "section": "unused",
+  "img": "../mega8/cut_item_panels.png"
+ },
+ {
+  "code": "HUD tiles 32-41",
+  "effect": "A full set of clock digits, of which the stopped clock only ever shows 2 and 0",
+  "versions": [
+   "EU proto"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "The HUD graphics (resource $18892, block +$8A, loaded to VRAM $7400 by $0D02) hold digits 0-9 as tiles 32-41 (1-9 at file $18D3C-$18E5C). The HUD map (+$C8A, drawn by $0D74) uses only tiles 10-15, 26-32, 34 and 42-95, and no code names the others, because the clock never runs. Image: 1 and 3-9 in the HUD palette.",
+  "section": "unused",
+  "img": "../mega8/unused_clock_digits.png"
  }
 ]

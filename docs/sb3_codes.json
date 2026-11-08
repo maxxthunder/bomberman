@@ -1533,5 +1533,21 @@
   "note": "The battle switch at $C6:62EF gives every stage four data sets (base + $542E) except stage 11 ($75) and stage 12, fixed at $6D, so stage 12 always plays the same way. Sets $6E-$70 follow it and no case names them. With the set byte (EU file $6636C, JP $66358, beta $66362) changed to each, stage 12 loads and plays with its own arrow-panel layout, the same in all three versions. Mesen. Image: $6D as shipped, then $6E, $6F, $70.",
   "section": "unused",
   "img": "stage12_cut_variants.png"
+ },
+ {
+  "code": "Sound effect 06",
+  "effect": "A rising sweep the game never plays",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Effects go through $C0:07A1 (table $80:80DC); no code, script or actor asks for 06 (sound command $0D, data at APU $2C84). It is a 2-channel rising sweep of about 0.76 s. 25 is an empty placeholder (an instrument and volume, then no notes) and 2B replays the last voice clip, so neither is a sound of its own. Recorded in BizHawk at the logo.",
+  "section": "unused",
+  "audio": [
+   "sb3/SE_06.mp3"
+  ]
  }
 ]

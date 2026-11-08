@@ -1478,6 +1478,9 @@
   "status": "new",
   "verified": "emu",
   "note": "Effects go through $F9DF (ID in $3701). 204 of its 210 calls have the number written in, and the wrapper $01:C0A1, the tables $0A:9536 and $08:86F5 and the item handlers give the rest; none is 43. The ROM's own sound list names it BOSS1 LANDING. Only the Sound Room plays it: a loud thud of about 80 ms. Recorded in Mesen.",
-  "section": "secret"
+  "section": "secret",
+  "audio": [
+   "pce94/SE_43.mp3"
+  ]
  }
 ]

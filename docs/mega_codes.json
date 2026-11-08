@@ -1450,6 +1450,25 @@
   "status": "new",
   "verified": "emu",
   "note": "Sounds go through $34B6 (197 callers) to $B84E (EU $B848), which queues them for the Z80 at $A01C30. Neither the numbers written into those calls nor the tables at $4B58, $69B2, $9C74 and $C868 give 2E, 43, 55 or 63. 2E is a three-second effect in several parts, 43 a short sound whose data runs into 42's, 55 a short high blip and 63 a short low one. Recorded in BizHawk.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "mega/SE_2E.mp3",
+   "mega/SE_43.mp3",
+   "mega/SE_55.mp3",
+   "mega/SE_63.mp3"
+  ]
+ },
+ {
+  "code": "Graphics $A059E",
+  "effect": "An unused sprite sheet: white Bomberman heads, a standing Bomberman, hands, a puff, big digits 0-9 and an arrow",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Graphics load through the list reader $94D8 (directories at $9554). Its 63 calls use fixed lists, menu and tileset tables, and lists built in RAM; none names entry 2:$14 (= 1:$34, $A059E, 192 tiles), and its pointer appears only in those two slots. No tile in it is shared with any other graphic. The colours come from palette 2:$1F, which nothing loads either, and are a guess.",
+  "section": "unused",
+  "img": "unused_sprite_sheet.png"
  }
 ]

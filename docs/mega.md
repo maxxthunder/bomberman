@@ -223,6 +223,15 @@ order as N) and `6429` `0139` `5739` `9349` `0059` `4659` `9269` `3969` `5279` `
   ![](img/mega/unused_frames_white.png) (`$2F` `$30` `$31` `$32` `$33` `$3D`-`$42`). What they were meant for is a
   guess; the other 8 characters' sets (`$B5D4`-`$B7B0`) have the same layout.
 
+- ★ **An unused sprite sheet.** Graphics load through the list reader `$94D8` (directories at `$9554`). Its 63
+  calls (fixed lists, menu and tileset tables, lists built in RAM) never name entry 2:`$14` (= 1:`$34`, `$A059E`, 192
+  tiles), which shares no tile with any other graphic: white Bomberman heads, a standing Bomberman, hands, a puff,
+  big digits 0-9, an arrow and two arcs. Colours from palette 2:`$1F`, also never loaded (a guess):
+  ![Graphics $A059E](img/mega/unused_sprite_sheet.png)
+- Maps 2:`$05`/`$06` are the planet screen with a large extra shape left of the area wedges, but its tiles
+  (`$600-$6F3`) are never loaded there and no tile set fits them; 2:`$03` is the starfield with 23 stars moved.
+  Neither is loaded.
+
 ## Dead code
 
 Tools: `tools/mega/callgraph.py` (static code map: recursive descent from the vectors, immediate and absolute

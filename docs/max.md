@@ -192,6 +192,15 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
 - **On an original Game Boy** Blue and Red go straight to the "Game Boy Color only" screen; Hikari and Yami show the
   Hudson logo first (`$00:029B-$02C5`), Ain both logos (`$00:02B8-$02DD`). Seen in Mesen set to Game Boy.
   ![Blue, Hikari, Ain](img/max/dmg_boot.png)
+- **One sound request.** `$0D:42F7` asks for effect 58 in Blue, Hikari and Ain but 09 in Red and Yami, so 09 is
+  heard in play only on Max's side; elsewhere only the sound test plays it. Static only.
+
+## Unused sounds
+
+- ★ Every sound goes through one routine (`$00:181D` in Blue and Red; Hikari, Yami `$00:18B5`; Ain `$00:1846`;
+  `$C1A0` = function, `$C1A1` = number): 376 calls with the number written in and three tables. Music 01-1F are all
+  asked for. Effect 0D is on no list (a 1.6 s noise hiss), and 1A only on the sound test's (`$52:5D0F`; a 1.7 s
+  phrase that gets louder). The effect data is the same in all five.
 
 ## Open
 

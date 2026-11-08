@@ -102,10 +102,20 @@ not apply and there is nothing to fuzz. The retail RAM map in `mega.md` does not
   item table never places it. Its graphic is in the arena tiles: a blue panel with a bomb and a yellow lightning
   bolt (maybe a remote control; that is a guess). Put on the floor with the game's own cell format and walked over
   (`items.lua`), it raised only `+$26`. Left to right: `$10` `$11` `$12` `$13` `$14`: ![](img/mega8/items.png)
-- **Sound driver extras** (from the code only, not listened to): the game uses driver calls 0-6 but never `$D801C`
-  (`$D8140`: play song 3 for `$180` frames, then go back) or `$D8020` (`$D81D4`, resume). Its effect table
-  (`$DA1D2`, 10 entries) has samples 0-6; the game plays entries 1, 2, 4 and 6 (explosion, death, bomb laid, item),
-  so entries 7-9 (samples 4-6) are never triggered. Only module 0 exists; table slots 1-5 (`$DA16E`) point at the
+- ★ **Three more item panels, `$15`-`$17`**, right after those in the arena tiles (resource `$2031C`, tiles from
+  `$203A2`): a skull and blue panels numbered 6 and 7, which look like stand-ins for two more items. A cell's tile is
+  its item number; items come only from the brick table `$3554` and the death drop (`$1BEC-$1DEC`), the pickup code
+  (`$15B6-$15F2`) knows only `$10-$14`, and no other cell write or sprite names `$15-$17`. Written into a cell the
+  game's way (BizHawk), all three show: ![Items $15, $16, $17](img/mega8/cut_item_panels.png)
+- ★ **Clock digits.** The HUD graphics (`$18892` + `$8A`, loaded to VRAM `$7400` by `$0D02`) hold digits 0-9 (tiles
+  32-41), but the HUD map (`+$C8A`, `$0D74`) uses only 2, the colon and 0, since the clock never runs. 1 and 3-9 are
+  never drawn: ![Digits 1, 3-9](img/mega8/unused_clock_digits.png)
+- **Sound driver extras:** the game uses driver calls 0-6 but never `$D801C` (`$D8140`: play song 3 for `$180`
+  frames, then go back) or `$D8020` (`$D81D4`, resume). Its effect table (`$DA1D2`, 10 entries) has samples 0-6; the
+  game plays entries 1, 2, 4 and 6 (explosion, death, bomb laid, item). ★ Entries 7-9 have sequences no other entry
+  uses (`$DAB56`, `$DAB6E`, `$DAB8A`) and all play (BizHawk, music held, each written into its channel the way
+  `$D81EC` does): 7 and 8 are 2-3 frame PSG ticks (about 4 kHz and 1.2 kHz, in opposite orders), 9 an FM ping of
+  about 0.8 s. Only module 0 exists; table slots 1-5 (`$DA16E`) point at the
   end of the data.
 - **Development leftovers** (not referenced by anything): `$212` stores the VBlank/HBlank addresses into the vector
   table at `$78`/`$70` (only useful when the program runs from RAM, as on a development kit) and restarts; `$280`

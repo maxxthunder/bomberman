@@ -3337,6 +3337,34 @@
   "status": "new",
   "verified": "emu",
   "note": "Every track request goes through $C3:002C (Y = track), fed by the stage/scene table $C3:2F83, the jingle tables $C4:1874 and $C4:6C04, a few constants and the sound test's 18-entry list at $C7:07C9. None of them gives 03, 05, 09, 13, 15, 28 or 29; only the debug menu's BGM NO. plays them. 03 is another arrangement of the world 1 theme (02), denser and with parts an octave apart. 05, 09, 13 and 15 are tracks 04, 08, 12 and 14 starting past their intros. 28 and 29 copy the two per-world jingles note for note and sit in the demo's song set. Recorded in BizHawk.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "sb1/BGM_03.mp3",
+   "sb1/BGM_05.mp3",
+   "sb1/BGM_09.mp3",
+   "sb1/BGM_13.mp3",
+   "sb1/BGM_15.mp3",
+   "sb1/BGM_28.mp3",
+   "sb1/BGM_29.mp3"
+  ]
+ },
+ {
+  "code": "Debug menu SE NO. 0D, 10, 14",
+  "effect": "Three sound effects the game never plays: a long fading rumble, a loud low tone and a rising blip",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Effects go through $C3:0042 (Y = effect). All 74 calls have the number written in, except the debug menu's SE NO. line (table $C6:096A), and they ask for 00-0C, 0E, 0F, 11-13 and 15-1F. An effect only sounds with the instruments of the loaded song set: 0D (about 2.9 s, a noisy sweep that fades slowly) plays in sets 5 and 12, 10 (about 0.85 s, a loud low tone) in the battle sets 7, 9, 10 and 11, 14 (a 0.18 s rising blip) in set 9. 20-28 stayed silent in every set. Recorded in BizHawk with the music stopped.",
+  "section": "unused",
+  "audio": [
+   "sb1/SE_0D.mp3",
+   "sb1/SE_10.mp3",
+   "sb1/SE_14.mp3"
+  ]
  }
 ]

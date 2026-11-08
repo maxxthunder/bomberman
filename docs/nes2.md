@@ -203,6 +203,21 @@ Both devices, the same tests: Pro Action Replay (address + value) `04E601` invin
 `$CA1C`, JP `$C988`: 18 stage changes in 8,000 frames, to area 3). The demo recorder code `AENIYZPA` patches a ROM
 byte and has no Pro Action Replay form.
 
+## Unused graphics
+
+- ★ **Kondoria.** The common sprite block (bank 1 `$8000`, loaded to PPU `$0000` by `$07:CBDD` at every stage start)
+  holds a blue blob in four frames at tiles `$84-$8B`/`$94-$9B` (file `$46A8` on, same in both versions). The
+  background always reads `$1000` (PPUCTRL `$10`, MMC1 in 8 KB mode with bank 0), so these tiles could only be
+  sprites, and the one routine that sets sprite tiles (`$07:CCE4`) takes them from ROM records, none of which names
+  them. Shown with sprite palette 3 (a guess): ![Kondoria](img/nes2/unused_kondoria.png)
+
+## Unused sounds
+
+- ★ Sounds go through `$07:C8F5` (JP `$C861`). The game asks for samples 1E (stop) and 27 only; 1F-2A come from the
+  sound room (`$05:A03D`). Logging the sample address while each song played shows the drums use the samples behind
+  1F, 21, 23-26, 28 and 29. 20 (`$EE80`, a 0.06 s click), 22 (`$EBC0`, a 0.09 s hit) and 2A (`$F5C0`, a 0.93 s
+  looping phrase) are heard nowhere but the sound room.
+
 ## Open
 
 - The expansion-pad path (no Four Score), the reset behaviour and the `$FF` typo are from the code.

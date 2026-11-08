@@ -2,6 +2,13 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.17.0 (2026-11-08)
+- Play buttons on the unused music and sound cards.
+- More unused sounds: three effects in Super Bomberman, one each in Super Bomberman 3 and Pocket Bomberman, two in
+  Bomberman Max, three in the Mega Bomberman 8-player demo, and three samples only the Bomberman II sound room plays.
+- Cut graphics: item panels and clock digits in the Mega Bomberman 8-player demo, a second ending sky in Panic
+  Bomberman W, other medals in Panic Bomber, a sprite sheet in Mega Bomberman, and Kondoria in Bomberman II.
+
 ## 1.16.0 (2026-11-07)
 - Unused music and sounds in 11 more games: sound effects in Bomberman GB, Bomberman '90, '93 and '94, Mega
   Bomberman, Bomberman GB 2 and Panic Bomber W; two rewritten jingles in Users Battle; a tune and ten effects in

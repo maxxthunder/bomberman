@@ -1911,6 +1911,10 @@
   "status": "new",
   "verified": "emu",
   "note": "Sounds are requested at $F243 / $F25C (JP $F22A / $F243). The 130 requests with the number written in, $07:AD54 (68, 6A) and the scene table at $09:A9FA (56 58 57 59 5A 5B 5C 5D 65) never give 16 or 69. The config screen's SE and MUSIC items play anything: 16 is a short click close to the cursor sound, 69 a jingle of about 2.6 s. Recorded in Mesen.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "pce93/SE_16.mp3",
+   "pce93/Music_69.mp3"
+  ]
  }
 ]

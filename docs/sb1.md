@@ -539,7 +539,7 @@ The debug-menu ROM codes (90 per version) are listed under Debug menu. Their Gam
 - No other hard-coded password: the only compare on the raw digits is `$C5:7287` (5656).
 - Password-screen button holds: the decoder reads only the digits and controller 2's new presses.
 
-## Unused music
+## Unused music and sounds
 
 - ★ Every track request goes through `$C3:002C` (Y = track): the stage and scene table `$C3:2F83`, the jingle tables
   `$C4:1874` and `$C4:6C04`, constants `0F`, `11`, `1B` and the sound test's list at `$C7:07C9` (00 01 07 02 04 06
@@ -550,6 +550,11 @@ The debug-menu ROM codes (90 per version) are listed under Debug menu. Their Gam
   - 28 and 29 copy the two per-world jingles (`0D`... at `$C4:6BFF`, `0E`... at `$C4:189C`) note for note; they sit in
     the demo's song set, where no table index reaches them.
 - 1C and 1D belong to no song set: unassigned numbers, not music.
+- ★ Effects go through `$C3:0042` (Y = effect). All 74 calls have the number written in except the debug menu's SE
+  NO. (table `$C6:096A`); they ask for 00-0C, 0E, 0F, 11-13 and 15-1F. An effect sounds only with the instruments of
+  the loaded song set: 0D (about 2.9 s, a noisy sweep fading out) plays in sets 5 and 12, 10 (about 0.85 s, a loud
+  low tone) in battle sets 7, 9, 10 and 11, 14 (a 0.18 s rising blip) in set 9. 20-28 were silent in every set:
+  empty slots.
 
 ## Open
 

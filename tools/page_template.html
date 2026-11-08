@@ -213,6 +213,12 @@ h3.pw .usecode:hover, .tile .usecode:hover { color: var(--code-ink); box-shadow:
 .thumb { justify-self: stretch; }
 .thumb img { display: block; width: 100%; height: auto; max-height: 230px; object-fit: contain; background: #000; border: 1px solid var(--line); border-radius: 6px; image-rendering: pixelated; }
 .thumb:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
+.clips { display: flex; flex-wrap: wrap; gap: 6px; }
+.clip { font: 700 13px var(--mono); padding: 3px 9px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: inherit; cursor: pointer; }
+.clip:hover { border-color: var(--pink); }
+.clip .vi { font-size: 11px; width: auto; color: inherit; }
+.clip.on { background: var(--pink); border-color: var(--pink); color: #fff; }
+.clip:focus-visible { outline: 3px solid var(--fuse); outline-offset: 2px; }
 .mapgrid { display: grid; grid-template-columns: auto repeat(var(--n), minmax(0, 1fr)); gap: 6px; align-items: stretch; }
 .mapgrid .ch { text-align: center; font: 800 12px var(--body); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
 .mapgrid .gap { align-self: center; text-align: center; color: var(--muted); opacity: .5; }
@@ -315,7 +321,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.16.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v1.17.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -660,7 +666,7 @@ const FLAG = { us: "us", eu: "eu", jp: "jp", kr: "kr", caravan: "jp", retail: "j
 const flag = v => { const f = v.toLowerCase() === "beta" ? (g.id === "sb3" ? "eu" : "us") : FLAG[v.toLowerCase()];
   return f ? `<span class="fi fi-${f}" aria-hidden="true"></span>` : ""; };
 // verified: a pad (run in an emulator) or a chip (read from the ROM)
-const ICON = { emu: "fa-gamepad", rom: "fa-microchip", download: "fa-download" };   // Font Awesome Free (solid)
+const ICON = { emu: "fa-gamepad", rom: "fa-microchip", download: "fa-download", play: "fa-play", stop: "fa-stop" };   // Font Awesome Free (solid)
 const icon = (k, label) => `<i class="vi fa-solid ${ICON[k]}" role="img" aria-label="${esc(label)}" title="${esc(label)}"></i>`;
 const VERIFIED = { mesen: ["emu", "Tested in an emulator (Mesen 2)"], emu: ["emu", "Tested in an emulator (BizHawk)"],
   fuzz: ["emu", "Accepted by the game's own decoder in an emulator (fuzz run)"], static: ["rom", "Read from the ROM code"] };
@@ -1158,6 +1164,9 @@ const GEN_LOAD = {
 // proof screenshot: the code list's img field, or a docs/img/<g>/ file named after the code
 const shotFor = (id, e) => e.img || (isPw(g, e) ? (SHOTS[id] || []).find(f => new RegExp(`(^|_)${e.code.replace(/[^\w]/g, "")}(_|\\.)`).test(f)) : "");
 const thumb = (e, f) => f ? `<button type="button" class="thumb" data-img="docs/img/${g.id}/${esc(f)}" data-cap="${esc(e.code)}"><img src="docs/img/${g.id}/${esc(f)}" alt="Screenshot: ${esc(e.code)}" loading="lazy"></button>` : "";
+// recordings of a card's sounds (docs/audio/<g>/<name>.mp3), one button each, labelled by file name
+const clips = e => e.audio ? `<div class="clips">${e.audio.map(f => { const n = f.split("/").pop().replace(".mp3", "").replace("_", " ");
+  return `<button type="button" class="clip" data-src="docs/audio/${esc(f)}" aria-pressed="false" aria-label="Play ${esc(n)}"><i class="vi fa-solid ${ICON.play}" aria-hidden="true"></i> ${esc(n)}</button>`; }).join("")}</div>` : "";
 const mark = s => s === "new" ? '<span class="mk">★ New</span>' : "";
 const ipsList = files => files.length ? `<ul class="ips">${files.map(f =>
   `<li><a href="patches/${esc(f)}" download><i class="vi dl fa-solid ${ICON.download}" aria-hidden="true"></i>${esc(f)}</a> <span>for ${esc(PATCH_ROM[f] || "?")}</span></li>`).join("")}</ul>` : "";
@@ -1183,7 +1192,7 @@ function card(e, k, patchesShown) {
   const ips = patchesShown ? [] : forVer(patchLinks(e.game || g.id, vtext(e)));
   const title = pw ? `<button type="button" class="usecode" data-code="${esc(e.code)}" title="Put in the code box">${esc(e.code)}</button>` : esc(e.code);
   return `<article class="code-card" data-kind="${KIND(section(g, e))}">${badge}${e.devices ? devices(e.devices) : `<h3 class="${pw ? "pw" : ""}">${title}</h3>`}<p>${esc(e.effect)}</p>
-    ${e.note ? `<details class="note"><summary>Details</summary>${esc(e.note)}</details>` : ""}${thumb(e, shotFor(g.id, e))}${ipsList(ips)}
+    ${e.note ? `<details class="note"><summary>Details</summary>${esc(e.note)}</details>` : ""}${thumb(e, shotFor(g.id, e))}${clips(e)}${ipsList(ips)}
     <p class="meta">${vf ? icon(vf[0], vf[1]) : ""}${vers}</p></article>`;
 }
 // stage codes as a map (rounds or worlds down, stages across, boss stages tinted) when their titles say round and stage;
@@ -1245,8 +1254,14 @@ function renderCodes() {
 }
 $("q").addEventListener("input", renderCodes);
 $("only").onchange = renderCodes;
+// one player for every clip: a press plays that clip, a second press (or the clip ending) stops it
+const player = new Audio();
+const clipOff = () => document.querySelectorAll(".clip.on").forEach(c => { c.classList.remove("on"); c.setAttribute("aria-pressed", "false"); c.querySelector("i").className = `vi fa-solid ${ICON.play}`; });
+player.onended = player.onerror = clipOff;
 $("codes").onclick = e => {
-  const b = e.target.closest(".usecode"), t = e.target.closest(".thumb");
+  const b = e.target.closest(".usecode"), t = e.target.closest(".thumb"), c = e.target.closest(".clip");
+  if (c) { const was = c.classList.contains("on"); player.pause(); clipOff();
+    if (!was) { player.src = c.dataset.src; player.play().catch(clipOff); c.classList.add("on"); c.setAttribute("aria-pressed", "true"); c.querySelector("i").className = `vi fa-solid ${ICON.stop}`; } }
   if (b) { $("check").value = b.dataset.code; runCheck(); $("pwpanel").scrollIntoView({ behavior: "smooth", block: "start" }); }
   if (t) { $("shot_img").src = t.dataset.img; $("shot_img").alt = "Screenshot: " + t.dataset.cap; $("shot_cap").textContent = t.dataset.cap; $("shot").showModal(); }
 };

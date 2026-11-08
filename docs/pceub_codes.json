@@ -208,6 +208,10 @@
   "status": "new",
   "verified": "emu",
   "note": "Nothing loads 2D or 39 before the sound routine ($E9AE); the two $2D loads at $09:9EDC and $0A:BC04 aren't sound requests. Both differ from the 1990 card's tunes of the same number: 2D is a jingle of about 3.5 s (the 1990 one runs about 11 s) and 39 a jingle of about 1.8 s with all six channels rewritten. The sound test is unreachable without the patch. Recorded in Mesen.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "pceub/Music_2D.mp3",
+   "pceub/Music_39.mp3"
+  ]
  }
 ]

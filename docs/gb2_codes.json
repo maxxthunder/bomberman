@@ -212,6 +212,16 @@
   "status": "new",
   "verified": "emu",
   "note": "Effects go through $03DF. No call asks for 0D, 17, 1C, 21, 22, 23, 25 or 26. 0D and 17 are looping low drones, 1C a burst then a repeating alarm; 21, 22, 23 and 26 last under a second and 25 about 1.8 s. Every tune 01-18 is used. Recorded in Mesen.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "gb2/SE_0D.mp3",
+   "gb2/SE_17.mp3",
+   "gb2/SE_1C.mp3",
+   "gb2/SE_21.mp3",
+   "gb2/SE_22.mp3",
+   "gb2/SE_23.mp3",
+   "gb2/SE_25.mp3",
+   "gb2/SE_26.mp3"
+  ]
  }
 ]

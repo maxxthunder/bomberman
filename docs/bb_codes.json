@@ -325,6 +325,19 @@
   "status": "new",
   "verified": "emu",
   "note": "Music goes through $0475 and effects through $0480 (and $1931). No request gives tune 04 (the island table at $02B8 covers 0B-13); only the stage-select sound test plays it, a full tune. That test plays music only, so effects 02, 06, 07, 0C, 0E, 11 and 16-19 can't be heard at all. 02 is a held tone; the rest last 0.1 to 0.9 s, 06/07 and 0C/0E being pairs at different pitches. Recorded in Mesen.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "bb/Music_04.mp3",
+   "bb/SE_02.mp3",
+   "bb/SE_06.mp3",
+   "bb/SE_07.mp3",
+   "bb/SE_0C.mp3",
+   "bb/SE_0E.mp3",
+   "bb/SE_11.mp3",
+   "bb/SE_16.mp3",
+   "bb/SE_17.mp3",
+   "bb/SE_18.mp3",
+   "bb/SE_19.mp3"
+  ]
  }
 ]

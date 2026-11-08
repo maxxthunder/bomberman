@@ -414,6 +414,31 @@
   "status": "new",
   "verified": "emu",
   "note": "Music goes through $0700_63B8 (table $0707_4024, 00-15) and effects through $0700_63C8 (table $0707_4080, 00-28). Tune 0E and effects 00 and 1F are never requested; only the sound test plays them. Tunes 13-15 and effects 24-28 are past the test's range (BGM 0-12, SE 0-23), so nothing can play them. 0E is a full tune; 13 and 14 two versions of another; 15 a short rising run into a held note, likely a test tone. The effects last 0.2 to 0.8 s. Recorded in MAME.",
-  "section": "Special codes"
+  "section": "Special codes",
+  "audio": [
+   "pbvb/BGM_0E.mp3",
+   "pbvb/BGM_13.mp3",
+   "pbvb/BGM_14.mp3",
+   "pbvb/BGM_15.mp3",
+   "pbvb/SE_00.mp3",
+   "pbvb/SE_1F.mp3",
+   "pbvb/SE_24.mp3",
+   "pbvb/SE_25.mp3",
+   "pbvb/SE_26.mp3",
+   "pbvb/SE_27.mp3",
+   "pbvb/SE_28.mp3"
+  ]
+ },
+ {
+  "code": "Graphics $C6",
+  "effect": "An unused set of Star, Sun and Moon medals, drawn rougher than the ones the medal card shows",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Graphics load through $0700_46A4 from the table at $0704_7000 (LZ, the same scheme as Panic Bomber W). Its 76 call sites name their graphics directly or as base + stage, opponent or world, and none gives $C6 ($0706_6F9D, whose pointer appears only in its table slot). $C6 holds two rows of large star, sun and moon medals in a dithered style unlike the medal card's ($C5), plus a copy of the castle from $C1.",
+  "section": "unused",
+  "img": "unused_medals.png"
  }
 ]

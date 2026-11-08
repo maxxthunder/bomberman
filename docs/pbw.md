@@ -77,6 +77,17 @@ players, Options, every code, the ending, two random-input runs); the SA-1's cod
 - **Tables:** every menu's item count matches its table; stage numbers `$00-$10` are Story, `$11-$12` the bonus
   stages, `$13-$15` VS. No unused entry beyond the character-swap slots above.
 
+## Unused graphics
+
+- ★ **Tilemap `$84`, a second ending sky.** Tilemaps load through `$00:AAC1` from the table at `$C2:0000`
+  (LZ-compressed, 8 KB window). None of the 98 load sites, by immediate or through the id tables (`$80:E1CF`,
+  `$81:CEDC`, `$81:E596`, `$82:D52E-$82:D76B`), gives `$84` (`$C2:88A7`). It is the right half of the sunset sky with a
+  slanted left edge and no sun, sharing 157 of 171 tiles with the used sky (`$83`). Its palette group (2) holds
+  another graphic's colours on that screen; drawn with the clouds' group 7 (a guess) it is a plain sunset:
+  ![Tilemap $84](img/pbw/unused_ending_sky.png)
+- Graphics `$E7`, tilemap `$87` and entry 1 of the second tilemap table (`$C3:F000`) are referenced nowhere but
+  blank. Tilemap `$0B` (a 5-tile repeating backdrop) is referenced nowhere; its tile set wasn't found.
+
 ## Unused sounds
 
 - ★ Effects go through `$82:C22F`; its calls and the table `$82:BFFB` give 02, 07-0B, 0D-10, 12-18 and 1A-23. Effects

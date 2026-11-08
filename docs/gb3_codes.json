@@ -1043,6 +1043,9 @@
   "status": "new",
   "verified": "emu",
   "note": "The area music table at $00:1BF1 has 9 entries (09 09 0B 09 09 0B 0C 12 12), but the area number never goes past 6 (the password check rejects higher ones), so entries 7 and 8, song 12, are never read. 12 has its own channel data, the last in the bank (from $78C0), and plays as a full looping tune. Recorded in BizHawk.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "gb3/Music_12.mp3"
+  ]
  }
 ]

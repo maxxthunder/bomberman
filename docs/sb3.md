@@ -350,9 +350,9 @@ naming:
   to `$F758` and enables IRQs. `$C0:F758` waits a few lines and writes the complements of `$031D`/`$031E` to BG3's
   horizontal scroll (`$2111`). Nothing calls `$C1:63B9` and nothing else installs `$F758`, so this is a dropped
   split-scroll effect. Static only; not run.
-- **★ New: unused script-VM commands.** `$C2:1541`-`$C2:1861` are about 15 small handlers that read their
-  arguments through `($B8)` and return to the VM's argument loop (`$C2:14F4`/`$C2:14F8`). They are not in the
-  VM's command table, so no script can reach them. Static only.
+- **Actor script commands.** `$C2:1541`-`$C2:1861` are about 15 small handlers that read their arguments through
+  `($B8)` and return to the VM's argument loop (`$C2:14F4`/`$C2:14F8`). They are the commands of the actor script
+  engine (`$C2:12C4`), whose 64-entry table is at `$80:B01B`; op `$14` (`$C2:1802`) is its sound request.
 - The rest are one-instruction stubs (`RTL`, `NOP / RTS` at `$C2:631A`) and alternate entry points into live
   routines.
 
@@ -431,6 +431,13 @@ ROM reads too. The first code turns the `RTL` at `$C0:0139` into a `NOP`, so the
 at `$C0:013A`. The second turns that check's `RTS` into an `RTL`.
 
 No invincibility code: no tested-but-unset flag guards the death path, so there is nothing to point one at.
+
+## Unused sounds
+
+- ★ Effects go through `$C0:07A1` (table `$80:80DC`); no code, script or actor asks for 06 (command `$0D`, APU
+  `$2C84`), a 2-channel rising sweep of about 0.76 s. 25 (command `$2C`) is a placeholder that sets an instrument and
+  volume and plays no notes; 2B (command `$66`) replays the voice clip last uploaded, like the voice commands
+  `$67-$7B`, so it has no sound of its own. Music: every track 01-23 is requested.
 
 ## Tools
 

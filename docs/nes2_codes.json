@@ -1981,5 +1981,35 @@
   "note": "The map is (area - 1) x 2 + a variant from the table at $04:BB69 ($04:BBC9); map pointers at $04:BBF7. Area 6's variant row is all 1, so map 10 ($04:9EDE) is never used, and no mode or demo reaches it. JP has the same data 8 and 17 bytes lower. With the variant byte for 6-1 set to 0 (iNES file $13BA1, JP $13B89) and password 36363333, 6-1 loads it in Mesen. Image: the unused map (left), the real 6-1 (right).",
   "section": "Secrets",
   "img": "area6_unused_map.png"
+ },
+ {
+  "code": "Sound room DMC 20, 22, 2A",
+  "effect": "Three samples heard only in the sound room: a click, a short hit and a looping phrase",
+  "versions": [
+   "JP",
+   "US"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Sounds go through $07:C8F5 (JP $C861); the game asks for samples 1E (stop) and 27 only, and the music's drums use the samples behind 1F, 21, 23-26, 28 and 29. 20 ($EE80, about 0.06 s, a click), 22 ($EBC0, about 0.09 s, a hit) and 2A ($F5C0, about 0.93 s, looping) are written to the sample address by the sound room alone. 20 and 22 recorded in BizHawk; the clip of 2A is built from its sample bytes, not recorded.",
+  "section": "unused",
+  "audio": [
+   "nes2/DMC_20.mp3",
+   "nes2/DMC_22.mp3",
+   "nes2/DMC_2A.mp3"
+  ]
+ },
+ {
+  "code": "Sprite tiles $84-$8B, $94-$9B",
+  "effect": "Kondoria, four frames: loaded at every stage but never drawn",
+  "versions": [
+   "US",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "The common sprite block (bank 1 $8000) is loaded to PPU $0000 at every stage start ($07:CBDD). Backgrounds always use $1000, so its tiles can only show as sprites, and the only routine that writes sprite tiles ($07:CCE4) takes them from records in ROM. No record in either version names $84-$8B or $94-$9B: a blue blob in four frames (two walking, one more, one wide-eyed). The game gives it no palette; the image uses sprite palette 3, a guess.",
+  "section": "unused",
+  "img": "unused_kondoria.png"
  }
 ]

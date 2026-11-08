@@ -547,6 +547,22 @@
   "status": "new",
   "verified": "emu",
   "note": "Effects go through $82:C22F. The numbers written into its calls and the table at $82:BFFB give 02, 07-0B, 0D-10, 12-18 and 1A-23. 0C is a tiny quiet blip, 11 a low thud of about half a second. Every tune and voice is used. Recorded in Mesen.",
-  "section": "unused"
+  "section": "unused",
+  "audio": [
+   "pbw/SE_0C.mp3",
+   "pbw/SE_11.mp3"
+  ]
+ },
+ {
+  "code": "Tilemap $84",
+  "effect": "A second, unused version of the ending's sunset sky: the right half, with a slanted edge and no sun",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Tilemaps load through $00:AAC1 from the table at $C2:0000; entry $84 points to $C2:88A7 (file $288A7). None of the 98 load sites, by immediate or through the id tables at $80:E1CF, $81:CEDC, $81:E596 and $82:D52E-$82:D76B, gives $84, and 18 coverage runs never read its entry. It shares 157 of its 171 tiles with the used sky (tilemap $83). The map asks for palette group 2, which on this screen holds another graphic's colours; the image uses group 7, the used sky's cloud colours, which is a guess.",
+  "section": "unused",
+  "img": "unused_ending_sky.png"
  }
 ]

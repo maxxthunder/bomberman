@@ -111,6 +111,14 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
 - **Text:** the ASCII strings are the developer menu, sound test, stage select, DEBUG MENU and RESULT labels, all
   above, and the sound driver's banner.
 
+## Unused graphics
+
+- ★ **Graphics `$C6`, other medals.** Graphics load through `$0700_46A4` (table `$0704_7000`, LZ as in Panic Bomber
+  W) and BG maps through `$0700_46DC` (table `$0702_9000`). Of their 76 and 36 call sites, by immediate or as base +
+  stage, opponent or world, none gives `$C6` (`$0706_6F9D`); every other entry is loaded. It holds large star, sun
+  and moon medals, rougher and dithered unlike the medal card's (`$C5`), and a copy of the castle from `$C1`:
+  ![Graphics $C6](img/pbvb/unused_medals.png)
+
 ## Unused sounds
 
 - ★ Music goes through `$0700_63B8` (table `$0707_4024`, 00-15), effects through `$0700_63C8` (table `$0707_4080`,

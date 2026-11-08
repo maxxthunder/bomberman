@@ -248,5 +248,24 @@
   "note": "Max loads 2 KB graphics blocks from the table at $1A:705A (254 entries, the same in all five versions). Of all the 2 KB slots in the graphics banks, $46:4000 is the only one no entry points to (entries 199 and 200 both point at $46:4800), and no code reads bank $46 directly; the data is the same in all five. Shown in Mesen (Blue) by pointing entry $43 (file $6B123, loaded by the title) at it and writing tiles 0-127 into the title's BG map, in the title's palette (its own palette is unknown).",
   "section": "Secrets",
   "img": "starfield_46_4000.png"
+ },
+ {
+  "code": "Sound effects 0D and 1A",
+  "effect": "A hiss nothing plays, and a rising phrase only the sound test plays",
+  "versions": [
+   "ain",
+   "blue",
+   "hikari",
+   "red",
+   "yami"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Every sound goes through one routine ($00:181D in Blue; $C1A0 = function, $C1A1 = number), from 376 calls with the number written in and three tables; none gives 0D or 1A. 1A is on the sound test's list ($52:5D0F), 0D on no list. 0D is a noise hiss of about 1.6 s that dies away; 1A a square-wave phrase of about 1.7 s that gets louder. The effect data is the same in all five. Recorded in BizHawk (Blue).",
+  "section": "unused",
+  "audio": [
+   "max/SE_0D.mp3",
+   "max/SE_1A.mp3"
+  ]
  }
 ]

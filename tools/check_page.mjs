@@ -163,6 +163,8 @@ for (const f of readdirSync(new URL('../patches/', import.meta.url)).filter(f =>
 }
 // img fields name real screenshots
 for (const g of GAMES) for (const e of CODES[g.id]) if (e.img) ok(existsSync(new URL(`../docs/img/${g.id}/${e.img}`, import.meta.url)), `${g.id}: ${e.img} exists`);
+// audio fields name real recordings
+for (const g of GAMES) for (const e of CODES[g.id]) for (const f of e.audio || []) ok(existsSync(new URL(`../docs/audio/${f}`, import.meta.url)), `${g.id}: audio ${f} exists`);
 // generator item icons: every ico("<g>", "<name>") and SB5_ICONS entry names a docs/img/items/<g>/<name>.png
 const sb5Icons = JSON.parse(html.match(/const SB5_ICONS = (\[[^\]]*\])/)[1]);
 eq(sb5Icons.length, SB5.ITEMS.length, 'one SB5 icon per item');
