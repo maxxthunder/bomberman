@@ -223,14 +223,21 @@ order as N) and `6429` `0139` `5739` `9349` `0059` `4659` `9269` `3969` `5279` `
   ![](img/mega/unused_frames_white.png) (`$2F` `$30` `$31` `$32` `$33` `$3D`-`$42`). What they were meant for is a
   guess; the other 8 characters' sets (`$B5D4`-`$B7B0`) have the same layout.
 
-- ★ **An unused sprite sheet.** Graphics load through the list reader `$94D8` (directories at `$9554`). Its 63
-  calls (fixed lists, menu and tileset tables, lists built in RAM) never name entry 2:`$14` (= 1:`$34`, `$A059E`, 192
-  tiles), which shares no tile with any other graphic: white Bomberman heads, a standing Bomberman, hands, a puff,
-  big digits 0-9, an arrow and two arcs. Colours from palette 2:`$1F`, also never loaded (a guess):
-  ![Graphics $A059E](img/mega/unused_sprite_sheet.png)
-- Maps 2:`$05`/`$06` are the planet screen with a large extra shape left of the area wedges, but its tiles
-  (`$600-$6F3`) are never loaded there and no tile set fits them; 2:`$03` is the starfield with 23 stars moved.
-  Neither is loaded.
+- ★ **An unused continue screen.** Graphics load through the list reader `$94D8` (directories at `$9554`). Its 63
+  calls (fixed lists, menu and tileset tables, lists built in RAM) never name entry 2:`$14` (= 1:`$34`, `$A059E`).
+  It is the continue screen's sheet (2:`$15`) with its colours renumbered, but with big outlined countdown digits in
+  place of the small ones; the continue screen's frame table (`$DA7CC`, frames `$74-$7D`) builds them. Its palette
+  2:`$1F` is never loaded either; renumbered the same way, its first line is the continue screen's palette. Digits
+  on 2:`$1F`'s third line, a colour ramp, as the frames ask: ![Countdown digits](img/mega/unused_countdown_digits.png)
+- ★ **Bomberman '94's logo on the planet screen.** Maps 2:`$05`/`$06` (never loaded, like 2:`$03`, the starfield
+  with 23 stars moved) are '94's maps for this screen, converted cell for cell. Their extra shape uses tiles
+  `$600-$6F3`, which '94 builds by copying a sprite set into the background (`$9C02`); this game has neither the set
+  nor the routine. With '94's tiles it is the start of the '94 logo on a cloud (logo colours a guess):
+  ![Maps 2:$05](img/mega/unused_planet_logo.png)
+- ★ **A creature in the area 3 clear scene.** Graphics 1:`$1D` (loaded only by list `$198D0`, the crab boss scene)
+  has two pieces, tiles `$5F8` and `$5FC`, that no frame table active there (`$DC3D8`, `$D9386`, `$DA5EA`, the
+  players') and no map names: a round blue one-eyed creature in two frames (palette line a guess):
+  ![Area 3 creature](img/mega/unused_area3_creature.png)
 
 ## Dead code
 

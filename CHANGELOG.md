@@ -2,6 +2,11 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 1.18.0 (2026-11-09)
+- Mega Bomberman: Bomberman '94's title logo on an unused planet screen, big countdown digits from an early
+  continue screen, and a creature in the area 3 boss scene.
+- Bomberman II: the ending's church cross, still in the US cartridge.
+
 ## 1.17.0 (2026-11-08)
 - Play buttons on the unused music and sound cards.
 - More unused sounds: three effects in Super Bomberman, one each in Super Bomberman 3 and Pocket Bomberman, two in

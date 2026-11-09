@@ -1460,15 +1460,41 @@
  },
  {
   "code": "Graphics $A059E",
-  "effect": "An unused sprite sheet: white Bomberman heads, a standing Bomberman, hands, a puff, big digits 0-9 and an arrow",
+  "effect": "An unused version of the continue screen's sprites, with big countdown digits 0-9",
   "versions": [
    "US",
    "EU"
   ],
   "status": "new",
   "verified": "static",
-  "note": "Graphics load through the list reader $94D8 (directories at $9554). Its 63 calls use fixed lists, menu and tileset tables, and lists built in RAM; none names entry 2:$14 (= 1:$34, $A059E, 192 tiles), and its pointer appears only in those two slots. No tile in it is shared with any other graphic. The colours come from palette 2:$1F, which nothing loads either, and are a guess.",
+  "note": "Graphics load through the list reader $94D8 (directories at $9554). Its 63 calls use fixed lists, menu and tileset tables, and lists built in RAM; none names entry 2:$14 (= 1:$34, $A059E). It is the continue screen's sheet (2:$15) with its colours renumbered, except that the small countdown digits are big outlined ones. The continue screen's frame table ($DA7CC) builds them as frames $74-$7D. Its palette, 2:$1F, is never loaded either; with the same renumbering its first line is the continue screen's palette. The image shows the digits as the frames ask, on 2:$1F's third line, a colour ramp.",
   "section": "unused",
-  "img": "unused_sprite_sheet.png"
+  "img": "unused_countdown_digits.png"
+ },
+ {
+  "code": "Maps 2:$05, 2:$06",
+  "effect": "The planet screen with Bomberman '94's title logo beside it, its tiles missing from this game",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "No load list names maps 2:$05/$06 (or 2:$03, the starfield with 23 stars moved). They are Bomberman '94's maps for the same screen, converted cell for cell. In '94 the extra shape is built from a sprite set copied into the background by $9C02; Mega Bomberman has neither the set nor the copy routine, so its tiles $600-$6F3 are never loaded. Drawn with '94's tiles, the shape is the start of the '94 logo (\"BO\" on a cloud). The colours of the logo are a guess.",
+  "section": "unused",
+  "img": "unused_planet_logo.png"
+ },
+ {
+  "code": "Graphics 1:$1D, tiles $5F8, $5FC",
+  "effect": "A round blue one-eyed creature in two frames, loaded in the area 3 clear scene but never drawn",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "1:$1D is loaded only by list $198D0, in the area 3 clear scene with the crab boss. None of the frame tables active there ($DC3D8, $D9386, $DA5EA, the players') names tiles $5F8-$5FF, and no map uses them; every other piece of the set is named. The palette line is a guess, taken from the bubbles next to it.",
+  "section": "unused",
+  "img": "unused_area3_creature.png"
  }
 ]

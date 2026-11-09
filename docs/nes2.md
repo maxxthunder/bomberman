@@ -210,6 +210,11 @@ byte and has no Pro Action Replay form.
   background always reads `$1000` (PPUCTRL `$10`, MMC1 in 8 KB mode with bank 0), so these tiles could only be
   sprites, and the one routine that sets sprite tiles (`$07:CCE4`) takes them from ROM records, none of which names
   them. Shown with sprite palette 3 (a guess): ![Kondoria](img/nes2/unused_kondoria.png)
+- ★ **The church cross, US.** The US street graphics (`$01:B724`) still hold the cross (tiles `$60-$63`, metatile
+  `$39` of the table at `$04:98A8`). The US and JP street maps (`$04:AE17`, JP `$04:ADB7`) differ in one cell, column
+  14 row 4: `$39` in JP, sky in US. Put back: ![Church cross](img/nes2/us_church_cross_restored.png)
+- Street metatiles `$7E-$8A` (`$04:9AA0`) and their 28 tiles (`$97-$B2`), yellow building parts with a big face and
+  a sign, are placed by neither version's map.
 
 ## Unused sounds
 

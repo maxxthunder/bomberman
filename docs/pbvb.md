@@ -118,6 +118,8 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
   stage, opponent or world, none gives `$C6` (`$0706_6F9D`); every other entry is loaded. It holds large star, sun
   and moon medals, rougher and dithered unlike the medal card's (`$C5`), and a copy of the castle from `$C1`:
   ![Graphics $C6](img/pbvb/unused_medals.png)
+- Graphics `$C5` (the medal card and stage screen) also hold 陽, て, 星 and パスワード. Neither screen's maps (`$60`;
+  `$50`, `$51` + world) nor sprite frames (table `$0703_3800`) use them: Japanese text left in the font.
 
 ## Unused sounds
 

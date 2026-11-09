@@ -2011,5 +2011,17 @@
   "note": "The common sprite block (bank 1 $8000) is loaded to PPU $0000 at every stage start ($07:CBDD). Backgrounds always use $1000, so its tiles can only show as sprites, and the only routine that writes sprite tiles ($07:CCE4) takes them from records in ROM. No record in either version names $84-$8B or $94-$9B: a blue blob in four frames (two walking, one more, one wide-eyed). The game gives it no palette; the image uses sprite palette 3, a guess.",
   "section": "unused",
   "img": "unused_kondoria.png"
+ },
+ {
+  "code": "Street metatile $39",
+  "effect": "The ending's church cross is still in the US cartridge; only the map leaves it out",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The ending's street is drawn from metatiles ($04:B826). The US street graphics ($01:B724) still hold the cross (tiles $60-$63) and metatile $39 that uses them; the US and JP street maps ($04:AE17, JP $04:ADB7) differ in one cell only, column 14 row 4, which is $39 in JP and sky in US. The image is the US data with that cell put back, in the game's palette as read in Mesen.",
+  "section": "unused",
+  "img": "us_church_cross_restored.png"
  }
 ]
