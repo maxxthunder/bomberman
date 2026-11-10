@@ -1566,7 +1566,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen raw code (RAM F8:0091 = $2091). Stood on its own bomb: lives kept; without it the same test lost a life (US) The game itself sets the bit for about 120 frames after a hit (03:ACE8, from the death check 02:8CAD when the heart item absorbs one).",
+  "note": "Mesen raw code (RAM F8:0091 = $2091). Stood on its own bomb: lives kept; without it the same test lost a life (US) The game itself sets the bit for about 120 frames after a hit (03:ACE8, from the death check 02:8CAD when the heart item absorbs one). Special Version (its Normal Game, through the menu patch): 1F0099:20, checked in Mesen.",
   "section": "cheat"
  },
  {
@@ -1579,7 +1579,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "RAM F8:189F = $389F; HUD showed 9 (US)",
+  "note": "RAM F8:189F = $389F; HUD showed 9 (US) Special Version: 1F1896:09, checked in Mesen.",
   "section": "cheat"
  },
  {
@@ -1592,7 +1592,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "RAM F8:189A = $389A, copied to the player at the stage start: $9B = $30 (US)",
+  "note": "RAM F8:189A = $389A, copied to the player at the stage start: $9B = $30 (US) Special Version: 1F1891:03, checked in Mesen (RAM).",
   "section": "cheat"
  },
  {
@@ -1605,7 +1605,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "RAM F8:1895 / F8:1896; 1F1895:03 + 1F1896:04 made a new game load record 28 (4-5) (US). Turn off after the stage starts",
+  "note": "RAM F8:1895 / F8:1896; 1F1895:03 + 1F1896:04 made a new game load record 28 (4-5) (US). Turn off after the stage starts Special Version: 1F188C:0w + 1F188D:0s (1F1896 is its lives byte), checked in Mesen.",
   "section": "cheat"
  },
  {
@@ -1760,9 +1760,23 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen raw code (RAM F8:0091 = $2091): player bit 6, the pierce-fire item's effect. In Mesen one bomb broke 3 soft blocks with it, 1 without.",
+  "note": "Mesen raw code (RAM F8:0091 = $2091): player bit 6, the pierce-fire item's effect. In Mesen one bomb broke 3 soft blocks with it, 1 without. Special Version: 1F0099:40 (the bit was set; not played).",
   "section": "cheat",
   "img": "pierce_effect_off_on.png"
+ },
+ {
+  "code": "1F0091:10",
+  "effect": "Bending fire: a flame arm that is blocked part-way turns 90° and keeps going, a power no item gives",
+  "versions": [
+   "US",
+   "vc",
+   "JP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen raw code (RAM F8:0091 = $2091): player bit 4, read at 02:96DF and used at 02:9872, which picks a random side ($EE9E & 2) when an arm is blocked. Nothing in the game sets it; the Special Version has neither the test nor the code. In Mesen (US 3-5, with bit 5 also set so the bomb was safe to stand by) the down arm turned right along the bottom row; without the bit it stopped. Image: bit off (top), on (bottom).",
+  "section": "unused",
+  "img": "bending_fire.png"
  },
  {
   "code": "006E3D:AE",
@@ -1774,7 +1788,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen pceRaw cheat on the ROM byte of 1-1's item list. In Mesen (US): the item slot was $AE and picking it up set $2091 = $48. JP code 006E43:AE (the same item byte, JP file offset) tested in Mesen: 1-1's item slot $3BEB read $AE (the ROM byte there is $A0, the fire item).",
+  "note": "Mesen pceRaw cheat on the ROM byte of 1-1's item list. In Mesen (US): the item slot was $AE and picking it up set $2091 = $48. JP code 006E43:AE (the same item byte, JP file offset) tested in Mesen: 1-1's item slot $3BEB read $AE (the ROM byte there is $A0, the fire item). Special Version: 006B4A:AE, checked in Mesen (RAM).",
   "section": "cheat",
   "img": "pierce_item_1-1_cheat.png"
  },
@@ -1788,7 +1802,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Item $B7 has a pickup handler (03:AB28, a bonus score) but no stage list or spawn ever uses it, in US, JP or SP. The ROM cheat puts it in 1-1: shown in the stage in Mesen. JP code 006E43:B7 tested in Mesen: 1-1's item slot $3BEB read $B7 (the ROM byte there is $A0, the fire item).",
+  "note": "Item $B7 has a pickup handler (03:AB28, a bonus score) but no stage list or spawn ever uses it, in US, JP or SP. The ROM cheat puts it in 1-1: shown in the stage in Mesen. JP code 006E43:B7 tested in Mesen: 1-1's item slot $3BEB read $B7 (the ROM byte there is $A0, the fire item). Special Version: 006B4A:B7 (the same byte; not run).",
   "section": "unused",
   "img": "ribbon_1-1_cheat.png"
  },

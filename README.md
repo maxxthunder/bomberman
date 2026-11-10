@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis, PC Engine and Virtual Boy
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.0.0](https://img.shields.io/badge/version-2.0.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.1.0](https://img.shields.io/badge/version-2.1.0-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 19 Bomberman games, read from each game's own code and tested in emulators, with a
 password checker for every game and a generator wherever a code holds items or progress. Each game also has its
@@ -74,6 +74,7 @@ The best finds for each game; the research notes have the rest.
 - The unused debug menu, shown running without a ROM patch, and the first look at the 1993-05-11 beta.
 - In Battle Mode about 1 in 256 bombs fizzles with a puff of smoke and goes off 10-20 seconds late; and Reset keeps
   your last password on the password screen.
+- A palette-fade counter the game never counts: set it and every stage is played on a black field.
 
 **Super Bomberman 2**
 - The debug menu works: stage select (6-0 plays the ending), no death, fire, bombs and items.
@@ -104,6 +105,7 @@ The best finds for each game; the research notes have the rest.
 **Bomberman '93**
 - The US game no longer calls its "Configration" screen; a 7-byte patch puts the call back.
 - The Special Version is a battle-only cart with the Normal Game and the password screen left inside.
+- Bending fire: a power no item gives, still in the code, that turns a blocked blast around the corner.
 
 **Bomberman '94**
 - Every password also works in Mega Bomberman: the two games share the codec code for code.
@@ -129,6 +131,8 @@ The best finds for each game; the research notes have the rest.
 **Bomberman GB 3**
 - The 28-bit password decoded: its check is a capsule balance between what the cleared areas paid and what you
   bought.
+- Enough diamonds in an area's stage 5 bring a helper to the boss fight with three power-ups, and challenge mode
+  hides a door to a second arena.
 
 **Atomic Punk / Bomber Boy**
 - Game A's password decoded: the islands cleared and the gold, with two check bytes; all eight islands is the ending.

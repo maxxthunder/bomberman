@@ -240,22 +240,24 @@ Up/Down pick a line, Left/Right change it, Select closes it and applies the valu
 | 1 | NO DEATH | player `+$2E` | Stored on close but **nothing reads it** (only the menu): the hit code `$C4:1385`/`$C4:13ED` goes straight to the death routine. With the patch's reconstruction (a hit is dropped while `+$2E` is set): own bomb, 5 lives kept; off: 5 → 4 | ★ New |
 | 2 | GAME SPEED | `$00A6`, X1-X4 | Nothing reads `$00A6` in any version, and it isn't copied back: no effect | Known ("no longer works") |
 | 3-5 | BOMB UP / FIRE UP / SPEED UP | `+$30` / `+$31` / `+$32`, 0-9, 0-9, 0-7 | Set the bomb count, blast range and speed level (read back after closing: 9, 9, 7) | ★ New (checked) |
-| 6 | REMOCON | `+$33` | remote-control bombs flag set | ★ New (RAM) |
-| 7 | WALL PASS | `+$39` bit 6 | set (ORed in: turning it OFF later does not clear it) | ★ New (RAM) |
-| 8 | BOMB PASS | `+$39` bit 5 | set (same OR caveat) | ★ New (RAM) |
+| 6 | REMOCON | `+$33` | Remote bombs: drawn as remote bombs (+`$0C` bit 6), one stayed 700 frames and went off 1-2 frames after B | ★ New (played) |
+| 7 | WALL PASS | `+$39` bit 6 | Walks through soft blocks (ORed in: turning it OFF later does not clear it) | ★ New (played) |
+| 8 | BOMB PASS | `+$39` bit 5 | Walks back onto a bomb (same OR caveat) | ★ New (played) |
 | 9 | FIRE PASS | `+$36` | Not a power-up: it is the invincibility timer. Shown ON while the start/respawn flashing lasts; ON writes `$0160` frames (5.9 s). Own bomb with it on: survived, timer ran out normally | ★ New |
 | 10 | FIRE FULL | `+$31` bit 7 | Maximum blast: a fire-3 bomb burned across the whole row ![](img/sb1/debug_fire_full.png) | ★ New |
-| 11 | BREAK THR. | `+$38` | flag set; not played | ★ New (RAM) |
-| 12 | POWER | `+$39` bit 0 | sets bit 0 (often described as POWER and KICK swapped; not checked against the item handlers) | Known (RAM checked) |
-| 13 | KICK | `+$39` bit 1 | sets bit 1 | Known (RAM checked) |
+| 11 | BREAK THR. | `+$38` | Red bombs whose blast passes through soft blocks, burning every one in range (stop mask `$02E0` → `$00A0`, `$C4:45A2`); item 11 (`$C6:0F37`) sets the same bit | ★ New (played) |
+| 12 | POWER | `+$39` bit 0 | The kick: walk into a bomb and it slides until something stops it (`$C4:22B0`) | Known (played) |
+| 13 | KICK | `+$39` bit 1 | The punch: Y throws a bomb 3 cells (`$C4:1D0B`, Y or L) | Known (played) |
 | 14 | SKULL | `$C6:113D` | Gives a random skull disease (`+$13A`/`+$13C` = `$23F5`...), the same routine the skull item calls (`$C6:0FC5`) | ★ New |
 | 15 | TIME CHECK | `$00B3` | Nothing reads it in any version: no effect | ★ New |
 | 16 | VS CHECK | `$00B4` | The path search `$C6:39C0` of the blue enemy in 1-5 and 6-5 (the only stages that run it) sets bit `$0200` of every map cell it visits (`$C6:3A40`), which draws them black; the clear routine `$C4:0B9F` is uncalled too, so the marks pile up. Already known as "a debugging tool for Pakupa" ![](img/sb1/debug_vs_check.png) | Known; effect ★ New |
 | 17 | BGM NO. | `$00B5`, 00-41 | A plays track n (`$C3:002C`, Y = n via `$C6:0996`); verified Y = 3 for 03 | ★ New |
 | 18 | SE NO. | `$00B6`, 00-39 | A plays sound n (`$C3:0042`, via `$C6:096A`) | ★ New |
 
-Not verified in play: REMOCON, WALL/BOMB PASS, BREAK THR., POWER and KICK were checked only as the player-struct
-bits they set, not by playing with them.
+REMOCON, WALL/BOMB PASS, BREAK THR., POWER and KICK were played on 1-1 (bits written as the menu's close routine
+writes them, real pad input; A drops a bomb, B sets off remote bombs). The item pickups make bomb pass and kick
+exclusive (`$C6:0E74` sets bit 5 and clears bit 0, `$C6:0F5E` the reverse); the menu ORs them, so both can be on.
+BREAK THR. off (left) and on (right), fire 3 into two soft blocks: ![](img/sb1/debug_break_thr.png)
 
 ## Secret items
 
@@ -418,8 +420,16 @@ Never-run code falls in two groups:
   (6,477 bytes): boss and enemy states, rare collisions, battle cases. Situations the runs did not reach, not hidden
   features; the biggest are the 6-8 boss (`$C7:5911`, 413 bytes) and per-direction collision branches
   (`$C4:31D9`/`329B`/`335D`/`341F`).
-- **Boss defeats and the ending lead-in** (Mesen, boss hits forced): `$C7:2678`, `$C7:3EF7`, `$C7:4900` and
-  `$C7:165B` are the 1-8, 2-8, 4-8 and 3-8 boss defeats; the coverage never killed a boss. After the 6-8 second form
+- **Boss defeats and the ending lead-in** (Mesen, boss hits forced in short windows, the hit counters left to run
+  down on their own): all six bosses die and the map follows. `$C7:2678` (1-8, with the boss explosion spawner
+  `$C6:31D7`-`332A`), `$C7:3EF7` (2-8) and `$C7:4900` (4-8, after being pushed into the arena edges, `$C7:4AF4`-`4CC4`)
+  are the defeats. 3-8: `$C7:128E` → `$C7:1396` freezes the game (`$0314` bit 3) and places the players, `$C7:12EE`
+  flashes white, `$C7:165B` leaves the scientist alone, then `$C7:184C` and `$C7:16F1` fill the field with columns and
+  rows of little coloured Bombermen. 5-8: the boss is an AI Bomberman in player slot `$0DC0` (state `$C4:2E0A`, 5 hits:
+  +`$106` = 4, each hit `$C4:2EAA` → `$C4:30B6`); the last one takes `$C4:30DA` past the battle death object, and the
+  stage object `$C4:384A` gives both players points (`$C4:3893`) and goes to the map (`$C4:3883`). 4-8 also runs a
+  boss-stage item dropper (`$C7:69DD`: every `$800` frames a random item from `$C7:6A35`). No unused phase, attack or
+  text turned up. After the 6-8 second form
   (`$C7:6B4E`) takes its 5th hit, `$C7:71E0` jumps to the arena scene `$C7:7292`: P1 and P2 at (`$68`,`$B8`) and
   (`$A8`,`$B8`) in state `$C4:273F` beside the two villains, ending with `$00A4` = `$39` (`$C7:7384`). That map runs
   with `$0D17` = `$68`: the map object `$C5:7409` plays sound `$1B` and the gathering animations (`$C5:7449`,
@@ -442,10 +452,10 @@ Never-run code falls in two groups:
 | `$C5:3B7C`, `$C5:3C16` | 123, 618 | the battle HURRY UP! banner at 1:00 (`$C4:0883`) and the TIME UP! banner at 0:00 (`$C4:087A` → `$C4:0769`, every live player dies, a DRAW); reached through `$C4:08xx`, not unreferenced. TIME UP! is almost never seen because the blocks end the round first ([img](img/sb1/battle_time_up.png)) | used | ★ identified (coverage round) |
 | `$C4:4FCB` | 325 | walks the four blast arms from a cell and clears bit `$0800` (fire) in each map cell until a wall: the old end-of-explosion routine. The same code runs in the Japanese version (`$C4:48A3`); US/EU/beta use a replacement | superseded | ★ New |
 | `$C4:5F89`, `$C5:59A7` | 257, 279 | two byte-identical copies of a "pick a random cell in the 13 × 11 field" routine (RNG `$C6:1F13`) | unreferenced | ★ New (minor) |
-| `$C6:11BA`, `$C7:12EE`, `$C7:786A`, `$C7:7897` | 370 ... 136 | palette loaders (colours 1-13 through `$C6:2436`) | unreferenced | not identified |
+| `$C6:11BA`, `$C7:786A`, `$C7:7897` | 370 ... 136 | palette loaders (colours 1-13 through `$C6:2436`) | unreferenced | not identified |
 | `$C4:8085`-`$C4:8150` | 89, 45 | entry stubs of the "BOOT VER1.03" sound-driver library (`$C4:8002`) that the game never calls | library | ★ New (minor) |
-| `$C6:1F68`, `$C6:3BF9`, `$C6:207D` | 40, 279, 185 | distance-to-player-1 check (`$40` pixels), a box-overlap test, a loop over 4 players | unreferenced helpers | not identified |
-| `$C7:1396`, `$C7:184C`, `$C7:1B2C`, `$C7:73D7` | 456 ... 397 | scene code in the ending/battle-result bank: freezes the game (`$0314` bit 3) and moves players 1 and 2; spawns objects | unreferenced | not identified |
+| `$C6:1F68`, `$C6:207D` | 40, 185 | distance-to-player-1 check (`$40` pixels), a loop over 4 players | unreferenced helpers | not identified |
+| `$C7:1396`, `$C7:184C`, `$C7:1B2C`, `$C7:12EE`, `$C6:3BF9`, `$C6:326B`, `$C7:73D7` | 456 ... 397 | boss code reached through state pointers: the 3-8 boss's hit and defeat sequence (above), the 6-8 second form's hit test, the boss explosion | used | ran in Mesen with forced hits |
 | `$C4:FA8F`, `$C4:F801`, `$C5:B1EE`, `$C5:F70F` ... | small | data decoded as code (sound and graphics in the code banks) | not code | |
 
 EU equals US. In JP the same islands exist where the code exists (checked by byte search plus a JP coverage run of
@@ -478,7 +488,7 @@ branches on, but that no instruction writes, or only never-run code writes. With
 |---|---|---|---|
 | `$00B4` | `$C6:3A40` | VS CHECK: written only by the debug menu | Known (above) |
 | player +`$2E` (`$0D6E`) | (nothing) | NO DEATH: written by the debug menu, read by nothing | Known (above) |
-| `$0304` | `$C6:22E7` | a frame-skip mask for the animated-tile updater (`AND` with the per-speed masks `$C6:2426`, skip the update when non-zero). Write watch over 9 scenes of play (`tools/sb1/flagwatch.lua`): written once, by the RAM clear at boot (`$C4:0211`), so it stays 0 and every animation speed class updates every frame. Looks like a counter whose increment was dropped; setting it was not tried | ★ New (minor) |
+| `$0304` | `$C6:22E7` | a frame-skip mask for the palette fader: fade speed classes 6-14 skip a step whenever `$0304 AND $C6:2426[class]` ≠ 0. Written once, by the RAM clear at boot (`$C4:0211`), so class 6 (every stage and title fade-in) and class 7 run at full speed. Counted up each frame, the 1-1 fade-in takes 64 frames instead of 33; set to `$FF` the stage fade-ins never run and the game is played on a black field ![](img/sb1/fade_mask_black.png) | ★ New |
 | `$0D6F`, `$0CFB` | `$C4:091B`, `$C5:50D5` | written through `$2F,X` (1,450 writes in the watch) and the 16-bit pad store: false hits | |
 
 So beyond the debug menu's own variables nothing is tested that the game never sets.
@@ -578,8 +588,5 @@ The debug-menu ROM codes (90 per version) are listed under Debug menu. Their Gam
 
 ## Open
 
-- Unset flag `$0304`: what setting it does was not tried.
-- Debug menu: REMOCON, WALL PASS, BOMB PASS, BREAK THR., POWER and KICK checked as RAM bits only; GAME SPEED and
-  TIME CHECK have no code left to restore.
 - Unused palettes: needs the palette tables mapped (see Unused graphics).
 - Regions: the battle DRAW screen and the NPC / Mecha Bomberman palettes (Known) not re-shot.

@@ -148,14 +148,14 @@ multitap battle.
   CONGRATULATIONS!** (`$0A:4EE4`, drawn by `$0A:4DFF`, which the extra battle (5656) runs when the defeated count
   `$C1D1-$C1D3` reaches 240, `$0A:4EFC`; shown since: see the 240-win screen below). The bank 9
   strings (TECHNIQUE / ROUND SELECT, nPLAYER WIN!) belong to the multitap battle (below); the VICTORY! lines (match
-  won) didn't come up in the battle runs. ★ New: the Wario ROM has no trace of the JP story (no script records).
+  won) show at the end of a multitap match (below). ★ New: the Wario ROM has no trace of the JP story (no script records).
 - **Stages** (`tools/gb1/stages.py`, `disasm/gb1/stages_<ver>.tsv`): `$00:1608` looks up `$C3F0` in the word table
   `$08:5C19` (Wario `$08:5FA3`): 40 entries of an 8-byte header (map, metablock, sub-block and a 4th table) and a
   64-byte map of 8 x 8 metablocks (4 x 4 tiles each: the whole BG map); soft blocks are scattered afterwards
   (`$01:4C19`). 0-31 are the 32 stages (1-3/1-boss, 6-3/6-boss and 8-3/8-boss share a map: 29 distinct), **32-39 the 8
   multitap battle arenas** (`$09:47C3`: `$C3F0` = `$20` + round). The table ends at the first header and the headers
   and metablock tables are packed with no gap, so **there is no unused layout**. All 33 game/arena-1 maps were read in
-  the runs; arenas 2-8 weren't picked.
+  the runs, and arenas 2-8 were played in the multitap battle.
 - **Graphics** (CDL: which ROM bytes the coverage runs read, SGB and multitap runs included; `tools/gb1/gfx.py` for
   the tile format): almost everything unread is code (bank 2), the 7 unplayed battle arenas, sound data and small
   tails. One notable block: ★ **New: an unused title logo**, 128 compressed tiles at `$03:6911` (Wario `$03:62E2`, the
@@ -194,6 +194,15 @@ the run returns to the join screen after a match. Played with random input on al
 JP and Wario (`tools/gb1/multitap.lua`, run with `tools/emu/sgb_dump.py`).
 
 ![NORMAL / BATTLE, join screen, TECHNIQUE / ROUND SELECT, a 4-player battle, results](img/gb1/multitap_battle.png)
+
+Played through (Mesen, JP and Wario): ROUND 1-8 (`$C3EF`, A +1 / B −1, wrapping) picks arena `$1F` + n; all eight were
+played to a round result. ![Arenas 1-8](img/gb1/multitap_arenas.png) TECHNIQUE defaults to OFF (A turns it ON, B
+OFF, `$09:4602`); ON makes `$09:474E` set every player's technique flags `$5C`-`$5F`, the ones the story mode hands
+out after bosses (`$01:4040`): kick, dash, trouncer and liner, never the moto (`$5B`). Checked: the flags, and B +
+Right moved 48 px in 40 frames with ON against 30 with OFF. A match is first to 3 round wins (`$C3D1`-`$C3D4`), then
+VICTORY (`$09:4E7C`): JP shows Bomberman in a spotlight with 1PLAYER VICTORY!, Wario shows Wario with PLAYER1 VICTORY!;
+after about 5 seconds CONTINUE (back to the join screen) or END (the title).
+![VICTORY, JP and Wario](img/gb1/multitap_victory.png)
 
 ## Regions (Wario vs JP)
 
@@ -238,5 +247,5 @@ the password digit buffer), brings it up after the first round in both carts.
 
 ## Open
 
-- The multitap battle's VICTORY! screen, arenas 2-8 and TECHNIQUE OFF weren't played through.
+- The multitap VICTORY picture for winners other than player 1; kick, trouncer and liner in a multitap battle.
 - Why the logo at `$03:6911` was dropped (an earlier palette design is a guess).

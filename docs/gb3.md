@@ -29,7 +29,7 @@ blocks); there was no release outside Japan.
 | `$C383-$C389` | areas cleared (one byte each) | `$0D:6A2A` |
 | `$C38C` | capsules (クリスタル / カプセル) held: the shop currency | `$01:4BBA`, `$0A:769F` |
 | `$C38D` | shop techniques bought, one bit each (see below) | `$0D:695A`, `$0A:767C` |
-| `$C38E` | 0-2, set only by the stage-7 form of the password (below) | `$0D:6991`, `$02:7C52` |
+| `$C38E` | stage-5 reward, 0-2: +1 per special panel (pickup kind 7, `$00:38AC`); cleared at the start of each stage-5 room (`$00:15CE`, `$00:15DA`) and at a new area; read at the boss stage (`$0D:6DA7`, below) and kept by the stage-7 form of the password | `$00:38AC`, `$0D:6DA7`, `$02:7C52` |
 | `$C480` | stage result: 0 playing, 1/2 died, 3 (set only when `$C1B8` = 2), `$FF` exit (cleared) | `$01:42D4`, `$01:45F0`, `$01:4690` |
 | `$D200-$D206` | the 7 password digits (0-F); `$C621` cursor | `$0D:6B78` |
 
@@ -141,7 +141,7 @@ Coverage (`tools/gb3/cov.sh`): intro and title, STORY, the 3rd title mode (ち�
 attack, all three area tiers with the cheats, a game over. Executed: **44,079 bytes**.
 
 - **Dead code** (`disasm/gb3/dead_jp.txt`): branch-reachable never-run 5,019 bytes, dead 1,244, no reference 0.
-  The `$C480` = 3 path (`$00:16D1`, set by `$01:45F0` only when `$C1B8` = 2, probably the challenge mode) and
+  The `$C480` = 3 path (`$00:16D1`, set by `$01:45F0` only when `$C1B8` = 2: the challenge-mode door, below) and
   `$00:16F7` never ran. Orphans (241) are mostly graphics data.
 - **Unset flags**: the static scan finds only object-page reads (`$C012`, `$C100`, written through HL); `$C1BC`
   and `$C1BD` were found by hand from the boot clear (they have a write, the clear, so the scan doesn't list them).
@@ -194,7 +194,43 @@ Logo: `docs/img/logos/gb3_jp.png` (`tools/gb3/logo.py`).
   played. It has its own channel data (the last in the bank, from `$78C0`) and is a full looping tune. Songs 05, 06
   and 0A point at other songs' data, so they're aliases, not lost music.
 
+### Stage-5 diamonds and the boss helper (★ New)
+
+Stage 5 of each area counts the diamonds you pick up (pickup kind 8, `$00:38D1`: `$C390` in room 1, `$C391` carries
+on in room 2; in challenge mode they add score instead). In room 2, the count reaching the area's thresholds
+(`$00:39B6`: Wood, Sand, Lava 40 / 50 / 60; City, Ice, Aqua 60 / 70 / 80; Evil 50 / 60 / 70) puts out a 1-up panel
+(tile `$A4`), then a special panel (tile `$A8`) at each of the next two; each special panel adds 1 to `$C38E`. At
+the boss stage, `$C38E` ≠ 0 brings a small flying helper (object `$52`, `$09:5E61`, from `$0D:6DA7`) that drops three
+bomb / fire panels picked for your current power (`$02:7DF9`); the boss's contact and hit checks are off while it
+flies (`$C4CA`). At 2 it flies a second, wavy lap (`$09:5E8E`) that drops nothing. The stage-7 password form keeps
+`$C38E` for a boss-stage restart, which is why the known boss passwords (39C6418 and the others) bring the helper.
+Mesen: Wood, City and Ice boss passwords with `$C38E` = 0, 1 and 2 (the helper only with 1 or 2; the middle panel was
+fire up), and on Wood 5 a special panel taken raised `$C38E` 0 → 1.
+![Helper, its three panels, the second lap, fire up taken](img/gb3/diamond_helper.png)
+
+### Challenge mode
+
+Ends at time up with タイムアップ!, a rating page (time left, blocks broken, enemies beaten, bonus, your score, best
+score), a level (`$01:61D2`, `$01:6B55`; はらはら 2 min: ぷろぼん ≥ 9000, なみぼん ≥ 4000, みそぼん ≥ 1500, else
+ぺけぼん; 5 min 18000 / 8000 / 3000; どきどき 2 min 14000 / 7000 / 3000, 5 min 25000 / 8000 / 3500, the last three
+read from the ROM) and a ranking of four (defaults HUD 9000, I.Y 5000, B.R 2000, BOM 1000) with 3-initial name
+entry, then つづけますか はい / いいえ. The cart has no battery, so the ranking lasts until power-off.
+![Rating, level, name entry](img/gb3/challenge_result.png)
+
+★ **A door in はらはら.** Room 117 (はらはら's arena) has door cells `$2C`/`$2D` in its bottom-right corner. Up at
+the door puts the player in state 9 (`$01:522F`), which sets `$C480` = 3, and `$00:16D1` moves to room 118: a plain
+11 × 12 arena with a horned, caped enemy, the clock still running (Mesen, the player moved next to the door).
+![The door cells, the second room](img/gb3/challenge_door_room.png)
+
+Room maps: `$00:1DC0[area × 30 + stage × 5 + k]` gives the room id, `$00:1ECE` + 3 × id its bank and pointer to four
+words (map, then data for `$00:221A`, `$00:2302`, `$00:234D`). The map (`$00:2072`) is 2 header bytes, width, height,
+then rows of RLE cells (a byte below `$80` is one cell; `$80` + n repeats the next byte n times), written 16 bytes
+apart at `$D300` and copied to `$D200`; a decoded challenge room matched the RAM dump.
+
 ## Open
 
-- What `$C38E` (the stage-7 password form) changes in play.
-- Challenge mode wasn't played to a result; the stage format is not decoded.
+- The 50-diamond count in stage 5 wasn't reached in play (the special panel was placed and taken; the boss helper
+  was seen through the password).
+- Challenge mode: the cleared branch (`$C480` = `$FF`) and どきどき's doors (cells `$32`/`$33`, rooms 120-123) weren't
+  reached; walking to はらはら's door wasn't done (the player was moved next to it); the room records' soft-block, item
+  and object parts aren't decoded.

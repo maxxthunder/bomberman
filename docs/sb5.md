@@ -479,7 +479,7 @@ so 720 is an upper bound. The ones read and worth reporting:
 | `$C0:0AFC` | `LDA $2C / CMP #$33 / BNE / JML $80:F345`: holding L+R+Select+Start jumps to the native-mode reset entry (`$F345` = `SEI SEC XCE`, falling into the RESET code at `$F348`). Nothing calls it and no pointer to it exists (no `FC 0A` operand anywhere). Same bytes at the same address in Caravan and English | truly unreferenced: a **cut soft-reset combo** | ★ New |
 | `$C5:6806` | looks up `$1D1F` (the scene the orphaned handler `$C5:6934` stores) in a byte-pair table at `$C5:6825` to set `$1D22`. The table's first byte is `$00`: it is empty and the lookup always fails | cut feature, the other half of the cut-password handler | ★ New |
 | `$C5:6934`-`$C5:69D8` | the eight orphaned password handlers | truly unreferenced | Known (round 1) |
-| `$C3:4C13` | sets `$1FF3`=`$FF` around a boss-actor step; its only caller `$C5:4321` never ran | reachable in a boss state not covered | not identified |
+| `$C3:4C13` | the enemy step while the clock item runs: item 8 (`$C5:42D3`, pickup table `$C5:4195`) moves every enemy to `$C5:4319` for `$03C0` frames (`$F0` in room `$6F`); `$C3:4C13` sets `$1FF3` = `$FF` so the blast check `$C3:4B7B` still runs but the movement callback is skipped, blinks the palette near the end, and `$C3:4C6E` / `$C5:4326` restore the enemy | reachable: item 8 is in the soft-block lists of rooms `$26 $38 $44 $49 $4A $55 $63 $64`; the coverage never picked one up | identified (Mesen, forced pickup: `$1FF3` written on 986 frames of the ~994-frame freeze) |
 | `$C5:6E37` (native `$D0`), `$C5:6D1E`, `$C5:6D9F`, `$C5:6DC1` | the demo/ending natives that set `$6253` and the player blocks | reachable: scene points not played to | — |
 | natives `$29`-`$3E` (`$C1:4747`-`$C1:4B82`), `$8D`-`$90` callers | cutscene and text natives | reachable only in the story scenes between zones, which the room sweep skips | — |
 | the 55 script-op handlers | ops that no script we ran used (mostly 16-bit compare/branch variants) | not covered | — |
@@ -524,9 +524,9 @@ sweep and logged every nonzero write with its PC. The ones that matter, each set
 | `$6253` [`$6271`] | `$C4:2D2B` | orphan `$C5:6951`, demo natives | invincible (round 1); PAR re-tested below | Known (round 1) |
 | **`$0E23`** | `$C4:2D31` (right after the `$6253` check), `$C5:0460` | **nothing**: only `STZ` at `$C5:0404` | **invincible and the stage clock stops**: `$C5:0460` skips the clock tick (`$0E1C-$0E1E`) while `$0E23`, `$0E20` or `$0E21` is nonzero. Same address in all three ROMs. A fit for the debug menu's MUTEKI/TIME lines | ★ New |
 | `$0E20`/`$0E21` | `$C5:041A`, `$C3:4C36` | a countdown (`DEC $0E20`) | a clock-stop timer; `$0E21`=1 held the clock to one second in 300 frames | reachable |
-| **`$6258`** | `$C5:3FAD`; saved per file (`$C0:491C`), loaded at `$C0:49DE` | the certificate script, `7B 58 62` (INC) at `$C6:E08F`, only when the clear rate is 100 and `$6258` is 0 | a per-file **100% flag**. When set (outside Battle) the soft-block item lists come from the second half of the table at `$C5:E5C7` (room index + 155). Holding it with PAR changed nothing visible at the start of 1-1, 2-1 and 5-1 (soft blocks are random anyway). The certificate's うらめん ("back side") comments below go with it | ★ New (item effect not verified in play) |
+| **`$6258`** | `$C5:3FAD`; saved per file (`$C0:491C`), loaded at `$C0:49DE` | the certificate script, `7B 58 62` (INC) at `$C6:E08F`, only when the clear rate is 100 and `$6258` is 0 | a per-file **100% flag**. When set (outside Battle) the soft-block item lists come from the second half of the table at `$C4:E5C7` (room index + 155). Holding it with PAR changed nothing visible at the start of 1-1, 2-1 and 5-1 (soft blocks are random anyway). The certificate's うらめん ("back side") comments below go with it | ★ New (item effect not verified in play) |
 | `$0F64` | `$C5:1FC8` | the native at `$C0:450D` (=2) | held at 2 in 1-1 for 900 frames: no visible change | unclear |
-| `$1FF3` | `$C3:4BCA` | `$C3:4C13` (never ran) | held in boss 1: no visible change | unclear |
+| `$1FF3` | `$C3:4BCA` | `$C3:4C13` (the clock item's freeze) | set and cleared within each frozen enemy's step; holding it alone does nothing visible | identified |
 | `$1D1F` | `$C5:680F` | orphan `$C5:6934` | lookup table empty, so no effect is possible | dead (above) |
 | `$6254` | `$C4:2908` | script (`$C2:1AF1`) in the Normal menu; 0719 on Caravan | boss-rush full power (round 1) | Known |
 
@@ -584,7 +584,7 @@ apart from the extra `$F6`.
   masked with `$B0`, to the collision map `$7E:1052` (16 bytes per row): bit 7 solid, `$30` soft block. Type 0 is
   always solid. `$D0:0000+2(s−1)` is the set's metatile table (4 BG tile words per type).
 - Soft blocks are not in the layout: they are placed at room start (randomly in Battle); the per-room item lists
-  are the table at `$C5:E5C7`.
+  are the table at `$C4:E5C7` (read with DBR `$84`).
 
 **Room ids:** `$0D`-`$66` stages, `$67`-`$70` bosses, `$71`-`$73` bonus rooms, and **`$74`-`$A7` = the 13 battle
 stages × 4 layout codes** (normal, 4622, 0413, 0926): stage *k*, code *v* is room `$74+4(k−1)+v`, so `$9C`-`$A7`
@@ -622,7 +622,7 @@ colon) on unpatched ROMs, and added to `sb5_codes.json` with `section: "cheat"`:
 
 ### Not verified (round 3)
 
-- What `$6258` changes in play (the item lists), and `$0F64` and `$1FF3`: set in Mesen, no visible change.
+- What `$6258` changes in play (the item lists), and `$0F64`: set in Mesen, no visible change.
 - The soft-reset combo `$C0:0AFC` never runs (nothing reaches it); read only.
 - The 386 undrawn text messages outside the certificate: no font context, not read.
 - `3061E9:01` on Caravan and English (same code bytes, not run).

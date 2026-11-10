@@ -28,7 +28,7 @@ US/Europe revision's.
 | `$C1C4-$C1C7` | the 4 password digits (0-9); later reused as clock digits | `$01:672A` |
 | `$C1DC` / `$C1DD` | world 0-4 (Forest, Ocean, Wind, Cloud, Evil) / area - 1 (0-4, 4 = boss) | `$01:6685` |
 | `$C1EE` / `$C1EF` | bombs / fire at the stage start (player `$C41C` / `$C446` in play) | `$02:49F1` |
-| `$C1F0` | copied to the player's `$C40E` at the stage start: 4 normally, 6 from a power-up code | `$02:49EB` |
+| `$C1F0` | walk speed 1-7, copied to the player's `$C40E` at the stage start: 4 normally, 6 from a power-up code; the skate item +1 (`$02:5D71`), the slow item −1 (`$02:5DA2`). Mesen, Right held 30 frames: 19 / 30 / 37 / 41 px at 1 / 4 / 6 / 7 | `$02:49EB`, `$00:12B7` |
 | `$C1F1` | lives (the HUD shows `$C1F1` - 1) | `$02:536A`, `$02:5B2B` |
 | `$C1F2` | targets left (the HUD's T) | `$00:2714`, `$02:4E2B` |
 | `$C1F8` | clock running | `$00:0372` |
@@ -60,7 +60,9 @@ checks), `$01:6565` (the check), `$01:662E` (what an accepted code sets), tables
 
 - **Power-up start** (`$C352` = 1): bombs 4, fire 4, 3 lives, `$C1F0` = 6, and at the stage start the player's
   ability byte `$C452` gets bits 1 and 3 (`$02:45EB`); bit 1 is tested by the A-button bomb handler (`$02:5F8A`, probably
-  the remote primer), bit 3 by the bomb code in bank 4 (`$04:7349`, not identified).
+  the remote primer), bit 3 by the flame code in bank 4 (`$04:7349`, `$73CE`, `$7453`, `$74D8`): for cells of types `$22`-`$2A` it writes
+  `$FE` (keep going) instead of `$FF` (stop) into the flame-arm table, so flames pass those cells (read from code; no
+  visible difference was found in a test).
 - **Boss rush** (`$C352` = 2): the same power-up start, then `$C352` becomes 3 and while it is 3 every stage start
   sets the area to 5 (`$02:45F3`-`$02:45FE`).
 - **Ending** (`$C352` = 3 when the password screen exits, `$01:6A2D`): the state goes to 7, the ending, instead of the
@@ -103,6 +105,11 @@ exist); `debugDecode(code)` reads a code the way the unused debug decoder does (
 
 ![5656 accepted, 9437 at the Forest boss, a rejected code](img/pocket/codes.png)
 
+The boss rush (9437) played through in Mesen (invincible, random input): the five world bosses in a row, Forest,
+Ocean, Wind, Cloud and Evil, each starting at area 5 (`$C1DC` 0 → 5), a life after each of the first four, then the
+ending and The End.
+![Each boss of the rush, the ending](img/pocket/boss_rush.png)
+
 ![0278: the ending](img/pocket/ending.png)
 
 Entering: title, Normal Game, Password.
@@ -130,6 +137,11 @@ Entering: title, Normal Game, Password.
   `$C35C` = 40) and the flower is spawned (`$02:680C`) at the 40th bomb; Wind 3 and Ocean 2 arm 30.
 
 ![Ocean 3 "Area" screen; the frame the flower is spawned](img/pocket/flower.png)
+
+Collected (Mesen, the flower moved onto the player): `$02:6945` sets bombs and fire to 4, both in play (`$C41C`,
+`$C446`) and carried (`$C1EE`, `$C1EF`), and ORs `$0A` into the ability byte `$C452` (bit 1, Select sets off the
+bombs; bit 3, above), the same as a power-up code; speed is untouched.
+![Touching the flower, then bombs 4 / fire 4](img/pocket/flower_collect.png)
 
 ## Secrets
 
@@ -309,9 +321,7 @@ Logo: `docs/img/logos/pocket.png` (`tools/pocket/logo.py`, Game Boy Color colour
 
 ## Open
 
-- What the player's `$C40E` (4, or 6 after a power-up code) and ability bit 3 change in play.
-- The boss rush wasn't played past the first boss.
-- The flower was spawned but not collected, so its effect (maximum bombs and fire, the primer) is GameFAQs', not
-  checked.
+- Ability bit 3's visible effect (which cells types `$22`-`$2A` are).
+- Whether the flower's bombs and fire last past the stage (it writes the carried values too).
 - GB KISS with a partner (a second Japanese cart or another GB KISS game) wasn't emulated: Mesen runs one Game Boy and
   its HuC-1 infrared receiver never sees light.

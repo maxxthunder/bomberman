@@ -2,6 +2,21 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.1.0 (2026-11-10)
+- Bomberman '93: bending fire, an unused power that turns a blocked blast around the corner (new card); a flag that
+  freezes the pad; the CONFIGRATION screen's values shown in play; the password arrows and the continue screen's
+  code; the Special Version's address for each cheat.
+- Bomberman '94: the hatch-sealing scene between stages and the Sound Room's tune-only code, both reached in play.
+- Super Bomberman: a palette-fade flag that leaves you playing on a black field (new card); the debug menu's
+  power-ups played (POWER is the kick, KICK the punch); every boss defeat, the 5-8 one included.
+- Super Bomberman 3: every boss beaten through to END, with the graphics only the boss scenes load and the final
+  boss's rare attacks; PRESENTED BY HUDSON is the staff roll's last card.
+- Super Bomberman 5: the clock item's enemy freeze.
+- Bomberman GB 3: the stage-5 diamond bonus and the boss helper it brings (new card); challenge mode's rating,
+  levels, ranking and a door to a second arena; the room map format.
+- Pocket Bomberman: the boss rush played to the ending, the flower's effect checked, and walk speed.
+- Wario Blast / Bomberman GB: the multitap battle's eight arenas, TECHNIQUE and the VICTORY screen.
+
 ## 2.0.0 (2026-11-10)
 - A simpler page: the stage pickers are gone from the nine games whose tables already list every password, and the
   code box sits under the password tables in every game. The search box, the "All codes" filter and the jump on

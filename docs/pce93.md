@@ -143,10 +143,14 @@ Special Version: there is no way in (see [below](#-the-special-version)).
 - D-pad moves the cursor; **I** types the letter under it into the next of the 8 places.
 - Move to **END** and press **I** to submit. A good code goes to the planet map with the stored state; Run there
   starts the stage. A bad code is wiped and the cursor is put on END.
-- (Not tested: the `←` `→` entries, presumably moving the entry position.)
+- `←` / `→` move the entry place back / forward without changing a letter (`06:98C3`: position `$2DD4,X`, 0-7);
+  **II** also steps back and **Run** submits from anywhere. An untouched place is blank (`$FF`), so a code with a
+  gap is refused. Typed D G X `←` G D F H B C: the X was overwritten and the code read as DGGDFHBC (3-5).
+  ![The arrows on the grid](img/pce93/password_arrows.png)
 
 Everything above was done with real presses in Mesen (`tools/pce93/lib.lua`, `type_pw` / `submit`). The game makes
-codes itself on its continue screen (encoder called from `07:A2FA`); not played to here.
+codes itself on its continue screen: after a game over it shows CONTINUE n / END / SAVE and the current state's code
+in brackets, made by the encoder at `07:A2FA` (seen after a game over on 3-5: DGGDFHBC, the code that was typed).
 
 ## Hidden screens and codes
 
@@ -171,6 +175,13 @@ Verified in Mesen (`tools/pce93/test_config.lua`, `test_config_use.lua`): JP wit
 (Select+Run held): the screen appears after the opening of a Normal Game. STAGE +2,
 SCENE +4, BOMB +3, STOCK +5 set with real presses; after Run the screen comes back at the next planet map still
 showing them. US: `$3FFB` = 1, the Normal Game never shows it; with the patch it appears.
+
+The values are used (JP, Mesen): STAGE 3 / SCENE 5 / BOMB 4 / FIRE 3 / SHOES 1 / every switch / STOCK 7, then Run,
+started 3-5 (record `$14`) with the player's `$91` = `$C7`, `$9B` = `$15`, `$A0` = `$34` and 7 lives; Bomberman walked
+through soft blocks and his bombs waited for the remote. The items go to STAGE `$3895`, SCENE `$3896`, BOMB `$3897`,
+FIRE `$3898`, SHOES `$389A`, KICK and LINE BOMB `$3899`, the switches (RIMOCON `$2201`, BOMB WALK `$2202`, BLOCK WALK
+`$2203`, FREE FIRE `$2205`, REVIVE `$2206`) as bits of `$389B`, STOCK `$389F`, SE `$2204` (the sound test) and MUSIC
+`$389D`.
 
 ![](img/pce93/config_jp.png) ![](img/pce93/config_jp_set.png) ![](img/pce93/config_jp_after.png) ![](img/pce93/config_us_patched.png)
 
@@ -366,13 +377,10 @@ plus the bits of the player's ability byte that no code sets. Each was set in Me
 | Flag | Read at | Set by the game? | Set in Mesen | Status |
 |---|---|---|---|---|
 | player ability `$91,X` bit 5 (`$2091` for player 1) | death check `02:8C79` (skips death), sprite flash `02:9171` | set for about 120 frames after a hit (`03:ACE8`, the blink when the heart item absorbs one); cleared `03:ACD6` | **invincible**: stood on its own bomb, lives stayed 2; with the bit clear the same test lost a life | ★ New |
-| `$91,X` bit 4 | `02:96DF` (sets `$B1` bit 0) | never | survived its own bomb once, then died to an enemy; no clear effect | ★ New, effect unclear |
+| `$91,X` bit 4 | `02:96DF` (sets `$B1` bit 0), used at `02:9872` | never (no item or code sets it; the Special Version has neither the test nor the code) | **bending fire**: a flame arm that is blocked part-way turns 90° in a random direction (`$EE9E` & 2) and keeps going ![Bit 4 off (top), on (bottom)](img/pce93/bending_fire.png) | ★ New |
 | `$91,X` bit 3 | fire check `02:8C9D` | yes: the vest item (`03:A9BF`, with a timer) | fire-proof | item effect |
-| `$2F99` | pad reader `00:EDAF`: non-zero skips the pad read | never (cleared at `00:ED9B`) | input kept working; no visible effect | ★ New, effect unclear |
+| `$2F99` | pad reader `00:EDAF`: non-zero skips the pad update (`JMP $EE5D`) | never (cleared at `00:ED9B`; the Special Version's `$2F8D` likewise) | **freezes the pad**: held and new buttons keep their last values; with Right held, Bomberman kept walking right while Left was pressed. Beside the empty hook `00:EE60`: probably a demo or debug input feed | ★ New |
 | `$38B1` | ending `08:8CB8`, clear timer `01:D93F` | 1 after a continue (`07:A191`) or a password (`01:D93B`) | 0 at the ending shows the clear page | ★ New |
-
-The CONFIGRATION screen's BOMB WALK item is shown and changed but never stored (`08:862E` clears `$2204`, and the
-write-back at `08:86C3` skips it), so it does nothing. ★ New.
 
 ★ **The clear-time page.** The ending shows CONGRATULATIONS!, CLEAR TIME (counted from the start of a new game,
 `01:D93F`) and CLEAR SCORE only when the game was finished from a new game with no password and no continue. Shown
@@ -454,6 +462,12 @@ Mesen 2's PC Engine codes are raw `AAAAAA:VV`, `AAAAAA` being the 21-bit physica
 added with `emu.addCheat(emu.cheatType.pceRaw, ...)` and checked (USA unless noted; JP uses the same addresses;
 the Special Version's game variables sit 9 bytes lower).
 
+Special Version (its leftover Normal Game, reached with the patch below): none of these codes work as written. Its
+equivalents, checked in Mesen: `1F0099:20` (invincible), `1F1896:09` (9 lives), `1F1891:03` (speed 3),
+`1F188C:0w` + `1F188D:0s` (stage select; `1F1896` is its lives byte), `1F0099:40` (pierce: the bit was set, not played)
+and `006B4A:AE` / `006B4A:B7` (1-1's item; `:B7` not run). It has no `$3FFB` flag (its older configuration screen always
+shows) and no clear-time page.
+
 | Code (Mesen) | F8 address | Effect | Check |
 |---|---|---|---|
 | `1F0091:20` | F8:0091 | invincible (player 1 ability bit 5) | stood on its own bomb, lives kept |
@@ -492,7 +506,4 @@ logo), plus the ™ sprite (US) or the banner sprites (SP, palette 4), renders t
 ## Open
 
 - A real pad-5 press for the tap screen (needs Mesen input on Multi Tap sub-ports).
-- `$91` bit 4 and `$2F99`: set in Mesen with no clear effect.
-- The backup-RAM screens and the COM-LINK game (need a Tennokoe or a second console); no cheat was checked on the Special Version.
-- That a stage started from the JP CONFIGRATION screen uses its values (only the screen keeping them was seen).
-- The `←` `→` entries on the password grid and the continue screen's code display.
+- The backup-RAM screens and the COM-LINK game (need a Tennokoe or a second console).

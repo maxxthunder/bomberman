@@ -3139,7 +3139,7 @@
   "devices": {
    "Pro Action Replay": "7E0D7963"
   },
-  "effect": "Power bomb, kick, bomb pass and wall pass",
+  "effect": "Kick, punch, bomb pass and wall pass",
   "versions": [
    "US",
    "EU",
@@ -3149,7 +3149,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$39 = bits 0, 1, 5, 6 (POWER, KICK, BOMB PASS, WALL PASS of the debug menu). RAM checked only. No Game Genie form: nothing writes the four bits but the item pickups and the debug menu (the title and death only clear them), and each is tested in its own routine (kick $C4:1D0D, power $C4:22B0, both passes $C6:0B6F); the PAR check was RAM only."
+  "note": "Player +$39 = bits 0, 1, 5, 6 (POWER, KICK, BOMB PASS, WALL PASS of the debug menu). Each bit played on 1-1: bit 0 kicks, bit 1 punches (Y), bit 5 walks onto bombs, bit 6 through soft blocks. No Game Genie form: nothing writes the four bits but the item pickups and the debug menu (the title and death only clear them), and each is tested in its own routine (kick $C4:1D0D, power $C4:22B0, both passes $C6:0B6F); the PAR check was RAM only."
  },
  {
   "code": "7E0D7301",
@@ -3430,5 +3430,20 @@
   "section": "secret",
   "note": "When a bomb's fuse runs out ($C4:4F57) in Battle Mode or the attract demos ($0C3C = 3), it is at least its owner's 3rd bomb ($1C,X from the count $0108,X) and the round still has duds left ($0CAF: 0 with probability 1/2, otherwise 1 or 2, set by $C4:6E0E), the game rolls the RNG ($C6:15F2); on $AE (1 in 256) the bomb doesn't explode. Sound $0F plays, a smoke puff rises ($C5:3976 -> animation $C7:05CF), and the bomb waits (5 to 15) x 64 frames ($1E,X, $C4:4FBD) plus one more 255-frame fuse. Bombs set off by other blasts never roll. Mesen, a real battle with the roll forced ($C4:4F8F BEQ -> BRA): it went off 576 frames late. Image: the bomb sitting unexploded, then the late blast. Japan ($C4:4D4C, roll at $C4:4D84) and beta ($C4:4D47, $C4:4D7F) run the same checks; Mesen, a real battle with the roll and the 3rd-bomb check forced: the fizzle branch ran and the bomb sat unexploded in both; Europe is static (same ROM as US but for the header and the timer constant).",
   "img": "dud_bomb.png"
+ },
+ {
+  "code": "7E0304FF",
+  "devices": {
+   "Pro Action Replay": "7E0304FF"
+  },
+  "effect": "Stages never fade in: you play on a black field, with only the HUD, the players and the enemies showing",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "cheat",
+  "note": "$0304 is a frame-skip mask the palette fader reads ($C6:22E7) but nothing ever counts up, so it stays 0. With bit 0 set, fade speed classes 6 and up never take a step; every stage fade-in is class 6. Writing 0 lets the stalled fade finish within 120 frames. Image: 1-2 played on the black field.",
+  "img": "fade_mask_black.png"
  }
 ]

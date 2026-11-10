@@ -62,7 +62,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Decodes to cleared: none; shop: nothing; capsules 0; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "note": "Decodes to cleared: none; shop: nothing; capsules 0; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it. With $C38E = 2 a flying helper drops three power-up panels at the boss and flies a second lap.",
   "section": "Passwords"
  },
  {
@@ -194,7 +194,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Decodes to cleared: Wood; shop: K kick; capsules 1; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "note": "Decodes to cleared: Wood; shop: K kick; capsules 1; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it. With $C38E = 2 a flying helper drops three power-up panels at the boss and flies a second lap.",
   "section": "Passwords"
  },
  {
@@ -271,7 +271,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Decodes to cleared: Wood, City; shop: K kick, L line bomb, M2; capsules 0; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "note": "Decodes to cleared: Wood, City; shop: K kick, L line bomb, M2; capsules 0; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it. With $C38E = 2 a flying helper drops three power-up panels at the boss and flies a second lap.",
   "section": "Passwords"
  },
  {
@@ -337,7 +337,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Decodes to cleared: Wood, City, Ice, Sand; shop: K kick, D dash, L line bomb, M1, M2; capsules 5; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it.",
+  "note": "Decodes to cleared: Wood, City, Ice, Sand; shop: K kick, D dash, L line bomb, M1, M2; capsules 5; $C38E = 2. Typed with the pad in Mesen; $C362/$C365/$C383-$C389/$C38D/$C38C read back as password.mjs predicts. GameFAQs (Dinob0t, CyberSach / Anonymous) list it. With $C38E = 2 a flying helper drops three power-up panels at the boss and flies a second lap.",
   "section": "Passwords"
  },
  {
@@ -1023,5 +1023,17 @@
   "audio": [
    "gb3/Music_12.mp3"
   ]
+ },
+ {
+  "code": "Stage-5 diamonds: the boss helper",
+  "effect": "Collect enough diamonds in an area's stage 5 (Wood: 50 and 60 in the second room) and special panels appear; at the boss stage a small helper then flies in and drops three power-up panels",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "secret",
+  "note": "$00:38D1 counts the diamonds; thresholds per area at $00:39B6 (Wood, Sand, Lava 40/50/60; City, Ice, Aqua 60/70/80; Evil 50/60/70): a 1-up panel, then two special panels, each +1 to $C38E. At the boss, $C38E ≠ 0 runs $09:5E61: the helper drops bomb/fire panels picked for your power ($02:7DF9); at 2 it flies a second lap. Mesen: the helper at the Wood, City and Ice bosses (password), the middle panel was fire up; a special panel taken on Wood 5 raised $C38E. The 50-diamond count itself was not reached in play. Image: the helper, its panels, the second lap, fire up taken.",
+  "img": "diamond_helper.png"
  }
 ]

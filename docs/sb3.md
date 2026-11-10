@@ -269,10 +269,10 @@ bottom-left, top-right, bottom-right).
 **The sweep.** Ten Mesen runs on EU covered every stage id `$0B-$47` (5358 with the stage overridden at the
 decoder), all 12 battle stages with each of the four arena variants, the intro (6514), the ending (0803), the final
 boss (3104), the title and option menus, and a game over. Three logs were combined: every asset request at
-`$C0:1942`, every stream opened at `$C0:2595`, and the code/data log of every ROM byte read. **25 of the 240 assets
+`$C0:1942`, every stream opened at `$C0:2595`, and the code/data log of every ROM byte read. **22 of the 240 assets
 were never read in any run.** They are rendered in `docs/img/sb3/unused/` (file name = asset id and ROM address):
 
-![The 25 assets no run read](img/sb3/unused_assets.png)
+![The 22 assets no run read](img/sb3/unused_assets.png)
 
 | Asset | ROM | What it is | Status |
 |---|---|---|---|
@@ -282,12 +282,13 @@ were never read in any run.** They are rendered in `docs/img/sb3/unused/` (file 
 | 3.53 | `$CC:2CDA` | a city skyline with HUDSON signs | ★ New, scene not identified |
 | 3.59 | `$CC:4B53` | BG tiles: houses, clouds, a blimp | ★ New, scene not identified |
 | 3.79, 3.83 | `$CC:F1C9`, `$CD:244E` | large sprites: explosions/debris, stars, a dish | ★ New |
-| 8.52, 8.60, 8.61, 8.65 | `$C9:E312` … `$CA:0128` | boss/enemy sprite parts, a star burst | ★ New |
+| 8.65 | `$CA:0128` | a star burst | ★ New |
 | 8.01, 8.02, 3.20, 3.78, 4.22, 4.36, 4.38, 4.41, 4.48 | see the file names | small item, cursor and object sprites | ★ New |
 | 3.19, 3.52, 3.66 | `$CA:CC9C`, `$CC:281C`, `$CC:8962` | tilemaps / a short tile strip | ★ New |
 
-"Never read" is only as good as the coverage: two-player story mode, every battle character, the boss of every
-area being beaten and the controller fault were not exercised, so some of these may still be used there.
+"Never read" is only as good as the coverage: two-player story mode, every battle character and the controller
+fault were not exercised, so some of these may still be used there. The boss kills (below) read three more: 8.60
+when a boss dies, 8.52 at the final boss's change into the mech and 8.61 when the five bombers appear.
 
 **Known items:**
 - **Egg power-up icon (Known)**: found as tiles `$50-$53` of asset 6.02 (`$C0:6D46`, BG tiles at VRAM `$0800`),
@@ -338,7 +339,18 @@ this bug. The merged log (26 runs: rounds 1-2, Mesen's own `.cdl`, a 2-player ra
   `$C0:054B`, `$C0:019C`); mode 4 (`$C0:1D70`, script op `$C1:1BD1`, used by no script) skips the frame. Forced in
   Mesen by patching `$C0:1CFA`: mode 1 draws the battle bar twice, mode 4 leaves out the title logo and the bar's frame.
 - Coverage of the reachable code, after a round of play runs (stages, battle, Tag Match, menus): 90.2%. The rest is
-  enemy states, boss-kill extras and script ops no script uses (`$C1:6FC9`, `$C1:2E59`, `$C1:1A31`-`$C1:200D`).
+  enemy states, boss-kill extras and script ops no script uses (`$C1:2E59`, `$C1:1A31`-`$C1:200D`).
+- **Boss kills** (Mesen, EU, the boss passwords; hits forced at the fire check `$C3:0283`, a heart kept on P1): all five
+  area bosses and the final boss die and the game goes on by itself, through Bagular's mech, the five-bomber scene,
+  the staff roll, PRESENTED BY HUDSON and END. Boss HP is byte 3 of the type entry at `$80:9BD9` + 12 × type (6 or 5;
+  the final boss 3, then the mech). 253 of the 755 entries below then ran (86,940 code bytes against 70,460). The
+  boss death `$C3:0478`/`$C3:0491` spawns a per-area object from `$C0:9767` (area 4 waits for both cacti, `$1F20`);
+  script op `$C1:6FC9` flies the planet-map ship to the next planet, and `$C1:1C33` (in `$C1:1A31`-`$C1:200D`) is a
+  random-number op used in the five-bomber scene. The final boss picks from 7 attacks (`$C0:ADE8`, `$C3:726D`); with
+  its HP held, 66 picks included the rare `$C3:7540` (falling fireballs) and `$C3:7B37`. The boss code that still
+  never ran sits behind conditions the runs did not meet (the left cactus's attack `$C3:41AD`, a boss-1 leaf move
+  `$C3:4DB6`, the final boss's callback `$C3:784F`); no phase or attack was found without a way in. The boss
+  passwords open the planet-select map first; Start goes on to the boss.
 
 `sweep.py dead` takes every JSR/JSL target and every block after an unconditional jump that no branch reaches,
 decodes executed code straight from the log (exact widths), and drops blocks that read as data, use BRK/COP/WDM/STP
@@ -395,8 +407,8 @@ code that never ran (18). `tools/sb3/watch.lua` watched all of them through a st
 The game has one text table: **the staff roll** at `$C1:7A72`-`$C1:7D7C` (EU). It is ASCII with `@` for a space,
 `^` for `/`, `a`/`_` for opening/closing quotes and `b` for `!`. `python tools/sb3/strings.py <rom> <cdl>` dumps it,
 along with the noise, and marks what was read. JP and the beta have the same table 34 bytes lower, with the
-round-1 credit differences. **PRESENTED BY HUDSON** (`$C1:7D69`) is the only entry the logs never saw read. The
-0803 ending runs may simply have stopped before the last card (unverified).
+round-1 credit differences. **PRESENTED BY HUDSON** (`$C1:7D69`) is the staff roll's last card, before END
+(read after the final boss in Mesen).
 
 All other on-screen text (menus, stage names, battle text, the Japanese headers) is tile graphics in the asset
 sets, which the round-2 asset sweep covered. The only other ASCII is the ROM header and the multitap BIOS IDs at
