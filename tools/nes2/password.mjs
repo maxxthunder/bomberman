@@ -5,7 +5,8 @@
 // v1 = area - 1 (< 6), v2 = stage - 1 (< 8), v4 = bombs - 1 (< 8), v6 = fire - 1 (< 5) ($05:969A). v5 and v7 are
 // only in the checksum. Before that the raw code is compared with seven secret codes ($05:96C6, table $05:9703).
 
-export const ALPHABET = { us: 'K3DH6J8B75214CFG', jp: 'PCKNFOHIGEBADJLM' };
+// Dynablaster (Europe) shows the US letters (the same table at $05:9609) and decodes the same way.
+export const ALPHABET = { us: 'K3DH6J8B75214CFG', jp: 'PCKNFOHIGEBADJLM', eu: 'K3DH6J8B75214CFG' };
 // The secret codes, as stored (JP letters) and their effect ($05:974B). The US cart matches the same nibbles.
 export const SECRETS = [
   ['PCDEFGAB', 'sound test', 'sound'],

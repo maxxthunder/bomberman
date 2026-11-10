@@ -3,11 +3,12 @@
   "code": "1000",
   "effect": "Start at The Scary Ruins (Very Easy)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 1, slot 1. Typed in BizHawk: the game starts The Scary Ruins.",
+  "note": "Table $27DFE, level row 1, slot 1. Typed in BizHawk: the game starts The Scary Ruins. Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "1000.png"
  },
@@ -15,11 +16,12 @@
   "code": "4390",
   "effect": "Start at The Sinister Forest (Very Easy)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 1, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Star Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row.",
+  "note": "Table $27DFE, level row 1, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Star Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row. Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "4390.png"
  },
@@ -27,11 +29,12 @@
   "code": "3281",
   "effect": "Start at Desert of Desolation (Very Easy)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 1, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Moon Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row.",
+  "note": "Table $27DFE, level row 1, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Moon Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row. Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "3281.png"
  },
@@ -39,11 +42,12 @@
   "code": "5607",
   "effect": "Start at Doom Castle (Very Easy)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 1, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Sun Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row.",
+  "note": "Table $27DFE, level row 1, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Sun Medal (Normal)\". GameFAQs files it under Normal; it is the Very Easy row. Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "5607.png"
  },
@@ -51,11 +55,12 @@
   "code": "2000",
   "effect": "Start at The Scary Ruins (Easy)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 2, slot 1. Typed in BizHawk: the game starts The Scary Ruins.",
+  "note": "Table $27DFE, level row 2, slot 1. Typed in BizHawk: the game starts The Scary Ruins. Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "2000.png"
  },
@@ -63,11 +68,12 @@
   "code": "6835",
   "effect": "Start at The Sinister Forest (Easy)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 2, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest (Easy)\".",
+  "note": "Table $27DFE, level row 2, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest (Easy)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "6835.png"
  },
@@ -75,11 +81,12 @@
   "code": "9081",
   "effect": "Start at Desert of Desolation (Easy)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 2, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation (Easy)\".",
+  "note": "Table $27DFE, level row 2, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation (Easy)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "9081.png"
  },
@@ -87,11 +94,12 @@
   "code": "2473",
   "effect": "Start at Doom Castle (Easy)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 2, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle (Easy)\".",
+  "note": "Table $27DFE, level row 2, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle (Easy)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "2473.png"
  },
@@ -99,11 +107,12 @@
   "code": "3000",
   "effect": "Start at The Scary Ruins (Normal)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 3, slot 1. Typed in BizHawk: the game starts The Scary Ruins.",
+  "note": "Table $27DFE, level row 3, slot 1. Typed in BizHawk: the game starts The Scary Ruins. Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "3000.png"
  },
@@ -111,11 +120,12 @@
   "code": "2695",
   "effect": "Start at The Sinister Forest (Normal)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 3, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest (Normal)\".",
+  "note": "Table $27DFE, level row 3, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest (Normal)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "2695.png"
  },
@@ -123,11 +133,12 @@
   "code": "1038",
   "effect": "Start at Desert of Desolation (Normal)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 3, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation (Normal)\".",
+  "note": "Table $27DFE, level row 3, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation (Normal)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "1038.png"
  },
@@ -135,11 +146,12 @@
   "code": "6934",
   "effect": "Start at Doom Castle (Normal)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 3, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle (Normal)\".",
+  "note": "Table $27DFE, level row 3, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle (Normal)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "6934.png"
  },
@@ -147,11 +159,12 @@
   "code": "4000",
   "effect": "Start at The Scary Ruins (Hard)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 4, slot 1. Typed in BizHawk: the game starts The Scary Ruins. GameFAQs lists it as \"The Scary Ruins (Hard)\".",
+  "note": "Table $27DFE, level row 4, slot 1. Typed in BizHawk: the game starts The Scary Ruins. GameFAQs lists it as \"The Scary Ruins (Hard)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "4000.png"
  },
@@ -159,11 +172,12 @@
   "code": "8647",
   "effect": "Start at The Sinister Forest (Hard)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 4, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest / Star Medal (Hard)\".",
+  "note": "Table $27DFE, level row 4, slot 2. Typed in BizHawk: the game starts The Sinister Forest. GameFAQs lists it as \"Sinister Forest / Star Medal (Hard)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "8647.png"
  },
@@ -171,11 +185,12 @@
   "code": "0538",
   "effect": "Start at Desert of Desolation (Hard)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 4, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation / Moon Medal (Hard)\".",
+  "note": "Table $27DFE, level row 4, slot 3. Typed in BizHawk: the game starts Desert of Desolation. GameFAQs lists it as \"Desert of Desolation / Moon Medal (Hard)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "0538.png"
  },
@@ -183,11 +198,12 @@
   "code": "9316",
   "effect": "Start at Doom Castle (Hard)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27DFE, level row 4, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle / Sun Medal (Hard)\".",
+  "note": "Table $27DFE, level row 4, slot 4. Typed in BizHawk: the game starts Doom Castle. GameFAQs lists it as \"Doom Castle / Sun Medal (Hard)\". Tobidase! Panibon (Japan): the same table (at $27DF5), typed in BizHawk; the stage card shows the same stage.",
   "section": "Passwords",
   "img": "9316.png"
  },
@@ -195,11 +211,12 @@
   "code": "1298",
   "effect": "Pick a level, then play The Scary Ruins against Zach the Were-Bomberman instead of Drifty",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Table $27E7E, the row after the four levels. Typed in BizHawk: the level choice comes up, then THE SCARY RUINS with \"My name is Zach. I am a Were-Bomberman!\"; a normal start (1000) gives Drifty.",
+  "note": "Table $27E7E, the row after the four levels. Typed in BizHawk: the level choice comes up, then THE SCARY RUINS with \"My name is Zach. I am a Were-Bomberman!\"; a normal start (1000) gives Drifty. Tobidase! Panibon (Japan): typed in BizHawk, sets $0500_24EC, and THE SCARY RUINS card names the opponent ボンバーウルフ (Bomber Wolf) instead of バロム.",
   "section": "Special codes",
   "img": "zach_1298.png"
  },
@@ -207,11 +224,12 @@
   "code": "0130",
   "effect": "Auto play: the game plays itself (hold L and R while entering)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: auto play opens. GameFAQs lists it.",
+  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: auto play opens. GameFAQs lists it. Tobidase! Panibon (Japan): typed in BizHawk with L and R held, auto play opens (sub-mode $0500_24F8 = 4).",
   "section": "Special codes",
   "img": "autoplay_0130.png"
  },
@@ -219,11 +237,12 @@
   "code": "1001",
   "effect": "Sound test (BGM, SE) (hold L and R while entering)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: sound test opens. GameFAQs lists it.",
+  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: sound test opens. GameFAQs lists it. Tobidase! Panibon (Japan): typed in BizHawk with L and R held, the SOUND TEST opens (mode 8).",
   "section": "Special codes",
   "img": "sound_test_1001.png"
  },
@@ -231,11 +250,12 @@
   "code": "0720",
   "effect": "Stage select (hold L and R while entering)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: stage select opens. GameFAQs lists it.",
+  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: stage select opens. GameFAQs lists it. Tobidase! Panibon (Japan): typed in BizHawk with L and R held, STAGE SELECT opens (sub-mode 1).",
   "section": "Special codes",
   "img": "stage_select_0720.png"
  },
@@ -243,11 +263,12 @@
   "code": "0716",
   "effect": "The ending and credits (hold L and R while entering)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "known",
   "verified": "emu",
-  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: the ending opens. GameFAQs lists it.",
+  "note": "Table $27E96 (the L+R list). Typed in BizHawk with L and R held: the ending opens. GameFAQs lists it. Tobidase! Panibon (Japan): typed in BizHawk with L and R held, the ending opens (mode 7).",
   "section": "Special codes",
   "img": "ending_0716.png"
  },
@@ -255,11 +276,12 @@
   "code": "0825",
   "effect": "DEBUG MENU (13 game settings), then a game with them (hold L, R, Up on the right pad and Left on the left pad while pressing A)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "The last two entries of the button-code list ($27EB6). The check ($0702_00F0) wants pad bits L, R, right-pad Up and left-pad Left; with them held in BizHawk the [ DEBUG MENU ] opens with 13 settings, and A starts a game with them. GameFAQs doesn't have it.",
+  "note": "The last two entries of the button-code list ($27EB6). The check ($0702_00F0) wants pad bits L, R, right-pad Up and left-pad Left; with them held in BizHawk the [ DEBUG MENU ] opens with 13 settings, and A starts a game with them. GameFAQs doesn't have it. Tobidase! Panibon (Japan): typed in BizHawk with L, R, right-pad Up and left-pad Left held, the [ DEBUG MENU ] opens (sub-mode 2).",
   "section": "Special codes",
   "img": "debug_menu_0825.png"
  },
@@ -267,11 +289,12 @@
   "code": "0513",
   "effect": "DEBUG MENU, then a game where the CPU plays both sides (hold L, R, Up on the right pad and Left on the left pad while pressing A)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "The last two entries of the button-code list ($27EB6). The check ($0702_00F0) wants pad bits L, R, right-pad Up and left-pad Left; with them held in BizHawk the [ DEBUG MENU ] opens with 13 settings, and A starts a game with them; unlike 0825 (this is sub-mode 3, $0700_6D64) your side is CPU-controlled too, so both fields play themselves and the round replays. GameFAQs doesn't have it.",
+  "note": "The last two entries of the button-code list ($27EB6). The check ($0702_00F0) wants pad bits L, R, right-pad Up and left-pad Left; with them held in BizHawk the [ DEBUG MENU ] opens with 13 settings, and A starts a game with them; unlike 0825 (this is sub-mode 3, $0700_6D64) your side is CPU-controlled too, so both fields play themselves and the round replays. GameFAQs doesn't have it. Tobidase! Panibon (Japan): typed in BizHawk with L, R, right-pad Up and left-pad Left held, the DEBUG MENU, then a CPU-only game (sub-mode 3).",
   "section": "Special codes",
   "img": "cpu_vs_cpu_0513.png"
  },
@@ -279,11 +302,12 @@
   "code": "4476",
   "effect": "Your pad moves both sides: the opponent's field follows your Left and Right (hold L and R while entering)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Sets $0500_24E8; the opponent's control word becomes 1 instead of $101 ($0700_6DDE), so player 1's pad drives both fields and the CPU never moves. Typed in BizHawk with L and R held: both falling pieces move together.",
+  "note": "Sets $0500_24E8; the opponent's control word becomes 1 instead of $101 ($0700_6DDE), so player 1's pad drives both fields and the CPU never moves. Typed in BizHawk with L and R held: both falling pieces move together. Tobidase! Panibon (Japan): typed in BizHawk with L and R held, sets $0500_24E8.",
   "section": "Special codes",
   "img": "one_pad_both_sides_4476.png"
  },
@@ -291,11 +315,12 @@
   "code": "0911",
   "effect": "A RESULT screen after every round: level, chains, giant bombs, stage times (hold L and R while entering)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Sets $0500_24E0; after each round the main loop calls the RESULT screen ($0700_7E46) that normally comes only after the ending. Typed in BizHawk with L and R held.",
+  "note": "Sets $0500_24E0; after each round the main loop calls the RESULT screen ($0700_7E46) that normally comes only after the ending. Typed in BizHawk with L and R held. Tobidase! Panibon (Japan): typed in BizHawk with L and R held, sets $0500_24E0.",
   "section": "Special codes",
   "img": "result_screen_0911.png"
  },
@@ -303,11 +328,12 @@
   "code": "9782",
   "effect": "Other block pieces in every game",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Sets $0500_24F4; a normal game then uses piece set (TUBU) 5 instead of its own ($0700_7C1A). Typed in BizHawk.",
+  "note": "Sets $0500_24F4; a normal game then uses piece set (TUBU) 5 instead of its own ($0700_7C1A). Typed in BizHawk. Tobidase! Panibon (Japan): typed in BizHawk, sets $0500_24F4.",
   "section": "Special codes",
   "img": "other_pieces_9782.png"
  },
@@ -315,11 +341,12 @@
   "code": "0704",
   "effect": "DOKURO blocks in every game: the attack rows you get are brick blocks instead of Bomberman heads (hold L and R while entering)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Sets $0500_24E4, which turns DOKURO ($0500_2540) on at every stage start ($0700_7BBA): the 8-block attack row uses block kind $B instead of 6 ($0700_97F2). Clearing one next to a chain releases an item ($0701_2322 -> $0701_5E14). Typed in BizHawk with L and R held, then Normal, The Scary Ruins: the CPU's chains sent brick rows into your field. Image: without the code (left) and with it.",
+  "note": "Sets $0500_24E4, which turns DOKURO ($0500_2540) on at every stage start ($0700_7BBA): the 8-block attack row uses block kind $B instead of 6 ($0700_97F2). Clearing one next to a chain releases an item ($0701_2322 -> $0701_5E14). Typed in BizHawk with L and R held, then Normal, The Scary Ruins: the CPU's chains sent brick rows into your field. Image: without the code (left) and with it. Tobidase! Panibon (Japan): typed in BizHawk with L and R held, sets $0500_24E4.",
   "section": "Special codes",
   "img": "dokuro_rows_0704.png"
  },
@@ -327,11 +354,12 @@
   "code": "0612",
   "effect": "Fewer idle animations in every game: the blocks in the fields blink and wink half as often (hold L and R while entering)",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Clears $0500_2500, so ANIMATION ($0500_24C4) is 0 instead of 1. $0700_EC68 starts a block's idle animation on a random cell; ANIMATION 0 tries on every 4th frame, 1 on every 2nd, 2 on every frame. Typed in BizHawk with L and R held and counted over 5,000 frames: with the code every start fell on one frame in four, without it on two.",
+  "note": "Clears $0500_2500, so ANIMATION ($0500_24C4) is 0 instead of 1. $0700_EC68 starts a block's idle animation on a random cell; ANIMATION 0 tries on every 4th frame, 1 on every 2nd, 2 on every frame. Typed in BizHawk with L and R held and counted over 5,000 frames: with the code every start fell on one frame in four, without it on two. Tobidase! Panibon (Japan): typed in BizHawk with L and R held, clears $0500_2500.",
   "section": "Special codes"
  },
  {
@@ -350,11 +378,12 @@
   "code": "DEBUG MENU settings",
   "effect": "SCROLL, ANIMATION, DOKURO, TUBU, ENEMY, WORLD, SPEED, COLOR, ERASE, ITEM, EVENT, WIN, CPU: the 13 values a stage normally sets for you",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Left-pad Right and Left change a value. SCROLL background scroll on/off; ANIMATION how often blocks start an idle animation (0 every 4th frame, 1 every 2nd, the normal value, 2 every frame); DOKURO brick attack rows, which drop items when cleared; TUBU piece set 0-5; ENEMY the opponent 0-10; WORLD the background 0-3; SPEED drop speed 0-5; COLOR block kinds 1-5; ERASE blocks in a row to clear 1-6; ITEM n makes every item type n-1 (items come only from DOKURO blocks); EVENT n forces event n-1 and makes a 2-chain enough to start it, for the left player only (a giant spiked robot, rolling explosions, a vortex, a red flood); WIN the round wins that end a match (1, the default, or 2); CPU the opponent's level (0F chains and attacks fast, 00 only clears). All seen in BizHawk (menu $0700_64B0, stage tables from $0702_6588).",
+  "note": "Left-pad Right and Left change a value. SCROLL background scroll on/off; ANIMATION how often blocks start an idle animation (0 every 4th frame, 1 every 2nd, the normal value, 2 every frame); DOKURO brick attack rows, which drop items when cleared; TUBU piece set 0-5; ENEMY the opponent 0-10; WORLD the background 0-3; SPEED drop speed 0-5; COLOR block kinds 1-5; ERASE blocks in a row to clear 1-6; ITEM n makes every item type n-1 (items come only from DOKURO blocks); EVENT n forces event n-1 and makes a 2-chain enough to start it, for the left player only (a giant spiked robot, rolling explosions, a vortex, a red flood); WIN the round wins that end a match (1, the default, or 2); CPU the opponent's level (0F chains and attacks fast, 00 only clears). All seen in BizHawk (menu $0700_64B0, stage tables from $0702_6588). BizHawk, JP ROM: 0513 typed with L R, right Up, left Left opens the same [ DEBUG MENU ] with the same 13 items and defaults, and the values land in the same RAM (EVENT $0500_26E4, CPU $253C, thresholds $254A/$254C set to 1/2).",
   "section": "debug",
   "img": "debug_menu_0825.png"
  },
@@ -362,11 +391,12 @@
   "code": "DEBUG MENU: EVENT 1-4 (with 0513)",
   "effect": "A forced event on your first 2-chain: a giant spiked robot, rolling explosions, a vortex, or a red flood that refills the field",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "EVENT n > 0 sets the chain thresholds $254A/$254C to 1 and 2 (normally 4 and 5) and forces event n-1, but only for the left player (struct $5954, whose +8 is 0), so the CPU opponent of 0825 never starts one; with 0513 the left side plays itself. In BizHawk with CPU 0F: each event started on the left side's 2-chain. Image: EVENT 1, 2 (top), 3, 4.",
+  "note": "EVENT n > 0 sets the chain thresholds $254A/$254C to 1 and 2 (normally 4 and 5) and forces event n-1, but only for the left player (struct $5954, whose +8 is 0), so the CPU opponent of 0825 never starts one; with 0513 the left side plays itself. In BizHawk with CPU 0F: each event started on the left side's 2-chain. Image: EVENT 1, 2 (top), 3, 4. BizHawk, JP ROM: EVENT 1 with 0513 and CPU 0F: the giant spiked robot came up in the right field after the left side's 2-chain (EVENT 2-4 not run).",
   "section": "debug",
   "img": "debug_events.png"
  },
@@ -374,11 +404,12 @@
   "code": "DEBUG MENU: ITEM 1-16 (with DOKURO)",
   "effect": "Every item is one type: ITEM n gives type n-1, 16 items in all",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Items come only from cleared DOKURO brick rows, and their type is normally random & 15 ($0701_5FEC); the effects are a switch at $0701_6632 and work on the owner's field. ITEM 1 bricks become bombs; 2 left and right swapped for about 500 frames; 3 pieces fall at full speed for about 500 frames; 4 blasts use level 0 for about 500 frames (from the code); 5 bombs become rocks; 6 every bomb explodes; 7 the next piece is a giant bomb; 8 a big Bomberman bounces in front of your field; 9 a row of bricks pushed up; 10 four rocks pushed up; 11 STOP: a 5-4-3-2-1 countdown with no pieces falling; 12 bricks drop into the outer columns; 13 the next piece is rocks; 14 every face block cleared; 15 a row of bombs pushed up; 16 every bomb removed. In BizHawk with 0513, DOKURO 1 and CPU 0F: each icon seen, and each effect seen in the field except 2-4 and 16 (seen in RAM). Image: ITEM 1-8 (top) and 9-16.",
+  "note": "Items come only from cleared DOKURO brick rows, and their type is normally random & 15 ($0701_5FEC); the effects are a switch at $0701_6632 and work on the owner's field. ITEM 1 bricks become bombs; 2 left and right swapped for about 500 frames; 3 pieces fall at full speed for about 500 frames; 4 blasts use level 0 for about 500 frames (from the code); 5 bombs become rocks; 6 every bomb explodes; 7 the next piece is a giant bomb; 8 a big Bomberman bounces in front of your field; 9 a row of bricks pushed up; 10 four rocks pushed up; 11 STOP: a 5-4-3-2-1 countdown with no pieces falling; 12 bricks drop into the outer columns; 13 the next piece is rocks; 14 every face block cleared; 15 a row of bombs pushed up; 16 every bomb removed. In BizHawk with 0513, DOKURO 1 and CPU 0F: each icon seen, and each effect seen in the field except 2-4 and 16 (seen in RAM). Image: ITEM 1-8 (top) and 9-16. BizHawk, JP ROM: ITEM 7 with DOKURO 1, 0513 and CPU 0F: brick rows dropped items, the giant-bomb NEXT piece came up and blew up as in the US game; the item effect switch ($0701_6632 US) is the same 512 bytes in the JP ROM at $0701_65EE (other item numbers not run).",
   "section": "debug",
   "img": "debug_items.png"
  },
@@ -386,11 +417,12 @@
   "code": "Title screen: right-pad Left, B, right-pad Down, A, right-pad Up",
   "effect": "A test screen: one horizontal line for the left eye, two short vertical bars for the right",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "$0701_B1DC follows the sequence on the PANIC BOMBER title (any other new press starts it over) and sets the main mode $0500_26D6 = 6 ($0701_B270), which runs $0701_7E74. Seen together, the bars cross the line: it looks like a chart for lining up the two screens. A or Start goes back to the intro ($0701_7FF2). Entered before the demo starts, seen in MAME (both eyes; image: left eye, right eye) and BizHawk (left eye).",
+  "note": "$0701_B1DC follows the sequence on the PANIC BOMBER title (any other new press starts it over) and sets the main mode $0500_26D6 = 6 ($0701_B270), which runs $0701_7E74. Seen together, the bars cross the line: it looks like a chart for lining up the two screens. A or Start goes back to the intro ($0701_7FF2). Entered before the demo starts, seen in MAME (both eyes; image: left eye, right eye) and BizHawk (left eye). Tobidase! Panibon (Japan): the same sequence on its title gives the one-line screen, seen in BizHawk.",
   "section": "Special codes",
   "img": "title_code_lines.png"
  },
@@ -398,22 +430,24 @@
   "code": "Hold A, B, L, R, Start and Select during the ending",
   "effect": "Skips the ending scenes: the castle door and the statue end at once",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Mode 7 ($0701_8088) checks the held buttons at each scene's steps ($0701_87EA): with exactly A, B, L, R, Start and Select held (and no d-pad) it ends the scene ($0700_63EE). In BizHawk after a real Doom Castle win: the door scene ended after about 38 frames instead of 525 and the bonus stage began; at the statue, about 37 frames instead of about 966, straight to RESULT.",
+  "note": "Mode 7 ($0701_8088) checks the held buttons at each scene's steps ($0701_87EA): with exactly A, B, L, R, Start and Select held (and no d-pad) it ends the scene ($0700_63EE). In BizHawk after a real Doom Castle win: the door scene ended after about 38 frames instead of 525 and the bonus stage began; at the statue, about 37 frames instead of about 966, straight to RESULT. Tobidase! Panibon (Japan), in BizHawk after 0716: with the six buttons held the ending is over within about 600 frames; without them the door and the statue play out.",
   "section": "Special codes"
  },
  {
   "code": "BGM 0E, 13, 14, 15; SE 00, 1F, 24-28",
   "effect": "Tunes and effects the game never plays, some out of the sound test's reach",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Music goes through $0700_63B8 (table $0707_4024, 00-15) and effects through $0700_63C8 (table $0707_4080, 00-28). Tune 0E and effects 00 and 1F are never requested; only the sound test plays them. Tunes 13-15 and effects 24-28 are past the test's range (BGM 0-12, SE 0-23), so nothing can play them. 0E is a full tune; 13 and 14 two versions of another; 15 a short rising run into a held note, likely a test tone. The effects last 0.2 to 0.8 s. Recorded in MAME.",
+  "note": "Music goes through $0700_63B8 (table $0707_4024, 00-15) and effects through $0700_63C8 (table $0707_4080, 00-28). Tune 0E and effects 00 and 1F are never requested; only the sound test plays them. Tunes 13-15 and effects 24-28 are past the test's range (BGM 0-12, SE 0-23), so nothing can play them. 0E is a full tune; 13 and 14 two versions of another; 15 a short rising run into a held note, likely a test tone. The effects last 0.2 to 0.8 s. Recorded in MAME. Static, JP ROM: the request routines sit 4 bytes lower ($0700_63B4 / $63C4); its 15 BGM and 79 SE call sites load the same immediate IDs as the US ROM's (same reg-passed sites), the ID tables $0702_64F0 / $64E0 and sound tables $0707_4024 / $4080 are byte-identical, and the sound test keeps the same limits ($12, $23).",
   "section": "Special codes",
   "audio": [
    "pbvb/BGM_0E.mp3",
@@ -433,12 +467,26 @@
   "code": "Graphics $C6",
   "effect": "An unused set of Star, Sun and Moon medals, drawn rougher than the ones the medal card shows",
   "versions": [
-   "us"
+   "us",
+   "jp"
   ],
   "status": "new",
   "verified": "static",
-  "note": "Graphics load through $0700_46A4 from the table at $0704_7000 (LZ, the same scheme as Panic Bomber W). Its 76 call sites name their graphics directly or as base + stage, opponent or world, and none gives $C6 ($0706_6F9D, whose pointer appears only in its table slot). $C6 holds two rows of large star, sun and moon medals in a dithered style unlike the medal card's ($C5), plus a copy of the castle from $C1.",
+  "note": "Graphics load through $0700_46A4 from the table at $0704_7000 (LZ, the same scheme as Panic Bomber W). Its 76 call sites name their graphics directly or as base + stage, opponent or world, and none gives $C6 ($0706_6F9D, whose pointer appears only in its table slot). $C6 holds two rows of large star, sun and moon medals in a dithered style unlike the medal card's ($C5), plus a copy of the castle from $C1. Static, JP ROM: the 75 calls of the chars loader ($0700_46A0) give the same IDs and base+index forms as the US ROM's 76, none $C6; $C6's pointer ($0706_713E) appears only in its table slot.",
   "section": "unused",
   "img": "unused_medals.png"
+ },
+ {
+  "code": "Sprite frame $0121",
+  "effect": "A FLAME UP! message in the LEVEL UP! lettering, never shown",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Frame $0121 (file $33BEA) sits next to the used LEVEL UP! frame $0120 and uses chars every match loads. Nothing names it: no frame call ($29A4, $3636), none of the 195 frame stores and no code value or ROM table gives $0121. The same picture is in the in-game text sheet (map $21, rows 10-13), but the game only ever shows rows 0-5 of that sheet and copies PAUSE out of it. Static, JP ROM: the frame at file $33BEA is the same; the 74 + 43 calls of the frame routines ($0700_29A0, $3632) load the same immediates as US and none is $0121; the one other $0121 immediate found in the ROM is in data (file $56A2E, the same bytes as US $5685B).",
+  "section": "unused",
+  "img": "unused_flame_up.png"
  }
 ]

@@ -12,9 +12,10 @@ same list, all platforms mixed in) and a published article on the game, all in `
 |---|---|---|
 | USA | `775f664b177e561b34615614d160dfb7` | |
 | Japan | `64c3903224298ca9972991ea6a2b22a4` | 12,033 bytes differ (586 of them in CHR). The password code and tables, the stage tables and the item code are the same; most of the code sits 8 bytes lower (the decoder is at `$DB72`, the encoder at `$E291`). The title screen and the ending text differ (see [Regions](#regions)) |
+| Famicom Disk System (Disk Writer) | `bbac7232e938af706f1409b7d6ccb666` | The Japanese cart's program moved from `$C000` to `$A000`: of its 16 KB, 602 bytes differ from the JP cart, 560 of them address high bytes `$20` lower; CHR identical. See [Famicom Disk System](#famicom-disk-system) |
 
-Both headers are iNES NROM, 16 KB PRG + 8 KB CHR. The Famicom Disk System version that GameFAQs and the article also cover was
-not available, so nothing here is checked against it; its GameFAQs codes are the same strings as the cart codes.
+Both cart headers are iNES NROM, 16 KB PRG + 8 KB CHR. The disk holds the licence screen (`KYODAKU-`), the 8 KB CHR and
+a 16 KB `PRG` file loaded at `$A000-$DFFF`.
 
 ## RAM that matters
 
@@ -170,6 +171,26 @@ next to Bomberman and walked into, it added its points to the score. The same in
 
 Both match what was known. ![US title](img/nes1/title_us.png) ![JP title](img/nes1/title_jp.png) ![US ending](img/nes1/ending_us.png) ![JP ending](img/nes1/ending_jp.png)
 
+## Famicom Disk System
+
+The disk version is the Japanese cart program reassembled 8 KB lower (`$A000` instead of `$C000`), so every JP address
+here is `$2000` lower on disk (decoder `$BB72`, its reject exit `$BBC4`, encoder `$C291`). Besides the moved addresses only
+42 bytes differ: the reset code sets up the disk system's registers instead of waiting on the PPU, the DMC sample
+address is `$40` instead of `$C0` (the sample moved with the code), a short RAM-clear loop at JP `$C305`, and filler in an
+unused gap (JP `$EF40-$EFD9`). The title, ending, password tables and RAM layout are the cart's.
+
+Checked in Mesen 2 with the BIOS (`tools/nes1/run.sh script.lua fds`; Mesen wants `Firmware/disksys.rom` beside it, and
+`lib.lua` waits for the game's reset entry `$A000` after the disk loads):
+
+- All 75 password cards **typed with the pad** (`node tools/nes1/test_codes.mjs fds ...`): every one loads the same RAM as
+  on the carts, the 19-letter FDS-list code loads nothing, and stage 96 hangs on its STAGE screen.
+- `007A:FF` invincible (0 deaths in 5,000 frames of the random bot; 3 deaths and a game over without), `0068:02` infinite
+  lives (8 deaths, no game over), `005E:01` stage clear (6 stages in 3,000 frames with no input).
+- ★ Game Genie on the disk program needs the moved addresses: `OXTZPV` + `OZTLYE` invincible (0 deaths) and `SXPZAG`
+  infinite lives (8 deaths, lives stay 2), in Mesen's cheat engine. A Game Genie can't be fitted to a Famicom Disk
+  System, so they are for emulators only. `OZTZTK` (stage clear) and the Up/Down behaviour on ENTER SECRET CODE were
+  not run on the disk.
+
 ## Game Boy Advance re-releases
 
 Classic NES Series: Bomberman (USA, Europe; MD5 `e674bef244d677e175f5694a7006bfde`) and Famicom Mini 09: Bomberman
@@ -222,6 +243,14 @@ codes, and the out-of-range stages. **7,313 of the 7,510 traced code bytes ran**
 - **Debug**: only `$94` (above).
 - **Small bug** (★, from the code, not reproduced): the top-score compare at `$DDAA` checks 8 bytes, `$61-$68` against
   `$01-$08`, one past the 7 score digits: on an exact tie it compares lives (`$68`) with `$08`.
+- ★ **Score overflow (Mesen, natural play).** From 999,999,900 (password `FEKIDPPDJABBAFBBABAF`), one kill wraps the
+  score to 900,000,000 (`$DDA6` drops the carry out of the top digit); the top-score copy keeps it, so after a
+  reset the title shows TOP 900000000. A warm reset keeps the top score (`$C329`). ![Before, after, the title](img/nes1/score_overflow.png)
+- ★ **Clock `$FF` = no time limit.** With `$93` = `$FF` the clock (`$C121`) shows 0 and never counts, and no Pontans
+  come; nothing in the game writes `$FF` there. At 0 the time-out Pontan swarm (`$C654`) comes as usual.
+- ★ **Famicom expansion-port pads.** The reader (`$C1BF`) masks `$4016`/`$4017` with `#$03` (`$C1EB`), so a pad on
+  the Famicom expansion port (bit 1) acts as pad 1 or 2. Mesen (Famicom, two-player expansion adapter): with the
+  normal ports empty, an expansion pad started the game, walked Bomberman and dropped a bomb.
 
 ### Cheat codes
 
@@ -239,4 +268,3 @@ Both devices, the same tests: Pro Action Replay (address + value) `007AFF` invin
 
 - The hang limit (stage 96, 242 blocks, not 244) was measured, not derived: a model of the random number generator
   `$D670` reached all 246 cells, so the cause is not settled.
-- The FDS version was not available.

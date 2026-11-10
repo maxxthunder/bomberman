@@ -156,21 +156,22 @@ attack, all three area tiers with the cheats, a game over. Executed: **44,079 by
   shop help for F and M1-M4 and its M2-M4 prompts; all are picked by the same tables, so none is known to be unused.
   The title, password and challenge-mode words are BG tile maps (not in this dump).
 - **Graphics.** Sets load through `$00:09A1` (table `$00:09A7`, 29 sets of 6-byte records: bank, source, VRAM address,
-  tile count) and maps through `$00:2F03` (table `$00:2D7E`). Every call passes a constant (or area + `$0D`), and sets
-  9, 11, 12 and 27 and maps 1 and `$12` are never loaded. Sets 12 and 27 are parts of sets that are; map 1 matched no
-  set. The two others are pictures:
-  - ★ **TIME OVER** (set 9, `$0B:4BBE` and `$0B:51D9`, with map `$12`): the game-over set with a dizzy, spiral-eyed
-    Bomberman and TIME OVER lettering. Making the game-over screen (`$05:7D3E`) load set 9 and map `$12` (file
-    `$17D54` `08` → `09`, `$17D59` `11` → `12`; `$17D6B-$17D6D` → `00 00 00` drops the OVER sprites drawn on top)
-    shows it in Mesen. Why it was cut (a clock that ran out?) is a guess. ![TIME OVER, and GAME OVER](img/gb3/time_over.png)
-  - ★ **Another PAUSE picture** (set 11, `$0C:73EB` and `$0C:7308`): PAUSE, a big Bomberman and a robot-like one,
-    unlike the pause screen the game shows. No map draws it; shown as tiles 0-127 in order.
-    ![Set 11's tiles](img/gb3/pause_unused_tiles.png)
+  tile count) and maps through `$00:2F03` (table `$00:2D7E`). Every call passes a constant (or area + `$0D`), and every
+  set and map is loaded: sets 11 and 12 by the story-mode pause screen (`$00:1AE2` → `$0F:753E`, `$0F:75CD`; PAUSE,
+  the area name and Bomberman in a spotlight), set 27 with map 1 at `$0A:62B1`. Challenge mode has no pause
+  (`$00:1AD4` skips it when `$C1B8` = 2). One picture shows only when the clock runs out:
+  - **TIME OVER** (set 9, `$0B:4BBE` and `$0B:51D9`, with map `$12`): a dizzy, spiral-eyed Bomberman and TIME OVER
+    lettering, shown when the stage clock runs out (`$00:2A08` → `$01:42D8` → `$00:154E` → `$05:7E03`, which loads
+    set 9 and map `$12`). Seen in Mesen in normal play: an invincible bot in Wood 1 until the clock ran out.
+    ![TIME OVER in play](img/gb3/time_over_play.png)
   - A tile log over the coverage runs (every VRAM tile against the BG, window and sprites) found only fragments
     besides these: stage-tile variants, unused font letters and the shop icons for M1-M4.
 - **Stage format**: not decoded.
 
 ### Super Game Boy
+
+The border and title images here are real Super Game Boy output: BizHawk 2.11.1, BSNESv115+ core in SGB mode, with the
+SGB1 BIOS. On the SNES the Game Boy screen sits at x 48-207, y 39-182.
 
 Packets (`tools/emu/sgb.lua`): MLT_REQ 2 / 1, DATA_SND x8, CHR_TRN x2, PCT_TRN, ATTR_TRN, PAL_TRN, PAL_SET, then
 MLT_REQ 4 players and palette fades. ★ New: the 4 players are never used. The pad reader `$00:055E` stores all four

@@ -26,4 +26,7 @@ assert.deepEqual(decode('888D8C8G'), { area: 1, stage: 1, bombs: 1, fire: 1, key
 assert.deepEqual(decode('KKKFKJKO', 'jp'), { area: 1, stage: 1, bombs: 1, fire: 1, key: 2, free: [15, 7] });
 assert.deepEqual(decode('1F4441G1'), { area: 6, stage: 8, bombs: 8, fire: 5, key: 11, free: [0, 0] });
 assert.ok(!validate('888D8C8H') && !validate('888D8C8') && !validate('KKKFKJKO', 'us'));
+// Dynablaster (Europe): typed in Mesen, the US codes load the same (1F4H4KGC = 6-8, K3456712 = sound test)
+assert.deepEqual(decode('1F4H4KGC', 'eu'), decode('1F4H4KGC', 'us'));
+assert.equal(decode('K3456712', 'eu').secret, 'sound');
 console.log('ok', n, 'codes round-tripped; sampled valid', valid);

@@ -2,6 +2,27 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.0.0 (2026-11-10)
+- A simpler page: the stage pickers are gone from the nine games whose tables already list every password, and the
+  code box sits under the password tables in every game. The search box, the "All codes" filter and the jump on
+  clicking a code are gone too; the icon legend moved into "Where these come from".
+- Each game's header lists the system, the year and a flag for every region it came out in. The Game Boy games
+  with Super Game Boy support show their title in their own SGB border, and Atomic Punk is shown in plain Game Boy
+  greys.
+- New versions: Dynablaster (Game Boy and NES), Pocket Bomberman (Japan and Europe), Panic Bomber (Japan), Bomberman
+  on the Famicom Disk System, and the 1996 Bomberman Collection for Game Boy.
+- About 70 Game Genie codes from a community compilation, each tested, with the Pro Action Replay or GameShark form
+  where there is one. Cheat cards show a small logo for each device.
+- About 120 cards now list more versions, each tested or checked against the other ROM, with the other version's
+  code where it differs.
+- New finds: Super Bomberman's fizzling battle bombs, its Reset keeping your password and its battle TIME UP!
+  banner; NES Bomberman's score wrapping past 999,999,900; Super Bomberman 4's mouse warning screen; Super
+  Bomberman 2's floor pits; a computer-only battle in Super Bomberman 5; chain effects in Panic Bomber W; more
+  Mega Bomberman graphics; and region differences in several games.
+- The soft-reset cards are gone.
+- Smaller images, with duplicates removed, and an update now replaces cached copies.
+- Bigger tap targets for the code buttons, sound clips and Details links.
+
 ## 1.18.0 (2026-11-09)
 - Mega Bomberman: Bomberman '94's title logo on an unused planet screen, big countdown digits from an early
   continue screen, and a creature in the area 3 boss scene.
@@ -12,7 +33,7 @@ Changes to the [codes page and password generator](https://maxxthunder.github.io
 - More unused sounds: three effects in Super Bomberman, one each in Super Bomberman 3 and Pocket Bomberman, two in
   Bomberman Max, three in the Mega Bomberman 8-player demo, and three samples only the Bomberman II sound room plays.
 - Cut graphics: item panels and clock digits in the Mega Bomberman 8-player demo, a second ending sky in Panic
-  Bomberman W, other medals in Panic Bomber, a sprite sheet in Mega Bomberman, and Kondoria in Bomberman II.
+  Bomber W, other medals in Panic Bomber, a sprite sheet in Mega Bomberman, and Kondoria in Bomberman II.
 
 ## 1.16.0 (2026-11-07)
 - Unused music and sounds in 11 more games: sound effects in Bomberman GB, Bomberman '90, '93 and '94, Mega

@@ -1,4 +1,4 @@
--- Cheat check in Mesen 2's cheat engine. Set TEST first: 'inv' (RAM 007A:FF), 'gg' (Game Genie OXTKPV + OZTSYE, JP OXTGPV + OZTIYE),
+-- Cheat check in Mesen 2's cheat engine. Set TEST first: 'inv' (RAM 007A:FF), 'gg' (Game Genie OXTKPV + OZTSYE, JP OXTGPV + OZTIYE, FDS OXTZPV + OZTLYE),
 -- 'lives' (0068:02), 'clear' (005E:01) or 'none'. inv/gg/lives/none: new game (START), a random bot for FR frames,
 -- deaths counted ($5C rising), lives $68 read back. clear: new game, no input; stage changes ($58) counted.
 local function add(c, t) local ok, e = pcall(emu.addCheat, t or emu.cheatType.nesCustom, c) print('cheat', c, ok, e) end
@@ -8,7 +8,7 @@ emu.addEventCallback(function()
   local s = rd(0x58) if st and s ~= st then clears = clears + 1 end st = s
 end, emu.eventType.endFrame)
 if TEST == 'inv' then add('007A:FF') end
-if TEST == 'gg' then for _, c in ipairs(REG == 'jp' and {'OXTGPV', 'OZTIYE'} or {'OXTKPV', 'OZTSYE'}) do add(c, emu.cheatType.nesGameGenie) end end
+if TEST == 'gg' then for _, c in ipairs(({jp = {'OXTGPV', 'OZTIYE'}, fds = {'OXTZPV', 'OZTLYE'}})[REG] or {'OXTKPV', 'OZTSYE'}) do add(c, emu.cheatType.nesGameGenie) end end
 if TEST == 'lives' then add('0068:02') end
 if TEST == 'clear' then add('005E:01') end
 wait(200) press({start=true}) wait(300)

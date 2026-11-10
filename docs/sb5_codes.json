@@ -479,11 +479,12 @@
   "effect": "PAR room/scene select: the next valid option password goes to scene xx (AC, AD, AE = debug rooms; 0D-66 stages, 67-70 bosses, 74-A7 battle stages)",
   "versions": [
    "retail",
+   "caravan",
    "en"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$6248 is the scene run after the password screen (it becomes $1031). Round 3: verified with Mesen's cheat engine on retail and English with AC, AD and 2B after 4622. The known 7E1038:XX is a shared work byte.",
+  "note": "$6248 is the scene run after the password screen (it becomes $1031). Round 3: verified with Mesen's cheat engine on retail and English with AC, AD and 2B after 4622. The known 7E1038:XX is a shared work byte. Caravan: same address ($6245-$6248 don't move); Mesen's cheat engine with 4622: AC gives the debug battle-test room, 2B zone 3-1 and 74 battle stage 1.",
   "section": "cheat",
   "img": "debug_rooms_AC_AD_AE.png"
  },
@@ -572,13 +573,27 @@
   "code": "Battle rules: みそボン, Right from スーパー (Caravan)",
   "effect": "A fourth Misobon setting, ハイパー (HYPER): a Misobon player who blows someone up comes back with that player's bombs, fire and speed",
   "versions": [
-   "caravan",
-   "retail"
+   "retail",
+   "caravan"
   ],
   "status": "new",
   "verified": "mesen",
   "note": "Caravan adds bit $40 to the rules byte ($7E627B; retail $7E625D uses $10 スーパー and $08 ON) and a HYPER case to the menu script ($C6:9187, label graphic $83), so the row cycles ハイパー, スーパー, ON, OFF; in retail Right on スーパー does nothing. $C4:37F9 saves each player's stats when they die ($4EBD bombs, $17CA fire, $15EA speed, $15D2, $4ED5), $C4:37EB records who made a Misobon kill, and with HYPER $C4:3822 hands the killer the victim's saved stats on return. In Mesen (5-player Battle Royale, the setting chosen in the menu): the returning player got the victim's 5 bombs, fire 6 (7 when the victim had picked up a fire-up) and speed 3, against 1 / 2 / 1 with スーパー. Image: Caravan (left) and retail after the same press.",
   "section": "region",
   "img": "hyper_misobon_caravan.png"
+ },
+ {
+  "code": "$7E1D1C = 1 (no code sets it)",
+  "effect": "A cut computer-only battle: all five fighters play themselves, the clock starts at 3:00 and Start can't pause",
+  "versions": [
+   "retail",
+   "caravan",
+   "en"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "unused",
+  "note": "$1D1C is only ever cleared ($C0:31BF); no instruction or script writes it, and the attract demos don't use it. When set: $C4:0074 sets $1D26 = 1, $C4:2A08 makes every player a computer (type 2), $C5:0E11 sets the time byte $625C = 2 and $C5:0046 skips the pause check. Held at 1 in Mesen while warping into battle room $74: within 120 frames all five fighters move and bomb on their own (in the normal battle nobody has moved yet); the round plays out to the time-up block fill, then sits at 0:28 with no results screen. Image: normal battle at 120 frames (left), the computer-only battle at 120 frames, and later in the round. Caravan: the same five reads ($C4:006F, $C4:2A39, $C5:0046, $C5:0E22, $C5:3C09) and only the clear at $C0:31C5; held at 1 in Mesen while warping into room $74: $1D26 = 1, the clock starts at 3:00 and all fighters play themselves. English is static (the same code at the same addresses).",
+  "img": "unused_com_battle.png"
  }
 ]

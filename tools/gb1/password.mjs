@@ -19,13 +19,14 @@ export const TABLES = {
   wario: Object.fromEntries([...JP.map((c, v) => [c, v]), ...WARIO.map((c, v) => [c, 0x20 + v]),
     ['4622', 0x40], ['5656', 0x41], ['2264', 0x42], ['6565', 0x43]]),
 };
+TABLES.col96 = TABLES.jp;   // Bomberman Collection (1996) carries the Japanese cart's banks unchanged
 
 // -> {value, kind: 'stage'|'powerup'|'battle', round?, stage?, boss?, player: 'bomberman'|'wario'} or null (rejected)
 export function decode(code, version = 'jp') {
   code = String(code).trim();
   const v = TABLES[version][code];
   if (v === undefined) return null;
-  if (version === 'jp') {
+  if (TABLES[version] === TABLES.jp) {   // the Japanese cart, and the Collection that carries it
     if (v < 0x20) return { value: v, kind: 'stage', round: (v >> 2) + 1, stage: (v & 3) + 1, boss: (v & 3) === 3, player: 'bomberman' };
     return { value: v, kind: v === 0x20 ? 'powerup' : 'battle', player: 'bomberman' };
   }

@@ -27,4 +27,3 @@ export function decode(code) {
   if (DEBUG[code]) return { kind: 'debug', name: DEBUG[code] };
   return null;
 }
-export function encode(level, stage) { return ROWS[level][stage]; }

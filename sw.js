@@ -16,6 +16,7 @@ self.addEventListener("fetch", e => {
     e.respondWith(fetch(r).then(put).catch(() => caches.match(r).then(m => m || caches.match("index.html"))));
     return;
   }
-  // everything else: the cached copy at once, refreshed in the background for next time
-  e.respondWith(caches.match(r).then(m => { const net = fetch(r).then(put).catch(() => m); return m || net; }));
+  // everything else: the cached copy at once, refreshed in the background for next time; the refresh asks the server
+  // (no-cache), so a changed image isn't answered again from the browser's own HTTP cache
+  e.respondWith(caches.match(r).then(m => { const net = fetch(r, { cache: "no-cache" }).then(put).catch(() => m); return m || net; }));
 });

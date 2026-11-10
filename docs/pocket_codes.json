@@ -3,11 +3,13 @@
   "code": "7693",
   "effect": "Start at Forest area 1",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 0 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 0 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords",
   "img": "password_screen.png"
  },
@@ -15,275 +17,325 @@
   "code": "3905",
   "effect": "Start at Forest area 2",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 1 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 1 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "2438",
   "effect": "Start at Forest area 3",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 2 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 2 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "8261",
   "effect": "Start at Forest area 4",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 3 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 3 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "1893",
   "effect": "Start at Forest area 5 (boss)",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 4 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 4 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "2805",
   "effect": "Start at Ocean area 1",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 5 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 5 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "9271",
   "effect": "Start at Ocean area 2",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 6 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 6 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "1354",
   "effect": "Start at Ocean area 3",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 7 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 7 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "4915",
   "effect": "Start at Ocean area 4",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 8 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 8 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "8649",
   "effect": "Start at Ocean area 5 (boss)",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 9 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 9 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "0238",
   "effect": "Start at Wind area 1",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 10 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 10 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "5943",
   "effect": "Start at Wind area 2",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 11 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 11 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "6045",
   "effect": "Start at Wind area 3",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 12 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 12 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "2850",
   "effect": "Start at Wind area 4",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 13 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 13 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "8146",
   "effect": "Start at Wind area 5 (boss)",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 14 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 14 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "9156",
   "effect": "Start at Cloud area 1",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 15 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 15 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "2715",
   "effect": "Start at Cloud area 2",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 16 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 16 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "4707",
   "effect": "Start at Cloud area 3",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 17 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 17 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "7046",
   "effect": "Start at Cloud area 4",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 18 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 18 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "0687",
   "effect": "Start at Cloud area 5 (boss)",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 19 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 19 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "3725",
   "effect": "Start at Evil area 1",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 20 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 20 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "0157",
   "effect": "Start at Evil area 2",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 21 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 21 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "5826",
   "effect": "Start at Evil area 3",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 22 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 22 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "9587",
   "effect": "Start at Evil area 4",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 23 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 23 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "3752",
   "effect": "Start at Evil area 5 (boss)",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 24 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 24 ($01:65AA). Starts with 1 bomb, fire 1. GameFAQs lists it. Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "5656",
   "effect": "Start at Forest area 1 fully powered up",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 25. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). GameFAQs lists it (All Items, Super Power-Up). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 25. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). GameFAQs lists it (All Items, Super Power-Up). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords",
   "img": "password_5656.png"
  },
@@ -291,66 +343,78 @@
   "code": "4622",
   "effect": "Start at Ocean area 1 fully powered up",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 26. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). GameFAQs lists it (All Power-Ups, Skip to Ocean World). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 26. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). GameFAQs lists it (All Power-Ups, Skip to Ocean World). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "3790",
   "effect": "Start at Wind area 1 fully powered up",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Table entry 27. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 27. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "5294",
   "effect": "Start at Cloud area 1 fully powered up",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Table entry 28. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 28. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "8906",
   "effect": "Start at Evil area 1 fully powered up",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Table entry 29. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 29. Bombs 4, fire 4 and 3 lives ($C354-$C356), $C353 = 6 (the player's $0E, 4 in a normal start), and at the stage start the player's ability bits ($52) get $0A, (bit 1 is tested by the A button bomb handler, $02:5F8A). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "9437",
   "effect": "Boss rush: start at the Forest boss fully powered up; every later stage starts at its world boss",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table entry 30: Forest area 5 with the power-up start; $C352 = 2, then 3 at the stage start, and while it is 3 every stage starts as area 5 ($02:45FE). GameFAQs lists it (Boss Mode, Super Boss Fight). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts.",
+  "note": "Table entry 30: Forest area 5 with the power-up start; $C352 = 2, then 3 at the stage start, and while it is 3 every stage starts as area 5 ($02:45FE). GameFAQs lists it (Boss Mode, Super Boss Fight). Typed with the pad in Mesen; the check ($01:6565) wrote world $C1DC, stage $C1DD and $C352-$C356 as password.mjs predicts. Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords"
  },
  {
   "code": "0278",
   "effect": "Watch the ending",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Table entry 31: $C352 = 3, and leaving the password screen with $C352 = 3 goes to the ending instead of the game ($01:6A2D, state 7). Typed in Mesen: \"Let's go!\", then the ending text and \"The End.\"",
+  "note": "Table entry 31: $C352 = 3, and leaving the password screen with $C352 = 3 goes to the ending instead of the game ($01:6A2D, state 7). Typed in Mesen: \"Let's go!\", then the ending text and \"The End.\" Japan: the same table entry ($01:5416), typed in Mesen with the same result. First Europe cart: the same table ($01:53A0), typed in Mesen with the same result.",
   "section": "Passwords",
   "img": "ending.png"
  },
@@ -358,24 +422,27 @@
   "code": "← → ← → ↑ ↓ ↑ ↓ B ← B → B ↑ B ↓, A",
   "effect": "Arms a bomb counter: after a set number of bombs a flower power-up appears (GameFAQs: maximum bombs and fire and the remote primer, for that stage)",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "known",
   "verified": "mesen",
   "section": "Button codes",
-  "note": "On the \"Area n\" screen of areas 1-4 (it follows the world select for area 1 and the password for the others), with bombs and fire both under 3 ($02:48D5, sequence $02:4983). Bombs to place (table $02:4943, areas 1-4): Forest 10/20/30/15, Ocean 20/30/40/15, Wind 20/30/30/15, Cloud 15/20/30/20, Evil 20/30/10/20. GameFAQs lists the code. Mesen (tools/pocket/test_flower.lua): typed on the Ocean 3 screen it arms the counter with 40 ($C35B = 1, $C35C = 40), and the flower is spawned ($02:680C) at the 40th bomb; Wind 3 arms 30, Ocean 2 30.",
+  "note": "On the \"Area n\" screen of areas 1-4 (it follows the world select for area 1 and the password for the others), with bombs and fire both under 3 ($02:48D5, sequence $02:4983). Bombs to place (table $02:4943, areas 1-4): Forest 10/20/30/15, Ocean 20/30/40/15, Wind 20/30/30/15, Cloud 15/20/30/20, Evil 20/30/10/20. GameFAQs lists the code. Mesen (tools/pocket/test_flower.lua): typed on the Ocean 3 screen it arms the counter with 40 ($C35B = 1, $C35C = 40), and the flower is spawned ($02:680C) at the 40th bomb; Wind 3 arms 30, Ocean 2 30. Japan: the same sequence and counts ($02:491C, $02:48DC); on Ocean 3 it armed 40 ($C2FC = 1, $C2FD = 40) in Mesen. First Europe cart: the same ($02:492C, $02:48EC); armed 40 on Ocean 3 ($C34C = 1, $C34D = 40).",
   "img": "flower.png"
  },
  {
-  "code": "A + B + Select + Start",
-  "effect": "Soft reset",
+  "code": "Mode menu: GB KISS",
+  "effect": "Hudson's infrared file exchange: a file menu with KISS MAIL and the KISS MONSTER2 battle game, played face to face with another Game Boy",
   "versions": [
-   "us"
+   "jp"
   ],
   "status": "new",
   "verified": "mesen",
-  "section": "Button codes",
-  "note": "Held together ($00:032A, the held-pad byte $FF82 & $0F = $0F): back to the boot state ($C1A8 = 0). Mesen: held for 10 frames in Forest 1, the intro starts again."
+  "section": "Secrets",
+  "note": "Japan only (HuC-1 cart with an infrared LED). Title, Start, then the third line of the mode menu; it is there only off a Super Game Boy ($C1A2 = 0, set at boot from the SGB multiplayer check $00:3641; the menu $01:4FCB). The GB KISS kernel is in bank 0 (RST $08 system calls), the infrared driver in bank $1E (LED on with $0E to $0000, then bit 0 of $A000), the menu in bank $1F. A fresh cart registers KISS MAIL and KISS-MON2 (from bank $1D, run from RAM). In Mesen: the menu, KISS MAIL's editor, and KISS MONSTER2's name entry, point sharing and battle screen; every transfer waits for a partner (通信準備中です) and B gives 通信トラブル!, since one emulated Game Boy has no partner.",
+  "img": "gbkiss_jp.png"
  },
  {
   "code": "0101CCC2",
@@ -456,23 +523,164 @@
   "code": "Graphics blocks $19, $2E, $3F (and $2F)",
   "effect": "Japanese menu and label graphics left in: はじめから / パスワード, かんたん / ふつう / むずかしい, the kana world names",
   "versions": [
-   "us"
+   "us",
+   "eu1"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The loader ($00:163C) copies 2 KB blocks from the table at $0C:6F44. Four blocks are Japanese text the release replaced with English ones, and the code still loads the Japanese number first and overwrites it on the next instruction: LD B,$19 then LD B,$43 ($01:5E10, $01:5EE9, $02:5865), $2E then $44 ($01:6B2B, $03:482F), $2F then $45 ($03:483B), and $3F for $46 at $02:4629. Changing the operand back (file $5E12, $5EEB, $6467 to $19; $6B2E, $C832 to $2E; $862A to $3F) shows them in Mesen (Game Boy Color): the New Game menu reads はじめから / パスワード and LICENSED BY NINTENDO, the world plates show kana (モリ for Forest), and LEVEL SELECT reads かんたん / ふつう / むずかしい. The menu that names the modes comes out scrambled, as the English layout points at other tiles. Block $2F's first 768 bytes (ただいまのけっか, ranking text) were not shown.",
+  "note": "The loader ($00:163C) copies 2 KB blocks from the table at $0C:6F44. Four blocks are Japanese text the release replaced with English ones, and the code still loads the Japanese number first and overwrites it on the next instruction: LD B,$19 then LD B,$43 ($01:5E10, $01:5EE9, $02:5865), $2E then $44 ($01:6B2B, $03:482F), $2F then $45 ($03:483B), and $3F for $46 at $02:4629. Changing the operand back (file $5E12, $5EEB, $6467 to $19; $6B2E, $C832 to $2E; $862A to $3F) shows them in Mesen (Game Boy Color): the New Game menu reads はじめから / パスワード and LICENSED BY NINTENDO, the world plates show kana (モリ for Forest), and LEVEL SELECT reads かんたん / ふつう / むずかしい. The menu that names the modes comes out scrambled, as the English layout points at other tiles. Block $2F's first 768 bytes (ただいまのけっか, ranking text) were not shown. Static: the first European cart has the same double loads (LD B,$19 then $43 at $01:4C1E, $01:4CE5, $02:57EE; $2E then $44 at $01:591C, $03:4815; $2F then $45 at $03:4821; $46 at $02:460C) and blocks $19, $2E and $3F byte-identical to the US ones ($2F matches Japan's); the Japanese cart shows these graphics in normal play, so it is not added.",
   "section": "Cheats",
   "img": "japanese_blocks.png"
+ },
+ {
+  "code": "0101BDC2",
+  "devices": {
+   "GameShark": "0101BDC2",
+   "Game Genie": "C33-67B-E61 + 18D-5DB-6EA (JP) / C33-67B-E61 + 18D-6DB-6EA (EU)"
+  },
+  "effect": "Invincible (the unused debug flag, $C2BD on these carts)",
+  "versions": [
+   "jp",
+   "eu1"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "GameShark. The Japanese and first European carts keep the debug flag at $C2BD (US $C2CC, whose code does nothing here: 3 deaths, game over). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths on both carts. Game Genie: the ROM patches below, same test."
+ },
+ {
+  "code": "C33-67B-E61 + 18D-5DB-6EA",
+  "devices": {
+   "Game Genie": "C33-67B-E61 + 18D-5DB-6EA",
+   "GameShark": "0101BDC2"
+  },
+  "effect": "Invincible (ROM patch of both death checks, Japan)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "Game Genie: $02:4367 JP NZ -> JP and $02:4D5D JR NZ -> JR (US $02:436F, $02:4DC7). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths."
+ },
+ {
+  "code": "C33-67B-E61 + 18D-6DB-6EA",
+  "devices": {
+   "Game Genie": "C33-67B-E61 + 18D-6DB-6EA",
+   "GameShark": "0101BDC2"
+  },
+  "effect": "Invincible (ROM patch of both death checks, first Europe cart)",
+  "versions": [
+   "eu1"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "Game Genie: $02:4367 JP NZ -> JP and $02:4D6D JR NZ -> JR. Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths."
+ },
+ {
+  "code": "0103EFC1",
+  "devices": {
+   "GameShark": "0103EFC1",
+   "Game Genie": "A72-F7A-19E (JP) / A73-07A-19E (EU)"
+  },
+  "effect": "Infinite lives ($C1EF on these carts)",
+  "versions": [
+   "jp",
+   "eu1"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "GameShark: lives are at $C1EF here (US $C1F1; 0103F1C1 does nothing: 3 deaths, game over). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3, on both carts."
+ },
+ {
+  "code": "A72-F7A-19E",
+  "devices": {
+   "Game Genie": "A72-F7A-19E",
+   "GameShark": "0103EFC1"
+  },
+  "effect": "Infinite lives (Japan)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "Game Genie: $02:52F7 DEC A -> AND A (US $02:5370). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3."
+ },
+ {
+  "code": "A73-07A-19E",
+  "devices": {
+   "Game Genie": "A73-07A-19E",
+   "GameShark": "0103EFC1"
+  },
+  "effect": "Infinite lives (first Europe cart)",
+  "versions": [
+   "eu1"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "Game Genie: $02:5307 DEC A -> AND A. Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3."
+ },
+ {
+  "code": "0101BEC2",
+  "devices": {
+   "GameShark": "0101BEC2",
+   "Game Genie": "380-CCB-4CA"
+  },
+  "effect": "Start stops the clock instead of pausing (the unused debug flag, $C2BE on these carts)",
+  "versions": [
+   "jp",
+   "eu1"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "GameShark ($C2BE; US $C2CD). Mesen, Forest 1: after Start the clock stayed at 3:54 for 600 frames with no pause screen (without the code Start opens PAUSE). The US Game Genie code 380-CCB-4CA patches the same address ($02:40CC) in these carts and does the same."
+ },
+ {
+  "code": "0F8-0EB-E62",
+  "devices": {
+   "Game Genie": "0F8-0EB-E62"
+  },
+  "effect": "Debug menu in place of the title menu (Japan)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "Game Genie: $01:480E, the scene number after the intro, $02 -> $0F (US $01:59C1; 0F9-C1A-E62 does nothing here). In Mesen Start on the title leads to the numbered test menu, text partly garbled, as on the US cart.",
+  "img": "debug_menu_jp.png"
+ },
+ {
+  "code": "0F7-DAB-E62",
+  "devices": {
+   "Game Genie": "0F7-DAB-E62"
+  },
+  "effect": "Debug menu in place of the title menu (first Europe cart)",
+  "versions": [
+   "eu1"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Cheats",
+  "note": "Game Genie: $01:47DA, $02 -> $0F. In Mesen Start on the title leads to the numbered test menu.",
+  "img": "debug_menu_eu1.png"
  },
  {
   "code": "Tune 05",
   "effect": "A looping tune no world plays",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Music goes through $254E ($C1C1 = 2, $C1C2 = tune). The world music table at $02:4BD8 reads 01 02 03 04 06, skipping 05, and nothing else asks for it; there's no sound test. 05 is a full tune that loops after about 19 s. Recorded in Mesen.",
+  "note": "Music goes through $254E ($C1C1 = 2, $C1C2 = tune). The world music table at $02:4BD8 reads 01 02 03 04 06, skipping 05, and nothing else asks for it; there's no sound test. 05 is a full tune that loops after about 19 s. Recorded in Mesen. Static: on both monochrome carts the world table ($02:4B6E Japan, $02:4B7E Europe) reads 01 02 03 04 06, the constant sound requests through the moved entry ($00:20DA / $00:1ED0) ask for the same music numbers as on the US cart, never 05, and sound bank $12 is byte-identical.",
   "section": "unused",
   "audio": [
    "pocket/Music_05.mp3"
@@ -482,11 +690,13 @@
   "code": "Sound effect 0F",
   "effect": "A rising whoosh the game never plays",
   "versions": [
-   "us"
+   "us",
+   "jp",
+   "eu1"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Sounds go through $00:254E ($C1C1 = function, $C1C2 = number): 212 calls with the number written in and two music tables, none giving effect 0F. Its data ($12:48DC, noise channel) is the only unrequested effect not shared with Hudson's other Game Boy games. About 0.55 s, a noise burst rising in pitch. Recorded in BizHawk with the music muted.",
+  "note": "Sounds go through $00:254E ($C1C1 = function, $C1C2 = number): 212 calls with the number written in and two music tables, none giving effect 0F. Its data ($12:48DC, noise channel) is the only unrequested effect not shared with Hudson's other Game Boy games. About 0.55 s, a noise burst rising in pitch. Recorded in BizHawk with the music muted. Static: sound bank $12 (effect 0F at $12:48DC) is byte-identical on both monochrome carts, and none of the constant effect requests through their moved entry ($00:20DA / $00:1ED0) asks for 0F, as on the US cart.",
   "section": "unused",
   "audio": [
    "pocket/SE_0F.mp3"

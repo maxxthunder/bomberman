@@ -12,6 +12,12 @@ GameFAQs page in `res/`) does not mention this demo at all, so every finding her
 | Dump | MD5 | vs retail Europe |
 |---|---|---|
 | Special 8-Player Demo (Europe) (Proto) | `e4392bd5e77321e8ec6e76a142e9536b` | a different program: no 32-byte run of code or data in common |
+| 8 Player Demo (Unl) | `36cfe519c50a76f75664c709d9ae050a` | a different program: the proto with 99 header bytes changed (below) |
+
+The (Unl) dump is the proto with its header filled in: the domestic and overseas name fields (`$120`-`$17F`) and the
+region field (`$1F0`-`$1F2`) hold spaces instead of zeros. Those are the only 99 bytes that differ; the checksum
+(`$E777`) is the same because it only covers `$200` onward, and the code never reads the header. Everything on this
+page applies to both dumps.
 
 ## What it is
 

@@ -229,15 +229,49 @@ order as N) and `6429` `0139` `5739` `9349` `0059` `4659` `9269` `3969` `5279` `
   place of the small ones; the continue screen's frame table (`$DA7CC`, frames `$74-$7D`) builds them. Its palette
   2:`$1F` is never loaded either; renumbered the same way, its first line is the continue screen's palette. Digits
   on 2:`$1F`'s third line, a colour ramp, as the frames ask: ![Countdown digits](img/mega/unused_countdown_digits.png)
-- ★ **Bomberman '94's logo on the planet screen.** Maps 2:`$05`/`$06` (never loaded, like 2:`$03`, the starfield
-  with 23 stars moved) are '94's maps for this screen, converted cell for cell. Their extra shape uses tiles
-  `$600-$6F3`, which '94 builds by copying a sprite set into the background (`$9C02`); this game has neither the set
-  nor the routine. With '94's tiles it is the start of the '94 logo on a cloud (logo colours a guess):
+- ★ **Bomberman '94's title screen.** Maps 2:`$05`/`$06` (never loaded, like 2:`$03`, the starfield with 23 stars
+  moved) are '94's title screen, converted cell for cell: in '94, once the logo has flown in as sprites, its left part
+  is copied into the background (`$9C02`, tiles `$600-$6F3` here) and drawn with these maps. This game has its own
+  title and neither the logo set nor the routine. With '94's tiles the shape is the start of the '94 logo on a cloud
+  (logo colours a guess):
   ![Maps 2:$05](img/mega/unused_planet_logo.png)
-- ★ **A creature in the area 3 clear scene.** Graphics 1:`$1D` (loaded only by list `$198D0`, the crab boss scene)
+- ★ **A creature in the area 3 boss fight.** Graphics 1:`$1D` (loaded only by list `$198D0`, the crab boss fight)
   has two pieces, tiles `$5F8` and `$5FC`, that no frame table active there (`$DC3D8`, `$D9386`, `$DA5EA`, the
   players') and no map names: a round blue one-eyed creature in two frames (palette line a guess):
-  ![Area 3 creature](img/mega/unused_area3_creature.png)
+  ![Area 3 creature](img/mega/unused_area3_boss_creature.png)
+- ★ **Half-open eyes for the area 5 boss.** Graphics 2:`$27` tiles `$594` and `$59C` sit between the closed (`$584`)
+  and open (`$58C`) eyes that the witch's blink frames (`$0A`/`$0B` of `$EAD2C`) draw. No frame of `$EAD2C` covers
+  them, and in BizHawk no boss sprite did through the fight, a forced defeat and the beam:
+  ![Area 5 eyes](img/mega/unused_area5_eyes.png)
+- ★ **A sparkle burst for the area 5 boss.** Script `$EB528` (frames `$2C-$31` of `$EAD2C`) is referenced nowhere; it
+  is a simpler version of the defeat burst (`$EB540`, frames `$36-$3D`, which itself skips `$3B`). None of these
+  frames was drawn in BizHawk: ![Sparkle burst](img/mega/unused_area5_burst.png)
+- ★ **Ending:** two long-trailed shooting stars (`$D867C` frames `$2D-$32`, scripts named only by `$16F74`, which
+  nothing calls) and a star burst (`$51`/`$52`, script `$D8FB8` referenced nowhere). A full run of the ending drew
+  79 of its 87 frames, never these: ![Shooting stars](img/mega/unused_ending_shooting_stars.png)
+  ![Star burst](img/mega/unused_ending_burst.png)
+- ★ **Title:** the menu is built from a 6-line script table (`$1B596`), but the loop stops at 4 (`$1B542`), so line
+  5 (a sprite copy of the copyright, drawn in the background instead) and line 6 never appear:
+  ![License line](img/mega/unused_title_license.png)
+- ★ **Intro:** script `$DC2B4` is advanced once and then left, so Bomberman never turns round and covers his face
+  (`$DA7CC` frames `$40-$42`): ![Intro turn](img/mega/unused_intro_turn.png)
+- ★ **Area map:** scripts `$DE20A`, `$DE1F0` and `$DE1DC` of `$DC3D8` are referenced nowhere (the one computed script
+  write, `$18734`, is in dead code): a purple villain who punches Bomberman, lifts a pillar with red gems and stands
+  over rubble (`$1B-$20`), and a white-haired Bomberman with a stick plus two small poses (`$12`/`$13`, `$0E`/`$0F`):
+  ![Villain](img/mega/unused_hub_villain.png) ![Bombermen](img/mega/unused_hub_bomberman.png)
+- ★ **Boss frames.** Each fight was logged frame by frame in BizHawk, with the boss beaten through its own hit
+  branch, and every way the code sets a frame was traced. Never drawn:
+  - area 1 (`$DE38E`): a small sitting monkey, `$46`/`$47` (only in script `$DFB78`, referenced nowhere):
+    ![Monkey](img/mega/unused_area1_boss_monkey.png)
+  - area 2 (`$E8782`): the robot turned and punching sideways (`$74-$77`, only in script `$EAC86`) and X-eyed
+    without its arms (`$0D`): ![Robot](img/mega/unused_area2_boss_poses.png) ![Robot](img/mega/unused_area2_boss_dazed.png)
+  - area 4 (`$DFCA6`): the bat looking sideways, with other feet and another wing pose (`$63-$67`), and a red small
+    bat (`$E1170` frame 1, script `$E1314`): ![Bat](img/mega/unused_area4_boss_poses.png) ![Red bat](img/mega/unused_area4_red_bat.png)
+  - final boss (`$E649E`): the escape ship with Bomberman in the cockpit (`$D7`/`$D8`) and a smaller one flying
+    away (`$D9`/`$DA`, only in script `$E8774`); the ship that flees is empty (`$D5`/`$D6`). A full fight into the
+    ending drew 191 of 223 frames, never these: ![Escape ship](img/mega/unused_final_ship.png)
+  The final boss's `$40-$4B` and the crab's `$91-$96` look unused but are picked through byte tables
+  (`$1436E`, `$1A302`).
 
 ## Dead code
 
@@ -286,6 +320,13 @@ are real code):
 - `$8090`, `$8138`, `$7FC2` are **not** dead: they are the Team Player reader (`$7ED4` in the device table at
   `$7EC8`, entered with `jsr $7EC8(pc,d0.w)`, so the static pass could not follow it) and its sub-device paths; the
   game uses Sega's usual peripheral-ID scheme (`$7EE8`) and only plain pads were plugged in.
+- ★ **EA 4-Way Play support (BizHawk).** At power-on only, `$7C34` runs EA's handshake (`$90F2`) and sets `$80C2`;
+  every frame `$912A` then reads four pads through the adapter into the player records. Pads 1-4 each drive their
+  own battle slot. A Team Player reads up to 8 pads ($8090; 6-button pads work), but `$103D4` fills the 4 player
+  slots with the first four plain pads and starts every slot on pad 1, so a mouse is skipped, pads 5-8 go unused,
+  and with two pads and four combatants players 3 and 4 copy pad 1.
+- ★ **ROM checksum check.** `$7BC6-$7C04` sums the ROM from `$200` and compares it with the header word `$18E`; a
+  mismatch turns the screen red for good ([img](img/mega/checksum_red.png)). IPS patches must fix `$18E`.
 - No debug menu, test mode or developer leftover is among them.
 
 ## Input codes
@@ -310,10 +351,19 @@ widened by the operand size; `lea`/`move.l #` bases count as records written thr
 - ★ **New:** `$AABC` bit 0 is tested at `$6050` and nothing writes `$AABC`. In an object routine (`$5FC4`, its
   moving branch `$601E`) it switches the sprite depth from the fixed `$F8` to one computed from the Y position (the
   formula `$C7C0` always uses). Never set, so that object always draws at fixed depth. The branch ran once in a battle
-  during the coverage tour and could not be brought up again on purpose, so the effect of setting it was **not**
-  seen on screen.
-- ★ **New:** `$ADD8`/`$ADD9` are only read (`$197DC`, added and range-checked), never written; that routine never ran
-  in the tours, so what it belongs to is not known.
+  during the coverage tour and could not be brought up again on purpose. Coverage round (BizHawk): the object is the
+  **bomb** (`$5D46`) and `$601E` its sliding branch; with `$AABC` held at 1 the branch ran 77 times in a battle, and
+  the sliding bomb's depth then follows its Y position: a 1-pixel layering change (its outline row over the flame
+  below it).
+- ★ **New:** `$ADD8`/`$ADD9` are only read (`$197DC`, added and range-checked), never written. Coverage round:
+  `$197DC` is an unused vertical screen slide: each frame it adds `$ADD8` to `$ADD9` and sets the scroll from
+  `$BF - $ADD9`, about 30 frames long. Fed a list by hand in BizHawk, it ran 40 times and the scroll stepped through.
+- ★ **New (coverage round): an unused line-interrupt driver.** `$AB12`/`$AB2A` walk a raster list whose pointer live
+  code still writes to `$A40A` (`$9328`, and `$1B7E8` in the intro), but nothing calls it and the H-int vector is a
+  stub. With the interrupt patched in, the intro's list turns the display off at line `$C0`, blanking a band at
+  the bottom of the intro.
+- ★ **New (coverage round):** `$A936` is only ever cleared; set, the stage-start sound changes from `$2F` to `$35`
+  (`$1FB8`, `$46BA`).
 - No dormant debug or cheat flag, so still no IPS patch.
 
 ## Text
@@ -370,6 +420,9 @@ Battle Game has nothing locked (see above), so there is no unlock code.
 
 ## Regions
 
+- ★ On a Japanese console (`$A10001` region bit, `$83C0`) the ™ after the SEGA logo isn't drawn; the game still boots.
+  On a PAL console the Europe ROM's battle clock runs at 5/6 speed (10 clock seconds per 12 real ones), as the
+  50 Hz note below predicts. Both seen in BizHawk.
 - The two ROMs have the same graphics, data and passwords. Bytes `$40000`-end are identical; below that the
   Europe/Korea code is the USA code minus two pieces, with every later address shifted:
   - USA `$7C4A` `movem.l $0.w, a7` (reload the stack pointer from the reset vector before entering the main loop at

@@ -355,6 +355,14 @@ at the same frame counts; EU runs at 50 Hz, so its shots fall at other moments):
 - Europe differs from US in 4 bytes: 3 header bytes (region, checksum) and the timer constant at `$C4:07F4`
   (`CMP #$003C` → `#$0032`), so battle seconds are real seconds at 50 Hz. Known ("Battle Length").
 - ★ **New:** the multitap library strings and the stricter sound-test check exist only in US/EU.
+- ★ **New: START during the first title intro.** US/EU/beta check START only once `$0CAE` is set (`$C5:42E8`);
+  `$C5:4EF0` sets it when Bomberman's first walk across the title ends. JP (`$C5:41ED`) checks START at once. In
+  Mesen with START every 16 frames from power-on, JP skipped at frame 123 and US not before frame 424.
+  ![Frame 300: US still on the intro, JP on the map](img/sb1/region_title_start.png)
+- ★ **New: retail ignores anything that isn't a standard pad.** After reading the pads through the MULTI5 library, US/EU
+  zero a port's buttons unless its device ID (`$0CEB+n`) is 1; the old reader is still there, jumped over, at US
+  `$C4:096C`. JP and the beta keep the old reader, which would take a mouse's bits as buttons. JP also turns on NMI
+  and IRQ (`$C4:0172`) before setting the IRQ timers, the reverse of US; nothing visible comes of it.
 
 ## The 1993-05-11 beta
 
@@ -410,6 +418,18 @@ Never-run code falls in two groups:
   (6,477 bytes): boss and enemy states, rare collisions, battle cases. Situations the runs did not reach, not hidden
   features; the biggest are the 6-8 boss (`$C7:5911`, 413 bytes) and per-direction collision branches
   (`$C4:31D9`/`329B`/`335D`/`341F`).
+- **Boss defeats and the ending lead-in** (Mesen, boss hits forced): `$C7:2678`, `$C7:3EF7`, `$C7:4900` and
+  `$C7:165B` are the 1-8, 2-8, 4-8 and 3-8 boss defeats; the coverage never killed a boss. After the 6-8 second form
+  (`$C7:6B4E`) takes its 5th hit, `$C7:71E0` jumps to the arena scene `$C7:7292`: P1 and P2 at (`$68`,`$B8`) and
+  (`$A8`,`$B8`) in state `$C4:273F` beside the two villains, ending with `$00A4` = `$39` (`$C7:7384`). That map runs
+  with `$0D17` = `$68`: the map object `$C5:7409` plays sound `$1B` and the gathering animations (`$C5:7449`,
+  `$C5:74A5`), with the repeating sound object `$C7:7277` (through `$C7:724D` from `$C5:749C`); the Bombermen stop
+  walking (`$C5:7B07`, `$C5:7CC3`), the map lasts `$500` frames (`$C5:766D`) and then the ending (`$30`) starts.
+  The game-over step-back (`$C5:6F2C`) can't reach it: CONTINUE goes to a stage scene, not the map.
+- ★ **Dud bombs in Battle Mode** (`$C4:4F95`). When a fuse runs out (`$C4:4F57`) with `$0C3C` = 3 (battle and the
+  attract demos), the bomb is at least its owner's 3rd and the round still has duds left (`$0CAF`, set 0-2 by
+  `$C4:6E0E`), a 1-in-256 roll (`$C6:15F2` = `$AE`) makes it fizzle: sound `$0F`, a smoke puff (`$C5:3976`), and a
+  wait of (5 to 15) × 64 frames plus another fuse. Forced in Mesen (`$C4:4F8F` BEQ → BRA). ![The dud, then the blast](img/sb1/dud_bomb.png)
 - **Islands:** 70 runs of plausible code (8+ instructions after a return or jump, with a return or jump in them)
   that no code that ran leads to; 54 of them (8,030 bytes) in the code banks `$C4-$C7`. The 16 in `$C0-$C3` are
   graphics or data that happen to decode. The ones in the code banks:
@@ -418,8 +438,8 @@ Never-run code falls in two groups:
 |---|---|---|---|---|
 | `$C6:00D2`, `$C6:0474`, `$C6:09D9`, `$C4:0B6F` | 312, 303, 124, 70 | the debug menu: toggle, cursor/values, buffer clear and draw, VRAM upload | debug feature | Known (restored above) |
 | `$C6:1093` | 28 | an item handler (100 points, the pickup sound) that the handler table `$C6:0D26` skips: the table goes from the kendama `$C6:1077` straight to the apple `$C6:10AF`. A byte copy of the kendama handler, so the slot of a cut 100-point item | cut feature | ★ New |
-| `$C7:7277`, `$C7:7292`, `$C4:273F` | 320, 162 | puts player 1 at (`$68`,`$B8`) and player 2 at (`$A8`,`$B8`) in the falling state `$C4:273F`: the Japanese-style DRAW screen with Bombermen dropping in | unreferenced | Known |
-| `$C5:3B7C`, `$C5:3C16` | 123, 618 | objects started at fixed screen positions (one at y = `$FFE0`, above the screen) with animations `$C5:1D57`/`$C5:1D60`; same bytes in JP, also never run there | unreferenced | not identified |
+| `$C7:7277`, `$C7:7292`, `$C4:273F` | 320, 162 | the end of the final boss: `$C7:7292` is the arena scene after the 6-8 second form dies (P1 and P2 at (`$68`,`$B8`) and (`$A8`,`$B8`) in state `$C4:273F` beside the villains), `$C7:7277` the repeating sound on the map that follows (below) | reached through `$C7:71E0` and `$C7:724D` | seen in Mesen |
+| `$C5:3B7C`, `$C5:3C16` | 123, 618 | the battle HURRY UP! banner at 1:00 (`$C4:0883`) and the TIME UP! banner at 0:00 (`$C4:087A` → `$C4:0769`, every live player dies, a DRAW); reached through `$C4:08xx`, not unreferenced. TIME UP! is almost never seen because the blocks end the round first ([img](img/sb1/battle_time_up.png)) | used | ★ identified (coverage round) |
 | `$C4:4FCB` | 325 | walks the four blast arms from a cell and clears bit `$0800` (fire) in each map cell until a wall: the old end-of-explosion routine. The same code runs in the Japanese version (`$C4:48A3`); US/EU/beta use a replacement | superseded | ★ New |
 | `$C4:5F89`, `$C5:59A7` | 257, 279 | two byte-identical copies of a "pick a random cell in the 13 × 11 field" routine (RNG `$C6:1F13`) | unreferenced | ★ New (minor) |
 | `$C6:11BA`, `$C7:12EE`, `$C7:786A`, `$C7:7897` | 370 ... 136 | palette loaders (colours 1-13 through `$C6:2436`) | unreferenced | not identified |
@@ -553,8 +573,8 @@ The debug-menu ROM codes (90 per version) are listed under Debug menu. Their Gam
 - ★ Effects go through `$C3:0042` (Y = effect). All 74 calls have the number written in except the debug menu's SE
   NO. (table `$C6:096A`); they ask for 00-0C, 0E, 0F, 11-13 and 15-1F. An effect sounds only with the instruments of
   the loaded song set: 0D (about 2.9 s, a noisy sweep fading out) plays in sets 5 and 12, 10 (about 0.85 s, a loud
-  low tone) in battle sets 7, 9, 10 and 11, 14 (a 0.18 s rising blip) in set 9. 20-28 were silent in every set:
-  empty slots.
+  low tone) in battle sets 7, 9, 10 and 11, 14 (a 0.18 s rising blip) in set 9. 20-28 are empty slots: the
+  driver's effect map (SPC `$0E61`) holds `$FF` for them in all 14 song sets, so it returns without playing.
 
 ## Open
 

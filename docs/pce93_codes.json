@@ -675,9 +675,9 @@
   "code": "BABBAACA",
   "effect": "Start at world 1 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -688,9 +688,9 @@
   "code": "BBBBAADA",
   "effect": "Start at world 1 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -701,9 +701,9 @@
   "code": "CDBBAAEA",
   "effect": "Start at world 1 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -714,9 +714,9 @@
   "code": "CEBBAAFA",
   "effect": "Start at world 1 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -727,9 +727,9 @@
   "code": "DFBBAAGA",
   "effect": "Start at world 1 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -740,9 +740,9 @@
   "code": "DGBBAAHA",
   "effect": "Start at world 1 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -753,9 +753,9 @@
   "code": "EICBAAIA",
   "effect": "Start at world 1 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -766,9 +766,9 @@
   "code": "EJCBAAJA",
   "effect": "Start at world 1 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -779,9 +779,9 @@
   "code": "CABBAADA",
   "effect": "Start at world 2 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -792,9 +792,9 @@
   "code": "DCBBAAEA",
   "effect": "Start at world 2 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -805,9 +805,9 @@
   "code": "DDBBAAFA",
   "effect": "Start at world 2 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -818,9 +818,9 @@
   "code": "EEBBAAGA",
   "effect": "Start at world 2 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -831,9 +831,9 @@
   "code": "EFBBAAHA",
   "effect": "Start at world 2 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -844,9 +844,9 @@
   "code": "FHCBAAIA",
   "effect": "Start at world 2 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -857,9 +857,9 @@
   "code": "FICBAAJA",
   "effect": "Start at world 2 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -870,9 +870,9 @@
   "code": "GJCBAAKA",
   "effect": "Start at world 2 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -883,9 +883,9 @@
   "code": "EBBBAAEA",
   "effect": "Start at world 3 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -896,9 +896,9 @@
   "code": "ECBBAAFA",
   "effect": "Start at world 3 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -909,9 +909,9 @@
   "code": "FDBBAAGA",
   "effect": "Start at world 3 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -922,9 +922,9 @@
   "code": "FEBBAAHA",
   "effect": "Start at world 3 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -935,9 +935,9 @@
   "code": "GGCBAAIA",
   "effect": "Start at world 3 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -948,9 +948,9 @@
   "code": "GHCBAAJA",
   "effect": "Start at world 3 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -961,9 +961,9 @@
   "code": "HICBAAKA",
   "effect": "Start at world 3 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -974,9 +974,9 @@
   "code": "HJCBAALA",
   "effect": "Start at world 3 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -987,9 +987,9 @@
   "code": "FBBBAAFA",
   "effect": "Start at world 4 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1000,9 +1000,9 @@
   "code": "GCBBAAGA",
   "effect": "Start at world 4 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1013,9 +1013,9 @@
   "code": "GDBBAAHA",
   "effect": "Start at world 4 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1026,9 +1026,9 @@
   "code": "HFCBAAIA",
   "effect": "Start at world 4 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1039,9 +1039,9 @@
   "code": "HGCBAAJA",
   "effect": "Start at world 4 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1052,9 +1052,9 @@
   "code": "IHCBAAKA",
   "effect": "Start at world 4 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1065,9 +1065,9 @@
   "code": "IICBAALA",
   "effect": "Start at world 4 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1078,9 +1078,9 @@
   "code": "JKCBAAMA",
   "effect": "Start at world 4 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1091,9 +1091,9 @@
   "code": "HBBBAAGA",
   "effect": "Start at world 5 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1104,9 +1104,9 @@
   "code": "HCBBAAHA",
   "effect": "Start at world 5 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1117,9 +1117,9 @@
   "code": "IECBAAIA",
   "effect": "Start at world 5 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1130,9 +1130,9 @@
   "code": "IFCBAAJA",
   "effect": "Start at world 5 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1143,9 +1143,9 @@
   "code": "JGCBAAKA",
   "effect": "Start at world 5 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1156,9 +1156,9 @@
   "code": "JHCBAALA",
   "effect": "Start at world 5 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1169,9 +1169,9 @@
   "code": "KJCBAAMA",
   "effect": "Start at world 5 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1182,9 +1182,9 @@
   "code": "KKCBAANA",
   "effect": "Start at world 5 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1195,9 +1195,9 @@
   "code": "IBBBAAHA",
   "effect": "Start at world 6 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1208,9 +1208,9 @@
   "code": "JDCBAAIA",
   "effect": "Start at world 6 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1221,9 +1221,9 @@
   "code": "JECBAAJA",
   "effect": "Start at world 6 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1234,9 +1234,9 @@
   "code": "KFCBAAKA",
   "effect": "Start at world 6 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1247,9 +1247,9 @@
   "code": "KGCBAALA",
   "effect": "Start at world 6 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1260,9 +1260,9 @@
   "code": "LICBAAMA",
   "effect": "Start at world 6 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1273,9 +1273,9 @@
   "code": "LJCBAANA",
   "effect": "Start at world 6 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1286,9 +1286,9 @@
   "code": "MKCBAAOA",
   "effect": "Start at world 6 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1299,9 +1299,9 @@
   "code": "KCCBAAIA",
   "effect": "Start at world 7 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1312,9 +1312,9 @@
   "code": "KDCBAAJA",
   "effect": "Start at world 7 stage 2 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1325,9 +1325,9 @@
   "code": "LECBAAKA",
   "effect": "Start at world 7 stage 3 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1338,9 +1338,9 @@
   "code": "LFCBAALA",
   "effect": "Start at world 7 stage 4 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1351,9 +1351,9 @@
   "code": "MHCBAAMA",
   "effect": "Start at world 7 stage 5 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1364,9 +1364,9 @@
   "code": "MICBAANA",
   "effect": "Start at world 7 stage 6 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1377,9 +1377,9 @@
   "code": "NJCBAAOA",
   "effect": "Start at world 7 stage 7 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1390,9 +1390,9 @@
   "code": "NKCBAAPA",
   "effect": "Start at world 7 stage 8 with 1 bomb, fire 1, normal speed, no planets cleared",
   "versions": [
+   "vc",
    "JP",
-   "SP",
-   "vc"
+   "SP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1415,8 +1415,8 @@
   "code": "LJLFPTKD",
   "effect": "Final stage (7-8) with 10 bombs, fire 5, every planet cleared and speed 3 (one above the skates' maximum)",
   "versions": [
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1439,8 +1439,8 @@
   "code": "CBBBADFA",
   "effect": "Stage 1-1 at speed 3, faster than the game's maximum of 2",
   "versions": [
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1463,8 +1463,8 @@
   "code": "BABBABDA",
   "effect": "Stage 1-1 at speed 1 (one skate)",
   "versions": [
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1487,8 +1487,8 @@
   "code": "CBBBACEA",
   "effect": "Stage 1-1 at speed 2 (the game's maximum)",
   "versions": [
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "unchecked",
   "verified": "fuzz",
@@ -1511,8 +1511,8 @@
   "code": "CEECDFAB",
   "effect": "Stage 3-5 with 4 bombs, fire 2, speed 1, planets 1 and 2 cleared",
   "versions": [
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1535,8 +1535,8 @@
   "code": "CAKFBGDB",
   "effect": "Stage 2-1 with 10 bombs, fire 5, speed 2, planet 1 cleared",
   "versions": [
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1548,8 +1548,8 @@
   "effect": "Rejected (letters below the key)",
   "versions": [
    "US",
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "unchecked",
   "verified": "mesen",
@@ -1561,8 +1561,8 @@
   "effect": "Invincible: player 1 ability bit 5 (the blink after a hit) held on; the death check 02:8C79 skips while it is set",
   "versions": [
    "US",
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1574,8 +1574,8 @@
   "effect": "9 lives in reserve",
   "versions": [
    "US",
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1587,8 +1587,8 @@
   "effect": "Speed 3, one above the skates' maximum",
   "versions": [
    "US",
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1600,8 +1600,8 @@
   "effect": "World / stage select: every Normal Game stage is world w+1, stage s+1",
   "versions": [
    "US",
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1612,11 +1612,12 @@
   "code": "1F1FFB:01",
   "effect": "CONFIGRATION screen after every planet map (stage, scene, power-ups, lives, sound)",
   "versions": [
+   "vc",
    "JP"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "RAM F8:1FFB = $3FFB, the flag the ending's I+Run sets; screen shown (JP). US: use the patch",
+  "note": "RAM F8:1FFB = $3FFB, the flag the ending's I+Run sets; screen shown (JP). US: use the patch JP VC: static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "cheat",
   "img": "config_jp_cheat.png"
  },
@@ -1625,8 +1626,8 @@
   "effect": "The ending's clear-time page even after a password or continue",
   "versions": [
    "US",
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1638,11 +1639,12 @@
   "code": "patches/pce93_configration_us.ips",
   "effect": "US: CONFIGRATION screen after every planet map",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "file $4432: 08 20 E7 EA 9A AB 06 -> 00 20 E7 EA 20 86 08 (far call to 08:8620 put back); the patched file showed the screen",
+  "note": "file $4432: 08 20 E7 EA 9A AB 06 -> 00 20 E7 EA 20 86 08 (far call to 08:8620 put back); the patched file showed the screen US VC: static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "patch",
   "img": "config_us_ips.png"
  },
@@ -1662,11 +1664,12 @@
   "code": "Beat the game, hold I and press Run on the end screen, reset (Select+Run), start a Normal Game",
   "effect": "CONFIGRATION screen after each planet map: stage, scene, bombs, fire, power-ups, lives, sound/music test",
   "versions": [
+   "vc",
    "JP"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "ending code 08:8C85 sets $3FFB; state 1 far-calls 08:8620 which checks it. Verified with $3FFB written, then real soft reset and presses; settings carried into the stage",
+  "note": "ending code 08:8C85 sets $3FFB; state 1 far-calls 08:8620 which checks it. Verified with $3FFB written, then real soft reset and presses; settings carried into the stage JP VC: static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "Hidden screens",
   "img": "config_jp.png"
  },
@@ -1674,22 +1677,24 @@
   "code": "Same as JP (US)",
   "effect": "The sound plays and $3FFB is set, but nothing else: the call to the screen was removed (02:8421)",
   "versions": [
-   "US"
+   "US",
+   "vc"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "A US way in was an open question: there is none on retail hardware. ROM patch file $4432: 00 20 E7 EA 20 86 08 restores the call; verified in Mesen",
+  "note": "A US way in was an open question: there is none on retail hardware. ROM patch file $4432: 00 20 E7 EA 20 86 08 restores the call; verified in Mesen US VC: static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "Hidden screens"
  },
  {
   "code": "Battle Game with Up+I+II+Select+Run held on pad 5 (or the only pad)",
   "effect": "'Tap is not connected' error screen",
   "versions": [
+   "vc",
    "JP"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "07:A707 tests $36 & $1F = $1F; removed in the US. Verified by writing the pad-5 byte at the test",
+  "note": "07:A707 tests $36 & $1F = $1F; removed in the US. Verified by writing the pad-5 byte at the test JP VC: static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "Hidden screens",
   "img": "tap_error_jp.png"
  },
@@ -1710,8 +1715,8 @@
   "effect": "The ending shows CONGRATULATIONS!, CLEAR TIME and CLEAR SCORE before the credits",
   "versions": [
    "US",
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1735,12 +1740,13 @@
   "effect": "Pierce fire: a flame item that no stage list contains; with it, fire goes through soft blocks",
   "versions": [
    "US",
+   "vc",
    "JP",
    "SP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Item $AE (pickup table 03:A89F) sets player bit 6 of $91 (03:AAFA), and fire then no longer stops at the first soft block (02:96D3). Its only source is a hidden spawn (03:AD4F) from the enemy-spawn check 03:B4F2 on 2-3 when $3C5E >= 16. In Mesen (US): warped to 2-3, held 16 enemies, bombed a revealed item: the slot became $AE.",
+  "note": "Item $AE (pickup table 03:A89F) sets player bit 6 of $91 (03:AAFA), and fire then no longer stops at the first soft block (02:96D3). Its only source is a hidden spawn (03:AD4F) from the enemy-spawn check 03:B4F2 on 2-3 when $3C5E >= 16. In Mesen (US): warped to 2-3, held 16 enemies, bombed a revealed item: the slot became $AE. Static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "Secret items",
   "img": "pierce_item_2-3.png"
  },
@@ -1749,8 +1755,8 @@
   "effect": "Pierce fire from the start: bomb fire goes through soft blocks",
   "versions": [
    "US",
-   "JP",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
@@ -1763,11 +1769,12 @@
   "effect": "Stage 1-1's item becomes the pierce-fire item (US, US VC; JP 006E43:AE)",
   "versions": [
    "US",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen pceRaw cheat on the ROM byte of 1-1's item list. In Mesen (US): the item slot was $AE and picking it up set $2091 = $48.",
+  "note": "Mesen pceRaw cheat on the ROM byte of 1-1's item list. In Mesen (US): the item slot was $AE and picking it up set $2091 = $48. JP code 006E43:AE (the same item byte, JP file offset) tested in Mesen: 1-1's item slot $3BEB read $AE (the ROM byte there is $A0, the fire item).",
   "section": "cheat",
   "img": "pierce_item_1-1_cheat.png"
  },
@@ -1776,11 +1783,12 @@
   "effect": "Stage 1-1's item becomes the unused red ribbon (US, US VC)",
   "versions": [
    "US",
-   "vc"
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Item $B7 has a pickup handler (03:AB28, a bonus score) but no stage list or spawn ever uses it, in US, JP or SP. The ROM cheat puts it in 1-1: shown in the stage in Mesen.",
+  "note": "Item $B7 has a pickup handler (03:AB28, a bonus score) but no stage list or spawn ever uses it, in US, JP or SP. The ROM cheat puts it in 1-1: shown in the stage in Mesen. JP code 006E43:B7 tested in Mesen: 1-1's item slot $3BEB read $B7 (the ROM byte there is $A0, the fire item).",
   "section": "unused",
   "img": "ribbon_1-1_cheat.png"
  },
@@ -1789,12 +1797,13 @@
   "effect": "Hidden bonus item: an onigiri, worth 200 points",
   "versions": [
    "US",
+   "vc",
    "JP",
    "SP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Item $B4. The pause task (03:AF4D) counts each pause in $3C54 (03:AF82), cleared at stage start; at 200, 03:AD00 spawns the onigiri on a random floor cell. In Mesen (US 1-1): 200 real Run presses on and off, no RAM written, and the onigiri appeared.",
+  "note": "Item $B4. The pause task (03:AF4D) counts each pause in $3C54 (03:AF82), cleared at stage start; at 200, 03:AD00 spawns the onigiri on a random floor cell. In Mesen (US 1-1): 200 real Run presses on and off, no RAM written, and the onigiri appeared. Static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "Secret items",
   "img": "bonus_onigiri.png"
  },
@@ -1803,12 +1812,13 @@
   "effect": "Hidden bonus item: a chick, worth 2,000 points",
   "versions": [
    "US",
+   "vc",
    "JP",
    "SP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Item $B5. Fire on a revealed item or exit (cell type 6, 02:97D9) calls the usual enemy spawn and then 03:AD17, which spawns the chick at 2:22 ($20B7 = 2, $20B6 = 22). In Mesen (US 1-1): the exit uncovered, the clock set once to 2:30, a bomb whose fire reached the exit at 2:22; the chick appeared beside the exit's extra enemies.",
+  "note": "Item $B5. Fire on a revealed item or exit (cell type 6, 02:97D9) calls the usual enemy spawn and then 03:AD17, which spawns the chick at 2:22 ($20B7 = 2, $20B6 = 22). In Mesen (US 1-1): the exit uncovered, the clock set once to 2:30, a bomb whose fire reached the exit at 2:22; the chick appeared beside the exit's extra enemies. Static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "Secret items",
   "img": "bonus_chick.png"
  },
@@ -1817,12 +1827,13 @@
   "effect": "Hidden bonus item: a tulip, worth 500 points",
   "versions": [
    "US",
+   "vc",
    "JP",
    "SP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Item $B6. 03:AD33 runs when the exit's block breaks (02:9803) and spawns the tulip if no soft blocks are left ($3BE7 = 0) and the stage is not 8, like 1990's item 13. In Mesen (US 1-1): the block count set to 2, then one real bomb broke the last other block and the exit's; the tulip appeared.",
+  "note": "Item $B6. 03:AD33 runs when the exit's block breaks (02:9803) and spawns the tulip if no soft blocks are left ($3BE7 = 0) and the stage is not 8, like 1990's item 13. In Mesen (US 1-1): the block count set to 2, then one real bomb broke the last other block and the exit's; the tulip appeared. Static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "Secret items",
   "img": "bonus_tulip.png"
  },
@@ -1844,11 +1855,13 @@
   "effect": "An unused boss sprite set: robot arm segments, ring joints and hydraulic parts",
   "versions": [
    "US",
-   "JP"
+   "vc",
+   "JP",
+   "SP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The graphics directory (bank $0A, $4000, 122 entries; loader 01:C000) has entries no code, stage list, boss table or screen script names, and no run loads. Entry 35 is packed like the boss sets 25-34 (mode $12) and holds about 63 cells of mechanical art; only 5 of its 186 pieces appear in any used boss set. There is no sprite layout for it, so only the loose cells can be shown. Mesen, US 1-8: the boss loader's first call switched from 25 to 35 and the cells laid out as 32 x 32 sprites with the world 1 boss palette (the palette is borrowed).",
+  "note": "The graphics directory (bank $0A, $4000, 122 entries; loader 01:C000) has entries no code, stage list, boss table or screen script names, and no run loads. Entry 35 is packed like the boss sets 25-34 (mode $12) and holds about 63 cells of mechanical art; only 5 of its 186 pieces appear in any used boss set. There is no sprite layout for it, so only the loose cells can be shown. Mesen, US 1-8: the boss loader's first call switched from 25 to 35 and the cells laid out as 32 x 32 sprites with the world 1 boss palette (the palette is borrowed). Static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical. The Special Version keeps a variant as its entry 34 (bank $24, file $49C33; 27 of 215 tiles differ), also never loaded.",
   "section": "unused",
   "img": "unused_boss_sprites.png"
  },
@@ -1857,11 +1870,13 @@
   "effect": "Four unused small machines: a helmeted figure in a pod, a box with goggles, a dome, a pot-shaped machine",
   "versions": [
    "US",
-   "JP"
+   "vc",
+   "JP",
+   "SP"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Another directory entry nothing names or loads. Its four 32 x 16 objects look like entry 36 (used by one screen script) but share only 2 pieces with it. Mesen, US 1-8: the boss loader's second call switched to 37 and the cells laid out as sprites; three palettes tried, the right one is unknown.",
+  "note": "Another directory entry nothing names or loads. Its four 32 x 16 objects look like entry 36 (used by one screen script) but share only 2 pieces with it. Mesen, US 1-8: the boss loader's second call switched to 37 and the cells laid out as sprites; three palettes tried, the right one is unknown. Static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical. The Special Version has the same data as its entry 36 (directory bank $0A: pointer $5BBD, bank $25 = file $4BBBD), never loaded (static).",
   "section": "unused",
   "img": "unused_machines.png"
  },
@@ -1906,15 +1921,52 @@
   "effect": "A sound effect and a jingle the game never plays",
   "versions": [
    "US",
+   "vc",
    "JP"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Sounds are requested at $F243 / $F25C (JP $F22A / $F243). The 130 requests with the number written in, $07:AD54 (68, 6A) and the scene table at $09:A9FA (56 58 57 59 5A 5B 5C 5D 65) never give 16 or 69. The config screen's SE and MUSIC items play anything: 16 is a short click close to the cursor sound, 69 a jingle of about 2.6 s. Recorded in Mesen.",
+  "note": "Sounds are requested at $F243 / $F25C (JP $F22A / $F243). The 130 requests with the number written in, $07:AD54 (68, 6A) and the scene table at $09:A9FA (56 58 57 59 5A 5B 5C 5D 65) never give 16 or 69. The config screen's SE and MUSIC items play anything: 16 is a short click close to the cursor sound, 69 a jingle of about 2.6 s. Recorded in Mesen. Static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "unused",
   "audio": [
    "pce93/SE_16.mp3",
    "pce93/Music_69.mp3"
   ]
+ },
+ {
+  "code": "SOUND 10, 12, 14, 1C, 1E, 21, 23, 28, 37, 38, 39",
+  "effect": "Five sound effects and six tunes the Special Version never plays",
+  "versions": [
+   "SP"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Every sound goes through $F649 (driver $4006). Its 76 calls with the number written in, the planet music table at 03:B080 (25, 26, 27, 34, 30 only) and 07:A99A (2D, 32) never give these 11; no sound data chains into them and the queueing commands $8E/$8F are never sent. Only the old configuration screen's SOUND test plays them, and that screen needs a patch. Effects: 10 a bright zap, 12 a quiet thump, 14 a falling tone, 1C a warbling tone, 1E a steady tone that never stops on its own. Music: 21, 28, 37 and 38 full tunes (clips are their first 15 s), 23 and 39 short jingles. The sound data is the same as Bomberman '90's. Recorded in BizHawk.",
+  "section": "unused",
+  "audio": [
+   "pce93/sp/SE_10.mp3",
+   "pce93/sp/SE_12.mp3",
+   "pce93/sp/SE_14.mp3",
+   "pce93/sp/SE_1C.mp3",
+   "pce93/sp/SE_1E.mp3",
+   "pce93/sp/Music_21.mp3",
+   "pce93/sp/Music_23.mp3",
+   "pce93/sp/Music_28.mp3",
+   "pce93/sp/Music_37.mp3",
+   "pce93/sp/Music_38.mp3",
+   "pce93/sp/Music_39.mp3"
+  ]
+ },
+ {
+  "code": "The US HuCard on a Japanese PC Engine",
+  "effect": "A blank grey screen: the US game locks itself out of a PC Engine, like the 1990 US card",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "region",
+  "note": "00:E006 LDA $1000 / AND #$40 / BEQ $E019 (the console's region bit); on a PC Engine it maps bank $90 into $4000 (TAM #$04) and jumps there, so the CPU loops at $4000/$416E and the screen stays grey; Run does nothing. The Japanese and Special Version cards have no such check. Mesen, console type PC Engine.",
+  "img": "region_lockout_us.png"
  }
 ]

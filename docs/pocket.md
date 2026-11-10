@@ -9,10 +9,13 @@ Marks: ★ **New** (in neither), **Known**.
 | Dump | Header title | MD5 |
 |---|---|---|
 | Pocket Bomberman (USA, Europe) (SGB Enhanced) (GB Compatible) | `POKEBOM USA` | `2f6b6379f8c7ce5d66a198162f345eaa` |
+| Pocket Bomberman (Japan) (SGB Enhanced) | `POKEBOM` | `50971f6cbb3e4395cb66213d7f096b46` |
+| Pocket Bomberman (Europe) (SGB Enhanced) | `POKEBOM` | `3050cdf055b1d036f85c9c629b03fbf2` |
 
 1 MB MBC5 (cartridge type `$19`, no cartridge RAM), CGB flag `$80` (Game Boy Color features, runs on any Game Boy),
-SGB flag `$03`, new licensee `01` (Nintendo published it outside Japan). Only this revision is covered; the Japanese
-original and the first European cart (both monochrome only) are not in `roms/`.
+SGB flag `$03`, new licensee `01` (Nintendo published it outside Japan). The Japanese original (1997) and the first European cart (both monochrome only, 512 KB) are covered in
+[Japan and the first European cart](#japan-and-the-first-european-cart); addresses elsewhere on this page are the
+US/Europe revision's.
 
 ## RAM that matters
 
@@ -174,7 +177,6 @@ check, `$02:4DC3`).
 
 ### Button codes
 
-- **Soft reset** (★ New): A + B + Select + Start held (`$00:032A`) goes back to the boot state. Checked in Mesen.
 - The stage-intro bomb code above (Known). The pad scan finds nothing else.
 
 ## Hidden-content sweep
@@ -234,6 +236,71 @@ DMG capture.
 - ★ Of the 212 effect calls (all with the number written in), none asks for effect 0F (`$12:48DC`, noise), a 0.55 s
   whoosh rising in pitch. It's the one unrequested effect not shared with Hudson's other Game Boy games.
 
+## Japan and the first European cart
+
+| | Japan | First Europe | USA / Europe (above) |
+|---|---|---|---|
+| Header | `POKEBOM`, type `$FF` (HuC-1), 512 KB, 32 KB battery RAM, licensee `18` (Hudson) | `POKEBOM`, type `$01` (MBC1), 512 KB, no RAM, licensee `01` | `POKEBOM USA`, type `$19` (MBC5), 1 MB, CGB flag `$80` |
+| Text | Japanese | English | English |
+| Mode menu | ノーマルゲーム / ジャンプゲーム / **GB KISS** | Normal Game / Jump Game | Normal Game / Jump Game |
+| Title | no ™, © 1997 HUDSON SOFT, LICENSED BY NINTENDO | ™, © 1998 HUDSON SOFT, LICENSED TO NINTENDO | ™ |
+
+The two monochrome carts share most banks (15 of 32 identical; banks 9, 13-18, 20-22, 24, 26 and 27 also sit in
+the US ROM unchanged). Banks 0-3 hold the same code shifted (the Japanese bank 0 has the GB KISS kernel in it), and
+banks `$1C-$1F` are where they part: the Japanese cart's GB KISS files and shell, zeros in the European one.
+
+**Passwords: the same 32.** The check is the US routine moved (`$01:53D1` / `$01:535B`, table `$01:5416` /
+`$01:53A0`, effects `$01:549A` / `$01:5424`, world/area `$01:54F9` / `$01:5483`; Japan / first Europe). RAM moved: the
+digits `$C1C2-$C1C5`, reject flag `$C1BB`, world/area `$C1DA`/`$C1DB`, lives `$C1EF`, the debug flags `$C2BD`/`$C2BE`;
+the table index and power-up block are `$C2FB` / `$C2F3-$C2F7` in Japan and `$C34B` / `$C343-$C347` in Europe.
+Checked in Mesen (DMG model, one run per cart): all 32 table codes and two wrong ones typed with the pad, as
+`password.mjs` predicts, and all 10,000 codes through the game's own check (as `fuzz.lua`, addresses moved):
+**32 accepted, 0 mismatches** on each cart. The unused debug decoder is there too (`$01:5539` / `$01:54C3`), uncalled.
+The stage-intro bomb code is the same (sequence `$02:491C` / `$02:492C`, the same counts): on Ocean 3 it armed 40.
+
+**Cheats**: the US RAM codes miss (lives and the debug flags moved; 0101CCC2 and 0103F1C1 did nothing, 3 deaths and a
+game over), so these carts have their own: GameShark `0101BDC2` invincible, `0103EFC1` infinite lives, `0101BEC2` the
+Start clock stop, with Game Genie forms (see the code list). The US clock code `380-CCB-4CA` hits the same address and
+works. The debug menu Game Genie code is `0F8-0EB-E62` (Japan) / `0F7-DAB-E62` (first Europe), the numbered test menu
+as on the US cart.
+
+![Japanese title](img/pocket/title_jp.png) ![First European title](img/pocket/title_eu1.png)
+
+Logo: `docs/img/logos/pocket_jp.png` (Japan, no ™; DMG greys). The first European cart's logo is the US one.
+
+### GB KISS (Japan only, ★ New)
+
+The Japanese cart is Hudson's HuC-1 with an infrared LED and receiver, and the only Bomberman cart with GB KISS, the
+infrared file exchange of Hudson's 1997-98 Game Boy games. Off a Super Game Boy the mode menu has a third line, GB
+KISS: the menu routine (`$01:4FCB`) gives the cursor three places when `$C1A2` = 0 and two when it is 1, and `$C1A2` is
+set at boot when a Super Game Boy answers the multiplayer request (`$00:3641`). The European cart keeps the menu label
+only among its unused debug strings (`$0B:64E3`: MODE SELECT, 1 NORMAL, 2 JUMP, 3 GB KISS, beside the US one at
+`$0B:650E`).
+
+- **The kernel** sits in bank 0: `RST $08` with a function number after it is a system call (table `$00:01E0`); bank
+  `$1E` has the infrared driver (LED on with `$0E` to `$0000-$1FFF` at `$1E:6A8B`, then bit 0 of `$A000`: send a byte
+  `$1E:68FC`, receive `$1E:693C`, both timing pulses in software) and bank `$1F` the menu.
+- **The menu** (GB KISS メニュー, とうろくファイル 2こ: two files registered) shows the files in a 3-wide grid beside
+  the commands 実行 run, 情報 info, 整理 sort, 送信 send, 受信 receive and 削除 delete. A on a file shows what the
+  current command does, a second A does it; Start on the grid waits for a file from another Game Boy; B leaves to the
+  title. A fresh cart registers two files in its battery RAM: KISS MAIL (No. 1) and KISS-MON2 (No. 2). KISS-MON2 is
+  the one file in bank `$1D`'s directory (`$1D:4001`; 7,096 bytes by its header), copied to RAM bank 3 (`$A000`)
+  and run from there.
+- **KISS MONSTER2** (A, A on No. 2): name a monster on a kana keyboard, share points between ATTACK / DEFENSE /
+  SPEED / LUCK / HP (こうげき, ぼうぎょ, すばやさ, うんのよさ) until none are left, then the battle screen: name,
+  level, wins / losses / draws (かち, まけ, ひきわけ) and "face the Game Boys toward each other; when one of you
+  presses B the battle starts". Leaving it shows the monster's card (A continue, B quit, SELECT edit, START trade
+  monsters, モンスターこうかん); the trade and the picture editor (MONSTER EDIT) weren't opened. **KISS MAIL** (A, A on No. 1) is a mail editor: a title and a
+  page of kana text, to send to another GB KISS cart.
+- **With no partner** (Mesen runs one Game Boy and its receiver never sees light): every transfer, Start in the
+  menu and the monster battle alike, turns the LED on and polls the receiver in a loop (`$1E:69A3-$69A8`, about
+  110,000 reads of `$A000` a second) under 通信準備中です (getting ready, B cancels); B gives 通信トラブル!
+  (communication trouble, try again). Two linked instances or a scripted partner on the receiver bit weren't tried.
+
+![Mode menu, GB KISS logo, the menu, waiting for a partner, the error](img/pocket/gbkiss_jp.png)
+
+![KISS MONSTER2: run, name, points, battle screen, the card; KISS MAIL](img/pocket/kiss_monster2_jp.png)
+
 ## Title
 
 ![Title](img/pocket/title.png)
@@ -246,4 +313,5 @@ Logo: `docs/img/logos/pocket.png` (`tools/pocket/logo.py`, Game Boy Color colour
 - The boss rush wasn't played past the first boss.
 - The flower was spawned but not collected, so its effect (maximum bombs and fire, the primer) is GameFAQs', not
   checked.
-- The Japanese original and the first European cart are not covered.
+- GB KISS with a partner (a second Japanese cart or another GB KISS game) wasn't emulated: Mesen runs one Game Boy and
+  its HuC-1 infrared receiver never sees light.

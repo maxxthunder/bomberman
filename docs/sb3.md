@@ -311,8 +311,7 @@ nothing tells which palette belongs to an asset, so unused ones could not be tol
 - **Pad 2**: the input code reads all five pads alike (`$C0:F3F3`, `$C0:0094`); nothing reads pad 2 alone.
 - **★ New: an unreferenced soft reset.** `$C0:013A` is `LDA $4E / CMP #$33 / BNE / JML $80F000`: with
   **Select+Start+L+R** held on pad 1 it jumps to the reset routine. Nothing calls it in EU, JP or the beta (no
-  JSR/JSL/JML to it anywhere). Two PAR ROM codes hook it into the per-frame pad routine (see Cheat codes).
-  ![Unpatched after the combo, patched before, patched after](img/sb3/soft_reset.png)
+  JSR/JSL/JML to it anywhere).
 
 ## Hidden-content sweep (round 3)
 
@@ -330,6 +329,17 @@ this bug. The merged log (26 runs: rounds 1-2, Mesen's own `.cdl`, a 2-player ra
 
 ### Dead code
 
+- ★ **New (coverage round): an unused object shift.** `$11F5`/`$11F6` are only ever cleared (`$C0:2726`); if set,
+  `$C0:2736` subtracts them every frame from the position of every object of type `$11` or higher (the same helper
+  as Super Bomberman 5's `$1CBD`). Forced on the title in Mesen, the characters and PUSH START BUTTON slide off the
+  screen while the backgrounds stay put: a camera-follow leftover.
+- ★ **New (coverage round): two tilemap draw modes nothing selects.** Mode 1 (`$0DB8` = 1, set only by the uncalled
+  entry `$C0:1D00`) draws a block 32 tiles lower and queues an NMI VRAM-to-VRAM copy back up (`$C0:1E05`,
+  `$C0:054B`, `$C0:019C`); mode 4 (`$C0:1D70`, script op `$C1:1BD1`, used by no script) skips the frame. Forced in
+  Mesen by patching `$C0:1CFA`: mode 1 draws the battle bar twice, mode 4 leaves out the title logo and the bar's frame.
+- Coverage of the reachable code, after a round of play runs (stages, battle, Tag Match, menus): 90.2%. The rest is
+  enemy states, boss-kill extras and script ops no script uses (`$C1:6FC9`, `$C1:2E59`, `$C1:1A31`-`$C1:200D`).
+
 `sweep.py dead` takes every JSR/JSL target and every block after an unconditional jump that no branch reaches,
 decodes executed code straight from the log (exact widths), and drops blocks that read as data, use BRK/COP/WDM/STP
 or call into nowhere. **755 entry points never ran**:
@@ -345,7 +355,7 @@ Most are reachable but not covered: the bot never beats a boss or clears an area
 naming:
 
 - `$C2:6AD5`, the cut password handler (`$2900`=1). Known from round 1.
-- `$C0:013A`, the soft-reset check from round 1. It now also works as PAR codes (below).
+- `$C0:013A`, the soft-reset check from round 1.
 - **★ New: an unused raster effect.** `$C1:63B9` sets the V-IRQ timer (`$4209`), points the IRQ vector at `$38`
   to `$F758` and enables IRQs. `$C0:F758` waits a few lines and writes the complements of `$031D`/`$031E` to BG3's
   horizontal scroll (`$2111`). Nothing calls `$C1:63B9` and nothing else installs `$F758`, so this is a dropped
@@ -423,12 +433,7 @@ Each code was checked in Mesen's cheat engine (`emu.addCheat`, `tools/sb3/par.lu
 | `7E542D:0C` | battle stages 11 and 12 on the stage select | EU: Left from stage 1 goes to 12 | `DAFE-84A7` `DA16-8DDC` (JP `DAFF-EDD7` `DA16-8DDC`, beta `DAFF-EDD7` `DA15-84DC`): both `LDA #$0A` before `STA $7E542D` load 12; `$542D`=12 in all three, EU Left 1 -> 12 |
 | `7E2901:01` | full equipment at every stage start | EU: bombs 8, fire 8, speed 2, `$48D1`=7 at 1-1 | `DDDC-E7FD`: `$C4:03AB` `BEQ` -> branch of 0; 8/8/2/7 at 1-1 in EU, JP, beta |
 | `7E2902:01` | hard mode (enemies take one more hit) | EU: the flag holds. The effect itself was checked with 6514 in round 1 | `DDD8-7FAA`: `$C3:00B6` `BEQ` -> branch of 0; JP and beta enemies start with 2 HP instead of 1 (as with the PAR code) |
-| `C00139:EA` + `C00144:6B` | soft reset with Select+Start+L+R (same hook as the IPS) | EU, JP, beta: the reset routine at `$80:F000` runs | `3CD7-540D` `18D0-5FDD` (the same bytes): the reset runs on EU, JP, beta |
 | `7E6C6E:0B` / `0C` | pick stage 11 / 12 | Known, not re-run | none (no ROM form built) |
-
-**Fixed:** round 1 said the soft reset needs an IPS because a PAR code "patches RAM". PAR (and Mesen) can patch
-ROM reads too. The first code turns the `RTL` at `$C0:0139` into a `NOP`, so the pad routine falls into the check
-at `$C0:013A`. The second turns that check's `RTS` into an `RTL`.
 
 No invincibility code: no tested-but-unset flag guards the death path, so there is nothing to point one at.
 
@@ -438,6 +443,13 @@ No invincibility code: no tested-but-unset flag guards the death path, so there 
   `$2C84`), a 2-channel rising sweep of about 0.76 s. 25 (command `$2C`) is a placeholder that sets an instrument and
   volume and plays no notes; 2B (command `$66`) replays the voice clip last uploaded, like the voice commands
   `$67-$7B`, so it has no sound of its own. Music: every track 01-23 is requested.
+- ★ The effect table maps 62-6B onto commands 32-3B again, so 68 and 6A share commands 38 and 3A with 5C and 5E. Those
+  are sent only by the final boss's actors (types `$4D`/`$4E`, spawned only in stage `$46`) while that stage's sound
+  set 37 is loaded. Nothing asks for 68 or 6A, so the title set 38's own commands 38 (a 1.1 s tone with a sharp
+  attack) and 3A (a 1.2 s quiet rising tone) never play.
+- ★ Voices 0B-13 come only from the battle results request at `$C6:0F7F`: `$0B` + the player's character (`$1347`,
+  set at `$C4:04BE` from the 8-character select screen), so 0B-12; the results screen sent 0B, 0D and 11 for
+  characters 1, 3 and 7. Voice 13 (sample set 2F, `$D5:E5E9`, command 79) is never sent, a spoken clip of about 1.2 s.
 
 ## Tools
 

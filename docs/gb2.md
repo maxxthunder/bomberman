@@ -13,6 +13,7 @@ this game: the article gives "also known as Bomberman GB 2 (JP)", GameFAQs the 1
 |---|---|---|---|
 | Bomberman GB (USA, Europe) (SGB Enhanced) | `BOMBER MAN GB` | `7e4c9c3620bea7b633394beb67e9680b` | |
 | Bomberman GB 2 (Japan) (SGB Enhanced) | `BOMBER MAN GB 2` | `4ab78239e79ba059d0d7aa7a629a9474` | 28,666 bytes differ. Banks 8, 10, 11 are identical; bank 0 code is the same with shifts (the password check is `$00:35F9` in JP, `$00:35CC` in US); banks 5 and 15 hold the text and the table |
+| Bomberman Collection (Japan) (SGB Enhanced) | `BOMCOL` | `9fb9c42cf52dcfdcfbad5e61ae1b5777` | the Japanese cart, byte-identical, in banks 48-63 of a 1 MB multicart with a 1996 menu (not run there) |
 
 Both are 256 KB MBC1, SGB flag `$03`, licensee `18`.
 
@@ -94,7 +95,8 @@ MODE-B through the ending with the cheats, a game over. Executed: **28,498 bytes
 - **Unset flags**: none (direct-address scan; the game's objects are written through HL).
 - **Input codes** (`disasm/gb2/pad_<ver>.txt`, 43 / 21 hits): the joypad reader itself (`$00:081E`-`$00:0B11`,
   `$FF00`), menu and password cursors (`$00:0309`, `$00:0339`), world-map scrolling (`$00:17E0`), A/Start
-  confirmations. No hidden pad code; no soft-reset combination was found either.
+  confirmations. No hidden pad code; no soft-reset combination was found either. Select in a stage gives it up
+  (`$00:2619`, `$01:4966`: player state 7, a life lost, the area restarts); seen in Mesen.
 - **Text** (`tools/gb2/textdump.py`, `disasm/gb2/text_us.tsv`, `text_jp.tsv`): `$00` space, `$01-$0A` digits, `$0B-$24`
   A-Z; JP `$30-$5D` katakana, `$60-$8D` hiragana, `$9x` small kana, stored as (mark, character) pairs with `$25` ゛,
   `$26` ゜. Story, rules, item help and the staff roll (`$06:7AF9` US) are all read in the runs. Unread: the JP mode
@@ -110,7 +112,8 @@ MODE-B through the ending with the cheats, a game over. Executed: **28,498 bytes
   some boss second layouts).
 - **Graphics** (CDL incl. the SGB and multitap runs): graphics are raw blocks (2-byte length + tiles, `$00:02DB`)
   listed in 32 sets (`$00:3F7E`, loader `$00:3EDD`). Every unread block belongs to a set the code loads: sets 20-21
-  (battle stages 3-4, `$12` + `$C1A8` at `$00:2BEE`; the battle runs played stages 1-2) and sets 3 and 10 (loaded by
+  (the 3P WIN and 4P WIN pictures, Black Bomberman and a girl bomber: `$12` + the match winner `$C1A8` at
+  `$00:2BEE`; the coverage matches were won by 1P and 2P) and sets 3 and 10 (loaded by
   `$00:2AD4` and `$00:1F1A`, screens the runs didn't reach). Sets 12 and 13 repeat set 5. A tile log over the runs
   (every VRAM tile against the BG, window and sprites) finds one leftover: the US staff roll loads the Japanese
   version's whole kana font with the English letters, and no US screen uses it (seen by pointing the BG map at it
@@ -118,6 +121,9 @@ MODE-B through the ending with the cheats, a game over. Executed: **28,498 bytes
 - **Debug features**: none found.
 
 ### Super Game Boy
+
+The border and title images here are real Super Game Boy output: BizHawk 2.11.1, BSNESv115+ core in SGB mode, with the
+SGB1 BIOS. On the SNES the Game Boy screen sits at x 48-207, y 39-182.
 
 Packets (`tools/emu/sgb.lua`): MLT_REQ 2 then 4 players, DATA_SND x8, ATTR_TRN, PAL_TRN, PAL_SET, CHR_TRN (both
 halves), PCT_TRN, then PAL_SET fades. The border is the "BOMBER THEATER" stage in both versions.
@@ -128,6 +134,14 @@ each frame (`$FFA0/$FFA2/$FFA4/$FFA6` held, +1 new). PLAYER page: each player jo
 `$C1AA-$C1AD`); with all four in, Start goes to MODE (TIME / BATTLE count), STAGE, and a 4-player match; WINNER
 counts the trophies. Played with random input on all four pads (`tools/gb2/multitap.lua`, run with
 `tools/emu/sgb_dump.py`); players 2 and 4 won rounds, so the extra pads really steer their bombers.
+
+Battle setup (Mesen, US, every page played): on the plain Game Boy, Start on the COMPUTER page buzzes until 2+
+players are in (`$00:3196`); Up marks a player as COM. MODE: TIME 1-4 clocks = 2:00, 3:00, 5:00 and no limit (an
+infinity sign, the clock never runs, no hurry-up: `$00:2CCA`, `$00:2DE0`); BATTLE 1-5 trophies = the wins a match
+needs (`$00:2B82`). STAGE: six arenas (`$C1B1`, `$00:3293`); on the sixth everyone starts with 4 bombs and 4 fire
+(`$00:2D42`, from the code). HURRY UP scrolls by at 0:09 (`$00:2DFE`); time up is a DRAW and the round is replayed.
+A third MODE value `$C1B0` (set to 1 at `$00:2F3E`, limit 3 in `$00:3290`) has no line on the page and nothing
+reads it.
 
 ![Title with BATTLE, all four joined, MODE, a 4-player match, WINNER](img/gb2/multitap_battle.png)
 
@@ -146,6 +160,7 @@ counts the trophies. Played with random input on all four pads (`tools/gb2/multi
 | Title | BOMBERMAN GB 2 | BOMBERMAN GB, ™ (Known) |
 | Text | kana | English |
 | Passwords | 11 | the same 11; plus the unused 12-record copy with 7824 |
+| Story text | one kana (mark row + character row) every 10 frames | ★ one letter every 5 frames, one row: twice as fast (`00:23C8` `CP $04`, JP `00:23E9` `CP $08`; Mesen, text pointer `$C1CF`) |
 
 ![](img/gb2/title_jp.png) ![](img/gb2/title_us.png)
 
@@ -156,4 +171,6 @@ Item icons: the password stores no items (a table index; the power-ups come from
 
 ## Open
 
-- Battle stages 3-4 and the MODE options weren't played; the screens behind graphics sets 3 and 10 weren't identified.
+- Graphics set 3 is the pause screen (Bomberman asleep,
+  dreaming, with PAUSE; `$00:2A85`) and set 10 the TIME UP screen when the clock reaches 0:00 (`$00:28F8`), both
+  seen in Mesen.

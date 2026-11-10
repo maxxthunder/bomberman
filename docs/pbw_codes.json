@@ -564,5 +564,17 @@
   "note": "Tilemaps load through $00:AAC1 from the table at $C2:0000; entry $84 points to $C2:88A7 (file $288A7). None of the 98 load sites, by immediate or through the id tables at $80:E1CF, $81:CEDC, $81:E596 and $82:D52E-$82:D76B, gives $84, and 18 coverage runs never read its entry. It shares 157 of its 171 tiles with the used sky (tilemap $83). The map asks for palette group 2, which on this screen holds another graphic's colours; the image uses group 7, the used sky's cloud colours, which is a guess.",
   "section": "unused",
   "img": "unused_ending_sky.png"
+ },
+ {
+  "code": "Very long chains",
+  "effect": "Four more full-board effects on the chaining player's board: a purple swirl, a storm cloud, an ocean wave with a creature, and yellow Bombermen; normal play almost never gets past the first",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "hidden",
+  "note": "The chain check ($81:C612 -> $81:C65D -> $81:EA48) picks an entry of table $81:EAA9 from the player's chain value $64,X minus $37F8 (normally 6). Only entry 0 ($81:EECE) ran in the coverage play; entries 1-4 ($81:ECFC, $81:EF21, $81:EBB3, $81:EC49) take a much longer chain. Mesen, Story match, the chain value raised by k at $81:C612: each handler ran and drew its effect. Image: effects 1-4.",
+  "img": "chain_effects.png"
  }
 ]

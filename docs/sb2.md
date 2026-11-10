@@ -169,8 +169,6 @@ stage-select one in bank `$CC`.
 | `$C1:00BD` | `C100BF01` | CPU meter: force-blanks for a moment when the frame's work is done, a black line on screen | Known | Mesen: the line shows |
 | `$C1:3D26` | `C13D2801` | Y jumps in Normal Game | Known | Mesen: off the ground with a shadow |
 | `$C0:22F1` | `C022F301` | R in Normal Game gives everything (`$C0:22A0`) | Known | Mesen: speed 3, 9 bombs, fire 9, remote, kick, glove, both pass items, 144 hearts |
-| `$C0:FCAD` | `C0FCAF01` | Normal Game soft reset: pause, hold SELECT, press START (`$C3` = `$3000` exactly) → `$C0:FA48` | Known | Mesen: back to the intro |
-| `$C0:FB29` | `C0FB2B01` | the same soft reset in the **Battle Mode** loop `$C0:FB11` | ★ New | Mesen: back to the intro; unpatched, the round goes on |
 | `$C1:5B3E` | `C15B4001` | **debug menu** on SELECT in Normal Game (below) | ★ New (only its text was known) | Mesen, all five ROMs |
 | `$CC:239F` | `CC23A101` (EU `CC23FC01`, JP `CC239001`) | stage select always offers 12 stages, no `$1CB5` needed | ★ New | Mesen: Left from 1 → 12 ([img](img/sb2/stage_switch_12.png)) |
 
@@ -246,6 +244,12 @@ clock (row 2, 8th) and question mark (row 2, 7th) (**Known**). The early icon se
 glove, ice cream, spike bomb) and the filler icons were not located. Palettes were not swept.
 
 ## Dead code
+
+- ★ **New: a cut floor-pit gimmick.** `$C0:3FAD` has no reference of any kind. On a timer (`$7E:5CCC`, flag `$7E:5CCE`)
+  it picks one of 8 position sets from `$C5:E714` and starts tile animations (`$C5:E7D3`, tiles `$18C0-$18C6`, ending
+  as cell type `$D6`; `$C5:E7F5` closes them) run by `$C0:DA53`, which nothing else feeds. Pointing a battle stage's
+  handler (`$C0:3707` + 4 × `$1A`) at it in Mesen makes black pits open and close in the arena.
+  ![Normal, then 60 and 900 frames in](img/sb2/unused_floor_pits.png)
 
 Method (`tools/sb2/coverage2.lua`, `tools/sb1/sweep.py dead2`, listing `disasm/sb2/dead_usa.txt`): code/data logs of
 the USA ROM from portable Mesen copies that never had a ROM-code cheat loaded except the debug-menu switch, merged:
@@ -338,7 +342,7 @@ Checked with Mesen's cheat engine (`emu.addCheat`) on the unpatched USA ROM, rea
 | `7E1C6EFF` `7E1C6FFF` | jump in battle (the pad-5 flag) | flag held; jump shown earlier with the same flag | ★ New | `DD1E-5F6F` (the `$1C6E` test `BEQ +0`): the jump handler runs in stage 1, all five |
 | `7E1C68FF` `7E1C69FF` | sudden death (the `5656` flag) | flag held; effect shown earlier | ★ New | `DD2F-8F6F` (Caravan `DD24-8F0F`; the `$1C68` test `BEQ +0`): hurry-up blocks keep coming past 81 (`sudden_death.lua`, flag cleared), USA, Europe, Japan, beta |
 
-The ROM switch codes (debug menu `C15B4001`, soft resets, CPU meter, R power-ups, Normal Game jump, 12 stages) are
+The ROM switch codes (debug menu `C15B4001`, CPU meter, R power-ups, Normal Game jump, 12 stages) are
 listed under Disabled debug switches.
 
 ## Input codes
@@ -353,7 +357,7 @@ Europe, Japan, beta and Caravan (each disassembly grown from that version's code
 | `$CC:14E6` (EU `$CC:1541`, JP `$CC:14D5`, Caravan `$CC:167E`) | the turbo-X rhythm (gap 7-9 frames, counter `$1CD1`): stages 11/12 | Known |
 | `$CC:13A4` | pad 5 A/START on the title menu: battle jump | Known |
 | `$CC:2154`-`$CC:21B4` | SELECT on pads 1-4 at the player screen: colours | Known |
-| `$C0:FB30`, `$C0:FCB4` | `$C3` = SELECT+START exactly: the two disabled soft resets | Known / ★ New (above) |
+| `$C0:FB30`, `$C0:FCB4` | `$C3` = SELECT+START exactly: the two disabled soft resets | Known / ★ New |
 | `$C0:0E9B` | pad 1 R / L shift the HDMA scroll tables `$7E:393C` / `$7E:3730` (+`$0400` / −`$0200` per frame); never called (see Dead code) | ★ New |
 | `$C1:0A12`-`$C1:0B51` | each pad's START pauses Battle Mode; `$FFFF` (no pad) skipped | ordinary |
 | `$C1:13F2` ... (`#$2800`), `$C0:DF72`, `$C1:1FF9`, `$C1:C069` | player-struct flags and map counters, not pads | false hits |
@@ -365,8 +369,9 @@ password table.
 
 - ★ Effects are queued through `$C3:A4B5` (immediates before each call, the wrapper `$CC:815D` with A + `$40`, the
   table `$C5:D54E`), which asks for 41-45, 47-5F, 61, 64, 66, 68-6A, 6D and 6F-72. 46, 60, 62, 63, 65, 6B, 6C and 6E
-  are never requested and each plays (46 two short notes, 60 and 62 two-voice hits, 63 a fast rattle, 65 like 64 at
-  another pitch, 6B a half-second effect, 6C repeated pulses, 6E the first note of 68). 67 and 73-75 were silent,
+  are never requested and each plays (46 two short high notes, 60 and 62 two-voice hits, 63 a 1 s rattle, 65 a 1.6 s
+  rising sweep shaped like 64 but higher, 6B a figure repeated for about 6 s, 6C 7 s of pulses, 6E a 3.9 s held
+  tone). 67 and 73-75 were silent,
   as were some used ones, so they're undecided; 76 and up hang the driver.
 - Music: all 14 song sets are loaded (world `$C5:D580`, battle `$C5:D560`, boss `$C1:0319`, set 7 at `$CC:0401`)
   and every song in them is requested. Nothing unused.
@@ -442,6 +447,15 @@ Which of `$FA`/`$FB` is bomb pass and which wall pass wasn't checked.
   in the Caravan, but internal stages 1 and 8 (retail 2, the ice arena, and 7, the warp hedges) load and play when its
   first entry points at them (`CC03E401`, `CC03E408`). Internal 2-7 load with junk tiles: their data is gone.
   ![The ice and warp-hedge arenas in the Caravan](img/sb2/caravan_leftover_stages.png)
+  ★ **New: the Caravan's hurry-up comes in two waves.** HURRY UP shows at 0:58 and blocks fall from 0:53 (retail
+  0:38 / 0:33, `$C0:D887-D8E9`, `$C0:D600-D60E`, `$C1:0B89` `CMP #3` → `#5`). The first wave stops at the `$FE`
+  marker after the outer rings (cell 81, `$5D0E` bit `$80`); at 0:14 the counter `$5D12` is reset to `$51` and a
+  second wave fills the middle. `$1C68` is cleared every battle frame, so the 5656 sudden death does nothing here.
+  Mesen: wave 1 from 0:53, held at 81 until 0:14, 81 → 112 by 0:07.
+  ![0:53, 0:15 and 0:07 in the Caravan](img/sb2/caravan_hurry_waves.png)
+- Europe also clears the menu fade-busy flags (`LDA #0 / STA $7F:4004`, set by `$CC:724F`/`$CC:7290`) at both
+  entries from the game back into the menus (`$CC:015B`, `$CC:279B`), so a fade left running can't freeze a menu;
+  bank `$C8`'s graphics are reordered with no new data.
 
 ### Region comparison, screen by screen
 

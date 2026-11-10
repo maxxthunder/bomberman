@@ -1,7 +1,7 @@
 -- Atomic Punk / Bomber Boy helpers (tools/emu/run.sh bb script.lua us|jp): menu paths, password entry and RAM reads.
 -- Game A's grid and Game B's letters differ by cart (VER).
-SYM = VER=="us" and "12345678BCDFGHJKLMNPQRSTVWXZ?!.=" or "12345678ABCDEFGHJKLMNOPQRSTUWXYZ"
-LET = VER=="us" and "0BCD1FGH2JKLMN3P" or "ABCDEFGHIJKLMNOP"
+SYM = VER~="jp" and "12345678BCDFGHJKLMNPQRSTVWXZ?!.=" or "12345678ABCDEFGHJKLMNOPQRSTUWXYZ"
+LET = VER~="jp" and "0BCD1FGH2JKLMN3P" or "ABCDEFGHIJKLMNOP"
 -- title -> Game A (BOMBER BOY) -> CONTINUE -> INPUT PASSWORD
 function pwscreen() wait(300) press({start=true}) wait(150) press({start=true}) wait(150) press({down=true}) wait(20) press({start=true}) wait(120) end
 -- fill the entry buffer $C480-$C487 (grid places 0-31) and put the cursor on END

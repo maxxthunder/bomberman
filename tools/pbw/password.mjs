@@ -19,4 +19,3 @@ export function decode(code) {
   if (CHEATS[code]) return { kind: 'cheat', name: CHEATS[code] };
   return null;
 }
-export function encode(level, round) { return ROWS[level][round - 1]; }

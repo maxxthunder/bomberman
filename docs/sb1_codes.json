@@ -3251,12 +3251,13 @@
   "versions": [
    "US",
    "EU",
+   "JP",
    "beta"
   ],
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built). Game Genie: the same two ROM bytes; Mesen, US, EU and beta: 1-1 loads with that layout and plays."
+  "note": "ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built). Game Genie: the same two ROM bytes; Mesen, US, EU and beta: 1-1 loads with that layout and plays. Japan: stage 1-1's header is at $C3:0CF2 (the same map $C1:AEA2), so the codes are C30D03A2 C30D04AE; entered in Mesen's cheat engine, 1-1 loads with the same open layout."
  },
  {
   "code": "$C1:A1DA, $C1:AEA2",
@@ -3317,11 +3318,14 @@
   "code": "C32226DA C32227A1, then 7E00A43F at power-on",
   "effect": "The unused ring map $C1:A1DA as battle stage 3",
   "versions": [
-   "US"
+   "US",
+   "EU",
+   "JP",
+   "beta"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The ROM codes point battle 3's map ($C3:2215, pointer at +$11) at the ring map, and $7E:00A4 = $3F held for the first frames starts battle 3. It loads and plays: a ring of floor around a block of walls. The floor comes out in the wrong tiles with this and battle 7's tile set (C32478DA C32479A1, scene $43), so its own tile set is gone. In Normal Game it hangs because the soft-block placer ($C6:1DC7) needs 112 free cells reachable from the start (flood fill $C6:1E93) and the ring has 90; battle mode skips that check ($C6:1DC9).",
+  "note": "The ROM codes point battle 3's map ($C3:2215, pointer at +$11) at the ring map, and $7E:00A4 = $3F held for the first frames starts battle 3. It loads and plays: a ring of floor around a block of walls. The floor comes out in the wrong tiles with this and battle 7's tile set (C32478DA C32479A1, scene $43), so its own tile set is gone. In Normal Game it hangs because the soft-block placer ($C6:1DC7) needs 112 free cells reachable from the start (flood fill $C6:1E93) and the ring has 90; battle mode skips that check ($C6:1DC9). Beta: same codes; Japan: battle 3's header is at $C3:21B5, so C321C6DA C321C7A1; both entered in Mesen's cheat engine with 7E00A43F at power-on and battle 3 loads on the ring map with the same wrong floor tiles; Europe is static (its ROM differs from US only in the header and the battle-timer constant).",
   "section": "unused",
   "img": "maps/ring_C1A1DA_battle3.png"
  },
@@ -3359,12 +3363,72 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Effects go through $C3:0042 (Y = effect). All 74 calls have the number written in, except the debug menu's SE NO. line (table $C6:096A), and they ask for 00-0C, 0E, 0F, 11-13 and 15-1F. An effect only sounds with the instruments of the loaded song set: 0D (about 2.9 s, a noisy sweep that fades slowly) plays in sets 5 and 12, 10 (about 0.85 s, a loud low tone) in the battle sets 7, 9, 10 and 11, 14 (a 0.18 s rising blip) in set 9. 20-28 stayed silent in every set. Recorded in BizHawk with the music stopped.",
+  "note": "Effects go through $C3:0042 (Y = effect). All 74 calls have the number written in, except the debug menu's SE NO. line (table $C6:096A), and they ask for 00-0C, 0E, 0F, 11-13 and 15-1F. An effect only sounds with the instruments of the loaded song set: 0D (about 2.9 s, a noisy sweep that fades slowly) plays in sets 5 and 12, 10 (about 0.85 s, a loud low tone) in the battle sets 7, 9, 10 and 11, 14 (a 0.18 s rising blip) in set 9. 20-28 have no sound at all: the driver's effect map ($0E61) has $FF for them in all 14 song sets, so it returns at once. Recorded in BizHawk with the music stopped.",
   "section": "unused",
   "audio": [
    "sb1/SE_0D.mp3",
    "sb1/SE_10.mp3",
    "sb1/SE_14.mp3"
   ]
+ },
+ {
+  "code": "START during the first title intro",
+  "effect": "US, Europe and the beta ignore START until Bomberman's first walk across the title ends; the Japanese game lets you skip at once",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "region",
+  "note": "US $C5:42E8 checks START only once $0CAE is set, and $C5:4EF0 sets it (INC) when the first title walk finishes; JP $C5:41ED checks START straight away. Mesen, START pressed every 16 frames from power-on: JP skipped at frame 123; US ignored it until frame 424. Image: frame 300, US still on the balloon intro (left), JP already on the map (right).",
+  "img": "region_title_start.png"
+ },
+ {
+  "code": "Press Reset, then PASSWORD",
+  "effect": "The password screen starts on the last password the game gave you instead of 0000",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "secret",
+  "note": "At boot $C4:022E backs up $0C7F-$0C8E to $7E:2800 before clearing RAM, then looks for the signature 'amok' ($0C8B = $6D61, $0C8D = $6B6F) and three matching stored copies of the code; if they are there it restores the last password made. A power-on has no signature, so it starts at 0000. Everything else is still wiped (the 9-lives and 5656 flags too). Mesen, US: reset during play, the password screen shows 5555. Japan ($C4:00A3) and beta ($C4:00A0) have the same backup and 'amok' check; in Mesen, game over in 1-1, reset, password screen: Japan showed 5555 and beta 3553 (0000 with the signature cleared); Europe is static (same ROM as US but for the header and the timer constant).",
+  "img": "reset_keeps_password.png"
+ },
+ {
+  "code": "Battle clock reaching 0:00",
+  "effect": "A TIME UP! banner and a DRAW, almost never seen: the hurry-up blocks from 1:00 usually finish everyone first",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "unused",
+  "note": "$C4:087A -> $C4:0769 puts every live player into the dying state ($C4:1992 / $C4:30B6) and starts the banner object $C5:3C16, which drops TIME UP! from y = $FFE0; the round ends as a DRAW. The HURRY UP! banner at 1:00 is $C4:0883 -> $C5:3B7C (sound 5, sliding in from x = $140). In two idle 4-player battles the blocks ended the round before the clock got below 0:20. Mesen: battle clock $0D3A set to $0010 at 1:57. Image: the banner and the DRAW. Japan ($C4:06A5 -> $C4:05A5, banner $C5:3ADB) and beta ($C4:06A0 -> $C4:05A0) have the same routine; Mesen, a real battle with $0D3A set to $0010: TIME UP! drops in both; Europe is static (same code, but its clock second is 50 frames, $C4:07F4).",
+  "img": "battle_time_up.png"
+ },
+ {
+  "code": "Battle Mode bomb that fizzles",
+  "effect": "About 1 in 256 bombs (a player's 3rd or later) fizzles with a small puff of smoke and goes off 10-20 seconds late",
+  "versions": [
+   "US",
+   "EU",
+   "JP",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "secret",
+  "note": "When a bomb's fuse runs out ($C4:4F57) in Battle Mode or the attract demos ($0C3C = 3), it is at least its owner's 3rd bomb ($1C,X from the count $0108,X) and the round still has duds left ($0CAF: 0 with probability 1/2, otherwise 1 or 2, set by $C4:6E0E), the game rolls the RNG ($C6:15F2); on $AE (1 in 256) the bomb doesn't explode. Sound $0F plays, a smoke puff rises ($C5:3976 -> animation $C7:05CF), and the bomb waits (5 to 15) x 64 frames ($1E,X, $C4:4FBD) plus one more 255-frame fuse. Bombs set off by other blasts never roll. Mesen, a real battle with the roll forced ($C4:4F8F BEQ -> BRA): it went off 576 frames late. Image: the bomb sitting unexploded, then the late blast. Japan ($C4:4D4C, roll at $C4:4D84) and beta ($C4:4D47, $C4:4D7F) run the same checks; Mesen, a real battle with the roll and the 3rd-bomb check forced: the fizzle branch ran and the bomb sat unexploded in both; Europe is static (same ROM as US but for the header and the timer constant).",
+  "img": "dud_bomb.png"
  }
 ]

@@ -199,6 +199,10 @@ A shift-tolerant diff (16-byte runs of one ROM found nowhere in the other, as `t
 73 KB unique to each, spread over the code banks (moved code) and the text and graphics banks.
 
 - Password: same codec and checks; grid letters differ (no vowels in the US). Known.
+- ★ **Region lockout.** The US card checks the console's region bit at boot (`00:E006` `LDA $1000 / AND #$40`); on
+  a Japanese PC Engine it maps bank `$90` into `$4000` and jumps there, so the CPU loops at `$4000`/`$416E` and the
+  screen stays grey. Same check as the 1990 US card; Japan and the Special Version have none. Mesen, console type
+  PC Engine. ![US card on a PC Engine](img/pce93/region_lockout_us.png)
 - CONFIGRATION call and the tap test: removed in the US (above).
 - Title: ™ added, "VS [ ][ ] GAME" → COM-LINK, © 1992 → TM & © 1993 (Known). The logo graphic is otherwise
   pixel-identical: the only difference is the ™ sprite.
@@ -426,8 +430,11 @@ sharing one length byte, nibble + 2). Soft blocks are placed at random after unp
 show the fixed layout.
 
 All 73 records of each cart are drawn in `docs/img/pce93/maps/<ver>_<record>.png` (ids and file addresses in
-`disasm/pce93/maps_<ver>.txt`) with the real tiles, learnt from VRAM dumps of the stages taken in the coverage
-runs. US and JP maps are identical; the Special Version differs in 16 records. Findings:
+`disasm/pce93/maps_<ver>.txt`; where a US or Special Version map looks exactly like the Japanese one, only the `jp_`
+file is kept) with the real tiles, learnt from VRAM dumps of the stages taken in the coverage
+runs. The US and JP map records are byte-identical (`maps_us.txt` and `maps_jp.txt` match); their pictures can still
+differ, since each is drawn with the soft blocks and tiles of that cart's own VRAM dump. The Special Version differs in
+16 records. Findings:
 
 - Records 56-63 ("world 8") are eight copies of battle stage 3's record: never used.
 - ★ **Unused chunk `$3E`** (US/JP, file `$17014`): the right half of a two-screen arena for the world 5 boss.
@@ -469,6 +476,10 @@ Patches (IPS, built and checked against the ROM by `tools/pce93/mkpatch.py`):
   music 51-6B). The 130 requests with the number written in, `$07:AD54` (68, 6A) and the scene table `$09:A9FA`
   (56 58 57 59 5A 5B 5C 5D 65) never give effect 16 or tune 69. The config screen's SE and MUSIC items are a full
   sound test: 16 is a short click close to the cursor sound, 69 a jingle of about 2.6 s.
+- ★ **Special Version.** Every sound goes through `$F649` (driver `$4006`): 76 calls with the number written in, the
+  planet music table `03:B080` (only 25, 26, 27, 34, 30 reachable) and `07:A99A` (2D, 32). Effects 10, 12, 14, 1C
+  and 1E and music 21, 23, 28, 37, 38 and 39 are never requested; no sound data chains into them and the queueing
+  commands `$8E`/`$8F` are never sent. Only the old configuration screen's SOUND test (patch only) plays them.
 
 ## Title logos
 

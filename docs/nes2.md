@@ -12,6 +12,7 @@ is named. Prior art: the GameFAQs codes page and a published article on the game
 |---|---|---|
 | USA | `8d8b36adb154fad6b55f14133fc4f3f6` | |
 | Japan | `2ca3ce695e6741a94120a9d07675547f` | 28,041 bytes differ, in banks 0, 1, 4, 5 and 7. The password code sits at the same addresses in bank 5 and is the same apart from RAM moves: the JP zero page is `$0E` lower (`$3D` area for `$4B`) and the password buffers 2 bytes lower (`$0540` for `$0542`). The letters differ (see [Regions](#regions)) |
+| Europe (Dynablaster) | `643683b0e0c1c510674ccda900c13c6c` | PAL (NES 2.0 header, byte 12 = 1). Aligned with the US PRG, about 14,700 bytes change: bank 0 is the Japanese one (191 bytes off JP), bank 1 holds the new title graphics, banks 2 and 3 (sound) differ from both, bank 6 is the same. The password code is the US one at the same addresses with RAM moved: zero page 1 lower (`$4A` area for `$4B`, bombs/fire `$8F`/`$92`) and the buffers 2 lower, like JP. US letters and codes ([below](#dynablaster-europe)) |
 
 MMC1, 128 KB PRG, 8 KB CHR RAM. Bank 7 calls the other banks through **`$C852`** (JP `$C7BE`): `JSR $C852` is followed by three
 bytes, a bank number and a target address minus 1 (`$05 $61 $95` calls `$05:9562`); `m6502.py --far C852` lists those
@@ -132,20 +133,50 @@ from Lua).
 
 ## Regions
 
-| | US | JP |
-|---|---|---|
-| Password letters | `K3DH6J8B75214CFG` (no vowels) | `PCKNFOHIGEBADJLM` |
-| Pad 3 | Four Score, else expansion port | expansion port |
-| ★ BATTLE MODE | needs a Four Score (`$05:A874`: no Four Score flag `$48`, a buzz), so the expansion-port pad 3 is never used | any pads ([img](img/nes2/battle_no_four_score_us.png)) |
-| ★ Start in the title intro | ignored until the intro ends (`$0521`, about 285 frames) | skips to the menu at once ([img](img/nes2/intro_skip.png)) |
-| Title | ™ on the logo, TM AND © 1992 HUDSON SOFT, LICENSED BY NINTENDO | no ™, ©1991 HUDSON SOFT |
-| Sound room title | BOMBERMAN2 SOUND ROOM | BOMBER MAN 2 SOUND ROOM |
-| Build string at `$07:FFE0` | `BOMBERMAN2 92817` | `BOMBER MAN 2` |
+| | US | JP | EU (Dynablaster) |
+|---|---|---|---|
+| Password letters | `K3DH6J8B75214CFG` (no vowels) | `PCKNFOHIGEBADJLM` | US |
+| Pad 3 | Four Score, else expansion port | expansion port | US |
+| ★ BATTLE MODE | needs a Four Score (`$05:A874`: no Four Score flag `$48`, a buzz), so the expansion-port pad 3 is never used | any pads ([img](img/nes2/battle_no_four_score_us.png)) | any pads, like JP (no Four Score check before the match screen) |
+| ★ Title quake | the 16-step shake table (`$05:A585`) moves the picture −2/+1/+2/−1 px around its rest place | the table (`$05:A532`) moves it −6 … −2 px, always to one side (Mesen: scroll `$04A0/$04A1` per frame) | not checked |
+| ★ Start in the title intro | ignored until the intro ends (`$0521`, about 285 frames) | skips to the menu at once ([img](img/nes2/intro_skip.png)) | ignored, like US |
+| Title | ™ on the logo, TM AND © 1992 HUDSON SOFT, LICENSED BY NINTENDO | no ™, ©1991 HUDSON SOFT | DYNABLASTER with ™, TM AND © 1991 HUDSON SOFT, LICENSED BY NINTENDO |
+| Sound room title | BOMBERMAN2 SOUND ROOM | BOMBER MAN 2 SOUND ROOM | DYNABLASTER SOUND ROOM |
+| Build string at `$07:FFE0` | `BOMBERMAN2 92817` | `BOMBER MAN 2` | `DYNABLASTER 826` |
 
 All but pad 3 match what was known. **Known**: the church in the ending's street scene (after 6-8, before the staff roll) has
 its cross only in JP; checked in Mesen (`H8666HBH` / `NHFFFNIN` = 6-8, then `$B7`/`$A9` = `$F0`).
 ![US ending](img/nes2/ending_us.png) ![JP ending](img/nes2/ending_jp.png)
 ![US title](img/nes2/title_us.png) ![JP title](img/nes2/title_jp.png)
+
+## Dynablaster (Europe)
+
+The PAL cart. The password screen, the grid, the letters (`$05:9609`), the decoder (`$05:9619`), the secret table
+(`$05:9703`, stored in JP letters and matched through the copy at `$05:973B`) and the fuse values (45 / 75 / 105, not
+adjusted for 50 Hz) are the US ones at the same addresses; only RAM moved (area / stage `$4A`/`$4B`, bombs / fire
+`$8F`/`$92`, the secret flags `$054C-$054E`, the stage-clear counter `$B6`, the dying flag `$A4`; lives `$04E5` and the
+vest `$04E6` stay). So **every US code works and no Japanese one does**; `password.mjs` takes `'eu'` (the US letters).
+
+- **Typed with the pad in Mesen** (`node tools/nes2/test_codes.mjs eu ...`): the 54 US level codes and 7 US secret codes
+  of the code list, `33333333`, `KKK1BK6K` and `368883J3`, and the bad `888D8C8H`: all 65 as `password.mjs` predicts
+  (the secrets set the fuse, detonator, sound room and bonus-stage flags as in the US cart).
+- **Cheats** (same bot test, 12,000 frames; 12 deaths and a game over without): `04E6:01` invincible (0 deaths) and
+  `04E5:02` infinite lives (11 deaths, no game over) work as they are. The US ROM and zero-page codes don't fit: the
+  EU forms are Game Genie `AVPKVT` + `AVLKVT` invincible (RTS at the kill routines `$CE9E`, `$CEBE`; 0 deaths),
+  `SXUKVXVK` infinite lives (`DEC $04E5` at `$CABE`; 12 deaths, lives stay 2), Pro Action Replay `00B6F0` and Game Genie
+  `AAOGNZEY` (the `CMP #$F0` at `$CA16`) every stage clears at once (16 stage changes in 8,000 frames, to area 3 each);
+  US `00B7:F0` does nothing here. The demo recorder is there too (switch byte `$D2F1`, Game Genie `AENIPZPA`), not
+  checked: the test pressed no buttons during the demo.
+- **Regions**: BATTLE MODE opens the match screen with plain pads (the Four Score signature is still read for pad 3,
+  but the US gate at `$05:A874` is gone), Start during the intro is ignored as in the US cart, and the ending's street
+  has the US map (no cross on the church; the cross tiles are in the street graphics, moved to `$01:B3AC`). The staff
+  roll ends with SECRET PASSWORD K3456712 and COPYRIGHT 1991. The unused Area 6 map variant, the Kondoria tiles and the
+  three sound-room-only samples are the same bytes as in the US cart.
+
+![Dynablaster title](img/nes2/title_eu.png) ![Dynablaster ending](img/nes2/ending_eu.png)
+
+Logo: `docs/img/logos/nes2_eu.png`, cut from the title screenshot with the backdrop keyed out (`logo.py crop` on the
+title's PPU dump drew it without the shadow and ™).
 
 ## Title logo and item icons
 

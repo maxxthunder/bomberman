@@ -1488,23 +1488,6 @@
   "note": "The flag 6514 sets. Flag checked under the cheat; the effect was checked with 6514. Game Genie: $C3:00B6 BEQ +3 -> BEQ +0, so every enemy gets the extra hit point; Mesen, JP and beta: enemy HP 2 instead of 1 (the same as 7E2902:01 run on JP)."
  },
  {
-  "code": "C00139:EA C00144:6B",
-  "devices": {
-   "Pro Action Replay": "C00139:EA C00144:6B",
-   "Game Genie": "3CD7-540D 18D0-5FDD"
-  },
-  "effect": "Soft reset: hold Select+Start+L+R on pad 1",
-  "versions": [
-   "eu",
-   "jp",
-   "beta"
-  ],
-  "status": "fixed",
-  "verified": "mesen",
-  "section": "cheat",
-  "note": "ROM codes that hook the unreferenced check at $C0:013A (same as the IPS). Reset routine $80:F000 ran on EU, JP and beta. Game Genie: the same two ROM bytes; reset routine $80:F000 ran on EU, JP and beta."
- },
- {
   "code": "7E6C6E:0B / 7E6C6E:0C",
   "devices": {
    "Pro Action Replay": "7E6C6E:0B / 7E6C6E:0C"
@@ -1548,6 +1531,39 @@
   "section": "unused",
   "audio": [
    "sb3/SE_06.mp3"
+  ]
+ },
+ {
+  "code": "Sound effects 68, 6A",
+  "effect": "Two title-set sounds the game never plays",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The effect table $80:80DC maps 62-6B onto commands 32-3B again, so 68 and 6A share commands 38 and 3A with 5C and 5E. Those two are sent only by the final boss's actors (types $4D and $4E, spawned only in stage $46), when the boss stage's own sound set 37 is loaded; in BizHawk the final boss sent 5C twelve times with set 37 loaded. Nothing asks for 68 or 6A, so the title/menu set 38's own versions of commands 38 and 3A never play: 68 a mid tone with a sharp attack of about 1.1 s, 6A a quiet tone rising to about 1 kHz, about 1.2 s. Recorded in BizHawk at the title with set 38 loaded.",
+  "section": "unused",
+  "audio": [
+   "sb3/SE_68.mp3",
+   "sb3/SE_6A.mp3"
+  ]
+ },
+ {
+  "code": "Voice 13",
+  "effect": "A spoken clip no character ever says",
+  "versions": [
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Voices are requested with type 03 through $C0:07A1. Voices 0B-13 come only from the battle results request at $C6:0F7F, which sends $0B + the winner's character ($1347, written at $C4:04BE as the select screen's choice - 1, 0-7), so it can send 0B-12 but never 13; in BizHawk the results screen sent 0B, 0D and 11 for characters 1, 3 and 7. Voice 13 (sample set 2F at $D5:E5E9, command 79) is the only voice that uses set 2F, and nothing loads that set. About 1.2 s. Recorded in BizHawk.",
+  "section": "unused",
+  "audio": [
+   "sb3/Voice_13.mp3"
   ]
  }
 ]

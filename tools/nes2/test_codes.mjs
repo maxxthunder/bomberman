@@ -1,4 +1,4 @@
-// node tools/nes2/test_codes.mjs <us|jp> CODE [CODE...] : type the codes in Mesen with the pad (test_codes.lua via
+// node tools/nes2/test_codes.mjs <us|jp|eu> CODE [CODE...] : type the codes in Mesen with the pad (test_codes.lua via
 // run.sh; MESEN and SCRATCH set) and check the decoder's verdict and RAM against password.mjs.
 // Screenshots: $SCRATCH/test_codes_<reg>/<code>.png
 import { decode } from './password.mjs';

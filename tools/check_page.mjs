@@ -146,7 +146,7 @@ ok(!GAMES.find(g => g.id === 'mega8') && CODES.mega.some(e => e.section === 'dem
 ok(!GAMES.find(g => g.id === 'pceub') && CODES.pce90.some(e => e.section === 'ub'), 'Users Battle sits inside the 1990 Bomberman');
 
 // Version chips start on the main release
-const MAIN = { sb1: 'US', sb2: 'us', sb3: 'eu', sb4: 'JP', sb5: 'retail', mega: 'US', pce90: 'US', pce93: 'US', pce94: 'retail', nes1: 'US', nes2: 'US', gb1: 'wario', gb2: 'us', gb3: 'jp', pocket: 'us' };
+const MAIN = { sb1: 'US', sb2: 'us', sb3: 'eu', sb4: 'JP', sb5: '', mega: 'US', pce90: 'US', pce93: 'US', pce94: 'retail', nes1: 'US', nes2: 'US', gb1: 'wario', gb2: 'us', gb3: 'jp', pocket: 'us' };
 for (const [id, v] of Object.entries(MAIN)) eq(defaultVer(GAMES.find(g => g.id === id)), v, `${id} starts on ${v}`);
 eq(logoFor(GAMES.find(g => g.id === 'pce93'), 'SP'), 'pce93_sp', "'93 Special Version chip shows its logo");
 eq(logoFor(GAMES.find(g => g.id === 'sb4'), 'EN'), 'sb4_jp', 'a game without per-version logos keeps its default');

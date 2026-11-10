@@ -531,594 +531,648 @@
   "code": "888D8C8G",
   "effect": "Start at 1-1 with 1 bomb, fire 1",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 1-1\"; key 6, free nibbles 11, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-1\"; key 6, free nibbles 11, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "HHDBD7DJ",
   "effect": "Start at 1-2 with 2 bombs, fire 2",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 1-2\"; key 3, free nibbles 11, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-2\"; key 3, free nibbles 11, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "115K2823",
   "effect": "Start at 1-3 with 2 bombs, fire 2",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 1-3\"; key 11, free nibbles 13, 10. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-3\"; key 11, free nibbles 13, 10. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "88J2BC6C",
   "effect": "Start at 1-4 with 2 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 1-4\"; key 6, free nibbles 11, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-4\"; key 6, free nibbles 11, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "GG17GHF5",
   "effect": "Start at 1-5 with 1 bomb, fire 2",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 1-5\"; key 15, free nibbles 12, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-5\"; key 15, free nibbles 12, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "336HKDK5",
   "effect": "Start at 1-6 with 2 bombs, fire 2",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 1-6\"; key 1, free nibbles 3, 8. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-6\"; key 1, free nibbles 3, 8. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "BB3B88J3",
   "effect": "Start at 1-7 with 2 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 1-7\"; key 7, free nibbles 1, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-7\"; key 7, free nibbles 1, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "883FBJ6C",
   "effect": "Start at 1-8 with 2 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 1-8\"; key 6, free nibbles 3, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 1-8\"; key 6, free nibbles 3, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "7571542H",
   "effect": "Start at 2-1 with 2 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 2-1\"; key 8, free nibbles 4, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-1\"; key 8, free nibbles 4, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "J66161BF",
   "effect": "Start at 2-2 with 2 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 2-2\"; key 5, free nibbles 14, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-2\"; key 5, free nibbles 14, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "DHK5KCKB",
   "effect": "Start at 2-3 with 3 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 2-3\"; key 2, free nibbles 15, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-3\"; key 2, free nibbles 15, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "C4FFGDG3",
   "effect": "Start at 2-4 with 3 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 2-4\"; key 13, free nibbles 15, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-4\"; key 13, free nibbles 15, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "C45FG3GH",
   "effect": "Start at 2-5 with 3 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 2-5\"; key 13, free nibbles 12, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-5\"; key 13, free nibbles 12, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "4C5GGGF5",
   "effect": "Start at 2-6 with 4 bombs, fire 3",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 2-6\"; key 12, free nibbles 3, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-6\"; key 12, free nibbles 3, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "B83B6D65",
   "effect": "Start at 2-7 with 4 bombs, fire 4",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 2-7\"; key 7, free nibbles 5, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-7\"; key 7, free nibbles 5, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "GF71454G",
   "effect": "Start at 2-8 with 4 bombs, fire 4",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 2-8\"; key 15, free nibbles 6, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 2-8\"; key 15, free nibbles 6, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "151BG275",
   "effect": "Start at 3-1 with 5 bombs, fire 4",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 3-1\"; key 11, free nibbles 1, 2. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-1\"; key 11, free nibbles 1, 2. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "152FGD75",
   "effect": "Start at 3-2 with 5 bombs, fire 4",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 3-2\"; key 11, free nibbles 9, 2. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-2\"; key 11, free nibbles 9, 2. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "DKK8823H",
   "effect": "Start at 3-3 with 5 bombs, fire 4",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 3-3\"; key 2, free nibbles 8, 1. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-3\"; key 2, free nibbles 8, 1. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "68B7KCBH",
   "effect": "Start at 3-4 with 5 bombs, fire 4",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 3-4\"; key 4, free nibbles 9, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-4\"; key 4, free nibbles 9, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "86DHHKJB",
   "effect": "Start at 3-5 with 6 bombs, fire 4",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 3-5\"; key 6, free nibbles 6, 1. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-5\"; key 6, free nibbles 6, 1. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "BJDBDHH1",
   "effect": "Start at 3-6 with 6 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 3-6\"; key 7, free nibbles 4, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-6\"; key 7, free nibbles 4, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "H3JC86BJ",
   "effect": "Start at 3-7 with 6 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 3-7\"; key 3, free nibbles 7, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-7\"; key 3, free nibbles 7, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "68H231K5",
   "effect": "Start at 3-8 with 6 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 3-8\"; key 4, free nibbles 15, 13. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 3-8\"; key 4, free nibbles 15, 13. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "6B63DJKH",
   "effect": "Start at 4-1 with 7 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 4-1\"; key 4, free nibbles 1, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-1\"; key 4, free nibbles 1, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "6BJHD2KG",
   "effect": "Start at 4-2 with 7 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 4-2\"; key 4, free nibbles 14, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-2\"; key 4, free nibbles 14, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "2572C3FG",
   "effect": "Start at 4-3 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 4-3\"; key 10, free nibbles 11, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-3\"; key 10, free nibbles 11, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "CFF82155",
   "effect": "Start at 4-4 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 4-4\"; key 13, free nibbles 6, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-4\"; key 13, free nibbles 6, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "52C6F2C3",
   "effect": "Start at 4-5 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 4-5\"; key 9, free nibbles 3, 8. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-5\"; key 9, free nibbles 3, 8. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "6B31HHK3",
   "effect": "Start at 4-6 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 4-6\"; key 4, free nibbles 7, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-6\"; key 4, free nibbles 7, 5. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "17CK48G3",
   "effect": "Start at 4-7 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 4-7\"; key 11, free nibbles 13, 10. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-7\"; key 11, free nibbles 13, 10. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "71G2G84B",
   "effect": "Start at 4-8 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 4-8\"; key 8, free nibbles 14, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 4-8\"; key 8, free nibbles 14, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "C5C12F55",
   "effect": "Start at 5-1 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 5-1\"; key 13, free nibbles 3, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-1\"; key 13, free nibbles 3, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "6KJFHJKC",
   "effect": "Start at 5-2 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 5-2\"; key 4, free nibbles 1, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-2\"; key 4, free nibbles 1, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "742DGD4B",
   "effect": "Start at 5-3 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 5-3\"; key 8, free nibbles 10, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-3\"; key 8, free nibbles 10, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "7414GH4G",
   "effect": "Start at 5-4 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 5-4\"; key 8, free nibbles 11, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-4\"; key 8, free nibbles 11, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "5CCJF6CJ",
   "effect": "Start at 5-5 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 5-5\"; key 9, free nibbles 13, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-5\"; key 9, free nibbles 13, 12. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "J3K4DK3J",
   "effect": "Start at 5-6 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 5-6\"; key 5, free nibbles 5, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-6\"; key 5, free nibbles 5, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "8DKF34DG",
   "effect": "Start at 5-7 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 5-7\"; key 6, free nibbles 10, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-7\"; key 6, free nibbles 10, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "471K1G7G",
   "effect": "Start at 5-8 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 5-8\"; key 12, free nibbles 3, 3. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 5-8\"; key 12, free nibbles 3, 3. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "C7C4245C",
   "effect": "Start at 6-1 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 6-1\"; key 13, free nibbles 1, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-1\"; key 13, free nibbles 1, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "F1GH5125",
   "effect": "Start at 6-2 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 6-2\"; key 14, free nibbles 5, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-2\"; key 14, free nibbles 5, 7. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "8H6136DG",
   "effect": "Start at 6-3 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 6-3\"; key 6, free nibbles 2, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-3\"; key 6, free nibbles 2, 9. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "7C1JGH4B",
   "effect": "Start at 6-4 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 6-4\"; key 8, free nibbles 11, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-4\"; key 8, free nibbles 11, 15. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "36JK87JJ",
   "effect": "Start at 6-5 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 6-5\"; key 1, free nibbles 9, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-5\"; key 1, free nibbles 9, 4. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "633FHFKG",
   "effect": "Start at 6-6 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 6-6\"; key 4, free nibbles 10, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-6\"; key 4, free nibbles 10, 11. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "1FC34CGJ",
   "effect": "Start at 6-7 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 6-7\"; key 11, free nibbles 6, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-7\"; key 11, free nibbles 6, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "1F4H4KGC",
   "effect": "Start at 6-8 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Area Passwords (US version): Area 6-8\"; key 11, free nibbles 11, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Area Passwords (US version): Area 6-8\"; key 11, free nibbles 11, 6. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "KJH5C13D",
   "effect": "Play the bonus stage, then back to the title",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Bonus Stage\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PONEJACK",
+  "note": "GameFAQs \"Bonus Stage\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PONEJACK Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Secrets"
  },
  {
   "code": "K2JG2JF4",
   "effect": "Long bomb fuse",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Long Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBOLD",
+  "note": "GameFAQs \"Long Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBOLD Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Secrets"
  },
  {
   "code": "K138BHDJ",
   "effect": "Remote-control bombs in NORMAL MODE",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PACHINKO",
+  "note": "GameFAQs \"Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PACHINKO Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Secrets"
  },
  {
   "code": "K2JG2G1H",
   "effect": "Normal bomb fuse",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Normal Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBMAN",
+  "note": "GameFAQs \"Normal Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBMAN Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Secrets"
  },
  {
   "code": "K1HB3G1H",
   "effect": "Semi-remote bombs in NORMAL MODE: remote, but they also go off on their own",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Semi-Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PANICMAN",
+  "note": "GameFAQs \"Semi-Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PANICMAN Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Secrets"
  },
  {
   "code": "K2JG2135",
   "effect": "Short bomb fuse",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Short Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBACE",
+  "note": "GameFAQs \"Short Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBACE Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Secrets"
  },
  {
@@ -1642,22 +1696,24 @@
   "code": "1F4K4CGJ",
   "effect": "Start at 6-8 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Passwords: Final Level\"; key 11, free nibbles 6, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Passwords: Final Level\"; key 11, free nibbles 6, 14. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "K3456712",
   "effect": "Sound test (BOMBERMAN2 SOUND ROOM)",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Sound Test\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PCDEFGAB",
+  "note": "GameFAQs \"Sound Test\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PCDEFGAB Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Secrets"
  },
  {
@@ -1764,33 +1820,36 @@
   "code": "1F4441G1",
   "effect": "Start at 6-8 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Special Passwords: Start at final level with max bomb explosion length and max bombs on-screen at a time\"; key 11, free nibbles 0, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Special Passwords: Start at final level with max bomb explosion length and max bombs on-screen at a time\"; key 11, free nibbles 0, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "111K41G1",
   "effect": "Start at 1-1 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"Special Passwords: Start with max bomb explosion length and max bombs on-screen at a time\"; key 11, free nibbles 0, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back",
+  "note": "GameFAQs \"Special Passwords: Start with max bomb explosion length and max bombs on-screen at a time\"; key 11, free nibbles 0, 0. typed with the pad in Mesen (US); area, stage, bombs and fire read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "33333333",
   "effect": "Start at 1-1 with 1 bomb, fire 1",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "made with password.mjs (key 1, free nibbles 0); typed with the pad in Mesen (US), RAM read back",
+  "note": "made with password.mjs (key 1, free nibbles 0); typed with the pad in Mesen (US), RAM read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
@@ -1808,11 +1867,12 @@
   "code": "368883J3",
   "effect": "Start at 6-8 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "made with password.mjs (key 1, free nibbles 0); typed with the pad in Mesen (US), RAM read back",
+  "note": "made with password.mjs (key 1, free nibbles 0); typed with the pad in Mesen (US), RAM read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
@@ -1830,27 +1890,29 @@
   "code": "KKK1BK6K",
   "effect": "Start at 1-1 with 8 bombs, fire 5",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "key 0: the game never shows a code with key 0 (it picks 1-15), the decoder takes it. made with password.mjs (key 0, free nibbles 0); typed with the pad in Mesen (US), RAM read back",
+  "note": "key 0: the game never shows a code with key 0 (it picks 1-15), the decoder takes it. made with password.mjs (key 0, free nibbles 0); typed with the pad in Mesen (US), RAM read back Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Passwords"
  },
  {
   "code": "04E6:01",
   "devices": {
    "Pro Action Replay": "04E601",
-   "Game Genie": "AVZGKT + AVGGKT (US) / ATPGET + ATLGET (JP)"
+   "Game Genie": "AVZGKT + AVGGKT (US) / ATPGET + ATLGET (JP) / AVPKVT + AVLKVT (EU)"
   },
   "effect": "Invincible",
   "versions": [
+   "JP",
    "US",
-   "JP"
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $04E6, the vest timer flag: both kill routines ($CEA4 fire, $CEC4 enemy contact; JP $CE10/$CE30) return while it is non-zero. Random bot, 12,000 frames of NORMAL MODE: 0 deaths (US and JP; 10-11 deaths without). Game Genie: the two codes below, same bot test.",
+  "note": "Mesen 2 cheat engine (custom). RAM $04E6, the vest timer flag: both kill routines ($CEA4 fire, $CEC4 enemy contact; JP $CE10/$CE30) return while it is non-zero. Random bot, 12,000 frames of NORMAL MODE: 0 deaths (US and JP; 10-11 deaths without). Game Genie: the two codes below, same bot test. Dynablaster (Europe): the same RAM; 0 deaths in the same test.",
   "section": "cheat"
  },
  {
@@ -1884,19 +1946,35 @@
   "section": "cheat"
  },
  {
-  "code": "04E5:02",
+  "code": "AVPKVT + AVLKVT",
   "devices": {
-   "Pro Action Replay": "04E502",
-   "Game Genie": "SXKGKXVK (US) / SZUGEXVK (JP)"
+   "Game Genie": "AVPKVT + AVLKVT",
+   "Pro Action Replay": "04E601"
   },
-  "effect": "Infinite lives",
+  "effect": "Invincible (EU)",
   "versions": [
-   "US",
-   "JP"
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $04E5, lives (DEC / BMI at $CAC4): 12 deaths in 12,000 frames, no game over (US and JP). Game Genie: DEC $04E5 -> LDA $04E5 at $CAC4 (JP $CA30); same bot: 12 deaths in 12,000 frames, lives stay 2 (US and JP).",
+  "note": "Mesen 2 cheat engine (Game Genie). RTS at Dynablaster's two kill routines, $CE9E and $CEBE (US $CEA4/$CEC4). 0 deaths in 12,000 frames of the random bot (12 without). Pro Action Replay 04E601: the RAM code, same test.",
+  "section": "cheat"
+ },
+ {
+  "code": "04E5:02",
+  "devices": {
+   "Pro Action Replay": "04E502",
+   "Game Genie": "SXKGKXVK (US) / SZUGEXVK (JP) / SXUKVXVK (EU)"
+  },
+  "effect": "Infinite lives",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (custom). RAM $04E5, lives (DEC / BMI at $CAC4): 12 deaths in 12,000 frames, no game over (US and JP). Game Genie: DEC $04E5 -> LDA $04E5 at $CAC4 (JP $CA30); same bot: 12 deaths in 12,000 frames, lives stay 2 (US and JP). Dynablaster (Europe): the same RAM, 11 deaths, no game over; Game Genie SXUKVXVK (DEC $04E5 at $CABE): 12 deaths, lives stay 2.",
   "section": "cheat"
  },
  {
@@ -1930,29 +2008,47 @@
   "section": "cheat"
  },
  {
-  "code": "AENIYZPA",
+  "code": "00B6:F0",
   "devices": {
-   "Game Genie": "AENIYZPA"
+   "Pro Action Replay": "00B6F0",
+   "Game Genie": "AAOGNZEY"
   },
-  "effect": "Demo recorder: the attract demo records pad 1 instead of playing",
+  "effect": "Every stage clears at once (EU)",
   "versions": [
-   "US"
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (Game Genie). ROM byte $D2F7 (JP $D263) is 1 = play the recorded demo ($05:9A01). Set to 0, the demo code stores (button, frame count) pairs at ($B9),Y, the demo's own ROM table, instead: in Mesen the demo stood still and the store at $05:9A22 ran on each button change (3 times in 3,000 frames; 0 without the code, 915 playback calls). On a cart those stores hit the MMC1 registers; the recorder needs RAM there (development hardware)",
+  "note": "Mesen 2 cheat engine (custom). Dynablaster keeps the stage-clear counter at $B6 (the US $B7 does nothing here): 16 stage changes in 8,000 frames, to area 3. Game Genie: CMP #$F0 -> CMP #$00 at $CA16; 16 stage changes in 8,000 frames.",
+  "section": "cheat"
+ },
+ {
+  "code": "AENIYZPA",
+  "devices": {
+   "Game Genie": "AENIYZPA (US) / AAVILZPA (JP) / AENIPZPA (EU)"
+  },
+  "effect": "Demo recorder: the attract demo records pad 1 instead of playing",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (Game Genie). ROM byte $D2F7 (JP $D263) is 1 = play the recorded demo ($05:9A01). Set to 0, the demo code stores (button, frame count) pairs at ($B9),Y, the demo's own ROM table, instead: in Mesen the demo stood still and the store at $05:9A22 ran on each button change (3 times in 3,000 frames; 0 without the code, 915 playback calls). On a cart those stores hit the MMC1 registers; the recorder needs RAM there (development hardware) Mesen 2, 12,000 frames of the title and attract demo with no input: JP AAVILZPA (switch $D263) and Dynablaster AENIPZPA (switch $D2F1) each ran the record store (JP $05:9A12, EU $05:9A22) 34 times; 0 without, and the US code AENIYZPA does nothing on either.",
   "section": "cheat"
  },
  {
   "code": "BATTLE MODE without a Four Score (US)",
   "effect": "A buzz and nothing else: the US game needs a Four Score for BATTLE MODE; Japan starts it with any pads",
   "versions": [
+   "JP",
    "US",
-   "JP"
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "US $05:A874-$A882: mode 2 (BATTLE) with the Four Score flag $48 = 0 plays sound $04 and stays on the menu; $48 is set each frame when the Four Score signature matches ($07:C382). Japan's menu ($05:A818) has no check. In Mesen with no Four Score the US game stayed on the menu; with one it went to the match select, as Japan does without.",
+  "note": "US $05:A874-$A882: mode 2 (BATTLE) with the Four Score flag $48 = 0 plays sound $04 and stays on the menu; $48 is set each frame when the Four Score signature matches ($07:C382). Japan's menu ($05:A818) has no check. In Mesen with no Four Score the US game stayed on the menu; with one it went to the match select, as Japan does without. Dynablaster (Europe) has no such check: with plain pads in Mesen BATTLE MODE went to the match select, as in Japan.",
   "section": "region",
   "img": "battle_no_four_score_us.png"
  },
@@ -1960,12 +2056,13 @@
   "code": "Press Start during the title intro",
   "effect": "Japan skips straight to the mode menu; the US game ignores Start until the intro is over (about 5 s)",
   "versions": [
+   "JP",
    "US",
-   "JP"
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "US $05:A20D skips the A/Start test while the intro flag $0521 is set ($05:A19E, cleared at $05:A566 after about 285 frames); Japan ($05:A1FE) tests from the first frame. Start pressed 60 frames in, in Mesen. Image: US (left), Japan.",
+  "note": "US $05:A20D skips the A/Start test while the intro flag $0521 is set ($05:A19E, cleared at $05:A566 after about 285 frames); Japan ($05:A1FE) tests from the first frame. Start pressed 60 frames in, in Mesen. Image: US (left), Japan. Dynablaster (Europe) ignores it as the US game does (Start 60 frames in, still the intro 40 frames later).",
   "section": "region",
   "img": "intro_skip.png"
  },
@@ -1973,12 +2070,13 @@
   "code": "ROM $13BA1 (6-1's map variant): 01 -> 00",
   "effect": "An unused Area 6 map: nearly all soft blocks, a different pillar grid and enemy positions",
   "versions": [
+   "JP",
    "US",
-   "JP"
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The map is (area - 1) x 2 + a variant from the table at $04:BB69 ($04:BBC9); map pointers at $04:BBF7. Area 6's variant row is all 1, so map 10 ($04:9EDE) is never used, and no mode or demo reaches it. JP has the same data 8 and 17 bytes lower. With the variant byte for 6-1 set to 0 (iNES file $13BA1, JP $13B89) and password 36363333, 6-1 loads it in Mesen. Image: the unused map (left), the real 6-1 (right).",
+  "note": "The map is (area - 1) x 2 + a variant from the table at $04:BB69 ($04:BBC9); map pointers at $04:BBF7. Area 6's variant row is all 1, so map 10 ($04:9EDE) is never used, and no mode or demo reaches it. JP has the same data 8 and 17 bytes lower. With the variant byte for 6-1 set to 0 (iNES file $13BA1, JP $13B89) and password 36363333, 6-1 loads it in Mesen. Image: the unused map (left), the real 6-1 (right). Dynablaster (Europe): the same bytes (variant table at iNES file $13BA4).",
   "section": "Secrets",
   "img": "area6_unused_map.png"
  },
@@ -1987,11 +2085,12 @@
   "effect": "Three samples heard only in the sound room: a click, a short hit and a looping phrase",
   "versions": [
    "JP",
-   "US"
+   "US",
+   "EU"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Sounds go through $07:C8F5 (JP $C861); the game asks for samples 1E (stop) and 27 only, and the music's drums use the samples behind 1F, 21, 23-26, 28 and 29. 20 ($EE80, about 0.06 s, a click), 22 ($EBC0, about 0.09 s, a hit) and 2A ($F5C0, about 0.93 s, looping) are written to the sample address by the sound room alone. 20 and 22 recorded in BizHawk; the clip of 2A is built from its sample bytes, not recorded.",
+  "note": "Sounds go through $07:C8F5 (JP $C861); the game asks for samples 1E (stop) and 27 only, and the music's drums use the samples behind 1F, 21, 23-26, 28 and 29. 20 ($EE80, about 0.06 s, a click), 22 ($EBC0, about 0.09 s, a hit) and 2A ($F5C0, about 0.93 s, looping) are written to the sample address by the sound room alone. 20 and 22 recorded in BizHawk; the clip of 2A is built from its sample bytes, not recorded. Dynablaster (Europe): the same bytes.",
   "section": "unused",
   "audio": [
    "nes2/DMC_20.mp3",
@@ -2003,12 +2102,13 @@
   "code": "Sprite tiles $84-$8B, $94-$9B",
   "effect": "Kondoria, four frames: loaded at every stage but never drawn",
   "versions": [
+   "JP",
    "US",
-   "JP"
+   "EU"
   ],
   "status": "new",
   "verified": "static",
-  "note": "The common sprite block (bank 1 $8000) is loaded to PPU $0000 at every stage start ($07:CBDD). Backgrounds always use $1000, so its tiles can only show as sprites, and the only routine that writes sprite tiles ($07:CCE4) takes them from records in ROM. No record in either version names $84-$8B or $94-$9B: a blue blob in four frames (two walking, one more, one wide-eyed). The game gives it no palette; the image uses sprite palette 3, a guess.",
+  "note": "The common sprite block (bank 1 $8000) is loaded to PPU $0000 at every stage start ($07:CBDD). Backgrounds always use $1000, so its tiles can only show as sprites, and the only routine that writes sprite tiles ($07:CCE4) takes them from records in ROM. No record in either version names $84-$8B or $94-$9B: a blue blob in four frames (two walking, one more, one wide-eyed). The game gives it no palette; the image uses sprite palette 3, a guess. Dynablaster (Europe): the same bytes.",
   "section": "unused",
   "img": "unused_kondoria.png"
  },
@@ -2016,12 +2116,312 @@
   "code": "Street metatile $39",
   "effect": "The ending's church cross is still in the US cartridge; only the map leaves it out",
   "versions": [
-   "US"
+   "US",
+   "EU"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The ending's street is drawn from metatiles ($04:B826). The US street graphics ($01:B724) still hold the cross (tiles $60-$63) and metatile $39 that uses them; the US and JP street maps ($04:AE17, JP $04:ADB7) differ in one cell only, column 14 row 4, which is $39 in JP and sky in US. The image is the US data with that cell put back, in the game's palette as read in Mesen.",
+  "note": "The ending's street is drawn from metatiles ($04:B826). The US street graphics ($01:B724) still hold the cross (tiles $60-$63) and metatile $39 that uses them; the US and JP street maps ($04:AE17, JP $04:ADB7) differ in one cell only, column 14 row 4, which is $39 in JP and sky in US. The image is the US data with that cell put back, in the game's palette as read in Mesen. Dynablaster (Europe) has the US map (no cross in its ending, Mesen) and the same street graphics, moved to $01:B3AC.",
   "section": "unused",
   "img": "us_church_cross_restored.png"
+ },
+ {
+  "code": "AEEGEPZA",
+  "devices": {
+   "Game Genie": "AEEGEPZA (US) / AEVKKAZA (JP) / AANKXPZA (EU)",
+   "Pro Action Replay": "04E500"
+  },
+  "effect": "Start NORMAL MODE with no spare lives (LEFT 0)",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$02 -> LDA #$00 at $C97F (operand $C980, JP $C8EC): lives $04E5 at new game Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; lives $04E5 = 0 at the start (2 without). JP cart (AEVKKAZA): lives 0. Pro Action Replay (held every frame): Lives held at 0 (LEFT 0): one death (own bomb) and the game ended (JP run screenshot after the death). Tested on both carts (JP: 04E500), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: AANKXPZA: lives $04E5 = 0; the US code does nothing there (lives 2).",
+  "section": "cheat"
+ },
+ {
+  "code": "IEEGEPZA",
+  "devices": {
+   "Game Genie": "IEEGEPZA (US) / IEVKKAZA (JP) / IANKXPZA (EU)",
+   "Pro Action Replay": "04E505"
+  },
+  "effect": "Start NORMAL MODE with 5 spare lives (LEFT 5), 6 in all",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$02 -> LDA #$05 at $C97F (operand $C980, JP $C8EC) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; lives $04E5 = 5 at the start (2 without). JP cart (IEVKKAZA): lives 5. Pro Action Replay (held every frame): Not run separately; same byte as the tested 04E500 / 04E508 (held, so lives never drop). Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: IANKXPZA: lives 5.",
+  "section": "cheat"
+ },
+ {
+  "code": "AEEGEPZE",
+  "devices": {
+   "Game Genie": "AEEGEPZE (US) / AEVKKAZE (JP) / AANKXPZE (EU)",
+   "Pro Action Replay": "04E508"
+  },
+  "effect": "Start NORMAL MODE with 8 spare lives (LEFT 8), 9 in all",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$02 -> LDA #$08 at $C97F (operand $C980, JP $C8EC) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; lives $04E5 = 8 and the status bar shows LEFT 8 (screenshot). JP cart (AEVKKAZE): lives 8 (LEFT 8). Pro Action Replay (held every frame): Lives held at 8: after a death $04E5 still 8 (so infinite lives at 8, not only a start value). Tested on both carts (JP: 04E508), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: AANKXPZE: lives 8 (LEFT 8); PAR 04E508 held lives at 8 there too.",
+  "section": "cheat"
+ },
+ {
+  "code": "GXXONEVK",
+  "devices": {
+   "Game Genie": "GXXONEVK (US) / GXOONEVK (JP)",
+   "Pro Action Replay": "055A3B (US) / 05583B (JP)"
+  },
+  "effect": "The stage clock stops counting down",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: DEC $055B -> BIT $055B at $98AF (bank 5; JP DEC $0559 at $989F): the seconds digit is never decremented, so the tens and minutes never change either Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; clock stayed at 2:00 over 300 frames of play (1:95 without); the frame counter still runs. JP cart (GXOONEVK): seconds stayed 0 over 300 frames. Pro Action Replay (held every frame): Frame counter of the clock held at 59 ($3B): the clock stayed frozen (seconds 0, frames 59) over 300 frames. Tested on both carts (JP: 05583B), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: the US Game Genie code works (same address $98AF; the operand reads $0559 there): clock stayed 2:00 over 300 frames. The Pro Action Replay form is the JP one, 05583B (clock RAM $0558 as in JP), which also froze it.",
+  "section": "cheat"
+ },
+ {
+  "code": "LVXOUELL",
+  "devices": {
+   "Game Genie": "LVXOUELL (US) / LVOOUELL (JP)"
+  },
+  "effect": "The clock ticks once every 100 frames (about 1.7 s) instead of every 60",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$3B -> LDA #$63 at $98AA (operand $98AB, JP $989B): reload of the clock frame counter $055A (JP $0558), 59 -> 99 Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; 3 clock seconds passed in 300 frames of play (5 without); the frame counter reached 73 in another run (never above 59 without). JP cart (LVOOUELL): 3 clock seconds in 300 frames (5 without). No Pro Action Replay form: the frames per clock second are a ROM constant; holding the counter would stop the clock instead Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: 3 clock seconds in 300 frames (5 without; the clock still counts per 60 frames on the 50 Hz cart).",
+  "section": "cheat"
+ },
+ {
+  "code": "TOXOUELU",
+  "devices": {
+   "Game Genie": "TOXOUELU (US) / TOOOUELU (JP)"
+  },
+  "effect": "The clock ticks every 31 frames, about twice as fast",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$3B -> LDA #$1E at $98AA (operand $98AB, JP $989B): frame counter reload 59 -> 30 Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; 8 clock seconds passed in 300 frames of play (5 without). JP cart (TOOOUELU): 8 clock seconds in 300 frames (5 without). No Pro Action Replay form: the frames per clock second are a ROM constant; holding the counter would stop the clock instead Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: 8 clock seconds in 300 frames (5 without).",
+  "section": "cheat"
+ },
+ {
+  "code": "AEKAZYLA",
+  "devices": {
+   "Game Genie": "AEKAZYLA",
+   "Pro Action Replay": "00AF02 (US) / 00A102 (JP)"
+  },
+  "effect": "B sets your bombs off early at any time, but bombs still go off by themselves when the fuse runs out (semi-remote, not the full detonator)",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: BEQ $87C6 -> BEQ +0 at $87C1 (operand $87C2, bank 5, same address in JP): the B-button check after LDA $AF (JP $A1) always jumps to the detonate routine; $AF stays 0, so the fuse check at $BA85 still counts down. Compare $03 also matches bank 2 $87C2 (US and JP): STA $0357 -> STA $0057 in the sound code there Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; a bomb left alone still went off by itself at frame 150; B pressed at frame ~40 set one off at frame 41 (150 frames without the code, B does nothing); $AF stayed 0. Side effect seen: $0057 read 16 when play started (0 without); play was otherwise normal. JP cart (AEKAZYLA): B set the bomb off at frame 41 (150 without); no $0057 change seen. Pro Action Replay (held every frame): Detonator byte held at 2 (semi-remote, the mode the secret code sets): B set the bomb off at frame 41, same as the Game Genie code and left alone it went off at frame 150 like the code. 00AF01 instead gives the full remote (bomb still out after 309 frames). Tested on both carts (JP: 00A102), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: B set the bomb off at frame 41 (150 without). The detonator byte is $AE here (zero page one lower): PAR 00AE02 gave the same.",
+  "section": "cheat"
+ },
+ {
+  "code": "YNEOLXLK",
+  "devices": {
+   "Game Genie": "YNEOLXLK",
+   "Pro Action Replay": "03ED7F"
+  },
+  "effect": "Bombs explode after about 254 frames (4.2 s) instead of 150 (2.5 s)",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$4B -> LDA #$7F at $928A (operand $928B, bank 5, same in JP): power-on value of the fuse $03ED (75 -> 127 ticks of 2 frames). Runs only on a cold boot (no KOSAKA!! signature in RAM), so the code has no effect if switched on after power-up or after a reset; the PBOMB secret codes still override it Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; $03ED = 127; bomb lived 254 frames (150 without). JP cart (YNEOLXLK): fuse 127, bomb lived 254 frames. Pro Action Replay (held every frame): Fuse byte held at 127: bomb lived 254 frames; also works mid-game, since each bomb copies $03ED when placed. Tested on both carts (JP: 03ED7F), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: fuse 127, bomb lived 254 frames; PAR 03ED7F the same.",
+  "section": "cheat"
+ },
+ {
+  "code": "AXEOLXLG",
+  "devices": {
+   "Game Genie": "AXEOLXLG",
+   "Pro Action Replay": "03ED20"
+  },
+  "effect": "Bombs explode after about 64 frames (1.1 s) instead of 150",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$4B -> LDA #$20 at $928A (operand $928B, same in JP): fuse $03ED 75 -> 32, at a cold boot only (as above) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; $03ED = 32; bomb lived 64 frames (150 without). JP cart (AXEOLXLG): fuse 32, bomb lived 64 frames. Pro Action Replay (held every frame): Fuse byte held at 32: bomb lived 64 frames. Tested on both carts (JP: 03ED20), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: fuse 32, bomb lived 64 frames.",
+  "section": "cheat"
+ },
+ {
+  "code": "GXOLSXVS",
+  "devices": {
+   "Game Genie": "GXOLSXVS (US) / GZXLUXVS (JP) / GZVLOXVS (EU)",
+   "Pro Action Replay": "600001"
+  },
+  "effect": "Bombs never go off by themselves; without the detonator only another blast sets them off",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: DEC $6061,X -> BIT $6061,X at $BA95 (bank 5; JP $BA23): bomb fuses never count down Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; bomb still out after 450 frames and no death (it went off at 150 without). JP cart (GZXLUXVS): bomb still out after 450 frames. Pro Action Replay (held every frame): WRAM $6000 held at 1 (the flag that freezes fuses when a battle ends; nothing else reads it): bomb still out after 450 frames. Tested on both carts (JP: 600001), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: GZVLOXVS (DEC $6061,X at $BA61): bomb still out after 450 frames; the US code does nothing there (bomb went off at 150). PAR 600001 works unchanged.",
+  "section": "cheat"
+ },
+ {
+  "code": "GAXKSTAA + GASKKTAA",
+  "devices": {
+   "Game Genie": "GAXKSTAA + GASKKTAA (US) / GEOKOIAA + GEKKEIAA (JP) / GAXGNTAA + GASGVTAA (EU)",
+   "Pro Action Replay": "009304 + 00B304 (US) / 008504 + 00A504 (JP)"
+  },
+  "effect": "NORMAL MODE starts with full fire (5) and full speed and after the first stage clear sends you to an extra 30-second (bonus) stage; despite the name it gives no wall pass, bomb pass or invincibility",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$00 -> LDA #$04 at $CE2C (operand $CE2D, JP $CD99): the new-game reset writes 4 to $AD, $AE, $B0, $B3, $B4, $B5; speed $B3 = 4 is full speed and $B4 (the flag the $90C2 item sets) non-zero sends the game to the bonus stage after a clear ($CA3F); the rest does nothing, since the pass checks want exactly 1 and $B0 is cleared at stage start. Table byte $CE5C (JP $CDC8) 0 -> 4: NORMAL MODE fire-1 Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; in play: fire-1 $93 = 4, speed $B3 = 4, $AD = $AE = 4, $B0 = 0 (all 0 without); holding Right stopped at the same brick (column 3) as without, so no wall pass; standing on a bomb still killed; stuck at column 2 in the bomb-pass walk. With the stage-clear cheat 00B7:F0: after the first clear the clock showed 0:30 and stage progress fell one stage behind the run without the code (stages 1/3/4 vs 2/4/5 at 600/1,200/1,800 frames), the bonus trip that $B4 asks for at $CA3F. JP cart (GEOKOIAA + GEKKEIAA): fire-1 4, speed 4, $9F/$A0 = 4, stopped at column 3 like without. Pro Action Replay (held every frame): Fire-1 and speed held at 4: fire 4 and speed 4 in play (holding the working copy $AA instead also works; it is copied back to $93). Tested on both carts (JP: 008504 + 00A504), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: GAXGNTAA + GASGVTAA (operands $CE27 and $CE56): fire-1, speed, $AC, $AD and $B3 = 4 in play, no wall pass (column 2). PAR 009204 + 00B204 (zero page one lower) gave fire 4 and speed 4.",
+  "section": "cheat"
+ },
+ {
+  "code": "OXXAPYSX + PEXAZNVZ",
+  "devices": {
+   "Game Genie": "OXXAPYSX + PEXAZNVZ (US) / OXXAPYSX + PEXAZYEZ (JP) / OXXAPYSX + PEXAZNSZ (EU)",
+   "Pro Action Replay": "00AE01 (US) / 00A001 (JP)"
+  },
+  "effect": "Walk over bombs, as with the bomb-pass item",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA $AE -> LDA #$01 at $87A1 (bank 5; JP same address, operand $A0), then EOR #$01 gives 0: the bomb-cell check always answers passable Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; long fuse held (03ED:FF), dropped a bomb, stepped right, held Left: walked back onto the bomb (column 1); without the code stuck at column 2. JP cart (OXXAPYSX + PEXAZYEZ): walked back onto the bomb (column 1; 2 without). Pro Action Replay (held every frame): Bomb pass held on: same walk got back onto the bomb (column 1). Tested on both carts (JP: 00A001), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: OXXAPYSX + PEXAZNSZ (the second code compares the moved operand $AD): walked back onto the bomb (column 1). PAR 00AD01 the same.",
+  "section": "cheat"
+ },
+ {
+  "code": "OXOEGYSX + PEOEINSZ",
+  "devices": {
+   "Game Genie": "OXOEGYSX + PEOEINSZ (US) / OXOEGYSX + PEOEINNP (JP) / OXOEGYSX + PEOEINKZ (EU)",
+   "Pro Action Replay": "00AD01 (US) / 009F01 (JP)"
+  },
+  "effect": "Walk through the brick walls, as with the wall-pass item",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA $AD -> LDA #$01 at $879C (bank 5; JP same address, operand $9F), then EOR #$01 gives 0: the brick check always answers passable Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; held Right on the top row of 1-1: reached column 13 (stopped at 3 without). JP cart (OXOEGYSX + PEOEINNP): reached column 13 (3 without). Pro Action Replay (held every frame): Wall pass held on: same walk reached column 13. Tested on both carts (JP: 009F01), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: OXOEGYSX + PEOEINKZ (compare on the moved operand $AC): reached column 13 (2 without); the US pair stopped at column 2. PAR 00AC01 also reached 13.",
+  "section": "cheat"
+ },
+ {
+  "code": "EASPTANG",
+  "devices": {
+   "Game Genie": "EASPTANG"
+  },
+  "effect": "A $ item works as a fire-up instead of giving points",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $80, so the $ runs the handler at $9080 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $9080 (to $90C7 without the code), fire $AA 0 -> 1. JP cart (EASPTANG): jump to $9080, fire +1. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $9080 ($90C7 without), fire +1.",
+  "section": "cheat"
+ },
+ {
+  "code": "GYSPTANG",
+  "devices": {
+   "Game Genie": "GYSPTANG"
+  },
+  "effect": "A $ item works as a bomb-up instead of giving points",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $74, so the $ runs the handler at $9074 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $9074 (to $90C7 without the code), bombs $A9 0 -> 1. JP cart (GYSPTANG): jump to $9074, bombs +1. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $9074 ($90C7 without), bombs +1.",
+  "section": "cheat"
+ },
+ {
+  "code": "KASPTANK",
+  "devices": {
+   "Game Genie": "KASPTANK"
+  },
+  "effect": "A $ item gives the detonator (remote control) instead of points",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $8C, so the $ runs the handler at $908C instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $908C (to $90C7 without the code), detonator $AF 0 -> 1. JP cart (KASPTANK): jump to $908C, detonator 1. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $908C ($90C7 without), detonator 1.",
+  "section": "cheat"
+ },
+ {
+  "code": "OPSPTANG",
+  "devices": {
+   "Game Genie": "OPSPTANG"
+  },
+  "effect": "A $ item works as a skate (speed +1) instead of giving points",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $91, so the $ runs the handler at $9091 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $9091 (to $90C7 without the code), speed $B3 0 -> 1. JP cart (OPSPTANG): jump to $9091, speed +1. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $9091 ($90C7 without), speed +1.",
+  "section": "cheat"
+ },
+ {
+  "code": "OZSPTANK",
+  "devices": {
+   "Game Genie": "OZSPTANK"
+  },
+  "effect": "A $ item makes you immune to enemies for 16 seconds instead of giving points",
+  "versions": [
+   "JP",
+   "US",
+   "EU"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $A9, so the $ runs the handler at $90A9 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $90A9 (to $90C7 without the code), $B0 = 2 with its seconds timer $B2 at 15, down to 5 after 600 more frames. Enemy immunity is from the code ($82A8 skips the enemy-touch check while $B0 is non-zero), not run. JP cart (OZSPTANK): jump to $90A9, invincibility 2. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $90A9 ($90C7 without), invincibility flag 2.",
+  "section": "cheat"
  }
 ]

@@ -4,11 +4,12 @@
   "effect": "Start at stage 59, 10 bombs, fire 5, speed, score 803,320,000",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "stage 59, past the 50 real stages: item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "stage 59, past the 50 real stages: item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -16,11 +17,12 @@
   "effect": "Start at stage 1, 10 bombs, fire 5, speed, score 3,591,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -28,11 +30,12 @@
   "effect": "Start at stage 1, 10 bombs, fire 5, speed, hidden exit and item marked (reveal 1), wall-pass nibble 15 (not 1, so no wall pass), score 3,591,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Swap the 3rd and 4th letters from the right of any code to highlight the exit and item. The swap keeps the checksum (values 16-18 change by +d, 0, -d, d = the difference of the two letters) but changes two fields: reveal ($94) by d and wall pass ($76) by -d. So it works whenever the two letters differ, and it can also switch wall pass on or off; with two equal letters nothing changes. Here: reveal 1, wall-pass nibble 15 (off). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Swap the 3rd and 4th letters from the right of any code to highlight the exit and item. The swap keeps the checksum (values 16-18 change by +d, 0, -d, d = the difference of the two letters) but changes two fields: reveal ($94) by d and wall pass ($76) by -d. So it works whenever the two letters differ, and it can also switch wall pass on or off; with two equal letters nothing changes. Here: reveal 1, wall-pass nibble 15 (off). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -40,11 +43,12 @@
   "effect": "Start at stage 0, 1 bomb, fire 0, score 0",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Level 00. Every value decodes to 0: stage 0 and fire 0. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Level 00. Every value decodes to 0: stage 0 and fire 0. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -52,11 +56,12 @@
   "effect": "Start at stage 10, 5 bombs, fire 3, speed, score 42,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -64,11 +69,12 @@
   "effect": "Start at stage 20, 9 bombs, fire 4, speed, score 185,000",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -76,11 +82,12 @@
   "effect": "Start at stage 30, 10 bombs, fire 5, speed, score 522,900",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -88,11 +95,12 @@
   "effect": "Start at stage 40, 10 bombs, fire 5, speed, score 1,606,900",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -100,11 +108,12 @@
   "effect": "Start at stage 50, 10 bombs, fire 5, speed, score 3,902,300",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs \"level passwords\" 10-50: the stage is right; each also carries a player's score and power-ups. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -112,11 +121,12 @@
   "effect": "Start at stage 2, 10 bombs, fire 5, speed, score 3,592,100",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -124,11 +134,12 @@
   "effect": "Start at stage 3, 10 bombs, fire 5, speed, score 3,594,000",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -136,11 +147,12 @@
   "effect": "Start at stage 4, 10 bombs, fire 5, speed, score 3,596,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -148,11 +160,12 @@
   "effect": "Start at stage 5, 10 bombs, fire 5, speed, score 3,601,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -160,11 +173,12 @@
   "effect": "Start at stage 6, 10 bombs, fire 5, speed, score 3,603,700",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -172,11 +186,12 @@
   "effect": "Start at stage 7, 10 bombs, fire 5, speed, score 3,606,900",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -184,11 +199,12 @@
   "effect": "Start at stage 8, 10 bombs, fire 5, speed, score 3,611,100",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -196,11 +212,12 @@
   "effect": "Start at stage 9, 10 bombs, fire 5, speed, score 3,616,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -208,11 +225,12 @@
   "effect": "Start at stage 10, 10 bombs, fire 5, speed, score 3,623,300",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -220,11 +238,12 @@
   "effect": "Start at stage 11, 10 bombs, fire 5, speed, score 3,632,100",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -232,11 +251,12 @@
   "effect": "Start at stage 12, 10 bombs, fire 5, speed, score 3,638,700",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -244,11 +264,12 @@
   "effect": "Start at stage 13, 10 bombs, fire 5, speed, score 3,650,300",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -256,11 +277,12 @@
   "effect": "Start at stage 14, 10 bombs, fire 5, speed, score 3,658,700",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -268,11 +290,12 @@
   "effect": "Start at stage 15, 10 bombs, fire 5, speed, score 3,672,700",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -280,11 +303,12 @@
   "effect": "Start at stage 16, 10 bombs, fire 5, speed, score 3,689,700",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -292,11 +316,12 @@
   "effect": "Start at stage 17, 10 bombs, fire 5, speed, score 3,707,300",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -304,11 +329,12 @@
   "effect": "Start at stage 18, 10 bombs, fire 5, speed, score 3,722,300",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -316,11 +342,12 @@
   "effect": "Start at stage 19, 10 bombs, fire 5, speed, score 3,731,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -328,11 +355,12 @@
   "effect": "Start at stage 20, 10 bombs, fire 5, speed, score 3,746,900",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -340,11 +368,12 @@
   "effect": "Start at stage 21, 10 bombs, fire 5, speed, score 3,761,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -352,11 +381,12 @@
   "effect": "Start at stage 22, 10 bombs, fire 5, speed, score 3,785,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -364,11 +394,12 @@
   "effect": "Start at stage 23, 10 bombs, fire 5, speed, score 3,797,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -376,11 +407,12 @@
   "effect": "Start at stage 24, 10 bombs, fire 5, speed, score 3,811,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -388,11 +420,12 @@
   "effect": "Start at stage 25, 10 bombs, fire 5, speed, score 3,835,100",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -400,11 +433,12 @@
   "effect": "Start at stage 26, 10 bombs, fire 5, speed, score 3,848,700",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -412,11 +446,12 @@
   "effect": "Start at stage 27, 10 bombs, fire 5, speed, score 3,917,200",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -424,11 +459,12 @@
   "effect": "Start at stage 28, 10 bombs, fire 5, speed, score 3,937,800",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -436,11 +472,12 @@
   "effect": "Start at stage 30, 10 bombs, fire 5, speed, score 3,977,600",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -448,11 +485,12 @@
   "effect": "Start at stage 31, 10 bombs, fire 5, speed, score 3,993,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -460,11 +498,12 @@
   "effect": "Start at stage 32, 10 bombs, fire 5, speed, score 4,005,600",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -472,11 +511,12 @@
   "effect": "Start at stage 33, 10 bombs, fire 5, speed, score 4,022,800",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -484,11 +524,12 @@
   "effect": "Start at stage 34, 10 bombs, fire 5, speed, score 4,039,200",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -496,11 +537,12 @@
   "effect": "Start at stage 35, 10 bombs, fire 5, speed, score 6,519,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -508,11 +550,12 @@
   "effect": "Start at stage 36, 10 bombs, fire 5, speed, score 6,537,000",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -520,11 +563,12 @@
   "effect": "Start at stage 37, 10 bombs, fire 5, speed, score 6,557,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -532,11 +576,12 @@
   "effect": "Start at stage 38, 10 bombs, fire 5, speed, score 6,583,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -544,11 +589,12 @@
   "effect": "Start at stage 39, 10 bombs, fire 5, speed, score 6,607,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -556,11 +602,12 @@
   "effect": "Start at stage 40, 10 bombs, fire 5, speed, score 6,631,600",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -568,11 +615,12 @@
   "effect": "Start at stage 41, 10 bombs, fire 5, speed, score 6,658,600",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -580,11 +628,12 @@
   "effect": "Start at stage 42, 10 bombs, fire 5, speed, score 6,686,400",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -592,11 +641,12 @@
   "effect": "Start at stage 43, 10 bombs, fire 5, speed, score 6,719,200",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -604,11 +654,12 @@
   "effect": "Start at stage 44, 10 bombs, fire 5, speed, score 6,753,000",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -616,11 +667,12 @@
   "effect": "Start at stage 45, 10 bombs, fire 5, speed, score 6,787,800",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -628,11 +680,12 @@
   "effect": "Start at stage 46, 10 bombs, fire 5, speed, score 6,827,800",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -640,11 +693,12 @@
   "effect": "Start at stage 47, 10 bombs, fire 5, speed, score 6,859,800",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -652,11 +706,12 @@
   "effect": "Start at stage 48, 10 bombs, fire 5, speed, score 6,902,800",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -664,11 +719,12 @@
   "effect": "Start at stage 49, 10 bombs, fire 5, speed, score 6,944,800",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -676,11 +732,12 @@
   "effect": "Start at stage 50, 10 bombs, fire 5, speed, score 3,551,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -688,11 +745,12 @@
   "effect": "Stage 1 with fire 11, detonator and flame pass",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Decoded: stage 1, 1 bomb, fire 11, detonator, flame pass, score digits A000016 (a digit over 9 shows as a garbage tile). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Decoded: stage 1, 1 bomb, fire 11, detonator, flame pass, score digits A000016 (a digit over 9 shows as a garbage tile). typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -700,11 +758,12 @@
   "effect": "Start at stage 131, 10 bombs, fire 5, speed, score 3,545,700",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Stage 131, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Stage 131, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -712,11 +771,12 @@
   "effect": "Start at stage 243, 10 bombs, fire 5, speed, score digits 0035D57 (a digit over 9 shows as a garbage tile)",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Stage 243, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Stage 243, past the 50 real stages (the number is drawn with tiles past 9); item and enemies are read from past their tables. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -724,11 +784,12 @@
   "effect": "Start at stage 29, 10 bombs, fire 5, speed, score 3,949,600",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "GameFAQs list \"start on given level with maximum bombs and fire\": right; each also has speed and a score of 3.5 to 7 million. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -736,11 +797,12 @@
   "effect": "Start at stage 74, 10 bombs, fire 15, speed, wall pass, detonator, flame pass, hidden exit and item marked (reveal 1), score 0",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Stage 74, with fire 15, 10 bombs, every stored power-up and reveal. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "Stage 74, with fire 15, 10 bombs, every stored power-up and reveal. typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -748,11 +810,12 @@
   "effect": "Start at stage 1, 1 bomb, fire 5, score 4,500",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -760,11 +823,12 @@
   "effect": "Start at stage 1, 10 bombs, fire 5, speed, score 0",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back",
+  "note": "typed with the pad in Mesen (US and JP); RAM $58, $61-$67, $73-$79 and $94 read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -772,11 +836,12 @@
   "effect": "Rejected: 19 letters",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "GameFAQs \"Level Passwords FDS\" level 29 is missing a letter (the entry screen takes exactly 20). The 20-letter IHJDIKMEFNCLFEINMIHF in the other lists is stage 29.",
+  "note": "GameFAQs \"Level Passwords FDS\" level 29 is missing a letter (the entry screen takes exactly 20). The 20-letter IHJDIKMEFNCLFEINMIHF in the other lists is stage 29. On the Famicom Disk System dump too (typed in Mesen): 19 letters leave the entry screen waiting for the 20th, nothing loads.",
   "section": "Passwords"
  },
  {
@@ -784,11 +849,12 @@
   "effect": "Start at stage 1 with the new-game power-ups",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "the code the game shows at a game over on stage 1 with score 0 (every state has exactly one code); typed with the pad in Mesen (US)",
+  "note": "the code the game shows at a game over on stage 1 with score 0 (every state has exactly one code); typed with the pad in Mesen (US); FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -796,11 +862,12 @@
   "effect": "Start at stage 1, 10 bombs, fire 5, speed, wall pass, detonator, flame pass, score 0",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "every power-up a password can hold (bomb pass and the mystery item are never stored); typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "every power-up a password can hold (bomb pass and the mystery item are never stored); typed with the pad in Mesen (US and JP), RAM read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -808,11 +875,12 @@
   "effect": "Start at stage 50, 10 bombs, fire 5, speed, wall pass, detonator, flame pass, score 0",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "stage 50 with every storable power-up; typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "stage 50 with every storable power-up; typed with the pad in Mesen (US and JP), RAM read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -820,11 +888,12 @@
   "effect": "Start at stage 1, 1 bomb, fire 1, hidden exit and item marked (reveal 1), score 0",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "the hidden exit and item show as marked bricks: the known $94 debug flag in RAM, reachable by password (value 16); typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "the hidden exit and item show as marked bricks: the known $94 debug flag in RAM, reachable by password (value 16); typed with the pad in Mesen (US and JP), RAM read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -832,11 +901,12 @@
   "effect": "Start at stage 1, 16 bombs, fire 15, score 0",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "no range check: fire 15 and 16 bombs, past the in-game caps of fire 5 and 10 bombs; typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "no range check: fire 15 and 16 bombs, past the in-game caps of fire 5 and 10 bombs; typed with the pad in Mesen (US and JP), RAM read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -844,11 +914,12 @@
   "effect": "Start at stage 1, 1 bomb, fire 1, score 999,999,900",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "score 999,999,900, the largest the counter can show; typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "score 999,999,900, the largest the counter can show; typed with the pad in Mesen (US and JP), RAM read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -856,11 +927,12 @@
   "effect": "Start at stage 0, 1 bomb, fire 1, score 0",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "stage 0 plays; typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "stage 0 plays; typed with the pad in Mesen (US and JP), RAM read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -868,11 +940,12 @@
   "effect": "Stage 51: the game freezes after drawing the map",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "the enemy row read past the stage-26-50 table gives types $86, $24, $84 ...; the game stops with no timer and no Bomberman (docs/img/nes1/stage51_freeze.png); typed with the pad in Mesen (US)",
+  "note": "the enemy row read past the stage-26-50 table gives types $86, $24, $84 ...; the game stops with no timer and no Bomberman (docs/img/nes1/stage51_freeze.png); typed with the pad in Mesen (US); FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords",
   "img": "stage51_freeze.png"
  },
@@ -881,11 +954,12 @@
   "effect": "Stage 96: hangs on the STAGE 96 screen",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "242 soft blocks never finish placing; stages 96-103 and 224-231 do the same (docs/img/nes1/stage97_hang.png); typed with the pad in Mesen (US)",
+  "note": "242 soft blocks never finish placing; stages 96-103 and 224-231 do the same (docs/img/nes1/stage97_hang.png); typed with the pad in Mesen (US); FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords"
  },
  {
@@ -893,11 +967,12 @@
   "effect": "Start at stage 53 with the hidden exit and item marked",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "The marks come from this code's reveal nibble (3), not the stage: stage 53 by a code with reveal 0 shows nothing (img/nes1/stage53_reveal0.png). Decoded: stage 53, 7 bombs, fire 15, speed, detonator, flame pass, hidden exit and item marked (reveal 3), wall-pass nibble 3 (not 1, so no wall pass), score digits 5DDF826 (a digit over 9 shows as a garbage tile); typed with the pad in Mesen (US and JP), RAM read back",
+  "note": "The marks come from this code's reveal nibble (3), not the stage: stage 53 by a code with reveal 0 shows nothing (img/nes1/stage53_reveal0.png). Decoded: stage 53, 7 bombs, fire 15, speed, detonator, flame pass, hidden exit and item marked (reveal 3), wall-pass nibble 3 (not 1, so no wall pass), score digits 5DDF826 (a digit over 9 shows as a garbage tile); typed with the pad in Mesen (US and JP), RAM read back; FDS (Disk Writer) dump: typed the same way in Mesen, the same RAM read back",
   "section": "Passwords",
   "img": "stage53_reveal3.png"
  },
@@ -910,11 +985,12 @@
   "effect": "Invincible (fire and enemies)",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $7A, the mystery-item timer: the fire check ($C6E9) and the enemy check ($D06F) skip while it is non-zero. Random bot, 12,000 frames: 0 deaths (US and JP; 3 deaths and a game over without). Game Genie: the two codes below, same bot test.",
+  "note": "Mesen 2 cheat engine (custom). RAM $7A, the mystery-item timer: the fire check ($C6E9) and the enemy check ($D06F) skip while it is non-zero. Random bot, 12,000 frames: 0 deaths (US and JP; 3 deaths and a game over without). Game Genie: the two codes below, same bot test. FDS dump: 0 deaths in 5,000 frames of the bot (3 and a game over without); Game Genie there needs FDS addresses (OXTZPV + OZTLYE, card below).",
   "section": "cheat"
  },
  {
@@ -948,19 +1024,35 @@
   "section": "cheat"
  },
  {
+  "code": "OXTZPV + OZTLYE",
+  "devices": {
+   "Game Genie": "OXTZPV + OZTLYE",
+   "Pro Action Replay": "007AFF"
+  },
+  "effect": "Invincible (FDS)",
+  "versions": [
+   "fds"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen 2 cheat engine (Game Genie). The FDS program is the Japanese cart's moved from $C000 to $A000, so the JP code's two instructions sit at $A6E1 / $B067. 0 deaths in 5,000 frames of the random bot (3 deaths and a game over without). A Game Genie does not fit a Famicom Disk System, so this is for emulators' cheat engines only. Pro Action Replay 007AFF: the RAM code above.",
+  "section": "cheat"
+ },
+ {
   "code": "0068:02",
   "devices": {
    "Pro Action Replay": "006802",
-   "Game Genie": "SXPKAG (US) / SXPGAG (JP)"
+   "Game Genie": "SXPKAG (US) / SXPGAG (JP) / SXPZAG (FDS, emulator only)"
   },
   "effect": "Infinite lives",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $68, lives (DEC / BMI at US $C498): 19 deaths in 12,000 frames, no game over (US and JP). Game Genie: DEC $68 -> LDA $68 at $C498 (JP $C490); same bot: 18 / 16 deaths in 12,000 frames, lives stay 2.",
+  "note": "Mesen 2 cheat engine (custom). RAM $68, lives (DEC / BMI at US $C498): 19 deaths in 12,000 frames, no game over (US and JP). Game Genie: DEC $68 -> LDA $68 at $C498 (JP $C490); same bot: 18 / 16 deaths in 12,000 frames, lives stay 2. FDS dump: 8 deaths in 5,000 frames, no game over (RAM code and SXPZAG, the Game Genie code moved to $A490).",
   "section": "cheat"
  },
  {
@@ -972,11 +1064,12 @@
   "effect": "Every stage clears at once",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "fds"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Mesen 2 cheat engine (custom). RAM $5E, the stage-clear flag ($CCA1 sets it on the open exit): 11 stages cleared in 6,000 frames with no input (US and JP). Game Genie: the main loop's LDA $5E -> LDA #$5E ($C46E, JP $C466); 11 stages cleared in 6,000 frames with no input (US and JP).",
+  "note": "Mesen 2 cheat engine (custom). RAM $5E, the stage-clear flag ($CCA1 sets it on the open exit): 11 stages cleared in 6,000 frames with no input (US and JP). Game Genie: the main loop's LDA $5E -> LDA #$5E ($C46E, JP $C466); 11 stages cleared in 6,000 frames with no input (US and JP). FDS dump: 6 stages cleared in 3,000 frames with no input (RAM code).",
   "section": "cheat"
  },
  {
@@ -992,5 +1085,372 @@
   "verified": "emu",
   "note": "The GBA builds mask the pad with AND #$83 instead of the cart's AND #$8F in both blink loops (Classic NES Series $DACE/$DAEE, Famicom Mini $DAC6/$DAE6). In BizHawk three Ups left the slot blank and three Lefts gave N; on the US cart in Mesen three Ups gave N.",
   "section": "region"
+ },
+ {
+  "code": "AEZKLL",
+  "devices": {
+   "Game Genie": "AEZKLL (US) / AEZGLL (JP) / AEZZLL (FDS)",
+   "Pro Action Replay": "006800"
+  },
+  "effect": "Start a new game with no spare lives (LEFT 0)",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$02 -> LDA #$00 at $C3AA (operand $C3AB, JP $C3A3), stored to lives $68 at new game Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; lives $68 = 0 at the start (2 without); the first death made $68 = $FF (game over). JP cart (AEZGLL): lives 0, game over on the first death. Pro Action Replay (held every frame): Lives held at 0: one death (bomb at the start) and the game returned to the title; same on US and JP. Tested on both carts (JP: 006800), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AEZZLL (JP address - $2000, same value and compare) gave lives 0, game over on the first death. PAR 006800 also run there (lives held at 0). A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "PEZKLU",
+  "devices": {
+   "Game Genie": "PEZKLU (US) / PEZGLU (JP) / PEZZLU (FDS)",
+   "Pro Action Replay": "006809"
+  },
+  "effect": "Start a new game with 9 spare lives (LEFT 9), 10 in all",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$02 -> LDA #$09 at $C3AA (operand $C3AB, JP $C3A3), stored to lives $68 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; lives $68 = 9 at the start (2 without). JP cart (PEZGLU): lives 9. Pro Action Replay (held every frame): Lives held at 9: a death left LEFT at 9 (so it is infinite lives at 9, not a start value). Tested on both carts (JP: 006809), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so PEZZLU (JP address - $2000, same value and compare) gave lives 9. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "SZIGAT",
+  "devices": {
+   "Game Genie": "SZIGAT (US) / SZGKAT (JP) / SZGXAT (FDS)",
+   "Pro Action Replay": "0093C8"
+  },
+  "effect": "The stage timer never counts down",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: DEC $93 -> LDA $93 at $C650 (JP $C648): the timer byte $93 is no longer decremented Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; timer $93 stayed 200 over 556 frames; without the code 198 -> 194 in 256 frames (one per 64 frames). JP cart (SZGKAT): timer held at 200. Pro Action Replay (held every frame): Timer held at 200 (TIME 200) over 556 frames; same on JP. Tested on both carts (JP: 0093C8), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so SZGXAT (JP address - $2000, same value and compare) gave timer held at 200. PAR 0093C8 also run there. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "VPGKGG",
+  "devices": {
+   "Game Genie": "VPGKGG (US) / VPGGGG (JP) / VPGZGG (FDS)"
+  },
+  "effect": "Each stage starts with 150 on the timer instead of 200",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$C8 -> LDA #$96 at $C44B (operand $C44C, JP $C444): stage timer start value $93 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; timer $93 = 148 300 frames into stage 1 (198 without), still counting down (144 after 256 more). JP cart (VPGGGG): timer 148 after 300 frames. No Pro Action Replay form: only the start value changes; a held RAM value would freeze the timer instead Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so VPGZGG (JP address - $2000, same value and compare) gave timer 148 at the start of play. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "VYGKGK",
+  "devices": {
+   "Game Genie": "VYGKGK (US) / VYGGGK (JP) / VYGZGK (FDS)"
+  },
+  "effect": "Each stage starts with 254 on the timer instead of 200",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$C8 -> LDA #$FE at $C44B (operand $C44C, JP $C444): stage timer start value $93 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; timer $93 = 252 300 frames into stage 1 (198 without), counting down normally (248 after 256 more). JP cart (VYGGGK): timer 252 after 300 frames. No Pro Action Replay form: only the start value changes; a held RAM value would freeze the timer instead Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so VYGZGK (JP address - $2000, same value and compare) gave timer 252. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "ZELGYU",
+  "devices": {
+   "Game Genie": "ZELGYU (US) / ZEZKYU (JP) / ZEZXYU (FDS)",
+   "Pro Action Replay": "00580A"
+  },
+  "effect": "START begins a new game on stage 10 instead of stage 1",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$01 -> LDA #$0A at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 10 when play started (1 without). JP cart (ZEZKYU): stage 10. Pro Action Replay (held every frame): Stage held at 10: the game starts on stage 10, but it stays there: with the stage-clear cheat 005E:01 added, 4 clears in 1,500 frames all reloaded stage 10 (without the hold they reached stage 5). Start value checked on both carts; the stage-lock run was on the JP cart. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so ZEZXYU (JP address - $2000, same value and compare) gave stage 10. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "GOLGYL",
+  "devices": {
+   "Game Genie": "GOLGYL (US) / GOZKYL (JP) / GOZXYL (FDS)",
+   "Pro Action Replay": "005814"
+  },
+  "effect": "START begins a new game on stage 20 instead of stage 1",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$01 -> LDA #$14 at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 20 when play started (1 without). JP cart (GOZKYL): stage 20. Pro Action Replay (held every frame): Not run for 20; same byte as the tested 0058:0A and 0058:32 (stage held, so it never advances). Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so GOZXYL (JP address - $2000, same value and compare) gave stage 20. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "TOLGYU",
+  "devices": {
+   "Game Genie": "TOLGYU (US) / TOZKYU (JP) / TOZXYU (FDS)",
+   "Pro Action Replay": "00581E"
+  },
+  "effect": "START begins a new game on stage 30 instead of stage 1",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$01 -> LDA #$1E at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 30 when play started (1 without). JP cart (TOZKYU): stage 30. Pro Action Replay (held every frame): Not run for 30; same byte as the tested 0058:0A and 0058:32 (stage held, so it never advances). Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so TOZXYU (JP address - $2000, same value and compare) gave stage 30. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "AXLGYU",
+  "devices": {
+   "Game Genie": "AXLGYU (US) / AXZKYU (JP) / AXZXYU (FDS)",
+   "Pro Action Replay": "005828"
+  },
+  "effect": "START begins a new game on stage 40 instead of stage 1",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$01 -> LDA #$28 at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 40 when play started (1 without). JP cart (AXZKYU): stage 40. Pro Action Replay (held every frame): Not run for 40; same byte as the tested 0058:0A and 0058:32 (stage held, so it never advances). Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AXZXYU (JP address - $2000, same value and compare) gave stage 40. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "ZULGYL",
+  "devices": {
+   "Game Genie": "ZULGYL (US) / ZUZKYL (JP) / ZUZXYL (FDS)",
+   "Pro Action Replay": "005832"
+  },
+  "effect": "START begins a new game on stage 50 instead of stage 1",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$01 -> LDA #$32 at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 50 when play started (1 without); screenshot of stage 50 taken. JP cart (ZUZKYL): stage 50. Pro Action Replay (held every frame): Stage held at 50: the game starts on stage 50 and stays on it after each clear (the hold rewrites $58; checked with 0058:0A). Tested on both carts (JP: 005832), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so ZUZXYL (JP address - $2000, same value and compare) gave stage 50. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "AXKKALAP",
+  "devices": {
+   "Game Genie": "AXKKALAP (US) / AXKGALAP (JP) / AXKZALAP (FDS)",
+   "Pro Action Replay": "007320"
+  },
+  "effect": "Start a new game with fire 2 (blasts reach 2 squares)",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$10 -> LDA #$20 at $C3C7 (operand $C3C8, JP $C3C0): fire $73 at new game Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; fire $73 = $20 (fire 2; $10 without). Fire-ups still stop at $50. JP cart (AXKGALAP): fire $20. Pro Action Replay (held every frame): Fire held at $20 (fire 2): $73 = $20 throughout; fire-ups have no effect while held. Tested on both carts (JP: 007320), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AXKZALAP (JP address - $2000, same value and compare) gave fire $20. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "AUKKALAP",
+  "devices": {
+   "Game Genie": "AUKKALAP (US) / AUKGALAP (JP) / AUKZALAP (FDS)",
+   "Pro Action Replay": "007330"
+  },
+  "effect": "Start a new game with fire 3",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$10 -> LDA #$30 at $C3C7 (operand $C3C8, JP $C3C0): fire $73 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; fire $73 = $30 (fire 3; $10 without). JP cart (AUKGALAP): fire $30. Pro Action Replay (held every frame): Not run separately; same byte as the tested 007320 / 007380. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AUKZALAP (JP address - $2000, same value and compare) gave fire $30. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "EEKKALAP",
+  "devices": {
+   "Game Genie": "EEKKALAP (US) / EEKGALAP (JP) / EEKZALAP (FDS)",
+   "Pro Action Replay": "007380"
+  },
+  "effect": "Start a new game with fire 8, past the normal top of 5",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$10 -> LDA #$80 at $C3C7 (operand $C3C8, JP $C3C0): fire $73; the blast code compares unsigned against $73 so 8 works. From the code (not run): the fire-up cap at $CF1C only matches exactly $50, so later fire-ups keep adding 1 and past $F0 the value wraps to 0 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; fire $73 = $80 (fire 8; $10 without); blast screenshot taken (bricks stop it on stage 1). JP cart (EEKGALAP): fire $80. Pro Action Replay (held every frame): Fire held at $80 (fire 8): $73 = $80 throughout. Tested on both carts (JP: 007380), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so EEKZALAP (JP address - $2000, same value and compare) gave fire $80. PAR 007380 also run there. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "NYXKUIEX",
+  "devices": {
+   "Game Genie": "NYXKUIEX (US) / NYXGUIEX (JP) / NYXZUIEX (FDS)"
+  },
+  "effect": "Bombs take 255 frames (about 4.2 s) to explode instead of 160 (about 2.7 s)",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$A0 -> LDA #$FF at $CD2A (operand $CD2B, JP $CD23): fuse $03BE,X set when a bomb is placed (one tick per frame) Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; bomb dropped at the start lived 254 frames (159 without). JP cart (NYXGUIEX): bomb lived 254 frames. No Pro Action Replay form: the fuse is a per-bomb countdown loaded from a ROM constant; no single RAM byte holds it Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so NYXZUIEX (JP address - $2000, same value and compare) gave bomb lived 254 frames (159 without). A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "AYXKUIEZ",
+  "devices": {
+   "Game Genie": "AYXKUIEZ (US) / AYXGUIEZ (JP) / AYXZUIEZ (FDS)"
+  },
+  "effect": "Bombs explode after 112 frames (about 1.9 s) instead of 160",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA #$A0 -> LDA #$70 at $CD2A (operand $CD2B, JP $CD23): per-bomb fuse $03BE,X Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; bomb lived 111 frames (159 without). JP cart (AYXGUIEZ): bomb lived 111 frames. No Pro Action Replay form: the fuse is a per-bomb countdown loaded from a ROM constant; no single RAM byte holds it Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AYXZUIEZ (JP address - $2000, same value and compare) gave bomb lived 111 frames. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "XZEGNIVZ + PAEKEIGN",
+  "devices": {
+   "Game Genie": "XZEGNIVZ + PAEKEIGN (US) / XXNKNGVZ + PAEGEIGN (JP) / XXNXNGVZ + PAEZEIGN (FDS)",
+   "Pro Action Replay": "007409"
+  },
+  "effect": "You can have up to 10 bombs out at once (all 10 bomb slots), whatever your bomb count says",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDX $74 -> LDX #$09 at $CD07 (JP $CCFF): the free-slot search starts at slot 9 instead of bombs-1 ($74), so 10 slots; $74 itself is unchanged Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; random bot, 1,200 frames: up to 3 bombs out at once (1 without); $74 stayed 0. JP cart (XXNKNGVZ + PAEGEIGN): up to 3 bombs out in the bot run (1 without). Pro Action Replay (held every frame): Bombs-1 held at 9 (10 bombs, the in-game maximum): same bot run, up to 3 out at once (1 without). Tested on both carts (JP: 007409), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so XXNXNGVZ + PAEZEIGN (JP address - $2000, same value and compare) gave up to 3 bombs out in the bot run (1 without). A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "OXEKVPSX + AESKNKTA",
+  "devices": {
+   "Game Genie": "OXEKVPSX + AESKNKTA (US) / OXEGVPSX + AESGNKTA (JP) / OXEZVPSX + AESZNKTA (FDS)",
+   "Pro Action Replay": "007701"
+  },
+  "effect": "Bombs never go off on their own and B sets them off, from the start and after every death (works like the detonator, though the detonator flag stays off)",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA $77 -> LDA #$77 at $C98E (JP $C986): the fuse countdown is always skipped; BEQ $CCEE -> BEQ +0 at $CCDE (operand $CCDF, JP $CCD7): B always detonates. $77 itself stays 0 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; bomb still out after 910 frames, B set it off (frame 912); without the code it went off at 159. JP cart (OXEGVPSX + AESGNKTA): bomb out 909 frames until B. Pro Action Replay (held every frame): Detonator held on: bomb still out after 910 frames, B set it off; after a death $77 still read 1. Tested on both carts (JP: 007701), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so OXEZVPSX + AESZNKTA (JP address - $2000, same value and compare) gave bomb still out after 909 frames until B. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "GXEKLGSA",
+  "devices": {
+   "Game Genie": "GXEKLGSA (US) / GXEGLGSA (JP) / GXEZLGSA (FDS)",
+   "Pro Action Replay": "007701"
+  },
+  "effect": "Once you have the detonator, dying no longer takes it away (the other power-ups are still lost)",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: STA $77 -> BIT $77 at $C48B (JP $C483): the death reset no longer clears the detonator flag $77 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; detonator $77 and wall pass $76 set to 1, then death: $77 still 1, $76 back to 0; without the code both 0. JP cart (GXEGLGSA): detonator kept after a death, wall pass lost. Pro Action Replay (held every frame): Detonator held on: $77 read 1 after the death (and from the start, so this is the same as the remote code above). Tested on both carts (JP: 007701), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so GXEZLGSA (JP address - $2000, same value and compare) gave detonator kept after a death, wall pass lost. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "AESKGUIZ",
+  "devices": {
+   "Game Genie": "AESKGUIZ (US) / AESGGUIZ (JP) / AESZGUIZ (FDS)",
+   "Pro Action Replay": "007409 + 007340 + 007701"
+  },
+  "effect": "A new game starts with the attract demo's power-ups: 10 bombs, fire 4 and the detonator (a death takes the detonator as usual; the bombs and fire stay)",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: BEQ $C40A -> BEQ +0 at $C3DB (operand $C3DC, JP $C3D4): the demo-only setup always runs: $74 = 9, $73 = $40, $77 = 1 (it also writes 0 to $4015 and sets the demo input pointer $AC-$AF; play was unaffected in the test) Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; bombs-1 $74 = 9, fire $73 = $40, detonator $77 = 1 at the start (0, $10, 0 without); the player still answers the pad (walked to column 5) and bot play went on normally. JP cart (AESGGUIZ): $74 = 9, $73 = $40, $77 = 1. Pro Action Replay (held every frame): All three held: $74 = 9, $73 = $40, $77 = 1 at the start and after a death (held, so never lost). Tested on both carts (JP: 007409 + 007340 + 007701), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AESZGUIZ (JP address - $2000, same value and compare) gave $74 = 9, $73 = $40, $77 = 1 at the start. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "OXVGITSX",
+  "devices": {
+   "Game Genie": "OXVGITSX (US) / OXSKITSX (JP) / OXSXITSX (FDS)",
+   "Pro Action Replay": "007901"
+  },
+  "effect": "Your own and other bomb blasts can't kill you (enemies still can); same as having the flame-pass item",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: LDA $79 -> LDA #$79 at $C6E5 (JP $C6DD): the flame-pass test in the blast death check is always true Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stood on a bomb: no death in 980 frames (died at frame ~160 without). JP cart (OXSKITSX): no death standing on the bomb. Pro Action Replay (held every frame): Flame pass held on: stood on the bomb, no death. Tested on both carts (JP: 007901), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so OXSXITSX (JP address - $2000, same value and compare) gave no death standing on the bomb. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "OZNKNNPK + AEEGEYPA",
+  "devices": {
+   "Game Genie": "OZNKNNPK + AEEGEYPA (US) / OZNGNNPK + AANKEYPA (JP) / OZNZNNPK + AANXEYPA (FDS)",
+   "Pro Action Replay": "007601"
+  },
+  "effect": "Walk through the breakable brick walls (not the concrete pillars), as with the wall-pass item",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Game Genie: EOR #$01 -> LDA #$00 at $CF7F (JP $CF77): the brick check after LDA $76 always answers \"passable\" Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; held Right on row 1 of stage 1: reached column 9-10 (stopped by a brick at column 4 without; JP: 10 vs 5); the death in that run was an enemy, not a blast. JP cart (OZNGNNPK + AANKEYPA): reached column 10-11 (5 without). Pro Action Replay (held every frame): Wall pass held on: same walk reached column 9-10 (4-5 without). Tested on both carts (JP: 007601), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so OZNZNNPK + AANXEYPA (JP address - $2000, same value and compare) gave reached column 13 (5 without). A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
+  "section": "cheat"
+ },
+ {
+  "code": "Score 999,999,900, then any points",
+  "effect": "The score wraps to 900,000,000, and that becomes the TOP score on the title",
+  "versions": [
+   "US",
+   "JP",
+   "fds"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "secret",
+  "note": "The add at $DDA6 carries out of the top digit and drops it, so 999,999,900 + 100 gives 900,000,000; the top-score copy then stores it, and after a reset the title shows TOP 900000000. Mesen, natural play: password FEKIDPPDJABBAFBBABAF (score 999,999,900), one kill. Image: before the kill, after it, and the title after a reset. Mesen 2, JP cart: score digits set to 999,999,900, the first kill gave 900,000,000 and the top-score copy took it ($01-$07 = 9000000). The add and top-score code ($DD84-$DDC7; JP $DD1C, FDS $BD1C) is byte-identical; FDS static.",
+  "img": "score_overflow.png"
  }
 ]

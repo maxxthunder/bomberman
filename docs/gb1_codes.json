@@ -4,11 +4,12 @@
   "effect": "Start at round 1-1 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 0: $C3F0 = 0; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-1 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 0: $C3F0 = 0; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-1 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -16,11 +17,12 @@
   "effect": "Start at round 1-2 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 1: $C3F0 = 1; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-2 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 1: $C3F0 = 1; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-2 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -28,11 +30,12 @@
   "effect": "Start at round 1-3 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 2: $C3F0 = 2; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-3 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 2: $C3F0 = 2; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-3 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -40,11 +43,12 @@
   "effect": "Start at round 1-Boss (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 3: $C3F0 = 3; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-Boss (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 3: $C3F0 = 3; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 1-Boss (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -52,11 +56,12 @@
   "effect": "Start at round 2-1 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 4: $C3F0 = 4; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-1 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 4: $C3F0 = 4; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-1 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -64,11 +69,12 @@
   "effect": "Start at round 2-2 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 5: $C3F0 = 5; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-2 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 5: $C3F0 = 5; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-2 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -76,11 +82,12 @@
   "effect": "Start at round 2-3 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 6: $C3F0 = 6; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-3 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 6: $C3F0 = 6; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-3 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -88,11 +95,12 @@
   "effect": "Start at round 2-Boss (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 7: $C3F0 = 7; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-Boss (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 7: $C3F0 = 7; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 2-Boss (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -100,11 +108,12 @@
   "effect": "Start at round 3-1 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 8: $C3F0 = 8; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-1 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 8: $C3F0 = 8; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-1 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -112,11 +121,12 @@
   "effect": "Start at round 3-2 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 9: $C3F0 = 9; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-2 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 9: $C3F0 = 9; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-2 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -124,11 +134,12 @@
   "effect": "Start at round 3-3 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 10: $C3F0 = 10; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-3 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 10: $C3F0 = 10; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-3 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -136,11 +147,12 @@
   "effect": "Start at round 3-Boss (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 11: $C3F0 = 11; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-Boss (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 11: $C3F0 = 11; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 3-Boss (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -148,11 +160,12 @@
   "effect": "Start at round 4-1 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 12: $C3F0 = 12; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-1 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 12: $C3F0 = 12; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-1 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -160,11 +173,12 @@
   "effect": "Start at round 4-2 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 13: $C3F0 = 13; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-2 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 13: $C3F0 = 13; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-2 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -172,11 +186,12 @@
   "effect": "Start at round 4-3 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 14: $C3F0 = 14; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-3 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 14: $C3F0 = 14; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-3 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -184,11 +199,12 @@
   "effect": "Start at round 4-Boss (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 15: $C3F0 = 15; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-Boss (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 15: $C3F0 = 15; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 4-Boss (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -196,11 +212,12 @@
   "effect": "Start at round 5-1 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 16: $C3F0 = 16; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-1 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 16: $C3F0 = 16; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-1 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -208,11 +225,12 @@
   "effect": "Start at round 5-2 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 17: $C3F0 = 17; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-2 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 17: $C3F0 = 17; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-2 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -220,11 +238,12 @@
   "effect": "Start at round 5-3 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 18: $C3F0 = 18; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-3 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 18: $C3F0 = 18; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-3 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -232,11 +251,12 @@
   "effect": "Start at round 5-Boss (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 19: $C3F0 = 19; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-Boss (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 19: $C3F0 = 19; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 5-Boss (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -244,11 +264,12 @@
   "effect": "Start at round 6-1 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 20: $C3F0 = 20; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-1 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 20: $C3F0 = 20; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-1 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -256,11 +277,12 @@
   "effect": "Start at round 6-2 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 21: $C3F0 = 21; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-2 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 21: $C3F0 = 21; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-2 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -268,11 +290,12 @@
   "effect": "Start at round 6-3 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 22: $C3F0 = 22; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-3 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 22: $C3F0 = 22; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-3 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -280,11 +303,12 @@
   "effect": "Start at round 6-Boss (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 23: $C3F0 = 23; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-Boss (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 23: $C3F0 = 23; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 6-Boss (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -292,11 +316,12 @@
   "effect": "Start at round 7-1 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 24: $C3F0 = 24; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-1 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 24: $C3F0 = 24; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-1 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -304,11 +329,12 @@
   "effect": "Start at round 7-2 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 25: $C3F0 = 25; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-2 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 25: $C3F0 = 25; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-2 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -316,11 +342,12 @@
   "effect": "Start at round 7-3 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 26: $C3F0 = 26; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-3 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 26: $C3F0 = 26; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-3 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -328,11 +355,12 @@
   "effect": "Start at round 7-Boss (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 27: $C3F0 = 27; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-Boss (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 27: $C3F0 = 27; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 7-Boss (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -340,11 +368,12 @@
   "effect": "Start at round 8-1 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 28: $C3F0 = 28; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-1 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 28: $C3F0 = 28; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-1 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -352,11 +381,12 @@
   "effect": "Start at round 8-2 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 29: $C3F0 = 29; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-2 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 29: $C3F0 = 29; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-2 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -364,11 +394,12 @@
   "effect": "Start at round 8-3 (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 30: $C3F0 = 30; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-3 (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 30: $C3F0 = 30; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-3 (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -376,11 +407,12 @@
   "effect": "Start at round 8-Boss (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 31: $C3F0 = 31; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-Boss (Bomberman).",
+  "note": "Table $0A:42EE (JP) / $0A:4315 (Wario) record 31: $C3F0 = 31; Wario also $C3D5 = 1 (play as Bomberman). Typed with the pad in Mesen in both versions. GameFAQs (Wario Blast page) lists it as level 8-Boss (Bomberman). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -740,11 +772,12 @@
   "effect": "Start at 1-1 with every power-up (Bomberman)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Value $20 (JP) / $40 (Wario): $C3FB = 1, read by the item loaders $00:10A7, $00:2727, $01:405B. Typed with the pad in both versions. GameFAQs lists it for Wario Blast (\"Start game powered up: Bomberman\") and, on its Bomberman GB page, as All Power-Ups (that page is the US Bomberman GB = JP GB 2, which has the same code, see docs/gb2.md).",
+  "note": "Value $20 (JP) / $40 (Wario): $C3FB = 1, read by the item loaders $00:10A7, $00:2727, $01:405B. Typed with the pad in both versions. GameFAQs lists it for Wario Blast (\"Start game powered up: Bomberman\") and, on its Bomberman GB page, as All Power-Ups (that page is the US Bomberman GB = JP GB 2, which has the same code, see docs/gb2.md). Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords"
  },
  {
@@ -763,11 +796,12 @@
   "effect": "Extra battle: an elimination run against Black Bombermen (GREAT BATTLE / THE BATTLE)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Value $21 (JP) / $41 (Wario): music $0C and $00:34B2 (JP) / $00:3457 (Wario), the extra-battle mode (JP intro: how many Black Bombermen can you beat before you fall). Typed with the pad; the battle ran in both. GameFAQs (Wario Blast page): Extra Battle / Battle Mode with Bomberman.",
+  "note": "Value $21 (JP) / $41 (Wario): music $0C and $00:34B2 (JP) / $00:3457 (Wario), the extra-battle mode (JP intro: how many Black Bombermen can you beat before you fall). Typed with the pad; the battle ran in both. GameFAQs (Wario Blast page): Extra Battle / Battle Mode with Bomberman. Bomberman Collection (1996, Game Boy): the same Bomberman GB ROM banks; typed there in Mesen with the same result.",
   "section": "Passwords",
   "img": "battle_5656.png"
  },
@@ -792,11 +826,12 @@
   "effect": "Invincible (fire and enemies never kill)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Game Genie, compare $CD: RET over the hit check $01:4837 (same address in both). tools/gb1/test_cheats.lua, random-input bot 6,000 frames from 1-1: 0 hits with the code, 7 hits / 7 lost sets without. GameShark: player +$4F (the after-hit flash flag) = 1 and its counter +$49 = 0, so $01:4866 always reports the flash; same bot: 0 hits (jp and wario).",
+  "note": "Game Genie, compare $CD: RET over the hit check $01:4837 (same address in both). tools/gb1/test_cheats.lua, random-input bot 6,000 frames from 1-1: 0 hits with the code, 7 hits / 7 lost sets without. GameShark: player +$4F (the after-hit flash flag) = 1 and its counter +$49 = 0, so $01:4866 always reports the flash; same bot: 0 hits (jp and wario). Mesen 2, Bomberman Collection through its menu, the Japanese code: random-input bot 6,000 frames from 1-1: 0 hits with the code (8 hits / 8 lost sets without); GameShark 01014FC0 + 010049C0 also 0 hits.",
   "section": "cheat"
  },
  {
@@ -808,11 +843,12 @@
   "effect": "Win every normal set at once (stage clear; not boss sets)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; boss sets don't end with it (the 1-boss waits; $01:48C7 needs the boss itself, $C3F7 = 1). GB1 has no lives: a lost match goes to the continue screen. Game Genie: $01:488A OR A -> XOR A, so the enemy check sees every page empty; with C98-37B-D5D: 12 sets won, 1-1 to 1-4 in 6,000 frames (jp and wario).",
+  "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; boss sets don't end with it (the 1-boss waits; $01:48C7 needs the boss itself, $C3F7 = 1). GB1 has no lives: a lost match goes to the continue screen. Game Genie: $01:488A OR A -> XOR A, so the enemy check sees every page empty; with C98-37B-D5D: 12 sets won, 1-1 to 1-4 in 6,000 frames (jp and wario). Mesen 2, Bomberman Collection through its menu, the Japanese code: with C98-37B-D5D and a 6,000-frame bot: 5 sets won, to 1-4, with the GameShark codes; 11 sets won with Game Genie AF8-8AB-3B4.",
   "section": "cheat"
  },
  {
@@ -820,11 +856,12 @@
   "effect": "PERFECT! ENEMY 240 screen with a fixed CODE -SVJV-, then CONGRATULATIONS!",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "After each round the extra battle ($00:35A4) calls $0A:4EFC (Wario $0A:5398), which checks the defeat count $C1D1-$C1D3 (one decimal digit per byte); at 240 it jumps to $0A:4DFF (Wario $0A:528B), which draws PERFECT! / ENEMY 240 / CODE -SVJV- / CONGRATULATIONS! (tile map $08:40D2); A or Start goes back to the title. The code is the same in both carts, likely a contest proof code. In Mesen (JP): the count set to 239 during the battle, one more round won, and the screen came up.",
+  "note": "After each round the extra battle ($00:35A4) calls $0A:4EFC (Wario $0A:5398), which checks the defeat count $C1D1-$C1D3 (one decimal digit per byte); at 240 it jumps to $0A:4DFF (Wario $0A:528B), which draws PERFECT! / ENEMY 240 / CODE -SVJV- / CONGRATULATIONS! (tile map $08:40D2); A or Start goes back to the title. The code is the same in both carts, likely a contest proof code. In Mesen (JP): the count set to 239 during the battle, one more round won, and the screen came up. Static: Bomberman Collection carries Bomberman GB (Japan)'s 16 banks byte-identical (banks 32-47), including the check at $0A:4EFC and the screen at $0A:4DFF; 5656 is accepted there.",
   "section": "Secrets",
   "img": "perfect_240_jp.png"
  },
@@ -833,14 +870,15 @@
   "effect": "The extra battle's 240-win PERFECT! screen at once (turn on after the 5656 / 6565 code is accepted)",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
   "devices": {
    "GameShark": "0102D1C1 + 0104D2C1"
   },
-  "note": "GameShark: the defeat count $C1D1-$C1D3 held at 2-4-x, so the first check after a round sees 240+. $C1D1-$C1D3 is also the password digit buffer, so switch the codes on only after the password is accepted, then press A on the GREAT BATTLE intro. Tested in Mesen on both carts.",
+  "note": "GameShark: the defeat count $C1D1-$C1D3 held at 2-4-x, so the first check after a round sees 240+. $C1D1-$C1D3 is also the password digit buffer, so switch the codes on only after the password is accepted, then press A on the GREAT BATTLE intro. Tested in Mesen on both carts. Static (RAM codes): Bomberman Collection carries Bomberman GB (Japan)'s banks byte-identical, so $C1D1-$C1D3 and the check are the same.",
   "section": "cheat",
   "img": "perfect_240_wario_cheat.png"
  },
@@ -862,11 +900,12 @@
   "effect": "Two tunes the game never plays",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Music goes through the request byte $C3F1 (CALL $0AC4). The game asks for 00-06 and 0B as constants and 09-12 from the stage table at $00:1F04 (Wario $1E99). The song table at $07:4A0E has 00-12, and 07 and 08 have channel data of their own but no request. 07 is about 11 s, loud, and doesn't loop; 08 is about 11 s, quiet and rhythmic, and doesn't loop either. Recorded in BizHawk.",
+  "note": "Music goes through the request byte $C3F1 (CALL $0AC4). The game asks for 00-06 and 0B as constants and 09-12 from the stage table at $00:1F04 (Wario $1E99). The song table at $07:4A0E has 00-12, and 07 and 08 have channel data of their own but no request. 07 is about 11 s, loud, and doesn't loop; 08 is about 11 s, quiet and rhythmic, and doesn't loop either. Recorded in BizHawk. Static: Bomberman Collection carries Bomberman GB (Japan)'s banks byte-identical, so the requests and the song table are the same.",
   "section": "Secrets",
   "audio": [
    "gb1/Music_07.mp3",
@@ -878,11 +917,12 @@
   "effect": "Nine sound effects the game never plays",
   "versions": [
    "jp",
-   "wario"
+   "wario",
+   "col96"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Effects go through CALL $0AE1 with the ID in $C3F1. None of the 70 or so calls asks for 06, 0E or 13-18; 11 is used in Wario Blast only. Each plays when swapped into the title cursor's sound: short blips of 0.2 to 0.7 s, 0E about 1.4 s, 18 nearly 3 s of high noise. Recorded in Mesen.",
+  "note": "Effects go through CALL $0AE1 with the ID in $C3F1. None of the 70 or so calls asks for 06, 0E or 13-18; 11 is used in Wario Blast only. Each plays when swapped into the title cursor's sound: short blips of 0.2 to 0.7 s, 0E about 1.4 s, 18 nearly 3 s of high noise. Recorded in Mesen. Static: Bomberman Collection carries Bomberman GB (Japan)'s banks byte-identical, so the effect calls and data are the same.",
   "section": "Secrets",
   "audio": [
    "gb1/SE_06.mp3",
@@ -895,5 +935,154 @@
    "gb1/SE_17.mp3",
    "gb1/SE_18.mp3"
   ]
+ },
+ {
+  "code": "00A-5BF-3B7",
+  "devices": {
+   "Game Genie": "00A-5BF-3B7",
+   "GameShark": "010185C5 + 010086C5 + 010087C5"
+  },
+  "effect": "The clock stays at 199 (it jumps there on its first tick)",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $00:0A5B LD (HL),A (77) -> NOP in the BCD subtract ($00:0A4B) that takes 001 off the clock digits $C585-$C587; only digits that borrow are written (the borrow branch has its own store), so 100 becomes 199 and later ticks change nothing. Only the clock calls this routine. Same address in JP. BizHawk: US and JP: in round 1-1, $C585-7 every 120 frames: 100,099,098,097... without; 100,199,199,199... with; the HUD shows TIME 199. GameShark: US and JP: the clock digits stayed 100 over 960 / 600 frames. Mesen 2, Bomberman Collection through its menu, the Japanese code: clock 199 199 199 199 199 every 120 frames (099 -> 096 without); GameShark 010185C5 + 010086C5 + 010087C5 held 100.",
+  "section": "cheat"
+ },
+ {
+  "code": "03F-87E-E6E",
+  "devices": {
+   "Game Genie": "03F-87E-E6E (Wario Blast) / 03F-F2E-E6E (Japan)"
+  },
+  "effect": "Each set starts with 300 on the clock, about 10 minutes",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: US $00:1F87 / JP $00:1FF2, operand of LD A,$01 that sets the clock's start hundreds digit ($C582, copied to $C585) -> $03. BizHawk: US: clock 300, 299 (100, 099 without). JP: 299, 298, 297 read after the first tick. Mesen 2, Bomberman Collection through its menu, the Japanese code: 03F-F2E-E6E: clock 299, 298, 297.",
+  "section": "cheat"
+ },
+ {
+  "code": "083-F1A-F7A",
+  "devices": {
+   "Game Genie": "083-F1A-F7A (Wario Blast) / 083-E2A-F7A (Japan)"
+  },
+  "effect": "Up to 7 bombs instead of 4, for every bomber; an 8th bomb-up drops you back to 4",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: US $01:53F1 / JP $01:53E2, operand of CP $04 after the INC of the bomb count (+$2C) -> $08. The following LD (HL),$04 is unchanged, so reaching 8 is clamped to 4. BizHawk: US and JP: forced bomb-up pickups for the player (Lua sets the item type at $01:5380 / $01:5371): without 2,3,4,4,4...; with the code 2,3,4,5,6,7,4,5,6. Whether 7 bombs can be on screen at once was not confirmed. Mesen 2, Bomberman Collection through its menu, the Japanese code: 083-E2A-F7A, forced bomb-up pickups: 2,3,4,5,6,7,4 (2,3,4,4,4 without).",
+  "section": "cheat"
+ },
+ {
+  "code": "046-C7D-E6E",
+  "devices": {
+   "Game Genie": "046-C7D-E6E (Wario Blast) / 047-30D-E6E (Japan)",
+   "GameShark": "01042CC0"
+  },
+  "effect": "Every bomber, the computer ones too, starts each set with 4 bombs (the maximum)",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: US $00:26C7 / JP $00:2730, operand of LD (HL),$01 that sets the bomb count (+$2C) at set start -> $04. The routine runs for each bomber's page, not just the player's. BizHawk: US and JP: $C02C/$C12C = 4/4 at the start of 1-1 (1/1 without). GameShark: Holds the player's bombs at 4 (enemies stay at 1): US and JP $C02C = 4, $C12C = 1. Mesen 2, Bomberman Collection through its menu, the Japanese code: 047-30D-E6E: bombs 4/4 at the start of 1-1 (1/1 without); GameShark 01042CC0 gave 4 to the player only.",
+  "section": "cheat"
+ },
+ {
+  "code": "046-CBD-E6A",
+  "devices": {
+   "Game Genie": "046-CBD-E6A (Wario Blast) / 047-34D-E6A (Japan)",
+   "GameShark": "01042EC0"
+  },
+  "effect": "Every bomber, the computer ones too, starts each set with full fire",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: US $00:26CB / JP $00:2734, operand of LD (HL),$00 that sets the fire level (+$2E) -> $04. BizHawk: US and JP: $C02E/$C12E = 4/4 at the start of 1-1 (0/0 without). GameShark: Holds the player's fire at 4 (run together with 01042CC0: $C02E = 4, enemy 0). Mesen 2, Bomberman Collection through its menu, the Japanese code: 047-34D-E6A: fire 4/4 at the start of 1-1 (0/0 without); GameShark 01042EC0 gave 4 to the player only.",
+  "section": "cheat"
+ },
+ {
+  "code": "210-3BB-4C1 + 000-13B-5D4",
+  "devices": {
+   "Game Genie": "210-3BB-4C1 + 000-13B-5D4",
+   "GameShark": "010AF0C3"
+  },
+  "effect": "START begins at round 3-3, everyone with full bombs and fire",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: 000-13B-5D4: $0A:4013 XOR A (AF) -> NOP in the new-game reset, so A keeps the bank number $0A left by $0AAA and $C3F0-$C3FD all get $0A: stage $C3F0 = 10 (3-3), and the power-up flags $C3FB/$C3FC become non-zero. 210-3BB-4C1: $0A:403B LD ($C3E9),A (EA) -> LD HL (21), keeping that flag 0 (the compare also matches $09:403B, a store in the SGB battle code). Same in JP. BizHawk: US and JP: after START $C3F0 = 0A, screen ROUND 3-3, bombs/fire 4/4 for all four bombers. The second code alone gave the same in US. GameShark: US and JP: START went to 3-3 with normal power-ups. Held, so the next stage would be 3-3 again (not played through). Mesen 2, Bomberman Collection through its menu, the Japanese code: START went to $C3F0 = 0A (3-3) with bombs/fire 4/4 for all four; GameShark 010AF0C3 also gave 3-3, with normal power-ups.",
+  "section": "cheat"
+ },
+ {
+  "code": "210-3BB-4C1 + 3C0-13B-5D4",
+  "devices": {
+   "Game Genie": "210-3BB-4C1 + 3C0-13B-5D4",
+   "GameShark": "010BF0C3"
+  },
+  "effect": "START begins at round 3's boss, everyone with full bombs and fire",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: 3C0-13B-5D4: $0A:4013 XOR A -> INC A, so the reset writes $0B: stage 11 = round 3 boss, plus the same side effects as the 3-3 code. 210-3BB-4C1 as there. BizHawk: US and JP: $C3F0 = 0B, ROUND 3 VS BOSS, player bombs/fire 4/4. With the code the boss-stage clock ran (100 -> 98); with the GameShark version it stayed at 100 ($C3E9 = 1). GameShark: JP: START went to the round 3 boss ($C3F0 = 0B) with normal power-ups. US not run, same RAM. Mesen 2, Bomberman Collection through its menu, the Japanese code: START went to $C3F0 = 0B (round 3 boss), player bombs/fire 4/4; GameShark 010BF0C3 also gave the boss, with $C3E9 = 1.",
+  "section": "cheat"
+ },
+ {
+  "code": "003-EFA-3B7",
+  "devices": {
+   "Game Genie": "003-EFA-3B7 (Wario Blast) / 003-E0A-3B7 (Japan)"
+  },
+  "effect": "Bomb-ups do nothing, for anyone",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: US $01:53EF / JP $01:53E0 LD (HL),A (77) -> NOP after the INC of the bomb count, so the new count is never stored (the clamp store at 4 is unreachable from 1). BizHawk: US and JP: forced bomb-ups: 2,3,4,4 without; 1,1,1,1 with. Mesen 2, Bomberman Collection through its menu, the Japanese code: 003-E0A-3B7, forced bomb-ups: 1,1,1,1 (2,3,4,4,4 without).",
+  "section": "cheat"
+ },
+ {
+  "code": "003-D7A-3B7",
+  "devices": {
+   "Game Genie": "003-D7A-3B7 (Wario Blast) / 003-C8A-3B7 (Japan)"
+  },
+  "effect": "Fire-ups do nothing, for anyone",
+  "versions": [
+   "jp",
+   "wario",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: US $01:53D7 / JP $01:53C8 LD (HL),A (77) -> NOP after the INC of the fire level (+$2E). BizHawk: US and JP: forced fire-ups: 1,2,3,4,4 without; 0,0,0,0 with. Mesen 2, Bomberman Collection through its menu, the Japanese code: 003-C8A-3B7, forced fire-ups: 0,0,0,0 (1,2,3,4,4 without).",
+  "section": "cheat"
  }
 ]

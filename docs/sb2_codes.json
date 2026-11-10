@@ -146,12 +146,11 @@
    "us",
    "eu",
    "jp",
-   "beta",
-   "caravan"
+   "beta"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Index 10 sets $1C68 = $FFFF and returns to the title. Normally the block list stops at its $FE marker after 80 blocks, the two outer rings ($C0:D60C); with the flag it runs on through all 143 cells (watched to 122 in Mesen). Lasts until reset."
+  "note": "Index 10 sets $1C68 = $FFFF and returns to the title. Normally the block list stops at its $FE marker after 80 blocks, the two outer rings ($C0:D60C); with the flag it runs on through all 143 cells (watched to 122 in Mesen). Lasts until reset. Caravan: the password is accepted but its battle code clears the flag every frame, so nothing happens (Mesen, see the Caravan hurry-up card)."
  },
  {
   "code": "X turbo on pad 1 at the title menu",
@@ -217,33 +216,17 @@
   "img": "debug_menu.png"
  },
  {
-  "code": "C0FB2B01",
-  "effect": "Soft reset in Battle Mode: pause, hold SELECT, press START",
-  "versions": [
-   "us",
-   "eu",
-   "jp",
-   "beta",
-   "caravan"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "The battle main loop ($C0:FB11) has its own disabled copy of the Normal Game soft reset (C0FCAF01). Both jump to the reset entry $C0:FA48. The Game Genie code patches the same ROM byte.",
-  "devices": {
-   "Pro Action Replay": "C0FB2B01",
-   "Game Genie": "DFE4-E4A4"
-  }
- },
- {
   "code": "CC23A101",
   "effect": "Stages 11 and 12 on the battle stage select without the Joycard trick",
   "versions": [
    "us",
+   "eu",
+   "jp",
    "beta"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Disabled switch at $CC:239F (LDA #0 / BNE) that skips the $1CB5 check. Europe: CC23FC01, Japan: CC239001. Caravan has its own switch at $CC:250E: CC251001 (checked in Mesen: 12 stages, Left 1 -> 12 -> 11). The Game Genie code patches the same ROM byte.",
+  "note": "Disabled switch at $CC:239F (LDA #0 / BNE) that skips the $1CB5 check. Europe: CC23FC01, Japan: CC239001. Caravan has its own switch at $CC:250E: CC251001 (checked in Mesen: 12 stages, Left 1 -> 12 -> 11). The Game Genie code patches the same ROM byte. Europe CC23FC01 and Japan CC239001 (the high byte of the same LDA #0, so A is $0100) entered in Mesen's cheat engine: $7F:401E = 11 and Left on the stage select goes 1 -> 12 in both.",
   "devices": {
    "Pro Action Replay": "CC23A101",
    "Game Genie": "DF4C-ED5D"
@@ -318,24 +301,6 @@
   }
  },
  {
-  "code": "C0FCAF01",
-  "effect": "Soft reset in Normal Game: pause, hold SELECT, press START",
-  "versions": [
-   "us",
-   "eu",
-   "jp",
-   "beta",
-   "caravan"
-  ],
-  "status": "known",
-  "verified": "mesen",
-  "note": "$C0:FCAD: needs exactly SELECT+START held ($C3 = $3000). The Game Genie code patches the same ROM byte.",
-  "devices": {
-   "Pro Action Replay": "C0FCAF01",
-   "Game Genie": "DFEC-77A7"
-  }
- },
- {
   "code": "7E1CCD0A / 7E1CCD0B",
   "effect": "Battle stage 11 / 12",
   "versions": [
@@ -346,7 +311,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$1CCD is the chosen battle stage. Checked with Mesen's cheat engine (USA): the stage select shows 11 / 12 and the battle is the boxing ring / trampolines."
+  "note": "$1CCD is the chosen battle stage. Checked with Mesen's cheat engine (USA): the stage select shows 11 / 12 and the battle is the boxing ring / trampolines. Caravan: entered in Mesen's cheat engine, the select shows 11 but the battle loads retail stage 10's forest arena ($1A = $0B), because its stage table maps 10-15 to $0B."
  },
  {
   "code": "BOMB TYPE 4 / 8 in the debug menu",
@@ -376,21 +341,6 @@
   "section": "regional",
   "note": "Europe ($CC:1364) and Caravan ($CC:1494) read the controller IDs $CD-$D1 and, on a mouse (AND #$1E = 2), skip the menu. Checked in Mesen with a mouse in port 2: Europe and Caravan stay on the title, USA and Japan work; Caravan with a pad in port 2 plays normally. Image: Caravan with the mouse (left) and with a pad (right).",
   "img": "mouse_lock_caravan.png"
- },
- {
-  "code": "Password screen controls",
-  "effect": "Digits start at 0000; Up/Down change the digit and wrap 9<->0; Left/Right move the cursor and stop at the ends; START or A submits; B goes back",
-  "versions": [
-   "us",
-   "eu",
-   "jp",
-   "beta",
-   "caravan"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "section": "password",
-  "note": "$7F:0028-$7F:002E (digits), $7F:0032 (cursor), $CC:1767 (input loop; submit is BIT #$1080). A wrong code resets the digits to 0000. After a game over the screen starts with the current world's code ($1C60-$1C66, written by $CC:4216)."
  },
  {
   "code": "7E80EF90",
@@ -569,8 +519,8 @@
   "effect": "Four unused boss arenas, one per world 2-5, in that world's own tiles and frame",
   "versions": [
    "us",
-   "jp",
    "eu",
+   "jp",
    "beta",
    "caravan"
   ],
@@ -592,7 +542,44 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Effects are queued through $C3:A4B5: immediates before each call, the wrapper $CC:815D (A + $40) and the table $C5:D54E. Together they request 41-45, 47-5F, 61, 64, 66, 68-6A, 6D and 6F-72. 46, 60, 62, 63, 65, 6B, 6C and 6E are never asked for, and each plays: 46 two short notes, 60 and 62 two-voice hits, 63 a fast rattle, 65 a hit like 64 at another pitch, 6B a half-second multi-part effect, 6C repeated pulses, 6E the first note of 68. Played one at a time in Mesen.",
-  "section": "unused"
+  "note": "Effects are queued through $C3:A4B5: immediates before each call, the wrapper $CC:815D (A + $40) and the table $C5:D54E. Together they request 41-45, 47-5F, 61, 64, 66, 68-6A, 6D and 6F-72. 46, 60, 62, 63, 65, 6B, 6C and 6E are never asked for, and each plays: 46 two short high notes, 60 and 62 two-voice hits, 63 a rattle of about 1 s, 65 a rising sweep of about 1.6 s (64 has the same shape but stays low), 6B a figure repeated for about 6 s, 6C about 7 s of pulses, 6E a held tone of about 3.9 s. Recorded in BizHawk at the title with the music stopped.",
+  "section": "unused",
+  "audio": [
+   "sb2/SE_46.mp3",
+   "sb2/SE_60.mp3",
+   "sb2/SE_62.mp3",
+   "sb2/SE_63.mp3",
+   "sb2/SE_65.mp3",
+   "sb2/SE_6B.mp3",
+   "sb2/SE_6C.mp3",
+   "sb2/SE_6E.mp3"
+  ]
+ },
+ {
+  "code": "Battle hurry-up (Caravan)",
+  "effect": "The hurry-up starts at 0:58 and the blocks at 0:53, stop after the outer rings, then a second wave fills the middle from 0:14; password 5656's sudden death does nothing",
+  "versions": [
+   "caravan"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "regional",
+  "note": "Caravan $C0:D887-D8E9 and $C0:D600-D60E (retail $C0:D869, $C0:D600; $C1:0B89 CMP #3 -> #5): HURRY UP at 0:58 and blocks at 0:53 (retail 0:38 / 0:33). When the first wave reaches the $FE marker (cell 81) it sets $5D0E bit $80 and waits; at 0:14 the counter $5D12 is reset to $51 and a second wave drops the inner cells. $1C68 (the 5656 sudden-death flag) is cleared every battle frame. Mesen: wave 1 from 0:53, held at 81 until 0:14, then 81 -> 112 by 0:07; $1C68 = 1 read back as 0 within frames. Image: 0:53, 0:15 and 0:07.",
+  "img": "caravan_hurry_waves.png"
+ },
+ {
+  "code": "$C0:3FAD (unreferenced)",
+  "effect": "A cut battle gimmick: pits open and close in the floor in patterns",
+  "versions": [
+   "us",
+   "eu",
+   "jp",
+   "beta"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "unused",
+  "note": "$C0:3FAD has no reference of any kind. On a timer ($7E:5CCC, flag $7E:5CCE) it picks one of 8 position sets from $C5:E714 at random and starts tile animations from script $C5:E7D3 (tiles $18C0-$18C6, ending as cell type $D6, a hole) or $C5:E7F5 (the reverse, closing it). The per-frame animator $C0:DA53 (717 bytes, list $7E:2860 over the pool $7E:3D88) writes each frame's tile to $7F:A000/$B000 and the cell type to $7F:C000/$D000; nothing else ever adds to that list. Forced in Mesen by pointing the battle stage's handler entry ($C0:3707 + 4 x $1A) at $C0:3FAD for one session: black pits open in a T shape and in pairs. Image: normal (left), then 60 and 900 frames in. Static: Europe, Japan and beta have the routine, the pattern data ($C5:E714, $C5:E7D3), the handler table ($C0:3707) and the animator ($C0:DA53) byte-identical at the same addresses, still unreferenced; Caravan has the same routine and data with the animator moved to $C0:DAB0, but forcing it there showed no pits in 1500 frames, so it is left out.",
+  "img": "unused_floor_pits.png"
  }
 ]

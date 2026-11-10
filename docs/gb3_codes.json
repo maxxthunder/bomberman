@@ -1011,30 +1011,6 @@
   "section": "cheat"
  },
  {
-  "code": "ROM patch $17D54: 08 -> 09, $17D59: 11 -> 12 (and $17D6B-$17D6D -> 00 00 00), then lose your last life",
-  "effect": "An unused TIME OVER screen: a dizzy Bomberman with spiral eyes, in place of GAME OVER",
-  "versions": [
-   "jp"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "Graphics set 9 ($00:0B4A in the set table $00:09A7) is the game-over set with another picture ($0B:4BBE, $0B:51D9) and the sprite letters GAME / TIME placed for it; its tilemap is map $12 ($00:2DA2 -> $0A:61A0). No call loads either: every load of a set or map passes a constant. The patch makes the game-over screen ($05:7D3E) load set 9 and map $12; the third part skips the OVER sprites it draws on top. Mesen, password 0986400, $C363 = 1, then died. Image: TIME OVER, and the game's GAME OVER.",
-  "section": "unused",
-  "img": "time_over.png"
- },
- {
-  "code": "Graphics set 11 ($0C:73EB, $0C:7308)",
-  "effect": "An unused PAUSE picture: a PAUSE title, a big Bomberman and a robot-like Bomberman",
-  "versions": [
-   "jp"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "Set 11 ($00:0A97) loads a different pause picture from the one the game shows (PAUSE モリモリ, Bomberman in a spotlight). No call loads the set and no tilemap draws it, so its layout is unknown. Shown in Mesen by loading set 11 on the game-over screen (patch $17D54 -> 0B) and writing tiles 0-127 into the BG map in order (16 a row).",
-  "section": "unused",
-  "img": "pause_unused_tiles.png"
- },
- {
   "code": "Music 12",
   "effect": "A full looping tune meant for the two cut extra areas",
   "versions": [

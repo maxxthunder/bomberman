@@ -3,11 +3,12 @@
   "code": "L62QTG6R",
   "effect": "Hevol cleared, 1,119 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $08, gold 1,119. GameFAQs (US list): \"Hevol Completed\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $08, gold 1,119. GameFAQs (US list): \"Hevol Completed\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_L62QTG6R_map_shop.png"
  },
@@ -15,11 +16,12 @@
   "code": "661P4W6R",
   "effect": "Hevol and Jagoraz cleared, 1,219 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $18, gold 1,219. GameFAQs: \"Jagoraz Completed\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $18, gold 1,219. GameFAQs: \"Jagoraz Completed\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_661P4W6R_map_shop.png"
  },
@@ -27,11 +29,12 @@
   "code": "LL283F5G",
   "effect": "Thulia, Hevol and Jagoraz cleared, 1,299 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $1C, gold 1,299. GameFAQs: \"Thulia Completed\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $1C, gold 1,299. GameFAQs: \"Thulia Completed\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_LL283F5G_map_shop.png"
  },
@@ -39,11 +42,12 @@
   "code": "557RL25G",
   "effect": "Grad cleared, 499 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $20, gold 499. GameFAQs: \"Grad Completed\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $20, gold 499. GameFAQs: \"Grad Completed\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_557RL25G_map_shop.png"
  },
@@ -51,11 +55,12 @@
   "code": "T58Q5H57",
   "effect": "Cuolece, Grad and Wather cleared, 1,279 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $A1, gold 1,279. GameFAQs: \"Wather Completed\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $A1, gold 1,279. GameFAQs: \"Wather Completed\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_T58Q5H57_map_shop.png"
  },
@@ -63,11 +68,12 @@
   "code": "TL77S.3=",
   "effect": "Every island but Faria cleared, 1,469 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 1,469: Faria opens. GameFAQs: \"Windria Completed\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 1,469: Faria opens. GameFAQs: \"Windria Completed\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_TL77Sd3E_map_shop.png"
  },
@@ -75,11 +81,12 @@
   "code": "!!HH!H!G",
   "effect": "65,535 gold (no islands cleared)",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 65,535; the game caps gold at 9,999 the next time it changes. GameFAQs: \"Max Gold 65535\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 65,535; the game caps gold at 9,999 the next time it changes. GameFAQs: \"Max Gold 65535\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_xxHHxHxG_map_shop.png"
  },
@@ -87,11 +94,12 @@
   "code": "LMQQ5GC1",
   "effect": "1,596 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 1,596. GameFAQs (listed as EU): \"1596 Gold\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 1,596. GameFAQs (listed as EU): \"1596 Gold\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_LMQQ5GC1_map_shop.png"
  },
@@ -99,11 +107,12 @@
   "code": "6612?1L1",
   "effect": "2,248 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 2,248. GameFAQs (EU): \"2248 Gold\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 2,248. GameFAQs (EU): \"2248 Gold\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_6612q1L1_map_shop.png"
  },
@@ -111,11 +120,12 @@
   "code": "4L11C2?W",
   "effect": "Wather cleared, 2,818 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $80, gold 2,818. GameFAQs (EU): \"2818 Gold\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $80, gold 2,818. GameFAQs (EU): \"2818 Gold\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_4L11C2qW_map_shop.png"
  },
@@ -123,11 +133,12 @@
   "code": "6612?2BG",
   "effect": "3,017 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 3,017. GameFAQs (EU): \"3017 Gold\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: gold 3,017. GameFAQs (EU): \"3017 Gold\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_6612q2BG_map_shop.png"
  },
@@ -135,11 +146,12 @@
   "code": "SMQQ!G6W",
   "effect": "Wather cleared, 3,518 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $80, gold 3,518. GameFAQs (EU): \"3518 Gold\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $80, gold 3,518. GameFAQs (EU): \"3518 Gold\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_SMQQxG6W_map_shop.png"
  },
@@ -147,11 +159,12 @@
   "code": "XM88TFTD",
   "effect": "Every island but Faria cleared, 34,106 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 34,106. GameFAQs (EU): \"Last level with 34106 gold\".",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 34,106. GameFAQs (EU): \"Last level with 34106 gold\". Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_XM88TFTD_map_shop.png"
  },
@@ -159,11 +172,12 @@
   "code": "LLW25H!G",
   "effect": "9,999 gold, the most the game keeps",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 9,999.",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 9,999. Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_LLW25HxG_map_shop.png"
  },
@@ -171,11 +185,12 @@
   "code": "4MFPS=J=",
   "effect": "Every island but Faria cleared, 9,999 gold",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 9,999.",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 9,999. Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "us_4MFPSEJE_map_shop.png"
  },
@@ -183,11 +198,12 @@
   "code": "33FPS=J=",
   "effect": "The ending (every island cleared)",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Typed in Mesen; RAM read back after END: $C0E9 = $FF: the game goes from the password screen to the ending ($00:0D07).",
+  "note": "Typed in Mesen; RAM read back after END: $C0E9 = $FF: the game goes from the password screen to the ending ($00:0D07). Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Boy",
   "img": "ending_us.png"
  },
@@ -195,11 +211,12 @@
   "code": "JJS25FXE",
   "effect": "9,999 gold, the most the game keeps",
   "versions": [
-   "jp"
+   "jp",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 9,999.",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = 0, gold 9,999. Bomberman Collection (1996, Game Boy): the same Bomber Boy ROM banks; typed there in Mesen with the same result.",
   "section": "Bomber Boy",
   "img": "jp_JJS25FXE_map_shop.png"
  },
@@ -207,11 +224,12 @@
   "code": "4KDMPZGZ",
   "effect": "Every island but Faria cleared, 9,999 gold",
   "versions": [
-   "jp"
+   "jp",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 9,999.",
+  "note": "Typed in Mesen (shown: the island map and the Panel Shop's GOLD after END); RAM read back: $C0E9 = $BF, gold 9,999. Bomberman Collection (1996, Game Boy): the same Bomber Boy ROM banks; typed there in Mesen with the same result.",
   "section": "Bomber Boy",
   "img": "jp_4KDMPZGZ_map_shop.png"
  },
@@ -219,11 +237,12 @@
   "code": "33DMPZGZ",
   "effect": "The ending (every island cleared)",
   "versions": [
-   "jp"
+   "jp",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Typed in Mesen; RAM read back after END: $C0E9 = $FF: straight to the ending.",
+  "note": "Typed in Mesen; RAM read back after END: $C0E9 = $FF: straight to the ending. Bomberman Collection (1996, Game Boy): the same Bomber Boy ROM banks; typed there in Mesen with the same result.",
   "section": "Bomber Boy",
   "img": "ending_jp.png"
  },
@@ -231,11 +250,12 @@
   "code": "BOHIDJFEKJGKEFOLFHAC",
   "effect": "Bomber Man mode: stage 50, 10 bombs, fire 5, speed, wall pass, detonator, flame pass, exit and item marked",
   "versions": [
-   "jp"
+   "jp",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "NES Bomberman's code, unchanged. Typed in Mesen (shown: the STAGE 50 card it starts): $C40B = 50, $C402 = 10, $C403 = 5, every power-up flag 1.",
+  "note": "NES Bomberman's code, unchanged. Typed in Mesen (shown: the STAGE 50 card it starts): $C40B = 50, $C402 = 10, $C403 = 5, every power-up flag 1. Bomberman Collection (1996, Game Boy): the same Bomber Boy ROM banks; typed there in Mesen with the same result.",
   "section": "Bomber Man mode",
   "img": "jp_bm_BOHIDJFEKJGKEFOLFHAC_stage.png"
  },
@@ -243,11 +263,12 @@
   "code": "B3H2DJF1KJGK1F3LFH0C",
   "effect": "Bomber Man mode: stage 50, 10 bombs, fire 5, speed, wall pass, detonator, flame pass, exit and item marked",
   "versions": [
-   "us"
+   "us",
+   "eu"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "NES Bomberman's code with A, E, I, O shown as 0, 1, 2, 3 (Game B's letter table, $02:44D5). Typed in Mesen (shown: the STAGE 50 card it starts): $C40B = 50, $C402 = 10, $C403 = 5, every power-up flag 1.",
+  "note": "NES Bomberman's code with A, E, I, O shown as 0, 1, 2, 3 (Game B's letter table, $02:44D5). Typed in Mesen (shown: the STAGE 50 card it starts): $C40B = 50, $C402 = 10, $C403 = 5, every power-up flag 1. Dynablaster (Europe): typed in Mesen, the same result.",
   "section": "Bomber Man mode",
   "img": "us_bm_B3H2DJF1KJGK1F3LFH0C_stage.png"
  },
@@ -256,37 +277,28 @@
   "effect": "Sound test (Game A stage select)",
   "versions": [
    "us",
-   "jp"
+   "jp",
+   "eu",
+   "col96"
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$00:2A95 checks that the held buttons are exactly A + B + Select + Right ($17) when MY TOWN is chosen, and jumps to the sound test at $03:471A; the buttons must stay held through the fade. Typed in Mesen on both carts. GameFAQs lists it.",
+  "note": "$00:2A95 checks that the held buttons are exactly A + B + Select + Right ($17) when MY TOWN is chosen, and jumps to the sound test at $03:471A; the buttons must stay held through the fade. Typed in Mesen on both carts. GameFAQs lists it. Dynablaster (Europe): the same in Mesen ($03:471A ran). Static: Bomberman Collection carries Bomber Boy's 8 banks byte-identical (banks 16-23), so the same code and data run there.",
   "section": "Button codes",
   "img": "sound_test_us.png"
- },
- {
-  "code": "Hold Start, press Select",
-  "effect": "Soft reset, back to the Hudson logo",
-  "versions": [
-   "us",
-   "jp"
-  ],
-  "status": "new",
-  "verified": "mesen",
-  "note": "The joypad reader $00:04D7 jumps to $0179 when Select is newly pressed with Start held (the same bytes in both carts). Tested in Mesen on both carts during a stage: the boot code ran on that frame and the Hudson logo came back.",
-  "section": "Button codes",
-  "img": "soft_reset_us.png"
  },
  {
   "code": "TYUUSUU",
   "effect": "My Town's name on the Panel Select screen, never shown: My Town has no rounds",
   "versions": [
    "us",
-   "jp"
+   "jp",
+   "eu",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Panel Select ($00:30DA) and the round results ($00:35B5) print the island from a second name list ($00:3630, names $3642), in which island 4 is TYUUSUU instead of MY TOWN (the map's list, $00:0F79). Choosing My Town opens the Panel Shop, which reads neither, so the name never comes up. Both carts, in Mesen: a new game's JAGORAZ 1/6 (left), and $C0EA = 4 poked as Panel Select opens (right).",
+  "note": "Panel Select ($00:30DA) and the round results ($00:35B5) print the island from a second name list ($00:3630, names $3642), in which island 4 is TYUUSUU instead of MY TOWN (the map's list, $00:0F79). Choosing My Town opens the Panel Shop, which reads neither, so the name never comes up. Both carts, in Mesen: a new game's JAGORAZ 1/6 (left), and $C0EA = 4 poked as Panel Select opens (right). Dynablaster (Europe): the same bytes. Static: Bomberman Collection carries Bomber Boy's 8 banks byte-identical (banks 16-23), so the same code and data run there.",
   "section": "unused",
   "img": "tyuusuu_panel_select.png"
  },
@@ -295,11 +307,13 @@
   "effect": "A 10th panel, 200 gold, that the shop never sells, no round gives, and that does nothing when equipped",
   "versions": [
    "us",
-   "jp"
+   "jp",
+   "eu",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The panel tables have 10 entries: names $00:301F (ELIXER ... FIREPASS, HATISUKE), prices $00:1CEC (HATISUKE 200) and unlock masks $00:335B. The BUY cursor wraps after 9 ($00:2E18), HATISUKE's unlock mask is 0, so it would read ??? anyway, and the round pickups' jump table ($01:49D4) points at the stubs for panels 0-8 but not at the one for panel 9 ($01:4A44, Bomber Boy $01:4A29). SELL and Panel Select do step through 10 slots. No round code checks for it: $00:0827 counts panels 1-3 and flags 4-8, and ELIXER (0) is used on death; after a round $00:0924 removes it like the other one-round panels. Put in the inventory ($C4C0 = 9) and equipped in Mesen, the round started with the same bombs, fire, speed and flags as with nothing. Images: drawn in the shop by pointing the lookups at slot 9 (Atomic Punk, Bomber Boy), and equipped on Panel Select (the ? icon).",
+  "note": "The panel tables have 10 entries: names $00:301F (ELIXER ... FIREPASS, HATISUKE), prices $00:1CEC (HATISUKE 200) and unlock masks $00:335B. The BUY cursor wraps after 9 ($00:2E18), HATISUKE's unlock mask is 0, so it would read ??? anyway, and the round pickups' jump table ($01:49D4) points at the stubs for panels 0-8 but not at the one for panel 9 ($01:4A44, Bomber Boy $01:4A29). SELL and Panel Select do step through 10 slots. No round code checks for it: $00:0827 counts panels 1-3 and flags 4-8, and ELIXER (0) is used on death; after a round $00:0924 removes it like the other one-round panels. Put in the inventory ($C4C0 = 9) and equipped in Mesen, the round started with the same bombs, fire, speed and flags as with nothing. Images: drawn in the shop by pointing the lookups at slot 9 (Atomic Punk, Bomber Boy), and equipped on Panel Select (the ? icon). Dynablaster (Europe): the same bytes. Static: Bomberman Collection carries Bomber Boy's 8 banks byte-identical (banks 16-23), so the same code and data run there.",
   "section": "unused",
   "img": "hatisuke_shop.png"
  },
@@ -308,11 +322,13 @@
   "effect": "Every island clear writes a CONTINUE password to the screen map, never shown",
   "versions": [
    "us",
-   "jp"
+   "jp",
+   "eu",
+   "col96"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "After an island's last round the game plays the rescue scene ($00:3CB9, THANK YOU! KID!). Before it (not on Faria), it adds the owned panels' prices to the gold as game over does, runs the password encoder ($01:4650, JP $01:4635) into the screen map at $9C0A, and puts the gold back. That map is never displayed (the window is off and the palette blank) and is wiped before the next screen, so only game over ever shows a password. Read from VRAM in Mesen after clearing Jagoraz with 300 gold and 600 in panels: 6L1PLRCW (Atomic Punk) and 6J1MJOBS (Bomber Boy), which decode to Jagoraz cleared, 900 gold.",
+  "note": "After an island's last round the game plays the rescue scene ($00:3CB9, THANK YOU! KID!). Before it (not on Faria), it adds the owned panels' prices to the gold as game over does, runs the password encoder ($01:4650, JP $01:4635) into the screen map at $9C0A, and puts the gold back. That map is never displayed (the window is off and the palette blank) and is wiped before the next screen, so only game over ever shows a password. Read from VRAM in Mesen after clearing Jagoraz with 300 gold and 600 in panels: 6L1PLRCW (Atomic Punk) and 6J1MJOBS (Bomber Boy), which decode to Jagoraz cleared, 900 gold. Dynablaster (Europe): the same bytes. Static: Bomberman Collection carries Bomber Boy's 8 banks byte-identical (banks 16-23), so the same code and data run there.",
   "section": "unused"
  },
  {
@@ -320,11 +336,13 @@
   "effect": "A tune only the hidden sound test plays, and ten effects nothing plays",
   "versions": [
    "us",
-   "jp"
+   "jp",
+   "eu",
+   "col96"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Music goes through $0475 and effects through $0480 (and $1931). No request gives tune 04 (the island table at $02B8 covers 0B-13); only the stage-select sound test plays it, a full tune. That test plays music only, so effects 02, 06, 07, 0C, 0E, 11 and 16-19 can't be heard at all. 02 is a held tone; the rest last 0.1 to 0.9 s, 06/07 and 0C/0E being pairs at different pitches. Recorded in Mesen.",
+  "note": "Music goes through $0475 and effects through $0480 (and $1931). No request gives tune 04 (the island table at $02B8 covers 0B-13); only the stage-select sound test plays it, a full tune. That test plays music only, so effects 02, 06, 07, 0C, 0E, 11 and 16-19 can't be heard at all. 02 is a held tone; the rest last 0.1 to 0.9 s, 06/07 and 0C/0E being pairs at different pitches. Recorded in Mesen. Dynablaster (Europe): the same bytes. Static: Bomberman Collection carries Bomber Boy's 8 banks byte-identical (banks 16-23), so the same code and data run there.",
   "section": "unused",
   "audio": [
    "bb/Music_04.mp3",
@@ -339,5 +357,216 @@
    "bb/SE_18.mp3",
    "bb/SE_19.mp3"
   ]
+ },
+ {
+  "code": "C9C-87C-E69",
+  "devices": {
+   "Game Genie": "C9C-87C-E69",
+   "GameShark": "01C8EFC0"
+  },
+  "effect": "Game A's round clock never counts down",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $00:3C87 RET NZ (C0) -> RET (C9) in the Game A clock routine ($00:3C7D: DEC frame counter $C0EE, then DEC time $C0EF); it now always returns before the time byte is decremented. Same bytes at the same address in Bomber Boy. BizHawk: US and JP: new game, Hevol, round start; $C0EF sampled every 120 frames: without 199,198,197,196,195... (stops when the player dies); with the code 200 x12. GameShark (held every frame): Holds $C0EF at 200: US and JP stayed 200 for 1,440 frames (one 199 blip in US between writes). Not checked: the round-end TIME tally counts $C0EF down, so a held value may stall it. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $00:3C87; the Game A round clock stayed 200 for 1,440 frames with the code (199 -> 189 without); GameShark 01C8EFC0 also held 200 on both.",
+  "section": "cheat"
+ },
+ {
+  "code": "21E-D4D-C41 + 09E-38D-E66",
+  "devices": {
+   "Game Genie": "21E-D4D-C41 + 09E-38D-E66"
+  },
+  "effect": "The Panel Shop sells the panels that are still locked (shown as ?) before their island is cleared, and shows their name and price",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: 21E-D4D-C41: $00:2ED4 JP Z,$2F37 (CA) -> LD HL,$2F37 (21), so the buy routine no longer refuses panels 3-8 whose island bit in $C0E9 is clear. 09E-38D-E66: $00:2E38 CP $03 -> CP $09 in the display check ($00:2E33), so panels 0-8 show PRICE/EFFECT instead of ???. The first code alone already lets you buy; the second only reveals the name and price. BizHawk: US and JP: new game (islands 0, 100 gold), shop BUY, cursor to the 4th icon (SPEED UP, a ? icon), A. Without: gold stays 100, PRICE/EFFECT = ???. With both: PRICE 20 / EFFECT SPEED UP, gold 100 -> 80, YOUR PANELS 8 -> 9. With only 21E-D4D-C41: still ??? but gold 100 -> 80. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $00:2ED4 / $00:2E38; buying the 4th (locked) panel took gold 100 -> 80 with both codes and with 21E-D4D-C41 alone, 100 -> 100 without.",
+  "section": "cheat"
+ },
+ {
+  "code": "FF8-E3F-7FB",
+  "devices": {
+   "Game Genie": "FF8-E3F-7FB",
+   "GameShark": "01FFE0C0 + 0100E1C0"
+  },
+  "effect": "A new Game A starts with 255 gold instead of 100",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $00:08E3, operand of LD A,$64 (new-game gold low byte, stored to $C0E0) -> $FF. BizHawk: US and JP: new game, $C0E0/$C0E1 on the map: 100 without, 255 with. GameShark (held every frame): Holds gold at 255 (it never goes down): US/JP shop showed 255 and stayed 255 after buying. A held amount, not a starting one. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): new Game A gold 255 (100 without); GameShark 01FFE0C0 + 0100E1C0 held 255 on both.",
+  "section": "cheat"
+ },
+ {
+  "code": "198-E8F-E6A",
+  "devices": {
+   "Game Genie": "198-E8F-E6A",
+   "GameShark": "0164E0C0 + 0119E1C0"
+  },
+  "effect": "A new Game A starts with 6,500 gold instead of 100",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $00:08E8, operand of LD A,$00 (new-game gold high byte, stored to $C0E1) -> $19, so gold = $1964 = 6,500. BizHawk: US and JP: new game, gold read 6500 (100 without). GameShark (held every frame): US: holds gold at 6,500; the shop showed 6500 and stayed 6500 after a purchase. Same RAM in JP (not run separately). Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): new Game A gold 6,500 (100 without); the GameShark form (same RAM) was not run there.",
+  "section": "cheat"
+ },
+ {
+  "code": "010-85B-E62",
+  "devices": {
+   "Game Genie": "010-85B-E62",
+   "GameShark": "010194FF"
+  },
+  "effect": "Game B starts with 1 spare lives (2 counting the one in play) instead of 2",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $01. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 1 (2 without). JP: $FF94 = 1; a bot lost one (1 -> 0). GameShark (held every frame): Not run for this value; 012894FF and 010294FF were (the held value came back after each death), so this holds the count and acts as infinite lives. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $02:4085; a new Game B started with $FF94 = 1 (a death took it to 0) (2 without). Mesen's cheat engine did not hold the GameShark $FF94 (HRAM) form on these carts, so that form is unconfirmed here.",
+  "section": "cheat"
+ },
+ {
+  "code": "050-85B-E62",
+  "devices": {
+   "Game Genie": "050-85B-E62",
+   "GameShark": "010594FF"
+  },
+  "effect": "Game B starts with 5 spare lives (6 counting the one in play) instead of 2",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $05. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 5 (2 without); a bomb-dropping bot lost one (5 -> 4). Same bytes in JP. GameShark (held every frame): Not run for this value; 012894FF and 010294FF were (the held value came back after each death), so this holds the count and acts as infinite lives. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $02:4085; a new Game B started with $FF94 = 5 (2 without). Mesen's cheat engine did not hold the GameShark $FF94 (HRAM) form on these carts, so that form is unconfirmed here.",
+  "section": "cheat"
+ },
+ {
+  "code": "0A0-85B-E62",
+  "devices": {
+   "Game Genie": "0A0-85B-E62",
+   "GameShark": "010A94FF"
+  },
+  "effect": "Game B starts with 10 spare lives (11 counting the one in play) instead of 2",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $0A. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 10 (2 without). Same bytes in JP. GameShark (held every frame): Not run for this value; 012894FF and 010294FF were (the held value came back after each death), so this holds the count and acts as infinite lives. Mesen 2 plus static: the operand at $02:4085 is the same in Dynablaster and Bomberman Collection, and the 1, 5 and 40 forms of this code gave those start lives there; this value was not run separately.",
+  "section": "cheat"
+ },
+ {
+  "code": "140-85B-E62",
+  "devices": {
+   "Game Genie": "140-85B-E62",
+   "GameShark": "011494FF"
+  },
+  "effect": "Game B starts with 20 spare lives (21 counting the one in play) instead of 2",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $14. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 20 (2 without); a bomb-dropping bot lost one (20 -> 19). Same bytes in JP. GameShark (held every frame): Not run for this value; 012894FF and 010294FF were (the held value came back after each death), so this holds the count and acts as infinite lives. Mesen 2 plus static: the operand at $02:4085 is the same in Dynablaster and Bomberman Collection, and the 1, 5 and 40 forms of this code gave those start lives there; this value was not run separately.",
+  "section": "cheat"
+ },
+ {
+  "code": "280-85B-E62",
+  "devices": {
+   "Game Genie": "280-85B-E62",
+   "GameShark": "012894FF"
+  },
+  "effect": "Game B starts with 40 spare lives (41 counting the one in play) instead of 2",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $28. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 40 (2 without). JP: $FF94 = 40; a bot lost one (40 -> 39). GameShark (held every frame): Holds $FF94 at 40: after a death it went 40 -> 39 -> 40, so it is infinite lives at 40 rather than a starting count. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $02:4085; a new Game B started with $FF94 = 40 (2 without). Mesen's cheat engine did not hold the GameShark $FF94 (HRAM) form on these carts, so that form is unconfirmed here.",
+  "section": "cheat"
+ },
+ {
+  "code": "A71-7CB-19E",
+  "devices": {
+   "Game Genie": "A71-7CB-19E",
+   "GameShark": "010294FF"
+  },
+  "effect": "Game B never takes a life away when you die",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $02:417C DEC A (3D) -> AND A (A7) in the death path ($02:4176: LDH A,($FF94); game over if 0; DEC; store), so $FF94 is stored back unchanged. BizHawk: US and JP: same 4,000-frame bot run in Game B; without the code $FF94 went 2 -> 1 -> 0 and game over; with it $FF94 stayed 2 through repeated deaths. GameShark (held every frame): US and JP: same bot run; $FF94 dropped to 1 at each death and was put back to 2 the next frame (six deaths, never game over). Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $02:417C; random bot in Game B for 4,000 frames: $FF94 stayed 2 through the deaths (2 -> 1 -> 0 without). GameShark 010294FF ($FF94, HRAM) did not hold in Mesen.",
+  "section": "cheat"
+ },
+ {
+  "code": "C93-389-E69",
+  "devices": {
+   "Game Genie": "C93-389-E69 (US) / C93-4D9-E69 (EU)",
+   "GameShark": "01C8EFC0"
+  },
+  "effect": "Game B's round clock stays at 200",
+  "versions": [
+   "us",
+   "jp",
+   "eu",
+   "col96"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Game Genie: $02:6338, high byte of LD A,($C0EF) in the Game B clock ($02:6328) -> $C9, so it reads $C9EF (never written, 0) instead of the time: AND A / RET Z returns before the DEC, and $C0EF is never decremented. BizHawk: US and JP: new Game B, $C0EF every 120 frames: 199,197,195,193,191 without; 200 x5 with ($C9EF = 0). GameShark (held every frame): US and JP: $C0EF stayed 200 over 600 frames. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): Bomberman Collection takes C93-389-E69 unchanged (Game B clock 200 x5; 199 -> 191 without). Dynablaster's bank 2 is shifted 21 bytes, so the operand is at $02:634D: C93-4D9-E69 held the clock at 200 there, while C93-389-E69 does nothing on Dynablaster (199 -> 191). GameShark 01C8EFC0 held 200 on both.",
+  "section": "cheat"
+ },
+ {
+  "code": "VS MODE with a link cable",
+  "effect": "Two Game Boys play a head-to-head battle: PANEL or POWERFUL MODE, how many battles, then a 2-player arena and the trophy table; without a partner it shows VS.MODE NOT READY",
+  "versions": [
+   "us",
+   "jp",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "Bomber Boy",
+  "note": "VS MODE ($04:4000) turns on the serial interrupt. The side that presses Start first sends $E0 on the internal clock ($04:4744) and expects $EF back ($46C7-$46E9; $FFA0 = 2 marks the master); any other byte goes to VS.MODE NOT READY ($4D4A). The settings go across at $47B4, then each frame the two pads are swapped ($4792 -> $4752; the partner's lands in $FF8C/$FF8D). Played in Mesen with a scripted partner on the serial port: handshake, settings, the READY splash, a 2-player battle and the 1 WIN MATCH results; with no partner the screen shows VS.MODE NOT READY. The camera follows the local player, so the partner is off screen in the arena. Image: the menu, HOW MANY TIMES OF BATTLE?, READY, the arena, and no partner.",
+  "img": "vs_mode_link.png"
  }
 ]

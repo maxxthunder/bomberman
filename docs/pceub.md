@@ -41,6 +41,10 @@ What's new is the title screen and the way the two battle variants are picked.
   (`$6FB5`) under the soft blocks; with `$4D` = 1 (`$08:6F9B`) it adds the skull list (`$6FBD`). Item 0 is the
   fire-up and item 1 the bomb-up (the handlers are the 1990 card's; at `$08:7B75` the fire cap of 5 is skipped when
   `$2849` = 8), item 8 is the skull (its handler picks a random illness, as in the 1990 card `$09:8851`).
+- ★ **An illness spreads by touch.** When an ill player comes within 9 px of a healthy one (`$09:995E`, the 1990
+  card's `$0A:A598` byte for byte), sound `$0A` plays and the illness and its timer are copied into the other
+  player's slot (`$23F9`/`$23FE`/`$2403`). Mesen, 2-player USERS BATTLE: with player 1 ill (`$23F9` = 1) and the
+  distance test skipped, player 2's slot went from 0 to illness 1 with its own timer.
 
   | Players | Fire-ups | Bomb-ups | Skulls (USERS BATTLE 2) | Enemies (`$08:651E`) |
   |---|---|---|---|---|
@@ -337,13 +341,14 @@ Removed outright: イズレカノMODEヲ エランデクダサイ ("choose one o
 
 ### Maps
 
-★ `maps.py` renders every layout to `docs/img/pceub/maps/` (same names as the pce90 set, contact sheet `_all.png`).
+★ `maps.py` renders every layout; the renders are the same files as the pce90 set, so they live in
+`docs/img/pce90/maps/` (contact sheet `_all.png`).
 **All 64 1P stage layouts and the unused round-1 wide layout are still in the card, byte-identical to the 1990
 card's** (stage headers bank `$0C`, blocks bank `$0D`; every render matches). Only the battle arena is used. So the
 "dropped 1P stage graphics" are the tile graphics only: the layouts survive. Format: see [pce90.md](pce90.md#maps).
 The only code change is that the block table is loaded with `LDA $2849 / ... STA $58` at `$00:ED8A`.
 
-![All layouts](img/pceub/maps/_all.png)
+![All layouts](img/pce90/maps/_all.png)
 
 ### Cheat codes
 

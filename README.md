@@ -1,9 +1,10 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis, PC Engine and Virtual Boy
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v1.18.0](https://img.shields.io/badge/version-1.18.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.0.0](https://img.shields.io/badge/version-2.0.0-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 19 Bomberman games, read from each game's own code and tested in emulators, with a
-password generator and checker for each one.
+password checker for every game and a generator wherever a code holds items or progress. Each game also has its
+unused music and sounds, which you can play, and cut graphics shown in the game.
 
 Contents: [How to use it](#how-to-use-it) · [The games](#the-games) · [Highlights](#highlights) ·
 [How the passwords work](#how-the-passwords-work) · [Using the patches](#using-the-patches) ·
@@ -13,13 +14,17 @@ Contents: [How to use it](#how-to-use-it) · [The games](#the-games) · [Highlig
 
 1. **Pick your game** on the [codes page](https://maxxthunder.github.io/bomberman/), or follow a link from the table
    below.
-2. **Choose the stage, items or power-ups** you want, and the page shows the code the game takes. If the game has
+2. **Find the code.** Where a password only picks the stage, every stage's code is in the game's password table.
+   Where it also holds items, power-ups or progress, choose them and the page shows the code. If the game has
    regional versions with different codes, pick yours at the top.
 3. **Type the code** on the game's password screen. To check a code you already have, type it into the code box: the
    page says whether the game accepts it and what it holds.
 
-Below the generator, every known code for the game is listed: passwords first, then secrets, then cheat codes for
-Game Genie and Pro Action Replay (GameShark on Game Boy) and IPS patches. ★ New marks codes no published list had.
+Every known code for the game is listed: passwords first, then secrets, then cheat codes for
+Game Genie, Pro Action Replay and GameShark and IPS patches, then the unused content: music and sounds
+with a play button, and cut graphics shown in the game. Each code lists the versions it was tested on, with a flag
+for each region, and gives the other versions' codes where they differ. ★ New marks codes and finds no published
+list had.
 The page follows your device's light or dark setting (the button in the corner switches it). Once you've opened it,
 it keeps working offline, and you can install it as an app (Add to Home Screen, or the install icon in the address
 bar); the games you've looked at keep their screenshots.
@@ -29,23 +34,23 @@ bar); the games you've looked at keep their screenshots.
 | | Game | Year | On the page |
 |---|---|---|---|
 | **Super Nintendo** | | | |
-| <img src="docs/img/logos/sb1_us.png" alt="" height="28"> | [Super Bomberman](https://maxxthunder.github.io/bomberman/#sb1) | 1993 | password generator, cheats, debug menu patch |
-| <img src="docs/img/logos/sb2_us.png" alt="" height="28"> | [Super Bomberman 2](https://maxxthunder.github.io/bomberman/#sb2) | 1994 | password generator, cheats, debug menu patch |
-| <img src="docs/img/logos/sb3_eu.png" alt="" height="28"> | [Super Bomberman 3](https://maxxthunder.github.io/bomberman/#sb3) | 1995 | password generator, cheats |
-| <img src="docs/img/logos/sb4_jp.png" alt="" height="28"> | [Super Bomberman 4](https://maxxthunder.github.io/bomberman/#sb4) | 1996 | password generator, cheats |
+| <img src="docs/img/logos/sb1_us.png" alt="" height="28"> | [Super Bomberman](https://maxxthunder.github.io/bomberman/#sb1) | 1993 | every password, cheats, debug menu patch |
+| <img src="docs/img/logos/sb2_us.png" alt="" height="28"> | [Super Bomberman 2](https://maxxthunder.github.io/bomberman/#sb2) | 1994 | every password, cheats, debug menu patch |
+| <img src="docs/img/logos/sb3_eu.png" alt="" height="28"> | [Super Bomberman 3](https://maxxthunder.github.io/bomberman/#sb3) | 1995 | every password, cheats |
+| <img src="docs/img/logos/sb4_jp.png" alt="" height="28"> | [Super Bomberman 4](https://maxxthunder.github.io/bomberman/#sb4) | 1996 | every password, cheats |
 | <img src="docs/img/logos/sb5_jp.png" alt="" height="28"> | [Super Bomberman 5](https://maxxthunder.github.io/bomberman/#sb5) | 1997 | option codes, character builder, cheats, debug rooms patch |
-| <img src="docs/img/logos/pbw.png" alt="" height="28"> | [Super Bomberman: Panic Bomber W](https://maxxthunder.github.io/bomberman/#pbw) | 1995 | password generator, character and cheat codes |
+| <img src="docs/img/logos/pbw.png" alt="" height="28"> | [Super Bomberman: Panic Bomber W](https://maxxthunder.github.io/bomberman/#pbw) | 1995 | every password, character and cheat codes |
 | **TurboGrafx-16 / PC Engine** | | | |
 | <img src="docs/img/logos/pce90_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#pce90) and Users Battle | 1990 | password generator, cheats, patches |
 | <img src="docs/img/logos/pce93_us.png" alt="" height="28"> | [Bomberman '93](https://maxxthunder.github.io/bomberman/#pce93) | 1992 | password generator, cheats, patches |
 | <img src="docs/img/logos/pce94_jp.png" alt="" height="28"> | [Bomberman '94](https://maxxthunder.github.io/bomberman/#pce94) | 1993 | password generator, cheats, debug patches |
 | **Game Boy** | | | |
-| <img src="docs/img/logos/bb_us.png" alt="" height="28"> | [Atomic Punk / Bomber Boy](https://maxxthunder.github.io/bomberman/#bb) | 1990 | password generator for Game A and Game B |
-| <img src="docs/img/logos/gb1_wario.png" alt="" height="28"> | [Wario Blast / Bomberman GB](https://maxxthunder.github.io/bomberman/#gb1) | 1994 | password generator, cheats |
-| <img src="docs/img/logos/gb2_us.png" alt="" height="28"> | [Bomberman GB / GB 2](https://maxxthunder.github.io/bomberman/#gb2) | 1995 | password generator, cheats |
+| <img src="docs/img/logos/bb_us.png" alt="" height="28"> | [Atomic Punk / Bomber Boy](https://maxxthunder.github.io/bomberman/#bb) | 1990 | password generator for Game A and Game B, cheats |
+| <img src="docs/img/logos/gb1_wario.png" alt="" height="28"> | [Wario Blast / Bomberman GB](https://maxxthunder.github.io/bomberman/#gb1) | 1994 | every password, cheats |
+| <img src="docs/img/logos/gb2_us.png" alt="" height="28"> | [Bomberman GB / GB 2](https://maxxthunder.github.io/bomberman/#gb2) | 1995 | every password, cheats |
 | <img src="docs/img/logos/gb3_jp.png" alt="" height="28"> | [Bomberman GB 3](https://maxxthunder.github.io/bomberman/#gb3) | 1996 | password generator, cheats |
 | **Game Boy Color** | | | |
-| <img src="docs/img/logos/pocket.png" alt="" height="28"> | [Pocket Bomberman](https://maxxthunder.github.io/bomberman/#pocket) | 1998 | password generator, cheats |
+| <img src="docs/img/logos/pocket.png" alt="" height="28"> | [Pocket Bomberman](https://maxxthunder.github.io/bomberman/#pocket) | 1998 | every password, cheats |
 | <img src="docs/img/logos/max_blue.png" alt="" height="28"> | [Bomberman Max](https://maxxthunder.github.io/bomberman/#max) | 1999 | Charabom code builder (the game saves), cheats |
 | **NES / Famicom** | | | |
 | <img src="docs/img/logos/nes1_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#nes1) | 1985 | password generator, cheats |
@@ -53,10 +58,10 @@ bar); the games you've looked at keep their screenshots.
 | **Genesis** | | | |
 | <img src="docs/img/logos/mega_us.png" alt="" height="28"> | [Mega Bomberman](https://maxxthunder.github.io/bomberman/#mega) and its 8-player demo | 1994 | password generator, cheats |
 | **Virtual Boy** | | | |
-| <img src="docs/img/logos/pbvb.png" alt="" height="28"> | [Panic Bomber](https://maxxthunder.github.io/bomberman/#pbvb) | 1995 | password generator, special codes, debug menu, developer menu patch |
+| <img src="docs/img/logos/pbvb.png" alt="" height="28"> | [Panic Bomber](https://maxxthunder.github.io/bomberman/#pbvb) | 1995 | every password, special codes, debug menu, developer menu patch |
 
 Every password checker was fuzzed against the game's own decoder in Mesen 2 (NES, Game Boy, SNES, PC Engine) or
-BizHawk (Genesis): every possible code for the 4-digit games, and tens of thousands of codes (every state, plus
+BizHawk (Genesis, Virtual Boy): every possible code for the 4-digit games, and tens of thousands of codes (every state, plus
 random and one-letter-off codes) for the longer ones. The game accepted exactly the codes the page accepts, in every
 version.
 
@@ -67,6 +72,8 @@ The best finds for each game; the research notes have the rest.
 **Super Bomberman**
 - 140 stage passwords no list had: every stage takes four codes, and the game shows one at random.
 - The unused debug menu, shown running without a ROM patch, and the first look at the 1993-05-11 beta.
+- In Battle Mode about 1 in 256 bombs fizzles with a puff of smoke and goes off 10-20 seconds late; and Reset keeps
+  your last password on the password screen.
 
 **Super Bomberman 2**
 - The debug menu works: stage select (6-0 plays the ending), no death, fire, bombs and items.
@@ -79,6 +86,7 @@ The best finds for each game; the research notes have the rest.
 **Super Bomberman 4**
 - `4622` (everyone starts in the middle) and `0164` (a wider battle item pool).
 - Tapping X 16 times on the title clears the villain silhouettes.
+- A Super Famicom Mouse in port 2 brings up a full-screen warning that the game can't be played with it.
 
 **Super Bomberman 5**
 - Eight password handlers nothing points to, one of them invincibility.
@@ -105,6 +113,7 @@ The best finds for each game; the research notes have the rest.
 - The 20-letter password fully decoded: stage, score and every power-up, with no range check, so fire 0–15, 16 bombs
   and stages 0–255 load.
 - The letter-swap trick moves a value from wall pass to the flag that marks the exit and item.
+- One kill at 999,999,900 points wraps the score to 900,000,000, and the title keeps it as the top score.
 
 **Bomberman II**
 - The first letter is a key the rest are scrambled with, so every state has thousands of codes.
@@ -131,6 +140,14 @@ The best finds for each game; the research notes have the rest.
 
 **Bomberman Max**
 - The Ain Version opens all 95 stages of both sides; the US release swaps two Charabom names.
+
+**Panic Bomber** (Virtual Boy)
+- `1298` swaps the first opponent for Zach the Were-Bomberman.
+- A hidden DEBUG MENU (`0825` with four buttons held) and an unused developer menu, opened by a patch.
+
+**Super Bomberman: Panic Bomber W**
+- A surprise match against Shadow Bomber, who cuts into the next stage's intro.
+- Ten VS wins in a row earn a 名人 (Master) stamp on the results screen.
 
 ## How the passwords work
 
@@ -215,8 +232,10 @@ project isn't affiliated with or endorsed by Konami, Hudson Soft, Sega or Ninten
 this repo (logos and screenshots) belongs to them and is used here for reference. The disassembly listings are for
 research; no ROMs or game data are included.
 
-Published codes were checked against the GameFAQs cheat pages and other published notes for each game.
+Published codes were checked against the GameFAQs cheat pages, a community Game Genie code compilation and other
+published notes for each game; every cheat from them was retested in an emulator before it was listed.
 
-Icons on the page are from [Font Awesome Free](https://fontawesome.com) 6.5.2 ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
+Icons on the page are from [Font Awesome Free](https://fontawesome.com) 6.5.2 ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)),
+and the country flags from [flag-icons](https://github.com/lipis/flag-icons) 7.2.3 ([MIT](https://opensource.org/licenses/MIT)).
 
 The code in this repo (the page, codecs, tests and tools) is released under the [MIT License](LICENSE).

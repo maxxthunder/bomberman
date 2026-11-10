@@ -360,11 +360,12 @@
   "effect": "Two sound effects the game never plays",
   "versions": [
    "US",
-   "JP"
+   "JP",
+   "collection"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Every request to the sound routine ($EA57, JP $EA3E) loads its number right before the call, apart from the battle table at $08:7D6F (25 26 25 26 25 27 26 27) and the sound test. None gives 0E or 1E. 0E is a fading effect of about 0.7 s; 1E a steady tone that holds until another sound replaces it. 00, 15 and 16 are empty entries and 26 is used through the battle table. Recorded in Mesen.",
+  "note": "Every request to the sound routine ($EA57, JP $EA3E) loads its number right before the call, apart from the battle table at $08:7D6F (25 26 25 26 25 27 26 27) and the sound test. None gives 0E or 1E. 0E is a fading effect of about 0.7 s; 1E a steady tone that holds until another sound replaces it. 00, 15 and 16 are empty entries and 26 is used through the battle table. Recorded in Mesen. Static: the Collection dump differs from US only at file $0000-$0018 and $1FE0-$1FEF/$1FFC (region check, NMI hook), none of it the sound routine, its data or the request sites; BOMSOUND opens the sound screen there (pcevc.md).",
   "section": "unused",
   "audio": [
    "pce90/SE_0E.mp3",

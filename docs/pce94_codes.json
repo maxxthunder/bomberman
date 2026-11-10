@@ -1461,11 +1461,12 @@
   "code": "Graphics T0 #158 (file $8FD1D), via script 0F:A9FF",
   "effect": "An unused blue jet ship sprite, loaded by a task nothing starts",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Every graphics load goes through 00:EB2A. With battle stages 0-9 forced and the Buglear fight played, every block loads except T0 #158: six sprite cells of a blue jet or bird ship, in no other block. Its only script ($0F:A9FF) is loaded by a task entry at $0F:AA90 that nothing points to. Forced in Mesen (debug menu patch, boss battle, area 6; once the space phase has loaded, Buglear's object slot 6 pointed at $AA90): explosions, the clock stops, and the jet appears as a 32 x 32 sprite. Image: the frame, and the jet enlarged.",
+  "note": "Every graphics load goes through 00:EB2A. With battle stages 0-9 forced and the Buglear fight played, every block loads except T0 #158: six sprite cells of a blue jet or bird ship, in no other block. Its only script ($0F:A9FF) is loaded by a task entry at $0F:AA90 that nothing points to. Forced in Mesen (debug menu patch, boss battle, area 6; once the space phase has loaded, Buglear's object slot 6 pointed at $AA90): explosions, the clock stops, and the jet appears as a 32 x 32 sprite. Image: the frame, and the jet enlarged. Static: World differs from the Japanese HuCard only at file $691F-$78B1, $4D277-$4F751 and $62948-$63B74; the block at $8FD1D, the script at 0F:A9FF and the task entry 0F:AA90 are byte-identical.",
   "section": "secret",
   "img": "unused_jet.png"
  },
@@ -1473,11 +1474,12 @@
   "code": "Sound Room effect 43",
   "effect": "BOSS1 LANDING: a boss effect the game never plays",
   "versions": [
-   "retail"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Effects go through $F9DF (ID in $3701). 204 of its 210 calls have the number written in, and the wrapper $01:C0A1, the tables $0A:9536 and $08:86F5 and the item handlers give the rest; none is 43. The ROM's own sound list names it BOSS1 LANDING. Only the Sound Room plays it: a loud thud of about 80 ms. Recorded in Mesen.",
+  "note": "Effects go through $F9DF (ID in $3701). 204 of its 210 calls have the number written in, and the wrapper $01:C0A1, the tables $0A:9536 and $08:86F5 and the item handlers give the rest; none is 43. The ROM's own sound list names it BOSS1 LANDING. Only the Sound Room plays it: a loud thud of about 80 ms. Recorded in Mesen. Static: the sound driver, effect data and every request site are outside World's three changed ranges ($691F-$78B1, $4D277-$4F751, $62948-$63B74), and the Sound Room opens on World (pcevc.md).",
   "section": "secret",
   "audio": [
    "pce94/SE_43.mp3"

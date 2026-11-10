@@ -14,10 +14,11 @@ case $g in
   gb3) pick "$1" jp jp "Bomberman GB 3 (Japan) (SGB Enhanced).gb";;
   max) pick "$1" blue blue "Bomberman Max - Blue Champion (USA).gbc" red "Bomberman Max - Red Challenger (USA).gbc" \
     hikari "Bomberman Max - Hikari no Yuusha (Japan).gbc" yami "Bomberman Max - Yami no Senshi (Japan).gbc" ain "Bomberman Max - Ain Version (Japan).gbc";;
-  pocket) pick "$1" us us "Pocket Bomberman (USA, Europe) (SGB Enhanced) (GB Compatible).gbc";;
-  bb) pick "$1" us us "Atomic Punk (USA).gb" jp "Bomber Boy (Japan).gb";;
-  nes1) pick "$1" us us "Bomberman (USA).nes" jp "Bomberman (Japan).nes";;
-  nes2) pick "$1" us us "Bomberman II (USA).nes" jp "Bomberman II (Japan).nes";;
+  pocket) pick "$1" us us "Pocket Bomberman (USA, Europe) (SGB Enhanced) (GB Compatible).gbc" \
+    jp "Pocket Bomberman (Japan) (SGB Enhanced).gb" eu1 "Pocket Bomberman (Europe) (SGB Enhanced).gb";;
+  bb) pick "$1" us us "Atomic Punk (USA).gb" jp "Bomber Boy (Japan).gb" eu "Dynablaster (Europe).gb";;
+  nes1) pick "$1" us us "Bomberman (USA).nes" jp "Bomberman (Japan).nes" fds "Bomberman (Japan) (Disk Writer).fds";;  # fds: Mesen wants Firmware/disksys.rom
+  nes2) pick "$1" us us "Bomberman II (USA).nes" jp "Bomberman II (Japan).nes" eu "Dynablaster (Europe).nes";;
   mega) pick "$1" us us "Mega Bomberman (USA).md" eu "Mega Bomberman (Europe, Korea) (En).md";;
   mega8) pick "$1" tap; rom="$R/Mega Bomberman - Special 8-Player-Demo (Europe) (Proto).md";;
   pce90) pick "$1" us us "Bomberman (USA).pce" jp "Bomberman (Japan) (En).pce";;

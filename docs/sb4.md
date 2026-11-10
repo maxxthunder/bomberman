@@ -278,6 +278,18 @@ DMA blocks one byte early" was this bug.
 
 ### Dead code
 
+- ★ **New (coverage round): the mouse / Super Scope warning.** `$C1:BCDD` reads each port's device ID and, on
+  anything but a pad, shows a full screen (`$C1:BD4A` → `$C4:3BC0`): このゲームは、スーパーファミコンマウスやスーパー
+  スコープを使うことはできません。, a crying girl at a TV next to Bomberman. Checked at boot and at five menu points.
+  Mesen with a SNES Mouse in port 2: it comes up at frame 117 and Start doesn't leave it.
+  ![The warning](img/sb4/mouse_warning.png)
+- ★ **New (coverage round): a player auto-walk.** `$01B4`/`$01B6` (players 1/2) take a target cell (`$44 + 2x + 64y`);
+  `$C0:15DA`/`$C0:1620` then turn it into a list of pad presses and walk the player there in scripted-input mode.
+  Nothing writes a target, so it looks like a cut-scene or demo hook. Forced in 1-1 (`$01B4` = `$00C8`), player 1
+  stepped right on its own and stopped at a block.
+- Coverage of the reachable code after a round of input-only play: 83.6%; most of the rest is battle round-end and
+  match-decided paths, and the dash bomber's between-round sequence (`$C2:7FD0`), an ordinary rule never played out.
+
 **471 entry points never ran**:
 
 | Class | Count |
@@ -412,10 +424,10 @@ flag exists.
 ### Unused sounds
 
 - ★ Music requests (`$C3:4A44`, track table `$C0:0739`) come from constants and byte +`$15` of the stage headers
-  (`$C3:5840`, the battle groups at `$C4:0074`): every track but 0E. 0E is a non-looping jingle of about 8.8 s, as
-  long as jingles 04 and 0D, using samples 1E-21.
-- ★ Effect requests (`$C3:4A7F`) cover 01-04, 07-1E, 20, 22, 24-28 and 2A-30. 06, 1F and 29 (two-voice hits) and 23
-  (two hits about 7 frames apart) are never asked for. 05 and 21 were silent, like some used ones; 34 and up hang the
+  (`$C3:5840`, the battle groups at `$C4:0074`): every track but 0E, a short jingle of about 2.2 s using samples
+  1E-21.
+- ★ Effect requests (`$C3:4A7F`) cover 01-04, 07-1E, 20, 22, 24-28 and 2A-30. 06 (a 2 s high sound), 1F (a 4.8 s rumble in waves),
+  23 (two low thuds) and 29 (two hits) are never asked for. 05 and 21 were silent, like some used ones; 34 and up hang the
   driver. The English version has the same 22 music call sites.
 
 ## Title logo

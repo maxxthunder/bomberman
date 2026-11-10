@@ -15,6 +15,7 @@ also work here. Marks: ★ **New** (in neither), **Fixed** (posted wrong or inco
 | Dump | Header title | MD5 | Game |
 |---|---|---|---|
 | Bomberman GB (Japan) (SGB Enhanced) | `BOMBERMAN GB` | `2cad6ee6df3402aeb8f8ab7921517779` | this game (JP 1994) |
+| Bomberman Collection (Japan) (SGB Enhanced) | `BOMCOL` | `9fb9c42cf52dcfdcfbad5e61ae1b5777` | the Japanese cart, byte-identical, in banks 32-47 of a 1 MB multicart with a 1996 menu; all 34 passwords typed there in Mesen give the same results |
 | Wario Blast Featuring Bomberman! (USA, Europe) (SGB Enhanced) | `WARIO BLAST` | `14fe7234ee4bcb14adf20c743f084a35` | this game, US/EU, version tag `wario` |
 | Bomberman GB (USA, Europe) (SGB Enhanced) | `BOMBER MAN GB` | `7e4c9c3620bea7b633394beb67e9680b` | **not** this game: it is JP Bomberman GB 2 ([gb2.md](gb2.md)) |
 
@@ -142,7 +143,8 @@ multitap battle.
   the five technique help pages 5-9, the victory line 11 (テンヲ コガス ダイバクハツ! / AN EXPLOSION OF EARTHQUAKE
   PROPORTIONS SIGNALS YOUR VICTORY.) and the staff roll 13. **Every script is read in play** (Mesen CDL; all but Wario's 10 also caught by the tile log;
   coverage needed a forced-win run, `tools/gb1/cov_win.lua`, as the earlier bot runs stopped at the 1-boss). Two
-  strings never showed in the runs: Wario's `TIME UP` (JP's did, after `$C585-$C587` = 0) and **PERFECT! /
+  strings never showed in those runs: Wario's `TIME UP` (it does when the clock runs out: Mesen with
+  `$C585-$C587` = 0:01, TIME UP and then DRAW GAME) and **PERFECT! /
   CONGRATULATIONS!** (`$0A:4EE4`, drawn by `$0A:4DFF`, which the extra battle (5656) runs when the defeated count
   `$C1D1-$C1D3` reaches 240, `$0A:4EFC`; shown since: see the 240-win screen below). The bank 9
   strings (TECHNIQUE / ROUND SELECT, nPLAYER WIN!) belong to the multitap battle (below); the VICTORY! lines (match
@@ -165,6 +167,9 @@ multitap battle.
 - **Debug features**: none found (no unreferenced menu, no flag read without a write).
 
 ### Super Game Boy
+
+The border and title images here are real Super Game Boy output: BizHawk 2.11.1, BSNESv115+ core in SGB mode, with the
+SGB1 BIOS. On the SNES the Game Boy screen sits at x 48-207, y 39-182.
 
 Captured without an SGB BIOS: `tools/emu/sgb.lua` decodes the packets the game writes to `$FF00` and answers
 MLT_REQ like an SGB, so the game takes its SGB path; `tools/emu/sgb_dump.py` renders the transfers.

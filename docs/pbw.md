@@ -67,7 +67,12 @@ players, Options, every code, the ending, two random-input runs); the SA-1's cod
 - **Reached with pokes:** the VS match-decided CONTINUE? (`$81:85C8`) and set results (`$80:9714`: VICTORY!, and ★ in
   2P, where a set takes 10 match wins, a 名人 stamp by the winner), Story GAME OVER after declining to continue
   (`$80:9D9B`), and opponent attacks 4, 5, 7 and 9 of `$81:F49E` (picked as random & 15, so just rare; 7 sends
-  tumbling Bombermen, 9 raises a row of stones; what 4 and 5 do wasn't clear). ★ Bonus stage `$12` (`$82:D4CD`) is a
+  tumbling Bombermen, 9 raises a row of stones; what 4 and 5 do wasn't clear). ★ Slots 6 and 12 (`$81:F5C7`,
+  `$81:F699`) are bare RTS, yet random & 15 can pick them; their aftermath (`$81:AE27`) sets a 60-frame timer and
+  writes `$0A0A` to the target's `$0E`/`$10`: probably two cut attacks. Attack 1 swaps left and right (`$81:AD03`).
+  ★ Big chains: table `$81:EAA9` has five board effects (the chain value minus `$37F8`); play only reaches the first,
+  the others (a purple swirl, a storm cloud, an ocean wave, yellow Bombermen) take much longer chains. Forced in Mesen.
+  ![Chain effects 1-4](img/pbw/chain_effects.png) ★ Bonus stage `$12` (`$82:D4CD`) is a
   surprise match against Shadow Bomber. ![2P VICTORY! with 名人](img/pbw/vs_meijin.png)
   ![Shadow Bomber cuts into the intro](img/pbw/shadow_bomber.png)
 - **Never run:** a warm-boot entry at `$80:805F`, with no reference.

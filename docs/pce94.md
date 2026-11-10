@@ -288,7 +288,8 @@ pointers `$E501` / `$E528` store, which a static trace cannot follow), so the or
 | `09:B511`-`B7C2` (`$13511`-`$137C2`), `$D8D0`-`$D8FE` | the debug pause menu handler, value printer and editors | debug, cut (known; restored below) |
 | bank `$12` `$9829`, the boss room (`$25C1F` text), the stage select (`$259BB`) | the Debug Version menu and its screens | debug: patch only (known) |
 | `00:E3B2` | soft reset: Select newly pressed while Run is held | not covered (never pressed) |
-| `0C:93EC` (507 bytes), `08:8B40`-`8DCF` (1 KB), `0A:9A9D`, `0A:9B71` | boss phases and stage gimmicks of later areas | reachable, not covered by random play |
+| `0C:93EC` (507 bytes) | `0C:93E4` runs on entering an area's boss room: with every stage cleared (`$20B5 & $0F` = `$0F`, `0C:82D7`) the boss starts (`95EF`); otherwise `93EC` seals the hatch with a sparkle beam and returns to the world map with the next area lit (seen by forcing `0C:93E7` to BRA). Probably the area-clear exit after a boss; its natural trigger is not proven | reachable, not covered by random play |
+| `08:8B40`-`8DCF` (1 KB), `0A:9A9D`, `0A:9B71`; `09:BBAE`, `12:8494`, `10:843B` | boss phases: forced in Mesen, `09:BBAE` brings the final boss's red mecha head, `12:8494` is the rock golem's timed collapse and rebuild, `10:843B` the crab boss spawning objects on nearby floor | reachable, not covered by random play |
 | `13:B012` (293 bytes, called from `12:9DC1`) | Sound Room / sound mode branch not taken | reachable, not covered |
 
 ### Input codes

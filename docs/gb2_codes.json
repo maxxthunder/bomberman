@@ -223,5 +223,17 @@
    "gb2/SE_25.mp3",
    "gb2/SE_26.mp3"
   ]
+ },
+ {
+  "code": "Story text speed",
+  "effect": "The US intro types its text twice as fast as the Japanese one",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "region",
+  "note": "Japan writes one kana (a mark row and a character row) every 10 frames (00:23E9 CP $08, two-row loop at 00:1B08 / 00:23FF); the US writes one letter every 5 frames in one row (00:23C8 CP $04, the row loop removed, line length $14 -> $28 at 00:16AC, 00:1D44, 00:23AB). Mesen: the text pointer $C1CF moves 1 byte every 5 frames in the US and 2 bytes every 10 frames in Japan."
  }
 ]

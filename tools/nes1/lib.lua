@@ -34,3 +34,7 @@ function bot(n, seed)
   math.randomseed(seed or 7) local dirs={'up','down','left','right'}
   for k=1,n//6 do local b={} b[dirs[math.random(4)]]=true if math.random(3)==1 then b.a=true end if math.random(9)==1 then b.b=true end for j=1,6 do q[#q+1]=b end end
 end
+-- fds: the disk BIOS loads the game first; every script starts once the game's reset entry ($A000, the cart's $C000) runs
+if REG == 'fds' then local up = false
+  emu.addMemoryCallback(function() up = true end, emu.callbackType.exec, 0xA000, 0xA000)
+  wait_until(function() return up end, {}) end

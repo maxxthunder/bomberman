@@ -1,15 +1,17 @@
 # Atomic Punk / Bomber Boy (Game Boy, 1990-91): passwords
 
 Bomber Boy (Japan, 1990) and Atomic Punk (USA, 1991) are one game. Read from the ROMs and checked in Mesen 2 (helpers in
-`tools/bb/lib.lua`, `CODE=... tools/emu/run.sh bb tools/bb/test_codes.lua us|jp`). Addresses are the same in both carts
+`tools/bb/lib.lua`, `CODE=... tools/emu/run.sh bb tools/bb/test_codes.lua us|jp|eu`). Addresses are the same in both carts
 unless two are given (US / JP).
 
 Prior art: the GameFAQs "Atomic Punk" page (in `res/`). Marks: ★ **New**, **Known**.
 
-| Dump | Header title | MD5 |
-|---|---|---|
-| Atomic Punk (USA) | `ATOMIC PUNK` | `76010c6ff6bd0c4e8ac934dc69fb96ab` |
-| Bomber Boy (Japan) | `BOMBER BOY` | `fc2d9eb9479543614b6e3d0d63c359aa` |
+| Dump | Header title | MD5 | vs Atomic Punk |
+|---|---|---|---|
+| Atomic Punk (USA) | `ATOMIC PUNK` | `76010c6ff6bd0c4e8ac934dc69fb96ab` | |
+| Bomber Boy (Japan) | `BOMBER BOY` | `fc2d9eb9479543614b6e3d0d63c359aa` | its own grid and Game B letters |
+| Bomberman Collection (Japan) (SGB Enhanced) | `BOMCOL` | `9fb9c42cf52dcfdcfbad5e61ae1b5777` | the Japanese cart, byte-identical, in banks 16-23 (again 24-31) of a 1 MB multicart with a 1996 menu; Game A and Game B codes typed there in Mesen give the same results |
+| Dynablaster (Europe) | `DYNABLASTER` | `2eb9a6891fc79cd878d8bc12d04a0790` | the name, the title graphics and 21 bytes added in bank 2; the same codes ([below](#dynablaster-europe)) |
 
 128 KB each. The title menu offers GAME A / BOMBER BOY (the adventure), GAME B / BOMBER MAN and VS. MODE; Game A and
 Game B each have their own password screen.
@@ -76,8 +78,6 @@ stage 1 with 10 bombs, fire 5 and speed. The 20th letter submits the code.
 - **Sound test** (Known): on Game A's stage select, choose MY TOWN with A + B + Select + Right held, and keep them held
   through the fade. `$00:2A95` checks for exactly that combination (`$17`) and jumps to the sound test (`$03:471A`).
   Typed in Mesen on both carts. ![Sound test](img/bb/sound_test_us.png)
-- ★ **Soft reset**: hold Start and press Select. The joypad reader (`$00:04D7`) jumps back to the boot code (`$0179`);
-  the bytes are the same in both carts, and both were tested in Mesen.
 - No password check reads the joypad, so no code needs buttons held while it is entered.
 
 ## Text
@@ -102,8 +102,13 @@ stage 1 with 10 bombs, fire 5 and speed. The 20th letter submits the code.
 - The other strings belong to screens normal play reaches: menus, map, shop, the sound test and Game B's code screen
   were read in Mesen data logs; the round results, game over, Game B's bonus stage and the staff roll weren't reached
   in those runs (the staff roll shows in the ending above).
-  VS MODE's strings (bank 4: PANEL MODE, POWERFUL MODE, HOW MANY TIMES, VS MODE NOT READY) need a link cable and
-  weren't run.
+  VS MODE's strings (bank 4: PANEL MODE, POWERFUL MODE, HOW MANY TIMES, VS MODE NOT READY) belong to the link-cable
+  game below.
+- ★ **VS MODE over the link cable, played.** VS MODE (`$04:4000`) turns on the serial interrupt; the side that presses
+  Start first sends `$E0` and expects `$EF` (`$04:4744`, `$46C7-$46E9`, `$FFA0` = 2 marks the master), any other byte
+  gives VS.MODE NOT READY (`$4D4A`). The settings go across at `$47B4`, then the pads are swapped every frame (`$4792`
+  → `$4752`, partner in `$FF8C`/`$FF8D`). In Mesen with a scripted partner on the serial port it plays through:
+  handshake, settings, READY, a 2-player battle, the 1 WIN MATCH tally. ![VS MODE](img/bb/vs_mode_link.png)
 
 ## Hidden-content sweep
 
@@ -120,12 +125,38 @@ island picked in turn from a save with islands `$5A` (not each checked to reach 
   PANELS (`$00:2B13`), a list of the panels you own.
 - ★ **A password nobody sees.** Before the rescue scene (not on Faria) the game adds the owned panels' prices to the
   gold, as game over does, writes a CONTINUE password into the screen map at `$9C0A` and puts the gold back. That
-  map is never displayed and is wiped before the next screen, so only game over shows a password. After clearing
+  map is never displayed and is wiped before the next screen. Game over shows a password, and so does Select on
+  the island map (PASSWORD: under the map; seen in Mesen). After clearing
   Jagoraz with 300 gold and 600 in panels it held 6L1PLRCW (Bomber Boy 6J1MJOBS): Jagoraz cleared, 900 gold.
 - **Unset flags** (`disasm/bb/flags_us.txt`): only bank 7's sound-driver fields and two VS MODE bytes written by
   untraced bank 4 code. Nothing that looks like a debug switch.
 - **Input codes** (`disasm/bb/pad_us.txt`): menus, movement, the shop, the sound test's selector, the high-score
-  check and the two codes above (sound test, soft reset). No other button combination.
+  check and the sound test code above. No other button combination.
+
+## Dynablaster (Europe)
+
+The European cart is Atomic Punk renamed (header `DYNABLASTER`, old licensee `$01` for Atomic Punk's `$18`). Aligned
+with Atomic Punk, banks 0, 1, 3, 4 and 7 differ only in the name, the year and pointers; banks 5 and 6 hold the new
+title graphics (`$05:7307-$7A6D`, `$06:5705-$77FC`); bank 2 has 21 bytes inserted at `$02:451D`, which moves Game B's
+letter chain to `$02:4532` and shifts the rest of the bank.
+
+- **Codes**: the Game A grid (`$01:46EB`), its codec (`$01:44B2`) and Game B's letters (`$02:44D5`,
+  `0BCD1FGH2JKLMN3P`) are Atomic Punk's at the same addresses, so **every Atomic Punk code works unchanged** and
+  Bomber Boy's don't.
+- **Text**: DYNABLASTER on the title (with ™), the sound test, the VS MODE menu and the staff roll. The title reads
+  ©1990 HUDSON SOFT, LICENSED TO NINTENDO (Atomic Punk: ©1991, LICENSED BY), and so does the ending's copyright line.
+- ★ **A dead lookup**: the 21 inserted bytes (`$02:451D`) search Game B's letter table for the character in A and
+  return its place. Nothing calls or points at it, and in Mesen it never ran while Game B codes were typed.
+- Checked in Mesen (DMG model, one batch run with `tools/bb/lib.lua`): the 16 Atomic Punk Game A codes in the code
+  list load the islands and gold they decode to, `33FPS=J=` plays the ending, `L62QTG6S` gives ERROR !!, Game B's
+  `B3H2DJF1KJGK1F3LFH0C` starts stage 50 with 10 bombs, fire 5 and every power-up and `NM2HPPBPC0FH0BDPCPCH` stage 1
+  with 10 bombs, fire 5 and speed, and the sound test opens from MY TOWN with A + B + Select + Right held (`$03:471A`
+  ran). The panel, island-name and sound-driver bytes behind the notes on TYUUSUU, HATISUKE, the hidden password
+  and the unused sounds are Atomic Punk's.
+
+![Dynablaster title](img/bb/title_eu.png)
+
+Logo: `docs/img/logos/bb_eu.png`.
 
 ## Unused sounds
 

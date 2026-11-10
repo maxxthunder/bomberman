@@ -397,6 +397,12 @@ Mesen's code/data log doesn't record.
 
 ## Caravan version: what changes
 
+- ★ **New: a different full-power kit.** The full-power routine (`$C4:2926`, used by 0719 and 2657) stores the items
+  byte `$4ED5` as `$0E` and ORs in `$01` (remote control) only if `$1D1A` bit 0 is clear; retail stores `$07`. So the
+  Caravan adds item bit `$08` (not identified) and can leave out the remote. Mesen: 0719's boss rush gives `$0F`
+  (8 bombs, 8 fire); retail 3879 with the full-power flag gives `$07`. The routine also clears the HYPER save
+  slots, and the object allocator (`$C5:463F`) returns `$FF` when no slot is free (retail leaves junk).
+
 - Header title `SUPER BOMBERMAN 5G`. Code/script banks `$C0-$C7` and data bank `$D1` differ. `$D1` has
   `$1DB` bytes added at `$D1:A000` (a pointer table) and `$1C` at `$D1:EFCF`; the rest is shifted
   addresses.
@@ -429,6 +435,17 @@ Mesen's code/data log doesn't record.
 ![Stage select after 12 presses right: retail (stage 3) and Caravan (stage 13)](img/sb5/caravan_stage_select.png)
 
 ## Unused and debug content
+
+- ★ **New: a cut computer-only battle.** `$1D1C` is only ever cleared (`$C0:31BF`); nothing writes it, not even the
+  attract demos. Set, it makes every fighter a computer (`$C4:2A08`), sets `$1D26` = 1 (`$C4:0074`), the time byte to
+  2 (`$C5:0E11`, a 3:00 clock) and skips the pause check (`$C5:0046`). Held at 1 in Mesen into battle room `$74`:
+  all five fight on their own, then the round stops at 0:28 after the time-up fill with no results screen.
+  ![Normal battle, the computer-only battle, later in the round](img/sb5/unused_com_battle.png)
+- ★ **New: an unused object shift.** `$1CBD`/`$1CBE` are zeroed every frame (`$C0:4733`) and subtracted from the
+  X/Y of every object of type `$11` or higher (`$C0:4743`); nothing sets them, so it looks like a camera-scroll
+  correction no task uses. Forced in Mesen, sprites drift while it is held.
+- ★ **New: a second text-window mode.** Bit 0 of `$0341`, set only by the uncalled entry `$C0:0012`, makes the
+  window drawer (`$C0:0115`) draw each window again `$20` columns earlier; forced in 1-1, the HUD bar appears twice.
 
 - **Cut passwords**: the orphaned handlers above, including invincibility (★ New). The code that does
   set `$6253` is the ending/demo natives at `$C5:6DEC`-`$C5:6E93` (players can't die in those scenes).

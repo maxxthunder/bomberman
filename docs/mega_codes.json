@@ -1473,28 +1473,235 @@
  },
  {
   "code": "Maps 2:$05, 2:$06",
-  "effect": "The planet screen with Bomberman '94's title logo beside it, its tiles missing from this game",
+  "effect": "Bomberman '94's title screen, the planets with its logo beside them, whose logo tiles this game doesn't have",
   "versions": [
    "US",
    "EU"
   ],
   "status": "new",
   "verified": "static",
-  "note": "No load list names maps 2:$05/$06 (or 2:$03, the starfield with 23 stars moved). They are Bomberman '94's maps for the same screen, converted cell for cell. In '94 the extra shape is built from a sprite set copied into the background by $9C02; Mega Bomberman has neither the set nor the copy routine, so its tiles $600-$6F3 are never loaded. Drawn with '94's tiles, the shape is the start of the '94 logo (\"BO\" on a cloud). The colours of the logo are a guess.",
+  "note": "No load list names maps 2:$05/$06 (or 2:$03, the starfield with 23 stars moved). They are Bomberman '94's title screen, converted cell for cell: in '94, once the logo has flown in as sprites, $9C02 copies its left part into the background and these maps draw it beside the planets. Mega Bomberman has its own title and neither the logo set nor the copy routine, so its tiles $600-$6F3 are never loaded. Drawn with '94's tiles, the shape is the start of the '94 logo (\"BO\" on a cloud). The colours of the logo are a guess.",
   "section": "unused",
   "img": "unused_planet_logo.png"
  },
  {
   "code": "Graphics 1:$1D, tiles $5F8, $5FC",
-  "effect": "A round blue one-eyed creature in two frames, loaded in the area 3 clear scene but never drawn",
+  "effect": "A round blue one-eyed creature in two frames, loaded for the area 3 boss but never drawn",
   "versions": [
    "US",
    "EU"
   ],
   "status": "new",
   "verified": "static",
-  "note": "1:$1D is loaded only by list $198D0, in the area 3 clear scene with the crab boss. None of the frame tables active there ($DC3D8, $D9386, $DA5EA, the players') names tiles $5F8-$5FF, and no map uses them; every other piece of the set is named. The palette line is a guess, taken from the bubbles next to it.",
+  "note": "1:$1D is loaded only by list $198D0, for the area 3 boss fight (the crab). None of the frame tables active there ($DC3D8, $D9386, $DA5EA, the players') names tiles $5F8-$5FF, and no map uses them; every other piece of the set is named. The palette line is a guess, taken from the bubbles next to it.",
   "section": "unused",
-  "img": "unused_area3_creature.png"
+  "img": "unused_area3_boss_creature.png"
+ },
+ {
+  "code": "Graphics 2:$27, tiles $594, $59C",
+  "effect": "Half-open eyes for the area 5 boss, between the closed and open eyes she uses",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The area 5 boss (the witch) blinks with frames $0A/$0B of table $EAD2C, which draw the closed ($584) and open ($58C) eyes. No frame of $EAD2C covers $594 or $59C, and the hub frames that do name those tiles start only after the hub graphics are reloaded over them. In BizHawk, with every sprite piece traced to its frame, through the fight, a forced defeat and the area-complete beam, no boss sprite covered $594-$59F. Shown as mirrored pairs, as the used eyes are drawn, in the palette read from the emulator.",
+  "section": "unused",
+  "img": "unused_area5_eyes.png"
+ },
+ {
+  "code": "Frame table $EAD2C, frames $2C-$31",
+  "effect": "A sparkle burst for the area 5 boss that no script plays",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Script $EB528 (frames $2C-$31) is referenced nowhere: no pointer to it in the ROM and the script before it ends on its own. It is a simpler version of the defeat burst the game plays ($EB540, frames $36-$3D); $2C and $2D are the same pictures as $36 and $37. That used script also skips frame $3B. Every frame write for the boss's sprites was traced, and in BizHawk frames $2C-$31 and $3B were never drawn while the used burst was.",
+  "section": "unused",
+  "img": "unused_area5_burst.png"
+ },
+ {
+  "code": "Ending frames $2D-$32 of $D867C",
+  "effect": "Two long-trailed shooting stars in the ending, three twinkle steps each, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Their only scripts ($D8F8A, $D8F92) are named only by the routine at $16F74-$16FC0, which nothing calls and the ending's action list leaves out. The whole ending was run in BizHawk: 79 of its 87 frames were drawn, these never.",
+  "section": "unused",
+  "img": "unused_ending_shooting_stars.png"
+ },
+ {
+  "code": "Ending frames $51, $52 of $D867C",
+  "effect": "A small and a big star burst in the ending, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Script $D8FB8 is referenced nowhere and the script before it ends on its own; no frame write reaches $51 or $52. Never drawn in a full run of the ending in BizHawk.",
+  "section": "unused",
+  "img": "unused_ending_burst.png"
+ },
+ {
+  "code": "Title frame $B1 of $DA7CC",
+  "effect": "A LICENSED BY SEGA ENTERPRISES LTD. line the title screen never shows",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The title builds its menu sprites from a 6-entry script table ($1B596, Y positions at $1B590), but the loop stops at 4 (cmpi #4 at $1B542, same in Europe). Line 5 is a sprite copy of the copyright, which the title draws in the background instead; line 6, the license line, appears nowhere. Never drawn in two title runs in BizHawk.",
+  "section": "unused",
+  "img": "unused_title_license.png"
+ },
+ {
+  "code": "Intro frames $40-$42 of $DA7CC",
+  "effect": "Bomberman turning round and covering his face in the intro, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Script $DC2B4 is advanced once by $1B1BE; the task then moves on to $1B1F2, which never advances it again, so only its first frame ($3E) shows. $40-$42 were never drawn in two runs of the intro in BizHawk.",
+  "section": "unused",
+  "img": "unused_intro_turn.png"
+ },
+ {
+  "code": "Hub frames $1B-$20 of $DC3D8",
+  "effect": "A grinning purple villain on the area map: he punches Bomberman, holds up a pillar with red gems, then stands over rubble",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Their script ($DE20A) is referenced nowhere; the same numbers written elsewhere go to other tables, and the only computed script write on a map object ($18734) is in a routine nothing calls ($18712). Never drawn on the area maps in BizHawk. Shown with the area 1 map's graphics and colours.",
+  "section": "unused",
+  "img": "unused_hub_villain.png"
+ },
+ {
+  "code": "Hub frames $0E, $0F, $12, $13 of $DC3D8",
+  "effect": "Two more poses of the small Bomberman on the area map, and a white-haired Bomberman with a stick",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Their scripts ($DE1F0, $DE1DC) are referenced nowhere, and no frame write reaches them in normal play; never drawn on the area maps in BizHawk. $0E and $0F are small variants of the used $0D. Shown with the area 1 map's graphics and colours.",
+  "section": "unused",
+  "img": "unused_hub_bomberman.png"
+ },
+ {
+  "code": "Area 1 boss frames $46, $47 of $DE38E",
+  "effect": "A small sitting monkey in the area 1 boss fight, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Tile $634 is drawn by no other frame. $46 is named nowhere and $47 only by script $DFB78, which nothing points to. The fight was logged frame by frame in BizHawk, with the boss beaten through its own hit branch; these frames were never drawn.",
+  "section": "unused",
+  "img": "unused_area1_boss_monkey.png"
+ },
+ {
+  "code": "Area 2 boss frames $74-$77 of $E8782",
+  "effect": "The area 2 robot turned three-quarters and punching sideways, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Two mirrored pairs using tiles no used frame draws. Nothing names them except script $EAC86, which nothing points to; the boss's two computed frame writes ($15166, $15B78) never give them. The fight was logged frame by frame in BizHawk, with the boss beaten through its own hit branch; these frames were never drawn.",
+  "section": "unused",
+  "img": "unused_area2_boss_poses.png"
+ },
+ {
+  "code": "Area 2 boss frame $0D of $E8782",
+  "effect": "The area 2 robot X-eyed without its arms, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The used defeat frame $0C has the arms. Nothing names $0D, and the boss's computed frame writes ($15166, $15B78) never give it. The fight was logged frame by frame in BizHawk, with the boss beaten through its own hit branch; these frames were never drawn.",
+  "section": "unused",
+  "img": "unused_area2_boss_dazed.png"
+ },
+ {
+  "code": "Area 4 boss frames $63-$67 of $DFCA6",
+  "effect": "The area 4 bat looking sideways, with other feet and another wing pose, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$63/$67 are a mirrored pair, $64 and $66 have other feet, and $65 is a wing pose using 32 tiles drawn nowhere else. Their only scripts are referenced nowhere, and the area 4 boss code computes no frame numbers. $66 is built from used tiles, so it is the least certain. The fight was logged frame by frame in BizHawk, with the boss beaten through its own hit branch; these frames were never drawn.",
+  "section": "unused",
+  "img": "unused_area4_boss_poses.png"
+ },
+ {
+  "code": "Area 4 small bat frame 1 of $E1170",
+  "effect": "A red version of the small bats in the area 4 boss fight, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Its only script ($E1314) is referenced nowhere. All 22 other frames of the table were drawn in the run. The fight was logged frame by frame in BizHawk, with the boss beaten through its own hit branch; these frames were never drawn.",
+  "section": "unused",
+  "img": "unused_area4_red_bat.png"
+ },
+ {
+  "code": "Final boss frames $D7-$DA of $E649E",
+  "effect": "The villain's escape ship with Bomberman in the cockpit, and a smaller one flying away, never shown",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "After the final boss the villain's ship flees empty (frames $D5/$D6). $D7/$D8 are the same ship with Bomberman's head in the cockpit, and $D9/$DA a smaller ship turned round with the same rider; their tiles are drawn by no other frame. No script or code value names $D7/$D8, $D9/$DA appear only in script $E8774, which nothing points to, and the only computed frame write nearby ($13D0E) gives $D5/$D6. A full 14,400-frame fight in BizHawk, through the escape and into the ending, drew 191 of the table's 223 frames and never these.",
+  "section": "unused",
+  "img": "unused_final_ship.png"
+ },
+ {
+  "code": "EA 4-Way Play at power-on",
+  "effect": "Battle Game takes four pads through EA's 4-Way Play adapter, one player each, though the game never mentions it",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "At power-on only, $7C34 runs EA's handshake ($90F2: $43 to $A1000B, $7C to $A10005, $7F, $7C again) and, if $A10003 & 3 = 0, sets $80C2 = $FF. Every frame $7E1E then calls $912A, which selects each pad ($0C/$1C/$2C/$3C to $A10005) and reads it into the four player records ($800A/$8014/$801E/$8028). An adapter plugged in later is never seen. BizHawk (GPGX, 4-Way Play): B pressed on pads 1-4 in turn lands in battle slots 1-4 ($AD0A + 8n), one each. Also: with plain pads, players 3 and 4 copy pad 1 (all four slots start on pad 1, $103D4), so with two pads and four combatants pad 1 drives three Bombermen.",
+  "section": "unused"
+ },
+ {
+  "code": "A changed ROM (checksum check)",
+  "effect": "If the cartridge's data doesn't match its checksum, the game shows a red screen forever",
+  "versions": [
+   "US",
+   "EU"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "$7BC6-$7C04 (Europe $7BEC) sums the words from $200 to the end address in the header ($1A4) and compares the total with $18E; on a mismatch it sets colour 0 to red ($00E) and stops. The 8-player demo has no such check. BizHawk, US ROM with its last byte changed: red after 300 frames. So an IPS patch must also fix the checksum word at $18E; Game Genie codes are not affected.",
+  "section": "unused",
+  "img": "checksum_red.png"
  }
 ]

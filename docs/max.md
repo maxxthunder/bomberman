@@ -111,15 +111,12 @@ Pommy) in Japan and Beast Pommy in the US, id 18 the other way round.
 | Code | Effect | Versions | Mark |
 |---|---|---|---|
 | Title menu: Right, Left, Right, Right, Left, Left, Right, Left, Right, Left, Left, Right, then A | sound test | all five | Known |
-| A + B + Select + Start | soft reset | all five | ★ New |
 
 ![Sound test](img/max/sound_test_blue.png)
 
 - **Sound test.** `$01:5F7E` compares each new press with the table `$01:5FCD` (Red `$01:5F87`, Hikari `$01:54BB`,
   Yami `$01:5475`, Ain `$01:6013`); a wrong press starts over. GameFAQs lists it for Blue, Red and Ain; Hikari and Yami
   have the same table, and it works in all five (`tools/max/test_codes.lua`).
-- **Soft reset.** `$00:0335` checks the held-pad byte `$FF82` & `$0F` = `$0F` every frame and sends the game back to
-  the boot sequence (`$C187`). Held in 1-01 in all five: the logos and intro run again.
 
 ### Ain Version: every stage of both sides (★ New)
 
@@ -147,7 +144,9 @@ The player object is the `$C700` page: `$C705` state (`$14` playing, `$3C` hit, 
 ## Hidden-content sweep
 
 Coverage (`tools/max/cov.sh`, Blue): boot and title (8,000 frames), the sound test through 60 tunes and effects,
-Pitch Area send and receive with no partner, a new game to the game over and Continue, and 60,000 bot frames with the
+Pitch Area send and receive with no partner (with no file saved only Receive can be picked, `$01:60C6`; a
+successful exchange, forced by skipping `CALL $3E32` at `$01:73F4`, turns the NETWORK box to OK! and returns to the
+Pitch Area menu), a new game to the game over and Continue, and 60,000 bot frames with the
 cheats above (1-01 to 1-03). Battle Game can't be entered on a fresh save. Executed:
 **50,054 bytes** of code; ROM bytes touched at all: 264,717 of about 1.4 MB used. Later worlds, the Charabom battles,
 the minigames and the ending were not reached, so this sweep is partial.
@@ -157,14 +156,17 @@ the minigames and the ending were not reached, so this sweep is partial.
   events, `$0D` text, `$03` objects). `$00:3A97` is a Super Game Boy check (MLT_REQ, `$C182`) that only runs off a Game
   Boy Color, next to the lockout screen: left from a Super Game Boy-aware engine.
 - **Unset flags** (`disasm/max/flags_blue.txt`): `$C006-$C069` are sound-driver channel fields written through HL
-  (false positives); `$C183` (set by `$01:63B4`, makes the main loop restart) and `$C0B2` read once. Nothing that
-  looks like a debug switch.
+  (false positives); `$C183` is set only by state `$0E` of the bank-1 screen table (`$01:63B4`, after `$0C`
+  fades and `$0D`), which nothing enters; when set, `$00:26A2` disables interrupts and loops at `$00:26B6`, a
+  deliberate hang (seen in Mesen by poking `$C188` = `$0C`). `$C0B2` is the noise channel's pitch-slide step (`$C0AF`
+  + channel, set by sound opcode 5 at `$3C:4166`, which 13 sounds use). Nothing that looks like a debug switch.
 - **Input codes** (`disasm/max/pad_blue.txt`, 36 hits): menus, movement and the two codes above. No other sequence.
 - **Text.** US text is ASCII with control bytes `$F0-$FE` (`$FC 01 01` starts a box, `$FE` new line, `$FF` end);
   Japanese uses its own kana codes. Known leftovers: the debug menu `$0A:4200` (INIT, TITLE DEMO, MODE SELECT
   1 NORMAL / 2 JUMP / 3 GB KISS, PASSWORD STRAT 0000, NORMAL GAME ... STAGE EVENT, TEST MENU 1-7, ROM DISPLAY), and
   the test-menu strings at `$52:6107` next to the sound test's (0 SCREEN TEST ... 6 EXIT); the sound test draws only
-  its own two lines. No new text found.
+  its own two lines. No new text found. Of the printer controls, `$FB t n` (tile t, n times) is in no string,
+  and `$F9`/`$FA` (row / column skip) appear only in the debug and test menus (same in Pocket).
 - **Graphics.** Blocks come from the table at `$1A:705A` (254 entries of 2 KB, the same in all five versions). The
   unread ones are mostly screens the runs didn't reach (Charabom battles, combining, VICTORY). ★ One slot has no entry
   at all: `$46:4000-$47FF`, a starfield with galaxies, sparkles and a planet's edge (entries 199 and 200 both point at

@@ -6,8 +6,26 @@ art: the GameFAQs "Panic Bomber" (Virtual Boy) page (in `res/`). Marks: ★ **Ne
 | Dump | MD5 |
 |---|---|
 | Panic Bomber (USA) | `467247d5e3383d066005565bf8218436` |
+| Tobidase! Panibon (Japan) | `44039dfaa0f8fcf8ece03b8cda267e4a` |
 
-![Title](img/pbvb/title.png)
+![Title](img/pbvb/title.png) ![Japanese title](img/pbvb/title_jp.png)
+
+## Tobidase! Panibon (Japan)
+
+The Japanese release is the same game from an earlier build: its unused developer menu reads **VERSION 1995/06/02**
+(US 1995/07/21). Both ROMs are 512 KB and 433,132 bytes differ, but most of that is code and data moved by a few bytes:
+three quarters of the Japanese ROM's 32-byte blocks occur in the US ROM. The text (menus, stage cards, opponent names)
+is Japanese and the title reads とびだせ!ぱにボン.
+
+- **Passwords:** the same 48-entry list, at ROM `$27DF5` (`$0702_7DF5`), and the same decoder at `$0701_FDA2`, byte for
+  byte apart from the table address. Every code on this page was typed in BizHawk on the Japanese ROM: the 16 stage
+  codes start the same stages, `1234` is refused, and each special code does what it does in the US game, setting the
+  same RAM (`$0500_24E0`, `24E4`, `24E8`, `24EC`, `24F4`, `24F8`, `2500`; main mode `$0500_26D6`). `1298`'s opponent is
+  ボンバーウルフ (Bomber Wolf) instead of the first stage's バロム.
+- The title-screen code and the ending skip work the same (seen in BizHawk).
+- Unchanged: the sound tables (`$0707_4024`, `$0707_4080`) and the FLAME UP! frame (file `$33BEA`); the unused medal
+  graphics are there too (file `$6713E`). Whether they are unused in the Japanese ROM as well was not traced.
+- The developer-menu patch is for the US ROM only.
 
 ## The password
 
@@ -106,6 +124,12 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
 - **Never run, normal play:** object handlers for situations the runs didn't reach, the cartridge and link-port interrupt handlers, and unused commands of the sound
   driver (its banner: "VSU DRIVER Version 0.19a ... Hudson Soft ... Prototype"). Other unreferenced routines are the
   developer menu above, two object handlers (`$0701_1D88`, `$0701_1E30`) and library helpers.
+- ★ **A hidden DEBUG MENU option (coverage round).** Pressing A or Start with L and R held in the menu loop
+  (`$0700_6646`) sets `$0500_2504`. Its readers: `$0700_A76C` (objects in state 8/9 spawn an extra object) and
+  `$0700_B1CE` (the next piece set becomes `9,C,C,C` when a counter reaches `$20`). In BizHawk with real presses the
+  flag sets and extra star particles appear; with the flag written at the start of a match, a big lit bomb drops
+  into the right field at frame 60. That the readers run is inferred from the effects (BizHawk's VB core gives no
+  execution log), and the big bomb wasn't seen with real input.
 - **Input codes:** the passwords, the L+R and debug-menu checks, the title code above, the boot wait for buttons to be
   released and the mode-7 skip. Nothing else.
 - **Text:** the ASCII strings are the developer menu, sound test, stage select, DEBUG MENU and RESULT labels, all
@@ -120,6 +144,9 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
   ![Graphics $C6](img/pbvb/unused_medals.png)
 - Graphics `$C5` (the medal card and stage screen) also hold 陽, て, 星 and パスワード. Neither screen's maps (`$60`;
   `$50`, `$51` + world) nor sprite frames (table `$0703_3800`) use them: Japanese text left in the font.
+- ★ **FLAME UP!** Sprite frame `$0121` (file `$33BEA`), next to the used LEVEL UP! (`$0120`) and in its lettering, is
+  named by no frame call (`$29A4`, `$3636`), frame store or ROM table. Its copy in the text sheet (map `$21`, rows
+  10-13) is outside the rows 0-5 the game shows: ![FLAME UP!](img/pbvb/unused_flame_up.png)
 
 ## Unused sounds
 
