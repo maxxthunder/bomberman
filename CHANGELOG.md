@@ -2,6 +2,17 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.2.0 (2026-11-10)
+- Bomberman GB 3: the stage-5 crystals played for real: a 1-up at 40, bell panels at 50 and 60, and the helper at the
+  boss.
+- Super Bomberman 5: all ten bosses beaten, the final boss's three forms (the pilot only on the good route) and both
+  endings.
+- Wario Blast / Bomberman GB: the VICTORY screen for players 2-4 (Wario only for player 1), and kick, liner and
+  trouncer in a multitap battle.
+- Pocket Bomberman: ability bit 3 lets flames pierce soft blocks.
+- Super Bomberman 3: two more assets in use (the ending's starfield, an enemy's death frames), and Black Bomberman in
+  the two-player ending.
+
 ## 2.1.0 (2026-11-10)
 - Bomberman '93: bending fire, an unused power that turns a blocked blast around the corner (new card); a flag that
   freezes the pad; the CONFIGRATION screen's values shown in play; the password arrows and the continue screen's

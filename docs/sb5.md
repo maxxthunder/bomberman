@@ -233,8 +233,8 @@ room *dest*), sometimes after `05`/`06` (set/clear flag in `$7E:2900`, which pic
 `tools/sb5/scripts.py rom routes` lists every room's exits.
 
 The stage-clear trigger is `$1D50`, the enemies left: each enemy death decrements it (`$C4:3DB3`) and
-at 0 `$C5:3B4E` posts event `$0D`, which opens the warps. Boss rooms instead get event `$1B` when the
-boss dies (`$C3:438D`, `$C1:16A9`).
+at 0 `$C5:3B4E` posts event `$0D`, which opens the warps. Bosses 1-8 die the same way (event `$0D`, below); the
+final boss rooms get event `$1B` when the last form dies (`$C3:438D`, `$C1:16A9`).
 
 ### Verified in Mesen
 
@@ -248,6 +248,22 @@ boss dies (`$C3:438D`, `$C1:16A9`).
   `$70`), which is what the game does when the boss dies. `$6F` then played `$AA` (the 1999 sequence:
   the bubble scene, then the staff roll over boss arenas `$67`, `$68`…), and `$70` played `$AB` (the
   0803 space scene). The scripts end in `0F AA` (`$C7:27D7`) and `0F AB` (`$C7:28DA`).
+- **All ten bosses killed** (password 2657, room set through `$6248` with the room-variant flag the stage exit would
+  set; P1's HP `$1662` held; hits forced at the fire checks `$C4:2CFB`, `$C0:2DF4`, `$C1:192B`, `$C3:49EC`). The
+  coverage never damaged a boss: its invincibility flag `$6253` also stops every bomber's HP from dropping
+  (`$C4:2D2B`).
+  - Bosses 1-8 are bombers in actor slot 2, run by the player code: HP `$1662,X` from the type table `$C0:B9D4`
+    (`$C4:3D07`; types 1-9: 1, 3, 2, 3, 5, 4, 3, 3, 1, dying at one hit more); hit `$C4:2D3B`, death
+    `$C4:2D50` → `$C4:3D9F` (points from `$C4:B9C0`, `$1D50` down, so event `$0D` opens the warps). Room `$6A` has two,
+    type 9 dying first. The warp leads straight to the next zone's first stage and its ZONE card: no map, no scene.
+  - The final boss: the mech (HP 5, `$C0:23AD`, hit `$C0:2DFB`, death `$C0:2E11`), then the mech without its shell
+    (HP 5, `$C1:0D8D`-`$C1:1A00`). In `$70` its death ends the fight (`$C1:16A9` → bad ending). In `$6F` a third form
+    follows, the pilot beamed down on foot (`$C3:3CAC`-`$C3:43A7`, death `$C3:4244` → `$C3:4377`, `$1B` at
+    `$C3:438D`) → good ending, through the staff roll to END (held over 15,000 frames without input).
+  - About 9,200 bytes of code ran for the first time. No unused attack, phase or text turned up; still unrun near the
+    final boss are the mech's two other death exits (`$1FBD` = 0 / 2: `$C0:29A3`, `$C0:2A79`) and `$C1:20AF`,
+    `$C1:2263`, `$C1:24C1`.
+  ![Bosses 1-8 dying and the stage after each; the mech, its second form, the pilot, the good ending, the staff roll, END, the bad route](img/sb5/boss_kills.png)
 
 ### Which route gives which ending (from the exit graph)
 

@@ -269,10 +269,10 @@ bottom-left, top-right, bottom-right).
 **The sweep.** Ten Mesen runs on EU covered every stage id `$0B-$47` (5358 with the stage overridden at the
 decoder), all 12 battle stages with each of the four arena variants, the intro (6514), the ending (0803), the final
 boss (3104), the title and option menus, and a game over. Three logs were combined: every asset request at
-`$C0:1942`, every stream opened at `$C0:2595`, and the code/data log of every ROM byte read. **22 of the 240 assets
+`$C0:1942`, every stream opened at `$C0:2595`, and the code/data log of every ROM byte read. **20 of the 240 assets
 were never read in any run.** They are rendered in `docs/img/sb3/unused/` (file name = asset id and ROM address):
 
-![The 22 assets no run read](img/sb3/unused_assets.png)
+![The 20 assets no run read](img/sb3/unused_assets.png)
 
 | Asset | ROM | What it is | Status |
 |---|---|---|---|
@@ -283,12 +283,15 @@ were never read in any run.** They are rendered in `docs/img/sb3/unused/` (file 
 | 3.59 | `$CC:4B53` | BG tiles: houses, clouds, a blimp | ★ New, scene not identified |
 | 3.79, 3.83 | `$CC:F1C9`, `$CD:244E` | large sprites: explosions/debris, stars, a dish | ★ New |
 | 8.65 | `$CA:0128` | a star burst | ★ New |
-| 8.01, 8.02, 3.20, 3.78, 4.22, 4.36, 4.38, 4.41, 4.48 | see the file names | small item, cursor and object sprites | ★ New |
-| 3.19, 3.52, 3.66 | `$CA:CC9C`, `$CC:281C`, `$CC:8962` | tilemaps / a short tile strip | ★ New |
+| 8.01, 3.20, 3.78, 4.22, 4.36, 4.38, 4.41, 4.48 | see the file names | small item, cursor and object sprites | ★ New |
+| 3.52, 3.66 | `$CC:281C`, `$CC:8962` | a tilemap / a short tile strip | ★ New |
 
 "Never read" is only as good as the coverage: two-player story mode, every battle character and the controller
 fault were not exercised, so some of these may still be used there. The boss kills (below) read three more: 8.60
-when a boss dies, 8.52 at the final boss's change into the mech and 8.61 when the five bombers appear.
+when a boss dies, 8.52 at the final boss's change into the mech and 8.61 when the five bombers appear. Two more are
+used: 3.19 is the starfield behind PRESENTED BY HUDSON and END (every ending), and 8.02 is the red 1-1 enemy falling
+flat when it dies (read when one is killed, never in an ending without kills).
+![8.02 after a red enemy dies on 1-1 and in the staff roll; 3.19 behind PRESENTED BY HUDSON](img/sb3/assets_read.png)
 
 **Known items:**
 - **Egg power-up icon (Known)**: found as tiles `$50-$53` of asset 6.02 (`$C0:6D46`, BG tiles at VRAM `$0800`),
@@ -408,7 +411,10 @@ The game has one text table: **the staff roll** at `$C1:7A72`-`$C1:7D7C` (EU). I
 `^` for `/`, `a`/`_` for opening/closing quotes and `b` for `!`. `python tools/sb3/strings.py <rom> <cdl>` dumps it,
 along with the noise, and marks what was read. JP and the beta have the same table 34 bytes lower, with the
 round-1 credit differences. **PRESENTED BY HUDSON** (`$C1:7D69`) is the staff roll's last card, before END
-(read after the final boss in Mesen).
+(read after the final boss in Mesen); left running, the game repeats PRESENTED BY HUDSON and END and never returns to
+the title. In a two-player game, Black Bomberman joins White Bomberman in the thumbs-up cockpit close-up; hard mode
+changes nothing in the ending.
+![The cockpit close-up, 1 player and 2 players](img/sb3/cockpit_1p_vs_2p.png)
 
 All other on-screen text (menus, stage names, battle text, the Japanese headers) is tile graphics in the asset
 sets, which the round-2 asset sweep covered. The only other ASCII is the ROM header and the multitap BIOS IDs at

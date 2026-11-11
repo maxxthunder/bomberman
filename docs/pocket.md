@@ -60,9 +60,11 @@ checks), `$01:6565` (the check), `$01:662E` (what an accepted code sets), tables
 
 - **Power-up start** (`$C352` = 1): bombs 4, fire 4, 3 lives, `$C1F0` = 6, and at the stage start the player's
   ability byte `$C452` gets bits 1 and 3 (`$02:45EB`); bit 1 is tested by the A-button bomb handler (`$02:5F8A`, probably
-  the remote primer), bit 3 by the flame code in bank 4 (`$04:7349`, `$73CE`, `$7453`, `$74D8`): for cells of types `$22`-`$2A` it writes
-  `$FE` (keep going) instead of `$FF` (stop) into the flame-arm table, so flames pass those cells (read from code; no
-  visible difference was found in a test).
+  the remote primer), bit 3 by the flame code in bank 4 (`$04:72F3`; tests at `$7349`, `$73CE`, `$7453`, `$74D8`): **flames pierce soft
+  blocks**. Without it a flame breaks the first soft block (`$21`, or `$10`-`$1E` hiding an item) or item and stops;
+  with it the code writes `$FE` (keep going) instead of `$FF` (stop) into the flame-arm table and the flame burns on
+  to its full length. Mesen, Ocean 1, fire 4 under a stack of four soft blocks: one burned with the bit off, all four
+  with it on. ![Bit 3 off (top), on (bottom): the bomb, then after the blast](img/pocket/bit3_flame.png)
 - **Boss rush** (`$C352` = 2): the same power-up start, then `$C352` becomes 3 and while it is 3 every stage start
   sets the area to 5 (`$02:45F3`-`$02:45FE`).
 - **Ending** (`$C352` = 3 when the password screen exits, `$01:6A2D`): the state goes to 7, the ending, instead of the
@@ -321,7 +323,6 @@ Logo: `docs/img/logos/pocket.png` (`tools/pocket/logo.py`, Game Boy Color colour
 
 ## Open
 
-- Ability bit 3's visible effect (which cells types `$22`-`$2A` are).
 - Whether the flower's bombs and fire last past the stage (it writes the carried values too).
 - GB KISS with a partner (a second Japanese cart or another GB KISS game) wasn't emulated: Mesen runs one Game Boy and
   its HuC-1 infrared receiver never sees light.

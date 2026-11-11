@@ -196,8 +196,9 @@ Logo: `docs/img/logos/gb3_jp.png` (`tools/gb3/logo.py`).
 
 ### Stage-5 diamonds and the boss helper (★ New)
 
-Stage 5 of each area counts the diamonds you pick up (pickup kind 8, `$00:38D1`: `$C390` in room 1, `$C391` carries
-on in room 2; in challenge mode they add score instead). In room 2, the count reaching the area's thresholds
+Stage 5 of each area counts the diamonds you pick up: crystals lying on the floor (cell `$25`), taken by walking
+onto them (pickup kind 8, `$00:38D1`: `$C390` in room 1; room 2's start copies it to `$C391` and clears `$C38E`, so
+only room 2's panels count; in challenge mode they add score instead). Wood 5 holds 70 (30 + 40). In room 2, the count reaching the area's thresholds
 (`$00:39B6`: Wood, Sand, Lava 40 / 50 / 60; City, Ice, Aqua 60 / 70 / 80; Evil 50 / 60 / 70) puts out a 1-up panel
 (tile `$A4`), then a special panel (tile `$A8`) at each of the next two; each special panel adds 1 to `$C38E`. At
 the boss stage, `$C38E` ≠ 0 brings a small flying helper (object `$52`, `$09:5E61`, from `$0D:6DA7`) that drops three
@@ -205,8 +206,15 @@ bomb / fire panels picked for your current power (`$02:7DF9`); the boss's contac
 flies (`$C4CA`). At 2 it flies a second, wavy lap (`$09:5E8E`) that drops nothing. The stage-7 password form keeps
 `$C38E` for a boss-stage restart, which is why the known boss passwords (39C6418 and the others) bring the helper.
 Mesen: Wood, City and Ice boss passwords with `$C38E` = 0, 1 and 2 (the helper only with 1 or 2; the middle panel was
-fire up), and on Wood 5 a special panel taken raised `$C38E` 0 → 1.
+fire up).
 ![Helper, its three panels, the second lap, fire up taken](img/gb3/diamond_helper.png)
+
+Played on Wood 5 (Mesen, from password 2986410; invincible, the player moved onto each crystal, each room ended by
+force; the counters never written): all 70 taken through the game's own pickup code, the 1-up panel came out at 40,
+the special panels at 50 and 60 (placed from the first `$0F` cell, `$00:24C7`), each taken raising `$C38E` to 1, then
+2, and at the boss stage the helper flew in, dropped its panels and flew the second lap. The stage intro calls them
+bell panels (ベルパネル) that call the Bomber Ball (ボンバーボール).
+![The 1-up panel at 40, bell panels at 50 and 60, the helper at the boss](img/gb3/diamonds_play.png)
 
 ### Challenge mode
 
@@ -229,8 +237,7 @@ apart at `$D300` and copied to `$D200`; a decoded challenge room matched the RAM
 
 ## Open
 
-- The 50-diamond count in stage 5 wasn't reached in play (the special panel was placed and taken; the boss helper
-  was seen through the password).
+- How many crystals the other areas' stage 5 holds (City, Ice and Aqua need 80 for the second bell panel).
 - Challenge mode: the cleared branch (`$C480` = `$FF`) and どきどき's doors (cells `$32`/`$33`, rooms 120-123) weren't
   reached; walking to はらはら's door wasn't done (the player was moved next to it); the room records' soft-block, item
   and object parts aren't decoded.

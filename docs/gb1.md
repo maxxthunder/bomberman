@@ -198,11 +198,24 @@ JP and Wario (`tools/gb1/multitap.lua`, run with `tools/emu/sgb_dump.py`).
 Played through (Mesen, JP and Wario): ROUND 1-8 (`$C3EF`, A +1 / B −1, wrapping) picks arena `$1F` + n; all eight were
 played to a round result. ![Arenas 1-8](img/gb1/multitap_arenas.png) TECHNIQUE defaults to OFF (A turns it ON, B
 OFF, `$09:4602`); ON makes `$09:474E` set every player's technique flags `$5C`-`$5F`, the ones the story mode hands
-out after bosses (`$01:4040`): kick, dash, trouncer and liner, never the moto (`$5B`). Checked: the flags, and B +
+out after bosses (`$01:4040`, table `$01:4065`): `$5F` kick, `$5D` dash, `$5C` trouncer and `$5E` liner, never the moto
+(`$5B`). Checked: the flags, and B +
 Right moved 48 px in 40 frames with ON against 30 with OFF. A match is first to 3 round wins (`$C3D1`-`$C3D4`), then
 VICTORY (`$09:4E7C`): JP shows Bomberman in a spotlight with 1PLAYER VICTORY!, Wario shows Wario with PLAYER1 VICTORY!;
 after about 5 seconds CONTINUE (back to the join screen) or END (the title).
 ![VICTORY, JP and Wario](img/gb1/multitap_victory.png)
+
+Other winners (Mesen, the match winner set at `$09:4CB1`): JP always draws the same spotlight picture and only the
+digit changes (2PLAYER, 3PLAYER, 4PLAYER VICTORY!, `$09:4FCC`). Wario Blast keeps Wario for player 1 only (`$09:4EBF`);
+players 2-4 get the Bomberman spotlight with PLAYER2-4 VICTORY!.
+![JP (top) and Wario (bottom), players 2, 3 and 4](img/gb1/victory_others.png)
+
+The techniques in a multitap battle (JP, TECHNIQUE ON; the flags are read only by the dispatcher `$00:276D`, table
+`$00:278E`): **kick** (`$01:568C`), walk into a bomb and it slides to the next obstacle; **liner** (`$01:5DF1`), A
+again while standing on your own bomb lays a row in the facing direction up to your bomb capacity (none at the start's
+capacity of 1; shown with capacity set to 4); **trouncer** (`$01:5EE4`), a dash (B + direction) into another player
+stuns them for about a second (`$01:5F15`).
+![Kick (top); liner, then trouncer (bottom)](img/gb1/technique_moves.png)
 
 ## Regions (Wario vs JP)
 
@@ -247,5 +260,5 @@ the password digit buffer), brings it up after the first round in both carts.
 
 ## Open
 
-- The multitap VICTORY picture for winners other than player 1; kick, trouncer and liner in a multitap battle.
+- Wario Blast's techniques in a multitap battle, and B stopping a kicked bomb.
 - Why the logo at `$03:6911` was dropped (an earlier palette design is a guess).
