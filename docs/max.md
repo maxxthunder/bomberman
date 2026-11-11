@@ -165,7 +165,20 @@ the minigames and the ending were not reached, so this sweep is partial.
   Japanese uses its own kana codes. Known leftovers: the debug menu `$0A:4200` (INIT, TITLE DEMO, MODE SELECT
   1 NORMAL / 2 JUMP / 3 GB KISS, PASSWORD STRAT 0000, NORMAL GAME ... STAGE EVENT, TEST MENU 1-7, ROM DISPLAY), and
   the test-menu strings at `$52:6107` next to the sound test's (0 SCREEN TEST ... 6 EXIT); the sound test draws only
-  its own two lines. No new text found. Of the printer controls, `$FB t n` (tile t, n times) is in no string,
+  its own two lines. ★ The game's messages are a table of 240 (US `$57:4400`, Japanese `$1B:4C07`; Japanese
+  hiragana `$80-$AD`, katakana `$C0-$ED`, voiced kana `$50-$7B`) picked by a number in `$C1A7`. Every store to `$C1A7`
+  takes a constant or one of seven tables (stage objectives `$53:43EB`, 5 × 19; minigame help `$53:54E9`; the
+  ending's `$50:5F6A`; and others), the same in all five versions. Never picked:
+  - Four stage objectives: `$15` "Enter all the Warp Holes!" (すべての ワープを くぐるのだ!), `$1D` "Cross all the
+    Signals!" (すべての シグナルを わたるのだ!), `$28` "Stop every defence barrier!" (すべての ぼうぎょバリヤーを
+    とめるのだ!; the US text is "Nothing") and `$30` "Defeat all except the Blockens!" (ブロックン いがいを すべて
+    たおすのだ!).
+  - `$D5`, a third Kick Game help page (the help shows `$D3`, `$D4`, `$BB`): ゲタアイテムを とりすぎると
+    タイムオーバーに なります! ("Take too many Geta items and it's Time Over!"); blank in Blue and Red.
+  - `$8E` 〈name〉が おでむかえだ!! ("〈name〉 has come to meet you!!") and `$8F` 〈name〉が なかまに くわわった!!
+    ("〈name〉 joined you!!"); blank in Blue and Red.
+  - `$8B` "Defense missed!", next to the battle lines `$85-$8A` (tables `$08:5EE0`, `$08:70F0`).
+  Read from the ROM, not drawn in the game. Of the printer controls, `$FB t n` (tile t, n times) is in no string,
   and `$F9`/`$FA` (row / column skip) appear only in the debug and test menus (same in Pocket).
 - **Graphics.** Blocks come from the table at `$1A:705A` (254 entries of 2 KB, the same in all five versions). The
   unread ones are mostly screens the runs didn't reach (Charabom battles, combining, VICTORY). ★ One slot has no entry
@@ -196,6 +209,8 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
   ![Blue, Hikari, Ain](img/max/dmg_boot.png)
 - **One sound request.** `$0D:42F7` asks for effect 58 in Blue, Hikari and Ain but 09 in Red and Yami, so 09 is
   heard in play only on Max's side; elsewhere only the sound test plays it. Static only.
+- **An ending keyword.** The Japanese ending's table (`$50:5FE1`) shows message `$77`, キーワード「ばく
+  ボンバーマン 2」 (keyword "Baku Bomberman 2"); the US table leaves it out and the US slot is blank. Static only.
 
 ## Unused sounds
 
@@ -211,7 +226,8 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
 - What the 5 extra stage-table words (`$A0EE-$A0F7`) are, and the stage table's second byte.
 - Pitch Area's infrared packet format (needs a second console).
 - How the legendary Charaboms are earned, and Battle Game with a saved Charabom; both outside the coverage runs.
-- A wider coverage run (worlds 2-5, minigames, ending) for the dead-code and graphics sweep, and the Japanese text table.
+- A wider coverage run (worlds 2-5, minigames, ending) for the dead-code and graphics sweep.
+- The unused messages drawn in the game.
 
 ## Battle against the computer (★ New)
 

@@ -22,6 +22,7 @@ blocks); there was no release outside Japan.
 | `$C1BC` | ★ unused invincibility flag (cleared at boot, never set) | `$00:12FA`, `$01:4BE6` |
 | `$C1BD` | ★ unused clock-stop flag (cleared at boot, never set) | `$00:12FD`, `$00:29B1` |
 | `$C2E0` / `$C2E1` | pad held (with repeat) / newly pressed | `$0D:6B0C` |
+| `$C482` | ★ unused pad-freeze flag (never written) | `$01:413B` |
 | `$C362` | area 0-6: Wood (モリモリ), City, Ice, Sand, Lava, Aqua, Evil | `$0D:6A26` |
 | `$C363` | lives | `$00:1514` |
 | `$C365` | stage - 1 (0-5) | `$0D:69E6` |
@@ -118,12 +119,17 @@ Entering: on the title, the 2nd line (ぱすわーど). Up/Down step the digit (
 
 ### Unused debug flags (★ New)
 
-Boot clears `$C1B9-$C1BD` (`$00:12F7`-`$00:12FD`). Two of them are read but never set anywhere:
+Boot clears `$C1B9-$C1BD` (`$00:12F7`-`$00:12FD`). Two of them are read but never set anywhere, and a third flag
+is never written at all:
 
 - **`$C1BC`: invincibility.** The player-hit routine `$01:4BE6` jumps past the dying state when it is non-zero.
   GameShark `0101BCC1`: 0 hits in 6,000 frames of the bot (11 deaths without).
 - **`$C1BD`: clock stop.** `$00:29B1`, the per-frame clock update, returns at once. GameShark `0101BDC1`: after
   1,200 frames of Wood 1 the clock still reads 3:00 (2:41 without).
+- **`$C482`: pad freeze.** `$01:413B`, before the object loop, zeroes the pad bytes `$C2E0`/`$C2E1` when it is
+  non-zero (the same kind of flag as Bomberman '93's `$2F99`). No store to it exists in the ROM. GameShark
+  `010182C4`: Right, Down and Left held 60 frames each leave the player on the start cell (about 16 px moved
+  without), and the bot never moves.
 
 ### Cheats (★ New, `tools/gb3/test_cheats.lua`)
 
@@ -133,6 +139,7 @@ Boot clears `$C1B9-$C1BD` (`$00:12F7`-`$00:12FD`). Two of them are read but neve
 | `C3B-E6B-081` + `E4B-E7B-198` + `4AB-E8B-E6D` (Game Genie) | invincible as a ROM patch (`$01:4BE6` -> `JP $4AE4`) | 0 hits | GameShark `0101BCC1` |
 | `010363C3` | infinite lives | 14 deaths, lives stay 3 | Game Genie `B75-17E` + `B75-61E` (DEC A -> OR A at `$00:1517`, `$00:1561`): 13 deaths, lives stay 3 |
 | `01FF80C4` | every stage ends cleared (`$C480` = `$FF`) | Wood 1-6 then City 2 in 6,000 frames | Game Genie `18B-A2E` + `C3B-E8E` (`$00:1BA2` JR NZ -> JR, `$00:1BE8` JP Z -> JP): Wood 1-6 then City 1 |
+| `010182C4` | the pad does nothing (`$C482`) | player stays on the start cell | |
 | `0101BDC1` | clock stops (the debug flag) | 3:00 after 1,200 frames | Game Genie `C99-B5D` (`$00:29B5` RET NZ -> RET): 3:00 |
 
 ## Hidden-content sweep
@@ -145,6 +152,8 @@ attack, all three area tiers with the cheats, a game over. Executed: **44,079 by
   `$00:16F7` never ran. Orphans (241) are mostly graphics data.
 - **Unset flags**: the static scan finds only object-page reads (`$C012`, `$C100`, written through HL); `$C1BC`
   and `$C1BD` were found by hand from the boot clear (they have a write, the clear, so the scan doesn't list them).
+  A write-logging run (every RAM byte's written values, then each read-but-unwritten byte forced in a stage) found
+  `$C482`; the others (`$C373-$C377`, `$C4CB`, `$C5E1`, `$DE27`, `$DE29`) changed nothing.
 - **Input codes** (`disasm/gb3/pad_jp.txt`, 31 hits): menus, the password cursor, movement. No hidden pad code.
 - **Text** (`tools/gb3/textdump.py`, `disasm/gb3/text_jp.tsv`): text is drawn glyph by glyph into tiles (`$00:0880`:
   character n = one compressed tile from the pointer table `$00:08AD`, bank `$0C` below `$70`, bank 8 above); the
@@ -152,8 +161,12 @@ attack, all three area tiers with the cheats, a game over. Executed: **44,079 by
   `$33-$69` katakana with punctuation and Ⓐ Ⓑ ♡, `$70-$79` digits. Messages: table `$0A:6905` (71 entries: 32
   characters in two lines of 16, then an 8-byte mask, 2 bits per character, 3 = ゛, 2 = ゜); shop prompts: `$0A:7CA6`
   (12: 20 characters + 20 mark bytes, `$AA` ゛, `$AB` ゜). Area briefings, the intro and ending story, boss lines and
-  the shop all show in the runs. Not shown: message 19 (an area that moves) and 68 (rocks that stop moving), the
-  shop help for F and M1-M4 and its M2-M4 prompts; all are picked by the same tables, so none is known to be unused.
+  the shop all show in the runs. Not shown: the shop help for F and M1-M4 and its M2-M4 prompts, picked by the
+  same tables as the rest. Message 68 (rocks that stop moving) is on area 4 stage 4's list (`12 44`). ★ **Message 19**
+  (`$0A:6D19`) is on no list: the briefing lists (`$0A:682D`, 4 bytes per stage, read through `$C483`) and the story
+  list (`$0A:666A`, `$2F-$47`) never give it. It reads ただし このエリアは うごくので すばやく こうどうせよ!
+  ("However, this area moves, so act quickly!"), for a moving stage the game doesn't have.
+  ![Message 19 drawn on the Mori Mori briefing (Mesen)](img/gb3/msg19.png)
   The title, password and challenge-mode words are BG tile maps (not in this dump).
 - **Graphics.** Sets load through `$00:09A1` (table `$00:09A7`, 29 sets of 6-byte records: bank, source, VRAM address,
   tile count) and maps through `$00:2F03` (table `$00:2D7E`). Every call passes a constant (or area + `$0D`), and every

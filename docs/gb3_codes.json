@@ -1035,5 +1035,31 @@
   "section": "secret",
   "note": "$00:38D1 counts the diamonds; thresholds per area at $00:39B6 (Wood, Sand, Lava 40/50/60; City, Ice, Aqua 60/70/80; Evil 50/60/70): a 1-up panel, then two special panels, each +1 to $C38E. At the boss, $C38E ≠ 0 runs $09:5E61: the helper drops bomb/fire panels picked for your power ($02:7DF9); at 2 it flies a second lap. Room 2's start clears $C38E, so only its panels count; Wood 5 holds 70 crystals (30 + 40). Mesen: on Wood 5 all 70 taken (player moved onto each, invincible): 1-up at 40, bell panels at 50 and 60, $C38E 0 → 1 → 2, and the helper came at the boss with its second lap. Image: the 1-up panel, both bell panels, the helper at the boss.",
   "img": "diamonds_play.png"
+ },
+ {
+  "code": "010182C4",
+  "devices": {
+   "GameShark": "010182C4"
+  },
+  "effect": "The pad does nothing (unused flag $C482)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "GameShark. $C482 is never written anywhere in the ROM, but $01:413B zeroes the pad bytes $C2E0/$C2E1 before the object loop when it is non-zero. Mesen from Wood 1: Right, Down and Left held 60 frames each leave the player on the start cell (about 16 px moved without); the bot never moves.",
+  "section": "cheat"
+ },
+ {
+  "code": "Message 19",
+  "effect": "A briefing line for a moving area: \"However, this area moves, so act quickly!\"",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Message $13 at $0A:6D19, ただし このエリアは うごくので すばやく こうどうせよ!, is in none of the briefing lists ($0A:682D, 4 bytes per stage) or the story list ($0A:666A). Drawn in Mesen by putting it on the Mori Mori Stage Round 1 briefing.",
+  "section": "unused",
+  "img": "msg19.png"
  }
 ]

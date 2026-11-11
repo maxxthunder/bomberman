@@ -209,6 +209,12 @@ so for the screenshots `FONT=1` copies the ASCII tiles from the title screen (`f
 - **Known (not re-checked here):** the Fire Pass and Broken Egg item graphics.
 - **Known:** the Debug Version menu in bank `$12` (`$25829`) and the pause-menu text at `$3850`, see above. Bank
   `$12` also holds the Sound Room (`$25D89`); the Sound Room is the only part the retail game can reach.
+- ★ **Enemy type `$1D`.** The enemy type table (bank `$1B`, `$846E`, 6 bytes per type, `$00-$28`) has an entry no
+  stage places: enemies come only from the map records (file `$C0000`) through the one spawner `$01:DB88` (called from
+  `$DB6D`), and no record has type `$1D`; the other `A9 1D` loads in the ROM don't spawn enemies. Put into area 5-1's
+  records (password 8114), it is a small blue frog-like creature that walks the stage. Mega Bomberman's records are
+  the same (not run).
+  ![Area 5-1 as shipped (left) and with type $1D in its records (centre, right)](img/pce94/enemy_1D.png)
 
 ## Demo vs retail
 

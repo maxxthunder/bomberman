@@ -1484,5 +1484,17 @@
   "audio": [
    "pce94/SE_43.mp3"
   ]
+ },
+ {
+  "code": "Enemy type $1D",
+  "effect": "An enemy no stage places: a small blue frog-like creature",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The type table (bank $1B, $846E, 6 bytes per type) runs $00-$28, and enemies come only from the map records (file $C0000) through the spawner $01:DB88; no record has type $1D. Put into area 5-1's records (password 8114) in Mesen, it spawns and walks the stage. Image: 5-1 as shipped, then with $1D.",
+  "section": "unused",
+  "img": "enemy_1D.png"
  }
 ]

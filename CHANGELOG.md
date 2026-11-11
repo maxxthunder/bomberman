@@ -2,6 +2,12 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.3.0 (2026-11-11)
+- Bomberman GB 3: a pad-freeze flag nothing sets (new cheat card), and an unused briefing line for a moving area.
+- Bomberman '94: enemy type $1D, which no stage places, shown in play.
+- Bomberman Max: messages the game never shows (four stage objectives, a Kick Game help page, two team lines), and
+  the Japanese ending's keyword.
+
 ## 2.2.0 (2026-11-10)
 - Bomberman GB 3: the stage-5 crystals played for real: a 1-up at 40, bell panels at 50 and 60, and the helper at the
   boss.

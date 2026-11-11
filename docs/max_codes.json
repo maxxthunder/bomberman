@@ -252,5 +252,20 @@
    "max/SE_0D.mp3",
    "max/SE_1A.mp3"
   ]
+ },
+ {
+  "code": "Four cut stage objectives",
+  "effect": "\"Enter all the Warp Holes!\", \"Cross all the Signals!\", \"Stop every defence barrier!\", \"Defeat all except the Blockens!\"",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Messages $15, $1D, $28 and $30 of the message table (US $57:4400, Japanese $1B:4C07) are in no stage's objective list ($53:43EB, 5 × 19) and no other store to the message number $C1A7 gives them. $28 is \"Nothing\" in the US text; the barrier line is the Japanese one. Also never picked: a third Kick Game help page ($D5, too many Geta items means Time Over), two team lines ($8E, $8F; Japanese only) and \"Defense missed!\" ($8B). Read from the ROM.",
+  "section": "unused"
  }
 ]
