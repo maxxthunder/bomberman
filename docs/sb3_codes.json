@@ -1565,5 +1565,19 @@
   "audio": [
    "sb3/Voice_13.mp3"
   ]
+ },
+ {
+  "code": "7E17EA:01",
+  "devices": {
+   "Pro Action Replay": "7E17EA:01"
+  },
+  "effect": "Stops the clock in story stages and battles",
+  "versions": [
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "section": "cheat",
+  "note": "A flag tested at $C2:589A to skip the clock tick; its setters ($C3:055A, $C3:6AA9) never ran in play. Held from Lua in BizHawk: 1-1 stayed at 2:58 for 900 frames; a battle stayed at 1:54 while the control reached 1:47. Enemies keep moving. Not yet run in a cheat engine; Japan and beta not checked."
  }
 ]

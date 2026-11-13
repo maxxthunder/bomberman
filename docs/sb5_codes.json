@@ -9,7 +9,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Option > PASSWORD (4 digits). Handler $C5:68C4 sets $6246=1 and bit 0 of the code flags $6273/$6274; the stage builder reads $6246 ($C2:1B08). Lands on the Battle menu."
+  "note": "Option > PASSWORD (4 digits). Handler $C5:68C4 sets $6246=1 and bit 0 of the code flags $6273/$6274; the stage builder reads $6246 ($C2:1B08). Lands on the Battle menu. The game gives it out on the \"200%\" screen after a second 100% clear."
  },
  {
   "code": "0413",
@@ -21,7 +21,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Option > PASSWORD (4 digits). Handler $C5:68CA, $6246=2. The three layout codes (4622, 0413, 0926) share $6246, so only the last one entered counts."
+  "note": "Option > PASSWORD (4 digits). Handler $C5:68CA, $6246=2. The three layout codes (4622, 0413, 0926) share $6246, so only the last one entered counts. The game gives it out on the \"200%\" screen after a second 100% clear."
  },
  {
   "code": "0926",
@@ -33,7 +33,7 @@
   ],
   "status": "fixed",
   "verified": "mesen",
-  "note": "Option > PASSWORD (4 digits). Handler $C5:68D0, $6246=3. It does not unlock Gold Bomberman; Gold comes from a 100% clear, see the Gold Bomberman entry."
+  "note": "Option > PASSWORD (4 digits). Handler $C5:68D0, $6246=3. It does not unlock Gold Bomberman; Gold comes from a 100% clear, see the Gold Bomberman entry. The game itself gives it out: it is the secret password on the screen after a 100% clear, the same moment Gold is unlocked."
  },
  {
   "code": "1103",
@@ -400,7 +400,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "The end-of-game certificate script ($C6:E07D) unlocks him if the clear rate in $103C is 100: script native 67 ($C0:4880) writes 1 to SRAM $1E9. Native 68 ($C0:4893) reads it at character select. Tested both halves: forcing 100 wrote the flag, and setting the flag showed him."
+  "note": "The end-of-game certificate script ($C6:E07D) unlocks him if the clear rate in $103C is 100: script native 67 ($C0:4880) writes 1 to SRAM $1E9. Native 68 ($C0:4893) reads it at character select. Tested both halves: forcing 100 wrote the flag, and setting the flag showed him. First, the 100% screen shows the secret password 0926, sets the per-file 100% count $6258 and clears all 100 progress flags; a second 100% shows \"200%\" with 4622 and 0413 (BizHawk, Japan and English, flags set in memory).",
+  "img": "password_100pct.png"
  },
  {
   "code": "7E6253:01",
@@ -606,6 +607,30 @@
   "verified": "emu",
   "section": "unused",
   "img": "unused_menus.png",
-  "note": "Windows of text table 4 ($D1:0000): the file menu ($08, $0A, $0B), game over ($52, $53), the battle and Config Bomber menus ($4A-$4E, $5C-$62), the rules ($55), Maniac settings ($56-$58), stage and teams ($59-$5B), the bowling prizes ($B3) and $B4, コウジチュウ / ココニハ ボーリングボンバー ガ ハイリマス. They need one font no scene loads (group 3, set 11, $D3:A7AC). No code produces any of them: every store of a message number was enumerated, including the script's stack calls (op $4A), and a BizHawk run through the menus logged every message drawn without one appearing. Shown in BizHawk through the game's own drawer, forced onto the Battle Mode scene, so the palette and the cursor are that scene's."
+  "note": "Windows of text table 4 ($D1:0000): the file menu ($08, $0A, $0B), game over ($52, $53), the battle and Config Bomber menus ($4A-$4E, $5C-$62), the rules ($55), Maniac settings ($56-$58), stage and teams ($59-$5B), the bowling prizes ($B3) and $B4, コウジチュウ / ココニハ ボーリングボンバー ガ ハイリマス. They need one font no scene loads (group 3, set 11, $D3:A7AC). No code produces any of them: every store of a message number was enumerated, including the script's stack calls (op $4A), and a BizHawk run through the menus logged every message drawn without one appearing. Shown in BizHawk through the game's own drawer, forced onto the Battle Mode scene, so the palette and the cursor are that scene's. A second trace through game over, the zone maps, the file and password screens, every Config Bomber screen, Bowling Bomber, the certificate and both endings drew none of them either."
+ },
+ {
+  "code": "Unused zone-map labels",
+  "effect": "Stage labels A2, A3, B2, E2 and J2 that no zone map uses",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "section": "unused",
+  "img": "unused_zone_labels.png",
+  "note": "Messages $39, $3A, $3C, $40 and $46 of text table 4. The boss nodes' labels ($38, $3B, $3D-$3F, $41-$45) read A to J; these five belong to node ids ($20, $21, $23, $27, $2D) that are in none of the six node tables ($C2:1070). Drawn in BizHawk by the game's own drawer in the zone 1 map header, in place of the label of stage 1."
+ },
+ {
+  "code": "Unused item icons and battle counts",
+  "effect": "Eight more item icons in the Config Bomber style (vest, clock, Bomberman face, skulls, a heart...) and BATTLE counts 6 to 9",
+  "versions": [
+   "retail"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "section": "unused",
+  "img": "unused_table6_cells.png",
+  "note": "Text table 6. $06-$09 are the digits 6-9 after the rules screen's BATTLE count, which stops at 5. $B0-$B3, $B7 and $BB-$BD are 16x16 item icons beside the nine the ability screen uses (its table $C6:7F37 lists only those). Also unused: a dash for the file screen's clear rate ($C8) and the editor's hiragana set as two sheets ($A2, $AC). Each drawn in BizHawk by the game's own drawer in place of a used neighbour on its own screen."
  }
 ]

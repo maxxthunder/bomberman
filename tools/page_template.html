@@ -316,7 +316,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p class="hint legend" id="legend"></p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.4.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.5.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -538,7 +538,7 @@ const GAMES = [
       return other ? `That's a code for the ${other === "jp" ? "Japanese version" : "US and European versions"}.` : c.length === 8 ? "It fails the game's check, so at least one character is wrong." : "";
     },
     notes: { Passwords: "The first character is a key the rest are scrambled with, so every state has thousands of codes; one per stage and kit is listed." } },
-  { id: "gb1", ns: GB1, family: "Game Boy / Game Boy Color", year: 1994, name: "Wario Blast featuring Bomberman!", plat: "Game Boy", regions: ["jp", "us", "eu"], logo: "gb1_wario", logos: { jp: "gb1_jp", col96: "gb1_jp" }, main: "wario",
+  { id: "gb1", ns: GB1, family: "Game Boy / Game Boy Color", year: 1994, name: "Wario Blast / Bomberman GB", plat: "Game Boy", regions: ["jp", "us", "eu"], logo: "gb1_wario", logos: { jp: "gb1_jp", col96: "gb1_jp" }, main: "wario",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     intro: "Bomberman GB in Japan. Wario Blast keeps every Japanese code and adds a second set that plays as Wario.",
     check(c, ver) {
@@ -553,7 +553,7 @@ const GAMES = [
       return null;
     },
     notes: { Passwords: "No algorithm: the game looks your number up in a fixed list, so this is every code there is." } },
-  { id: "gb2", ns: GB2, family: "Game Boy / Game Boy Color", year: 1995, name: "Bomberman GB", plat: "Game Boy", regions: ["jp", "us", "eu"], logo: "gb2_us", main: "us",
+  { id: "gb2", ns: GB2, family: "Game Boy / Game Boy Color", year: 1995, name: "Bomberman GB / GB 2", plat: "Game Boy", regions: ["jp", "us", "eu"], logo: "gb2_us", main: "us",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     intro: "Bomberman GB 2 in Japan.",
     check(c, ver) {
@@ -578,7 +578,7 @@ const GAMES = [
     },
     why: c => /[G-Z]/.test(c) ? "Each digit is 0-9 or A-F." : c.length === 7 ? "The capsule check doesn't balance, so at least one digit is wrong." : "",
     notes: { Passwords: "A code holds the area, stage, areas cleared, shop techniques and capsules. The check is the capsule balance: capsules held plus what you bought must equal what the cleared areas paid." } },
-  { id: "bb", ns: BB, family: "Game Boy / Game Boy Color", year: 1990, name: "Atomic Punk", plat: "Game Boy", regions: ["jp", "us", "eu"], logo: "bb_us", logos: { jp: "bb_jp", eu: "bb_eu", col96: "bb_jp" }, main: "us",
+  { id: "bb", ns: BB, family: "Game Boy / Game Boy Color", year: 1990, name: "Atomic Punk / Bomber Boy", plat: "Game Boy", regions: ["jp", "us", "eu"], logo: "bb_us", logos: { jp: "bb_jp", eu: "bb_eu", col96: "bb_jp" }, main: "us",
     len: 8, maxLen: 20, shape: /^([1-8A-Z?!.=]{8}|[A-P0-3]{20})$/, form: "8 characters (Game A), or 20 letters (Game B, Bomber Man)",
     intro: "Bomber Boy in Japan. Game A's password holds the islands you've cleared and your gold; Game B is NES Bomberman, and takes its codes (Atomic Punk shows A, E, I and O as 0, 1, 2 and 3).",
     check(c, ver) {
@@ -655,8 +655,8 @@ const GAMES = [
 "use strict";
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-const VER = { us: "USA", kr: "Korea (Selection)", eu: "Europe", eu1: "Europe (first cart)", fds: "Famicom Disk System", col96: "Bomberman Collection (Game Boy)", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast",
-  blue: "Blue Champion", red: "Red Challenger", hikari: "Hikari no Yuusha", yami: "Yami no Senshi", ain: "Ain Version", kr: "Korea", cns: "Classic NES Series (GBA)", fm: "Famicom Mini (GBA)" };
+const VER = { us: "USA", eu: "Europe", eu1: "Europe (first cart)", fds: "Famicom Disk System", col96: "Bomberman Collection (Game Boy)", jp: "Japan", beta: "Beta (prototype)", caravan: "Caravan (event cart)", retail: "Retail (shop release)", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast",
+  blue: "Blue Champion", red: "Red Challenger", hikari: "Hikari no Yuusha", yami: "Yami no Senshi", ain: "Ain Version (all stages open)", kr: "Korea", cns: "Classic NES Series (GBA)", fm: "Famicom Mini (GBA)" };
 const verName = v => VER[v.toLowerCase()] || v;
 // a version's country flag (flag-icons): the world flag for the World release; Beta is Super Bomberman 3's European beta
 // or the US betas of 1 and 2; the English Collection releases get none
@@ -676,11 +676,11 @@ const NICE = { secret_items: "Secret items", password: "Passwords", secret: "Sec
 // what players type in the game comes first: special codes and passwords, then secrets; debug, region notes, cheat
 // devices and patches come last, then the add-on games. Sections named only in a code list go in between.
 const ORDER = ["Special codes", "Option passwords", "Character passwords", "Passwords", "Stage codes", "Power-up codes", "Charaboms",
-  "Secret items", "Hidden screens", "Secrets", "Button codes", "Tricks"];
+  "Secret items", "Hidden screens", "Secrets", "Button codes"];
 // Font Awesome icons beside section headings (the password sections all take the key)
 const SECT_ICON = { Passwords: "fa-key", "Stage codes": "fa-key", "Option passwords": "fa-key", "Character passwords": "fa-key",
   "Bomber Boy": "fa-key", "Bomber Man mode": "fa-key", Bomberman: "fa-key",
-  "Special codes": "fa-wand-magic-sparkles", Tricks: "fa-hat-wizard", "Cheat codes": "fa-bomb", "Secret items": "fa-gem",
+  "Special codes": "fa-wand-magic-sparkles", "Cheat codes": "fa-bomb", "Secret items": "fa-gem",
   Secrets: "fa-user-secret", "Hidden screens": "fa-eye-slash", "Button codes": "fa-arrows-up-down-left-right",
   "Power-up codes": "fa-arrow-up-right-dots", "Debug features": "fa-bug", "Region differences": "fa-earth-asia",
   "Unused content": "fa-scissors", Patches: "fa-file-code", "Demo CD": "fa-compact-disc", "8-Player Demo (prototype)": "fa-users",
@@ -722,7 +722,7 @@ const section = (game, e) => {
   if (k) return SECTION[k.type];
   if (/^IPS |\.ips\b/.test(e.code)) return "Patches";
   if (/^(PAR |RAM |ROM patch|[0-9A-F]{8}\b|7E[0-9A-F]{4})/.test(e.code)) return "Cheat codes";
-  return "Tricks";
+  return "Secrets";
 };
 
 // ---------- game picker: platform groups in release order ----------

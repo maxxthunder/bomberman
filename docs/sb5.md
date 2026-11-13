@@ -200,7 +200,18 @@ computes the clear rate into `$103C`. At `$C6:E081` the script compares it with 
 calls native 67 (`$C0:4880`), which writes 1 to SRAM `$1E9`. At the battle character select, native
 68 (`$C0:4893`) reads `$1E9`, and Gold Bomberman takes the place of the random-pick X. Both halves were
 checked in Mesen: forcing `$103C`=100 at that compare wrote SRAM `$1E9`=1, and setting `$1E9`=1 put
-Gold on the select screen. No password sets `$1E9`. GameFAQs' "0926 unlocks Gold Bomberman" is wrong.
+Gold on the select screen. No password sets `$1E9`. GameFAQs' "0926 unlocks Gold Bomberman" is wrong, though the
+two meet on one screen: the 100% clear that unlocks Gold also shows 0926 (below).
+
+★ **The 100% password screen.** When the clear rate is 100, the certificate script first calls a screen of its
+own (`$C6:DCFA`, op 24 at `$C6:E0A8`): "You deserve a reward for reaching 100% completion. It's a secret password!"
+and **0926**. On that first 100% (`$6258` = 0) the script sets `$6258` and native 4F (`$C0:499C`) clears all 100
+progress flags (`$10`-`$73` of the bit array at `$7E:2900`), so the file starts over; reaching 100% again shows
+"200%" and "two secret passwords": **4622** and **0413**. All three are the battle-layout option passwords. A
+then goes on to the normal certificate. Seen in BizHawk on the Japanese and English ROMs with the progress flags
+(and `$6258` for the second screen) set in memory, then GAME OVER and END; that normal play sets all 100 flags is
+read from the ROM.
+![The 100% screen with 0926, and the 200% screen with 4622 and 0413, Japan and English](img/sb5/password_100pct.png)
 
 ![Gold Bomberman in the bottom-right slot once SRAM $1E9 is set](img/sb5/gold_bomberman_select.png)
 
@@ -284,7 +295,7 @@ and 5-27 → `$70` come from the scripts and were not walked.
 
 ## Debug menu and debug rooms
 
-### The debug menu text (★ New: decoded, and the scripts that show it)
+### The debug menu text (★ New: decoded)
 
 The known text at file `0x11EEFA` is message `$F1` of text table 6. The text drawer (`$C0:0000`-`$C0:0134`)
 takes a table number (`$0340`) and a message number; table 6's base is in the 3-byte list at
@@ -317,15 +328,19 @@ TIME = stage timer, POWERMAX = full power, NON MOVE = enemies frozen, BOM MINE/P
 mine, pierce, remote and homing bombs (they match the four exclusive bomb-type bits of `$4ED5`),
 MUTEKI = invincible (the cut `$6253` code above), WARP = room warp. No code that applies them was found.
 
-Two script fragments draw it, with the native `FF 8D F1 06` (show message `$F1` of table 6):
-`$C6:72BB` and `$C6:F13F`. Nothing points at either (no scene, no script jump; the scene sweep below
-never read those bytes, nor the text at `$D1:EEF3`). Forcing a script task to `$C6:F126` (the start of
-the second one) in Mesen runs it: it loads graphics (ops `26 03`, `27 01`, `2A 02`), calls the drawer
-with `$F1`/table 6, which puts the window on BG1, and then sits in an input loop at
-`$C6:F181`-`$C6:F1A5` reading the cursor bytes `$1032`/`$1034`. But BG1 tiles `$100`+ASCII hold no font
-in the contexts I tried (after the password screen, and from `$C6:728C`, which also switches to BG
-mode 7), so the window shows as garbage and **no readable screenshot of the menu was possible**. It
-is not made reachable: there is no patch for it.
+**Nothing draws it.** The native `FF 8D F1 06` at `$C6:72BB` and `$C6:F13F` looks like it should, but the drawer
+argument is the message number + 1 (see "Text" below), so both draw message `$F0`, and `$F0` is the **END picture
+of the two endings**: `$C6:F13F` is inside the good ending's script (scene `$AA`) and `$C6:72BB` inside the bad
+ending's (scene `$AB`). A message trace in BizHawk marks `$F0` at frame 11,080 of the good ending and frame 6,858 of
+the bad one, with END on screen in mode 7, zooming and turning; the loop at `$C6:F181`-`$C6:F1A5` is that zoom. No
+script or code gives the argument `$F2`. ★ The menu's font does exist: graphics group 6, set 3 (table entry
+`$C5:E51D`, compressed at `$C0:7530`, 112 2bpp tiles loaded to VRAM `$5800`) is an ASCII font, tile number = code,
+with extra digits, H, M, P and hex 0-F. With the text layer's tiles based at `$5000`, `$5800` is tile `$100`, just
+where the menu's `$100`+ASCII tiles expect it. Nothing found loads it: the only code that picks group 6
+(`$C5:13DC`) and the three scripts that do load sets 1 and 2, and it was absent from VRAM in the debug rooms and
+stage 1-1. Rendered offline below, in placeholder colours.
+![The debug menu's font (set 6/3) and the menu text drawn with it, offline](img/sb5/debug_menu_font.png) `$F1`-`$F5` simply follow the END picture at the end of
+the table.
 
 ### Debug rooms `$AC`-`$AE` (Known; ★ New: a patch and the scene variable)
 
@@ -391,7 +406,7 @@ it as greyscale 4bpp tiles to `docs/img/sb5/unused/` (file name = group, set, so
 The log is the cumulative one from all this project's Mesen runs: every scene `$00`-`$B2` started
 for 250-400 frames, boot, title, options, both password screens, Battle menus and a match, the Config
 editor, rooms in zones 4 and 5, the boss rooms, both endings and the debug rooms. **61 sets were never
-read.** That is "not reached in our runs", not proof of being unused: the zone maps between stages,
+read**, plus set 6/3 (the debug menu's font), whose first byte is marked only because the set before it ends there. That is "not reached in our runs", not proof of being unused: the zone maps between stages,
 most cutscenes and most of the staff roll were never played, and sets in formats other than 4bpp
 (flags `$02`/`$03`/`$05`) render scrambled here.
 
@@ -478,7 +493,7 @@ looking plus 1,200-1,600 frames of random play with `$6253` held so the player s
 9,000 frames; Bowling Bomber, the certificate and the menu scenes), merged with every earlier retail log and
 the English ROM's log (code bytes copied over only where the two ROMs are byte-identical): 97,779 code bytes,
 up from 71,301. `disasm/sb5/` was regenerated from it (1,180 seeded entries, 63,038 instructions). The
-earlier logs include the orphaned handlers and the debug script, which round 2 forced to run, so those count
+earlier logs include the orphaned handlers and the END-picture script at `$C6:F126`, which round 2 forced to run, so those count
 as "ran".
 
 ### Dead code
@@ -500,8 +515,7 @@ so 720 is an upper bound. The ones read and worth reporting:
 | natives `$29`-`$3E` (`$C1:4747`-`$C1:4B82`), `$8D`-`$90` callers | cutscene and text natives | reachable only in the story scenes between zones, which the room sweep skips | — |
 | the 55 script-op handlers | ops that no script we ran used (mostly 16-bit compare/branch variants) | not covered | — |
 
-No code that applies the debug menu's REST/TIME/POWERMAX lines turned up outside the two orphaned script
-fragments (`$C6:72BB`, `$C6:F13F`).
+No code that applies the debug menu's REST/TIME/POWERMAX lines turned up anywhere.
 
 ### Input codes
 
@@ -556,8 +570,8 @@ There are only two text tables: the drawer `$C0:0000` reads its base from `$80:8
 256-byte ring (back references before the start read 0; the old list version raised errors on 241 messages),
 and the header always has the x/y bytes (flag bits only make the drawer ignore them).
 
-**The drawer argument is message+1** (`$C0:0024` DECs it). So the debug script's `FF 8D F1 06` draws index
-`$F0`, a 24×12 frame, and the debug text (index `$F1`, argument `$F2`) is drawn by no script found.
+**The drawer argument is message+1** (`$C0:0024` DECs it). So `FF 8D F1 06` (at `$C6:72BB` and `$C6:F13F`, the two endings) draws index
+`$F0`, the END picture, and the debug text (index `$F1`, argument `$F2`) is drawn by no script found.
 
 Most "messages" are not strings but tilemaps: whole 32×32 screens, frames, icons, and Japanese text drawn as
 tiles from per-screen fonts. An exec hook on `$C0:0020` logged every (scene, table, message) drawn in all runs:
@@ -579,7 +593,7 @@ could not be read. The readable block is the certificate (認定状):
   ラストがバッドエンドなんてわらっちゃうね ("ending on the bad ending, that's a laugh"),
   ついにうらめんまできたね こんじょういれてがんばれ ("you finally reached the back side, put your guts into it")
   and ついにうらめんも100% きみかみさまになれるぞ ("back side at 100% too, you can become a god"). The うらめん lines
-  go with the `$6258` 100% flag.
+  go with the `$6258` 100% flag, which counts the first 100% clear (see the 100% password screen).
 
 ![Certificate rank titles and comments, table 4, through the certificate's VRAM](img/sb5/text_certificate_ranks.png)
 
@@ -598,11 +612,36 @@ Battle Mode scene, so the green is that scene's palette and the hand its cursor;
 scene leaves blank.
 ![Six of the unused menu windows (BizHawk, the game's own drawer)](img/sb5/unused_menus.png)
 
-Also never drawn: the zone-map stage labels `$39`, `$3A`, `$3C`, `$40`, `$46` and the HUD label `$E0` of table 4
-(their own fonts aren't known, so they aren't readable); of table 6, a second character-select frame (`$74`), two
-glyph sheets (`$A2`, `$AC`), small cells (`$06`-`$09`, `$C8`, `$D1`, `$D3`, `$D4`, `$EF`) and the debug menu's own
-text (`$F1`-`$F5`), which not even the two orphan scripts draw. English's three extra messages (`$F6`-`$F8` of
-table 6) have no producer either.
+Also never drawn, and now shown through the game's own drawer in BizHawk (a 56-byte stub at `$C0:DAC6`, called
+from `$C0:0022`, adds a byte of work RAM to the message number, so the game draws an unused message where it draws a
+used neighbour, on the real screen with that screen's graphics):
+
+- ★ **Five zone-map labels** of table 4. The used boss-node labels `$38`, `$3B`, `$3D`-`$3F`, `$41`-`$45` read A to J;
+  the unused `$39`, `$3A`, `$3C`, `$40`, `$46` read **A2, A3, B2, E2, J2**. Their node ids (`$20`, `$21`, `$23`, `$27`,
+  `$2D`) are in none of the six node tables (`$C2:1070`).
+  ![The five unused labels in the zone 1 map header, with used ones beside them](img/sb5/unused_zone_labels.png)
+- `$E0` of table 4 is **START** in the ZONE banner's lettering (drawn in place of the banner `$DF`).
+- ★ Table 6: **BATTLE counts 6, 7, 8, 9** (`$06`-`$09`; the rules screen's count stops at 5), **eight more item
+  icons** in the Config Bomber ability screen's style (`$B0` a vest, `$B1` a clock, `$B2` a Bomberman face, `$B3` a
+  marked brown block, `$B7` a flame with a face, `$BB` and `$BC` skulls, `$BD` a heart with a face; the ability table
+  `$C6:7F37` has only the nine Config items), a dash for the file screen's clear rate (`$C8`, beside the `%` of
+  `$C7`), and the editor's whole hiragana set as two sheets (`$A2` blue, `$AC` red).
+  ![Table 6's unused cells, each in place of a used neighbour](img/sb5/unused_table6_cells.png)
+- `$EF` of table 6 is a second copy of the good ending's Bomberman silhouette (`$EC`): the same 208 tiles without the
+  priority bit.
+  ![The silhouette, its unused copy, and the END picture of both endings](img/sb5/ending_silhouette_END.png)
+- `$D1`, `$D3`, `$D4` of table 6 are the digits 5, 7, 8 of the 0-9 set (`$CC`-`$D5`) of the 100% password screen;
+  0926, 4622 and 0413 have no 5, 7 or 8.
+- Not drawn: a 32×26 window (`$74`; its graphics aren't on the rules, data-load or Config Bomber screens) and the debug
+  menu's text (`$F1`-`$F5`, whose font is never loaded). Drawn by the game in place of the Battle menus, `$74`
+  shows the right frame with the wrong glyphs; the older battle-setup font (set 3/11) doesn't fit it either. English's three extra messages (`$F6`-`$F8` of table 6) have no producer either.
+
+A second trace covered the screens the first one missed: game over (CONTINUE and END), the maps of zones 1-5, the
+file screens, the option password screen, every Config Bomber screen including DATA SAVE, Bowling Bomber, the
+certificate, both endings, the score board and DRAW GAME. It drew 76 messages of table 4 and 91 of table 6, and none
+of them is on the never-drawn lists: the plain-text file, game over, load/save and bowling menus don't appear on
+the finished game's screens for those things. (Bowling Bomber and game over were reached by forcing the scene and
+the stage clock.)
 
 English vs Japanese: 75 messages of table 4 differ, 72 of them in window layout (`$64`-`$A8` = the certificate,
 and `$03`-`$06`, `$DC`); 47 of table 6 differ, 10 in layout. Caravan's tables are byte-identical to retail
@@ -661,10 +700,10 @@ colon) on unpatched ROMs, and added to `sb5_codes.json` with `section: "cheat"`:
 
 - What `$6258` changes in play (the item lists), and `$0F64`: set in Mesen, no visible change.
 - The soft-reset combo `$C0:0AFC` never runs (nothing reaches it); read only.
-- Table 6's unused windows and table 4's zone-map labels: the fonts their scenes load aren't identified, so they
-  weren't read.
-- The coverage run that checked the unused menus never reached game over, the save and load screens, the password
-  screen, Bowling Bomber, the zone maps or the endings.
+- Table 6 `$74`: no screen with its graphics found. The debug menu text `$F1`-`$F5`: its font (set 6/3) is never
+  loaded; three table-driven loaders (`$C1:09C0`, `$C2:2008`, `$C2:26E8`) weren't followed.
+- The message trace didn't reach the story scenes between zones or the character password screen after a valid
+  code; table 4 `$F3`-`$FC` weren't examined.
 - `3061E9:01` on Caravan and English (same code bytes, not run).
 
 ## Files

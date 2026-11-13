@@ -1096,5 +1096,18 @@
   "section": "region",
   "img": "selection_kr.png",
   "note": "BOMSEL, 1 MB MBC1, md5 d0c6ffc3602d91c0b2b1b0461553de33; header $0143 = $C0 (Game Boy Color only) and $0146 = $00 (no Super Game Boy code), so the SGB multitap BATTLE mode cannot be there. Seen in Mesen: a menu of 봄버맨 / 봄버보이 whose labels sit against the other game's logo, and this game's title offering only START and PASSWORD, START going straight into ROUND1-1. Bomberman GB 2 is not in the cart."
+ },
+ {
+  "code": "B while a kicked bomb slides",
+  "effect": "The bomb stops in the cell it has reached",
+  "versions": [
+   "jp",
+   "wario"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "secret",
+  "img": "wario_kick_bstop.png",
+  "note": "With the kick technique (after its boss in the story, or TECHNIQUE ON in the Super Game Boy multitap battle). A fresh B press is latched in the player's +$57, and the moving-bomb update ($01:5A10 on in Wario Blast, $01:59D5 on in Japan) jumps to the stop routine for the kicker's press only. Mesen, Wario Blast, four-player battle: a kick that slides four cells stops after two with B pressed 12 frames in. Japan: the same code, read from the ROM. Image: the kick (top), and stopped with B (bottom)."
  }
 ]

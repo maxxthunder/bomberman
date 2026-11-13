@@ -403,7 +403,15 @@ code that never ran (18). `tools/sb3/watch.lua` watched all of them through a st
   `$1C8D`, `$1EB0`, `$1ED1/$1ED2`, `$2908`, `$6C4D`, `$0D7B`, `$0DB8`, `$0F0E`.
 - Never set to non-zero: `$2900` (round 1's cut handler), `$2907` (the VM only ever writes 0; it is the index
   whose cursor blinks at `$C1:2681`), `$64F6` (read only by the dead `$C1:54A1`), and the 18 that only dead code
-  writes. None of them is a debug switch, so nothing was worth poking beyond round 2.
+  writes.
+
+★ A BizHawk scan (bytes that stay 0 over 3,000 frames of a stage and a battle, read by code that ran, with no store
+that ran; each forced to `$01` and `$FF` for 400 frames against a control run) found one that does something:
+**`$7E:17EA` stops the clock.** Held at 1 in 1-1 the clock stayed at 2:58 for 900 frames, and in a battle at 1:54
+while the control reached 1:47; enemies keep moving. `$C2:589A` skips the clock tick while it (or `$17E6`/`$17E7`)
+is set, and `$C4:0691` tests it for each actor. Its setters (`$C3:055A`, `$C3:6AA9`; cleared at `$C3:7013`) never
+ran in any of our logs, so what sets it in play is unknown. Europe only; whether it also shields the player wasn't
+settled.
 
 ### Text
 

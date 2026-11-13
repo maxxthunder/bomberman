@@ -2,6 +2,17 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.5.0 (2026-11-13)
+- Super Bomberman 5: the 100% password screen (0926, then 4622 and 0413 at "200%"); the debug menu's font, never
+  loaded, with the menu drawn in it; unused zone-map labels, item icons and battle counts; table 6's END picture.
+- Super Bomberman 3: a flag nothing sets stops the clock (new cheat card).
+- Panic Bomber (Virtual Boy): L and R after a lost round too, and the Japanese ROM.
+- Bomberman GB 3: the stage-5 crystal count of all seven areas, and City stage 5's self-scrolling room.
+- Wario Blast / Bomberman GB: B stops a kicked bomb (new card).
+- Pocket Bomberman: the flower's bombs and fire last into the next stage.
+- Bomberman Max: the bonus stages and an "...END?" screen.
+- The page: clearer game names and version labels.
+
 ## 2.4.0 (2026-11-13)
 - Super Bomberman 5: about 30 menus written in plain kana, from before the graphic ones, one of them reading
   "under construction: the Bowling Bomber goes here" (new card).

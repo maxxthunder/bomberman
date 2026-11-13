@@ -129,7 +129,8 @@ island picked in turn from a save with islands `$5A` (not each checked to reach 
   the island map (PASSWORD: under the map; seen in Mesen). After clearing
   Jagoraz with 300 gold and 600 in panels it held 6L1PLRCW (Bomber Boy 6J1MJOBS): Jagoraz cleared, 900 gold.
 - **Unset flags** (`disasm/bb/flags_us.txt`): only bank 7's sound-driver fields and two VS MODE bytes written by
-  untraced bank 4 code. Nothing that looks like a debug switch.
+  untraced bank 4 code. Nothing that looks like a debug switch. A write-logging run (6,000 frames of play in Game A and Game B on both carts, then each
+  read-but-unwritten byte forced in a stage) found no byte that is read and never written.
 - **Input codes** (`disasm/bb/pad_us.txt`): menus, movement, the shop, the sound test's selector, the high-score
   check and the sound test code above. No other button combination.
 

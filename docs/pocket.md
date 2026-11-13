@@ -145,6 +145,13 @@ Collected (Mesen, the flower moved onto the player): `$02:6945` sets bombs and f
 bombs; bit 3, above), the same as a power-up code; speed is untouched.
 ![Touching the flower, then bombs 4 / fire 4](img/pocket/flower_collect.png)
 
+★ **It lasts past the stage.** From password 3905 (Forest 2) with the code armed, the flower spawned by the game and
+moved onto the player, then the stage cleared through the game's own door and exit code (the target count set to 0
+and the player put on the door): Forest 3 starts with 4 bombs and 4 fire (`$02:49F1` reads `$C1EE`/`$C1EF` = 4/4)
+and the ability byte still `$0A`; the same run without touching the flower starts it with 1 and 1. Nothing but the
+password start and the flower wrote the pair in between.
+![With the flower (top) and without (bottom): Forest 2, the clear, and the start of Forest 3](img/pocket/flower_carry.png)
+
 ## Secrets
 
 ### The unused debug password (★ New)
@@ -203,7 +210,10 @@ over, the ending, and every one of the 32 passwords played invincible with the b
   candidates, mostly data. The debug menu (opened with its Game Genie code, not part of the sweep) runs 3,345 more
   bytes, mostly in banks 0, 2 and 4. The unused debug decoder `$01:66CD` and `$01:666F` sit between the password tables and are not in the trace or the orphan list (found by reading the code after the tables).
 - **Unset flags** (`disasm/pocket/flags_us.txt`): only `$C025-$C089` reads in the copies of one routine in banks
-  `$0D-$11` (written through HL, so not real). `$C2CC` and `$C2CD` were found by hand: they have writes (clears),
+  `$0D-$11` (written through HL, so not real). A write-logging run (6,000 frames of play from Forest 1 and from a boss, then
+  each read-but-unwritten byte forced) adds one real pair, `$C267`/`$C268`: the top limit of the vertical scroll
+  (`$00:2024`), never written, so always 0; forced, the picture sits lower by that much. `$C046`/`$C048` are
+  sound-driver bytes. The Game Boy Color build (stage 1) gives the same list. `$C2CC` and `$C2CD` were found by hand: they have writes (clears),
   so the scan doesn't list them.
 - **Input codes** (`disasm/pocket/pad_us.txt`, 35 hits): menus, the password cursor, movement, the soft reset and the
   stage-intro code. No other hidden pad code.
@@ -323,9 +333,5 @@ Logo: `docs/img/logos/pocket.png` (`tools/pocket/logo.py`, Game Boy Color colour
 
 ## Open
 
-- Whether the flower's bombs and fire last past the stage. The ROM says they should: the only writers of the
-  carried pair `$C1EE`/`$C1EF` are the flower (`$02:694D`), the bomb-up and fire-up items, the power-up password's
-  start block and the new-game / continue init, none of them on a stage-to-stage path, and each stage start copies
-  the pair into the player (`$02:49F1`). Not seen in play: the flower spawned but the bot never walked into it.
 - GB KISS with a partner (a second Japanese cart or another GB KISS game) wasn't emulated: Mesen runs one Game Boy and
   its HuC-1 infrared receiver never sees light.

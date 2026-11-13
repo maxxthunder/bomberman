@@ -490,8 +490,8 @@
   "img": "unused_flame_up.png"
  },
  {
-  "code": "Hold L and R after winning a round",
-  "effect": "The VIRTUAL BOY logo screen, with its corner marks for lining up the display, comes up before the next stage",
+  "code": "Hold L and R after a round",
+  "effect": "The VIRTUAL BOY logo screen, with its corner marks for lining up the display, comes up before the game goes on",
   "versions": [
    "us"
   ],
@@ -499,7 +499,7 @@
   "verified": "emu",
   "section": "Special codes",
   "img": "lr_round_end.png",
-  "note": "Once WON / LOST is up and about 2.5 seconds have passed, L and R held together set $0500_2444 ($0700_9598) and the game shows its second boot screen ($0701_74B2); A goes on to the next stage card. Real presses in BizHawk: L + R held only earlier, or L or R alone, does nothing. The losing side has the same check ($0700_96B0), not reached. Image: with L + R (top), without (bottom)."
+  "note": "Once WON / LOST is up and about 2.5 seconds have passed, L and R held together set $0500_2444 (the winner's check $0700_96B0, the loser's $0700_9598) and the game shows its second boot screen ($0701_74B2); A goes on, to the next stage card after a win or to CONTINUE? after a loss. Real presses in BizHawk, after a won and after a lost round: L + R held only earlier, or L or R alone, does nothing. Japanese ROM: the same checks at $0700_966C / $0700_9554, seen after a won round. Image: with L + R (top), without (bottom)."
  },
  {
   "code": "LICENSED BY NINTENDO screen",
@@ -511,7 +511,7 @@
   "verified": "emu",
   "section": "unused",
   "img": "licensed_screen.png",
-  "note": "$0701_77FE is built like the three boot screens (precaution text, VIRTUAL BOY logo, OPTION) but nothing calls it. Called in place of the first (file $6BC: 36 6C -> 44 71) in BizHawk, it shows the one line and waits for A. Image: it, then the three screens the game shows."
+  "note": "$0701_77FE is built like the three boot screens (precaution text, VIRTUAL BOY logo, OPTION) but nothing calls it. Called in place of the first (file $6BC: 36 6C -> 44 71) in BizHawk, it shows the one line and waits for A. Image: it, then the three screens the game shows. US only: the Japanese ROM has neither the routine (its boot code is exactly 452 bytes shorter) nor the line in its boot map."
  },
  {
   "code": "Sixth demo and demo recorder",
@@ -523,6 +523,6 @@
   "verified": "emu",
   "section": "unused",
   "img": "demo6_recorder.png",
-  "note": "The demo starter $0700_7014 can replay six recordings but is only asked for five (auto play, 0130); the sixth ($0702_5801, the Sinister Forest, 4,940 frames) plays with file $0A08 C5 -> C6, in place of the fifth. Control mode 2 ($0200 in $0500_595C) is the recorder ($0702_1120), which nothing selects: set during a demo in BizHawk, the pad drove the match and the buttons were written run-length coded to $0500_D0C4, the ROM demos' format. Image: the sixth demo (top); replay against recording (bottom)."
+  "note": "The demo starter $0700_7014 can replay six recordings but is only asked for five (auto play, 0130); the sixth ($0702_5801, the Sinister Forest, 4,940 frames) plays with file $0A08 C5 -> C6, in place of the fifth. Control mode 2 ($0200 in $0500_595C) is the recorder ($0702_1120), which nothing selects: set during a demo in BizHawk, the pad drove the match and the buttons were written run-length coded to $0500_D0C4, the ROM demos' format. Image: the sixth demo (top); replay against recording (bottom). Japanese ROM (BizHawk): the same six recordings, byte-identical; the sixth plays with the same file byte, and the recorder ($0702_0F3C) wrote the pad back as value/run pairs."
  }
 ]

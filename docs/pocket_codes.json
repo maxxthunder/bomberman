@@ -420,7 +420,7 @@
  },
  {
   "code": "← → ← → ↑ ↓ ↑ ↓ B ← B → B ↑ B ↓, A",
-  "effect": "Arms a bomb counter: after a set number of bombs a flower power-up appears (GameFAQs: maximum bombs and fire and the remote primer, for that stage)",
+  "effect": "Arms a bomb counter: after a set number of bombs a flower power-up appears (4 bombs, 4 fire and the remote primer, kept into the next stage)",
   "versions": [
    "us",
    "jp",
@@ -429,7 +429,7 @@
   "status": "known",
   "verified": "mesen",
   "section": "Button codes",
-  "note": "On the \"Area n\" screen of areas 1-4 (it follows the world select for area 1 and the password for the others), with bombs and fire both under 3 ($02:48D5, sequence $02:4983). Bombs to place (table $02:4943, areas 1-4): Forest 10/20/30/15, Ocean 20/30/40/15, Wind 20/30/30/15, Cloud 15/20/30/20, Evil 20/30/10/20. GameFAQs lists the code. Mesen (tools/pocket/test_flower.lua): typed on the Ocean 3 screen it arms the counter with 40 ($C35B = 1, $C35C = 40), and the flower is spawned ($02:680C) at the 40th bomb; Wind 3 arms 30, Ocean 2 30. Japan: the same sequence and counts ($02:491C, $02:48DC); on Ocean 3 it armed 40 ($C2FC = 1, $C2FD = 40) in Mesen. First Europe cart: the same ($02:492C, $02:48EC); armed 40 on Ocean 3 ($C34C = 1, $C34D = 40).",
+  "note": "On the \"Area n\" screen of areas 1-4 (it follows the world select for area 1 and the password for the others), with bombs and fire both under 3 ($02:48D5, sequence $02:4983). Bombs to place (table $02:4943, areas 1-4): Forest 10/20/30/15, Ocean 20/30/40/15, Wind 20/30/30/15, Cloud 15/20/30/20, Evil 20/30/10/20. GameFAQs lists the code. Mesen (tools/pocket/test_flower.lua): typed on the Ocean 3 screen it arms the counter with 40 ($C35B = 1, $C35C = 40), and the flower is spawned ($02:680C) at the 40th bomb; Wind 3 arms 30, Ocean 2 30. Japan: the same sequence and counts ($02:491C, $02:48DC); on Ocean 3 it armed 40 ($C2FC = 1, $C2FD = 40) in Mesen. First Europe cart: the same ($02:492C, $02:48EC); armed 40 on Ocean 3 ($C34C = 1, $C34D = 40). The flower lasts past the stage: taken on Forest 2 (password 3905) and the stage cleared through its door, Forest 3 starts with 4 bombs and 4 fire; 1 and 1 without it.",
   "img": "flower.png"
  },
  {

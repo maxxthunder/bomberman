@@ -151,6 +151,15 @@ cheats above (1-01 to 1-03). Battle Game can't be entered on a fresh save. Execu
 **50,054 bytes** of code; ROM bytes touched at all: 264,717 of about 1.4 MB used. Later worlds, the Charabom battles,
 the minigames and the ending were not reached, so this sweep is partial.
 
+★ A second sweep in Mesen (play only, merged with the earlier logs) reached stages up to S5-25: 98,604 bytes of
+code executed. The bonus stages S6-01 to S6-04 and the MATCH GAME help were entered by setting the stage loader's
+bonus fields (`$C5FF`=1, `$C600`=n, `$C2D0`=5, `$C2D1`=n); n=4 shows the help, then a broken field. Setting mode 7
+(`$C187`=7, `$C188`=0) during S5-24 shows "...END? Is this the end? Are you sure?", which stays up for 10,000
+frames; whether the real ending passes through it is unknown. Nothing in what still never runs turned out to be
+hidden content. Charabom battles and bonus types 5-7 weren't reached.
+![The bonus stages, entered through the stage loader](img/max/bonus_stages.png)
+![Mode 7 during S5-24: ...END?](img/max/end_question.png)
+
 - **Dead code** (`disasm/max/dead_blue.txt`): branch-reachable never-run 7,360 bytes, dead 3,526, no reference 1,053;
   1,345 orphan candidates (mostly data). The largest pieces sit in the parts the runs didn't reach (`$53` stage
   events, `$0D` text, `$03` objects). `$00:3A97` is a Super Game Boy check (MLT_REQ, `$C182`) that only runs off a Game
@@ -230,7 +239,7 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
 - What the 5 extra stage-table words (`$A0EE-$A0F7`) are, and the stage table's second byte.
 - Pitch Area's infrared packet format (needs a second console).
 - How the legendary Charaboms are earned, and Battle Game with a saved Charabom; both outside the coverage runs.
-- A wider coverage run (worlds 2-5, minigames, ending) for the dead-code and graphics sweep.
+- Whether the real ending shows the ...END? screen; the Charabom battles and bonus types 5-7 in a coverage run.
 
 ## Battle against the computer (★ New)
 

@@ -26,6 +26,22 @@ is Japanese and the title reads とびだせ!ぱにボン.
 - Unchanged: the sound tables (`$0707_4024`, `$0707_4080`) and the FLAME UP! frame (file `$33BEA`); the unused medal
   graphics are there too (file `$6713E`). Whether they are unused in the Japanese ROM as well was not traced.
 - The developer-menu patch is for the US ROM only.
+- ★ **The rest of the hidden content is in the Japanese ROM too**, a few bytes earlier (RAM addresses are all the
+  same): the round-end L + R checks (`$0700_9554` loser, `$0700_966C` winner), the boss-run table (`$0702_5D04`, the
+  same 2, 5, 8, 9, 10), the demo starter with its six recordings and record case (`$0700_7010`; the recordings at
+  `$0702_5601`-`$0702_5B01` are byte-identical), the recorder (`$0702_0F3C`), the hidden DEBUG MENU option
+  (`$0500_2504`, set at `$0700_6642`) and the four never-set flags (readers `$0702_1558`/`$1654`, `$0700_2A7E`,
+  `$0700_3856`, `$0700_57B4`). Seen in BizHawk on the Japanese ROM: `1298` runs stages 2, 5, 8, 9, 10 and then the
+  ending; L + R after a won round shows the VIRTUAL BOY screen; control word `$0500_595C` forced to `$200` during a
+  demo records the pad as value/run pairs; and file `$0A08` `C5` -> `C6` plays the sixth recording.
+  ![1298 on the Japanese ROM](img/pbvb/boss_run_1298_jp.png)
+- ★ **The LICENSED BY NINTENDO screen is US only.** The Japanese ROM has three boot routines (`$0701_72AC`, `746E`,
+  `780A`) where the US one has four, and that stretch of code is exactly 452 bytes shorter, the size of `$0701_77FE`.
+  The line is missing from the boot screens' map as well, which has two more lines of Japanese precaution text
+  instead.
+  ![The boot screens' map in each ROM, dumped from video memory in BizHawk](img/pbvb/boot_map_us_jp.png)
+- RESULT's labels are English in the US ROM (LEVEL, CHAIN REACTION, GIANT BOMB, CONTINUE, BOSS BATTLE) and kana in
+  the Japanese one; TOTAL PLAY TIME is in both.
 
 ## The password
 
@@ -125,11 +141,16 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
   by `$0500_24F0` (`$0700_0754`); each win adds 1 (`$0700_0850`). Played in BizHawk (US), each match won by handing
   the player's side to the CPU: Zach, Partz, Rahtut, Count Dracu-boom, Ms. Flashy, then the ending.
   ![The five opponents of 1298 and their matches](img/pbvb/boss_run_1298.png)
-- ★ **L + R after a won round: the VIRTUAL BOY screen.** Once WON / LOST is up and the player's 150-frame countdown
-  has run out, L and R held together (`$0700_9598`; the losing side's check `$0700_96B0` wasn't reached) set
+- ★ **L + R after a round: the VIRTUAL BOY screen.** Once WON / LOST is up and the player's 150-frame countdown
+  has run out, L and R held together (the winner's check `$0700_96B0`, the loser's `$0700_9598`) set
   `$0500_2444`, and the main loop (`$0700_0798`) shows the second boot screen, the VIRTUAL BOY logo with its corner
   marks for lining up the display (`$0701_74B2`), before the next stage card; A goes on. Real presses in BizHawk: held
-  only during the countdown, or L or R alone, does nothing.
+  only during the countdown, or L or R alone, does nothing. After a lost round it is the same: the screen, A, then
+  CONTINUE? and the stage again. Which check is which was told apart by making `$0700_9598` store 2 instead of 1:
+  `$0500_2444` reads 2 after a lost round and 1 after a won one. A round can't be drawn: with `4476` (one pad moves
+  both fields) and no input both fields fill the same column, and the left side still gets LOST and the right WON;
+  `$0700_6EBC` only compares each win count with the WIN setting.
+  ![L + R after a lost round, the same round end without it, and the 4476 round that can't draw](img/pbvb/lr_lost_round.png)
   ![The round end, L + R held, the logo screen, the next card; below, without L + R](img/pbvb/lr_round_end.png)
 - ★ **An unused boot screen: LICENSED BY NINTENDO.** `$0701_77FE` (452 bytes) is built like the three boot screens
   (the precaution text `$0701_72F0`, the logo `$0701_74B2`, OPTION / AUTOMATIC PAUSE `$0701_7A12`) but nothing calls

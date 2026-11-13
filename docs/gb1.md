@@ -217,6 +217,19 @@ capacity of 1; shown with capacity set to 4); **trouncer** (`$01:5EE4`), a dash 
 stuns them for about a second (`$01:5F15`).
 ![Kick (top); liner, then trouncer (bottom)](img/gb1/technique_moves.png)
 
+★ **B stops a kicked bomb.** A fresh B press is latched in the player's `+$57` (`$09:527A` for the four pads of a
+battle, `$01:40F7` in the story), and the moving-bomb update checks the kicker's (`$01:5A10` on in Wario Blast,
+`$01:59D5` on in the Japanese cart) and jumps to the stop routine: the bomb rests in the cell it has reached. Only
+the kicker's own press counts.
+
+Wario Blast has the same code a little earlier (dispatcher `$00:2704`, table `$00:2725`; kick `$01:56C7`, liner
+`$01:5E33`, trouncer `$01:5F26`). In Mesen, a four-player battle on arena 1 with TECHNIQUE ON: Wario's kicked bomb
+slid four cells and stopped against player 4; the same kick with B pressed 12 frames in stopped after two; the
+liner filled a row of four (capacity set to 4); and a B + Down dash into player 4 left him flat for about 130
+frames.
+![Wario Blast: a kick, and the same kick stopped with B](img/gb1/wario_kick_bstop.png)
+![Wario Blast: liner and trouncer](img/gb1/wario_liner_trouncer.png)
+
 ## ★ Bomberman Selection (Korea)
 
 | Dump | Header title | MD5 | What it is |
@@ -275,7 +288,4 @@ the password digit buffer), brings it up after the first round in both carts.
 
 ## Open
 
-- Wario Blast's kick, liner and trouncer seen in a multitap battle: TECHNIQUE ON sets all four players' flags
-  there too (`$C05C`-`$C35F` all 1, the flags the dispatcher `$00:276D` reads), but the arena's start pocket
-  penned the player in before a move could be shown. B stopping a kicked bomb.
 - Why the logo at `$03:6911` was dropped (an earlier palette design is a guess).

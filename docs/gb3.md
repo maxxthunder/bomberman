@@ -217,21 +217,28 @@ Stage 5 of each area counts the diamonds you pick up: crystals lying on the floo
 onto them (pickup kind 8, `$00:38D1`: `$C390` in room 1; room 2's start copies it to `$C391` and clears `$C38E`, so
 only room 2's panels count; in challenge mode they add score instead).
 
-Each area draws its crystals with its own map cell, and each stage-5 pair of rooms holds a fixed number of them
-(counted in the live map at `$D200`; the cell was found per area by walking a bot over them with the invincibility
-flag set and no bombs, and matching the fall in that cell against the rise in the counter):
+In stage 5 the crystals take the place of the soft blocks: the routine that scatters soft blocks (`$00:221A`) lays
+crystals instead, a free floor cell plus an offset per area (`$00:22F9`), until it has put down a fixed number for
+the room (`$00:22EB`, two bytes per area). Where they lie changes every visit; how many doesn't. Counted in the live
+map (`$D200`) of all 14 rooms in Mesen, which matches the table:
 
-| Area | Cell | Room 1 | Room 2 | Total | Thresholds |
+| Area | Cells | Room 1 | Room 2 | Total | Thresholds |
 |---|---|---|---|---|---|
 | Wood | `$25` | 30 | 40 | **70** | 40 / 50 / 60 |
-| City | `$35` | 40 | 30 | **70** | 60 / 70 / 80 |
-| Ice | `$12` | 40 | 44 | **84** | 60 / 70 / 80 |
+| City | `$35`, `$36` | 40 | 50 | **90** | 60 / 70 / 80 |
+| Ice | `$12`, `$13` | 40 | 50 | **90** | 60 / 70 / 80 |
+| Sand | `$29`-`$2B` | 25 | 45 | **70** | 40 / 50 / 60 |
+| Lava | `$33` | 30 | 40 | **70** | 40 / 50 / 60 |
 | Aqua | `$2A` | 40 | 50 | **90** | 60 / 70 / 80 |
+| Evil | `$27` | 30 | 50 | **80** | 50 / 60 / 70 |
 
-★ So **City's second bell panel can never come out**: its stage 5 holds 70 crystals and its second threshold is
-80, so `$C38E` can only reach 1 there and the helper never flies its second lap in City. (That rests on no crystals
-coming out of soft blocks, which Wood's played-through 70 shows for Wood.) Ice and Aqua clear 80.
-![Both rooms of Wood, City, Ice and Aqua stage 5](img/gb3/crystal_counts.png) In room 2, the count reaching the area's thresholds
+★ Every area holds exactly ten more than its last threshold. A room with more than one floor type has a crystal
+cell for each (about 20 of City room 2's 50 lie on its upper floor as `$36`). No stage-5 map has a soft block, so
+none are hidden. A blast destroys a crystal without counting it (`$01:7B10`), so bombs only lower the total, and
+dying starts the room's count again and lays the crystals afresh (`$00:15BA`). City 5 with the player moved onto
+each crystal and nothing else written: the 1-up panel at 60, the bell panels at 70 and 80 (`$C38E` 0 → 1 → 2), 90
+in all.
+![Both rooms of all seven areas' stage 5](img/gb3/crystal_counts.png) In room 2, the count reaching the area's thresholds
 (`$00:39B6`: Wood, Sand, Lava 40 / 50 / 60; City, Ice, Aqua 60 / 70 / 80; Evil 50 / 60 / 70) puts out a 1-up panel
 (tile `$A4`), then a special panel (tile `$A8`) at each of the next two; each special panel adds 1 to `$C38E`. At
 the boss stage, `$C38E` ≠ 0 brings a small flying helper (object `$52`, `$09:5E61`, from `$0D:6DA7`) that drops three
@@ -270,8 +277,13 @@ apart at `$D300` and copied to `$D200`; a decoded challenge room matched the RAM
 
 ## Open
 
-- Whether any area's soft blocks hide crystals (Wood's don't), which is what City's count rests on; Sand, Lava
-  and Evil stage 5 weren't counted.
+- Whether City 5's 80 can be collected on foot. Room 1 scrolls by itself (`$01:4794`/`$01:483E`): right, down,
+  left and up, about 2,780 frames a loop, pushing the player along with the screen edge (into a wall is death), so
+  its lower rows do come into view. Pad input alone took 37 of its 40, replayed from the title, which would leave 43
+  of room 2's 50. Room 1 ends on switches, not crystals: blasting its three switch cells (`$2E`, `$CD`, `$C1`, table
+  `$C467`; count in `$C38F`) opens the exit (`$C487`, cell `$33`). Two were hit; the third, bottom left behind moving
+  hazards, wasn't, so room 2 was never reached on foot.
+  ![City stage 5 room 1: the view scrolling by itself](img/gb3/city5_autoscroll.png)
 - Challenge mode: the cleared branch (`$C480` = `$FF`) and どきどき's doors (cells `$32`/`$33`, rooms 120-123) weren't
   reached; walking to はらはら's door wasn't done (the player was moved next to it); the room records' soft-block, item
   and object parts aren't decoded.
