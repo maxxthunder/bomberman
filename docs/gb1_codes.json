@@ -1084,5 +1084,17 @@
   "verified": "emu",
   "note": "Game Genie: US $01:53D7 / JP $01:53C8 LD (HL),A (77) -> NOP after the INC of the fire level (+$2E). BizHawk: US and JP: forced fire-ups: 1,2,3,4,4 without; 0,0,0,0 with. Mesen 2, Bomberman Collection through its menu, the Japanese code: 003-C8A-3B7, forced fire-ups: 0,0,0,0 (1,2,3,4,4 without).",
   "section": "cheat"
+ },
+ {
+  "code": "Bomberman Selection (Korea)",
+  "effect": "A Korean Game Boy Color cart holding this game and Bomber Boy in colour; its Bomberman GB has no multitap battle",
+  "versions": [
+   "kr"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "section": "region",
+  "img": "selection_kr.png",
+  "note": "BOMSEL, 1 MB MBC1, md5 d0c6ffc3602d91c0b2b1b0461553de33; header $0143 = $C0 (Game Boy Color only) and $0146 = $00 (no Super Game Boy code), so the SGB multitap BATTLE mode cannot be there. Seen in Mesen: a menu of 봄버맨 / 봄버보이 whose labels sit against the other game's logo, and this game's title offering only START and PASSWORD, START going straight into ROUND1-1. Bomberman GB 2 is not in the cart."
  }
 ]

@@ -1,7 +1,7 @@
 [
  {
   "code": "0704",
-  "effect": "Start at 1-1 with full equipment (8 bombs, 8 fire, speed +2, abilities $48D1=7)",
+  "effect": "Start at 1-1 with full equipment: 8 bombs, 8 fire, speed +2 and extra abilities",
   "versions": [
    "eu",
    "jp",
@@ -9,7 +9,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Kit flag $7E2901 stays set until reset."
+  "note": "Abilities $48D1 = 7. Kit flag $7E2901 stays set until reset."
  },
  {
   "code": "3200",
@@ -133,7 +133,7 @@
  },
  {
   "code": "5656",
-  "effect": "Battle mode; no effect",
+  "effect": "Accepted, but nothing changes",
   "versions": [
    "eu",
    "jp",

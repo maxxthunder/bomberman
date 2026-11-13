@@ -206,14 +206,14 @@
   "section": "cheat"
  },
  {
-  "code": "$30C (unreferenced)",
+  "code": "Unused CPU-time meter",
   "effect": "CPU-time meter: backdrop red, 16 nops, back to black",
   "versions": [
    "EU proto"
   ],
   "status": "unchecked",
   "verified": "static",
-  "note": "Nothing calls it (static map plus coverage of boot and 3000 frames of 8-pad play)",
+  "note": "$30C (unreferenced). Nothing calls it (static map plus coverage of boot and 3000 frames of 8-pad play)",
   "section": "debug"
  },
  {

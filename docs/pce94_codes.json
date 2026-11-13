@@ -301,7 +301,7 @@
  },
  {
   "code": "1510",
-  "effect": "Start at Area 1, stages 2 cleared",
+  "effect": "Start at Area 1, stage 2 cleared",
   "versions": [
    "retail",
    "world"
@@ -313,7 +313,7 @@
  },
  {
   "code": "6720",
-  "effect": "Start at Area 1, stages 3 cleared",
+  "effect": "Start at Area 1, stage 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -325,7 +325,7 @@
  },
  {
   "code": "0430",
-  "effect": "Start at Area 1, stages 1,3 cleared",
+  "effect": "Start at Area 1, stages 1 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -349,7 +349,7 @@
  },
  {
   "code": "5040",
-  "effect": "Start at Area 1, stages 2,3 cleared",
+  "effect": "Start at Area 1, stages 2 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -373,7 +373,7 @@
  },
  {
   "code": "3811",
-  "effect": "Start at Area 2, stages 2 cleared",
+  "effect": "Start at Area 2, stage 2 cleared",
   "versions": [
    "retail",
    "world"
@@ -385,7 +385,7 @@
  },
  {
   "code": "8031",
-  "effect": "Start at Area 2, stages 3 cleared",
+  "effect": "Start at Area 2, stage 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -397,7 +397,7 @@
  },
  {
   "code": "2731",
-  "effect": "Start at Area 2, stages 1,3 cleared",
+  "effect": "Start at Area 2, stages 1 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -409,7 +409,7 @@
  },
  {
   "code": "7341",
-  "effect": "Start at Area 2, stages 2,3 cleared",
+  "effect": "Start at Area 2, stages 2 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -421,7 +421,7 @@
  },
  {
   "code": "2651",
-  "effect": "Start at Area 2, stages 4 cleared",
+  "effect": "Start at Area 2, stage 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -433,7 +433,7 @@
  },
  {
   "code": "6261",
-  "effect": "Start at Area 2, stages 1,4 cleared",
+  "effect": "Start at Area 2, stages 1 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -445,7 +445,7 @@
  },
  {
   "code": "1961",
-  "effect": "Start at Area 2, stages 2,4 cleared",
+  "effect": "Start at Area 2, stages 2 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -457,7 +457,7 @@
  },
  {
   "code": "5571",
-  "effect": "Start at Area 2, stages 1,2,4 cleared",
+  "effect": "Start at Area 2, stages 1, 2 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -481,7 +481,7 @@
  },
  {
   "code": "6181",
-  "effect": "Start at Area 2, stages 3,4 cleared",
+  "effect": "Start at Area 2, stages 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -493,7 +493,7 @@
  },
  {
   "code": "0881",
-  "effect": "Start at Area 2, stages 1,3,4 cleared",
+  "effect": "Start at Area 2, stages 1, 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -517,7 +517,7 @@
  },
  {
   "code": "5491",
-  "effect": "Start at Area 2, stages 2,3,4 cleared",
+  "effect": "Start at Area 2, stages 2, 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -541,7 +541,7 @@
  },
  {
   "code": "3812",
-  "effect": "Start at Area 3, stages 2 cleared",
+  "effect": "Start at Area 3, stage 2 cleared",
   "versions": [
    "retail",
    "world"
@@ -553,7 +553,7 @@
  },
  {
   "code": "8032",
-  "effect": "Start at Area 3, stages 3 cleared",
+  "effect": "Start at Area 3, stage 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -565,7 +565,7 @@
  },
  {
   "code": "2732",
-  "effect": "Start at Area 3, stages 1,3 cleared",
+  "effect": "Start at Area 3, stages 1 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -577,7 +577,7 @@
  },
  {
   "code": "7342",
-  "effect": "Start at Area 3, stages 2,3 cleared",
+  "effect": "Start at Area 3, stages 2 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -589,7 +589,7 @@
  },
  {
   "code": "2652",
-  "effect": "Start at Area 3, stages 4 cleared",
+  "effect": "Start at Area 3, stage 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -601,7 +601,7 @@
  },
  {
   "code": "6262",
-  "effect": "Start at Area 3, stages 1,4 cleared",
+  "effect": "Start at Area 3, stages 1 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -613,7 +613,7 @@
  },
  {
   "code": "1962",
-  "effect": "Start at Area 3, stages 2,4 cleared",
+  "effect": "Start at Area 3, stages 2 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -625,7 +625,7 @@
  },
  {
   "code": "5572",
-  "effect": "Start at Area 3, stages 1,2,4 cleared",
+  "effect": "Start at Area 3, stages 1, 2 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -649,7 +649,7 @@
  },
  {
   "code": "6182",
-  "effect": "Start at Area 3, stages 3,4 cleared",
+  "effect": "Start at Area 3, stages 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -661,7 +661,7 @@
  },
  {
   "code": "0882",
-  "effect": "Start at Area 3, stages 1,3,4 cleared",
+  "effect": "Start at Area 3, stages 1, 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -685,7 +685,7 @@
  },
  {
   "code": "5492",
-  "effect": "Start at Area 3, stages 2,3,4 cleared",
+  "effect": "Start at Area 3, stages 2, 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -709,7 +709,7 @@
  },
  {
   "code": "5123",
-  "effect": "Start at Area 4, stages 2 cleared",
+  "effect": "Start at Area 4, stage 2 cleared",
   "versions": [
    "retail",
    "world"
@@ -721,7 +721,7 @@
  },
  {
   "code": "0433",
-  "effect": "Start at Area 4, stages 3 cleared",
+  "effect": "Start at Area 4, stage 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -733,7 +733,7 @@
  },
  {
   "code": "4043",
-  "effect": "Start at Area 4, stages 1,3 cleared",
+  "effect": "Start at Area 4, stages 1 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -745,7 +745,7 @@
  },
  {
   "code": "9643",
-  "effect": "Start at Area 4, stages 2,3 cleared",
+  "effect": "Start at Area 4, stages 2 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -757,7 +757,7 @@
  },
  {
   "code": "4953",
-  "effect": "Start at Area 4, stages 4 cleared",
+  "effect": "Start at Area 4, stage 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -769,7 +769,7 @@
  },
  {
   "code": "8563",
-  "effect": "Start at Area 4, stages 1,4 cleared",
+  "effect": "Start at Area 4, stages 1 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -781,7 +781,7 @@
  },
  {
   "code": "3273",
-  "effect": "Start at Area 4, stages 2,4 cleared",
+  "effect": "Start at Area 4, stages 2 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -793,7 +793,7 @@
  },
  {
   "code": "7873",
-  "effect": "Start at Area 4, stages 1,2,4 cleared",
+  "effect": "Start at Area 4, stages 1, 2 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -817,7 +817,7 @@
  },
  {
   "code": "8483",
-  "effect": "Start at Area 4, stages 3,4 cleared",
+  "effect": "Start at Area 4, stages 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -829,7 +829,7 @@
  },
  {
   "code": "2193",
-  "effect": "Start at Area 4, stages 1,3,4 cleared",
+  "effect": "Start at Area 4, stages 1, 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -853,7 +853,7 @@
  },
  {
   "code": "7793",
-  "effect": "Start at Area 4, stages 2,3,4 cleared",
+  "effect": "Start at Area 4, stages 2, 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -877,7 +877,7 @@
  },
  {
   "code": "7424",
-  "effect": "Start at Area 5, stages 2 cleared",
+  "effect": "Start at Area 5, stage 2 cleared",
   "versions": [
    "retail",
    "world"
@@ -889,7 +889,7 @@
  },
  {
   "code": "2734",
-  "effect": "Start at Area 5, stages 3 cleared",
+  "effect": "Start at Area 5, stage 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -901,7 +901,7 @@
  },
  {
   "code": "6344",
-  "effect": "Start at Area 5, stages 1,3 cleared",
+  "effect": "Start at Area 5, stages 1 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -913,7 +913,7 @@
  },
  {
   "code": "1054",
-  "effect": "Start at Area 5, stages 2,3 cleared",
+  "effect": "Start at Area 5, stages 2 and 3 cleared",
   "versions": [
    "retail",
    "world"
@@ -925,7 +925,7 @@
  },
  {
   "code": "6264",
-  "effect": "Start at Area 5, stages 4 cleared",
+  "effect": "Start at Area 5, stage 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -937,7 +937,7 @@
  },
  {
   "code": "0964",
-  "effect": "Start at Area 5, stages 1,4 cleared",
+  "effect": "Start at Area 5, stages 1 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -949,7 +949,7 @@
  },
  {
   "code": "5574",
-  "effect": "Start at Area 5, stages 2,4 cleared",
+  "effect": "Start at Area 5, stages 2 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -961,7 +961,7 @@
  },
  {
   "code": "9184",
-  "effect": "Start at Area 5, stages 1,2,4 cleared",
+  "effect": "Start at Area 5, stages 1, 2 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -985,7 +985,7 @@
  },
  {
   "code": "0884",
-  "effect": "Start at Area 5, stages 3,4 cleared",
+  "effect": "Start at Area 5, stages 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -997,7 +997,7 @@
  },
  {
   "code": "4494",
-  "effect": "Start at Area 5, stages 1,3,4 cleared",
+  "effect": "Start at Area 5, stages 1, 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -1021,7 +1021,7 @@
  },
  {
   "code": "9005",
-  "effect": "Start at Area 5, stages 2,3,4 cleared",
+  "effect": "Start at Area 5, stages 2, 3 and 4 cleared",
   "versions": [
    "retail",
    "world"
@@ -1069,7 +1069,7 @@
  },
  {
   "code": "3438",
-  "effect": "Start at Area 1, stages 2 cleared (alias of 1510)",
+  "effect": "Start at Area 1, stage 2 cleared (alias of 1510)",
   "versions": [
    "retail",
    "world"
@@ -1105,7 +1105,7 @@
  },
  {
   "code": "8648",
-  "effect": "Start at Area 1, stages 3 cleared (alias of 6720)",
+  "effect": "Start at Area 1, stage 3 cleared (alias of 6720)",
   "versions": [
    "retail",
    "world"
@@ -1117,7 +1117,7 @@
  },
  {
   "code": "2358",
-  "effect": "Start at Area 1, stages 1,3 cleared (alias of 0430)",
+  "effect": "Start at Area 1, stages 1 and 3 cleared (alias of 0430)",
   "versions": [
    "retail",
    "world"
@@ -1141,7 +1141,7 @@
  },
  {
   "code": "7958",
-  "effect": "Start at Area 1, stages 2,3 cleared (alias of 5040)",
+  "effect": "Start at Area 1, stages 2 and 3 cleared (alias of 5040)",
   "versions": [
    "retail",
    "world"
@@ -1189,7 +1189,7 @@
  },
  {
   "code": "5739",
-  "effect": "Start at Area 2, stages 2 cleared (alias of 3811)",
+  "effect": "Start at Area 2, stage 2 cleared (alias of 3811)",
   "versions": [
    "retail",
    "world"
@@ -1213,7 +1213,7 @@
  },
  {
   "code": "0059",
-  "effect": "Start at Area 2, stages 3 cleared (alias of 8031)",
+  "effect": "Start at Area 2, stage 3 cleared (alias of 8031)",
   "versions": [
    "retail",
    "world"
@@ -1225,7 +1225,7 @@
  },
  {
   "code": "4659",
-  "effect": "Start at Area 2, stages 1,3 cleared (alias of 2731)",
+  "effect": "Start at Area 2, stages 1 and 3 cleared (alias of 2731)",
   "versions": [
    "retail",
    "world"
@@ -1237,7 +1237,7 @@
  },
  {
   "code": "9269",
-  "effect": "Start at Area 2, stages 2,3 cleared (alias of 7341)",
+  "effect": "Start at Area 2, stages 2 and 3 cleared (alias of 7341)",
   "versions": [
    "retail",
    "world"
@@ -1273,7 +1273,7 @@
  },
  {
   "code": "4579",
-  "effect": "Start at Area 2, stages 4 cleared (alias of 2651)",
+  "effect": "Start at Area 2, stage 4 cleared (alias of 2651)",
   "versions": [
    "retail",
    "world"
@@ -1285,7 +1285,7 @@
  },
  {
   "code": "8189",
-  "effect": "Start at Area 2, stages 1,4 cleared (alias of 6261)",
+  "effect": "Start at Area 2, stages 1 and 4 cleared (alias of 6261)",
   "versions": [
    "retail",
    "world"
@@ -1297,7 +1297,7 @@
  },
  {
   "code": "3889",
-  "effect": "Start at Area 2, stages 2,4 cleared (alias of 1961)",
+  "effect": "Start at Area 2, stages 2 and 4 cleared (alias of 1961)",
   "versions": [
    "retail",
    "world"
@@ -1309,7 +1309,7 @@
  },
  {
   "code": "7499",
-  "effect": "Start at Area 2, stages 1,2,4 cleared (alias of 5571)",
+  "effect": "Start at Area 2, stages 1, 2 and 4 cleared (alias of 5571)",
   "versions": [
    "retail",
    "world"
@@ -1458,7 +1458,7 @@
   "img": "debug_pause_ips.png"
  },
  {
-  "code": "Graphics T0 #158 (file $8FD1D), via script 0F:A9FF",
+  "code": "Unused jet ship sprite",
   "effect": "An unused blue jet ship sprite, loaded by a task nothing starts",
   "versions": [
    "retail",
@@ -1489,7 +1489,8 @@
   "code": "Enemy type $1D",
   "effect": "An enemy no stage places: a small blue frog-like creature",
   "versions": [
-   "jp"
+   "retail",
+   "world"
   ],
   "status": "new",
   "verified": "mesen",

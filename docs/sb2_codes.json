@@ -473,7 +473,7 @@
   "note": "$1C68 held at $FFFF by the cheat engine; the effect was checked earlier with the flag set by 5656. Game Genie: BEQ -> BEQ +0 after LDA $001C68 ($C0:D615, Caravan $C0:D624), so the block list never stops at its $FE marker; Mesen (tools/sb2/sudden_death.lua with the flag cleared), USA, Europe, Japan, beta: the blocks kept coming past 81 (control stops at 81). Caravan not run (the test never reaches the hurry-up there)."
  },
  {
-  "code": "$C0:0E9B",
+  "code": "Unused scroll test",
   "effect": "Unreferenced test code: pad 1 R adds $0400, L subtracts $0200 from each entry of the HDMA scroll tables $7E:393C / $7E:3730 (set up for BG1 by $C0:0EDB from $C5:FD57)",
   "versions": [
    "us",
@@ -485,10 +485,10 @@
   "status": "new",
   "verified": "static",
   "section": "debug",
-  "note": "No caller and no pointer anywhere; never ran in the coverage logs."
+  "note": "$C0:0E9B. No caller and no pointer anywhere; never ran in the coverage logs."
  },
  {
-  "code": "$C0:0C5F",
+  "code": "Unused second start-up path",
   "effect": "Unreferenced second init entry: force blank, the boot init calls ($C0:209F, $C0:0F2C, $C0:211A, $C0:F60E, $C0:159E, $C0:096C), then a wait loop",
   "versions": [
    "us",
@@ -500,7 +500,7 @@
   "status": "new",
   "verified": "static",
   "section": "unused",
-  "note": "Looks like an older reset path; nothing jumps to it."
+  "note": "$C0:0C5F. Looks like an older reset path; nothing jumps to it."
  },
  {
   "code": "CC03E401 or CC03E408, then battle stage 1",
@@ -568,7 +568,7 @@
   "img": "caravan_hurry_waves.png"
  },
  {
-  "code": "$C0:3FAD (unreferenced)",
+  "code": "Cut battle gimmick: opening pits",
   "effect": "A cut battle gimmick: pits open and close in the floor in patterns",
   "versions": [
    "us",
@@ -579,7 +579,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "unused",
-  "note": "$C0:3FAD has no reference of any kind. On a timer ($7E:5CCC, flag $7E:5CCE) it picks one of 8 position sets from $C5:E714 at random and starts tile animations from script $C5:E7D3 (tiles $18C0-$18C6, ending as cell type $D6, a hole) or $C5:E7F5 (the reverse, closing it). The per-frame animator $C0:DA53 (717 bytes, list $7E:2860 over the pool $7E:3D88) writes each frame's tile to $7F:A000/$B000 and the cell type to $7F:C000/$D000; nothing else ever adds to that list. Forced in Mesen by pointing the battle stage's handler entry ($C0:3707 + 4 x $1A) at $C0:3FAD for one session: black pits open in a T shape and in pairs. Image: normal (left), then 60 and 900 frames in. Static: Europe, Japan and beta have the routine, the pattern data ($C5:E714, $C5:E7D3), the handler table ($C0:3707) and the animator ($C0:DA53) byte-identical at the same addresses, still unreferenced; Caravan has the same routine and data with the animator moved to $C0:DAB0, but forcing it there showed no pits in 1500 frames, so it is left out.",
+  "note": "$C0:3FAD (unreferenced). $C0:3FAD has no reference of any kind. On a timer ($7E:5CCC, flag $7E:5CCE) it picks one of 8 position sets from $C5:E714 at random and starts tile animations from script $C5:E7D3 (tiles $18C0-$18C6, ending as cell type $D6, a hole) or $C5:E7F5 (the reverse, closing it). The per-frame animator $C0:DA53 (717 bytes, list $7E:2860 over the pool $7E:3D88) writes each frame's tile to $7F:A000/$B000 and the cell type to $7F:C000/$D000; nothing else ever adds to that list. Forced in Mesen by pointing the battle stage's handler entry ($C0:3707 + 4 x $1A) at $C0:3FAD for one session: black pits open in a T shape and in pairs. Image: normal (left), then 60 and 900 frames in. Static: Europe, Japan and beta have the routine, the pattern data ($C5:E714, $C5:E7D3), the handler table ($C0:3707) and the animator ($C0:DA53) byte-identical at the same addresses, still unreferenced; Caravan has the same routine and data with the animator moved to $C0:DAB0, but forcing it there showed no pits in 1500 frames, so it is left out.",
   "img": "unused_floor_pits.png"
  }
 ]

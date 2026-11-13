@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Genesis, PC Engine and Virtual Boy
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.3.0](https://img.shields.io/badge/version-2.3.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.4.0](https://img.shields.io/badge/version-2.4.0-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 19 Bomberman games, read from each game's own code and tested in emulators, with a
 password checker for every game and a generator wherever a code holds items or progress. Each game also has its
@@ -174,7 +174,7 @@ The best finds for each game; the research notes have the rest.
 | Pocket Bomberman | 4 digits | a fixed list | 32 |
 | Bomberman Max | none: the game saves | (GameShark codes for the Charabom roster) | 30 Charaboms × levels 1–99 |
 | Atomic Punk / Bomber Boy | 8 characters | islands cleared, gold, with a sum and an XOR check | one code per state |
-| Panic Bomber (Virtual Boy), Panic Bomber W | 4 digits | a fixed list | 16 + 5 special; 30 + 9 special |
+| Panic Bomber (Virtual Boy), Panic Bomber W | 4 digits | a fixed list | 16 + 12 special; 30 + 9 special |
 
 The details, with ROM addresses, are in the research notes.
 
@@ -213,6 +213,15 @@ What each patch does, and how it was tested, is on the game's page under Patches
 Each code list is also in `docs/<game>_codes.json`, and the screenshots that prove the finds are in `docs/img/<game>/`.
 
 ## Tools
+
+Building the page needs Python 3.8 or newer and nothing else; Node is optional and only runs the checks.
+
+```
+python tools/build_page.py     # writes index.html
+node tools/check_page.mjs      # checks every code on it against the codecs
+```
+
+The page is one file and opens straight from disk; it pulls its fonts and icons from a CDN the first time.
 
 - `tools/<game>/password.py` and `password.mjs`: each game's password codec (the page uses the `.mjs` one).
 - `tools/build_page.py`: builds `index.html` from `tools/page_template.html`, the codecs and the code lists.

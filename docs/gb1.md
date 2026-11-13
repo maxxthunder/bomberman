@@ -217,6 +217,21 @@ capacity of 1; shown with capacity set to 4); **trouncer** (`$01:5EE4`), a dash 
 stuns them for about a second (`$01:5F15`).
 ![Kick (top); liner, then trouncer (bottom)](img/gb1/technique_moves.png)
 
+## ★ Bomberman Selection (Korea)
+
+| Dump | Header title | MD5 | What it is |
+|---|---|---|---|
+| Bomberman Selection (Korea) | `BOMSEL` | `d0c6ffc3602d91c0b2b1b0461553de33` | a 1 MB Game Boy Color cart (header `$0143` = `$C0`, Game Boy Color only; MBC1) holding **this game** and Bomber Boy, both in colour, behind a Korean menu |
+
+The menu shows two lines, 봄버맨 and 봄버보이, with the logo above changing as the cursor moves. As seen in Mesen,
+the labels sit against the other game's logo: the cursor on 봄버맨 shows the BOMBER BOY logo and opens Bomber Boy
+(BOMBER BOY / BOMBER MAN / VS.MODE), and the cursor on 봄버보이 shows the BOMBERMAN GB logo and opens this game.
+Bomberman GB 2, the third game of the Japanese Bomberman Collection, is not in the cart.
+
+Its Bomberman GB has no Super Game Boy code at all (the header's SGB flag `$0146` is `$00`), so the **SGB multitap
+BATTLE mode is gone**: the title offers only START and PASSWORD, and START goes straight into ROUND1-1.
+![The title, the menu on each line, and what each opens](img/gb1/selection_kr.png)
+
 ## Regions (Wario vs JP)
 
 | | JP | Wario |
@@ -260,5 +275,7 @@ the password digit buffer), brings it up after the first round in both carts.
 
 ## Open
 
-- Wario Blast's techniques in a multitap battle, and B stopping a kicked bomb.
+- Wario Blast's kick, liner and trouncer seen in a multitap battle: TECHNIQUE ON sets all four players' flags
+  there too (`$C05C`-`$C35F` all 1, the flags the dispatcher `$00:276D` reads), but the arena's start pocket
+  penned the player in before a move could be shown. B stopping a kicked bomb.
 - Why the logo at `$03:6911` was dropped (an earlier palette design is a guess).

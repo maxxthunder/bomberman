@@ -57,7 +57,7 @@ pad and Left on the left pad (`$0702_00F0`). The handlers start at `$0702_01EC`.
 
 | Code | Hold | Effect |
 |---|---|---|
-| ★ `1298` | | pick a level, then THE SCARY RUINS against **Zach the Were-Bomberman** instead of Drifty ![](img/pbvb/zach_1298.png) |
+| ★ `1298` | | pick a level, then a boss run: **Zach the Were-Bomberman** in THE SCARY RUINS instead of Drifty, then Partz, Rahtut, Count Dracu-boom and Ms. Flashy, one match each, and the ending ![](img/pbvb/zach_1298.png) |
 | ★ `9782` | | sets `$0500_24F4`: every game uses piece set (TUBU) 5 ![](img/pbvb/other_pieces_9782.png) |
 | `0130` | L R | auto play (Known) |
 | `1001` | L R | sound test (Known) |
@@ -121,6 +121,34 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
   (`$0701_8088`) is the ending: the door, the statue, then the next level's name (Very Easy and Easy) or the staff roll
   ending on END 1298 (Normal and Hard), then RESULT, and the level goes up by one. ★ Holding A, B, L, R, Start and
   Select (`$0701_87EA`) cuts each ending scene short, seen on screen.
+- ★ **`1298` is a boss run.** `$0500_24EC` makes the stage come from the table `$0702_5D04` = 2, 5, 8, 9, 10, indexed
+  by `$0500_24F0` (`$0700_0754`); each win adds 1 (`$0700_0850`). Played in BizHawk (US), each match won by handing
+  the player's side to the CPU: Zach, Partz, Rahtut, Count Dracu-boom, Ms. Flashy, then the ending.
+  ![The five opponents of 1298 and their matches](img/pbvb/boss_run_1298.png)
+- ★ **L + R after a won round: the VIRTUAL BOY screen.** Once WON / LOST is up and the player's 150-frame countdown
+  has run out, L and R held together (`$0700_9598`; the losing side's check `$0700_96B0` wasn't reached) set
+  `$0500_2444`, and the main loop (`$0700_0798`) shows the second boot screen, the VIRTUAL BOY logo with its corner
+  marks for lining up the display (`$0701_74B2`), before the next stage card; A goes on. Real presses in BizHawk: held
+  only during the countdown, or L or R alone, does nothing.
+  ![The round end, L + R held, the logo screen, the next card; below, without L + R](img/pbvb/lr_round_end.png)
+- ★ **An unused boot screen: LICENSED BY NINTENDO.** `$0701_77FE` (452 bytes) is built like the three boot screens
+  (the precaution text `$0701_72F0`, the logo `$0701_74B2`, OPTION / AUTOMATIC PAUSE `$0701_7A12`) but nothing calls
+  it. Called in place of the first (file `$6BC`: `36 6C` → `44 71`), it shows that one line and waits for A.
+  ![LICENSED BY NINTENDO, then the three screens the game shows](img/pbvb/licensed_screen.png)
+- ★ **A sixth demo and a demo recorder.** The demo starter `$0700_7014` takes a number: 1-6 replay the recordings at
+  `$0702_5601`, `5201`, `5401`, `5B01`, `5901` and `5801`, and `$10` records. The game asks only for 1-5 (auto play,
+  `0130`, plays all five; checked against the replay buffer `$0500_D0C4`), so the recording at `$0702_5801` is never
+  played: with file `$0A08` `C5` → `C6` it replaces the fifth, a 4,940-frame match in the Sinister Forest played to
+  a result. Player control mode 2 (the high byte of the control word `$0500_595C`; 0 pad, 1 CPU, 3 replay) is the
+  recorder (`$0702_1120`), which no code selects: set during a demo, the pad drives the match and each frame's
+  buttons are packed into one byte (bit 4 A / R / right-pad Right, bit 5 B / L / right-pad Left, low nibble the left
+  d-pad) and written run-length coded to the buffer, the format of the ROM's demos (a fixed pad pattern came back
+  byte for byte).
+  ![The sixth demo (top); a demo replaying, and the same frames with the recorder taking the pad (bottom)](img/pbvb/demo6_recorder.png)
+- **Flags no code sets** (forced in BizHawk): `$0500_E0CB`, a tick divider of the sound driver (`$0702_173C`; at 4 the
+  sound RAM changed about a third as often); `$0500_2480` stops the pieces being drawn while the timer runs
+  (`$0700_2A82`); `$0500_560C` stops the background scroll (`$0700_385A`); `$0500_5842` is OR-ed into every text
+  cell (`$0700_57B8`; `$4000` dims the DEBUG MENU's rows), its setters unreferenced.
 - **Never run, normal play:** object handlers for situations the runs didn't reach, the cartridge and link-port interrupt handlers, and unused commands of the sound
   driver (its banner: "VSU DRIVER Version 0.19a ... Hudson Soft ... Prototype"). Other unreferenced routines are the
   developer menu above, two object handlers (`$0701_1D88`, `$0701_1E30`) and library helpers.
@@ -131,7 +159,7 @@ select and the ending code. Of 138,882 traced code bytes, 121,070 ran (87%).
   into the right field at frame 60. That the readers run is inferred from the effects (BizHawk's VB core gives no
   execution log), and the big bomb wasn't seen with real input.
 - **Input codes:** the passwords, the L+R and debug-menu checks, the title code above, the boot wait for buttons to be
-  released and the mode-7 skip. Nothing else.
+  released, the mode-7 skip and the round-end L + R above. Nothing else (101 pad reads listed).
 - **Text:** the ASCII strings are the developer menu, sound test, stage select, DEBUG MENU and RESULT labels, all
   above, and the sound driver's banner.
 

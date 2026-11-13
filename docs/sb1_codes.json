@@ -2510,7 +2510,7 @@
  },
  {
   "code": "Controller 5 R on the title",
-  "effect": "Sound test ($00A4=$3C)",
+  "effect": "Opens the sound test. The US and European versions also need a multitap in port 2",
   "versions": [
    "US",
    "EU",
@@ -2519,7 +2519,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "US/EU $C5:4F52 also require the multitap ID ($0CEF&$1F=1, $0CE0=$40); JP and beta test only pad 5 R ($0CEE bit $10). Verified with a real press in all four: Mesen with --snes.port2.type=Multitap, emu.setInput({r=true},0,1,3) (port 2, multitap port D) on the title; no multitap: no sound test in US.",
+  "note": "Sets $00A4 = $3C. US/EU $C5:4F52 also require the multitap ID ($0CEF&$1F=1, $0CE0=$40); JP and beta test only pad 5 R ($0CEE bit $10). Verified with a real press in all four: Mesen with --snes.port2.type=Multitap, emu.setInput({r=true},0,1,3) (port 2, multitap port D) on the title; no multitap: no sound test in US.",
   "section": "secret"
  },
  {
@@ -2935,7 +2935,7 @@
  },
  {
   "code": "Debug menu NO DEATH",
-  "effect": "Does nothing in the original code: sets player +$2E, which nothing reads",
+  "effect": "Does nothing in the unpatched game. With the debug-menu patch or its PAR codes, ON keeps you alive",
   "versions": [
    "US",
    "EU",
@@ -2945,11 +2945,11 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "Own bomb killed the player with it ON. The IPS/PAR set adds a check at the two hit branches (reconstruction) so ON keeps the player alive (verified, all four versions)."
+  "note": "Sets player +$2E, which nothing reads. Own bomb killed the player with it ON. The IPS/PAR set adds a check at the two hit branches (reconstruction) so ON keeps the player alive (verified, all four versions)."
  },
  {
   "code": "Debug menu FIRE PASS",
-  "effect": "Invincibility timer: ON sets player +$36 = $0160 (5.9 s of flashing); shows ON at a stage start because that timer is running",
+  "effect": "Despite the name, it makes you invincible for about 6 seconds while you flash. It reads ON at each stage start because that flash is already running",
   "versions": [
    "US",
    "EU",
@@ -2959,7 +2959,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "Survived own bomb with it ON."
+  "note": "ON sets player +$36 = $0160. Survived own bomb with it ON."
  },
  {
   "code": "Debug menu FIRE FULL",
@@ -3048,7 +3048,7 @@
   "note": "Screenshot of the ending (scene $30) at the same frame in each version."
  },
  {
-  "code": "$C1:0E40-$C1:17BF",
+  "code": "Unused enemy sprites",
   "effect": "74 unused 4bpp sprite tiles after the world-4 enemy sheet: faces with eyes and teeth, shrinking rings",
   "versions": [
    "US",
@@ -3059,7 +3059,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "unused",
-  "note": "Never read (code, data or DMA) in a CDL sweep of every scene $00-$48 plus 13 stage runs; image docs/img/sb1/unused/C10E40_unread_sprite_tiles_new.png."
+  "note": "$C1:0E40-$C1:17BF. Never read (code, data or DMA) in a CDL sweep of every scene $00-$48 plus 13 stage runs; image docs/img/sb1/unused/C10E40_unread_sprite_tiles_new.png."
  },
  {
   "code": "7E0D7660 7E0D7701",
@@ -3067,7 +3067,7 @@
    "Pro Action Replay": "7E0D7660 7E0D7701",
    "Game Genie": "3CFC-77FF 3CFC-779F (US, EU) / 3CFC-8D9D 3CFC-8DBD (JP) / 3CFB-87FD 3CFB-879D (beta)"
   },
-  "effect": "Player 1 invincible (the respawn-flash timer +$36 held at $0160)",
+  "effect": "Player 1 invincible: he keeps the after-respawn flash",
   "versions": [
    "US",
    "EU",
@@ -3077,7 +3077,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Mesen cheat engine, unpatched US: bomb laid under player 1 after the start flash ran out; lives stayed 5 (without the codes: 5 -> 4). Enemies and blasts pass through him while he flashes. Player 2: 7E0DB660 7E0DB701 (not run). Game Genie: DEC $36,X -> NOP NOP at $C4:14AC (JP $C4:12A1, beta $C4:129C), so the start-of-stage flash never runs out (every player); Mesen, all four versions: own bomb after the start flash, lives stay 5."
+  "note": "Holds the respawn-flash timer (+$36) at $0160. Mesen cheat engine, unpatched US: bomb laid under player 1 after the start flash ran out; lives stayed 5 (without the codes: 5 -> 4). Enemies and blasts pass through him while he flashes. Player 2: 7E0DB660 7E0DB701 (not run). Game Genie: DEC $36,X -> NOP NOP at $C4:14AC (JP $C4:12A1, beta $C4:129C), so the start-of-stage flash never runs out (every player); Mesen, all four versions: own bomb after the start flash, lives stay 5."
  },
  {
   "code": "7E0D7D09",
@@ -3247,7 +3247,7 @@
    "Pro Action Replay": "C30D63A2 C30D64AE",
    "Game Genie": "C4D1-5DAE C3D1-5FDE"
   },
-  "effect": "1-1 uses the unused arena map $C1:AEA2",
+  "effect": "Stage 1-1 is played on an unused arena map",
   "versions": [
    "US",
    "EU",
@@ -3257,10 +3257,10 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built). Game Genie: the same two ROM bytes; Mesen, US, EU and beta: 1-1 loads with that layout and plays. Japan: stage 1-1's header is at $C3:0CF2 (the same map $C1:AEA2), so the codes are C30D03A2 C30D04AE; entered in Mesen's cheat engine, 1-1 loads with the same open layout."
+  "note": "The map is $C1:AEA2. ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built). Game Genie: the same two ROM bytes; Mesen, US, EU and beta: 1-1 loads with that layout and plays. Japan: stage 1-1's header is at $C3:0CF2 (the same map $C1:AEA2), so the codes are C30D03A2 C30D04AE; entered in Mesen's cheat engine, 1-1 loads with the same open layout."
  },
  {
-  "code": "$C1:A1DA, $C1:AEA2",
+  "code": "Two unused arena maps",
   "effect": "Two arena maps no stage header points to: a ring (walls fill the middle) and a plain grid with its own floor",
   "versions": [
    "US",
@@ -3271,11 +3271,11 @@
   "status": "known",
   "verified": "mesen",
   "section": "unused",
-  "note": "The two known unused level structures; addresses, format and renders new (tools/sb1/maps.py, docs/img/sb1/maps/). $C1:AEA2 loaded into 1-1 with a ROM code and played; $C1:A1DA leaves a black screen."
+  "note": "$C1:A1DA, $C1:AEA2. The two known unused level structures; addresses, format and renders new (tools/sb1/maps.py, docs/img/sb1/maps/). $C1:AEA2 loaded into 1-1 with a ROM code and played; $C1:A1DA leaves a black screen."
  },
  {
-  "code": "$C6:1093",
-  "effect": "Item handler for a cut 100-point item: byte copy of the kendama handler, skipped by the handler table $C6:0D26",
+  "code": "Cut 100-point item",
+  "effect": "Leftover code for a cut 100-point bonus item, a copy of the kendama's. The game never uses it",
   "versions": [
    "US",
    "EU",
@@ -3285,10 +3285,10 @@
   "status": "new",
   "verified": "static",
   "section": "unused",
-  "note": "Never runs in any coverage log; nothing points at it."
+  "note": "$C6:1093. Skipped by the handler table $C6:0D26. Never runs in any coverage log; nothing points at it."
  },
  {
-  "code": "$C4:4FCB",
+  "code": "An older explosion routine",
   "effect": "Old end-of-explosion routine (clears the fire bit along the four arms); JP still runs it, US/EU/beta never do",
   "versions": [
    "US",
@@ -3298,7 +3298,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "unused",
-  "note": "JP copy at $C4:48A3 ran in the JP coverage log; the US copy never did."
+  "note": "$C4:4FCB. JP copy at $C4:48A3 ran in the JP coverage log; the US copy never did."
  },
  {
   "code": "Debug scene labels after DR WIN",

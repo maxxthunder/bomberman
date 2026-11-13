@@ -2,6 +2,18 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.4.0 (2026-11-13)
+- Super Bomberman 5: about 30 menus written in plain kana, from before the graphic ones, one of them reading
+  "under construction: the Bowling Bomber goes here" (new card).
+- Panic Bomber (Virtual Boy): 1298 is a boss run of five opponents, not one match; L and R after a won round bring
+  up the VIRTUAL BOY screen; an unused LICENSED BY NINTENDO boot screen; a sixth demo and the demo recorder.
+- Bomberman Max: the eight cut messages drawn in the game.
+- Bomberman GB 3: the unused flag stops walking and bombs but not Start; the crystal count of four areas, and
+  City's second bell panel, which can never appear.
+- Wario Blast / Bomberman GB: Bomberman Selection, the Korean cart, and its Bomberman GB without the multitap
+  battle.
+- The page: a filter box for each game, plainer card titles, and build steps in the README.
+
 ## 2.3.0 (2026-11-11)
 - Bomberman GB 3: a pad-freeze flag nothing sets (new cheat card), and an unused briefing line for a moving area.
 - Bomberman '94: enemy type $1D, which no stage places, shown in play.

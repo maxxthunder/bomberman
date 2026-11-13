@@ -219,7 +219,7 @@
   "img": "dmg_boot.png"
  },
  {
-  "code": "Graphics bank $46:4000-$47FF",
+  "code": "Unused starfield picture",
   "effect": "An unused starfield picture: galaxies, sparkles and the edge of a planet",
   "versions": [
    "blue",
@@ -264,8 +264,9 @@
    "ain"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Messages $15, $1D, $28 and $30 of the message table (US $57:4400, Japanese $1B:4C07) are in no stage's objective list ($53:43EB, 5 × 19) and no other store to the message number $C1A7 gives them. $28 is \"Nothing\" in the US text; the barrier line is the Japanese one. Also never picked: a third Kick Game help page ($D5, too many Geta items means Time Over), two team lines ($8E, $8F; Japanese only) and \"Defense missed!\" ($8B). Read from the ROM.",
-  "section": "unused"
+  "verified": "mesen",
+  "note": "Messages $15, $1D, $28 and $30 of the message table (US $57:4400, Japanese $1B:4C07) are in no stage's objective list ($53:43EB, 5 × 19) and no other store to the message number $C1A7 gives them. $28 is \"Nothing\" in the US text; the barrier line is the Japanese one. Also never picked: a third Kick Game help page ($D5, too many Geta items means Time Over), two team lines ($8E, $8F; Japanese only, and the name slot draws empty) and \"Defense missed!\" ($8B). All eight drawn in Mesen by forcing the message number at its one store ($53:43E7) during area 1-01's objective box, in Blue and in Hikari.",
+  "section": "unused",
+  "img": "unused_messages.png"
  }
 ]

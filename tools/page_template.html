@@ -54,7 +54,7 @@
 @media (prefers-color-scheme: light) {
   [data-fam=snes] { --acc: #5b3fc4; } [data-fam=md] { --acc: #1659c7; } [data-fam=pce] { --acc: #a8480a; }
   [data-fam=nes] { --acc: #c21c1c; } [data-fam=gb] { --acc: #46690f; } [data-fam=vb] { --acc: #b3121b; }
-  :root .mk { color: #8a5d00; }
+  :root .mk, :root .warn { color: #8a5d00; }
 }
 [hidden] { display: none !important; }
 * { box-sizing: border-box; }
@@ -301,7 +301,9 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     </section>
 
     <section aria-label="Codes" style="display:grid;gap:14px">
+      <label class="field grow"><span>Find in this game</span><input type="search" id="filter" placeholder="secret, invincible, unused&hellip;" autocomplete="off" autocorrect="off" spellcheck="false"></label>
       <div id="codes" style="display:grid;gap:20px"></div>
+      <p class="empty" id="nohit" hidden>Nothing in this game matches.</p>
     </section>
   </div>
 
@@ -314,7 +316,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p class="hint legend" id="legend"></p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.3.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.4.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -653,7 +655,7 @@ const GAMES = [
 "use strict";
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-const VER = { us: "USA", eu: "Europe", eu1: "Europe (first cart)", fds: "Famicom Disk System", col96: "Bomberman Collection (Game Boy)", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast",
+const VER = { us: "USA", kr: "Korea (Selection)", eu: "Europe", eu1: "Europe (first cart)", fds: "Famicom Disk System", col96: "Bomberman Collection (Game Boy)", jp: "Japan", beta: "Beta", caravan: "Caravan", retail: "Retail", sp: "Special Version", demo: "Demo CD", en: "English (Super Bomberman Collection)", world: "World (Wii U VC)", vc: "Wii U Virtual Console", collection: "Bomberman Collection", wario: "Wario Blast",
   blue: "Blue Champion", red: "Red Challenger", hikari: "Hikari no Yuusha", yami: "Yami no Senshi", ain: "Ain Version", kr: "Korea", cns: "Classic NES Series (GBA)", fm: "Famicom Mini (GBA)" };
 const verName = v => VER[v.toLowerCase()] || v;
 // a version's country flag (flag-icons): the world flag for the World release; Beta is Super Bomberman 3's European beta
@@ -665,7 +667,7 @@ const flag = v => { const f = v.toLowerCase() === "beta" ? (g.id === "sb3" ? "eu
 // verified: a pad (run in an emulator) or a chip (read from the ROM)
 const ICON = { emu: "fa-gamepad", rom: "fa-microchip", download: "fa-download", play: "fa-play", stop: "fa-stop" };   // Font Awesome Free (solid)
 const icon = (k, label) => `<i class="vi fa-solid ${ICON[k]}" role="img" aria-label="${esc(label)}" title="${esc(label)}"></i>`;
-const VERIFIED = { mesen: ["emu", "Tested in an emulator (Mesen 2)"], emu: ["emu", "Tested in an emulator (BizHawk)"],
+const VERIFIED = { mesen: ["emu", "Tested in an emulator (Mesen 2)"], emu: ["emu", "Tested in an emulator"],
   fuzz: ["emu", "Accepted by the game's own decoder in an emulator (fuzz run)"], static: ["rom", "Read from the ROM code"] };
 const SECTION = { stage: "Passwords", special: "Special codes", option: "Option passwords", character: "Character passwords" };
 const NICE = { secret_items: "Secret items", password: "Passwords", secret: "Secrets", debug: "Debug features", demo: "Demo CD",
@@ -1181,12 +1183,29 @@ function renderCodes() {
   const pnl = $("pwpanel"), typing = document.activeElement === $("check");
   if ($("codes").contains(pnl)) $("game").firstElementChild.after(pnl);
   $("codes").innerHTML = html || '<p class="empty">No codes for this version.</p>';
+  applyFilter();
   if (!GEN[g.id]) {
     const sec = [...$("codes").children].find(x => x.querySelector(":scope > .mapgrid, :scope > .tiles"));
     if (sec) [...sec.querySelectorAll(":scope > .mapgrid, :scope > .tiles")].at(-1).after(pnl); else $("codes").prepend(pnl);
     if (typing) $("check").focus();
   }
 }
+// the filter box: cards (and the loose password tiles) whose text holds every word typed; the stage grids
+// keep their shape, so they step aside while filtering and the code box above looks a password up instead
+function applyFilter() {
+  const q = $("filter").value.trim().toLowerCase(), words = q ? q.split(/\s+/) : [];
+  const hit = el => words.every(w => el.textContent.toLowerCase().includes(w));
+  let shown = 0;
+  for (const sec of $("codes").children) {
+    let n = 0;
+    for (const el of sec.querySelectorAll(".code-card, .tiles > .tile")) { const ok = !q || hit(el); el.hidden = !ok; n += ok; }
+    for (const el of sec.querySelectorAll(".mapgrid")) el.hidden = !!q;
+    sec.hidden = !!q && !n;
+    shown += n;
+  }
+  $("nohit").hidden = !q || !!shown;
+}
+$("filter").oninput = applyFilter;
 // one player for every clip: a press plays that clip, a second press (or the clip ending) stops it
 const player = new Audio();
 const clipOff = () => document.querySelectorAll(".clip.on").forEach(c => { c.classList.remove("on"); c.setAttribute("aria-pressed", "false"); c.querySelector("i").className = `vi fa-solid ${ICON.play}`; });

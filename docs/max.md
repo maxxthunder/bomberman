@@ -178,7 +178,11 @@ the minigames and the ending were not reached, so this sweep is partial.
   - `$8E` 〈name〉が おでむかえだ!! ("〈name〉 has come to meet you!!") and `$8F` 〈name〉が なかまに くわわった!!
     ("〈name〉 joined you!!"); blank in Blue and Red.
   - `$8B` "Defense missed!", next to the battle lines `$85-$8A` (tables `$08:5EE0`, `$08:70F0`).
-  Read from the ROM, not drawn in the game. Of the printer controls, `$FB t n` (tile t, n times) is in no string,
+  All eight were drawn in Mesen by forcing the message number at its one store (`$53:43E7`) during area 1-01's
+  objective box: the four objectives and "Defense missed!" show in US Blue, and the barrier line, the Kick Game
+  page and the two team lines in Japanese Hikari, where Blue's slots are blank boxes. The team lines open with an
+  empty name slot, since nothing in a stage intro fills it.
+  ![The eight messages in the 1-01 objective box (Blue and Hikari), with the real objective as a control](img/max/unused_messages.png) Of the printer controls, `$FB t n` (tile t, n times) is in no string,
   and `$F9`/`$FA` (row / column skip) appear only in the debug and test menus (same in Pocket).
 - **Graphics.** Blocks come from the table at `$1A:705A` (254 entries of 2 KB, the same in all five versions). The
   unread ones are mostly screens the runs didn't reach (Charabom battles, combining, VICTORY). ★ One slot has no entry
@@ -227,7 +231,6 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
 - Pitch Area's infrared packet format (needs a second console).
 - How the legendary Charaboms are earned, and Battle Game with a saved Charabom; both outside the coverage runs.
 - A wider coverage run (worlds 2-5, minigames, ending) for the dead-code and graphics sweep.
-- The unused messages drawn in the game.
 
 ## Battle against the computer (★ New)
 

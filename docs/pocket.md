@@ -323,6 +323,9 @@ Logo: `docs/img/logos/pocket.png` (`tools/pocket/logo.py`, Game Boy Color colour
 
 ## Open
 
-- Whether the flower's bombs and fire last past the stage (it writes the carried values too).
+- Whether the flower's bombs and fire last past the stage. The ROM says they should: the only writers of the
+  carried pair `$C1EE`/`$C1EF` are the flower (`$02:694D`), the bomb-up and fire-up items, the power-up password's
+  start block and the new-game / continue init, none of them on a stage-to-stage path, and each stage start copies
+  the pair into the player (`$02:49F1`). Not seen in play: the flower spawned but the bot never walked into it.
 - GB KISS with a partner (a second Japanese cart or another GB KISS game) wasn't emulated: Mesen runs one Game Boy and
   its HuC-1 infrared receiver never sees light.

@@ -1674,7 +1674,7 @@
   "img": "config_jp.png"
  },
  {
-  "code": "Same as JP (US)",
+  "code": "The CONFIGRATION code on the US card",
   "effect": "The sound plays and $3FFB is set, but nothing else: the call to the screen was removed (02:8421)",
   "versions": [
    "US",

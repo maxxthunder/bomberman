@@ -583,6 +583,27 @@ could not be read. The readable block is the certificate (認定状):
 
 ![Certificate rank titles and comments, table 4, through the certificate's VRAM](img/sb5/text_certificate_ranks.png)
 
+★ **Menus in plain text, from before the graphic ones.** One 8×8 font in the game (graphics group 3, set 11,
+`$D3:A7AC`, 192 tiles: `$01`-`$3A` ア..ン with the small kana and marks, `$40`-`$5F` two-tile digits, `$60`-`$BF`
+labels and window frame) is loaded by no scene. With it, about 30 windows of table 4 read as the game's menus
+written in kana: the file menu (`$08`, `$0A`, `$0B`), game over (`$52`, `$53`), the battle menus (`$4A`, `$4D`),
+Config Bomber's create, body, ability, save and load screens (`$4B`, `$4E`, `$5C`-`$62`), the rules (`$55`), Maniac
+settings (`$56`-`$58`), teams and stage (`$59`, `$5A`), BATTLE START (`$5B`), the character pick (`$54`, `$61`) and
+the bowling prize table (`$B3`). The finished game does all of these as graphics screens. The clearest is `$B4`:
+**コウジチュウ (under construction) / ココニハ ボーリングボンバー ガハイリマス** ("the Bowling Bomber goes
+here"). None has a producer: every store of a message number was enumerated (constants, the seven tables, and the
+script's stack calls through op `4A`, which the first pass missed), and a BizHawk run through the menus logged
+every drawn message without one of them appearing. The shots are the game's own drawer and font, forced on the
+Battle Mode scene, so the green is that scene's palette and the hand its cursor; two cells fall on tiles that
+scene leaves blank.
+![Six of the unused menu windows (BizHawk, the game's own drawer)](img/sb5/unused_menus.png)
+
+Also never drawn: the zone-map stage labels `$39`, `$3A`, `$3C`, `$40`, `$46` and the HUD label `$E0` of table 4
+(their own fonts aren't known, so they aren't readable); of table 6, a second character-select frame (`$74`), two
+glyph sheets (`$A2`, `$AC`), small cells (`$06`-`$09`, `$C8`, `$D1`, `$D3`, `$D4`, `$EF`) and the debug menu's own
+text (`$F1`-`$F5`), which not even the two orphan scripts draw. English's three extra messages (`$F6`-`$F8` of
+table 6) have no producer either.
+
 English vs Japanese: 75 messages of table 4 differ, 72 of them in window layout (`$64`-`$A8` = the certificate,
 and `$03`-`$06`, `$DC`); 47 of table 6 differ, 10 in layout. Caravan's tables are byte-identical to retail
 apart from the extra `$F6`.
@@ -640,7 +661,10 @@ colon) on unpatched ROMs, and added to `sb5_codes.json` with `section: "cheat"`:
 
 - What `$6258` changes in play (the item lists), and `$0F64`: set in Mesen, no visible change.
 - The soft-reset combo `$C0:0AFC` never runs (nothing reaches it); read only.
-- The 386 undrawn text messages outside the certificate: no font context, not read.
+- Table 6's unused windows and table 4's zone-map labels: the fonts their scenes load aren't identified, so they
+  weren't read.
+- The coverage run that checked the unused menus never reached game over, the save and load screens, the password
+  screen, Bowling Bomber, the zone maps or the endings.
 - `3061E9:01` on Caravan and English (same code bytes, not run).
 
 ## Files

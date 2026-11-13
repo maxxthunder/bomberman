@@ -520,7 +520,7 @@
   "img": "debug_menu.png"
  },
  {
-  "code": "Graphics blocks $19, $2E, $3F (and $2F)",
+  "code": "Japanese menu graphics left in",
   "effect": "Japanese menu and label graphics left in: はじめから / パスワード, かんたん / ふつう / むずかしい, the kana world names",
   "versions": [
    "us",

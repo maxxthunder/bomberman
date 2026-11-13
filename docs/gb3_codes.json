@@ -941,7 +941,7 @@
    "GameShark": "0101BCC1",
    "Game Genie": "C3B-E6B-081 + E4B-E7B-198 + 4AB-E8B-E6D"
   },
-  "effect": "Invincible (unused debug flag $C1BC)",
+  "effect": "Invincible (an unused debug flag)",
   "versions": [
    "jp"
   ],
@@ -1001,7 +1001,7 @@
    "GameShark": "0101BDC1",
    "Game Genie": "C99-B5D"
   },
-  "effect": "Clock stops (unused debug flag $C1BD)",
+  "effect": "The clock stops (an unused debug flag)",
   "versions": [
    "jp"
   ],
@@ -1025,7 +1025,7 @@
   ]
  },
  {
-  "code": "Stage-5 diamonds: the boss helper",
+  "code": "Stage-5 crystals: the boss helper",
   "effect": "Collect enough of the crystals lying in an area's stage 5 (Wood: 40 for a 1-up, 50 and 60 for two bell panels, all in the second room) and at the boss stage a small helper flies in and drops three power-up panels",
   "versions": [
    "jp"
@@ -1033,7 +1033,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "secret",
-  "note": "$00:38D1 counts the diamonds; thresholds per area at $00:39B6 (Wood, Sand, Lava 40/50/60; City, Ice, Aqua 60/70/80; Evil 50/60/70): a 1-up panel, then two special panels, each +1 to $C38E. At the boss, $C38E ≠ 0 runs $09:5E61: the helper drops bomb/fire panels picked for your power ($02:7DF9); at 2 it flies a second lap. Room 2's start clears $C38E, so only its panels count; Wood 5 holds 70 crystals (30 + 40). Mesen: on Wood 5 all 70 taken (player moved onto each, invincible): 1-up at 40, bell panels at 50 and 60, $C38E 0 → 1 → 2, and the helper came at the boss with its second lap. Image: the 1-up panel, both bell panels, the helper at the boss.",
+  "note": "$00:38D1 counts the diamonds; thresholds per area at $00:39B6 (Wood, Sand, Lava 40/50/60; City, Ice, Aqua 60/70/80; Evil 50/60/70): a 1-up panel, then two special panels, each +1 to $C38E. At the boss, $C38E ≠ 0 runs $09:5E61: the helper drops bomb/fire panels picked for your power ($02:7DF9); at 2 it flies a second lap. Room 2's start clears $C38E, so only its panels count; Each area draws its crystals with its own cell and holds a fixed number: Wood $25, 70 (30 + 40); City $35, 70; Ice $12, 84; Aqua $2A, 90 (counted in the live map at $D200). City's second threshold is 80, so its second bell panel can never come out. Mesen: on Wood 5 all 70 taken (player moved onto each, invincible): 1-up at 40, bell panels at 50 and 60, $C38E 0 → 1 → 2, and the helper came at the boss with its second lap. Image: the 1-up panel, both bell panels, the helper at the boss.",
   "img": "diamonds_play.png"
  },
  {
@@ -1041,14 +1041,15 @@
   "devices": {
    "GameShark": "010182C4"
   },
-  "effect": "The pad does nothing (unused flag $C482)",
+  "effect": "No walking and no bombs (an unused flag); Start still pauses",
   "versions": [
    "jp"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark. $C482 is never written anywhere in the ROM, but $01:413B zeroes the pad bytes $C2E0/$C2E1 before the object loop when it is non-zero. Mesen from Wood 1: Right, Down and Left held 60 frames each leave the player on the start cell (about 16 px moved without); the bot never moves.",
-  "section": "cheat"
+  "note": "GameShark. $C482 is never written anywhere in the ROM, but $01:413B zeroes the pad bytes $C2E0/$C2E1 before the object loop when it is non-zero. Mesen from Wood 1: the player doesn't move in any direction, and A and B change no RAM at all (63 bytes and a bomb object without it). Start still pauses, because the pause check $00:1ADB reads the pad earlier in the frame than $01:413B clears it. Image: the flag off and on, and Start pausing either way.",
+  "section": "cheat",
+  "img": "pad_freeze.png"
  },
  {
   "code": "Message 19",
