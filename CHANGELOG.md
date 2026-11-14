@@ -2,6 +2,14 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.5.2 (2026-11-14)
+- Bomberman '93: a flag the game reads but never sets makes every enemy on the stage vanish (`1F00CC:01`,
+  or `0080D0:80` in the ROM).
+- Pictures for four more cards (Super Bomberman 2, Bomberman GB, Bomberman II).
+- Fixed: Bomberman II's OZSPTANK makes the $ item give 16 seconds of immunity to blasts, not to enemies.
+- Super Bomberman 2's R-in-Normal-Game code: the HUD shows 9 bombs at once,
+  but the extra bombs only arrive after a bomb goes off.
+
 ## 2.5.1 (2026-11-14)
 - Pictures for 239 cards: every cheat, unused item, secret and debug code that can be shown on screen now has
   one. Cheats are an off/on pair from the same start and frame; the rest show the thing itself in the game.

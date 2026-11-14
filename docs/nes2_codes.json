@@ -2444,14 +2444,15 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $91, so the $ runs the handler at $9091 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $9091 (to $90C7 without the code), speed $B3 0 -> 1. JP cart (OPSPTANG): jump to $9091, speed +1. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $9091 ($90C7 without), speed +1.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_opsptang.png"
  },
  {
   "code": "OZSPTANK",
   "devices": {
    "Game Genie": "OZSPTANK"
   },
-  "effect": "A $ item makes you immune to enemies for 16 seconds instead of giving points",
+  "effect": "A $ item makes you immune to blasts for 16 seconds instead of giving points",
   "versions": [
    "JP",
    "US",
@@ -2459,7 +2460,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $A9, so the $ runs the handler at $90A9 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $90A9 (to $90C7 without the code), $B0 = 2 with its seconds timer $B2 at 15, down to 5 after 600 more frames. Enemy immunity is from the code ($82A8 skips the enemy-touch check while $B0 is non-zero), not run. JP cart (OZSPTANK): jump to $90A9, invincibility 2. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $90A9 ($90C7 without), invincibility flag 2.",
+  "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $A9, so the $ runs the handler at $90A9 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $90A9 (to $90C7 without the code), $B0 = 2 with its seconds timer $B2 at 15, down to 5 after 600 more frames. $B0 guards the fire check only: $05:82A8 (LDA $A5 / ORA $B0 / BNE) skips the loop that ends in the fire kill $CEA4, while the enemy-contact kill $CEC4 (called from $83AD) has no $B0 test. Played: a balloon placed on him killed him as fast with the code as without; standing on his own bomb he died without it and lived with it. JP cart (OZSPTANK): jump to $90A9, invincibility 2. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $90A9 ($90C7 without), invincibility flag 2.",
   "section": "cheat"
  }
 ]

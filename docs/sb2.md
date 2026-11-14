@@ -168,7 +168,7 @@ stage-select one in bank `$CC`.
 |---|---|---|---|---|
 | `$C1:00BD` | `C100BF01` | CPU meter: force-blanks for a moment when the frame's work is done, a black line on screen | Known | Mesen: the line shows |
 | `$C1:3D26` | `C13D2801` | Y jumps in Normal Game | Known | Mesen: off the ground with a shadow |
-| `$C0:22F1` | `C022F301` | R in Normal Game gives everything (`$C0:22A0`) | Known | Mesen: speed 3, 9 bombs, fire 9, remote, kick, glove, both pass items, 144 hearts |
+| `$C0:22F1` | `C022F301` | R in Normal Game gives everything (`$C0:22A0`) | Known | Mesen: speed 3, 9 bombs, fire 9, remote, kick, glove, both pass items, 144 hearts. The 9 bombs are stored to `$80E1` twice (`$C0:22C9`, `$C0:22CD`) and never to the live `$80F1`, so the HUD shows 9 at once but the extra bombs arrive only after a bomb goes off and the count is redone (`$C0:E4A4`); same bytes in all five |
 | `$C1:5B3E` | `C15B4001` | **debug menu** on SELECT in Normal Game (below) | ★ New (only its text was known) | Mesen, all five ROMs |
 | `$CC:239F` | `CC23A101` (EU `CC23FC01`, JP `CC239001`) | stage select always offers 12 stages, no `$1CB5` needed | ★ New | Mesen: Left from 1 → 12 ([img](img/sb2/stage_switch_12.png)) |
 

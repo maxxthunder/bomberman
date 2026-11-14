@@ -1652,6 +1652,18 @@
   "img": "clear_time.png"
  },
  {
+  "code": "1F00CC:01",
+  "effect": "Every enemy on the stage vanishes",
+  "versions": [
+   "US"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Raw RAM code (F8:00CC = $20CC). The enemy handler 04:80CE reads $CC and, when it is not 0, lowers the enemy count $3C5E and removes the enemy; the game only ever clears it (STZ $CC at 09:A05B). From the 1-1 start the count went 3 → 0 within 150 frames and stayed 0, with lives and score unchanged. Checked in BizHawk on the US cart. ROM equivalent: 0080D0:80 (BNE → BRA at 04:80D0), same result. Other planets and bosses not tried.",
+  "section": "cheat",
+  "img": "cheat_1f00cc01.png"
+ },
+ {
   "code": "patches/pce93_configration_us.ips",
   "effect": "US: CONFIGRATION screen after every planet map",
   "versions": [

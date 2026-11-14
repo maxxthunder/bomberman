@@ -380,6 +380,7 @@ plus the bits of the player's ability byte that no code sets. Each was set in Me
 | `$91,X` bit 4 | `02:96DF` (sets `$B1` bit 0), used at `02:9872` | never (no item or code sets it; the Special Version has neither the test nor the code) | **bending fire**: a flame arm that is blocked part-way turns 90° in a random direction (`$EE9E` & 2) and keeps going ![Bit 4 off (top), on (bottom)](img/pce93/bending_fire.png) | ★ New |
 | `$91,X` bit 3 | fire check `02:8C9D` | yes: the vest item (`03:A9BF`, with a timer) | fire-proof | item effect |
 | `$2F99` | pad reader `00:EDAF`: non-zero skips the pad update (`JMP $EE5D`) | never (cleared at `00:ED9B`; the Special Version's `$2F8D` likewise) | **freezes the pad**: held and new buttons keep their last values; with Right held, Bomberman kept walking right while Left was pressed. Beside the empty hook `00:EE60`: probably a demo or debug input feed | ★ New |
+| `$20CC` | enemy handler `04:80CE` (`LDA $CC` / `BNE $80D6`): non-zero lowers the enemy count `$3C5E` and removes the enemy | never (the only store is `STZ $CC` at `09:A05B`) | **every enemy vanishes**: from the 1-1 start the count went 3 → 0 within 150 frames and stayed 0, lives and score unchanged (BizHawk, US). Other planets and bosses not tried ![Off (left), on (right), 300 frames into 1-1](img/pce93/cheat_1f00cc01.png) | ★ New |
 | `$38B1` | ending `08:8CB8`, clear timer `01:D93F` | 1 after a continue (`07:A191`) or a password (`01:D93B`) | 0 at the ending shows the clear page | ★ New |
 
 ★ **The clear-time page.** The ending shows CONGRATULATIONS!, CLEAR TIME (counted from the start of a new game,
@@ -476,6 +477,7 @@ shows) and no clear-time page.
 | `1F1895:0w` + `1F1896:0s` | F8:1895, F8:1896 | every Normal Game stage is world w+1, stage s+1 | `03` + `04`: a new game loaded record 28 (4-5) |
 | `1F1FFB:01` | F8:1FFB | JP: CONFIGRATION screen after every planet map | screen shown ![](img/pce93/config_jp_cheat.png) |
 | `1F18B1:00` | F8:18B1 | the ending shows the clear page even after a password or continue | page shown (RAM written as the ending reads it) |
+| `1F00CC:01` | F8:00CC | every enemy on the stage vanishes | 1-1: enemy count 3 → 0 within 150 frames (BizHawk, byte poked each frame); ROM equivalent `0080D0:80` (`BNE` → `BRA` at `04:80D0`) behaved the same |
 
 Patches (IPS, built and checked against the ROM by `tools/pce93/mkpatch.py`):
 

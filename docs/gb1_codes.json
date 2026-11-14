@@ -987,7 +987,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: US $01:53F1 / JP $01:53E2, operand of CP $04 after the INC of the bomb count (+$2C) -> $08. The following LD (HL),$04 is unchanged, so reaching 8 is clamped to 4. BizHawk: US and JP: forced bomb-up pickups for the player (Lua sets the item type at $01:5380 / $01:5371): without 2,3,4,4,4...; with the code 2,3,4,5,6,7,4,5,6. Whether 7 bombs can be on screen at once was not confirmed. Mesen 2, Bomberman Collection through its menu, the Japanese code: 083-E2A-F7A, forced bomb-up pickups: 2,3,4,5,6,7,4 (2,3,4,4,4 without).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_083f1af7a.png"
  },
  {
   "code": "046-C7D-E6E",

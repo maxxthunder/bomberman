@@ -295,7 +295,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$C0:22A0: speed 3, 9 bombs, fire 9, remote, kick, glove, both pass items and 144 hearts (checked in RAM). The Game Genie code patches the same ROM byte.",
+  "note": "$C0:22A0: speed 3, 9 bombs, fire 9, remote, kick, glove, both pass items and 144 hearts (checked in RAM). The routine stores the 9 bombs to $80E1 twice ($C0:22C9, $C0:22CD) and never to the live count $80F1, so the bomb count in the HUD jumps to 9 at once but the extra bombs only arrive once a bomb on the field goes off and the game recounts ($C0:E4A4). Same bytes in all five ROMs. The Game Genie code patches the same ROM byte.",
   "devices": {
    "Pro Action Replay": "C022F301",
    "Game Genie": "DF4E-8DAD"
@@ -380,7 +380,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player 1's live kit is $7E:80F0-$80F2: $F0 the speed index (read every frame at $C0:C2A8, table $C5:FB07), $F1 the bombs in hand ($C0:311D refuses to lay at 0; held at 9 by the code, so it never runs down), $F2 the blast length given to each new bomb ($C0:3597, bomb +$07). The stored kit $80E0-$80E2 behind them reaches play only where the game copies it, so holding those three changes nothing on its own: $F0 and $F2 are refreshed from $E0/$E2 by the pickup handlers ($C0:9B93, $C0:9B01) and the resync at $C0:36BF, and $F1 is recomputed as $E1 - $F8 whenever a bomb is removed ($C0:E4A4). Add 7E80E109 for the HUD bomb digit, which reads $80E1 ($C1:1A26); the HUD fire digit is $80F2 plus 1, capped at 9 ($C1:1A39). No Game Genie form: these are written at game start and by pickups. Mesen, USA, codes on from the password screen: applied velocity 2 instead of 1, two bombs on the field at once, a full-length blast. Same addresses in all five ROMs."
+  "note": "Player 1's live kit is $7E:80F0-$80F2: $F0 the speed index (read every frame at $C0:C2A8, table $C5:FB07), $F1 the bombs in hand ($C0:311D refuses to lay at 0; held at 9 by the code, so it never runs down), $F2 the blast length given to each new bomb ($C0:3597, bomb +$07). The stored kit $80E0-$80E2 behind them reaches play only where the game copies it, so holding those three changes nothing on its own: $F0 and $F2 are refreshed from $E0/$E2 by the pickup handlers ($C0:9B93, $C0:9B01) and the resync at $C0:36BF, and $F1 is recomputed as $E1 - $F8 whenever a bomb is removed ($C0:E4A4). Add 7E80E109 for the HUD bomb digit, which reads $80E1 ($C1:1A26); the HUD fire digit is $80F2 plus 1, capped at 9 ($C1:1A39). No Game Genie form: these are written at game start and by pickups. Mesen, USA, codes on from the password screen: applied velocity 2 instead of 1, two bombs on the field at once, a full-length blast. Same addresses in all five ROMs.",
+  "img": "cheat_7e80f003_f109_f209.png"
  },
  {
   "code": "7E80F304",
@@ -477,7 +478,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$1C68 held at $FFFF by the cheat engine; the effect was checked earlier with the flag set by 5656. Game Genie: BEQ -> BEQ +0 after LDA $001C68 ($C0:D615, Caravan $C0:D624), so the block list never stops at its $FE marker; Mesen (tools/sb2/sudden_death.lua with the flag cleared), USA, Europe, Japan, beta: the blocks kept coming past 81 (control stops at 81). Caravan not run (the test never reaches the hurry-up there)."
+  "note": "$1C68 held at $FFFF by the cheat engine; the effect was checked earlier with the flag set by 5656. Game Genie: BEQ -> BEQ +0 after LDA $001C68 ($C0:D615, Caravan $C0:D624), so the block list never stops at its $FE marker; Mesen (tools/sb2/sudden_death.lua with the flag cleared), USA, Europe, Japan, beta: the blocks kept coming past 81 (control stops at 81). Caravan not run (the test never reaches the hurry-up there).",
+  "img": "cheat_7e1c68ff_7e1c69ff.png"
  },
  {
   "code": "Unused scroll test",
