@@ -334,8 +334,8 @@ Checked with Mesen's cheat engine (`emu.addCheat`) on the unpatched USA ROM, rea
 | Code | Effect | Check | Status | Game Genie (same test, all versions listed) |
 |---|---|---|---|---|
 | `7E80EF90` | invincible in Normal Game (144 hearts that never drop, the debug menu's NO DEATH) | own bomb: flashed and played on; control run died | ★ New | `0C67-E70D` `6767-E76D` `D8C9-8D0F` `D806-5D00` `5191-54D9` `9991-5409`: the three no-heart hit branches go to the heart-loss flash; own bomb: played on, all five ROMs |
-| `7E80E003` `7E80E109` `7E80E209` | speed 3, 9 bombs, fire 9 | RAM | ★ New | none: read at about 20 places, set only at game start and by pickups |
-| `7E80F304` | spike bombs (`01` remote, `02` power bomb, `08` the fifth type) | RAM | ★ New | `CB7D-54AF` `D07D-57DF` (`$C0:350B` type load → `LDA #$04`): new bombs get type 4, all five |
+| `7E80F003` `7E80F109` `7E80F209` | speed 3, 9 bombs, fire 9 | applied velocity 2 (1 without), two bombs at once, full-length blast | ★ New | none: written at game start and by pickups |
+| `7E80F304` | spike bombs (`01` remote, `02` power bomb, `08` the fifth type) | with fire 9: 7 soft blocks per arm, 3 without | ★ New | `CB7D-54AF` `D07D-57DF` (`$C0:350B` type load → `LDA #$04`): new bombs get type 4, all five |
 | `7E80FA01` `7E80FB01` `7E80FE01` `7E80FF01` | both pass items, power glove, kick | RAM | ★ New | none built (four separate tests) |
 | `7E1CB5FF` `7E1CB6FF` | battle stages 11 and 12 (not in Caravan) | Left on the stage select: 1 → 12 | ★ New (`7E1CCD0A/0B` was known) | `DD48-ED7D` (Europe `DD4D-74EF`, Japan `DD4B-E7ED`): the `$1CB5` test `BEQ +0`; 1 → 12, all four |
 | `7E1CCD0A` / `7E1CCD0B` | battle stage 11 / 12 | stage select shows 11 / 12, the battle is the boxing ring / trampolines | **Known** | none (no ROM form built) |
@@ -409,7 +409,7 @@ version (the Japanese release is the "(En)" dump).
 | `$7E:5D0E`, `$7E:5D12` | hurry-up flags, block counter |
 | `$7E:5D40-$5D52` | debug menu state |
 | `$7E:5E04/06/08` | battle clock digits (min, tens, ones) |
-| `$7E:80E0` (+`$100` per player) | speed `E0`, bombs `E1`, fire `E2`, hearts `EF`, bomb type `F3`, `FA`/`FB` pass items, glove `FE`, kick (likely) `FF`; `F0-F2` saved copy |
+| `$7E:80E0` (+`$100` per player) | speed `E0`, bombs `E1`, fire `E2`, hearts `EF`, bomb type `F3`, `FA`/`FB` pass items, glove `FE`, kick (likely) `FF`; `F0-F2` the live kit play actually reads (`E0-E2` is the stored copy behind it, and the HUD bomb digit reads `E1`) |
 | `$7F:0028-$7F:0032` | password digits, result, cursor |
 | `$1C60-$1C66` | digits the password screen starts with (0 at power-on; set by the continue screen) |
 | `$CD-$D1` | controller ID per port (pad = 1, mouse: `AND #$1E` = 2), from `$C0:1797` |

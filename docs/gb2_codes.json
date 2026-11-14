@@ -153,7 +153,8 @@
   "status": "new",
   "verified": "static",
   "note": "$00:3639 (US) handles table values no record holds: bit 7 clear sets $C100 to the value (world << 4 | stage) and starts there; $8B sets $C11B = 1 and opens the sound test; $8C jumps to $00:34E9, the screen after the staff roll. No code reaches them; values above $8D go back to the title.",
-  "section": "unused"
+  "section": "unused",
+  "img": "password_dispatch_values.png"
  },
  {
   "code": "C92-96A-6EB + C92-ACA-6EB + C93-03A-6EB",
@@ -168,7 +169,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Game Genie, compare $60: RET over the three player-death handlers in the hit jump table $01:4913 ($01:5296 fire, $01:52AC and $01:5303), same addresses in both. tools/gb2/test_cheats.lua, bot 6,000 frames in world 1: 0 deaths with the codes, 5 deaths and a game over without.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_c9296a6eb_c92aca6eb_c9303a6eb.png"
  },
  {
   "code": "010306C1",
@@ -184,7 +186,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark: lives $C106 = 3. Bot 6,000 frames: 10 deaths, no game over. Game Genie: DEC A -> OR A at both lives decrements ($00:2558, $00:2598; jp $2585, $25C5); bot 6,000 frames: 10 deaths, no game over (us and jp).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_010306c1.png"
  },
  {
   "code": "010103C1 + 010004C1",
@@ -200,7 +203,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark: stage-end flag $C103 = 1 and dead flag $C104 = 0, so $00:24E3 runs the end countdown $C105 and $00:254F takes the clear path. Bot run: $C100 went 00, 01, 02, 03, 04, 07 (boss), 10 (world 2) in 5,000 frames. Game Genie: $00:24ED JP NZ -> JP (the end countdown runs every frame) and $00:2553 JR Z -> JR (the clear path); jp $251A, $2580. Bot: $C100 went 00-04, 07, 10 in 5,071 frames (us and jp).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_010103c1_010004c1.png"
  },
  {
   "code": "Sound test 2145: effects 0D, 17, 1C, 21, 22, 23, 25, 26",
@@ -234,6 +238,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "region",
-  "note": "Japan writes one kana (a mark row and a character row) every 10 frames (00:23E9 CP $08, two-row loop at 00:1B08 / 00:23FF); the US writes one letter every 5 frames in one row (00:23C8 CP $04, the row loop removed, line length $14 -> $28 at 00:16AC, 00:1D44, 00:23AB). Mesen: the text pointer $C1CF moves 1 byte every 5 frames in the US and 2 bytes every 10 frames in Japan."
+  "note": "Japan writes one kana (a mark row and a character row) every 10 frames (00:23E9 CP $08, two-row loop at 00:1B08 / 00:23FF); the US writes one letter every 5 frames in one row (00:23C8 CP $04, the row loop removed, line length $14 -> $28 at 00:16AC, 00:1D44, 00:23AB). Mesen: the text pointer $C1CF moves 1 byte every 5 frames in the US and 2 bytes every 10 frames in Japan.",
+  "img": "intro_text_us_jp.png"
  }
 ]

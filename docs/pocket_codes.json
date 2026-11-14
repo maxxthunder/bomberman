@@ -457,7 +457,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark. $C2CC is cleared at every start and set only by the unused debug decoder; the two player-death checks ($02:436B, $02:4DC3) skip when it is set, and so does the clock running out. Mesen: 0 deaths in 2 x 20,000 frames of the random-input bot (40 deaths with infinite lives on). Game Genie: the ROM patch below, same bot test."
+  "note": "GameShark. $C2CC is cleared at every start and set only by the unused debug decoder; the two player-death checks ($02:436B, $02:4DC3) skip when it is set, and so does the clock running out. Mesen: 0 deaths in 2 x 20,000 frames of the random-input bot (40 deaths with infinite lives on). Game Genie: the ROM patch below, same bot test.",
+  "img": "cheat_0101ccc2.png"
  },
  {
   "code": "C33-6FB-E61 + 18D-C7B-6EA",
@@ -472,7 +473,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $02:436F JP NZ -> JP and $02:4DC7 JR NZ -> JR, the branches that skip when $C2CC is set. Mesen: 0 deaths in 2 x 20,000 frames of the bot. GameShark 0101CCC2: the flag above, same bot test."
+  "note": "Game Genie: $02:436F JP NZ -> JP and $02:4DC7 JR NZ -> JR, the branches that skip when $C2CC is set. Mesen: 0 deaths in 2 x 20,000 frames of the bot. GameShark 0101CCC2: the flag above, same bot test.",
+  "img": "cheat_c336fbe61_18dc7b6ea.png"
  },
  {
   "code": "0103F1C1",
@@ -487,7 +489,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark: lives $C1F1 = 3 (the HUD shows 2). Mesen: 40 deaths in 20,000 frames of the bot, lives still 3. Game Genie: $02:5370 DEC A -> AND A; Mesen: 37 deaths in 20,000 frames of the bot, lives still 3."
+  "note": "GameShark: lives $C1F1 = 3 (the HUD shows 2). Mesen: 40 deaths in 20,000 frames of the bot, lives still 3. Game Genie: $02:5370 DEC A -> AND A; Mesen: 37 deaths in 20,000 frames of the bot, lives still 3.",
+  "img": "cheat_0103f1c1.png"
  },
  {
   "code": "0101CDC2",
@@ -502,7 +505,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark. With $C2CD set, Start in play toggles the clock ($C1F8) and opens no pause screen ($02:40C8). Mesen: in Forest 1 the clock stayed at 3:55 for 600 frames after Start, then ran on after a second Start (3:45 600 frames later). Game Genie: $02:40CC JR Z -> JR C (never taken after AND A); Mesen, Forest 1: the clock stayed at 3:55 for 600 frames after Start with no pause screen, 3:45 after the second Start."
+  "note": "GameShark. With $C2CD set, Start in play toggles the clock ($C1F8) and opens no pause screen ($02:40C8). Mesen: in Forest 1 the clock stayed at 3:55 for 600 frames after Start, then ran on after a second Start (3:45 600 frames later). Game Genie: $02:40CC JR Z -> JR C (never taken after AND A); Mesen, Forest 1: the clock stayed at 3:55 for 600 frames after Start with no pause screen, 3:45 after the second Start.",
+  "img": "cheat_0101cdc2.png"
  },
  {
   "code": "0F9-C1A-E62",
@@ -546,7 +550,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark. The Japanese and first European carts keep the debug flag at $C2BD (US $C2CC, whose code does nothing here: 3 deaths, game over). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths on both carts. Game Genie: the ROM patches below, same test."
+  "note": "GameShark. The Japanese and first European carts keep the debug flag at $C2BD (US $C2CC, whose code does nothing here: 3 deaths, game over). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths on both carts. Game Genie: the ROM patches below, same test.",
+  "img": "cheat_0101bdc2.png"
  },
  {
   "code": "C33-67B-E61 + 18D-5DB-6EA",
@@ -561,7 +566,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $02:4367 JP NZ -> JP and $02:4D5D JR NZ -> JR (US $02:436F, $02:4DC7). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths."
+  "note": "Game Genie: $02:4367 JP NZ -> JP and $02:4D5D JR NZ -> JR (US $02:436F, $02:4DC7). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths.",
+  "img": "cheat_c3367be61_18d5db6ea.png"
  },
  {
   "code": "C33-67B-E61 + 18D-6DB-6EA",
@@ -576,7 +582,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $02:4367 JP NZ -> JP and $02:4D6D JR NZ -> JR. Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths."
+  "note": "Game Genie: $02:4367 JP NZ -> JP and $02:4D6D JR NZ -> JR. Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 0 deaths.",
+  "img": "cheat_c3367be61_18d6db6ea.png"
  },
  {
   "code": "0103EFC1",
@@ -592,7 +599,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark: lives are at $C1EF here (US $C1F1; 0103F1C1 does nothing: 3 deaths, game over). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3, on both carts."
+  "note": "GameShark: lives are at $C1EF here (US $C1F1; 0103F1C1 does nothing: 3 deaths, game over). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3, on both carts.",
+  "img": "cheat_0103efc1.png"
  },
  {
   "code": "A72-F7A-19E",
@@ -607,7 +615,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $02:52F7 DEC A -> AND A (US $02:5370). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3."
+  "note": "Game Genie: $02:52F7 DEC A -> AND A (US $02:5370). Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3.",
+  "img": "cheat_a72f7a19e.png"
  },
  {
   "code": "A73-07A-19E",
@@ -622,7 +631,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $02:5307 DEC A -> AND A. Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3."
+  "note": "Game Genie: $02:5307 DEC A -> AND A. Mesen, Forest 1 by password 7693, random-input bot for 9,000 frames (3 deaths and a game over without cheats): 17 deaths, lives still 3.",
+  "img": "cheat_a7307a19e.png"
  },
  {
   "code": "0101BEC2",
@@ -638,7 +648,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "GameShark ($C2BE; US $C2CD). Mesen, Forest 1: after Start the clock stayed at 3:54 for 600 frames with no pause screen (without the code Start opens PAUSE). The US Game Genie code 380-CCB-4CA patches the same address ($02:40CC) in these carts and does the same."
+  "note": "GameShark ($C2BE; US $C2CD). Mesen, Forest 1: after Start the clock stayed at 3:54 for 600 frames with no pause screen (without the code Start opens PAUSE). The US Game Genie code 380-CCB-4CA patches the same address ($02:40CC) in these carts and does the same.",
+  "img": "cheat_0101bec2.png"
  },
  {
   "code": "0F8-0EB-E62",

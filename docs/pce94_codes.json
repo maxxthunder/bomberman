@@ -1380,7 +1380,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "The flag the debug pause menu toggles; any non-zero value skips the death check at $DA5A. inv.lua: lives stayed 3 after standing on a bomb (2 with $3709 = 0)",
-  "section": "debug"
+  "section": "debug",
+  "img": "inv_mode_3709_poke.png"
  },
  {
   "code": "Demo: hold Left while the CD loads the program (after Run on the System Card screen)",
@@ -1416,7 +1417,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen raw code (RAM F8:1709 = $3709, the flag of the cut debug pause menu). Added with emu.addCheat: stood on its own bomb in area 1, lives stayed 3; with 1F1709:00 the same test took a life",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_1f170902.png"
  },
  {
   "code": "003F5B:29 + 003F5F:98",

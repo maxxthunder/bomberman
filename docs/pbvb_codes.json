@@ -436,7 +436,8 @@
   "status": "new",
   "verified": "emu",
   "note": "Mode 7 ($0701_8088) checks the held buttons at each scene's steps ($0701_87EA): with exactly A, B, L, R, Start and Select held (and no d-pad) it ends the scene ($0700_63EE). In BizHawk after a real Doom Castle win: the door scene ended after about 38 frames instead of 525 and the bonus stage began; at the statue, about 37 frames instead of about 966, straight to RESULT. Tobidase! Panibon (Japan), in BizHawk after 0716: with the six buttons held the ending is over within about 600 frames; without them the door and the statue play out.",
-  "section": "Special codes"
+  "section": "Special codes",
+  "img": "ending_skip_buttons.png"
  },
  {
   "code": "BGM 0E, 13, 14, 15; SE 00, 1F, 24-28",

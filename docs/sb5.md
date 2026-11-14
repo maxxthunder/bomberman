@@ -685,7 +685,7 @@ colon) on unpatched ROMs, and added to `sb5_codes.json` with `section: "cheat"`:
 
 | Code | Effect | Verified on | Status | Game Genie (same test) |
 |---|---|---|---|---|
-| `7E6253:01` (Caravan `7E6271:01`) | invincible: own bomb at the start of 1-1, the player survives (without it he dies, `$15A2`=`$81`) | retail, English, Caravan | Known address (round 1), PAR form new | `6D44-5727` (Caravan `6D45-5DF7`): `$C4:2D2F` (Caravan `$C4:2D70`) `BNE` -> `BRA`; survives, all three |
+| `7E6253:01` (Caravan `7E6271:01`) | invincible: own bomb in 1-1, the player survives (without it one blast kills him once the stage-start blink has run out, `$15A2`=`$81`; there is no heart or shield at the start, `$1662`=0) | retail, English, Caravan | Known address (round 1), PAR form new | `6D44-5727` (Caravan `6D45-5DF7`): `$C4:2D2F` (Caravan `$C4:2D70`) `BNE` -> `BRA`; survives, all three |
 | `7E0E23:01` | invincible **and** the stage clock stops | retail, English, Caravan | ★ New | `6D44-5727` `6DD1-7499` (Caravan `6D45-5DF7` `6DD1-7499`): also `$C5:0469` `BNE` -> `BRA`; survives, clock frozen, all three |
 | `7E6248:xx` + any option password | room/scene select: `AC`, `AD` and `2B` (3-1) each started after 4622 | retail, English | New (the known `7E1038` is a work byte) | none (no single ROM read of `$6248` found) |
 | `7E6248:AC` / `AD` / `AE` | the three debug rooms | retail, English | Known rooms, new code | none |

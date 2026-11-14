@@ -1424,7 +1424,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "Keep each gap under 16 frames; 7-9 frames per tap works, 6 or 10 does not. Sets $7E542D=12 ($C1:6EC3) with a sound. PAL 7.2 s, JP 6 s."
+  "note": "Keep each gap under 16 frames and keep tapping right through the window - the check happens 360 frames after the first press, and the count is of the presses after that first one (39-54, so 40-55 taps in all). 7-9 frames per tap works, 6 or 10 does not. Sets $7E542D=12 ($C1:6EC3) with a sound. PAL 7.2 s, JP 6 s. Mesen, Europe: 7, 8 and 9 frames per tap all unlocked it; 46 taps 8 frames apart is the window exactly, and 40, which stop at frame 327, do not.",
+  "img": "title_x_stages.png"
  },
  {
   "code": "Title screen: tap X 40-47 times in 360 frames",
@@ -1434,7 +1435,8 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The beta checks (count & $F8) = $28, a narrower window: every 9 frames works, every 7 does not."
+  "note": "The beta checks (count & $F8) = $28, a narrower window: every 9 frames works, every 7 does not.",
+  "img": "beta_title_x_stages.png"
  },
  {
   "code": "7E542D:0C",
@@ -1451,7 +1453,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Stage count; the title X trick sets the same value. Checked on EU: Left from stage 1 goes to 12. Game Genie: the two LDA #$0A before STA $7E542D (boot $C0:1EFA, JP/beta $C0:1F0F; password $C2:6A7F, beta $C2:6A77) load 12; Mesen: $542D = 12 in all three, Left from stage 1 goes to 12 on EU."
+  "note": "Stage count; the title X trick sets the same value. Checked on EU: Left from stage 1 goes to 12. Game Genie: the two LDA #$0A before STA $7E542D (boot $C0:1EFA, JP/beta $C0:1F0F; password $C2:6A7F, beta $C2:6A77) load 12; Mesen: $542D = 12 in all three, Left from stage 1 goes to 12 on EU.",
+  "img": "cheat_7e542d.png"
  },
  {
   "code": "7E2901:01",
@@ -1468,7 +1471,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "The flag the area passwords set. EU: $144F=8, $48B9=8, $126F=2, $48D1=7 at 1-1. Game Genie: $C4:03AB BEQ +$19 -> BEQ +0, so the full-equipment block always runs; Mesen with 5358: $144F=8, $48B9=8, $126F=2, $48D1=7 (EU, JP, beta; 2/1/0/0 without)."
+  "note": "The flag the area passwords set. EU: $144F=8, $48B9=8, $126F=2, $48D1=7 at 1-1. Game Genie: $C4:03AB BEQ +$19 -> BEQ +0, so the full-equipment block always runs; Mesen with 5358: $144F=8, $48B9=8, $126F=2, $48D1=7 (EU, JP, beta; 2/1/0/0 without).",
+  "img": "cheat_7e2901.png"
  },
  {
   "code": "7E2902:01",
@@ -1485,7 +1489,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "The flag 6514 sets. Flag checked under the cheat; the effect was checked with 6514. Game Genie: $C3:00B6 BEQ +3 -> BEQ +0, so every enemy gets the extra hit point; Mesen, JP and beta: enemy HP 2 instead of 1 (the same as 7E2902:01 run on JP)."
+  "note": "The flag 6514 sets. Flag checked under the cheat; the effect was checked with 6514. Game Genie: $C3:00B6 BEQ +3 -> BEQ +0, so every enemy gets the extra hit point; Mesen, JP and beta: enemy HP 2 instead of 1 (the same as 7E2902:01 run on JP).",
+  "img": "cheat_7e2902.png"
  },
  {
   "code": "7E6C6E:0B / 7E6C6E:0C",
@@ -1501,7 +1506,8 @@
   "status": "known",
   "verified": "static",
   "section": "cheat",
-  "note": "Already known."
+  "note": "Already known.",
+  "img": "cheat_7e6c6e.png"
  },
  {
   "code": "ROM $6636C (stage 12's data set): 6D -> 6E, 6F or 70",
@@ -1569,15 +1575,19 @@
  {
   "code": "7E17EA:01",
   "devices": {
-   "Pro Action Replay": "7E17EA:01"
+   "Pro Action Replay": "7E17EA:01",
+   "Game Genie": "6D9C-7DAC 6DDB-8FFF (eu, jp) / 6D9B-770C 6DDB-8FFF (beta)"
   },
-  "effect": "Stops the clock in story stages and battles",
+  "effect": "Stops the clock, and the player's own fire only makes him blink",
   "versions": [
-   "eu"
+   "eu",
+   "jp",
+   "beta"
   ],
   "status": "new",
-  "verified": "emu",
+  "verified": "mesen",
   "section": "cheat",
-  "note": "A flag tested at $C2:589A to skip the clock tick; its setters ($C3:055A, $C3:6AA9) never ran in play. Held from Lua in BizHawk: 1-1 stayed at 2:58 for 900 frames; a battle stayed at 1:54 while the control reached 1:47. Enemies keep moving. Not yet run in a cheat engine; Japan and beta not checked."
+  "note": "The flag a boss's death sets, so nothing runs out or kills the player while it dies. Mesen cheat engine, all three versions: 1-1 stayed at 3:00 for 900 frames (2:45 without), a battle at 2:00 (1:50), and standing in his own bomb's blast he blinked for 120 frames and lived. Enemies still move and die. Game Genie: 6D9C-7DAC (beta 6D9B-770C) stops only the clock, 6DDB-8FFF only the fire death; together they match the RAM code. Enemy contact not tested.",
+  "img": "boss_freeze_flag.png"
  }
 ]

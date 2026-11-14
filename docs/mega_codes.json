@@ -1241,7 +1241,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$1A73C clr.b $953B -> addq.b #1,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 2, then play began in area 2's first stage ($953A=1, map $04). Pro Action Replay 01A73C:5238: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 1 and the hub map $953F = $4.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hcxt_dev6.png"
  },
  {
   "code": "HCXT-DEV0",
@@ -1256,7 +1257,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$1A736 clr.b $953B -> addq.b #1,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 2, then play began in area 2's first stage ($953A=1, map $04). Pro Action Replay 01A736:5238: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 1 and the hub map $953F = $4.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hcxt_dev0.png"
  },
  {
   "code": "HCXT-DJV6",
@@ -1271,7 +1273,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$1A73C clr.b $953B -> addq.b #2,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 3, then play began in area 3's first stage ($953A=2, map $0B). Pro Action Replay 01A73C:5438: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 2 and the hub map $953F = $B.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hcxt_djv6.png"
  },
  {
   "code": "HCXT-DJV0",
@@ -1286,7 +1289,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$1A736 clr.b $953B -> addq.b #2,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 3, then play began in area 3's first stage ($953A=2, map $0B). Pro Action Replay 01A736:5438: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 2 and the hub map $953F = $B.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hcxt_djv0.png"
  },
  {
   "code": "HCXT-DNV6",
@@ -1301,7 +1305,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$1A73C clr.b $953B -> addq.b #3,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 4, then play began in area 4's first stage ($953A=3, map $13). Pro Action Replay 01A73C:5638: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 3 and the hub map $953F = $13.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hcxt_dnv6.png"
  },
  {
   "code": "HCXT-DNV0",
@@ -1316,7 +1321,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$1A736 clr.b $953B -> addq.b #3,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 4, then play began in area 4's first stage ($953A=3, map $13). Pro Action Replay 01A736:5638: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 3 and the hub map $953F = $13.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hcxt_dnv0.png"
  },
  {
   "code": "HCXT-DTV6",
@@ -1331,7 +1337,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$1A73C clr.b $953B -> addq.b #4,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 5, then play began in area 5's first stage ($953A=4, map $1C). Pro Action Replay 01A73C:5838: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 4 and the hub map $953F = $1C.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hcxt_dtv6.png"
  },
  {
   "code": "HCXT-DTV0",
@@ -1346,7 +1353,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$1A736 clr.b $953B -> addq.b #4,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 5, then play began in area 5's first stage ($953A=4, map $1C). Pro Action Replay 01A736:5838: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 4 and the hub map $953F = $1C.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hcxt_dtv0.png"
  },
  {
   "code": "HCXT-DYV6",
@@ -1360,8 +1368,9 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "$1A73C clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 6, then play began in area 6's first stage (after the final-area intro scene) ($953A=5, map $25). Pro Action Replay 01A73C:5A38: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 5 and the hub map $953F = $25.",
-  "section": "cheat"
+  "note": "$1A73C clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map is skipped: the final-area intro scene plays, then FINAL AREA's first stage begins ($953A=5, map $25). Pro Action Replay 01A73C:5A38: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 5 and the hub map $953F = $25.",
+  "section": "cheat",
+  "img": "cheat_hcxt_dyv6.png"
  },
  {
   "code": "HCXT-DYV0",
@@ -1375,8 +1384,9 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "$1A736 clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map showed AREA 6, then play began in area 6's first stage (after the final-area intro scene) ($953A=5, map $25). Pro Action Replay 01A736:5A38: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 5 and the hub map $953F = $25.",
-  "section": "cheat"
+  "note": "$1A736 clr.b $953B -> addq.b #5,$953B; use from power-on (it adds to the old value); checked in BizHawk from the title (US and EU, pixel-identical screens): the planet map is skipped: the final-area intro scene plays, then FINAL AREA's first stage begins ($953A=5, map $25). Pro Action Replay 01A736:5A38: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): from the title, $953A = 5 and the hub map $953F = $25.",
+  "section": "cheat",
+  "img": "cheat_hcxt_dyv0.png"
  },
  {
   "code": "HA3A-AYWC",
@@ -1392,7 +1402,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$3242 subq.b #1,$9543 -> tst.b (same address in EU). BizHawk client.addcheat: standing on own bombs for 2400 frames lost 3 lives without the code, none with it (US and EU). Pro Action Replay 003242:4A38: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): own bombs, 2,400 frames: no life lost (3 without), US and EU.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_ha3a_aywc.png"
  },
  {
   "code": "AJ2A-AAB2",
@@ -1408,7 +1419,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$3038 = $0002: the hit check $3032 always returns 'not hit' (same address in EU); every death in these runs went through $30A4, behind that check. BizHawk, US and EU: own bombs, 1200 frames: 2 lives lost without, none with; player held on each of the 8 enemies of area 1 stage 1 for 120 frames: a life lost on each without, none with; Battle Game (2 players, both on their own bombs): both die every round without, with the code nobody dies, the closing-in blocks included, and the round only ends at time-up. Pro Action Replay 003038:0002: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): own bombs, 1,200 frames: no life lost (2 without), US and EU.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_aj2a_aab2.png"
  },
  {
   "code": "HC0A-AYZ0",
@@ -1423,7 +1435,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$ACB6 frame counter subq.b -> tst.b. 600 frames in area 1 stage 1: clock stayed 3:57. Pro Action Replay 00ACB6:4A38: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): 600 frames in area 1 stage 1: the clock stayed 3:57.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hc0a_ayz0.png"
  },
  {
   "code": "HC0A-AYZT",
@@ -1438,7 +1451,8 @@
   "status": "new",
   "verified": "emu",
   "note": "$ACB0 (USA $ACB6) frame counter subq.b -> tst.b. 600 frames: clock stayed 3:57. Pro Action Replay 00ACB0:4A38: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): 600 frames in area 1 stage 1: the clock stayed 3:57.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_hc0a_ayzt.png"
  },
  {
   "code": "Sound effects 2E, 43, 55, 63",
@@ -1689,7 +1703,8 @@
   "status": "new",
   "verified": "emu",
   "note": "At power-on only, $7C34 runs EA's handshake ($90F2: $43 to $A1000B, $7C to $A10005, $7F, $7C again) and, if $A10003 & 3 = 0, sets $80C2 = $FF. Every frame $7E1E then calls $912A, which selects each pad ($0C/$1C/$2C/$3C to $A10005) and reads it into the four player records ($800A/$8014/$801E/$8028). An adapter plugged in later is never seen. BizHawk (GPGX, 4-Way Play): B pressed on pads 1-4 in turn lands in battle slots 1-4 ($AD0A + 8n), one each. Also: with plain pads, players 3 and 4 copy pad 1 (all four slots start on pad 1, $103D4), so with two pads and four combatants pad 1 drives three Bombermen.",
-  "section": "unused"
+  "section": "unused",
+  "img": "ea_4way_play.png"
  },
  {
   "code": "A changed ROM (checksum check)",

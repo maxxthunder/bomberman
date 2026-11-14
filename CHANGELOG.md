@@ -2,6 +2,24 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.5.1 (2026-11-14)
+- Pictures for 239 cards: every cheat, unused item, secret and debug code that can be shown on screen now has
+  one. Cheats are an off/on pair from the same start and frame; the rest show the thing itself in the game.
+- Fixed: the Super Bomberman 2 speed/bombs/fire cheat used the stored kit at $80E0, which play never reads.
+  The card now gives the live addresses ($80F0-$80F2); as printed, the speed and fire codes did nothing.
+- Fixed: Super Bomberman 4's title turbo-X trick needs 64 presses, not 48. The first 16 only clear the
+  silhouettes under the logo, while the title still runs at half speed, and are too close together to count.
+- Fixed: Super Bomberman 1's debug scene list does hold labels 2-1 to 2-8, but the STAGE NO. line stops at
+  2-4, so the last four can never be displayed.
+- Super Bomberman 2's spike bombs: the blast really does carry on past a soft block (7 blocks an arm instead
+  of 3), which needs fire to spare to see.
+- Super Bomberman 5's invincibility codes: without them one blast kills, as soon as the stage-start blink has
+  run out; there is no heart at the start of 1-1.
+- Super Bomberman 1's 9-lives code: the counter never moves, but the HUD shows 8 from the first death on.
+- Super Bomberman 3's title tap works on the European version too, and Bomberman '93's two speed passwords
+  were typed in rather than only accepted by the checker.
+- Smaller images: the picture folder holds 239 more pictures and is still smaller than before.
+
 ## 2.5.0 (2026-11-13)
 - Super Bomberman 5: the 100% password screen (0926, then 4622 and 0413 at "200%"); the debug menu's font, never
   loaded, with the menu drawn in it; unused zone-map labels, item icons and battle counts; table 6's END picture.

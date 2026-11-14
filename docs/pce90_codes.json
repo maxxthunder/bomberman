@@ -219,7 +219,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen pceRaw cheats on ROM bytes (physical address = file offset): RTS over the fire check $09:8AB3 and the enemy-contact check $0A:A485. A random-input bot over 6,000 frames: 0 deaths with the cheat, 6 deaths and a game over without; same on the Collection. The timer running out still kills.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_012ab360_01448560.png"
  },
  {
   "code": "012AD6:60 + 0144A8:60",
@@ -230,7 +231,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "JP addresses of the same two checks ($09:8AD6, $0A:A4A8); 0 deaths over 6,000 frames of random play",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_012ad660_0144a860.png"
  },
  {
   "code": "1F0438:02",
@@ -243,7 +245,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "RAM $2438 (lives, bank F8 offset $0438; Mesen writes RAM as 1Fxxxx). Read-intercept cheat: DEC $2438 / BMI at $00:EC7F never goes negative. US 8 deaths, JP 9 deaths, no game over (Collection: same shared code, not run)",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_1f043802.png"
  },
  {
   "code": "00200B:80 + 00200C:0B",
@@ -256,7 +259,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "$01:A00B BNE $A000 -> BRA $A018 skips the held-button, demo and high-score tests. Run from the title with no buttons held: the room code $01:A063 ran (US, JP, Collection).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_00200b80_00200c0b.png"
  },
  {
   "code": "1F1451:FF",
@@ -269,7 +273,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "RAM $3451, the BOMSOUND flag, read as $FF: MUVWLNPC went straight to SOUND-00 (US, JP)",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_1f1451ff.png"
  },
  {
   "code": "Destroy every soft block on the stage",

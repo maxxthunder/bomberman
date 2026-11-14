@@ -176,8 +176,10 @@ Without the code the rider slumps into the tired pose for ten seconds after the 
   (the battle stage count, normally 10 from `$C4:4040`) and plays sound 9. The title runs at 30 fps at first,
   so a "tick" is two frames; but after 16 X presses in a row (`$715B` ≥ 16, `$C2:D560`) the villains'
   silhouettes under the logo stop being drawn and the title speeds up to 60 fps, where a tick is one frame.
-  Net effect: any **turbo X at a 7, 8 or 9 frame period** (6.7-8.6 presses a second) unlocks stages 11 and 12
-  after 7.5-10 s (Mesen: 450, 506 and 614 frames of tapping); 10 frames does not. A Super Joycard does it,
+  Net effect: any **turbo X at a 7, 8 or 9 frame period** (6.7-8.6 presses a second) unlocks stages 11 and 12 after
+  exactly **64 presses** - the first 16 are the ones that clear the silhouettes, too close together to count, and the 48
+  counted ones follow (Mesen, Japan, counted inside the routine: 64 presses every time, 442, 505 and 568 frames at 7, 8 and
+  9 frames per press; 63 presses leave `$7159` at 47 and do nothing). 6 and 10 frames never count. A Super Joycard does it,
   but so does any turbo pad set to that rate. After the unlock the stage select wraps to STAGE 12 はたはたとりとり
   ("flag grab") and STAGE 11 とろっこやろう ("mine-cart guy"), and both load (Known: GameFAQs and others).
 

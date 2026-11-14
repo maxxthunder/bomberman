@@ -832,7 +832,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Game Genie, compare $CD: RET over the hit check $01:4837 (same address in both). tools/gb1/test_cheats.lua, random-input bot 6,000 frames from 1-1: 0 hits with the code, 7 hits / 7 lost sets without. GameShark: player +$4F (the after-hit flash flag) = 1 and its counter +$49 = 0, so $01:4866 always reports the flash; same bot: 0 hits (jp and wario). Mesen 2, Bomberman Collection through its menu, the Japanese code: random-input bot 6,000 frames from 1-1: 0 hits with the code (8 hits / 8 lost sets without); GameShark 01014FC0 + 010049C0 also 0 hits.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_c9837bd5d.png"
  },
  {
   "code": "010000C1 + 010000C2 + 010000C3",
@@ -849,7 +850,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark: the three enemy object pages' state bytes $C100/$C200/$C300 forced to 0, so $01:487E sees all enemies gone and the set ends won ($C590 = 2). With the invincibility code: 6 sets won and 1-1 to 1-4 in 6,000 frames; boss sets don't end with it (the 1-boss waits; $01:48C7 needs the boss itself, $C3F7 = 1). GB1 has no lives: a lost match goes to the continue screen. Game Genie: $01:488A OR A -> XOR A, so the enemy check sees every page empty; with C98-37B-D5D: 12 sets won, 1-1 to 1-4 in 6,000 frames (jp and wario). Mesen 2, Bomberman Collection through its menu, the Japanese code: with C98-37B-D5D and a 6,000-frame bot: 5 sets won, to 1-4, with the GameShark codes; 11 sets won with Game Genie AF8-8AB-3B4.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_010000c1_010000c2_010000c3.png"
  },
  {
   "code": "Win 240 rounds of the extra battle (5656; Wario Blast 6565 as Wario)",
@@ -951,7 +953,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $00:0A5B LD (HL),A (77) -> NOP in the BCD subtract ($00:0A4B) that takes 001 off the clock digits $C585-$C587; only digits that borrow are written (the borrow branch has its own store), so 100 becomes 199 and later ticks change nothing. Only the clock calls this routine. Same address in JP. BizHawk: US and JP: in round 1-1, $C585-7 every 120 frames: 100,099,098,097... without; 100,199,199,199... with; the HUD shows TIME 199. GameShark: US and JP: the clock digits stayed 100 over 960 / 600 frames. Mesen 2, Bomberman Collection through its menu, the Japanese code: clock 199 199 199 199 199 every 120 frames (099 -> 096 without); GameShark 010185C5 + 010086C5 + 010087C5 held 100.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_00a5bf3b7.png"
  },
  {
   "code": "03F-87E-E6E",
@@ -967,7 +970,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: US $00:1F87 / JP $00:1FF2, operand of LD A,$01 that sets the clock's start hundreds digit ($C582, copied to $C585) -> $03. BizHawk: US: clock 300, 299 (100, 099 without). JP: 299, 298, 297 read after the first tick. Mesen 2, Bomberman Collection through its menu, the Japanese code: 03F-F2E-E6E: clock 299, 298, 297.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_03f87ee6e.png"
  },
  {
   "code": "083-F1A-F7A",
@@ -1000,7 +1004,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: US $00:26C7 / JP $00:2730, operand of LD (HL),$01 that sets the bomb count (+$2C) at set start -> $04. The routine runs for each bomber's page, not just the player's. BizHawk: US and JP: $C02C/$C12C = 4/4 at the start of 1-1 (1/1 without). GameShark: Holds the player's bombs at 4 (enemies stay at 1): US and JP $C02C = 4, $C12C = 1. Mesen 2, Bomberman Collection through its menu, the Japanese code: 047-30D-E6E: bombs 4/4 at the start of 1-1 (1/1 without); GameShark 01042CC0 gave 4 to the player only.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_046c7de6e.png"
  },
  {
   "code": "046-CBD-E6A",
@@ -1017,7 +1022,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: US $00:26CB / JP $00:2734, operand of LD (HL),$00 that sets the fire level (+$2E) -> $04. BizHawk: US and JP: $C02E/$C12E = 4/4 at the start of 1-1 (0/0 without). GameShark: Holds the player's fire at 4 (run together with 01042CC0: $C02E = 4, enemy 0). Mesen 2, Bomberman Collection through its menu, the Japanese code: 047-34D-E6A: fire 4/4 at the start of 1-1 (0/0 without); GameShark 01042EC0 gave 4 to the player only.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_046cbde6a.png"
  },
  {
   "code": "210-3BB-4C1 + 000-13B-5D4",
@@ -1034,7 +1040,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: 000-13B-5D4: $0A:4013 XOR A (AF) -> NOP in the new-game reset, so A keeps the bank number $0A left by $0AAA and $C3F0-$C3FD all get $0A: stage $C3F0 = 10 (3-3), and the power-up flags $C3FB/$C3FC become non-zero. 210-3BB-4C1: $0A:403B LD ($C3E9),A (EA) -> LD HL (21), keeping that flag 0 (the compare also matches $09:403B, a store in the SGB battle code). Same in JP. BizHawk: US and JP: after START $C3F0 = 0A, screen ROUND 3-3, bombs/fire 4/4 for all four bombers. The second code alone gave the same in US. GameShark: US and JP: START went to 3-3 with normal power-ups. Held, so the next stage would be 3-3 again (not played through). Mesen 2, Bomberman Collection through its menu, the Japanese code: START went to $C3F0 = 0A (3-3) with bombs/fire 4/4 for all four; GameShark 010AF0C3 also gave 3-3, with normal power-ups.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_2103bb4c1_00013b5d4.png"
  },
  {
   "code": "210-3BB-4C1 + 3C0-13B-5D4",
@@ -1051,7 +1058,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: 3C0-13B-5D4: $0A:4013 XOR A -> INC A, so the reset writes $0B: stage 11 = round 3 boss, plus the same side effects as the 3-3 code. 210-3BB-4C1 as there. BizHawk: US and JP: $C3F0 = 0B, ROUND 3 VS BOSS, player bombs/fire 4/4. With the code the boss-stage clock ran (100 -> 98); with the GameShark version it stayed at 100 ($C3E9 = 1). GameShark: JP: START went to the round 3 boss ($C3F0 = 0B) with normal power-ups. US not run, same RAM. Mesen 2, Bomberman Collection through its menu, the Japanese code: START went to $C3F0 = 0B (round 3 boss), player bombs/fire 4/4; GameShark 010BF0C3 also gave the boss, with $C3E9 = 1.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_2103bb4c1_3c013b5d4.png"
  },
  {
   "code": "003-EFA-3B7",
@@ -1067,7 +1075,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: US $01:53EF / JP $01:53E0 LD (HL),A (77) -> NOP after the INC of the bomb count, so the new count is never stored (the clamp store at 4 is unreachable from 1). BizHawk: US and JP: forced bomb-ups: 2,3,4,4 without; 1,1,1,1 with. Mesen 2, Bomberman Collection through its menu, the Japanese code: 003-E0A-3B7, forced bomb-ups: 1,1,1,1 (2,3,4,4,4 without).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_003efa3b7.png"
  },
  {
   "code": "003-D7A-3B7",
@@ -1083,7 +1092,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: US $01:53D7 / JP $01:53C8 LD (HL),A (77) -> NOP after the INC of the fire level (+$2E). BizHawk: US and JP: forced fire-ups: 1,2,3,4,4 without; 0,0,0,0 with. Mesen 2, Bomberman Collection through its menu, the Japanese code: 003-C8A-3B7, forced fire-ups: 0,0,0,0 (1,2,3,4,4 without).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_003d7a3b7.png"
  },
  {
   "code": "Bomberman Selection (Korea)",

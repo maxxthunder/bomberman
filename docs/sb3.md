@@ -407,11 +407,15 @@ code that never ran (18). `tools/sb3/watch.lua` watched all of them through a st
 
 ★ A BizHawk scan (bytes that stay 0 over 3,000 frames of a stage and a battle, read by code that ran, with no store
 that ran; each forced to `$01` and `$FF` for 400 frames against a control run) found one that does something:
-**`$7E:17EA` stops the clock.** Held at 1 in 1-1 the clock stayed at 2:58 for 900 frames, and in a battle at 1:54
-while the control reached 1:47; enemies keep moving. `$C2:589A` skips the clock tick while it (or `$17E6`/`$17E7`)
-is set, and `$C4:0691` tests it for each actor. Its setters (`$C3:055A`, `$C3:6AA9`; cleared at `$C3:7013`) never
-ran in any of our logs, so what sets it in play is unknown. Europe only; whether it also shields the player wasn't
-settled.
+**`$7E:17EA` is the "boss is dead" freeze.** A boss's death sets it (`$C3:0561`, in the routine every boss dies
+through; the final boss at `$C3:6AAB` and its mech at `$C3:7045`), the mech's start and every stage start clear it
+(`$C3:7013`, `$C2:583E`). While it is set the clock doesn't tick (`$C2:589A`) and the player's own fire only makes
+him blink for 120 frames instead of killing him (`$C4:0691`); enemies still move and still die. Held with Mesen's
+cheat engine (`7E17EA:01`) in Europe, Japan and the beta (same address): 1-1 stayed at 3:00 for 900 frames (2:45
+without), a battle at 2:00 (1:50), and the player stood in his own bomb's blast; in 3,000 frames of random play he
+died 5 times without it and 0 times with it. Two one-byte Game Genie patches give the two halves separately.
+![7E17EA:01 off and on: the player in his own bomb's fire, and the clock](img/sb3/boss_freeze_flag.png)
+![The flag set by boss deaths](img/sb3/boss_freeze_set.png)
 
 ### Text
 

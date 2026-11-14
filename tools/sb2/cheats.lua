@@ -4,7 +4,7 @@
 -- Battle tests go BATTLE GAME -> A through the setup screens -> stage select.
 local CODES={
   none={}, inv={'7E80EF90'},
-  kit={'7E80E003','7E80E109','7E80E209','7E80F304','7E80FA01','7E80FB01','7E80FE01','7E80FF01'},
+  kit={'7E80F003','7E80E109','7E80F109','7E80F209','7E80F304','7E80FA01','7E80FB01','7E80FE01','7E80FF01'},
   stages={'7E1CB5FF','7E1CB6FF'}, jump={'7E1C6EFF','7E1C6FFF'}, sudden={'7E1C68FF','7E1C69FF'},
 }
 local M=emu.memType.snesMemory

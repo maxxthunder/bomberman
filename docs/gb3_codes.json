@@ -948,7 +948,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark. $C1BC is cleared at boot ($00:12FA) and never set, but the player-hit routine $01:4BE6 skips the dying state when it is non-zero. Bot 6,000 frames from Wood 1: 0 hits with it, 11 deaths without. Game Genie: the ROM patch below, same bot test.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_0101bcc1.png"
  },
  {
   "code": "C3B-E6B-081 + E4B-E7B-198 + 4AB-E8B-E6D",
@@ -963,7 +964,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Game Genie: $01:4BE6 LD A,($C1BC) -> JP $4AE4, the flag's no-death branch. Bot 6,000 frames: 0 hits. GameShark 0101BCC1: the flag above, same bot test.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_c3be6b081_e4be7b198_4abe8be6d.png"
  },
  {
   "code": "010363C3",
@@ -978,7 +980,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark: lives $C363 = 3. Bot 6,000 frames: 14 deaths, lives stay 3. Game Genie: DEC A -> OR A at both lives decrements ($00:1517, $00:1561); bot 6,000 frames: 13 deaths, lives stay 3.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_010363c3.png"
  },
  {
   "code": "01FF80C4",
@@ -993,7 +996,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark: stage result $C480 = $FF, the exit taken ($00:1BE6 -> $00:13A8). With the invincibility flag: Wood 1-6 then City 1 in 6,000 frames; the shop ($0A:7557) follows each area's 6th stage. Game Genie: $00:1BA2 JR NZ -> JR and $00:1BE8 JP Z -> JP (the exit to $00:13A8); with the Game Genie invincibility: Wood 1-6 then City 1 in 6,000 frames.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_01ff80c4.png"
  },
  {
   "code": "0101BDC1",
@@ -1008,7 +1012,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark. $C1BD is cleared at boot and never set; $00:29B1 (the per-frame clock update) returns at once when it is non-zero. 1,200 frames of Wood 1: the clock stays 3:00 (2:41 without). Game Genie: $00:29B5 RET NZ -> RET; 1,200 frames of Wood 1 with no input: the clock stays 3:00, as with the GameShark code.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_0101bdc1.png"
  },
  {
   "code": "Music 12",

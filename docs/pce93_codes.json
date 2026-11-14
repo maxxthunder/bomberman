@@ -1409,7 +1409,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: decoded as listed; the planet map then starts the final stage (the four Bombers on karts)",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_pmphtznf.png"
  },
  {
   "code": "LJLFPTKD",
@@ -1421,7 +1422,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: decoded as listed; the planet map then starts the final stage (the four Bombers on karts)",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_ljlfptkd.png"
  },
  {
   "code": "DCCCBFHB",
@@ -1433,7 +1435,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: $389A = 3, player byte $9B = $30, measured faster than speed 2 (see docs)",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_dcccbfhb.png"
  },
  {
   "code": "CBBBADFA",
@@ -1445,7 +1448,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: $389A = 3, player byte $9B = $30, measured faster than speed 2 (see docs)",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_cbbbadfa.png"
  },
  {
   "code": "CBCCBCFB",
@@ -1457,7 +1461,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: $389A = 1",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_cbccbcfb.png"
  },
  {
   "code": "BABBABDA",
@@ -1467,9 +1472,10 @@
    "JP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values (typed in the US version)",
-  "section": "Power-up codes"
+  "verified": "mesen",
+  "note": "typed in Mesen on the Japanese card: decoded as listed, and 1-1 starts at speed 1 (measured against the plain 1-1 code over the same 40 frames of Down)",
+  "section": "Power-up codes",
+  "img": "password_babbabda.png"
  },
  {
   "code": "DCCCBDGB",
@@ -1481,7 +1487,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: $389A = 2",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_dcccbdgb.png"
  },
  {
   "code": "CBBBACEA",
@@ -1491,9 +1498,10 @@
    "JP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values (typed in the US version)",
-  "section": "Power-up codes"
+  "verified": "mesen",
+  "note": "typed in Mesen on the Japanese card: decoded as listed, and 1-1 starts at speed 2 (measured against the plain 1-1 code over the same 40 frames of Down)",
+  "section": "Power-up codes",
+  "img": "password_cbbbacea.png"
  },
  {
   "code": "DGGDFHBC",
@@ -1505,7 +1513,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: all six values as stored; in the stage the player has $A0 = $24 (fire 2, bombs 4)",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_dggdfhbc.png"
  },
  {
   "code": "CEECDFAB",
@@ -1517,7 +1526,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: all six values as stored; in the stage the player has $A0 = $24 (fire 2, bombs 4)",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_ceecdfab.png"
  },
  {
   "code": "DBNHCJFC",
@@ -1529,7 +1539,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: player $A0 = $5A, $9B = $20 in the stage",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_dbnhcjfc.png"
  },
  {
   "code": "CAKFBGDB",
@@ -1541,7 +1552,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "typed in Mesen: player $A0 = $5A, $9B = $20 in the stage",
-  "section": "Power-up codes"
+  "section": "Power-up codes",
+  "img": "password_cakfbgdb.png"
  },
  {
   "code": "BBBBBBBB / AAAAAAAA",
@@ -1567,7 +1579,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen raw code (RAM F8:0091 = $2091). Stood on its own bomb: lives kept; without it the same test lost a life (US) The game itself sets the bit for about 120 frames after a hit (03:ACE8, from the death check 02:8CAD when the heart item absorbs one). Special Version (its Normal Game, through the menu patch): 1F0099:20, checked in Mesen.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_1f009120.png"
  },
  {
   "code": "1F189F:09",
@@ -1580,7 +1593,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "RAM F8:189F = $389F; HUD showed 9 (US) Special Version: 1F1896:09, checked in Mesen.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_1f189f09.png"
  },
  {
   "code": "1F189A:03",
@@ -1593,7 +1607,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "RAM F8:189A = $389A, copied to the player at the stage start: $9B = $30 (US) Special Version: 1F1891:03, checked in Mesen (RAM).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_1f189a03.png"
  },
  {
   "code": "1F1895:0w + 1F1896:0s",
@@ -1606,7 +1621,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "RAM F8:1895 / F8:1896; 1F1895:03 + 1F1896:04 made a new game load record 28 (4-5) (US). Turn off after the stage starts Special Version: 1F188C:0w + 1F188D:0s (1F1896 is its lives byte), checked in Mesen.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_1f189503_1f189604.png"
  },
  {
   "code": "1F1FFB:01",
@@ -1721,7 +1737,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "08:8CB8 shows the page only when $38B1 = 0; a continue (07:A191) or a password (01:D93B) sets it. Shown in Mesen by clearing $38B1 at the ending (cheat 1F18B1:00)",
-  "section": "Hidden screens"
+  "section": "Hidden screens",
+  "img": "ending_clear_page.png"
  },
  {
   "code": "Title item 3 (VS GAME / COM-LINK)",
@@ -1733,7 +1750,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "world 9 mode, 07:AC61; the serial handshake through the pad port never completes without a second console. On the Wii U VC the item starts the Battle Game instead (pcevc.md)",
-  "section": "Hidden screens"
+  "section": "Hidden screens",
+  "img": "com_link_screen.png"
  },
  {
   "code": "World 2 stage 3: with 16 or more enemies on the field, bomb an item or the exit",

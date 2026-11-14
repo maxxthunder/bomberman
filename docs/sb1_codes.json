@@ -2520,7 +2520,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Sets $00A4 = $3C. US/EU $C5:4F52 also require the multitap ID ($0CEF&$1F=1, $0CE0=$40); JP and beta test only pad 5 R ($0CEE bit $10). Verified with a real press in all four: Mesen with --snes.port2.type=Multitap, emu.setInput({r=true},0,1,3) (port 2, multitap port D) on the title; no multitap: no sound test in US.",
-  "section": "secret"
+  "section": "secret",
+  "img": "pad5_r_sound_test.png"
  },
  {
   "code": "X in rhythm during the prologue",
@@ -2533,7 +2534,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$C5:6698: 48 X presses in a row, each 7-9 frames after the last (a ~7.5 Hz turbo works); a gap of 32 frames or a wrong interval resets. Sets $0C8F, which $C5:5106 turns into 9 lives. The prologue only plays in JP (demo table $C5:501F); in US/EU/beta it is unreachable without a cheat (PAR 7E00A433). Verified natively in JP and with the $A4 redirect in US (40 presses: 5 lives, 60: 9)."
+  "note": "$C5:6698: 48 X presses in a row, each 7-9 frames after the last (a ~7.5 Hz turbo works); a gap of 32 frames or a wrong interval resets. Sets $0C8F, which $C5:5106 turns into 9 lives. The prologue only plays in JP (demo table $C5:501F); in US/EU/beta it is unreachable without a cheat (PAR 7E00A433). Verified natively in JP and with the $A4 redirect in US (40 presses: 5 lives, 60: 9).",
+  "img": "prologue_x_rhythm.png"
  },
  {
   "code": "Start a Normal Game or password with controller 2",
@@ -2546,7 +2548,8 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$C5:5128 / $C5:7350 test controller 2's new presses ($0CFA & $1080 = A or Start) and give the lives to $0DBD instead of $0D7D. Checked on the title in US, JP and the beta (tools/sb1/test_p2_start.lua)."
+  "note": "$C5:5128 / $C5:7350 test controller 2's new presses ($0CFA & $1080 = A or Start) and give the lives to $0DBD instead of $0D7D. Checked on the title in US, JP and the beta (tools/sb1/test_p2_start.lua).",
+  "img": "p2_start_normal_game.png"
  },
  {
   "code": "Game over on a boss stage (x-8)",
@@ -2559,7 +2562,8 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$C5:6F23 steps $0D17/$0D16 back one stage when the stage digit is 8, then encodes. Game over at 5-8 showed 2234 (5-7). The x-8 codes in GameFAQs are still valid passwords."
+  "note": "$C5:6F23 steps $0D17/$0D16 back one stage when the stage digit is 8, then encodes. Game over at 5-8 showed 2234 (5-7). The x-8 codes in GameFAQs are still valid passwords.",
+  "img": "continue_5-8_shows_5-7.png"
  },
  {
   "code": "Debug menu: Select during a stage (needs patch or PAR codes)",
@@ -2588,7 +2592,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 7 $C6:2CDF; verified by raising $0D25. 50,000 points = +4 lives from a fresh start, which is the GameFAQs '9 lives if you have not died' effect: with fewer lives or more points you get fewer.",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_1-2.png"
  },
  {
   "code": "1-3: Kill 3 enemies with one blast or kick chain",
@@ -2602,7 +2607,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 6 $C6:2C21 (a chain counter $0C3F+ reaches 3); counter injected",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_1-3.png"
  },
  {
   "code": "1-4: Stand on the exit for 21.3 s (1,280 frames)",
@@ -2616,7 +2622,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 2 $C6:2B8F; player held on the exit cell",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_1-4.png"
  },
  {
   "code": "1-5: Bombs in all 4 corners",
@@ -2630,7 +2637,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 4 $C6:2BCC; corner cells flagged",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_1-5.png"
  },
  {
   "code": "1-7: Press nothing for 21.3 s (1,280 frames), anywhere",
@@ -2644,7 +2652,8 @@
   "status": "fixed",
   "verified": "mesen",
   "note": "cond 1 $C6:2B73 resets on any held button; standing on the exit for 21 s is the 1-4/4-7 condition. Spawned with no input at all.",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_1-7.png"
  },
  {
   "code": "2-2: Pause (Start held)",
@@ -2658,7 +2667,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 3 $C6:2BBD; real Start press",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_2-2.png"
  },
  {
   "code": "2-4: Reveal the items and take none",
@@ -2672,7 +2682,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 5 $C6:2C10: items on the board $0C91 = $0D03+1; injected",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_2-4.png"
  },
  {
   "code": "2-7: Punch 5 times (glove needed)",
@@ -2686,7 +2697,8 @@
   "status": "known",
   "verified": "static",
   "note": "cond 8 $C6:2D02: 5 frames in the punch state $C4:1C9F, 1 per punch; same routine verified on 6-5",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_2-7.png"
  },
  {
   "code": "3-3: Score ending in 20",
@@ -2700,7 +2712,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 11 $C6:2D3E: low score byte $0D5C = $20; injected",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_3-3.png"
  },
  {
   "code": "3-4: Get down to your last life",
@@ -2714,7 +2727,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 0 $C6:2B5C: dying ($C4:19E3) with 1 life; lives set to 1, then he bombed himself",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_3-4.png"
  },
  {
   "code": "3-6: Have exactly 6 bombs out",
@@ -2728,7 +2742,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 10 $C6:2D2F (player +$24 = 6); injected",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_3-6.png"
  },
  {
   "code": "3-7: Make the enemy count go up (bomb the exit)",
@@ -2742,7 +2757,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 7; injected",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_3-7.png"
  },
  {
   "code": "4-1: Bombs in all 4 corners",
@@ -2756,7 +2772,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 4; injected",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_4-1.png"
  },
  {
   "code": "4-4: Kill 3 enemies with one blast or kick chain",
@@ -2770,7 +2787,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 6; injected",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_4-4.png"
  },
  {
   "code": "4-5: Get down to your last life",
@@ -2784,7 +2802,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 0; lives 1, then died",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_4-5.png"
  },
  {
   "code": "4-7: Stand on the exit for 21.3 s",
@@ -2798,7 +2817,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 2; player held on the exit",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_4-7.png"
  },
  {
   "code": "6-2: Get hit by a punched bomb (stunned)",
@@ -2812,7 +2832,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 9 $C6:2D1F: player in the stun state $C4:159E; state written",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_6-2.png"
  },
  {
   "code": "6-4: Score ending in 20",
@@ -2826,7 +2847,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 11; injected",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_6-4.png"
  },
  {
   "code": "6-5: Punch 5 times (glove needed)",
@@ -2840,7 +2862,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 8; glove flag set, then 5 real Y presses",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_6-5.png"
  },
  {
   "code": "6-7: Pause (Start held)",
@@ -2854,7 +2877,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "cond 3; real Start press",
-  "section": "secret_items"
+  "section": "secret_items",
+  "img": "secret_item_6-7.png"
  },
  {
   "code": "Secret items: complete list",
@@ -2931,7 +2955,8 @@
   "status": "known",
   "verified": "mesen",
   "section": "debug",
-  "note": "It is $00A4 itself. Labels after WIN run one behind: 'B-1' is the sound test ($3C), 'B-2'..'B-C','DR' are battle stages 1-12 ($3D-$48); $49-$4D black screen."
+  "note": "It is $00A4 itself. Labels after WIN run one behind: 'B-1' is the sound test ($3C), 'B-2'..'B-C','DR' are battle stages 1-12 ($3D-$48); $49-$4D black screen.",
+  "img": "debug_stage_no.png"
  },
  {
   "code": "Debug menu NO DEATH",
@@ -2945,7 +2970,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "Sets player +$2E, which nothing reads. Own bomb killed the player with it ON. The IPS/PAR set adds a check at the two hit branches (reconstruction) so ON keeps the player alive (verified, all four versions)."
+  "note": "Sets player +$2E, which nothing reads. Own bomb killed the player with it ON. The IPS/PAR set adds a check at the two hit branches (reconstruction) so ON keeps the player alive (verified, all four versions).",
+  "img": "debug_no_death.png"
  },
  {
   "code": "Debug menu FIRE PASS",
@@ -2959,7 +2985,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "ON sets player +$36 = $0160. Survived own bomb with it ON."
+  "note": "ON sets player +$36 = $0160. Survived own bomb with it ON.",
+  "img": "debug_fire_pass.png"
  },
  {
   "code": "Debug menu FIRE FULL",
@@ -2988,7 +3015,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "debug",
-  "note": "+$13A set to $23F5."
+  "note": "+$13A set to $23F5.",
+  "img": "debug_skull.png"
  },
  {
   "code": "Debug menu GAME SPEED / TIME CHECK",
@@ -3045,7 +3073,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "region",
-  "note": "Screenshot of the ending (scene $30) at the same frame in each version."
+  "note": "Screenshot of the ending (scene $30) at the same frame in each version.",
+  "img": "credits_game_planner_us_jp.png"
  },
  {
   "code": "Unused enemy sprites",
@@ -3077,7 +3106,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Holds the respawn-flash timer (+$36) at $0160. Mesen cheat engine, unpatched US: bomb laid under player 1 after the start flash ran out; lives stayed 5 (without the codes: 5 -> 4). Enemies and blasts pass through him while he flashes. Player 2: 7E0DB660 7E0DB701 (not run). Game Genie: DEC $36,X -> NOP NOP at $C4:14AC (JP $C4:12A1, beta $C4:129C), so the start-of-stage flash never runs out (every player); Mesen, all four versions: own bomb after the start flash, lives stay 5."
+  "note": "Holds the respawn-flash timer (+$36) at $0160. Mesen cheat engine, unpatched US: bomb laid under player 1 after the start flash ran out; lives stayed 5 (without the codes: 5 -> 4). Enemies and blasts pass through him while he flashes. Player 2: 7E0DB660 7E0DB701 (not run). Game Genie: DEC $36,X -> NOP NOP at $C4:14AC (JP $C4:12A1, beta $C4:129C), so the start-of-stage flash never runs out (every player); Mesen, all four versions: own bomb after the start flash, lives stay 5.",
+  "img": "cheat_7e0d7660.png"
  },
  {
   "code": "7E0D7D09",
@@ -3095,7 +3125,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Lives byte player +$3D. Died to his own bomb: respawned, still 9. Game Genie: DEC $3D,X -> NOP NOP at $C4:19FE (JP $C4:17F3, beta $C4:17EE) plus both start-lives loads LDA #$05 -> #$09 (see 7E0C8F01; every player); Mesen, all four: 9 lives at 1-1, still 9 after his own bomb."
+  "note": "Lives byte player +$3D. With the code on from power-on 1-1 starts at 9 and the HUD shows 9; from the first death on the HUD reads 8 while $0D7D stays 9, because the digit is redrawn from the decremented value and the cheat restores the byte. Seven deaths to his own bomb and the count never moved, where the same deaths without it ran 5 down to 0, put GAME OVER in the top bar and then went to CONTINUE?. Game Genie: DEC $3D,X -> NOP NOP at $C4:19FE (JP $C4:17F3, beta $C4:17EE) plus both start-lives loads LDA #$05 -> #$09 (see 7E0C8F01; every player); Mesen, all four: 9 lives at 1-1, still 9 after his own bomb. With the two DEC codes alone (USA) the count and the HUD both sit still, because nothing decrements them.",
+  "img": "cheat_7e0d7d09.png"
  },
  {
   "code": "7E0D7180",
@@ -3132,7 +3163,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$30 (BOMB UP). RAM checked; more than one bomb laid. Game Genie: LDA $30,X -> LDA #$09 in the three bomb-lay routines ($C4:241C, $C4:3083, $C4:4548; JP and beta lower; every player); Mesen, all four: two bombs out in the test, as with the PAR code (one without)."
+  "note": "Player +$30 (BOMB UP). RAM checked; more than one bomb laid. Game Genie: LDA $30,X -> LDA #$09 in the three bomb-lay routines ($C4:241C, $C4:3083, $C4:4548; JP and beta lower; every player); Mesen, all four: two bombs out in the test, as with the PAR code (one without).",
+  "img": "cheat_7e0d7009.png"
  },
  {
   "code": "7E0D7963",
@@ -3149,7 +3181,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$39 = bits 0, 1, 5, 6 (POWER, KICK, BOMB PASS, WALL PASS of the debug menu). Each bit played on 1-1: bit 0 kicks, bit 1 punches (Y), bit 5 walks onto bombs, bit 6 through soft blocks. No Game Genie form: nothing writes the four bits but the item pickups and the debug menu (the title and death only clear them), and each is tested in its own routine (kick $C4:1D0D, power $C4:22B0, both passes $C6:0B6F); the PAR check was RAM only."
+  "note": "Player +$39 = bits 0, 1, 5, 6 (POWER, KICK, BOMB PASS, WALL PASS of the debug menu). Each bit played on 1-1: bit 0 kicks, bit 1 punches (Y), bit 5 walks onto bombs, bit 6 through soft blocks. No Game Genie form: nothing writes the four bits but the item pickups and the debug menu (the title and death only clear them), and each is tested in its own routine (kick $C4:1D0D, power $C4:22B0, both passes $C6:0B6F); the PAR check was RAM only.",
+  "img": "cheat_7e0d7963.png"
  },
  {
   "code": "7E0D7301",
@@ -3167,7 +3200,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player +$33 (REMOCON). The bombs laid in the test stayed on the board 800 frames without going off. Game Genie: LDA $33,X -> LDA #$01 where a bomb is placed ($C4:4A58, $C4:4C4C) and BEQ +0 after the other two remote tests ($C4:30A7, $C4:452C; JP and beta lower; every player); Mesen, all four: the bomb stayed on the board until a button set it off, as with 7E0D7301."
+  "note": "Player +$33 (REMOCON). The bombs laid in the test stayed on the board 800 frames without going off. Game Genie: LDA $33,X -> LDA #$01 where a bomb is placed ($C4:4A58, $C4:4C4C) and BEQ +0 after the other two remote tests ($C4:30A7, $C4:452C; JP and beta lower; every player); Mesen, all four: the bomb stayed on the board until a button set it off, as with 7E0D7301.",
+  "img": "cheat_7e0d7301.png"
  },
  {
   "code": "7E0C9001",
@@ -3185,7 +3219,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$0C90; seen at 1-1. The effect is Known (5656). Game Genie: both $0C90 tests BEQ -> BEQ +0 ($C4:18B3, JP $C4:16A8, beta $C4:16A3; $C6:179E); Mesen, all four: small Bomberman at 1-1."
+  "note": "$0C90; seen at 1-1. The effect is Known (5656). Game Genie: both $0C90 tests BEQ -> BEQ +0 ($C4:18B3, JP $C4:16A8, beta $C4:16A3; $C6:179E); Mesen, all four: small Bomberman at 1-1.",
+  "img": "cheat_7e0c9001.png"
  },
  {
   "code": "7E0C8F01",
@@ -3203,7 +3238,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$0C8F, read at $C5:5106; NORMAL GAME then showed 9 lives. Game Genie: both start-lives loads LDA #$05 -> #$09 ($C5:50B1, $C5:5102; JP $C5:4F78/$C5:4FC9, beta $C5:50A6/$C5:50F7), so every game starts with 9; Mesen, all four: 9 lives at 1-1."
+  "note": "$0C8F, read at $C5:5106; NORMAL GAME then showed 9 lives. Game Genie: both start-lives loads LDA #$05 -> #$09 ($C5:50B1, $C5:5102; JP $C5:4F78/$C5:4FC9, beta $C5:50A6/$C5:50F7), so every game starts with 9; Mesen, all four: 9 lives at 1-1.",
+  "img": "cheat_7e0c8f01.png"
  },
  {
   "code": "7E00A43C",
@@ -3221,7 +3257,8 @@
   "status": "known",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Known code; $00A4 is the next-scene byte. Scene $3C shown from power-on. Game Genie: the boot's LDA #$31 (title) before STA $00A4 ($C4:6349, JP $C4:613E, beta $C4:6139) loads $3C; Mesen, all four: scene $3C from power-on."
+  "note": "Known code; $00A4 is the next-scene byte. Scene $3C shown from power-on. Game Genie: the boot's LDA #$31 (title) before STA $00A4 ($C4:6349, JP $C4:613E, beta $C4:6139) loads $3C; Mesen, all four: scene $3C from power-on.",
+  "img": "cheat_7e00a43c.png"
  },
  {
   "code": "7E00A4xx",
@@ -3239,7 +3276,8 @@
   "status": "known",
   "verified": "mesen",
   "section": "cheat",
-  "note": "7E00A42F (6-8) checked: scene $2F loads. Turn it off once the scene has loaded, or every stage clear sends you back. Used from the title the game has no lives set: enable it after starting a game. Game Genie: the same boot load set to xx, so power-on goes to scene xx instead of the title. 4E10-E4BD / 4E17-572D / 4E17-54BD (6-8) in Mesen, all four: 6-8 loads at power-on, then CONTINUE as with the PAR code (no lives set)."
+  "note": "7E00A42F (6-8) checked: scene $2F loads. Turn it off once the scene has loaded, or every stage clear sends you back. Used from the title the game has no lives set: enable it after starting a game. Game Genie: the same boot load set to xx, so power-on goes to scene xx instead of the title. 4E10-E4BD / 4E17-572D / 4E17-54BD (6-8) in Mesen, all four: 6-8 loads at power-on, then CONTINUE as with the PAR code (no lives set).",
+  "img": "cheat_7e00a42f.png"
  },
  {
   "code": "C30D63A2 C30D64AE",
@@ -3257,7 +3295,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "The map is $C1:AEA2. ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built). Game Genie: the same two ROM bytes; Mesen, US, EU and beta: 1-1 loads with that layout and plays. Japan: stage 1-1's header is at $C3:0CF2 (the same map $C1:AEA2), so the codes are C30D03A2 C30D04AE; entered in Mesen's cheat engine, 1-1 loads with the same open layout."
+  "note": "The map is $C1:AEA2. ROM codes: the map pointer at offset $11 of stage 1-1's header ($C3:0D52). The stage loads and plays with that layout ( docs/img/sb1/maps/unused_C1AEA2_in_1-1.png ). The same trick with the other unused map (C30D63DA C30D64A1, $C1:A1DA) gives a black screen: 1-1 never starts. JP: the header table is at $C3:2E8A, so the addresses differ (not built). Game Genie: the same two ROM bytes; Mesen, US, EU and beta: 1-1 loads with that layout and plays. Japan: stage 1-1's header is at $C3:0CF2 (the same map $C1:AEA2), so the codes are C30D03A2 C30D04AE; entered in Mesen's cheat engine, 1-1 loads with the same open layout.",
+  "img": "cheat_c30d63a2.png"
  },
  {
   "code": "Two unused arena maps",
@@ -3271,7 +3310,8 @@
   "status": "known",
   "verified": "mesen",
   "section": "unused",
-  "note": "$C1:A1DA, $C1:AEA2. The two known unused level structures; addresses, format and renders new (tools/sb1/maps.py, docs/img/sb1/maps/). $C1:AEA2 loaded into 1-1 with a ROM code and played; $C1:A1DA leaves a black screen."
+  "note": "$C1:A1DA, $C1:AEA2. The two known unused level structures; addresses, format and renders new (tools/sb1/maps.py, docs/img/sb1/maps/). $C1:AEA2 loaded into 1-1 with a ROM code and played; $C1:A1DA leaves a black screen.",
+  "img": "unused_arena_maps.png"
  },
  {
   "code": "Cut 100-point item",
@@ -3302,7 +3342,7 @@
  },
  {
   "code": "Debug scene labels after DR WIN",
-  "effect": "A second set of labels 2-1 ... 2-8 sits after 'DR WIN' in the debug menu's scene list ($C6:0659)",
+  "effect": "A second set of labels 2-1 ... 2-8 sits after 'DR WIN' in the debug menu's scene list ($C6:0659); STAGE NO. only reaches 2-4",
   "versions": [
    "US",
    "EU",
@@ -3312,7 +3352,8 @@
   "status": "new",
   "verified": "static",
   "section": "unused",
-  "note": "The known list stops at DR WIN / X1-X4."
+  "note": "The known list stops at DR WIN / X1-X4. The eight extra labels are records $4A-$51, but STAGE NO. steps 0 to $4D only: its limit byte at $C6:07C1 is $B2, which $C6:02D3 turns into a count of $4E (the line wraps from 0 back to $4D), and the label index is the line's own value ($C6:04F8). So stepping the line shows 2-1 to 2-4 and never 2-5 to 2-8. Same bytes in all four.",
+  "img": "debug_labels_2-1.png"
  },
  {
   "code": "C32226DA C32227A1, then 7E00A43F at power-on",

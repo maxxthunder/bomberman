@@ -991,7 +991,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). RAM $7A, the mystery-item timer: the fire check ($C6E9) and the enemy check ($D06F) skip while it is non-zero. Random bot, 12,000 frames: 0 deaths (US and JP; 3 deaths and a game over without). Game Genie: the two codes below, same bot test. FDS dump: 0 deaths in 5,000 frames of the bot (3 and a game over without); Game Genie there needs FDS addresses (OXTZPV + OZTLYE, card below).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_007aff.png"
  },
  {
   "code": "OXTKPV + OZTSYE",
@@ -1006,7 +1007,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). $C6E9 and $D06F: LDA $7A -> LDA #$7A (A5 -> A9), so both checks always take the invincible branch. 0 deaths in 12,000 frames. Pro Action Replay 007AFF: the RAM code above, same bot test.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_oxtkpv_oztsye.png"
  },
  {
   "code": "OXTGPV + OZTIYE",
@@ -1021,7 +1023,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). the same two instructions at JP $C6E1 / $D067. 0 deaths in 12,000 frames. Pro Action Replay 007AFF: the RAM code above, same bot test.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_oxtgpv_oztiye.png"
  },
  {
   "code": "OXTZPV + OZTLYE",
@@ -1036,7 +1039,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). The FDS program is the Japanese cart's moved from $C000 to $A000, so the JP code's two instructions sit at $A6E1 / $B067. 0 deaths in 5,000 frames of the random bot (3 deaths and a game over without). A Game Genie does not fit a Famicom Disk System, so this is for emulators' cheat engines only. Pro Action Replay 007AFF: the RAM code above.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_oxtzpv_oztlye.png"
  },
  {
   "code": "0068:02",
@@ -1053,7 +1057,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). RAM $68, lives (DEC / BMI at US $C498): 19 deaths in 12,000 frames, no game over (US and JP). Game Genie: DEC $68 -> LDA $68 at $C498 (JP $C490); same bot: 18 / 16 deaths in 12,000 frames, lives stay 2. FDS dump: 8 deaths in 5,000 frames, no game over (RAM code and SXPZAG, the Game Genie code moved to $A490).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_006802.png"
  },
  {
   "code": "005E:01",
@@ -1070,7 +1075,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). RAM $5E, the stage-clear flag ($CCA1 sets it on the open exit): 11 stages cleared in 6,000 frames with no input (US and JP). Game Genie: the main loop's LDA $5E -> LDA #$5E ($C46E, JP $C466); 11 stages cleared in 6,000 frames with no input (US and JP). FDS dump: 6 stages cleared in 3,000 frames with no input (RAM code).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_005e01.png"
  },
  {
   "code": "Up or Down on ENTER SECRET CODE (GBA releases)",
@@ -1084,7 +1090,8 @@
   "status": "new",
   "verified": "emu",
   "note": "The GBA builds mask the pad with AND #$83 instead of the cart's AND #$8F in both blink loops (Classic NES Series $DACE/$DAEE, Famicom Mini $DAC6/$DAE6). In BizHawk three Ups left the slot blank and three Lefts gave N; on the US cart in Mesen three Ups gave N.",
-  "section": "region"
+  "section": "region",
+  "img": "gba_up_down_code.png"
  },
  {
   "code": "AEZKLL",
@@ -1101,7 +1108,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$02 -> LDA #$00 at $C3AA (operand $C3AB, JP $C3A3), stored to lives $68 at new game Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; lives $68 = 0 at the start (2 without); the first death made $68 = $FF (game over). JP cart (AEZGLL): lives 0, game over on the first death. Pro Action Replay (held every frame): Lives held at 0: one death (bomb at the start) and the game returned to the title; same on US and JP. Tested on both carts (JP: 006800), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AEZZLL (JP address - $2000, same value and compare) gave lives 0, game over on the first death. PAR 006800 also run there (lives held at 0). A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_aezkll.png"
  },
  {
   "code": "PEZKLU",
@@ -1118,7 +1126,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$02 -> LDA #$09 at $C3AA (operand $C3AB, JP $C3A3), stored to lives $68 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; lives $68 = 9 at the start (2 without). JP cart (PEZGLU): lives 9. Pro Action Replay (held every frame): Lives held at 9: a death left LEFT at 9 (so it is infinite lives at 9, not a start value). Tested on both carts (JP: 006809), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so PEZZLU (JP address - $2000, same value and compare) gave lives 9. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_pezklu.png"
  },
  {
   "code": "SZIGAT",
@@ -1135,7 +1144,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: DEC $93 -> LDA $93 at $C650 (JP $C648): the timer byte $93 is no longer decremented Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; timer $93 stayed 200 over 556 frames; without the code 198 -> 194 in 256 frames (one per 64 frames). JP cart (SZGKAT): timer held at 200. Pro Action Replay (held every frame): Timer held at 200 (TIME 200) over 556 frames; same on JP. Tested on both carts (JP: 0093C8), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so SZGXAT (JP address - $2000, same value and compare) gave timer held at 200. PAR 0093C8 also run there. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_szigat.png"
  },
  {
   "code": "VPGKGG",
@@ -1151,7 +1161,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$C8 -> LDA #$96 at $C44B (operand $C44C, JP $C444): stage timer start value $93 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; timer $93 = 148 300 frames into stage 1 (198 without), still counting down (144 after 256 more). JP cart (VPGGGG): timer 148 after 300 frames. No Pro Action Replay form: only the start value changes; a held RAM value would freeze the timer instead Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so VPGZGG (JP address - $2000, same value and compare) gave timer 148 at the start of play. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_vpgkgg.png"
  },
  {
   "code": "VYGKGK",
@@ -1167,7 +1178,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$C8 -> LDA #$FE at $C44B (operand $C44C, JP $C444): stage timer start value $93 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; timer $93 = 252 300 frames into stage 1 (198 without), counting down normally (248 after 256 more). JP cart (VYGGGK): timer 252 after 300 frames. No Pro Action Replay form: only the start value changes; a held RAM value would freeze the timer instead Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so VYGZGK (JP address - $2000, same value and compare) gave timer 252. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_vygkgk.png"
  },
  {
   "code": "ZELGYU",
@@ -1184,7 +1196,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$01 -> LDA #$0A at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 10 when play started (1 without). JP cart (ZEZKYU): stage 10. Pro Action Replay (held every frame): Stage held at 10: the game starts on stage 10, but it stays there: with the stage-clear cheat 005E:01 added, 4 clears in 1,500 frames all reloaded stage 10 (without the hold they reached stage 5). Start value checked on both carts; the stage-lock run was on the JP cart. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so ZEZXYU (JP address - $2000, same value and compare) gave stage 10. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_zelgyu.png"
  },
  {
   "code": "GOLGYL",
@@ -1201,7 +1214,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$01 -> LDA #$14 at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 20 when play started (1 without). JP cart (GOZKYL): stage 20. Pro Action Replay (held every frame): Not run for 20; same byte as the tested 0058:0A and 0058:32 (stage held, so it never advances). Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so GOZXYL (JP address - $2000, same value and compare) gave stage 20. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_golgyl.png"
  },
  {
   "code": "TOLGYU",
@@ -1218,7 +1232,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$01 -> LDA #$1E at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 30 when play started (1 without). JP cart (TOZKYU): stage 30. Pro Action Replay (held every frame): Not run for 30; same byte as the tested 0058:0A and 0058:32 (stage held, so it never advances). Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so TOZXYU (JP address - $2000, same value and compare) gave stage 30. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_tolgyu.png"
  },
  {
   "code": "AXLGYU",
@@ -1235,7 +1250,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$01 -> LDA #$28 at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 40 when play started (1 without). JP cart (AXZKYU): stage 40. Pro Action Replay (held every frame): Not run for 40; same byte as the tested 0058:0A and 0058:32 (stage held, so it never advances). Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AXZXYU (JP address - $2000, same value and compare) gave stage 40. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_axlgyu.png"
  },
  {
   "code": "ZULGYL",
@@ -1252,7 +1268,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$01 -> LDA #$32 at $C3B6 (operand $C3B7, JP $C3AF), stored to the stage byte $58 at new game; CONTINUE (password) is unaffected Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stage $58 = 50 when play started (1 without); screenshot of stage 50 taken. JP cart (ZUZKYL): stage 50. Pro Action Replay (held every frame): Stage held at 50: the game starts on stage 50 and stays on it after each clear (the hold rewrites $58; checked with 0058:0A). Tested on both carts (JP: 005832), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so ZUZXYL (JP address - $2000, same value and compare) gave stage 50. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_zulgyl.png"
  },
  {
   "code": "AXKKALAP",
@@ -1269,7 +1286,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$10 -> LDA #$20 at $C3C7 (operand $C3C8, JP $C3C0): fire $73 at new game Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; fire $73 = $20 (fire 2; $10 without). Fire-ups still stop at $50. JP cart (AXKGALAP): fire $20. Pro Action Replay (held every frame): Fire held at $20 (fire 2): $73 = $20 throughout; fire-ups have no effect while held. Tested on both carts (JP: 007320), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AXKZALAP (JP address - $2000, same value and compare) gave fire $20. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_axkkalap.png"
  },
  {
   "code": "AUKKALAP",
@@ -1286,7 +1304,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$10 -> LDA #$30 at $C3C7 (operand $C3C8, JP $C3C0): fire $73 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; fire $73 = $30 (fire 3; $10 without). JP cart (AUKGALAP): fire $30. Pro Action Replay (held every frame): Not run separately; same byte as the tested 007320 / 007380. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AUKZALAP (JP address - $2000, same value and compare) gave fire $30. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_aukkalap.png"
  },
  {
   "code": "EEKKALAP",
@@ -1303,7 +1322,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$10 -> LDA #$80 at $C3C7 (operand $C3C8, JP $C3C0): fire $73; the blast code compares unsigned against $73 so 8 works. From the code (not run): the fire-up cap at $CF1C only matches exactly $50, so later fire-ups keep adding 1 and past $F0 the value wraps to 0 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; fire $73 = $80 (fire 8; $10 without); blast screenshot taken (bricks stop it on stage 1). JP cart (EEKGALAP): fire $80. Pro Action Replay (held every frame): Fire held at $80 (fire 8): $73 = $80 throughout. Tested on both carts (JP: 007380), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so EEKZALAP (JP address - $2000, same value and compare) gave fire $80. PAR 007380 also run there. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_eekkalap.png"
  },
  {
   "code": "NYXKUIEX",
@@ -1319,7 +1339,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$A0 -> LDA #$FF at $CD2A (operand $CD2B, JP $CD23): fuse $03BE,X set when a bomb is placed (one tick per frame) Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; bomb dropped at the start lived 254 frames (159 without). JP cart (NYXGUIEX): bomb lived 254 frames. No Pro Action Replay form: the fuse is a per-bomb countdown loaded from a ROM constant; no single RAM byte holds it Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so NYXZUIEX (JP address - $2000, same value and compare) gave bomb lived 254 frames (159 without). A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_nyxkuiex.png"
  },
  {
   "code": "AYXKUIEZ",
@@ -1335,7 +1356,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$A0 -> LDA #$70 at $CD2A (operand $CD2B, JP $CD23): per-bomb fuse $03BE,X Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; bomb lived 111 frames (159 without). JP cart (AYXGUIEZ): bomb lived 111 frames. No Pro Action Replay form: the fuse is a per-bomb countdown loaded from a ROM constant; no single RAM byte holds it Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AYXZUIEZ (JP address - $2000, same value and compare) gave bomb lived 111 frames. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_ayxkuiez.png"
  },
  {
   "code": "XZEGNIVZ + PAEKEIGN",
@@ -1352,7 +1374,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDX $74 -> LDX #$09 at $CD07 (JP $CCFF): the free-slot search starts at slot 9 instead of bombs-1 ($74), so 10 slots; $74 itself is unchanged Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; random bot, 1,200 frames: up to 3 bombs out at once (1 without); $74 stayed 0. JP cart (XXNKNGVZ + PAEGEIGN): up to 3 bombs out in the bot run (1 without). Pro Action Replay (held every frame): Bombs-1 held at 9 (10 bombs, the in-game maximum): same bot run, up to 3 out at once (1 without). Tested on both carts (JP: 007409), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so XXNXNGVZ + PAEZEIGN (JP address - $2000, same value and compare) gave up to 3 bombs out in the bot run (1 without). A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_xzegnivz_paekeign.png"
  },
  {
   "code": "OXEKVPSX + AESKNKTA",
@@ -1369,7 +1392,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA $77 -> LDA #$77 at $C98E (JP $C986): the fuse countdown is always skipped; BEQ $CCEE -> BEQ +0 at $CCDE (operand $CCDF, JP $CCD7): B always detonates. $77 itself stays 0 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; bomb still out after 910 frames, B set it off (frame 912); without the code it went off at 159. JP cart (OXEGVPSX + AESGNKTA): bomb out 909 frames until B. Pro Action Replay (held every frame): Detonator held on: bomb still out after 910 frames, B set it off; after a death $77 still read 1. Tested on both carts (JP: 007701), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so OXEZVPSX + AESZNKTA (JP address - $2000, same value and compare) gave bomb still out after 909 frames until B. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_oxekvpsx_aesknkta.png"
  },
  {
   "code": "GXEKLGSA",
@@ -1386,7 +1410,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: STA $77 -> BIT $77 at $C48B (JP $C483): the death reset no longer clears the detonator flag $77 Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; detonator $77 and wall pass $76 set to 1, then death: $77 still 1, $76 back to 0; without the code both 0. JP cart (GXEGLGSA): detonator kept after a death, wall pass lost. Pro Action Replay (held every frame): Detonator held on: $77 read 1 after the death (and from the start, so this is the same as the remote code above). Tested on both carts (JP: 007701), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so GXEZLGSA (JP address - $2000, same value and compare) gave detonator kept after a death, wall pass lost. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_gxeklgsa.png"
  },
  {
   "code": "AESKGUIZ",
@@ -1403,7 +1428,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: BEQ $C40A -> BEQ +0 at $C3DB (operand $C3DC, JP $C3D4): the demo-only setup always runs: $74 = 9, $73 = $40, $77 = 1 (it also writes 0 to $4015 and sets the demo input pointer $AC-$AF; play was unaffected in the test) Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; bombs-1 $74 = 9, fire $73 = $40, detonator $77 = 1 at the start (0, $10, 0 without); the player still answers the pad (walked to column 5) and bot play went on normally. JP cart (AESGGUIZ): $74 = 9, $73 = $40, $77 = 1. Pro Action Replay (held every frame): All three held: $74 = 9, $73 = $40, $77 = 1 at the start and after a death (held, so never lost). Tested on both carts (JP: 007409 + 007340 + 007701), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so AESZGUIZ (JP address - $2000, same value and compare) gave $74 = 9, $73 = $40, $77 = 1 at the start. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_aeskguiz.png"
  },
  {
   "code": "OXVGITSX",
@@ -1420,7 +1446,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA $79 -> LDA #$79 at $C6E5 (JP $C6DD): the flame-pass test in the blast death check is always true Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; stood on a bomb: no death in 980 frames (died at frame ~160 without). JP cart (OXSKITSX): no death standing on the bomb. Pro Action Replay (held every frame): Flame pass held on: stood on the bomb, no death. Tested on both carts (JP: 007901), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so OXSXITSX (JP address - $2000, same value and compare) gave no death standing on the bomb. A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_oxvgitsx.png"
  },
  {
   "code": "OZNKNNPK + AEEGEYPA",
@@ -1437,7 +1464,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: EOR #$01 -> LDA #$00 at $CF7F (JP $CF77): the brick check after LDA $76 always answers \"passable\" Mesen: Mesen 2, NES Bomberman US and JP carts, new game from the title, RAM read back; held Right on row 1 of stage 1: reached column 9-10 (stopped by a brick at column 4 without; JP: 10 vs 5); the death in that run was an enemy, not a blast. JP cart (OZNGNNPK + AANKEYPA): reached column 10-11 (5 without). Pro Action Replay (held every frame): Wall pass held on: same walk reached column 9-10 (4-5 without). Tested on both carts (JP: 007601), same result. Mesen 2 cheat engine on the disk (with the BIOS): the program sits $2000 lower, so OZNZNNPK + AANXEYPA (JP address - $2000, same value and compare) gave reached column 13 (5 without). A Game Genie can't be fitted to a Famicom Disk System, so the disk code is for emulators; the Pro Action Replay RAM is the cart's.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_oznknnpk_aeegeypa.png"
  },
  {
   "code": "Score 999,999,900, then any points",

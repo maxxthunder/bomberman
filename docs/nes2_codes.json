@@ -1113,7 +1113,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Bonus Stage\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PONEJACK Dynablaster (Europe): typed in Mesen, the same result.",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_kjh5c13d.png"
  },
  {
   "code": "K2JG2JF4",
@@ -1125,7 +1126,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Long Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBOLD Dynablaster (Europe): typed in Mesen, the same result.",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_k2jg2jf4.png"
  },
  {
   "code": "K138BHDJ",
@@ -1137,7 +1139,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PACHINKO Dynablaster (Europe): typed in Mesen, the same result.",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_k138bhdj.png"
  },
  {
   "code": "K2JG2G1H",
@@ -1149,7 +1152,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Normal Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBMAN Dynablaster (Europe): typed in Mesen, the same result.",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_k2jg2g1h.png"
  },
  {
   "code": "K1HB3G1H",
@@ -1161,7 +1165,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Semi-Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PANICMAN Dynablaster (Europe): typed in Mesen, the same result.",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_k1hb3g1h.png"
  },
  {
   "code": "K2JG2135",
@@ -1173,7 +1178,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Short Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PBOMBACE Dynablaster (Europe): typed in Mesen, the same result.",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_k2jg2135.png"
  },
  {
   "code": "EEGBLLJE",
@@ -1714,7 +1720,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Sound Test\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $054F = 1; the game goes to the sound room ($CCB7) instead of a stage. typed with the pad in Mesen (US); the RAM it sets read back. The same code in the other cart: PCDEFGAB Dynablaster (Europe): typed in Mesen, the same result.",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_k3456712.png"
  },
  {
   "code": "PONEJACK",
@@ -1725,7 +1732,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Bonus Stage\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $0550 = 1: one life, the bonus stage ($CCC0). typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: KJH5C13D",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_ponejack.png"
  },
  {
   "code": "PBOMBOLD",
@@ -1736,7 +1744,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Long Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 105. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2JF4",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_pbombold.png"
  },
  {
   "code": "PACHINKO",
@@ -1747,7 +1756,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 1 (detonator); copied to the player at each stage start in NORMAL MODE only ($CE0C). typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K138BHDJ",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_pachinko.png"
  },
  {
   "code": "PBOMBMAN",
@@ -1758,7 +1768,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Normal Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 75, the power-on value. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2G1H",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_pbombman.png"
  },
  {
   "code": "PANICMAN",
@@ -1769,7 +1780,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Semi Manual Detonator\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03EE = 2. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K1HB3G1H",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_panicman.png"
  },
  {
   "code": "PBOMBACE",
@@ -1780,7 +1792,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "GameFAQs \"Small Primer Time\", also in other published notes. One of the seven codes the decoder compares before the checksum ($05:96C6, table $05:9703, stored in JP letters for both carts): $03ED = 45 (normal 75), the start value of each bomb's timer $6061,X. typed with the pad in Mesen (JP); the RAM it sets read back. The same code in the other cart: K2JG2135",
-  "section": "Secrets"
+  "section": "Secrets",
+  "img": "secret_pbombace.png"
  },
  {
   "code": "PCDEFGAB",
@@ -1913,7 +1926,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). RAM $04E6, the vest timer flag: both kill routines ($CEA4 fire, $CEC4 enemy contact; JP $CE10/$CE30) return while it is non-zero. Random bot, 12,000 frames of NORMAL MODE: 0 deaths (US and JP; 10-11 deaths without). Game Genie: the two codes below, same bot test. Dynablaster (Europe): the same RAM; 0 deaths in the same test.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_04e601.png"
  },
  {
   "code": "AVZGKT + AVGGKT",
@@ -1928,7 +1942,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). RTS at $CEA4 and $CEC4, the two kill routines. 0 deaths in 12,000 frames. Pro Action Replay 04E601: the RAM code above, same bot test.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_avzgkt_avggkt.png"
  },
  {
   "code": "ATPGET + ATLGET",
@@ -1943,7 +1958,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). RTS at JP $CE10 and $CE30. 0 deaths in 12,000 frames. Pro Action Replay 04E601: the RAM code above, same bot test.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_atpget_atlget.png"
  },
  {
   "code": "AVPKVT + AVLKVT",
@@ -1958,7 +1974,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). RTS at Dynablaster's two kill routines, $CE9E and $CEBE (US $CEA4/$CEC4). 0 deaths in 12,000 frames of the random bot (12 without). Pro Action Replay 04E601: the RAM code, same test.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_avpkvt_avlkvt.png"
  },
  {
   "code": "04E5:02",
@@ -1975,7 +1992,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). RAM $04E5, lives (DEC / BMI at $CAC4): 12 deaths in 12,000 frames, no game over (US and JP). Game Genie: DEC $04E5 -> LDA $04E5 at $CAC4 (JP $CA30); same bot: 12 deaths in 12,000 frames, lives stay 2 (US and JP). Dynablaster (Europe): the same RAM, 11 deaths, no game over; Game Genie SXUKVXVK (DEC $04E5 at $CABE): 12 deaths, lives stay 2.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_04e502.png"
  },
  {
   "code": "00B7:F0",
@@ -1990,7 +2008,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). RAM $B7, the stage-clear counter (the main loop ends the stage when it reaches $F0, $CA19): 16 stage changes in 8,000 frames, to area 3. Game Genie: CMP #$F0 -> CMP #$00 at $CA1C, so the stage-end test always passes; 18 stage changes in 8,000 frames, to area 3.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_00b7f0.png"
  },
  {
   "code": "00A9:F0",
@@ -2005,7 +2024,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). the same counter at JP $A9 (the JP zero page sits $0E lower): 16 stage changes in 8,000 frames. Game Genie: the same CMP at JP $C988; 18 stage changes in 8,000 frames, to area 3.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_00a9f0.png"
  },
  {
   "code": "00B6:F0",
@@ -2020,7 +2040,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (custom). Dynablaster keeps the stage-clear counter at $B6 (the US $B7 does nothing here): 16 stage changes in 8,000 frames, to area 3. Game Genie: CMP #$F0 -> CMP #$00 at $CA16; 16 stage changes in 8,000 frames.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_00b6f0.png"
  },
  {
   "code": "AENIYZPA",
@@ -2036,7 +2057,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Mesen 2 cheat engine (Game Genie). ROM byte $D2F7 (JP $D263) is 1 = play the recorded demo ($05:9A01). Set to 0, the demo code stores (button, frame count) pairs at ($B9),Y, the demo's own ROM table, instead: in Mesen the demo stood still and the store at $05:9A22 ran on each button change (3 times in 3,000 frames; 0 without the code, 915 playback calls). On a cart those stores hit the MMC1 registers; the recorder needs RAM there (development hardware) Mesen 2, 12,000 frames of the title and attract demo with no input: JP AAVILZPA (switch $D263) and Dynablaster AENIPZPA (switch $D2F1) each ran the record store (JP $05:9A12, EU $05:9A22) 34 times; 0 without, and the US code AENIYZPA does nothing on either.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_aeniyzpa.png"
  },
  {
   "code": "BATTLE MODE without a Four Score (US)",
@@ -2140,7 +2162,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$02 -> LDA #$00 at $C97F (operand $C980, JP $C8EC): lives $04E5 at new game Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; lives $04E5 = 0 at the start (2 without). JP cart (AEVKKAZA): lives 0. Pro Action Replay (held every frame): Lives held at 0 (LEFT 0): one death (own bomb) and the game ended (JP run screenshot after the death). Tested on both carts (JP: 04E500), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: AANKXPZA: lives $04E5 = 0; the US code does nothing there (lives 2).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_aeegepza.png"
  },
  {
   "code": "IEEGEPZA",
@@ -2157,7 +2180,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$02 -> LDA #$05 at $C97F (operand $C980, JP $C8EC) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; lives $04E5 = 5 at the start (2 without). JP cart (IEVKKAZA): lives 5. Pro Action Replay (held every frame): Not run separately; same byte as the tested 04E500 / 04E508 (held, so lives never drop). Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: IANKXPZA: lives 5.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_ieegepza.png"
  },
  {
   "code": "AEEGEPZE",
@@ -2174,7 +2198,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$02 -> LDA #$08 at $C97F (operand $C980, JP $C8EC) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; lives $04E5 = 8 and the status bar shows LEFT 8 (screenshot). JP cart (AEVKKAZE): lives 8 (LEFT 8). Pro Action Replay (held every frame): Lives held at 8: after a death $04E5 still 8 (so infinite lives at 8, not only a start value). Tested on both carts (JP: 04E508), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: AANKXPZE: lives 8 (LEFT 8); PAR 04E508 held lives at 8 there too.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_aeegepze.png"
  },
  {
   "code": "GXXONEVK",
@@ -2191,7 +2216,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: DEC $055B -> BIT $055B at $98AF (bank 5; JP DEC $0559 at $989F): the seconds digit is never decremented, so the tens and minutes never change either Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; clock stayed at 2:00 over 300 frames of play (1:95 without); the frame counter still runs. JP cart (GXOONEVK): seconds stayed 0 over 300 frames. Pro Action Replay (held every frame): Frame counter of the clock held at 59 ($3B): the clock stayed frozen (seconds 0, frames 59) over 300 frames. Tested on both carts (JP: 05583B), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: the US Game Genie code works (same address $98AF; the operand reads $0559 there): clock stayed 2:00 over 300 frames. The Pro Action Replay form is the JP one, 05583B (clock RAM $0558 as in JP), which also froze it.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_gxxonevk.png"
  },
  {
   "code": "LVXOUELL",
@@ -2207,7 +2233,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$3B -> LDA #$63 at $98AA (operand $98AB, JP $989B): reload of the clock frame counter $055A (JP $0558), 59 -> 99 Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; 3 clock seconds passed in 300 frames of play (5 without); the frame counter reached 73 in another run (never above 59 without). JP cart (LVOOUELL): 3 clock seconds in 300 frames (5 without). No Pro Action Replay form: the frames per clock second are a ROM constant; holding the counter would stop the clock instead Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: 3 clock seconds in 300 frames (5 without; the clock still counts per 60 frames on the 50 Hz cart).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_lvxouell.png"
  },
  {
   "code": "TOXOUELU",
@@ -2223,7 +2250,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$3B -> LDA #$1E at $98AA (operand $98AB, JP $989B): frame counter reload 59 -> 30 Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; 8 clock seconds passed in 300 frames of play (5 without). JP cart (TOOOUELU): 8 clock seconds in 300 frames (5 without). No Pro Action Replay form: the frames per clock second are a ROM constant; holding the counter would stop the clock instead Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: 8 clock seconds in 300 frames (5 without).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_toxouelu.png"
  },
  {
   "code": "AEKAZYLA",
@@ -2240,7 +2268,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: BEQ $87C6 -> BEQ +0 at $87C1 (operand $87C2, bank 5, same address in JP): the B-button check after LDA $AF (JP $A1) always jumps to the detonate routine; $AF stays 0, so the fuse check at $BA85 still counts down. Compare $03 also matches bank 2 $87C2 (US and JP): STA $0357 -> STA $0057 in the sound code there Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; a bomb left alone still went off by itself at frame 150; B pressed at frame ~40 set one off at frame 41 (150 frames without the code, B does nothing); $AF stayed 0. Side effect seen: $0057 read 16 when play started (0 without); play was otherwise normal. JP cart (AEKAZYLA): B set the bomb off at frame 41 (150 without); no $0057 change seen. Pro Action Replay (held every frame): Detonator byte held at 2 (semi-remote, the mode the secret code sets): B set the bomb off at frame 41, same as the Game Genie code and left alone it went off at frame 150 like the code. 00AF01 instead gives the full remote (bomb still out after 309 frames). Tested on both carts (JP: 00A102), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: B set the bomb off at frame 41 (150 without). The detonator byte is $AE here (zero page one lower): PAR 00AE02 gave the same.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_aekazyla.png"
  },
  {
   "code": "YNEOLXLK",
@@ -2257,7 +2286,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$4B -> LDA #$7F at $928A (operand $928B, bank 5, same in JP): power-on value of the fuse $03ED (75 -> 127 ticks of 2 frames). Runs only on a cold boot (no KOSAKA!! signature in RAM), so the code has no effect if switched on after power-up or after a reset; the PBOMB secret codes still override it Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; $03ED = 127; bomb lived 254 frames (150 without). JP cart (YNEOLXLK): fuse 127, bomb lived 254 frames. Pro Action Replay (held every frame): Fuse byte held at 127: bomb lived 254 frames; also works mid-game, since each bomb copies $03ED when placed. Tested on both carts (JP: 03ED7F), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: fuse 127, bomb lived 254 frames; PAR 03ED7F the same.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_yneolxlk.png"
  },
  {
   "code": "AXEOLXLG",
@@ -2274,7 +2304,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$4B -> LDA #$20 at $928A (operand $928B, same in JP): fuse $03ED 75 -> 32, at a cold boot only (as above) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; $03ED = 32; bomb lived 64 frames (150 without). JP cart (AXEOLXLG): fuse 32, bomb lived 64 frames. Pro Action Replay (held every frame): Fuse byte held at 32: bomb lived 64 frames. Tested on both carts (JP: 03ED20), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code: fuse 32, bomb lived 64 frames.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_axeolxlg.png"
  },
  {
   "code": "GXOLSXVS",
@@ -2291,7 +2322,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: DEC $6061,X -> BIT $6061,X at $BA95 (bank 5; JP $BA23): bomb fuses never count down Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; bomb still out after 450 frames and no death (it went off at 150 without). JP cart (GZXLUXVS): bomb still out after 450 frames. Pro Action Replay (held every frame): WRAM $6000 held at 1 (the flag that freezes fuses when a battle ends; nothing else reads it): bomb still out after 450 frames. Tested on both carts (JP: 600001), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: GZVLOXVS (DEC $6061,X at $BA61): bomb still out after 450 frames; the US code does nothing there (bomb went off at 150). PAR 600001 works unchanged.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_gxolsxvs.png"
  },
  {
   "code": "GAXKSTAA + GASKKTAA",
@@ -2308,7 +2340,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA #$00 -> LDA #$04 at $CE2C (operand $CE2D, JP $CD99): the new-game reset writes 4 to $AD, $AE, $B0, $B3, $B4, $B5; speed $B3 = 4 is full speed and $B4 (the flag the $90C2 item sets) non-zero sends the game to the bonus stage after a clear ($CA3F); the rest does nothing, since the pass checks want exactly 1 and $B0 is cleared at stage start. Table byte $CE5C (JP $CDC8) 0 -> 4: NORMAL MODE fire-1 Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; in play: fire-1 $93 = 4, speed $B3 = 4, $AD = $AE = 4, $B0 = 0 (all 0 without); holding Right stopped at the same brick (column 3) as without, so no wall pass; standing on a bomb still killed; stuck at column 2 in the bomb-pass walk. With the stage-clear cheat 00B7:F0: after the first clear the clock showed 0:30 and stage progress fell one stage behind the run without the code (stages 1/3/4 vs 2/4/5 at 600/1,200/1,800 frames), the bonus trip that $B4 asks for at $CA3F. JP cart (GEOKOIAA + GEKKEIAA): fire-1 4, speed 4, $9F/$A0 = 4, stopped at column 3 like without. Pro Action Replay (held every frame): Fire-1 and speed held at 4: fire 4 and speed 4 in play (holding the working copy $AA instead also works; it is copied back to $93). Tested on both carts (JP: 008504 + 00A504), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: GAXGNTAA + GASGVTAA (operands $CE27 and $CE56): fire-1, speed, $AC, $AD and $B3 = 4 in play, no wall pass (column 2). PAR 009204 + 00B204 (zero page one lower) gave fire 4 and speed 4.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_gaxkstaa_gaskktaa.png"
  },
  {
   "code": "OXXAPYSX + PEXAZNVZ",
@@ -2325,7 +2358,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA $AE -> LDA #$01 at $87A1 (bank 5; JP same address, operand $A0), then EOR #$01 gives 0: the bomb-cell check always answers passable Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; long fuse held (03ED:FF), dropped a bomb, stepped right, held Left: walked back onto the bomb (column 1); without the code stuck at column 2. JP cart (OXXAPYSX + PEXAZYEZ): walked back onto the bomb (column 1; 2 without). Pro Action Replay (held every frame): Bomb pass held on: same walk got back onto the bomb (column 1). Tested on both carts (JP: 00A001), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: OXXAPYSX + PEXAZNSZ (the second code compares the moved operand $AD): walked back onto the bomb (column 1). PAR 00AD01 the same.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_oxxapysx_pexaznvz.png"
  },
  {
   "code": "OXOEGYSX + PEOEINSZ",
@@ -2342,7 +2376,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: LDA $AD -> LDA #$01 at $879C (bank 5; JP same address, operand $9F), then EOR #$01 gives 0: the brick check always answers passable Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; held Right on the top row of 1-1: reached column 13 (stopped at 3 without). JP cart (OXOEGYSX + PEOEINNP): reached column 13 (3 without). Pro Action Replay (held every frame): Wall pass held on: same walk reached column 13. Tested on both carts (JP: 009F01), same result. Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: OXOEGYSX + PEOEINKZ (compare on the moved operand $AC): reached column 13 (2 without); the US pair stopped at column 2. PAR 00AC01 also reached 13.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_oxoegysx_peoeinsz.png"
  },
  {
   "code": "EASPTANG",
@@ -2358,7 +2393,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $80, so the $ runs the handler at $9080 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $9080 (to $90C7 without the code), fire $AA 0 -> 1. JP cart (EASPTANG): jump to $9080, fire +1. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $9080 ($90C7 without), fire +1.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_easptang.png"
  },
  {
   "code": "GYSPTANG",
@@ -2374,7 +2410,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $74, so the $ runs the handler at $9074 instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $9074 (to $90C7 without the code), bombs $A9 0 -> 1. JP cart (GYSPTANG): jump to $9074, bombs +1. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $9074 ($90C7 without), bombs +1.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_gysptang.png"
  },
  {
   "code": "KASPTANK",
@@ -2390,7 +2427,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Game Genie: item jump table at $9044 (bank 5, same in JP), entry 9 ($) low byte at $9056: $C7 -> $8C, so the $ runs the handler at $908C instead of $90C7 (random points) Mesen: Mesen 2, Bomberman II US cart, NORMAL MODE from a cold boot, RAM read back; put a $ item under the player and let the game pick it up: the jump went to $908C (to $90C7 without the code), detonator $AF 0 -> 1. JP cart (KASPTANK): jump to $908C, detonator 1. No Pro Action Replay form: the item effect comes from a ROM jump table; no RAM byte selects it Mesen 2, Dynablaster (Europe), NORMAL MODE from a cold boot: same code (the jump table at $9044 is unchanged): a $ put under the player jumped to $908C ($90C7 without), detonator 1.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_kasptank.png"
  },
  {
   "code": "OPSPTANG",

@@ -107,7 +107,8 @@
   "status": "known",
   "verified": "mesen",
   "note": "Already known for the 1990 card. Same code here: $02:C656 compares the letters with $C66C and sets $341B = $FF, the decoder rejects BOMSOUND, the next valid code opens the sound test $02:C2A5 (I/II step $00-$39, Run plays, Select stops). Only reachable through the patched-in password screen: BOMSOUND, END, MUVWLNPC, END gave SOUND-00 in Mesen",
-  "section": "Hidden screens (unreachable)"
+  "section": "Hidden screens (unreachable)",
+  "img": "bomsound_then_code.png"
  },
  {
   "code": "Hi score hundreds digit 3, last attract demo not cut, hold Down+Run+Select+I+II as the 1P intro ends",
@@ -142,7 +143,8 @@
   "status": "unchecked",
   "verified": "mesen",
   "note": "New routine $00:E2E9 ORs the held/new/previous bytes of all five ports into $33/$34/$35, and the title ($01:A584) and battle menus ($08:6131, $08:62F6, ...) read $34. The 1990 card's battle menus read pad 1 ($220A, $08:7A8F). In Mesen Run on pad 4 alone started the game",
-  "section": "Controllers"
+  "section": "Controllers",
+  "img": "pad4_run_title.png"
  },
  {
   "code": "00240A:4C + 00240B:A5 + 00240C:C3",
@@ -153,7 +155,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "$01:A40A JSR $E24E -> JMP $C3A5 (the unreachable password screen). Password screen shown; MUVWLNPC -> ROUND 1, stage with broken background tiles. Same bytes as patches/pceub_password_1p.ips",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_password_screen.png"
  },
  {
   "code": "00240A:4C + 00240B:A5 + 00240C:C3 + 1F141B:FF",
@@ -164,7 +167,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "RAM $341B (BOMSOUND flag) read as $FF: MUVWLNPC -> SOUND-00",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_password_sound_test.png"
  },
  {
   "code": "00240A:4C + 00240B:A5 + 00240C:C3 + 00200A:80 + 00200B:0B",
@@ -175,7 +179,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "$01:A00A BNE -> BRA $A017 skips the button/demo/high-score tests; after MUVWLNPC the room code $01:A017 ran",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_password_select_room.png"
  },
  {
   "code": "patches/pceub_password_1p.ips",
@@ -186,7 +191,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "file $240A: 20 4E E2 -> 4C A5 C3; the patched file showed the password screen, MUVWLNPC started ROUND 1 (stage tiles garbled: the 1P stage graphics are gone)",
-  "section": "patch"
+  "section": "patch",
+  "img": "pceub_password_1p.png"
  },
  {
   "code": "patches/pceub_select_room.ips",
@@ -197,7 +203,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "adds file $200A: D0 F4 -> 80 0B; the patched file entered the room ($01:A017 ran) after MUVWLNPC",
-  "section": "patch"
+  "section": "patch",
+  "img": "pceub_select_room.png"
  },
  {
   "code": "Tunes 2D and 39 (sound test, with the patch)",

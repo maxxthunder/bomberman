@@ -107,7 +107,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark, cart RAM: the 30-entry roster $A110 + 8 x id ([owned, id, level, three stats, 0, 0]) is the same in all five versions; only the stages that hand them out differ. All 30 owned at once in Mesen (all five versions): every card shows. 80vv12A1 + 8 x id sets the level to vv.",
-  "section": "Charaboms"
+  "section": "Charaboms",
+  "img": "cheat_800110a1_draco.png"
  },
  {
   "code": "C32-EBA-C41",
@@ -126,7 +127,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "Game Genie, compare $CA: $02:52EB JP Z -> JP, so the hit test ($53:4000, via $00:2A0F) never reaches the dying state $3C ($02:5356). Same address and bytes in all five versions. Bot 6,000 frames of 1-01 in each of the five versions: 0 hits (8-9 without). GameShark: the player's flash timer $C752 (+$52, tested at $02:52E0 before the hit test) held at $10; bot 6,000 frames of 1-01: 0 hits in all five versions.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_c32ebac41.png"
  },
  {
   "code": "0103F7C2",
@@ -145,7 +147,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "GameShark: lives $C2F7 (decremented at $02:709F after a death; 0 = game over) held at 3. Bot 6,000 frames in each version: 11-13 deaths, lives stay 3, no game over. Game Genie: DEC A -> AND A at $02:709F (Ain $02:70D0); bot 6,000 frames: 11-13 deaths, lives stay 3 (all five).",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_0103f7c2.png"
  },
  {
   "code": "Ain Version: any new game",

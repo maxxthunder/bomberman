@@ -329,7 +329,8 @@
   "status": "new",
   "verified": "mesen",
   "note": "After an island's last round the game plays the rescue scene ($00:3CB9, THANK YOU! KID!). Before it (not on Faria), it adds the owned panels' prices to the gold as game over does, runs the password encoder ($01:4650, JP $01:4635) into the screen map at $9C0A, and puts the gold back. That map is never displayed (the window is off and the palette blank) and is wiped before the next screen, so only game over ever shows a password. Read from VRAM in Mesen after clearing Jagoraz with 300 gold and 600 in panels: 6L1PLRCW (Atomic Punk) and 6J1MJOBS (Bomber Boy), which decode to Jagoraz cleared, 900 gold. Dynablaster (Europe): the same bytes. Static: Bomberman Collection carries Bomber Boy's 8 banks byte-identical (banks 16-23), so the same code and data run there.",
-  "section": "unused"
+  "section": "unused",
+  "img": "hidden_password_map.png"
  },
  {
   "code": "Tune 04; effects 02, 06, 07, 0C, 0E, 11, 16-19",
@@ -374,7 +375,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $00:3C87 RET NZ (C0) -> RET (C9) in the Game A clock routine ($00:3C7D: DEC frame counter $C0EE, then DEC time $C0EF); it now always returns before the time byte is decremented. Same bytes at the same address in Bomber Boy. BizHawk: US and JP: new game, Hevol, round start; $C0EF sampled every 120 frames: without 199,198,197,196,195... (stops when the player dies); with the code 200 x12. GameShark (held every frame): Holds $C0EF at 200: US and JP stayed 200 for 1,440 frames (one 199 blip in US between writes). Not checked: the round-end TIME tally counts $C0EF down, so a held value may stall it. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $00:3C87; the Game A round clock stayed 200 for 1,440 frames with the code (199 -> 189 without); GameShark 01C8EFC0 also held 200 on both.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_c9c87ce69.png"
  },
  {
   "code": "21E-D4D-C41 + 09E-38D-E66",
@@ -391,7 +393,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: 21E-D4D-C41: $00:2ED4 JP Z,$2F37 (CA) -> LD HL,$2F37 (21), so the buy routine no longer refuses panels 3-8 whose island bit in $C0E9 is clear. 09E-38D-E66: $00:2E38 CP $03 -> CP $09 in the display check ($00:2E33), so panels 0-8 show PRICE/EFFECT instead of ???. The first code alone already lets you buy; the second only reveals the name and price. BizHawk: US and JP: new game (islands 0, 100 gold), shop BUY, cursor to the 4th icon (SPEED UP, a ? icon), A. Without: gold stays 100, PRICE/EFFECT = ???. With both: PRICE 20 / EFFECT SPEED UP, gold 100 -> 80, YOUR PANELS 8 -> 9. With only 21E-D4D-C41: still ??? but gold 100 -> 80. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $00:2ED4 / $00:2E38; buying the 4th (locked) panel took gold 100 -> 80 with both codes and with 21E-D4D-C41 alone, 100 -> 100 without.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_21ed4dc41.png"
  },
  {
   "code": "FF8-E3F-7FB",
@@ -409,7 +412,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $00:08E3, operand of LD A,$64 (new-game gold low byte, stored to $C0E0) -> $FF. BizHawk: US and JP: new game, $C0E0/$C0E1 on the map: 100 without, 255 with. GameShark (held every frame): Holds gold at 255 (it never goes down): US/JP shop showed 255 and stayed 255 after buying. A held amount, not a starting one. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): new Game A gold 255 (100 without); GameShark 01FFE0C0 + 0100E1C0 held 255 on both.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_ff8e3f7fb.png"
  },
  {
   "code": "198-E8F-E6A",
@@ -427,7 +431,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $00:08E8, operand of LD A,$00 (new-game gold high byte, stored to $C0E1) -> $19, so gold = $1964 = 6,500. BizHawk: US and JP: new game, gold read 6500 (100 without). GameShark (held every frame): US: holds gold at 6,500; the shop showed 6500 and stayed 6500 after a purchase. Same RAM in JP (not run separately). Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): new Game A gold 6,500 (100 without); the GameShark form (same RAM) was not run there.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_198e8fe6a.png"
  },
  {
   "code": "010-85B-E62",
@@ -445,7 +450,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $01. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 1 (2 without). JP: $FF94 = 1; a bot lost one (1 -> 0). GameShark (held every frame): Not run for this value; 012894FF and 010294FF were (the held value came back after each death), so this holds the count and acts as infinite lives. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $02:4085; a new Game B started with $FF94 = 1 (a death took it to 0) (2 without). Mesen's cheat engine did not hold the GameShark $FF94 (HRAM) form on these carts, so that form is unconfirmed here.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_01085be62.png"
  },
  {
   "code": "050-85B-E62",
@@ -463,7 +469,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $05. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 5 (2 without); a bomb-dropping bot lost one (5 -> 4). Same bytes in JP. GameShark (held every frame): Not run for this value; 012894FF and 010294FF were (the held value came back after each death), so this holds the count and acts as infinite lives. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $02:4085; a new Game B started with $FF94 = 5 (2 without). Mesen's cheat engine did not hold the GameShark $FF94 (HRAM) form on these carts, so that form is unconfirmed here.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_05085be62.png"
  },
  {
   "code": "0A0-85B-E62",
@@ -481,7 +488,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $0A. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 10 (2 without). Same bytes in JP. GameShark (held every frame): Not run for this value; 012894FF and 010294FF were (the held value came back after each death), so this holds the count and acts as infinite lives. Mesen 2 plus static: the operand at $02:4085 is the same in Dynablaster and Bomberman Collection, and the 1, 5 and 40 forms of this code gave those start lives there; this value was not run separately.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_0a085be62.png"
  },
  {
   "code": "140-85B-E62",
@@ -499,7 +507,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $14. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 20 (2 without); a bomb-dropping bot lost one (20 -> 19). Same bytes in JP. GameShark (held every frame): Not run for this value; 012894FF and 010294FF were (the held value came back after each death), so this holds the count and acts as infinite lives. Mesen 2 plus static: the operand at $02:4085 is the same in Dynablaster and Bomberman Collection, and the 1, 5 and 40 forms of this code gave those start lives there; this value was not run separately.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_14085be62.png"
  },
  {
   "code": "280-85B-E62",
@@ -517,7 +526,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $02:4085, operand of LD A,$02 before LDH ($FF94),A (Game B spare lives at a new game) -> $28. The HUD shows the spare count. BizHawk: US: new Game B, $FF94 = 40 (2 without). JP: $FF94 = 40; a bot lost one (40 -> 39). GameShark (held every frame): Holds $FF94 at 40: after a death it went 40 -> 39 -> 40, so it is infinite lives at 40 rather than a starting count. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $02:4085; a new Game B started with $FF94 = 40 (2 without). Mesen's cheat engine did not hold the GameShark $FF94 (HRAM) form on these carts, so that form is unconfirmed here.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_28085be62.png"
  },
  {
   "code": "A71-7CB-19E",
@@ -535,7 +545,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $02:417C DEC A (3D) -> AND A (A7) in the death path ($02:4176: LDH A,($FF94); game over if 0; DEC; store), so $FF94 is stored back unchanged. BizHawk: US and JP: same 4,000-frame bot run in Game B; without the code $FF94 went 2 -> 1 -> 0 and game over; with it $FF94 stayed 2 through repeated deaths. GameShark (held every frame): US and JP: same bot run; $FF94 dropped to 1 at each death and was put back to 2 the next frame (six deaths, never game over). Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): same bytes at $02:417C; random bot in Game B for 4,000 frames: $FF94 stayed 2 through the deaths (2 -> 1 -> 0 without). GameShark 010294FF ($FF94, HRAM) did not hold in Mesen.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_a717cb19e.png"
  },
  {
   "code": "C93-389-E69",
@@ -553,7 +564,8 @@
   "status": "known",
   "verified": "emu",
   "note": "Game Genie: $02:6338, high byte of LD A,($C0EF) in the Game B clock ($02:6328) -> $C9, so it reads $C9EF (never written, 0) instead of the time: AND A / RET Z returns before the DEC, and $C0EF is never decremented. BizHawk: US and JP: new Game B, $C0EF every 120 frames: 199,197,195,193,191 without; 200 x5 with ($C9EF = 0). GameShark (held every frame): US and JP: $C0EF stayed 200 over 600 frames. Mesen 2 (Dynablaster, and Bomberman Collection through its menu; cheat engine): Bomberman Collection takes C93-389-E69 unchanged (Game B clock 200 x5; 199 -> 191 without). Dynablaster's bank 2 is shifted 21 bytes, so the operand is at $02:634D: C93-4D9-E69 held the clock at 200 there, while C93-389-E69 does nothing on Dynablaster (199 -> 191). GameShark 01C8EFC0 held 200 on both.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_c93389e69.png"
  },
  {
   "code": "VS MODE with a link cable",

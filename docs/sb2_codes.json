@@ -193,7 +193,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$CC:2152: each of pads 1-4 cycles its own colour $1CB7/$1CB9/$1CBB/$1CBD through 15 values. Colours another player already has are skipped."
+  "note": "$CC:2152: each of pads 1-4 cycles its own colour $1CB7/$1CB9/$1CBB/$1CBD through 15 values. Colours another player already has are skipped.",
+  "img": "battle_select_colour.png"
  },
  {
   "code": "C15B4001",
@@ -311,7 +312,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "$1CCD is the chosen battle stage. Checked with Mesen's cheat engine (USA): the stage select shows 11 / 12 and the battle is the boxing ring / trampolines. Caravan: entered in Mesen's cheat engine, the select shows 11 but the battle loads retail stage 10's forest arena ($1A = $0B), because its stage table maps 10-15 to $0B."
+  "note": "$1CCD is the chosen battle stage. Checked with Mesen's cheat engine (USA): the stage select shows 11 / 12 and the battle is the boxing ring / trampolines. Caravan: entered in Mesen's cheat engine, the select shows 11 but the battle loads retail stage 10's forest arena ($1A = $0B), because its stage table maps 10-15 to $0B.",
+  "img": "cheat_7e1ccd0a_0b.png"
  },
  {
   "code": "BOMB TYPE 4 / 8 in the debug menu",
@@ -359,14 +361,15 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Same value as the debug menu's NO DEATH: a hit takes a heart only below $80. Own bomb in 1-1: he flashed and played on (without the code he died and 1-1 restarted). Game Genie: a hit with no hearts goes to the heart-loss flash instead of dying (JML $C0:A675 at $C0:833C -> $C0:834A, BEQ at $C0:A650 and $C1:4180 -> the flash, JML at $C1:5567 -> $C1:5576); Mesen, all five: own bomb in 1-1, he played on with his kit (without it he died and lost it)."
+  "note": "Same value as the debug menu's NO DEATH: a hit takes a heart only below $80. Own bomb in 1-1: he flashed and played on (without the code he died and 1-1 restarted). Game Genie: a hit with no hearts goes to the heart-loss flash instead of dying (JML $C0:A675 at $C0:833C -> $C0:834A, BEQ at $C0:A650 and $C1:4180 -> the flash, JML at $C1:5567 -> $C1:5576); Mesen, all five: own bomb in 1-1, he played on with his kit (without it he died and lost it).",
+  "img": "cheat_7e80ef90.png"
  },
  {
-  "code": "7E80E003 7E80E109 7E80E209",
+  "code": "7E80F003 7E80F109 7E80F209",
   "devices": {
-   "Pro Action Replay": "7E80E003 7E80E109 7E80E209"
+   "Pro Action Replay": "7E80F003 7E80F109 7E80F209"
   },
-  "effect": "Speed 3, 9 bombs, fire 9 (HUD 10)",
+  "effect": "Speed 3, 9 bombs, fire 9",
   "versions": [
    "us",
    "eu",
@@ -377,7 +380,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Player 1 kit $7E:80E0-$80E2; RAM checked after a bomb. No Game Genie form: speed, bombs and fire are read through the player pointer at about 20 places (and copied to +$F0-$F2), and written only at game start, by pickups and by the R switch C022F301 (which gives everything)."
+  "note": "Player 1's live kit is $7E:80F0-$80F2: $F0 the speed index (read every frame at $C0:C2A8, table $C5:FB07), $F1 the bombs in hand ($C0:311D refuses to lay at 0; held at 9 by the code, so it never runs down), $F2 the blast length given to each new bomb ($C0:3597, bomb +$07). The stored kit $80E0-$80E2 behind them reaches play only where the game copies it, so holding those three changes nothing on its own: $F0 and $F2 are refreshed from $E0/$E2 by the pickup handlers ($C0:9B93, $C0:9B01) and the resync at $C0:36BF, and $F1 is recomputed as $E1 - $F8 whenever a bomb is removed ($C0:E4A4). Add 7E80E109 for the HUD bomb digit, which reads $80E1 ($C1:1A26); the HUD fire digit is $80F2 plus 1, capped at 9 ($C1:1A39). No Game Genie form: these are written at game start and by pickups. Mesen, USA, codes on from the password screen: applied velocity 2 instead of 1, two bombs on the field at once, a full-length blast. Same addresses in all five ROMs."
  },
  {
   "code": "7E80F304",
@@ -396,7 +399,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Bomb type $7E:80F3; 4 checked in RAM, types checked on screen through the debug menu earlier. Game Genie: LDA [$6A],Y -> LDA #$04 at $C0:350B, the type load copied to each new bomb (+$42); Mesen, all five: the bomb laid in 1-1 got type 4 (0 without)."
+  "note": "Bomb type $7E:80F3, copied into each new bomb at +$42 and into its flag word as $8000 OR the type ($C0:3516). The blast arm ($C0:EB46) destroys a soft block and then tests bit 2 of that word: with it set the arm carries on into the next cell instead of stopping. Piercing only shows with fire to spare, so pair it with 7E80F209: the same bomb in 1-1 destroyed 3 blocks as type 0 and 7 as type 4. Game Genie: LDA [$6A],Y -> LDA #$04 at $C0:350B, the type load copied to each new bomb.",
+  "img": "cheat_7e80f304.png"
  },
  {
   "code": "7E80FA01 7E80FB01 7E80FE01 7E80FF01",
@@ -414,7 +418,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "RAM checked; the glove and kick flags are the ones the pickup handlers set. No Game Genie form built: the four items have four separate tests (wall pass $C0:AF6A, bomb pass $C0:AEBC, glove $C0:30E6, kick $C0:63AC), and the PAR check was RAM only."
+  "note": "RAM checked; the glove and kick flags are the ones the pickup handlers set. No Game Genie form built: the four items have four separate tests (wall pass $C0:AF6A, bomb pass $C0:AEBC, glove $C0:30E6, kick $C0:63AC), and the PAR check was RAM only.",
+  "img": "cheat_7e80fa01.png"
  },
  {
   "code": "7E1CB5FF 7E1CB6FF",
@@ -432,7 +437,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$1CB5 is the flag the turbo-X code sets. Left on the stage select went 1 -> 12. Caravan clears it at the stage select (no effect there). Game Genie: BEQ +7 -> BEQ +0 after LDA $001CB5 ($CC:23AF; EU $CC:240A, JP $CC:239E), so the stage count is always 12; Mesen, USA, Europe, Japan, beta: Left on the stage select went 1 -> 12."
+  "note": "$1CB5 is the flag the turbo-X code sets. Left on the stage select went 1 -> 12. Caravan clears it at the stage select (no effect there). Game Genie: BEQ +7 -> BEQ +0 after LDA $001CB5 ($CC:23AF; EU $CC:240A, JP $CC:239E), so the stage count is always 12; Mesen, USA, Europe, Japan, beta: Left on the stage select went 1 -> 12.",
+  "img": "cheat_7e1cb5ff.png"
  },
  {
   "code": "7E1C6EFF 7E1C6FFF",
@@ -451,7 +457,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$1C6E, the flag the pad-5 trick sets. The cheat engine held it at $FFFF; the jump itself was checked with the real pad-5 trick (same flag). Game Genie: BEQ -> BEQ +0 after LDA $001C6E ($C0:65F5); Mesen, all five: the jump handler $C0:6616 runs in battle stage 1 (never without the code)."
+  "note": "$1C6E, the flag the pad-5 trick sets. The cheat engine held it at $FFFF; the jump itself was checked with the real pad-5 trick (same flag). Game Genie: BEQ -> BEQ +0 after LDA $001C6E ($C0:65F5); Mesen, all five: the jump handler $C0:6616 runs in battle stage 1 (never without the code).",
+  "img": "cheat_7e1c6eff.png"
  },
  {
   "code": "7E1C68FF 7E1C69FF",

@@ -559,7 +559,8 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "GameFAQs and others. Any X turbo at a 7-9 frame period for 7.5-10 s ($C3:C83C, 48 well-timed presses); sets $7F202D = 12. No Joycard needed, any turbo pad at that rate"
+  "note": "GameFAQs and others. Any X turbo at a 7, 8 or 9 frame period, held for exactly 64 presses ($C3:C83C; 7.4 s at 7 frames, 9.5 s at 9): the title's logic runs at 30 Hz while the villain silhouettes are drawn, so the first 16 presses only serve to clear them ($7F:715B >= 16, $C2:D552) and are 3-4 ticks apart, too close to count. Once they are gone the logic runs at 60 Hz and every press 7-9 ticks after the last adds 1 to $7F:7159; 48 of those (CMP #$30, $C3:C8A8) store 12 in $7F:202D and play sound 9. 6 and 10 frames never count, and 63 presses are one short. No Joycard needed, any turbo pad at that rate. Same code in the English ROM",
+  "img": "title_turbo_x_stages.png"
  },
  {
   "code": "Title: tap X 16 times",
@@ -570,7 +571,8 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$7F715B >= 16 stops their object drawing ($C2:D560); the title then runs at 60 fps"
+  "note": "$7F715B >= 16 stops their object drawing ($C2:D560); the title then runs at 60 fps",
+  "img": "title_x16_silhouettes.png"
  },
  {
   "code": "Confirm with pad 2",
@@ -581,7 +583,8 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "START/A from a pad other than pad 1 on the title menu or password screen sets $7F70C0, then $1EF2 = 1; only the $0400 player (Black, top right) starts, controlled by pad 2; pad 1 does nothing"
+  "note": "START/A from a pad other than pad 1 on the title menu or password screen sets $7F70C0, then $1EF2 = 1; only the $0400 player (Black, top right) starts, controlled by pad 2; pad 1 does nothing",
+  "img": "pad2_black_bomberman.png"
  },
  {
   "code": "7F202D:0C",
@@ -597,7 +600,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Stage count (normally 10). JP: the stage select wraps 1 -> 12 -> 11. EN: $7F202D=12 checked; the select was not walked. Game Genie: the boot LDA #$000A before STA $7F202D ($C4:403D) loads 12; JP: Left from stage 1 goes to 12, then 11; EN: $7F202D=12."
+  "note": "Stage count (normally 10). JP: the stage select wraps 1 -> 12 -> 11. EN: $7F202D=12 checked; the select was not walked. Game Genie: the boot LDA #$000A before STA $7F202D ($C4:403D) loads 12; JP: Left from stage 1 goes to 12, then 11; EN: $7F202D=12.",
+  "img": "cheat_7f202d.png"
  },
  {
   "code": "C2AEE6:7D C2AEE7:16",
@@ -613,7 +617,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Rewrites the password-table slot that holds 7777 (caught as a special code first, so the slot was dead). $0092=38; empty final-boss arena. Game Genie: the same two ROM bytes; $0092=38 after 5757 (JP and EN)."
+  "note": "Rewrites the password-table slot that holds 7777 (caught as a special code first, so the slot was dead). $0092=38; empty final-boss arena. Game Genie: the same two ROM bytes; $0092=38 after 5757 (JP and EN).",
+  "img": "cheat_c2aee6.png"
  },
  {
   "code": "C2AEE8:E2 C2AEE9:16",
@@ -629,7 +634,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "Same for slot 39 (4622). Checked on JP: $0092=39. The table is identical in EN. Game Genie: the same two ROM bytes; $0092=39 after 5858 (JP and EN)."
+  "note": "Same for slot 39 (4622). Checked on JP: $0092=39. The table is identical in EN. Game Genie: the same two ROM bytes; $0092=39 after 5858 (JP and EN).",
+  "img": "cheat_c2aee8.png"
  },
  {
   "code": "7E0274:01",
@@ -645,7 +651,8 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$0274 is tested at $C1:0766 but never written; when non-zero the pause code skips setting the label position. Checked in JP and EN. Game Genie: $C1:076C BNE -> BRA, the branch taken when $0274 is set; JP and EN: paused with no PAUSE! label."
+  "note": "$0274 is tested at $C1:0766 but never written; when non-zero the pause code skips setting the label position. Checked in JP and EN. Game Genie: $C1:076C BNE -> BRA, the branch taken when $0274 is set; JP and EN: paused with no PAUSE! label.",
+  "img": "cheat_7e0274.png"
  },
  {
   "code": "7F202B:0A / 7F202B:0B",
@@ -660,7 +667,8 @@
   "status": "known",
   "verified": "static",
   "section": "cheat",
-  "note": "Already known."
+  "note": "Already known.",
+  "img": "cheat_7f202b.png"
  },
  {
   "code": "C358B2A8 C358B35F (or C358B2D8 C358B35F) on slot 38",

@@ -20,7 +20,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "Team Player protocol only ($30A0, ID $73/$3F, port 1 then port 2). BizHawk GPGX ControlType 4 on both ports: P1-P8 each moved players 1-8 (players.lua)",
-  "section": "input"
+  "section": "input",
+  "img": "team_player_8.png"
  },
  {
   "code": "Fewer pads (plain pads, one Team Player)",
@@ -31,7 +32,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "Empty sockets and mice store nothing ($31D2 table). Two pads: players 1-2; Team Player + pad: players 1-5. Players without a pad stand still",
-  "section": "input"
+  "section": "input",
+  "img": "pads_packed.png"
  },
  {
   "code": "A on your own bomb (with Line Bomb)",
@@ -54,7 +56,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "$168C sets the bomb to the sliding routine $22D2; seen moving one step before a brick stopped it (powers.lua)",
-  "section": "rules"
+  "section": "rules",
+  "img": "kick_slide.png"
  },
  {
   "code": "Item $13",
@@ -143,7 +146,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "item table $3562: $14 -> $13. BizHawk client.addcheat: hidden items $13 x4 instead of $14 x4. Pro Action Replay 003562:0013: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): hidden items $13 x4 instead of $14 x4.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_cn4t_aadc.png"
  },
  {
   "code": "PNLA-BE0E",
@@ -158,7 +162,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "$14C4 clr.w $24(a3) -> addq.w #1. Player 1 +$24 = 1 at the start. Pro Action Replay 0014C4:526B: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): player 1 +$24 = 1.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_pnla_be0e.png"
  },
  {
   "code": "PNLA-BE0N",
@@ -173,7 +178,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "$14CC clr.w $28(a3) -> addq.w #1. Player 1 +$28 = 1. Pro Action Replay 0014CC:526B: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): player 1 +$28 = 1.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_pnla_be0n.png"
  },
  {
   "code": "BALA-AAHC",
@@ -188,7 +194,8 @@
   "status": "unchecked",
   "verified": "emu",
   "note": "$14E2 = 8 (was 2). Player 1 +$22 = 8. Pro Action Replay 0014E2:0008: the same ROM word; BizHawk, the word written to MD CART every frame (its Lua addcheat takes Genesis Action Replay codes for RAM only): player 1 +$22 = 8.",
-  "section": "cheat"
+  "section": "cheat",
+  "img": "cheat_bala_aahc.png"
  },
  {
   "code": "BALA-AAHJ",
@@ -225,7 +232,8 @@
   "status": "unchecked",
   "verified": "static",
   "note": "The kick code sets the slide routine $22D2 directly; nothing references $22A4",
-  "section": "unused"
+  "section": "unused",
+  "img": "unused_kick_22a4.png"
  },
  {
   "code": "Arena tiles $15, $16, $17",
