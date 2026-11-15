@@ -701,7 +701,11 @@ colon) on unpatched ROMs, and added to `sb5_codes.json` with `section: "cheat"`:
 - What `$6258` changes in play (the item lists), and `$0F64`: set in Mesen, no visible change.
 - The soft-reset combo `$C0:0AFC` never runs (nothing reaches it); read only.
 - Table 6 `$74`: no screen with its graphics found. The debug menu text `$F1`-`$F5`: its font (set 6/3) is never
-  loaded; three table-driven loaders (`$C1:09C0`, `$C2:2008`, `$C2:26E8`) weren't followed.
+  loaded. The three table-driven stores of the graphics group (`STA $0AE7`) can't load it either: `$C1:09C0` runs
+  the palette animations (table `$80:88AB`, palettes only), `$C2:26E8` is the object spawner (184 entries at
+  `$80:CDE0`, groups 0, 3, 4 and 8), and `$C2:2008` is object-script op `$12`, a sprite-set load no script uses (★ an
+  unused op). The sprite path takes only format 5 (`$C0:190C`) and set 6/3 is format 3: pointing a spawn entry at
+  it in Mesen only made that object fail to appear.
 - The message trace didn't reach the story scenes between zones or the character password screen after a valid
   code; table 4 `$F3`-`$FC` weren't examined.
 - `3061E9:01` on Caravan and English (same code bytes, not run).

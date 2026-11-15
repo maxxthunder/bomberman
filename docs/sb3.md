@@ -410,7 +410,8 @@ that ran; each forced to `$01` and `$FF` for 400 frames against a control run) f
 **`$7E:17EA` is the "boss is dead" freeze.** A boss's death sets it (`$C3:0561`, in the routine every boss dies
 through; the final boss at `$C3:6AAB` and its mech at `$C3:7045`), the mech's start and every stage start clear it
 (`$C3:7013`, `$C2:583E`). While it is set the clock doesn't tick (`$C2:589A`) and the player's own fire only makes
-him blink for 120 frames instead of killing him (`$C4:0691`); enemies still move and still die. Held with Mesen's
+him blink for 120 frames instead of killing him (`$C4:0691`); touching an enemy goes through the same routine, so that only makes him blink
+too (Mesen, Europe: he stood on an enemy for 400 frames, re-hit every 120); enemies still move and still die. Held with Mesen's
 cheat engine (`7E17EA:01`) in Europe, Japan and the beta (same address): 1-1 stayed at 3:00 for 900 frames (2:45
 without), a battle at 2:00 (1:50), and the player stood in his own bomb's blast; in 3,000 frames of random play he
 died 5 times without it and 0 times with it. Two one-byte Game Genie patches give the two halves separately.

@@ -1578,7 +1578,7 @@
    "Pro Action Replay": "7E17EA:01",
    "Game Genie": "6D9C-7DAC 6DDB-8FFF (eu, jp) / 6D9B-770C 6DDB-8FFF (beta)"
   },
-  "effect": "Stops the clock, and the player's own fire only makes him blink",
+  "effect": "Stops the clock, and the player's own fire or an enemy's touch only makes him blink",
   "versions": [
    "eu",
    "jp",
@@ -1587,7 +1587,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "The flag a boss's death sets, so nothing runs out or kills the player while it dies. Mesen cheat engine, all three versions: 1-1 stayed at 3:00 for 900 frames (2:45 without), a battle at 2:00 (1:50), and standing in his own bomb's blast he blinked for 120 frames and lived. Enemies still move and die. Game Genie: 6D9C-7DAC (beta 6D9B-770C) stops only the clock, 6DDB-8FFF only the fire death; together they match the RAM code. Enemy contact not tested.",
+  "note": "The flag a boss's death sets, so nothing runs out or kills the player while it dies. Mesen cheat engine, all three versions: 1-1 stayed at 3:00 for 900 frames (2:45 without), a battle at 2:00 (1:50), and standing in his own bomb's blast he blinked for 120 frames and lived. Touching an enemy goes through the same routine: he stood on one for 400 frames and lived (Europe). Enemies still move and die. Game Genie: 6D9C-7DAC (beta 6D9B-770C) stops only the clock, 6DDB-8FFF only the fire death; together they match the RAM code. Enemy contact not tested.",
   "img": "boss_freeze_flag.png"
  }
 ]

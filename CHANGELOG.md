@@ -2,6 +2,22 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.6.0 (2026-11-14)
+- Bomberman '93: all 125 password cards typed in and played, US and JP. Codes for stages 2-8 of any world load that
+  stage directly, so 7-2 to 7-8 can be played with no planet cleared.
+- Fixed: '93's codes for 2-1 to 6-1 with no planet cleared start 1-1, since the planet map always opens the first
+  uncleared planet.
+- Fixed: the '93 enemy-wipe flag ($20CC) is one the game sets itself. Held on, it clears enemies on planets 1, 2,
+  4 and 7 in both versions, not the bosses, and the stage can still be finished through its exit.
+- Bomberman Max: "...END?" is one of three real endings, chosen by how many stages are cleared; the normal and full
+  endings are shown.
+- Bomberman GB 3: City 5's second room, with its four switches and door, reached; it leads to the round 6 boss.
+- Super Bomberman 3: with the boss-death flag set, touching an enemy only makes the player blink too.
+- Super Bomberman 5: the three graphics loaders followed; one is an object-script command nothing uses, and none
+  can load the debug menu's font.
+- Fixed: Bomberman Users Battle's password stages are drawn after a long black screen: 8-1 normally, rounds 1 and 2
+  garbled.
+
 ## 2.5.2 (2026-11-14)
 - Bomberman '93: a flag the game reads but never sets makes every enemy on the stage vanish (`1F00CC:01`,
   or `0080D0:80` in the ROM).

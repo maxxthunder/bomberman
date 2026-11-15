@@ -29,8 +29,9 @@
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "ROUND 8, STAGE 8-1 GAME START shown; the stage itself has no graphics in this card; typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
-  "section": "Passwords (unreachable)"
+  "note": "ROUND 8, STAGE 8-1 GAME START shown; after a black screen the stage is drawn normally (Mesen and BizHawk, by about 900 frames after END; rounds 1 and 2 come out garbled); typed with the pad in Mesen on the password screen, which nothing in Users Battle calls: reached by patching $01:A40A to JMP $C3A5 (tools/pceub/test_codes.py); $342F and $2849-$284D read back",
+  "section": "Passwords (unreachable)",
+  "img": "code_mugwnnpc.png"
  },
  {
   "code": "MUOEPHLA",

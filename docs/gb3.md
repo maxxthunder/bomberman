@@ -282,7 +282,12 @@ apart at `$D300` and copied to `$D200`; a decoded challenge room matched the RAM
   its lower rows do come into view. Pad input alone took 37 of its 40, replayed from the title, which would leave 43
   of room 2's 50. Room 1 ends on switches, not crystals: blasting its three switch cells (`$2E`, `$CD`, `$C1`, table
   `$C467`; count in `$C38F`) opens the exit (`$C487`, cell `$33`). Two were hit; the third, bottom left behind moving
-  hazards, wasn't, so room 2 was never reached on foot.
+  hazards, wasn't, so room 2 was never reached on foot. With the three hit flags poked (`$C468`, `$C46A`, `$C46C`
+  = 1) the game's own code (`$0E:7E2A`) opens the exit (cell `$33` `$10` → `$F4`, HUD T3 → T0), and walking in loads
+  room 2. Room 2 has four switches (`$A1`, `$2E`, `$EE`, `$B9`) and a two-cell door at `$33`/`$43`, which opens the
+  same way (T4 → T0); it scrolls too, to the right, and an idle player was pushed into a wall and died. Through the
+  door comes round 6, the boss. Nothing unused in either room (Mesen, flags poked, not done with real bombs).
+  ![City 5 room 2 with its four switch flags set: the door open, T0](img/gb3/city5_room2.png)
   ![City stage 5 room 1: the view scrolling by itself](img/gb3/city5_autoscroll.png)
 - Challenge mode: the cleared branch (`$C480` = `$FF`) and どきどき's doors (cells `$32`/`$33`, rooms 120-123) weren't
   reached; walking to はらはら's door wasn't done (the player was moved next to it); the room records' soft-block, item

@@ -24,7 +24,9 @@ run = OUT + "_run.lua"
 open(run, "w").write(PRE + open(body_path).read() + tail)
 args = [EXE, "--config=" + os.environ["CONFIG"], "--lua=" + run]
 if dump: args += ["--dump-type=wave", "--dump-name=" + dump, "--dump-length=" + os.environ.get("DUMPLEN", "2700"), "--dump-close"]
-p = subprocess.run(args + [os.path.abspath(sys.argv[2])], capture_output=True, text=True, timeout=int(os.environ.get("EMU_TIMEOUT", "3600")), cwd=os.path.dirname(EXE))
+# no headless mode in EmuHawk: start it minimized and unfocused (SW_SHOWMINNOACTIVE); SHOW=1 for a normal window
+si = None if os.environ.get("SHOW") else subprocess.STARTUPINFO(dwFlags=subprocess.STARTF_USESHOWWINDOW, wShowWindow=7)
+p = subprocess.run(args + [os.path.abspath(sys.argv[2])], capture_output=True, text=True, startupinfo=si, timeout=int(os.environ.get("EMU_TIMEOUT", "3600")), cwd=os.path.dirname(EXE))
 out = "\n".join(l for l in (p.stdout + p.stderr).splitlines() if "opcode" not in l and "DEVICE" not in l)
 print(out[-1500:])
 print(open(OUT + "log.txt").read() if os.path.exists(OUT + "log.txt") else "no log")

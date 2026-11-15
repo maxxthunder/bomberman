@@ -151,7 +151,8 @@ In all 3,375,905 codes and no mismatch. The counts for the first two sets are th
 
 Typed with real pad presses on the patched-in screen (`tools/pceub/test_codes.py`), END with I, `$342F` and
 `$2849-$284D` read back. All match `password.py`. A valid code then starts the 1P game at that round (ROUND n,
-STAGE n-m GAME START), whose stages have no graphics in this card.
+STAGE n-m GAME START). After a long black screen the stage is drawn: 8-1 normally (Mesen and BizHawk, by about
+900 frames after END), but rounds 1 and 2 with garbled tiles.
 
 | Code | Effect | Notes |
 |---|---|---|

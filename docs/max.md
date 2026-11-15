@@ -154,8 +154,14 @@ the minigames and the ending were not reached, so this sweep is partial.
 ★ A second sweep in Mesen (play only, merged with the earlier logs) reached stages up to S5-25: 98,604 bytes of
 code executed. The bonus stages S6-01 to S6-04 and the MATCH GAME help were entered by setting the stage loader's
 bonus fields (`$C5FF`=1, `$C600`=n, `$C2D0`=5, `$C2D1`=n); n=4 shows the help, then a broken field. Setting mode 7
-(`$C187`=7, `$C188`=0) during S5-24 shows "...END? Is this the end? Are you sure?", which stays up for 10,000
-frames; whether the real ending passes through it is unknown. Nothing in what still never runs turned out to be
+(`$C187`=7, `$C188`=0) during S5-24 shows "...END? Is this the end? Are you sure?", which waits for Start and then goes to the title.
+★ It is one of three real endings. When a world 5 stage ends, `$09:4000` picks one into `$C65A`, and ending state 1
+(`$50:41DE`) jumps by it: 2 (the full ending) when all 100 stage words at `$A030` are set, else 1 (the normal ending)
+when the 78 stages listed at `$09:4079` are done, else 0, "...END?". All three shown in Mesen by writing `$C65A`
+and starting mode 7: the normal ending has the Bomber Craft in deep space, "The Charaboms are safe once again", the
+story recap and an END card; the full one adds the Max Speeder, Max and Bomberman together and "Ha Ha Ha! This was a
+piece of cake".
+![The normal ending ($C65A = 1)](img/max/ending_normal.png) ![The full ending ($C65A = 2)](img/max/ending_full.png) Nothing in what still never runs turned out to be
 hidden content. Charabom battles and bonus types 5-7 weren't reached.
 ![The bonus stages, entered through the stage loader](img/max/bonus_stages.png)
 ![Mode 7 during S5-24: ...END?](img/max/end_question.png)
@@ -239,7 +245,8 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
 - What the 5 extra stage-table words (`$A0EE-$A0F7`) are, and the stage table's second byte.
 - Pitch Area's infrared packet format (needs a second console).
 - How the legendary Charaboms are earned, and Battle Game with a saved Charabom; both outside the coverage runs.
-- Whether the real ending shows the ...END? screen; the Charabom battles and bonus types 5-7 in a coverage run.
+- The Charabom battles and bonus types 5-7 in a coverage run. The roster's 30 slots fill `$A110`-`$A1FF` up to the
+  first save file, so there is no room for more; computer rivals (`$08:4C24`) use ids 0-25 only.
 
 ## Battle against the computer (★ New)
 

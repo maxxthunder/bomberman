@@ -77,9 +77,11 @@ What the password can do that the game can't:
   1-1): speed 0 moves 3 px every 4 frames (0.75 px/frame), speed 2 8 px every 7 frames (1.14), speed 3 5 px every
   4 frames (**1.25**), until the wall two cells down.
 - ★ **Any planet order.** The cleared mask is free, so world 7 (normally opened only when `$38AF & $3F` = `$3F`,
-  `06:9C3B`) or any mix of cleared planets can be set. World 7 itself can't be forced early: a code for 7-1 with nothing
-  cleared is accepted (`$3895` = 6) but the planet map puts you back on planet 1 (`$3895` = 0 in the stage). With
-  all six planets cleared the same field takes you straight to world 7 (7-8 below).
+  `06:9C3B`) or any mix of cleared planets can be set. A stage 1 code goes through the planet map, which starts the first uncleared planet:
+  with nothing cleared, the codes for 2-1 to 7-1 are accepted (`$3895` = 1-6) but all start 1-1 (`$3895` = 0 in the
+  stage). A code for any later stage skips the map and loads that stage, so ★ 7-2 to 7-8 are playable with no planet
+  cleared (typed in BizHawk, US and JP) ![7-2 with nothing cleared](img/pce93/code_nfdcbbmb.png). With all six planets
+  cleared the same field takes you straight to world 7 (7-8 below).
 - Bombs and fire are range-checked only against the normal caps (10, 5), so there is no over-cap power-up.
 
 ### Verified codes
@@ -95,7 +97,9 @@ and again in the stage. The same letter positions give the JP code (see [carry-o
 | 1-1, speed 3 | `DCCCBFHB` | `CBBBADFA` | `$389A` = 3, `$9B` = `$30` (★ above the maximum) |
 | 3-5, 4 bombs, fire 2, speed 1, planets 1-2 | `DGGDFHBC` | `CEECDFAB` | as stored; in 3-5 the player's `$A0` = `$24` |
 | 2-1, 10 bombs, fire 5, speed 2, planet 1 | `DBNHCJFC` | `CAKFBGDB` | as stored; player `$A0` = `$5A`, `$9B` = `$20` |
+| 2-1 to 6-1, nothing cleared | `DBCCBBFB` ... | `CABBAADA` ... | accepted (`$3895` = 1-5), but the map starts planet 1: 1-1 (BizHawk) |
 | 7-1, nothing cleared | `NDDCBBLB` | `KCCBAAIA` | accepted (`$3895` = 6), but the map starts planet 1: 1-1 |
+| 7-2, nothing cleared | `NFDCBBMB` | `KDCBAAJA` | loads 7-2 directly; 7-3 to 7-8 likewise (BizHawk) |
 | 7-8, everything | `PMPHTZNF` | `LJLFPTKD` | all stored; the map goes straight to the final stage |
 | invalid | `BBBBBBBB` | | rejected: the entry is cleared and the cursor put on END (US) |
 
@@ -380,12 +384,18 @@ plus the bits of the player's ability byte that no code sets. Each was set in Me
 | `$91,X` bit 4 | `02:96DF` (sets `$B1` bit 0), used at `02:9872` | never (no item or code sets it; the Special Version has neither the test nor the code) | **bending fire**: a flame arm that is blocked part-way turns 90° in a random direction (`$EE9E` & 2) and keeps going ![Bit 4 off (top), on (bottom)](img/pce93/bending_fire.png) | ★ New |
 | `$91,X` bit 3 | fire check `02:8C9D` | yes: the vest item (`03:A9BF`, with a timer) | fire-proof | item effect |
 | `$2F99` | pad reader `00:EDAF`: non-zero skips the pad update (`JMP $EE5D`) | never (cleared at `00:ED9B`; the Special Version's `$2F8D` likewise) | **freezes the pad**: held and new buttons keep their last values; with Right held, Bomberman kept walking right while Left was pressed. Beside the empty hook `00:EE60`: probably a demo or debug input feed | ★ New |
-| `$20CC` | enemy handler `04:80CE` (`LDA $CC` / `BNE $80D6`): non-zero lowers the enemy count `$3C5E` and removes the enemy | never (the only store is `STZ $CC` at `09:A05B`) | **every enemy vanishes**: from the 1-1 start the count went 3 → 0 within 150 frames and stayed 0, lives and score unchanged (BizHawk, US). Other planets and bosses not tried ![Off (left), on (right), 300 frames into 1-1](img/pce93/cheat_1f00cc01.png) | ★ New |
 | `$38B1` | ending `08:8CB8`, clear timer `01:D93F` | 1 after a continue (`07:A191`) or a password (`01:D93B`) | 0 at the ending shows the clear page | ★ New |
 
 ★ **The clear-time page.** The ending shows CONGRATULATIONS!, CLEAR TIME (counted from the start of a new game,
 `01:D93F`) and CLEAR SCORE only when the game was finished from a new game with no password and no continue. Shown
 in Mesen with `$38B1` = 0 at the ending (cheat `1F18B1:00` below): ![](img/pce93/clear_time.png)
+
+★ **The enemy wipe.** The enemy handler `04:80CE` (`LDA $CC` / `BNE $80D6`) removes the enemy and lowers the
+count `$3C5E` whenever `$20CC` is not 0. The game sets it with `INC $CC` at `04:9D17` and `05:955E` (the second beside
+the code that places the exit after the last enemy) and clears it at `09:A05B`; it was seen set on its own in 7-8,
+probably by the boss's death (not caught in play). Held at 1 (cheat `1F00CC:01` below), every enemy vanishes: 3 → 0 in
+1-1, 4 → 0 in 2-2, 10 → 0 in 4-5, 11 → 0 in 7-2, but 2 of 8 stayed in 6-3, and bosses (1-8, 3-8) stay. 2-2 was then
+cleared through its exit and 2-3 loaded. BizHawk, US and JP: ![Off (left), on (right), 300 frames into 1-1](img/pce93/cheat_1f00cc01.png)
 
 ### Text
 
@@ -477,7 +487,7 @@ shows) and no clear-time page.
 | `1F1895:0w` + `1F1896:0s` | F8:1895, F8:1896 | every Normal Game stage is world w+1, stage s+1 | `03` + `04`: a new game loaded record 28 (4-5) |
 | `1F1FFB:01` | F8:1FFB | JP: CONFIGRATION screen after every planet map | screen shown ![](img/pce93/config_jp_cheat.png) |
 | `1F18B1:00` | F8:18B1 | the ending shows the clear page even after a password or continue | page shown (RAM written as the ending reads it) |
-| `1F00CC:01` | F8:00CC | every enemy on the stage vanishes | 1-1: enemy count 3 → 0 within 150 frames (BizHawk, byte poked each frame); ROM equivalent `0080D0:80` (`BNE` → `BRA` at `04:80D0`) behaved the same |
+| `1F00CC:01` | F8:00CC | every enemy on the stage vanishes | enemies gone on planets 1, 2, 4 and 7, US and JP; bosses stay; 2-2 cleared through its exit (BizHawk, byte poked each frame). ROM equivalent `0080D0:80` (`BNE` → `BRA` at `04:80D0`) behaved the same on four stages, but it is only one of the game's 23 enemy checks |
 
 Patches (IPS, built and checked against the ROM by `tools/pce93/mkpatch.py`):
 

@@ -19,8 +19,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -31,8 +31,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -43,8 +43,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -55,8 +55,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -67,8 +67,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -79,8 +79,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -91,20 +91,20 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "DBCCBBFB",
-  "effect": "Start at world 2 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 2 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "US",
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -115,8 +115,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -127,8 +127,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -139,8 +139,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -151,8 +151,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -163,8 +163,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -175,8 +175,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -187,20 +187,20 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "GCCCBBGB",
-  "effect": "Start at world 3 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 3 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "US",
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -211,8 +211,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -223,8 +223,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -235,8 +235,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -247,8 +247,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -259,8 +259,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -271,8 +271,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -283,20 +283,20 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "HCCCBBHB",
-  "effect": "Start at world 4 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 4 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "US",
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -307,8 +307,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -319,8 +319,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -331,8 +331,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -343,8 +343,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -355,8 +355,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -367,8 +367,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -379,20 +379,20 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "KCCCBBJB",
-  "effect": "Start at world 5 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 5 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "US",
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -403,8 +403,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -415,8 +415,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -427,8 +427,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -439,8 +439,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -451,8 +451,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -463,8 +463,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -475,20 +475,20 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "LCCCBBKB",
-  "effect": "Start at world 6 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 6 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "US",
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -499,8 +499,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -511,8 +511,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -523,8 +523,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -535,8 +535,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -547,8 +547,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -559,8 +559,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -571,20 +571,20 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "NDDCBBLB",
-  "effect": "Start at world 7 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 7 stage 1 with 1 bomb, fire 1, normal speed, but with no planet cleared the map starts 1-1",
   "versions": [
    "US",
    "vc"
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "note": "accepted by the game's own decoder with exactly these values; typed in Mesen and BizHawk: world 7 is closed until planets 1-6 are cleared, and the planet map starts 1-1",
   "section": "Stage codes"
  },
  {
@@ -595,9 +595,10 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
-  "section": "Stage codes"
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-2 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
+  "section": "Stage codes",
+  "img": "code_nfdcbbmb.png"
  },
  {
   "code": "PGDCBBNB",
@@ -607,8 +608,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-3 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -619,8 +620,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-4 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -631,8 +632,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-5 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -643,8 +644,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-6 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -655,8 +656,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-7 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -667,8 +668,8 @@
    "vc"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-8 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -693,8 +694,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -706,8 +707,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -719,8 +720,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -732,8 +733,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -745,8 +746,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -758,8 +759,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -771,21 +772,21 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 1-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "CABBAADA",
-  "effect": "Start at world 2 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 2 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "vc",
    "JP",
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -797,8 +798,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -810,8 +811,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -823,8 +824,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -836,8 +837,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -849,8 +850,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -862,8 +863,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -875,21 +876,21 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 2-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "EBBBAAEA",
-  "effect": "Start at world 3 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 3 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "vc",
    "JP",
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -901,8 +902,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -914,8 +915,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -927,8 +928,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -940,8 +941,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -953,8 +954,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -966,8 +967,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -979,21 +980,21 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 3-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "FBBBAAFA",
-  "effect": "Start at world 4 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 4 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "vc",
    "JP",
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -1005,8 +1006,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -1018,8 +1019,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -1031,8 +1032,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -1044,8 +1045,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -1057,8 +1058,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -1070,8 +1071,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -1083,21 +1084,21 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 4-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "HBBBAAGA",
-  "effect": "Start at world 5 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 5 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "vc",
    "JP",
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -1109,8 +1110,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -1122,8 +1123,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -1135,8 +1136,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -1148,8 +1149,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -1161,8 +1162,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -1174,8 +1175,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -1187,21 +1188,21 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 5-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "IBBBAAHA",
-  "effect": "Start at world 6 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 6 stage 1 (1 bomb, fire 1, normal speed), but with no planet cleared the map starts 1-1",
   "versions": [
    "vc",
    "JP",
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk: the planet map starts the first uncleared planet, so stage 1-1 loads",
   "section": "Stage codes"
  },
  {
@@ -1213,8 +1214,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-2 loaded",
   "section": "Stage codes"
  },
  {
@@ -1226,8 +1227,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-3 loaded",
   "section": "Stage codes"
  },
  {
@@ -1239,8 +1240,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-4 loaded",
   "section": "Stage codes"
  },
  {
@@ -1252,8 +1253,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-5 loaded",
   "section": "Stage codes"
  },
  {
@@ -1265,8 +1266,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-6 loaded",
   "section": "Stage codes"
  },
  {
@@ -1278,8 +1279,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-7 loaded",
   "section": "Stage codes"
  },
  {
@@ -1291,13 +1292,13 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 6-8 loaded",
   "section": "Stage codes"
  },
  {
   "code": "KCCBAAIA",
-  "effect": "Start at world 7 stage 1 with 1 bomb, fire 1, normal speed, no planets cleared",
+  "effect": "Accepted as world 7 stage 1 with 1 bomb, fire 1, normal speed, but with no planet cleared the map starts 1-1",
   "versions": [
    "vc",
    "JP",
@@ -1305,7 +1306,7 @@
   ],
   "status": "unchecked",
   "verified": "mesen",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "note": "accepted by the game's own decoder with exactly these values; typed in Mesen and BizHawk: world 7 is closed until planets 1-6 are cleared, and the planet map starts 1-1",
   "section": "Stage codes"
  },
  {
@@ -1317,8 +1318,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-2 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -1330,8 +1331,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-3 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -1343,8 +1344,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-4 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -1356,8 +1357,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-5 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -1369,8 +1370,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-6 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -1382,8 +1383,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-7 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -1395,8 +1396,8 @@
    "SP"
   ],
   "status": "unchecked",
-  "verified": "fuzz",
-  "note": "accepted by the game's own decoder in the fuzz run with exactly these values. World 7 is closed until planets 1-6 are cleared: with this code the planet map puts you on planet 1 (typed for 7-1)",
+  "verified": "emu",
+  "note": "accepted by the game's own decoder with exactly these values; typed in BizHawk and played: stage 7-8 loaded, with no planet cleared (only stage 1 codes go through the planet map)",
   "section": "Stage codes"
  },
  {
@@ -1653,13 +1654,15 @@
  },
  {
   "code": "1F00CC:01",
-  "effect": "Every enemy on the stage vanishes",
+  "effect": "Every enemy on the stage vanishes (bosses stay)",
   "versions": [
-   "US"
+   "US",
+   "vc",
+   "JP"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Raw RAM code (F8:00CC = $20CC). The enemy handler 04:80CE reads $CC and, when it is not 0, lowers the enemy count $3C5E and removes the enemy; the game only ever clears it (STZ $CC at 09:A05B). From the 1-1 start the count went 3 → 0 within 150 frames and stayed 0, with lives and score unchanged. Checked in BizHawk on the US cart. ROM equivalent: 0080D0:80 (BNE → BRA at 04:80D0), same result. Other planets and bosses not tried.",
+  "note": "Raw RAM code (F8:00CC = $20CC). The enemy handler 04:80CE reads $CC and, when it is not 0, removes the enemy and lowers the enemy count $3C5E. The game sets it itself (INC $CC at 04:9D17 and 05:955E, the second beside the code that places the exit) and clears it at 09:A05B; seen set on its own in 7-8. Checked in BizHawk, US and JP: 3 → 0 enemies in 1-1, 4 → 0 in 2-2, 10 → 0 in 4-5, 11 → 0 in 7-2; 2 of 8 stayed in 6-3; bosses (1-8, 3-8) stay. With it 2-2 was cleared through its exit and 2-3 loaded. ROM equivalent 0080D0:80 (BNE → BRA at 04:80D0) behaved the same on four stages, but it is only one of the game's 23 enemy checks.",
   "section": "cheat",
   "img": "cheat_1f00cc01.png"
  },
