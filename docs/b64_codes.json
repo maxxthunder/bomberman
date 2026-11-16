@@ -1,0 +1,483 @@
+[
+ {
+  "code": "On the title or main menu, press Start 10 to 14 times within a second",
+  "effect": "Battle Mode's stage list grows from 6 to all 10 stages: In the Gutter, Sea Sick, Blizzard Battle and Lost at Sea are added",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The title program counts new Start presses in a 60-frame window (50 on the European ROM) and wants 10 to 14 of them with no gap of 7 frames or more; 15 or more in one window fail. The flag at 802AC654 (Europe 802AC644, Japan 802AB884) is set. It is not saved: after a reset it read 0 again, so the code is needed each time the console is switched on. Played on all three ROMs with 12 presses. Picture: the last stage without and with the code.",
+  "section": "Button codes",
+  "img": "start_code.png"
+ },
+ {
+  "code": "Hold Start while switching the console on",
+  "effect": "\"Is it OK to Erase Game Pak Memory? Yes / No\"",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The boot code tests Start held and loads the erase screen (scene 24) instead of the title (scene 20). Seen on all three ROMs; the Japanese ROM asks in Japanese. Yes was not pressed. Picture: US and Japan.",
+  "section": "Button codes",
+  "img": "erase_prompt.png"
+ },
+ {
+  "code": "Clear every stage of the first four worlds",
+  "effect": "Options: the first ???? becomes Music, a music test with 47 numbers (00-46); A plays the number shown",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "The stage-clear code grants this when the best-time slots of all 16 stages of Green Garden, Blue Resort, Red Mountain and White Glacier are filled; the same 16 slots open the fifth world. Read from the US ROM's code, not played; the entry itself was opened by setting its flag. On the US ROM, A turns the number yellow and starts the track (picture: before and after A); the stick alone plays nothing. The music bank holds exactly 47 sequences.",
+  "section": "Secrets",
+  "img": "music_test.png"
+ },
+ {
+  "code": "Clear Final Battle!, the last stage of Rainbow Palace",
+  "effect": "Options gains View Credits and the music test, Battle gains In the Gutter and Sea Sick, and music numbers 08, 15, 16 and 44 open up",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Granted when a stage is cleared with world 6, stage 4 selected; the check reads no difficulty setting. Read from the US ROM's code, not played. With only the music-test unlock, those four numbers are drawn as -- and A does nothing (picture: 08 without and with this unlock; 15, 16 and 44 are from the code). On View Credits the A button starts the ending sequence.",
+  "section": "Secrets",
+  "img": "music_test_08.png"
+ },
+ {
+  "code": "Collect all 120 Gold Cards",
+  "effect": "Options gains Full Power, and Battle gains all four extra stages",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Granted at a stage clear when all 120 card flags are set: five cards a stage, 24 stages, no difficulty term. Read from the US ROM's code, not played. Full Power, tested on the US ROM: On, Bomberman keeps remote bombs when he loses a life, and keeps remote bombs, power bombs and blast size above 4 when a stage is started from the world map. Off, the remote bombs go on a death and all three go on the world map. Picture: the same stage start with the option Off and On, the bombs having been given by hand on the world map. It changes nothing in Battle.",
+  "section": "Secrets",
+  "img": "full_power.png"
+ },
+ {
+  "code": "Clear all 16 stages of worlds 1-4",
+  "effect": "The fifth world, Black Fortress, opens on the world map",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The world map counts the filled best-time slots of the first 16 stages and wants all 16. Shown by filling the slots by hand: with 15 of 16, Up does nothing; with 16 it moves to Black Fortress (picture). The world was not entered that way.",
+  "section": "Secrets",
+  "img": "world5.png"
+ },
+ {
+  "code": "Finish Black Fortress stage 4 holding all 100 Gold Cards of worlds 1-5",
+  "effect": "The sixth world, Rainbow Palace, opens",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The world map wants a best time for Black Fortress stage 4 and a flag that the stage itself sets when all 100 cards of the first five worlds are held, counting the ones just earned. Shown by setting both by hand: either one alone leaves the map on Black Fortress (picture: without and with the flag). The stage's own card check is from the code.",
+  "section": "Secrets",
+  "img": "world6.png"
+ },
+ {
+  "code": "802AC657 0001",
+  "effect": "Battle Mode has all 10 stages",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The flag the Start code sets (802AC654, a 32-bit value). Written on the US ROM at the main menu. Europe 802AC647 and Japan 802AB887 were not written, only watched changing when the Start code was entered. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802AC657 0001"
+  },
+  "img": "gs_battle.png"
+ },
+ {
+  "code": "802A1DAB 0001",
+  "effect": "Options: Music, the music test",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Unlock flag 0 (802A1DA8). Each flag was written on its own on the US ROM; on the European ROM, where the addresses are the same, the three were written together. Written flags are not saved by leaving Options. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802A1DAB 0001"
+  },
+  "img": "gs_music.png"
+ },
+ {
+  "code": "802A1DAF 0001",
+  "effect": "Options: Full Power; Battle Mode has all 10 stages",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Unlock flag 1 (802A1DAC). Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802A1DAF 0001"
+  },
+  "img": "gs_full_power.png"
+ },
+ {
+  "code": "802A1DB3 0001",
+  "effect": "Options: Music and View Credits; Battle Mode has 8 stages",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Unlock flag 2 (802A1DB0). Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802A1DB3 0001"
+  },
+  "img": "gs_credits.png"
+ },
+ {
+  "code": "802A0FFB 0001 + 802A0FFF 0001 + 802A1003 0001",
+  "effect": "Options: Music, View Credits and Full Power",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The three unlock flags on the Japanese ROM (802A0FF8, 802A0FFC, 802A1000), written together. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802A0FFB 0001 + 802A0FFF 0001 + 802A1003 0001"
+  },
+  "img": "gs_options_jp.png"
+ },
+ {
+  "code": "800AEE0F 0006",
+  "effect": "Six bombs at once",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Bomb count, 2 at the start of a stage. Picture: 2 and 6. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AEE0F 0006"
+  },
+  "img": "gs_bombs.png"
+ },
+ {
+  "code": "800AEE13 0006",
+  "effect": "Blast size 6",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Blast size, 2 at the start of a stage. Picture: 2 and 6. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AEE13 0006"
+  },
+  "img": "gs_fire.png"
+ },
+ {
+  "code": "810AEE0A 0201",
+  "effect": "Power bombs: red bombs with a larger blue-white blast",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Item bits (800AEE08, 0200 at the start); bit 0 is this one. Picture: the plain blast and the red bomb's blast at the same blast size. Damage was not compared. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "810AEE0A 0201"
+  },
+  "img": "gs_power.png"
+ },
+ {
+  "code": "810AEE0A 0202",
+  "effect": "Remote bombs: bombs that do not go off on their own",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Item bit 1. The bombs were still there 260 frames later. 0203 gives both this and the power bombs. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "810AEE0A 0202"
+  },
+  "img": "gs_remote.png"
+ },
+ {
+  "code": "810AEE0A 0204",
+  "effect": "Every bomb bursts in a giant cyan blast",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Item bit 2, which a timed pickup sets for 1200 frames in normal play. The blast reaches Bomberman from a distance. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "810AEE0A 0204"
+  },
+  "img": "gs_giant_blast.png"
+ },
+ {
+  "code": "810AEE0A 0A00",
+  "effect": "Bombs are drawn giant",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Item bit 11. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "810AEE0A 0A00"
+  },
+  "img": "gs_giant_bomb.png"
+ },
+ {
+  "code": "800AEE07 0002",
+  "effect": "A spare heart: a blast knocks a heart out instead of costing a life",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Health (800AEE04), 1 at the start. Written once, a hit drops it back to 1; held by the code it stays 2. Picture: health 1 and health 2 in the same blast. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AEE07 0002"
+  },
+  "img": "gs_health.png"
+ },
+ {
+  "code": "800AEE01 0001",
+  "effect": "Bomberman's own blast does not hurt him",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Bit 16 of the state word at 800AEE00, which the game sets for a few seconds after a respawn. Tested against his own bombs only. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AEE01 0001"
+  },
+  "img": "gs_invincible.png"
+ },
+ {
+  "code": "802AC62F 004D",
+  "effect": "77 gems",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The gem count (802AC62C). Picture: the HUD reads 77. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802AC62F 004D"
+  },
+  "img": "gs_gems.png"
+ },
+ {
+  "code": "802AC61F 004D",
+  "effect": "77 gems",
+  "versions": [
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The gem count on the European ROM (802AC61C). Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802AC61F 004D"
+  },
+  "img": "gs_gems_eu.png"
+ },
+ {
+  "code": "802AB85F 004D",
+  "effect": "77 gems",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The gem count on the Japanese ROM (802AB85C). Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802AB85F 004D"
+  },
+  "img": "gs_gems_jp.png"
+ },
+ {
+  "code": "802AC627 0007",
+  "effect": "7 lives",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Lives (802AC624). Written on the world map: the stage card shows 07. Europe 802AC617 and Japan 802AB857 were read, not written. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802AC627 0007"
+  },
+  "img": "gs_lives.png"
+ },
+ {
+  "code": "Scenes 14-17",
+  "effect": "Four test maps left in every version: a checkerboard room, a dark room with stars, a grass and sand map and a small block map",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The first program archive holds four stage programs that carry the strings \"debmap0 : Mapchange happened!\", \"Playerout happened!\" and \"Evlevel2 happened!\". Nothing in normal play asks for them; the game's start-up value for \"next scene\" is still 14, but the boot never loads it. Loaded with the scene write below on all three ROMs. Bomberman can walk in each and lay bombs in 14, 15 and 16; in 17 he walks off the edge and is put back.",
+  "section": "debug",
+  "img": "test_maps.png"
+ },
+ {
+  "code": "Test map 16: Start",
+  "effect": "Jumps to test map 14",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Map 16 is the only one with its own button check, and the only code in the ROM that asks for scene 14. Played on the US ROM. Picture: map 16, and map 14 after Start.",
+  "section": "debug",
+  "img": "test_map_16_start.png"
+ },
+ {
+  "code": "Scene write: 802AC5D4 and 802AC5DC = scene, 802AC5D8 and 802AC5E0 = 10, then set bit 0 of 802AC5D0",
+  "effect": "Stage warp: loads any scene, the test maps and all 24 stages and bosses included",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "All 32-bit values; Europe is 10 lower (802AC5C4...), Japan 802AB804, 802AB80C, 802AB808, 802AB810 and 802AB800. All 24 stage scenes were loaded on the US ROM, the test maps on all three. A room inside a stage needs its own entry number in place of 10. Picture: Hot Avenger (8A) and Final Battle! (7E).",
+  "section": "debug",
+  "img": "warp.png"
+ },
+ {
+  "code": "STAGE SELECT, CONFIG, COMLEVEL",
+  "effect": "An older all-capitals Battle menu left in the Battle program, never shown",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Battle program, from offset 5AB0: PLAYER 0, OPTIONS, COMLEVEL, NO LIMIT, CHARACTER TYPE, CONFIG, FILE 0, STAGE SELECT, STAGE 0 and Congratulations!. No code points at them; the menu the game shows uses the strings beside them. Same in the European ROM.",
+  "section": "unused"
+ },
+ {
+  "code": "CLEAR BONUS, RANK",
+  "effect": "Two result-screen labels that no code points at",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "ROM BAC0C and BAC1C, between \"Gold Cards\" and \"Game Over\" in the stage-result text. No pointer or address constant for either was found in the main program or any stage program. The result screen itself was not reached in testing, so this is a reading of the code.",
+  "section": "unused"
+ },
+ {
+  "code": "Flat title logo",
+  "effect": "A pre-drawn 320 x 160 Japanese title logo that no title program asks for",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Asset 35 in all three ROMs. The title builds its logo from separate pieces, and no call to the sprite loader passes 35. Asset numbers can also come from tables, so this is a reading of the code, not proof that nothing draws it.",
+  "section": "unused",
+  "img": "unused_logo.png"
+ },
+ {
+  "code": "Hudson logo and ©1997 HUDSON SOFT",
+  "effect": "Two title graphics still in the US and European ROMs, asked for only by the Japanese title program",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Assets 36 and 38. The Japanese title program loads both; the US and European one loads the licence screen and the \"64\" in their place, and no other load of 36 or 38 by number was found. Read from the code.",
+  "section": "unused",
+  "img": "japan_only_graphics.png"
+ },
+ {
+  "code": "Debug text",
+  "effect": "Map information, a thread dump and error messages that can never appear",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "They all go to a print routine that is empty (ROM 24F8). Among them: \"*** MAP INFORMATION ***\", \"Offset:%d,%d,%d\", \"move.c [Error] : move direction is inadequate 0x%02x\", \"EEPROM : SAVE DATA REVISION ERROR. PLEASE FORMAT EEPROM. REVISION=%d\", \"ZeroJump Error : unset segment [ %d ] call[%d,%d]\". Build dates: Japan FRI AUG 8 17:45:39 JST 1997, US SAT SEP 6 14:57:59, Europe MON SEP 8 12:04:49.",
+  "section": "unused"
+ },
+ {
+  "code": "Button-sequence checker",
+  "effect": "A routine that matches a list of timed button presses, never called",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Controller module functions at 80239CC8 and 80239D6C (a \"same button again within N frames\" helper). The only references are their slots in the module table. The Start code is hand-written in the title program and does not use them.",
+  "section": "unused"
+ }
+]

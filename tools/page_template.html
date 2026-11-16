@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bomberman Codes and Password Generator</title>
-<meta name="description" content="Every password and secret code for the NES, Game Boy, Game Boy Color, Super Nintendo, Genesis, TurboGrafx-16 / PC Engine, Virtual Boy and PC-98 Bomberman games, read from the games' own code and tested in emulators, with a password generator and checker for each game.">
+<meta name="description" content="Every password and secret code for the NES, Game Boy, Game Boy Color, Super Nintendo, Nintendo 64, Genesis, TurboGrafx-16 / PC Engine, Virtual Boy and PC-98 Bomberman games, read from the games' own code and tested in emulators, with a password generator and checker for each game.">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0c1130">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -51,10 +51,11 @@
 [data-fam=vb] { --acc: #e0202a; --code-bg: #000000; --code-ink: #ff2a2a; }
 [data-fam=gb] { --acc: #6f9a1f; --code-bg: #c4cfa1; --code-ink: #0f380f; }
 [data-fam=pc98] { --acc: #2fb8a6; --code-bg: #000000; --code-ink: #ffffff; }
+[data-fam=n64] { --acc: #19a85b; }
 /* darker accents on the light background, so the console headings stay readable */
 @media (prefers-color-scheme: light) {
   [data-fam=snes] { --acc: #5b3fc4; } [data-fam=md] { --acc: #1659c7; } [data-fam=pce] { --acc: #a8480a; }
-  [data-fam=nes] { --acc: #c21c1c; } [data-fam=gb] { --acc: #46690f; } [data-fam=vb] { --acc: #b3121b; } [data-fam=pc98] { --acc: #12786c; }
+  [data-fam=nes] { --acc: #c21c1c; } [data-fam=gb] { --acc: #46690f; } [data-fam=vb] { --acc: #b3121b; } [data-fam=pc98] { --acc: #12786c; } [data-fam=n64] { --acc: #0e7a3f; }
   :root .mk, :root .warn { color: #8a5d00; }
 }
 [hidden] { display: none !important; }
@@ -276,7 +277,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
   <header>
     <button type="button" id="theme"></button>
     <h1>Bomberman <span>Codes</span></h1>
-    <p class="sub">Every password and secret code for the NES, Game Boy, Game Boy Color, Super Nintendo, Genesis, TurboGrafx-16 / PC Engine, Virtual Boy and PC-98
+    <p class="sub">Every password and secret code for the NES, Game Boy, Game Boy Color, Super Nintendo, Nintendo 64, Genesis, TurboGrafx-16 / PC Engine, Virtual Boy and PC-98
       Bomberman games, read from each game's own code and tested in emulators.</p>
   </header>
 
@@ -312,12 +313,12 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <summary>Where these come from</summary>
     <p>Each game's password routine was disassembled and rebuilt as a small codec. The generator and checker here
       run those codecs, and the codes were put through each game's own check in an emulator (Mesen 2 for the NES, Game Boy,
-      Super Nintendo and PC Engine games, BizHawk for Mega Bomberman and Panic Bomber, DOSBox-X for the PC-98 game).</p>
+      Super Nintendo and PC Engine games, BizHawk for Mega Bomberman, Panic Bomber and Bomberman 64, DOSBox-X for the PC-98 game).</p>
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
     <p class="hint legend" id="legend"></p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.7.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.8.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -462,6 +463,9 @@ const GAMES = [
   { id: "bdaman", ns: BDAMAN, family: "Super Nintendo", year: 1996, name: "Bomberman B-Daman", plat: "Super Famicom", regions: ["jp"], logo: "bdaman", main: "jp",
     len: 4, shape: /^$/, nopw: true, check: () => null,   // no passwords: battery save
     intro: "The marble-shooting puzzle game on the Super Famicom. It saves to battery and has no passwords; what it hides is a full debug mode behind one Game Genie code, and a second battle arena the game never uses." },
+  { id: "b64", ns: B64, family: "Nintendo 64", year: 1997, name: "Bomberman 64", plat: "Nintendo 64", regions: ["jp", "us", "eu"], logo: "b64", main: "us",
+    len: 4, shape: /^$/, nopw: true, check: () => null,   // no passwords: EEPROM save
+    intro: "The first 3D Bomberman. It saves to the cartridge and has no passwords; what it hides is a Start-button code for four more Battle stages, three locked Options entries, and four developer test maps." },
   { id: "mega", ns: MEGA, family: "Genesis", year: 1994, name: "Mega Bomberman", plat: "Genesis", regions: ["us", "eu", "kr"], logo: "mega_us", main: "us",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     check: megaCheck(MEGA),
@@ -736,14 +740,14 @@ const section = (game, e) => {
 };
 
 // ---------- game picker: platform groups in release order ----------
-const families = ["Super Nintendo", "TurboGrafx-16 / PC Engine", "Game Boy / Game Boy Color", "NES / Famicom", "Genesis", "Virtual Boy", "PC-98"];
+const families = ["Super Nintendo", "Nintendo 64", "TurboGrafx-16 / PC Engine", "Game Boy / Game Boy Color", "NES / Famicom", "Genesis", "Virtual Boy", "PC-98"];
 const byFamily = f => GAMES.filter(x => x.family === f);   // in list order
 // the screenshot in each game's header band
 const HERO = { sb1: ["sb1", "title"], sb2: ["sb2", "title"], sb3: ["sb3", "title"], sb4: ["sb4", "title"],
   sb5: ["sb5", "title"], mega: ["mega", "title"], pce90: ["pce90", "title_us"], pce93: ["pce93", "title"],
   pce94: ["pce94", "title"], nes1: ["nes1", "title_us"], nes2: ["nes2", "title_us"], gb1: ["gb1", "sgb_hero_wario", { jp: "sgb_hero_jp", col96: "sgb_hero_jp" }], gb2: ["gb2", "sgb_hero_us", { jp: "sgb_hero_jp" }],
-  gb3: ["gb3", "sgb_hero_jp"], pocket: ["pocket", "sgb_hero"], max: ["max", "title"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"], pbcd: ["pbcd", "title"], pb98: ["pb98", "title"], bdaman: ["bdaman", "title"] };
-const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb", "Virtual Boy": "vb", "PC-98": "pc98" };
+  gb3: ["gb3", "sgb_hero_jp"], pocket: ["pocket", "sgb_hero"], max: ["max", "title"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"], pbcd: ["pbcd", "title"], pb98: ["pb98", "title"], bdaman: ["bdaman", "title"], b64: ["b64", "title"] };
+const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb", "Virtual Boy": "vb", "PC-98": "pc98", "Nintendo 64": "n64" };
 // 16 x 16 pixel icons for the console tabs: filled rects, then holes, then fixed-colour pixels ([x, y, w, h])
 const PXICON = {
   snes: { body: [[1,4,14,1],[0,5,16,5],[1,10,6,1],[9,10,6,1]], holes: [[2,7,3,1],[3,6,1,3]],
@@ -754,6 +758,7 @@ const PXICON = {
   nes: { body: [[0,4,16,8]], holes: [[2,7,3,1],[3,6,1,3],[6,9,1,1],[8,9,1,1],[10,7,2,2],[13,7,2,2]] },
   md: { body: [[3,4,10,1],[1,5,14,1],[0,6,16,4],[0,10,6,1],[10,10,6,1],[1,11,4,1],[11,11,4,1]],
     holes: [[2,7,3,1],[3,6,1,3],[7,5,2,1],[10,6,1,1],[12,6,1,1],[14,6,1,1],[9,8,1,1],[11,8,1,1],[13,8,1,1]] },
+  n64: { body: [[1,4,14,4],[1,8,3,5],[6,8,4,6],[12,8,3,5]], holes: [[2,6,3,1],[3,5,1,3],[7,5,2,2],[12,5,1,1],[13,6,1,1]] },
   pc98: { body: [[2,1,12,9],[6,10,4,1],[1,12,14,3]], holes: [[4,3,8,5],[3,13,6,1],[11,13,2,1]] },
   vb: { body: [[1,3,14,5],[0,4,16,3],[7,8,2,5],[6,12,1,1],[5,13,1,1],[9,12,1,1],[10,13,1,1],[3,14,4,1],[9,14,4,1]], holes: [[2,4,5,2],[9,4,5,2]] },
 };

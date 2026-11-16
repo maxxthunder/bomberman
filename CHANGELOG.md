@@ -2,6 +2,12 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.8.0 (2026-11-15)
+- New game: Bomberman 64, the first Nintendo 64 game here. A Start-button code for four more Battle stages, the
+  three locked Options entries (music test, View Credits, Full Power) and what unlocks them, GameShark codes, four
+  developer test maps, a stage warp and unused text and graphics.
+- BizHawk's script console is hidden as well as the main window.
+
 ## 2.7.0 (2026-11-15)
 - New game: Panic Bomber for PC Engine CD. A hidden sound test, a stage select for all 50 puzzle stages, a story
   stage select, and leftovers of an older title program on the disc.

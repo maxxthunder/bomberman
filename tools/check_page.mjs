@@ -138,7 +138,7 @@ eq(game('bb').check('4KDMPZGZ').ver, 'jp', 'bb Bomber Boy code');
 eq(game('bb').check('B3H2DJF1KJGK1F3LFH0C').title, 'Bomber Man mode: stage 50', 'bb Atomic Punk Game B');
 eq(game('bb').check('BOHIDJFEKJGKEFOLFHAC').ver, 'jp', 'bb Bomber Boy Game B');
 ok(!game('bb').check('TL77S.3=', 'jp') && !game('bb').check('L62QTG6S'), 'bb rejects');
-eq(GAMES.map(g => g.id), ['sb1', 'sb2', 'sb3', 'sb4', 'sb5', 'pbw', 'bdaman', 'mega', 'pce90', 'pce93', 'pce94', 'pbcd', 'pb98', 'nes1', 'nes2', 'gb1', 'gb2', 'gb3', 'bb', 'pocket', 'max', 'pbvb'], 'every built game has a setup');
+eq(GAMES.map(g => g.id), ['sb1', 'sb2', 'sb3', 'sb4', 'sb5', 'pbw', 'bdaman', 'b64', 'mega', 'pce90', 'pce93', 'pce94', 'pbcd', 'pb98', 'nes1', 'nes2', 'gb1', 'gb2', 'gb3', 'bb', 'pocket', 'max', 'pbvb'], 'every built game has a setup');
 
 // A game with no codec: listed, codes only, no generator
 ok(!GAMES.find(g => g.id === 'mega8') && CODES.mega.some(e => e.section === 'demo8'), 'the 8-player demo sits inside Mega Bomberman');
