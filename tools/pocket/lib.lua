@@ -1,4 +1,4 @@
--- pocket helpers, prepended to test scripts by run.sh (after tools/emu/mesen_gb.py's prelude)
+-- pocket helpers, prepended to test scripts by run.sh (after tools/emu/mesen.py's and gb.lua's preludes)
 function pc() return emu.getState()['cpu.pc'] end
 function bank() return emu.getState()['cart.prgBank'] end
 -- exec callback on a banked address: fn() runs when pc = addr and the ROM bank is bk (addr < $4000: any bank)

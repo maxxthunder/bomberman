@@ -68,7 +68,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark, cart RAM: $A1E0, the owned byte of Charabom 26 (the game's own message is \"You have rescued the legendary Charabom Shardra!\"). Shown on Charabom Select in Mesen.",
+  "note": "GameShark, cart RAM: $A1E0, the owned byte of Charabom 26 (the game's own message is \"You have rescued the legendary Charabom Shardra!\"). Shown on Charabom Select in Mesen. The game itself gives it as the prize of the By Chance Game, a minigame that only an infrared signal starts (see that card).",
   "section": "Charaboms",
   "img": "charabom_shardra_blue.png"
  },
@@ -87,7 +87,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark, cart RAM: $A1E8, Charabom 27. Shown on Charabom Select in Mesen.",
+  "note": "GameShark, cart RAM: $A1E8, Charabom 27. Shown on Charabom Select in Mesen. The game itself gives it as the prize of the By Chance Game, a minigame that only an infrared signal starts (see that card).",
   "section": "Charaboms",
   "img": "charabom_ox_battra_blue.png"
  },
@@ -151,15 +151,32 @@
   "img": "cheat_0103f7c2.png"
  },
  {
+  "code": "By Chance Game (infrared)",
+  "effect": "Win it and the game gives the cart's legendary Charabom: Shardra in Blue, Hikari and Ain, Ox Battra in Red and Yami",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The legendary Charabom is the prize of minigame type 6 ($53:623C). The minigame type is set only by the infrared receiver ($50:6B44); the game's own random pick ($02:631E) is dead code. No other code gives either one, so a cart alone can only earn its own side's, and only from an infrared signal. Shown on Blue and Red by writing once the two bytes the infrared read would set ($C600 = 6, $C705 = $13) in area 1-01 and playing the minigame with the pad: \"You have rescued the legendary Charabom Shardra!\", at level 40. The winning lane was found by retrying from savestates. Hikari, Yami and Ain were read, not run, and what a real signal looks like was not found. Picture: the By Chance Game, and the rescue message in Blue.",
+  "section": "Secrets",
+  "img": "legendary_shardra.png"
+ },
+ {
   "code": "Ain Version: any new game",
-  "effect": "A new game flags all 95 stages of both versions, against 75 in each retail version",
+  "effect": "A new game flags all 100 stages of both versions, against 80 in each retail version",
   "versions": [
    "ain"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The new-game template copied to cart RAM $A030 (a word per stage, 19 per world, read by $53:4D0E) has every stage's flag set in the Ain Version. Each retail version clears the flag of the 20 stages only the other version has (55 are shared); Blue matches Hikari and Red matches Yami. Read from cart RAM after a new game in Mesen in all five versions; not played through to those stages.",
-  "section": "Secrets"
+  "note": "The new-game template copied to cart RAM $A030 (a word per stage: 19 in each of worlds 1-4 and 24 in world 5) has every stage's flag set in the Ain Version. Each retail version clears the flag of the 20 stages only the other version has (60 are shared); Blue matches Hikari and Red matches Yami. Read from cart RAM after a new game in Mesen in all five versions. Every cart holds all 100 stages: with the stage number written at the loader, 1-09 loaded complete in Ain and also in retail Hikari and Blue, and 1-02 in Yami.",
+  "section": "Secrets",
+  "img": "other_side_stages.png"
  },
  {
   "code": "↑ ↓ Select Start ↓ ↑ Start Select ↑ ↓, then A",

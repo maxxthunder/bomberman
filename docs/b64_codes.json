@@ -36,8 +36,8 @@
    "jp"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "The stage-clear code grants this when the best-time slots of all 16 stages of Green Garden, Blue Resort, Red Mountain and White Glacier are filled; the same 16 slots open the fifth world. Read from the US ROM's code, not played; the entry itself was opened by setting its flag. On the US ROM, A turns the number yellow and starts the track (picture: before and after A); the stick alone plays nothing. The music bank holds exactly 47 sequences.",
+  "verified": "emu",
+  "note": "The stage-clear code grants this when the best-time slots of all 16 stages of Green Garden, Blue Resort, Red Mountain and White Glacier are filled; the same 16 slots open the fifth world. On the US ROM, with the other 15 times filled in by hand, a real clear of Green Garden stage 1 made the game grant it and save it, and Music was still there after a power cycle. In the test, A turns the number yellow and starts the track (picture: before and after A); the stick alone plays nothing. The music bank holds exactly 47 sequences.",
   "section": "Secrets",
   "img": "music_test.png"
  },
@@ -50,8 +50,8 @@
    "jp"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Granted when a stage is cleared with world 6, stage 4 selected; the check reads no difficulty setting. Read from the US ROM's code, not played. With only the music-test unlock, those four numbers are drawn as -- and A does nothing (picture: 08 without and with this unlock; 15, 16 and 44 are from the code). On View Credits the A button starts the ending sequence.",
+  "verified": "emu",
+  "note": "Granted when a stage is cleared with world 6, stage 4 selected; the check reads no difficulty setting. On the US ROM the game granted and saved it when Final Battle! was cleared, and it survived a power cycle; the stage was entered by scene write with the boss's health cut and cheats held, not played through. With only the music-test unlock, those four numbers are drawn as -- and A does nothing (picture: 08 without and with this unlock; 15, 16 and 44 are from the code). On View Credits the A button starts the ending sequence.",
   "section": "Secrets",
   "img": "music_test_08.png"
  },
@@ -64,8 +64,8 @@
    "jp"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Granted at a stage clear when all 120 card flags are set: five cards a stage, 24 stages, no difficulty term. Read from the US ROM's code, not played. Full Power, tested on the US ROM: On, Bomberman keeps remote bombs when he loses a life, and keeps remote bombs, power bombs and blast size above 4 when a stage is started from the world map. Off, the remote bombs go on a death and all three go on the world map. Picture: the same stage start with the option Off and On, the bombs having been given by hand on the world map. It changes nothing in Battle.",
+  "verified": "emu",
+  "note": "Granted at a stage clear when all 120 card flags are set: five cards a stage, 24 stages, no difficulty term. On the US ROM, with 119 card flags set by hand, clearing a stage under its target time earned the last card and the game granted and saved the unlock. Full Power: On, Bomberman keeps remote bombs when he loses a life, and keeps remote bombs, power bombs and blast size above 4 when a stage is started from the world map. Off, the remote bombs go on a death and all three go on the world map. Picture: the same stage start with the option Off and On, the bombs having been given by hand on the world map. It changes nothing in Battle.",
   "section": "Secrets",
   "img": "full_power.png"
  },
@@ -73,11 +73,13 @@
   "code": "Clear all 16 stages of worlds 1-4",
   "effect": "The fifth world, Black Fortress, opens on the world map",
   "versions": [
-   "us"
+   "us",
+   "eu",
+   "jp"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "The world map counts the filled best-time slots of the first 16 stages and wants all 16. Shown by filling the slots by hand: with 15 of 16, Up does nothing; with 16 it moves to Black Fortress (picture). The world was not entered that way.",
+  "note": "The world map counts the filled best-time slots of the first 16 stages and wants all 16. Shown by filling the slots by hand: with 15 of 16, Up does nothing; with 16 it moves to Black Fortress (picture, US). Run on all three ROMs; the world was not entered that way.",
   "section": "Secrets",
   "img": "world5.png"
  },
@@ -85,13 +87,53 @@
   "code": "Finish Black Fortress stage 4 holding all 100 Gold Cards of worlds 1-5",
   "effect": "The sixth world, Rainbow Palace, opens",
   "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The world map wants a best time for Black Fortress stage 4 and a flag that the stage itself sets when all 100 cards of the first five worlds are held, counting the ones just earned. Shown by setting both by hand: either one alone leaves the map on Black Fortress (picture: without and with the flag, US). Run on all three ROMs; the stage's own card check is from the code.",
+  "section": "Secrets",
+  "img": "world6.png"
+ },
+ {
+  "code": "Defeat 30 enemies in a stage",
+  "effect": "The 30th enemy drops a Gold Card: the card shown beside Enemies Defeated",
+  "versions": [
    "us"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "The world map wants a best time for Black Fortress stage 4 and a flag that the stage itself sets when all 100 cards of the first five worlds are held, counting the ones just earned. Shown by setting both by hand: either one alone leaves the map on Black Fortress (picture: without and with the flag). The stage's own card check is from the code.",
+  "note": "The enemy-death routine counts kills and drops that stage's fourth card at 30, and again at 60 and 90; the number after Enemies Defeated on the result screen is that counter. The other three pickup cards are inside blocks of the stage, and the fifth is for beating the target time. Shown on the US ROM by setting the counter to 29 and defeating one enemy, with cheats held: the card appeared (picture, with the result screen reading 30). The card was not picked up in that run.",
   "section": "Secrets",
-  "img": "world6.png"
+  "img": "card_30_kills.png"
+ },
+ {
+  "code": "Custom: the last three parts of each list",
+  "effect": "Samurai Head, Clown Smile and Gold Visor, and their matching body, arms and feet parts",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Each of the four lists has ten parts. The Knight part is there from the first save and six more are pickups. The eighth (Samurai Head, Shogun Kimono, Fans, High Heels) comes with all 120 Gold Cards. The ninth (Clown Smile, Karate Ware, Boxing Gloves, Clogs) comes with clearing Final Battle! while a counter in the save file is under 10801, read as three hours of play. The counter is the file's play time: it goes up once a second, stops in pause and is saved at each stage clear. The tenth, the Gold set, comes with all 120 cards while a second save value is 1 and the play time is at most 10800. With the values written by hand on the US ROM the Gold flags were set at 10780 and 10800, and not at 10801 or with the second value at 0. Nothing was found in the game that sets that second value. The Clown rule is from the code only. Picture: the Head list on a clean save, and its second page with every flag set.",
+  "section": "Secrets",
+  "img": "custom_parts.png"
+ },
+ {
+  "code": "Custom: the six pickup parts of each list",
+  "effect": "Each of the 24 is inside one block of a stage, four to a world",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Bomb the block and walk onto the part. Green Garden: Dragon Head (stage 1, room 3), Dragon Gloves (1, room 5), Dragon Mail (3, room 3), Dragon Spikes (3, room 4). Blue Resort: Iron Nuckles (1, room 1), Cat Hood (1, room 2), High Tops (3, room 1), Cat Suit (3, room 3). Red Mountain: Slash Claws (1, room 4), Iron Goggles (1, room 7), Rocking Horse (3, room 5), Cat Paws for the feet (3, room 6). White Glacier: Iron Armor (1, room 2), Chicken Head (1, room 3), Chicken Wings (3, room 2), Iron Sneakers (3, room 4). Black Fortress: Drill Arms (1, room 5), Sunglasses and Bubby Socks (3, room 3), Dress (3, room 6). Rainbow Palace: Duck Float (1, room 1), Cat Paws for the arms (1, room 2), Ponytails and Duck Feet (3, room 2). Read from the block table, which is the same in all three ROMs; the notes give each block's cell. On the US ROM four of the blocks were bombed with Bomberman placed beside them by hand and gave the listed part; the routes were not played. Picture: Dragon Head and Dragon Spikes out of their blocks.",
+  "section": "Secrets",
+  "img": "custom_part_blocks.png"
  },
  {
   "code": "802AC657 0001",
@@ -101,12 +143,42 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "The flag the Start code sets (802AC654, a 32-bit value). Written on the US ROM at the main menu. Europe 802AC647 and Japan 802AB887 were not written, only watched changing when the Start code was entered. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "note": "The flag the Start code sets (802AC654, a 32-bit value). Tested as a RAM write in BizHawk, not on a GameShark.",
   "section": "cheat",
   "devices": {
    "GameShark": "802AC657 0001"
   },
   "img": "gs_battle.png"
+ },
+ {
+  "code": "802AC647 0001",
+  "effect": "Battle Mode has all 10 stages",
+  "versions": [
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The Start code's flag on the European ROM (802AC644). Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802AC647 0001"
+  },
+  "img": "gs_battle_eu.png"
+ },
+ {
+  "code": "802AB887 0001",
+  "effect": "Battle Mode has all 10 stages",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The Start code's flag on the Japanese ROM (802AB884). Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "802AB887 0001"
+  },
+  "img": "gs_battle_jp.png"
  },
  {
   "code": "802A1DAB 0001",
@@ -257,6 +329,21 @@
   "img": "gs_giant_blast.png"
  },
  {
+  "code": "810AEE0A 0600",
+  "effect": "Short fuse: bombs go off after 60 ticks instead of 150",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's block is at 800AEDF0 in all three ROMs (players 2-4 follow at +C8 each). Item bit 10, one of the seven timed effects of the random pickup. Picture: the same frame without and with it. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "810AEE0A 0600"
+  },
+  "img": "gs_fuse.png"
+ },
+ {
   "code": "810AEE0A 0A00",
   "effect": "Bombs are drawn giant",
   "versions": [
@@ -358,12 +445,27 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Lives (802AC624). Written on the world map: the stage card shows 07. Europe 802AC617 and Japan 802AB857 were read, not written. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "note": "Lives (802AC624). Written on the world map: the stage card shows 07. Europe 802AC617 and Japan 802AB857 held the same way through a stage reload; no picture was taken there. Tested as a RAM write in BizHawk, not on a GameShark.",
   "section": "cheat",
   "devices": {
    "GameShark": "802AC627 0007"
   },
   "img": "gs_lives.png"
+ },
+ {
+  "code": "812AC640 0000 + 812AC642 03D7",
+  "effect": "The stage clock stops at 983, under ten seconds",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The clock (802AC640) counts hundredths of a second. Held from the middle of a stage on the US ROM. Held at 0 from the moment a stage loads, the clock does stay at 0 but the opening camera never settles, so use a value above 0. Tested as a RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "812AC640 0000 + 812AC642 03D7"
+  },
+  "img": "gs_clock.png"
  },
  {
   "code": "Scenes 14-17",
@@ -406,6 +508,42 @@
   "img": "warp.png"
  },
  {
+  "code": "Scene 9B",
+  "effect": "A one-enemy test room that can no longer load",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Nothing asks for it. Its program, the same in all three ROMs, sets up one enemy and goes back to the title when no enemy is left, but the collision map it names (564) is now a graphics pack, so the load stops on a purple screen. With that one number changed to another map the room loads and Bomberman stands in it, though it never starts running. Picture: as it is, and with the map number changed.",
+  "section": "debug",
+  "img": "scene_9b.png"
+ },
+ {
+  "code": "Music 30",
+  "effect": "A six-second jingle that nothing in the game plays",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Sequence 30 is 920 bytes, seven tracks and 63 notes, and no call in the main program or any of the 95 scene programs asks for it. Recorded from the music test (picture): it sounds for 5.8 seconds, two bars, once, and stops.",
+  "section": "unused",
+  "img": "music_30.png"
+ },
+ {
+  "code": "Music 00, 09, 23, 25, 34, 36, 37, 41, 43",
+  "effect": "Nine music numbers that are all the same 184-byte placeholder",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Nothing asks for any of them. The nine sequences are byte-identical and stored together at the end of the bank. The music test accepts them (picture: 09). Recorded: one instrument plays a 16-note bar of 1.2 seconds four times, then silence.",
+  "section": "unused",
+  "img": "music_09.png"
+ },
+ {
   "code": "STAGE SELECT, CONFIG, COMLEVEL",
   "effect": "An older all-capitals Battle menu left in the Battle program, never shown",
   "versions": [
@@ -419,15 +557,16 @@
  },
  {
   "code": "CLEAR BONUS, RANK",
-  "effect": "Two result-screen labels that no code points at",
+  "effect": "Two result-screen labels that neither result screen shows",
   "versions": [
    "us",
    "eu"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "ROM BAC0C and BAC1C, between \"Gold Cards\" and \"Game Over\" in the stage-result text. No pointer or address constant for either was found in the main program or any stage program. The result screen itself was not reached in testing, so this is a reading of the code.",
-  "section": "unused"
+  "verified": "emu",
+  "note": "ROM BAC0C and BAC1C, between \"Gold Cards\" and \"Game Over\" in the stage-result text. No pointer or address constant for either was found. A stage's result screen shows Gold Cards, Enemies Defeated, Time and Target Time, and a boss's shows Attack Level, Time and Target Time (picture, US); neither label appeared on either.",
+  "section": "unused",
+  "img": "result_screens.png"
  },
  {
   "code": "Flat title logo",
@@ -438,21 +577,21 @@
    "jp"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Asset 35 in all three ROMs. The title builds its logo from separate pieces, and no call to the sprite loader passes 35. Asset numbers can also come from tables, so this is a reading of the code, not proof that nothing draws it.",
+  "verified": "emu",
+  "note": "Asset 35 in all three ROMs. The title builds its logo from separate pieces, and no call to the sprite loader passes 35. Traps on the file and sprite loaders never saw 35 asked for on any of the three ROMs, through the boot, title, file select, Battle menu, Options, a stage, a Battle and the start of the ending.",
   "section": "unused",
   "img": "unused_logo.png"
  },
  {
   "code": "Hudson logo and ©1997 HUDSON SOFT",
-  "effect": "Two title graphics still in the US and European ROMs, asked for only by the Japanese title program",
+  "effect": "Two title graphics still in the US and European ROMs, asked for only by the Japanese ROM",
   "versions": [
    "us",
    "eu"
   ],
   "status": "new",
-  "verified": "static",
-  "note": "Assets 36 and 38. The Japanese title program loads both; the US and European one loads the licence screen and the \"64\" in their place, and no other load of 36 or 38 by number was found. Read from the code.",
+  "verified": "emu",
+  "note": "Assets 36 and 38. The Japanese ROM loads the Hudson logo at power-on and the copyright line on its title; the US and European ROMs show the licence screen and the \"64\" in their place. Traps on the loaders never saw 36 or 38 asked for on those two, through the boot, title, menus, a stage and a Battle.",
   "section": "unused",
   "img": "japan_only_graphics.png"
  },

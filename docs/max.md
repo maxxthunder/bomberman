@@ -49,7 +49,7 @@ encodes / decodes those codes (`node tools/max/test_password.mjs`).
 |---|---|---|
 | `$A000-$A1FF` | the game in play; `$A200` and `$A400` are File1 and File2 (copied in and out) | `$00:2833`, `$01:6029` |
 | `$A000` | `BOMBERMAN-MAX`, then a checksum byte at `$A00F` | `$09:4333`, `$00:274F` |
-| `$A030` | stage table: a word per stage, 19 per world, 5 worlds + 5 more; byte 0 = the stage's flag (`$53:4D0E`), byte 1 set when it is done (`$53:4D45`) | `$53:4D7D` (world offsets) |
+| `$A030` | stage table: a word per stage, 19 in each of worlds 1-4 and 24 in world 5 (100); byte 0 = exits leading to the stage are built (`$53:45C4`), byte 1 set when it is done (`$02:6E36`) | `$53:4D7D` (world offsets) |
 | `$A110 + 8 x id` | Charabom roster, ids 0-29: `[owned, id, level, attack, defense, speed, 0, 0]` | `$02:653E` (rescue), `$02:65AD` (owned?) |
 
 The game reads the roster in place: setting an owned byte puts the Charabom on Charabom Select at once, and a save keeps
@@ -92,6 +92,17 @@ Pommy) in Japan and Beast Pommy in the US, id 18 the other way round.
 
 ![Shardra, Ox Battra, Heat Rock, Oct Kong owned by GameShark](img/max/charaboms_blue.png)
 
+★ **The legendary pair.** Each is the prize of the By Chance Game, minigame type 6: `$53:623C` loads id `$1A`
+(Shardra) in Blue, Hikari and Ain and `$1B` (Ox Battra) in Red and Yami. The minigame type `$C600` is set only by the
+infrared receiver (`$50:6B44`); the random pick at `$02:631E` is dead code. All 27 references to the roster `$A110`
+were read in Blue: three write an entry, the stage rescue, this award (`$53:6712`) and `$08:58F0`, which stores only
+the player's own Charabom or a combining result (ids 20-25). So a cart alone can earn only its own side's legendary,
+and only from an infrared signal; the Pitch Area packet was not decoded. Shown on Blue and Red by writing `$C600` = 6
+and the player state `$C705` = `$13` once in area 1-01 and playing the minigame with the pad; the winning lane was
+found by retrying from savestates. Hikari, Yami and Ain were not run.
+![The By Chance Game, and Shardra rescued in Blue](img/max/legendary_shardra.png)
+![Ox Battra rescued in Red, and in the roster](img/max/legendary_ox_battra.png)
+
 **Codec API** (`tools/max/password.mjs`): `encode({own: [ids], level: {id: 1-99}}, ver)` returns the GameShark codes;
 `decode(code, ver)` returns `{id, name, field: 'owned' | 'level', value}` for a roster code, else `null`;
 `validate(code, ver)`; `name(id, ver)`; constants `VERSIONS`, `CHARABOMS` (`{id, us, jp, home, lv, icon}`),
@@ -121,9 +132,12 @@ Pommy) in Japan and Beast Pommy in the US, id 18 the other way round.
 ### Ain Version: every stage of both sides (★ New)
 
 The new-game template that fills the stage table `$A030` sets every stage's flag in the Ain Version. Each retail
-version clears the flag of the 20 stages only the other side has: 55 stages are shared, Blue and Hikari have 20 more,
-Red and Yami 20 others, and Ain has all 95 (read from cart RAM after a new game in all five versions). GameFAQs also lists a
-"Complete Data Version" alias for the game; this may be it. Not played through to those stages.
+version clears the flag of the 20 stages only the other side has: 60 stages are shared, Blue and Hikari have 20 more,
+Red and Yami 20 others, and Ain has all 100 (read from cart RAM after a new game in all five versions). GameFAQs also lists a
+"Complete Data Version" alias for the game; this may be it. Every cart holds all 100 stages: with the stage number written at the loader, 1-09 loaded complete in
+Ain and in retail Hikari and Blue, and 1-02 in Yami. Nothing was found that sets a stage's first byte in play, so a
+retail cart alone has no way to the other side's 20 stages or to the full ending; a whole-table copy by Pitch Area
+was not ruled out. ![1-09 in Hikari, 1-02 in Yami](img/max/other_side_stages.png)
 
 ## Cheats (★ New, `tools/max/test_cheats.lua`)
 
@@ -153,7 +167,10 @@ the minigames and the ending were not reached, so this sweep is partial.
 
 ★ A second sweep in Mesen (play only, merged with the earlier logs) reached stages up to S5-25: 98,604 bytes of
 code executed. The bonus stages S6-01 to S6-04 and the MATCH GAME help were entered by setting the stage loader's
-bonus fields (`$C5FF`=1, `$C600`=n, `$C2D0`=5, `$C2D1`=n); n=4 shows the help, then a broken field. Setting mode 7
+bonus fields (`$C5FF`=1, `$C600`=n, `$C2D0`=5, `$C2D1`=n); The eight types are the minigames: 0 Bonus Game, 1 Slot Game, 2 Kick Game, 3 Warp Game, 4 Match Game, 5 Flag
+Game, 6 By Chance Game, 7 Silhouette Quiz; 2-7 were started by writing the type and the player state `$C705`.
+![Kick and Warp](img/max/minigames_1.png) ![Match and Flag](img/max/minigames_2.png)
+![Silhouette Quiz, and the By Chance award](img/max/minigames_3.png) Setting mode 7
 (`$C187`=7, `$C188`=0) during S5-24 shows "...END? Is this the end? Are you sure?", which waits for Start and then goes to the title.
 ★ It is one of three real endings. When a world 5 stage ends, `$09:4000` picks one into `$C65A`, and ending state 1
 (`$50:41DE`) jumps by it: 2 (the full ending) when all 100 stage words at `$A030` are set, else 1 (the normal ending)
@@ -162,7 +179,7 @@ and starting mode 7: the normal ending has the Bomber Craft in deep space, "The 
 story recap and an END card; the full one adds the Max Speeder, Max and Bomberman together and "Ha Ha Ha! This was a
 piece of cake".
 ![The normal ending ($C65A = 1)](img/max/ending_normal.png) ![The full ending ($C65A = 2)](img/max/ending_full.png) Nothing in what still never runs turned out to be
-hidden content. Charabom battles and bonus types 5-7 weren't reached.
+hidden content. Charabom battles weren't reached.
 ![The bonus stages, entered through the stage loader](img/max/bonus_stages.png)
 ![Mode 7 during S5-24: ...END?](img/max/end_question.png)
 
@@ -240,12 +257,11 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
 
 ## Open
 
-- Play the Ain Version to a stage only the other side has (e.g. 1-9 on the Hikari side), and see whether a GameShark
-  write to the stage table opens the other side's stages in a retail cart.
-- What the 5 extra stage-table words (`$A0EE-$A0F7`) are, and the stage table's second byte.
+- A retail cart walked through an exit opened by a GameShark write to the stage table.
+- The By Chance award in Hikari, Yami and Ain, a clean run of it without retries, and which stage object offers the
+  infrared read.
 - Pitch Area's infrared packet format (needs a second console).
-- How the legendary Charaboms are earned, and Battle Game with a saved Charabom; both outside the coverage runs.
-- The Charabom battles and bonus types 5-7 in a coverage run. The roster's 30 slots fill `$A110`-`$A1FF` up to the
+- Battle Game with a saved Charabom, and the Charabom battles in a coverage run. The roster's 30 slots fill `$A110`-`$A1FF` up to the
   first save file, so there is no room for more; computer rivals (`$08:4C24`) use ids 0-25 only.
 
 ## Battle against the computer (★ New)

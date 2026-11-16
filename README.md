@@ -1,8 +1,8 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Nintendo 64, Genesis, PC Engine, Virtual Boy and PC-98
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.8.0](https://img.shields.io/badge/version-2.8.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.9.0](https://img.shields.io/badge/version-2.9.0-ff4f9a)](CHANGELOG.md)
 
-Every password and secret code for 23 Bomberman games, read from each game's own code and tested in emulators, with a
+Every password and secret code for 25 Bomberman games, read from each game's own code and tested in emulators, with a
 password checker for every game and a generator wherever a code holds items or progress. Each game also has its
 unused music and sounds, which you can play, and cut graphics shown in the game.
 
@@ -43,6 +43,7 @@ bar); the games you've looked at keep their screenshots.
 | <img src="docs/img/logos/bdaman.png" alt="" height="28"> | [Bomberman B-Daman](https://maxxthunder.github.io/bomberman/#bdaman) | 1996 | debug mode code, scene select, unused battle arena |
 | **Nintendo 64** | | | |
 | <img src="docs/img/logos/b64.png" alt="" height="28"> | [Bomberman 64](https://maxxthunder.github.io/bomberman/#b64) | 1997 | Start code for four Battle stages, locked Options entries, GameShark codes, test maps |
+| <img src="docs/img/logos/hero.png" alt="" height="28"> | [Bomberman Hero](https://maxxthunder.github.io/bomberman/#hero) | 1998 | debug mode GameShark code, map select, unused maps, unlock rules |
 | **TurboGrafx-16 / PC Engine** | | | |
 | <img src="docs/img/logos/pce90_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#pce90) and Users Battle | 1990 | password generator, cheats, patches |
 | <img src="docs/img/logos/pce93_us.png" alt="" height="28"> | [Bomberman '93](https://maxxthunder.github.io/bomberman/#pce93) | 1992 | password generator, cheats, patches |
@@ -61,6 +62,7 @@ bar); the games you've looked at keep their screenshots.
 | <img src="docs/img/logos/nes2_us.png" alt="" height="28"> | [Bomberman II](https://maxxthunder.github.io/bomberman/#nes2) | 1991 | password generator, cheats |
 | **Genesis** | | | |
 | <img src="docs/img/logos/mega_us.png" alt="" height="28"> | [Mega Bomberman](https://maxxthunder.github.io/bomberman/#mega) and its 8-player demo | 1994 | password generator, cheats |
+| <img src="docs/img/logos/quest.png" alt="" height="28"> | [Bomberman Quest](https://maxxthunder.github.io/bomberman/#quest) | 1998 | test menu and debug game button code, GameShark codes, endings |
 | **Virtual Boy** | | | |
 | <img src="docs/img/logos/pbvb.png" alt="" height="28"> | [Panic Bomber](https://maxxthunder.github.io/bomberman/#pbvb) | 1995 | every password, special codes, debug menu, developer menu patch |
 | **PC-98** | | | |
@@ -207,12 +209,12 @@ What each patch does, and how it was tested, is on the game's page under Patches
 - Super Nintendo: [Super Bomberman](docs/sb1.md), [2](docs/sb2.md), [3](docs/sb3.md), [4](docs/sb4.md),
   [5](docs/sb5.md), the English [4](docs/sb4en.md) and [5](docs/sb5en.md) (Super Bomberman Collection), and
   [Panic Bomber W](docs/pbw.md), [Bomberman B-Daman](docs/bdaman.md)
-- Nintendo 64: [Bomberman 64](docs/b64.md)
+- Nintendo 64: [Bomberman 64](docs/b64.md), [Bomberman Hero](docs/hero.md)
 - PC Engine: [Bomberman](docs/pce90.md), [Users Battle](docs/pceub.md), [Bomberman '93](docs/pce93.md),
   [Bomberman '94](docs/pce94.md), [Panic Bomber](docs/pbcd.md) (CD), and the [Wii U and Collection re-releases](docs/pcevc.md)
 - Game Boy: [Atomic Punk / Bomber Boy](docs/bb.md), [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md),
   [Bomberman GB 3](docs/gb3.md)
-- Game Boy Color: [Pocket Bomberman](docs/pocket.md), [Bomberman Max](docs/max.md)
+- Game Boy Color: [Pocket Bomberman](docs/pocket.md), [Bomberman Max](docs/max.md), [Bomberman Quest](docs/quest.md)
 - NES: [Bomberman](docs/nes1.md), [Bomberman II](docs/nes2.md)
 - Genesis: [Mega Bomberman](docs/mega.md) and its [8-player demo](docs/mega8.md)
 - Virtual Boy: [Panic Bomber](docs/pbvb.md)
@@ -238,7 +240,7 @@ The page is one file and opens straight from disk; it pulls its fonts and icons 
   logs. `tools/m68k.py`: 68000 listing for Mega Bomberman. `tools/m6502.py` (NES) and `tools/sm83.py` (Game Boy) do
   the same for the 8-bit games, and `tools/huc6280.py` for the PC Engine.
 - `tools/<game>/run.sh script.lua [ver]` (all through `tools/emu/run.sh`) runs a game's Lua test scripts headless
-  with `tools/emu/mesen.py` (or `mesen_gb.py`, `mesen_nes.py`, `bizhawk.py`). Set `MESEN` or `EMUHAWK` to the
+  with `tools/emu/mesen.py` (or `bizhawk.py`). Set `MESEN` or `EMUHAWK` to the
   emulator.
 - `tools/emu/ips.py`: the IPS writer the patch makers share.
 

@@ -1,4 +1,4 @@
--- Exhaustive decoder fuzz (prepend B0, Y0, Y1; see fuzz_all.py). The game's own decoder ($C8AB) is run on byte 0 = B0
+-- Exhaustive decoder fuzz (prepend B0, Y0, Y1; see tools/pce90/fuzz_all.py). The game's own decoder ($C8AB) is run on byte 0 = B0
 -- and bytes 1-3 = every y in [Y0, Y1) by a small loop patched into free ROM in bank 2 ($D600, $FF fill from $D2AF in the dump):
 --   $D600 builds the 8 letters from $3000-$3003 through the $CA88 rows into $3410-$3417, then JMP $C8AB;
 --   the decoder's exits are patched: $C9CD (valid) -> $D640 logs y and $3424-$3428 to a 32-entry ring at $3100,

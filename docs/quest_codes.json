@@ -1,0 +1,371 @@
+[
+ {
+  "code": "Hold A + Select from power-on until the logos end, then press Select on the title",
+  "effect": "*TEST MODE*: a developer menu with a tile viewer, a sound test, a colour test and the ending",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The boot code clears the debug bit ($C234 bit 0) unless exactly A + Select are held (00:19C5: CP $05). On the title, a new Select press with the bit set opens game state $18. Played with buttons only. Both buttons must be down from the moment the logos start until they end (controller polls 47 to 165 in the emulator); starting one poll late, letting go one early or a one-frame gap in the middle all lose it. The US ROM has the same menu but its boot code lost the check, so there the bit is always cleared.",
+  "section": "Button codes",
+  "img": "code_test_menu_jp.png"
+ },
+ {
+  "code": "Hold A + Select from power-on; keep Select held, add Down, press Start, then A on the first menu line",
+  "effect": "Debug new game: 10 hearts of HP and every item",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "With the debug bit kept on by the power-on hold, Down + Select + A on the first title-menu line sets bit 1 of $C234 and the new game copies its start data from 3E:4324 instead of 3E:4240: HP $A0/$A0 and every item flag set. Select must stay held from the boot through the title, since a fresh Select press there opens the test menu. Played with buttons only. Picture: the first screen and the weapon list.",
+  "section": "Button codes",
+  "img": "code_debug_game_jp.png"
+ },
+ {
+  "code": "010134C2",
+  "effect": "Select on the title opens *TEST MODE*",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Holds the debug bit the Japanese button code leaves on ($C234 bit 0); it is the only way in on the US ROM. The menu shows the hardware it runs on, DEAD and SAVE counters from the save file and a build stamp: US 12/24/1998.17:29:48, Japan 10/27/1998.19:56:37 (picture: US and Japan). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "010134C2"
+  },
+  "img": "gs_test_menu.png"
+ },
+ {
+  "code": "010134C2, then hold Down + Select from power-on, press Start, and A on New Game",
+  "effect": "Debug new game on the US ROM: 10 hearts of HP and every item",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The same start as the Japanese button code. 010334C2 with no buttons does not work: the title clears bit 1 again unless Down + Select + A are held.",
+  "section": "debug",
+  "img": "debug_game_us.png"
+ },
+ {
+  "code": "018034C2",
+  "effect": "No damage: blasts and enemies take no HP",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Bit 7 of the debug byte $C234. The damage routine skips the HP subtraction when it is set (09:5921), and nothing in the ROM sets it. Three of Bomberman's own blasts: Game Over without the code, full HP with it (picture). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "018034C2"
+  },
+  "img": "gs_no_damage.png"
+ },
+ {
+  "code": "013082CE",
+  "effect": "Infinite HP (3 hearts)",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Save-block HP ($CE82). Holding only the in-play copy at $C390 does not work: the bar stays full but the third blast still kills. Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "013082CE"
+  },
+  "img": "gs_hp_us.png"
+ },
+ {
+  "code": "013081CE",
+  "effect": "Infinite HP (3 hearts)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The Japanese ROM's save block sits one byte lower, so HP is $CE81. The US code does nothing here. Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "013081CE"
+  },
+  "img": "gs_hp_jp.png"
+ },
+ {
+  "code": "012091CE",
+  "effect": "New Game and Continue start on screen $20",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The screen the game loads on New Game or Continue ($CE91, $1B at the start). Only 00-3F are screens, the 8 by 8 overworld grid; there is no range check, and higher values load garbage. Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "012091CE"
+  },
+  "img": "gs_warp20_us.png"
+ },
+ {
+  "code": "010091CE",
+  "effect": "New Game and Continue start on screen $00",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The same byte with screen $00. Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "010091CE"
+  },
+  "img": "gs_warp00_us.png"
+ },
+ {
+  "code": "012090CE",
+  "effect": "New Game and Continue start on screen $20",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The start-screen byte on the Japanese ROM ($CE90). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "012090CE"
+  },
+  "img": "gs_warp20_jp.png"
+ },
+ {
+  "code": "Test menu: A",
+  "effect": "PCG MAP: a tile viewer with 26 tile sets (BANK NO. 0000-0019)",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Left and Right change the set, B goes back. Picture: sets 0 and 1.",
+  "section": "debug",
+  "img": "test_pcg.png"
+ },
+ {
+  "code": "Test menu: Start",
+  "effect": "*SOUND TEST*: 39 music tracks (BGM_81 to BGM_F2) and 67 sound effects (SE_8E to SE_DC)",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Up and Down pick the BGM or SE line, Left and Right the number, A plays, B goes back. A \"B: STOP\" line is in the ROM but is not drawn, and there is no stop key.",
+  "section": "debug",
+  "img": "test_sound.png"
+ },
+ {
+  "code": "Test menu: Up",
+  "effect": "*COLOR TEST*: mix a 15-bit colour from R, G and B levels",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Up and Down pick the channel, Left and Right the level (0-$1F), A resets it, B goes back. The swatch only shows on a Game Boy Color.",
+  "section": "debug",
+  "img": "test_color.png"
+ },
+ {
+  "code": "Test menu: Down",
+  "effect": "Plays the true ending and the staff roll",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Sets the ending selector to 3: \"After an epic battle, Bomberman defeats the mighty Chaos Bomber!\", then the staff roll. Select on the test menu goes back to the title.",
+  "section": "debug",
+  "img": "test_ending.png"
+ },
+ {
+  "code": "Capture all 51 monsters",
+  "effect": "The ending leads to the true last boss, the Chaos Bomber; otherwise the game ends on \"?? Is that really the end?\"",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The check runs when Bomberman answers Leave at the Bomber Shuttle with the four commanders beaten (22:4205): it tests the captured bit of monster flags 1-51. All set: \"Bomberman's true enemy... The Chaos Bomber!\" and his fight in an arena of its own. Otherwise the shuttle leaves, the staff roll plays and the game says \"Next time, try to capture all the monsters?\". Played on both ROMs by setting the flags and walking to the shuttle; the fight was started but not won, and the last ending was triggered by removing the boss by hand. Picture: the normal ending and the Chaos Bomber reveal.",
+  "section": "Secrets",
+  "img": "endings.png"
+ },
+ {
+  "code": "Go back to the Water, Electro and Hurricane commanders' rooms",
+  "effect": "Three hidden characters wait there to duel; beating each adds a heart to the HP bar",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The first, Mami, is in the Water Commander's room once the Water and Electro commanders are beaten; the second is in the Electro Commander's room once three commanders and Mami are beaten; the third in the Hurricane Commander's room once all four and the second are. The text never names the second and third. All three were met on the US ROM by setting the beaten flags. Mami's duel was won on the US ROM with the pad alone, starting from 3 hearts, with the commander flags and a Normal Bomb at firepower 5 set beforehand: max HP rose to 4 hearts and the second character appeared. She never hurts Bomberman: she stuns with the Hammer, kicks bombs away and digs. Losing to her is an ordinary Game Over. The other two duels were not fought. Picture: Mami's greeting, and her duel.",
+  "section": "Secrets",
+  "img": "hidden_mami.png"
+ },
+ {
+  "code": "Beat the Chaos Bomber",
+  "effect": "A pink character dances above the Bomber Shuttle in Peace Town",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "An object on the town's shuttle screen that appears only when the Chaos Bomber's flag has its captured bit. Shown on the US ROM by setting the bit.",
+  "section": "Secrets",
+  "img": "dancer.png"
+ },
+ {
+  "code": "Monsters book: hold Select",
+  "effect": "The page shows a Defeated count",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Not in the game's help text. Which counter it reads was not traced.",
+  "section": "Button codes",
+  "img": "book_defeated.png"
+ },
+ {
+  "code": "01A081CE",
+  "effect": "10 hearts of HP",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Max HP in the save block ($CE81). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "01A081CE"
+  },
+  "img": "gs_maxhp_us.png"
+ },
+ {
+  "code": "01A080CE",
+  "effect": "10 hearts of HP",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Max HP on the Japanese ROM ($CE80). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "01A080CE"
+  },
+  "img": "gs_maxhp_jp.png"
+ },
+ {
+  "code": "A fourth hidden fighter",
+  "effect": "A complete duel kit and sprite set that no screen uses",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The duel code has four fighters; only three are placed and there is no fourth greeting. Shown by changing one byte of a copy of the US ROM so Mami's room loads the fourth (file offset 48BE8, 02 to 03). The sprites are at 2E:4680. The kit is 10 hearts, Power Gloves, Rubber Bomb and Silver Armor.",
+  "section": "unused",
+  "img": "hidden_fourth.png"
+ },
+ {
+  "code": "BGM 81, 9F, E0, E1",
+  "effect": "Four music tracks and thirteen sound effects that nothing requests",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "From the sound test's lists. No code, screen music byte, monster-talk table or dance table asks for these BGM ids, or for SE 9E, A5, A8, BE, BF, C1, C2, C9, D0, D1, D4, D7 and DB. The four tracks were played in the sound test with every sound-chip write logged: each is a real piece unlike any other id. 81 and 9F are full four-channel pieces still playing after 40 seconds, E0 ends after about 16 seconds, and E1, about 38 seconds, opens with the same 65 notes as F0. The effects were not played.",
+  "section": "unused"
+ },
+ {
+  "code": "A third pause-menu button",
+  "effect": "A greyed button under Equipment and Monsters that the cursor cannot reach, still labelled in Japanese in the US ROM",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The pause menu's cursor only takes the values 0 and 1. Shown on the US ROM by writing 2 to it ($C3E7) once with the menu open and pressing A: the button is drawn, labelled する (\"do\"), and A on it does nothing.",
+  "section": "unused",
+  "img": "pause_third_button.png"
+ },
+ {
+  "code": "Hidden characters in Peace Town",
+  "effect": "Town versions of the three hidden characters, each with a short talk of its own, that no screen places",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "A town object picks one of three short talks by a parameter 0-2 (table 11:54F5), and no screen in either ROM uses those parameters. Shown by changing one byte of a copy of the US ROM (file offset 4877F), which puts each character in Peace Town: \"There you are! I've been looking for you!\" Picture: Mami in town, and her talk.",
+  "section": "unused",
+  "img": "town_mami.png"
+ },
+ {
+  "code": "After-battle lines",
+  "effect": "Each commander has lines for after losing, and Bomberman has replies, in the Japanese ROM only; nothing shows them",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Monster lines $5D-$68 and Bomberman lines $7A-$7F. The US ROM has filler strings in those slots. No talk record in either ROM points to them. Read from the two scripts; the Japanese was decoded with a table built from the font.",
+  "section": "unused"
+ },
+ {
+  "code": "Super Game Boy 2 link battle",
+  "effect": "A second Super Game Boy border, sent only after Battle mode's link-cable handshake succeeds on a Super Game Boy",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "The border routine (00:19FC) has two borders; the second is called from one place, 08:66DE, after the handshake and only on Super Game Boy hardware, so it needs a Super Game Boy with a link port. Shown here by pointing the boot's border at it in a patched copy of the US ROM, not by a real link battle. Picture: the normal border and the battle border.",
+  "section": "Secrets",
+  "img": "sgb_borders.png"
+ },
+ {
+  "code": "STAGE=, ENEMY=, SPR NO.",
+  "effect": "Labels of a stage select, an enemy viewer and a sprite viewer that the test menu no longer has",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Bank $27 strings with no reference: LOAD =, STAGE=, ENEMY=, A (BG_PCG), B (SPR_CHR), START (SOUND TEST), SPR NO., PCG NO., UP.DN PCG_CHENG, LF.RH SPR_CHENG and B: STOP. The menu's third screen slot is a null pointer.",
+  "section": "unused"
+ },
+ {
+  "code": "Three Super Game Boy palettes",
+  "effect": "Three palette packets in the game's Super Game Boy table that are never sent",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Entries 5-7 of the packet table (00:1B11 US, 00:1B25 Japan). All 23 calls of the send routine pass 0-4, and nothing points at the last three. A computed index would escape that search; none was seen.",
+  "section": "unused",
+  "img": "sgb_unused_palettes.png"
+ }
+]

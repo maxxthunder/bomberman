@@ -3,7 +3,7 @@
 Everything here comes from disassembling the ROMs (`tools/sm83.py`, a recursive SM83 disassembler that follows MBC1
 bank switches and takes every executed code start from Mesen's code/data log; listings in `disasm/gb1/`) and
 checking the results in Mesen 2 (`tools/gb1/run.sh` runs a Lua script headless with `tools/gb1/lib.lua` and
-`tools/emu/mesen_gb.py`'s helpers prepended). Addresses are `bank:address` (bank 0 at `$0000`, the switched bank at
+`tools/emu/gb.lua`'s helpers prepended). Addresses are `bank:address` (bank 0 at `$0000`, the switched bank at
 `$4000`). JP addresses unless Wario is named; most routines sit at the same address in both.
 
 Prior art: the GameFAQs codes page for Wario Blast and a wiki article on Wario Blast (both saved in `res/`). The
@@ -84,7 +84,7 @@ only for stages) or `null`; `validate(code, version)`; `encode(round, stage, pla
 - **Fuzz** (`tools/gb1/fuzz.py`, `fuzz.lua`): all 10,000 codes were written into `$C597-$C59A` and run through the
   game's own check from a savestate at its entry, the result read at its two exits. JP: 34 accepted, Wario: 68,
   **0 mismatches** with `password.mjs` in either.
-- **Typed with the pad** (`tools/gb1/test_codes.py`, `test_codes.lua`): every code in both versions (36 JP runs, 70
+- **Typed with the pad** (`tools/emu/gb_test_codes.py gb1`, `tools/gb1/test_codes.lua`): every code in both versions (36 JP runs, 70
   Wario runs including `0000` and `1234`), Up/Down on the digit, A to the next, Start to check; `$C3F0`, `$C3FB`,
   `$C3D5` and the reject/battle exits read back. All as predicted.
 

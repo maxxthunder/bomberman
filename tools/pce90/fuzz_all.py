@@ -1,9 +1,9 @@
 """Run the game's decoder on every y in [y0, y1) as bytes 1-3 with a fixed byte 0 (fuzz_all.lua, an in-ROM loop) and
 compare with password.py. All 2^24 is y0=0 y1=1000000 (hours at ~750 codes/s per Mesen instance on a loaded machine).
-Usage: python fuzz_all.py <us|jp> <scratch dir> [byte0 hex=10] [y0 hex=0] [y1 hex=30d40] [chunks=1] [parallel=4]"""
+ub = Users Battle, with its own fuzz_all.lua, password.py and run.sh in tools/pceub.
+Usage: python fuzz_all.py <us|jp|ub> <scratch dir> [byte0 hex=10] [y0 hex=0] [y1 hex=30d40] [chunks=1] [parallel=4]"""
 import os, subprocess, sys
 from concurrent.futures import ThreadPoolExecutor
-import password as P
 
 reg, d = sys.argv[1], sys.argv[2]
 b0 = int(sys.argv[3], 16) if len(sys.argv) > 3 else 0x10
@@ -11,7 +11,9 @@ Y0 = int(sys.argv[4], 16) if len(sys.argv) > 4 else 0
 Y1 = int(sys.argv[5], 16) if len(sys.argv) > 5 else 200000
 nch = int(sys.argv[6]) if len(sys.argv) > 6 else 1
 par = int(sys.argv[7]) if len(sys.argv) > 7 else 4
-here = os.path.dirname(os.path.abspath(__file__))
+here = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "pceub" if reg == "ub" else "pce90")
+sys.path.insert(0, here)
+import password as P
 
 
 def code(y):

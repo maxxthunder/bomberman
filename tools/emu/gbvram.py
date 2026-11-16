@@ -1,4 +1,4 @@
-"""Render Game Boy VRAM dumps (mesen_gb.py vdump(): VRAM 8 KB, OAM 160, BGP, OBP0, OBP1, LCDC, SCY, SCX, WY, WX).
+"""Render Game Boy VRAM dumps (gb.lua vdump(): VRAM 8 KB, OAM 160, BGP, OBP0, OBP1, LCDC, SCY, SCX, WY, WX).
 Shared by tools/gb1-gb3.
 python tools/emu/gbvram.py bg <dump.vram> <out.png> [x y w h]     BG map (32 x 32 tiles, or a tile rect of it)
 python tools/emu/gbvram.py logo <dump.vram> <out.png> x y w h     tile rect, colour 0 transparent, cropped to content

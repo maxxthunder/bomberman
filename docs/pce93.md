@@ -193,8 +193,8 @@ FIRE `$3898`, SHOES `$389A`, KICK and LINE BOMB `$3899`, the switches (RIMOCON `
 
 JP `07:A707`: on entering the Battle Game the game tests pad 5's held buttons, `$36 & $1F` = `$1F` (Up+I+II+Select+Run
 held on pad 5, which with no Multi Tap is the single pad), and if so shows the error screen before the battle setup.
-In the US version the test and its branch are gone (`07:A6D8` goes on to the setup). Verified in Mesen by writing
-the pad-5 byte at the test (Mesen's test runner cannot drive pad 5): the screen appears in JP; nothing in US.
+In the US version the test and its branch are gone (`07:A6D8` goes on to the setup). Typed with the pad in Mesen on the JP ROM: with one pad and no Multi Tap the game fills all five pad bytes from that
+pad, so BATTLE GAME chosen with Run and then Up+I+II+Select+Run held shows the screen. Nothing in US.
 
 ![](img/pce93/tap_error_jp.png)
 
@@ -243,6 +243,10 @@ in about 175 KB (more than half the code banks), and much of it looks older, not
 - Its leftover Normal Game shows an **older CONFIGRATION screen in place of the planet map, with no flag at all**:
   state 1 (`02:8421`) far-calls `08:88BD` unconditionally (and never the map). That screen has SOUND (a sound test, starting at 39, `$3894`)
   instead of the retail STOCK / SE / MUSIC items.
+- Battle set-up, played: Run on the title goes to the player count, then wins, then the stage. The stage list has
+  the same eight stages as Japan in a different order, from 1 TOY STATE to 8 ARENA where Japan runs 1 ARENA to
+  8 TOY STATE. Japan's screen asking which Bomberman the computer plays did not appear with two players.
+  ![Stage 1 in the Special Version and in Japan, mid-slide](img/pce93/sp_battle_stage_1.png)
 - Strings found only in the Special Version: SELECT STAGE, SOUND, PRESENTED BY 1992, the staff list with older
   spellings (TUKASA KUWAHARA, TOMOYUKI ENDOU, NAOKI KATOU, YASUYUKI NAKAJYOU); retail-only: CLEAR SCORE, CLEAR TIME,
   CONGRATULATIONS!, STAGE PLANET, STOCK, MUSIC, EYECATCH VOICE.
@@ -351,7 +355,7 @@ addresses; JP and SP have the same groups):
 | Code | What it is | Class |
 |---|---|---|
 | `00:F445`-`F6xx`, `07:ACA9`-`AD2A` | COM-LINK / VS link: serial handshake through the pad port `$1000` after the "who pushes RUN is White" screen (world 9, set at `07:AC61`) | needs a second console and the cable; the screen itself was reached (below) |
-| `00:FA96`-`FE82`, `06:9320` (802 bytes), `06:9654` | backup-RAM file system and the SAVE / LOAD / DELETE / FORMAT screens (title item LOAD) | needs a Tennokoe / CD backup RAM: situation not covered |
+| `00:FA96`-`FE82`, `06:9320` (802 bytes), `06:9654` | backup-RAM file system and the SAVE / LOAD / DELETE / FORMAT screens (title item LOAD) | SAVE and LOAD were run on the US ROM with Mesen's CD backup RAM switched on for HuCards; DELETE and the memory-full screens were not ![](img/pce93/backup_save_load.png) |
 | `08:8620`, `08:86C3`, `08:87AF` | US: the CONFIGRATION screen | US: unreferenced (orphan, see above); JP: reached |
 | `08:8CBE` | CONGRATULATIONS! / CLEAR TIME / CLEAR SCORE page of the ending | ★ reachable only without passwords and continues (below) |
 | `08:8871` (317 bytes) | the lose-a-life path from state 6 with more than one life left | not covered (lives were kept up) |
@@ -391,11 +395,28 @@ plus the bits of the player's ability byte that no code sets. Each was set in Me
 in Mesen with `$38B1` = 0 at the ending (cheat `1F18B1:00` below): ![](img/pce93/clear_time.png)
 
 ★ **The enemy wipe.** The enemy handler `04:80CE` (`LDA $CC` / `BNE $80D6`) removes the enemy and lowers the
-count `$3C5E` whenever `$20CC` is not 0. The game sets it with `INC $CC` at `04:9D17` and `05:955E` (the second beside
-the code that places the exit after the last enemy) and clears it at `09:A05B`; it was seen set on its own in 7-8,
-probably by the boss's death (not caught in play). Held at 1 (cheat `1F00CC:01` below), every enemy vanishes: 3 → 0 in
-1-1, 4 → 0 in 2-2, 10 → 0 in 4-5, 11 → 0 in 7-2, but 2 of 8 stayed in 6-3, and bosses (1-8, 3-8) stay. 2-2 was then
-cleared through its exit and 2-3 loaded. BizHawk, US and JP: ![Off (left), on (right), 300 frames into 1-1](img/pce93/cheat_1f00cc01.png)
+count `$3C5E` whenever `$20CC` is not 0. The game sets it with `INC $CC` in two places and clears it at every stage start (`09:A05B`; also `05:AEBE`,
+`05:B7E0`, `05:BD0B`).
+
+- `04:9D17`, in the boss hit routine `04:9CC1` that all the bosses share: when a boss takes its last hit the flag is
+  set, everything still alive that tests it goes on its next update, and the exit (cell `$AF`) is placed where the
+  boss died. Caught in play on US and JP: the 1-8 boss was bombed with the pad alone from the 1-8 password
+  (`GMPHBKMC`, JP `EJLFAHJB`), and the input log replayed from power-on wrote `$CC` = 1 at `04:9D19` on the fifth
+  hit; its blue flames were gone the same frame. Only planet 1's boss was done.
+  ![The last hit, and 30 frames later](img/pce93/wipe_boss_kill.png)
+- `05:B55E`, in 7-8: when the four kart Bombers are gone it places the centre tile and sets the flag. Seen only with
+  the karts removed by the cheat, not beaten.
+
+Held at 1 (cheat `1F00CC:01` below), every enemy vanishes: 3 → 0 in 1-1, 4 → 0 in 2-2, 10 → 0 in 4-5, 11 → 0 in 7-2,
+and every stage of 3-2 to 3-7 and 5-2 to 5-7. Planet 6 is the exception: 6-4 empties, but two stay on 6-2, 6-3 and
+6-7 and one on 6-5 and 6-6; the survivor seen is the shovel enemy on the snow plateaus. No boss is removed, but the
+fights change: the 1-8 flames never appear, four of the five 2-8 flowers go, and in 7-8 the karts go, the centre tile
+opens and the last boss's first form is skipped. 2-2 was cleared through its exit and 2-3 loaded; no boss stage was
+finished with the cheat on. US and JP: ![Off (left), on (right), 300 frames into 1-1](img/pce93/cheat_1f00cc01.png)
+![6-3 with two left, and the last boss arriving early in 7-8](img/pce93/wipe_6-3_7-8.png)
+
+The Special Version has the same flag at `$20D3` (`LDA $D3` at `04:80C5`, enemy count `$3C4A`): with the menu
+patched in and a password to 2-2, cheat `1F00D3:01` took 4 enemies to 0. ![](img/pce93/cheat_sp_1f00d3.png)
 
 ### Text
 
@@ -487,7 +508,8 @@ shows) and no clear-time page.
 | `1F1895:0w` + `1F1896:0s` | F8:1895, F8:1896 | every Normal Game stage is world w+1, stage s+1 | `03` + `04`: a new game loaded record 28 (4-5) |
 | `1F1FFB:01` | F8:1FFB | JP: CONFIGRATION screen after every planet map | screen shown ![](img/pce93/config_jp_cheat.png) |
 | `1F18B1:00` | F8:18B1 | the ending shows the clear page even after a password or continue | page shown (RAM written as the ending reads it) |
-| `1F00CC:01` | F8:00CC | every enemy on the stage vanishes | enemies gone on planets 1, 2, 4 and 7, US and JP; bosses stay; 2-2 cleared through its exit (BizHawk, byte poked each frame). ROM equivalent `0080D0:80` (`BNE` → `BRA` at `04:80D0`) behaved the same on four stages, but it is only one of the game's 23 enemy checks |
+| `1F00CC:01` | F8:00CC | every enemy on the stage vanishes | enemies gone on planets 1 to 5 and 7, US and JP; one or two stay on five planet 6 stages; bosses stay; 2-2 cleared through its exit. ROM equivalent `0080D0:80` (`BNE` → `BRA` at `04:80D0`) gave the same counts on the stages tried, but it is only one of the game's 23 enemy checks |
+| `1F00D3:01` | F8:00D3 | Special Version: every enemy on the stage vanishes | 4 → 0 in 2-2, through the patched-in menu |
 
 Patches (IPS, built and checked against the ROM by `tools/pce93/mkpatch.py`):
 
@@ -517,5 +539,7 @@ logo), plus the ™ sprite (US) or the banner sprites (SP, palette 4), renders t
 
 ## Open
 
-- A real pad-5 press for the tap screen (needs Mesen input on Multi Tap sub-ports).
-- The backup-RAM screens and the COM-LINK game (need a Tennokoe or a second console).
+- The boss-kill flag on a stage with ordinary enemies still alive (2-8), and the 7-8 karts beaten rather than removed.
+- A boss stage finished with the enemy-wipe cheat on.
+- The backup-RAM DELETE and memory-full screens, and the Japanese ones.
+- The COM-LINK game, which needs a second console.

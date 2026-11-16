@@ -1,7 +1,9 @@
 """Run a Mesen 2 Lua snippet headless (Mesen.exe --testrunner). Set MESEN to Mesen.exe.
 Usage: python tools/emu/mesen.py script.lua rom [outdir]
 -> <name>.png for each shot(name), <name>.ram for dump(name) (SNES work RAM; a game's lib.lua may redefine dump, and a
-name with a dot is kept as is) and <name>.cdl for 'CDLBIN <name> <hex>' lines, next to the script. With outdir: output
+name with a dot is kept as is) and <name>.cdl for 'CDLBIN <name> <hex>' lines, next to the script. A .gb/.gbc or
+.nes/.fds ROM also gets gb.lua or nes.lua (beside this file) and their files: .vram and .cdl, or .cdlhex (hex text).
+With outdir: output
 goes there, dumps are <name>.bin, nothing is printed per file and every other line also goes to <outdir>/log.txt
 ([SCSI] lines only there). Extra Mesen switches from env MESEN_ARGS; MESEN_TIMEOUT = seconds (default 590).
 Queue: an at() function gets no input that frame, or (KEEP=true) its return value / the last input. stop() ends
@@ -28,17 +30,20 @@ end
 emu.addEventCallback(function() tick() end, emu.eventType.inputPolled)
 '''
 os.makedirs(OUT, exist_ok=True)
+SYS = {".gb": "gb", ".gbc": "gb", ".nes": "nes", ".fds": "nes"}.get(os.path.splitext(sys.argv[2])[1].lower())
+EXT = {"SHOT": ".png", "CDLBIN": ".cdl", **{"gb": {"VRAM": ".vram", "CDLHEX": ".cdl"}, "nes": {"CDLHEX": ".cdlhex"}}.get(SYS, {})}
+if SYS: PRE += open(os.path.join(os.path.dirname(os.path.abspath(__file__)), SYS + ".lua")).read()
 open(os.path.join(OUT,'_s.lua'),'w').write(PRE+open(sys.argv[1]).read())
 t=int(os.environ.get("MESEN_TIMEOUT", 590))
 p=subprocess.run([os.environ.get("MESEN", "Mesen.exe"),"--testrunner",f"--timeout={t}"]+os.environ.get("MESEN_ARGS","").split()+[sys.argv[2],os.path.join(OUT,'_s.lua')],capture_output=True,text=True,timeout=t+10)
 log = open(os.path.join(OUT, "log.txt"), "w") if len(sys.argv) > 3 else None
 for line in p.stdout.splitlines():
     k, _, rest = line.partition(" ")
-    if k in ("SHOT", "DUMP", "CDLBIN"):
+    if k == "DUMP" or k in EXT:
         n, h = rest.split(" ", 1)
-        ext = {"SHOT": ".png", "CDLBIN": ".cdl"}.get(k, "" if "." in n else ".bin" if log else ".ram")
-        open(os.path.join(OUT, n + ext), "wb").write(binascii.unhexlify(h))
-        if not log: print({"SHOT": "wrote", "DUMP": "dumped", "CDLBIN": "cdl"}[k], n)
+        ext = EXT.get(k, "" if "." in n else ".bin" if log else ".ram")
+        open(os.path.join(OUT, n + ext), "wb").write(h.encode() if ext == ".cdlhex" else binascii.unhexlify(h.strip()))
+        if not log: print("wrote", n + ext)
     elif log:
         log.write(line + "\n")
         if not line.startswith("[SCSI]"): print(line)  # CD reads go to log.txt only

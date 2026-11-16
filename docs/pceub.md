@@ -140,7 +140,7 @@ The password screen was patched in (`$01:A40A` → `JMP $C3A5`, see below) and t
 | Set | Codes | Accepted | Mismatches with `password.py` |
 |---|---|---|---|
 | `tools/pceub/fuzz.py`: one code for each of the 19,200 states, 10,000 random in-row codes, every letter at every position, all 256 byte-0 values under three tails, BOMSOUND (savestate per code, result read at the exits `$C9CD` / `$C9D3`) | 30,177 | 19,235 | 0 |
-| `tools/pceub/fuzz_all.py` (in-ROM loop at `$02:D600`, free `$FF` space from `$D2AF`): byte 0 = `$10`, bytes 1-3 = `$000000`-`$030D3F` | 200,000 | 1,019 | 0 |
+| `tools/pce90/fuzz_all.py ub` (in-ROM loop at `$02:D600`, free `$FF` space from `$D2AF`): byte 0 = `$10`, bytes 1-3 = `$000000`-`$030D3F` | 200,000 | 1,019 | 0 |
 | same, byte 0 = `$12` (shift 2), bytes 1-3 = `$000000`-`$0FFFFF` | 1,048,576 | 6,948 | 0 |
 | same, byte 0 = `$F5` (all three bytes flipped, shift 5) | 1,048,576 | 8,576 | 0 |
 | same, byte 0 = `$08` (bad header bits) | 1,048,576 | 0 | 0 |

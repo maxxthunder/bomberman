@@ -42,23 +42,23 @@ case $g in
     { echo "VER=\"$v\""; [ -n "$CODE" ] && echo "CODE=\"$CODE\""; cat "$here/lib.lua" "$s"; } > "$o/body.lua"
     # max: battery saves and CDLs persist in the Mesen folder between runs, so each run starts clean (KEEP=1 keeps them)
     case $g in max) [ -n "$KEEP" ];; *) true;; esac || rm -f "$(dirname "$MESEN")"/Saves/*.srm "$(dirname "$MESEN")"/Debugger/*.cdl
-    python "$T/emu/mesen_gb.py" "$o/body.lua" "${ROM:-$rom}";;
+    python "$T/emu/mesen.py" "$o/body.lua" "${ROM:-$rom}";;
   nes*)
     : "${MESEN:?set MESEN to a portable Mesen.exe}"; : "${SCRATCH:?set SCRATCH to a scratch directory}"; export MESEN
     o=$SCRATCH/${n}_$v; mkdir -p "$o"
     { echo "REG=\"$v\""; cat "$here/lib.lua" "$s"; } > "$o/body.lua"
-    python "$T/emu/mesen_nes.py" "$o/body.lua" "$rom";;
+    python "$T/emu/mesen.py" "$o/body.lua" "$rom";;
   mega*)  # mega8: tap (default) = a Sega Team Player in each port (GPGX ControlType 4, P1-P8), tap1 = one in port 1
     # and a pad in port 2, pad = plain pads, set in a copy of BizHawk's config.ini (--config; the user's stays untouched)
-    export EMUHAWK="${EMUHAWK:-K:/Emulators/Bizhawk/EmuHawk.exe}"; k=REG; py=$T/emu/bizhawk.py
+    export EMUHAWK="${EMUHAWK:-K:/Emulators/Bizhawk/EmuHawk.exe}"; k=REG
     if [ $g = mega ]; then S=${SCRATCH:-/d/tmp/bomberman/mega}
-    else S=${SCRATCH:?set SCRATCH to a scratch directory}; mkdir -p "$S"; k=MODE; py=$here/bizhawk8.py
+    else S=${SCRATCH:?set SCRATCH to a scratch directory}; mkdir -p "$S"; k=MODE
       case $v in tap) ct="4 4";; tap1) ct="4 1";; *) ct="1 1";; esac
       python "$here/mkconfig.py" "$(dirname "$EMUHAWK")/config.ini" "$S/config_$v.ini" $ct
       export CONFIG="$(cd "$S" && pwd -W)/config_$v.ini"; fi
     o=$S/${n}_$v; mkdir -p "$o"
     { echo "$k=\"$v\""; echo "STATES=\"$(cd "$S" && pwd -W)/\""; cat "$here/lib.lua" "$s"; } > "$o/body.lua"
-    python "$py" "$o/body.lua" "$rom";;
+    python "$T/emu/bizhawk.py" "$o/body.lua" "$rom";;
   pce94)  # [VAR=value ...] lines go before lib.lua; the demo CD wants a System Card at $SCRATCH/mesen/Firmware/syscard3.pce
     S=${SCRATCH:?set SCRATCH}; [ $# -gt 0 ] && shift; export MESEN=${MESEN:-$S/mesen/Mesen.exe}
     o=$S/${n}_$v; mkdir -p "$o"

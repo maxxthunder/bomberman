@@ -60,7 +60,7 @@ dispatcher value (also `'stage'`, `'ending'`, `'soundtest2'`, `'closing'`, `'tit
 
 - **Fuzz**: all 10,000 codes through the game's own check (`tools/gb2/fuzz.py`, savestate at the check's entry, result
   at its exits): US 11 accepted, JP 11, **0 mismatches**.
-- **Typed with the pad** (`tools/gb2/test_codes.py`): all 11 codes plus `0000` and `7824`, US and JP; `$C1BD`,
+- **Typed with the pad** (`tools/emu/gb_test_codes.py gb2`): all 11 codes plus `0000` and `7824`, US and JP; `$C1BD`,
   `$C100`, `$C11A`, `$C125/$C126` read back as predicted. Entering: Up/Down step the digit (wraps), Left/Right move
   the cursor, A or Start checks, B leaves.
 

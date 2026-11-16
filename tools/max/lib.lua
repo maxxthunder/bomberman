@@ -1,11 +1,11 @@
--- max helpers, prepended to test scripts by run.sh (after tools/emu/mesen_gb.py's prelude)
+-- max helpers, prepended to test scripts by run.sh (after tools/emu/mesen.py's and gb.lua's preludes)
 function pc() return emu.getState()['cpu.pc'] end
 function bank() return emu.getState()['cart.prgBank'] end
 -- exec callback on a banked address: fn() runs when pc = addr and the ROM bank is bk (addr < $4000: any bank)
 function on_exec(bk, addr, fn) emu.addMemoryCallback(function() if addr<0x4000 or bank()==bk then fn() end end,
   emu.callbackType.exec, addr, addr, emu.cpuType.gameboy, BUS) end
 SR=emu.memType.gbCartRam
--- cart RAM dump (8 KB, $A000-$BFFF bank 0), printed as DUMP <name>.ram via mesen_gb.py
+-- cart RAM dump (8 KB, $A000-$BFFF bank 0), printed as DUMP <name>.ram via mesen.py
 function sdump(name) local t={} for a=0,0x1FFF do t[#t+1]=string.format('%02x',emu.read(a,SR)) end print('DUMP '..name..' '..table.concat(t)) end
 -- random-input bot: one direction held for 6 frames, A (bomb) a third of the time, B a fifth
 local dirs={'up','down','left','right'}

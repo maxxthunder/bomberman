@@ -238,6 +238,15 @@ none are hidden. A blast destroys a crystal without counting it (`$01:7B10`), so
 dying starts the room's count again and lays the crystals afresh (`$00:15BA`). City 5 with the player moved onto
 each crystal and nothing else written: the 1-up panel at 60, the bell panels at 70 and 80 (`$C38E` 0 → 1 → 2), 90
 in all.
+
+★ City 5 on foot. Played with the pad alone in one run from the title (password `298A410`), no RAM writes and no
+savestates: room 1's three switches hit with real bombs and its exit walked through with 39 of 40 crystals (one had
+been laid on cell `$CE`, shut in behind the bottom-right switch), then room 2's count past 60, 70 and 80, the 1-up
+taken, its four switches hit and the door walked through, to the boss room with the helper's three panels on the
+floor. 85 of the 90 crystals in all. Room 1's hazards are two crushers and a beam (62 frames on, 62 off); room 2 adds
+a walking enemy. An idle player on room 1's start cell dies at frame 80, which was not explained.
+![Room 1's third switch, and the exit open](img/gb3/city5_room1_foot.png)
+![80 crystals in room 2, and the helper's panels at the boss](img/gb3/city5_foot.png)
 ![Both rooms of all seven areas' stage 5](img/gb3/crystal_counts.png) In room 2, the count reaching the area's thresholds
 (`$00:39B6`: Wood, Sand, Lava 40 / 50 / 60; City, Ice, Aqua 60 / 70 / 80; Evil 50 / 60 / 70) puts out a 1-up panel
 (tile `$A4`), then a special panel (tile `$A8`) at each of the next two; each special panel adds 1 to `$C38E`. At
@@ -277,16 +286,14 @@ apart at `$D300` and copied to `$D200`; a decoded challenge room matched the RAM
 
 ## Open
 
-- Whether City 5's 80 can be collected on foot. Room 1 scrolls by itself (`$01:4794`/`$01:483E`): right, down,
+- City 5's rooms, from before the run on foot above. Room 1 scrolls by itself (`$01:4794`/`$01:483E`): right, down,
   left and up, about 2,780 frames a loop, pushing the player along with the screen edge (into a wall is death), so
-  its lower rows do come into view. Pad input alone took 37 of its 40, replayed from the title, which would leave 43
-  of room 2's 50. Room 1 ends on switches, not crystals: blasting its three switch cells (`$2E`, `$CD`, `$C1`, table
-  `$C467`; count in `$C38F`) opens the exit (`$C487`, cell `$33`). Two were hit; the third, bottom left behind moving
-  hazards, wasn't, so room 2 was never reached on foot. With the three hit flags poked (`$C468`, `$C46A`, `$C46C`
+  its lower rows do come into view. Room 1 ends on switches, not crystals: blasting its three switch cells (`$2E`, `$CD`, `$C1`, table
+  `$C467`; count in `$C38F`) opens the exit (`$C487`, cell `$33`). With the three hit flags poked (`$C468`, `$C46A`, `$C46C`
   = 1) the game's own code (`$0E:7E2A`) opens the exit (cell `$33` `$10` → `$F4`, HUD T3 → T0), and walking in loads
   room 2. Room 2 has four switches (`$A1`, `$2E`, `$EE`, `$B9`) and a two-cell door at `$33`/`$43`, which opens the
   same way (T4 → T0); it scrolls too, to the right, and an idle player was pushed into a wall and died. Through the
-  door comes round 6, the boss. Nothing unused in either room (Mesen, flags poked, not done with real bombs).
+  door comes round 6, the boss. Nothing unused in either room.
   ![City 5 room 2 with its four switch flags set: the door open, T0](img/gb3/city5_room2.png)
   ![City stage 5 room 1: the view scrolling by itself](img/gb3/city5_autoscroll.png)
 - Challenge mode: the cleared branch (`$C480` = `$FF`) and どきどき's doors (cells `$32`/`$33`, rooms 120-123) weren't

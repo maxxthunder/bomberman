@@ -1,0 +1,512 @@
+[
+ {
+  "code": "8016E424 0001",
+  "effect": "Debug mode: Z + Start in a stage opens [BOMBERMAN ACTION MENU], and L on the pause screen opens the in-game debug menu",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The master debug flag. The game clears it at start-up and nothing in any of the three ROMs can set it: a write trap from power-on through the title, file select, a stage, Game Over and Continue saw no write (US ROM), and seven button sets held at power-on did nothing. Held from the first frame, the boot, title and file select come up normally and the menu opens with buttons only. Run on the US and European ROMs. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "8016E424 0001"
+  },
+  "img": "gs_debug.png"
+ },
+ {
+  "code": "8016E41B 0001",
+  "effect": "Debug mode: Z + Start in a stage opens [BOMBERMAN ACTION MENU], and L on the pause screen opens the in-game debug menu",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The debug flag on the Japanese ROM, whose menu carries the build tag DBG---1998/03/15-A where the others say MASTER ----- DEBUG. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "8016E41B 0001"
+  },
+  "img": "gs_debug_jp.png"
+ },
+ {
+  "code": "8016523F 0003 + 80165240 0002 + 80165241 0032 + 80165244 0002",
+  "effect": "4 bombs, fire 3, 50 gems, and health fixed at 2 bars",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Four bytes of the player block: extra bombs (0-3, the HUD shows one more), extra fire (0-3), gems, health. Maximum health is 80165245. Picture: before, and with all four held. The fire byte scales the blast (0.60, 0.90, 1.20, 1.50 for 0-3); with the bomb byte at 3 two tapped bombs were out at once, which never happened at 0. Holding B throws up to four at once with or without the code. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "8016523F 0003 + 80165240 0002 + 80165241 0032 + 80165244 0002"
+  },
+  "img": "gs_stats.png"
+ },
+ {
+  "code": "80165239 0003 + 8016523A 0002 + 8016523B 0032 + 8016523E 0002",
+  "effect": "4 bombs, fire 3, 50 gems, and health fixed at 2 bars",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The same four bytes on the Japanese ROM, six lower. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "80165239 0003 + 8016523A 0002 + 8016523B 0032 + 8016523E 0002"
+  },
+  "img": "gs_stats_jp.png"
+ },
+ {
+  "code": "80165243 0007",
+  "effect": "7 lives",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The pause screen shows 07. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "80165243 0007"
+  },
+  "img": "gs_lives.png"
+ },
+ {
+  "code": "8016523D 0007",
+  "effect": "7 lives",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Lives on the Japanese ROM. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "8016523D 0007"
+  },
+  "img": "gs_lives_jp.png"
+ },
+ {
+  "code": "8016E3FC 0001",
+  "effect": "No damage",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The debug menu's NO DAMAGE switch, which the damage routine tests on its own (80023CB8), so it works with the debug flag off. Picture: the penalty for falling out of the map, health 4 to 3 without the code and 4 with it. On the US ROM it also held against enemy contact and two bosses, the contact forced by writing Bomberman's position onto them. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "8016E3FC 0001"
+  },
+  "img": "gs_no_damage.png"
+ },
+ {
+  "code": "8016E404 0001",
+  "effect": "No damage",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "NO DAMAGE on the Japanese ROM, same test. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "8016E404 0001"
+  },
+  "img": "gs_no_damage_jp.png"
+ },
+ {
+  "code": "8016E40C 0001",
+  "effect": "Hold Z to fly: A rises, B sinks, the stick moves; Z + L ends the map",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The debug menu's G BUTTON DEBUG switch, which works with the debug flag off. Flying was run on all three ROMs; Z + L, which jumps to the Clear Points tally and loads the next map, on the US ROM with the flag on. Tested as a held RAM write in BizHawk, not on a GameShark.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "8016E40C 0001"
+  },
+  "img": "gs_fly.png"
+ },
+ {
+  "code": "Debug flag on: hold Z + Start in a stage",
+  "effect": "[BOMBERMAN ACTION MENU]: GAME START, MAP NUMBER, MAP TEST, CAMERA TYPE, TITLE TEST, ENTRY EDIT, MUSIC NUMBER, SOUND NUMBER, DEMO, SHOCK TEST",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). The game's main thread runs this menu whenever the game loop returns, and only Z + Start with the flag on makes it return. The Control Stick moves the cursor and changes values, A selects. TITLE TEST is an empty case, and MAP TEST loads a map without one of its data files: HUD on black.",
+  "section": "debug",
+  "img": "action_menu.png"
+ },
+ {
+  "code": "Action menu: MAP NUMBER",
+  "effect": "Loads any of the game's 192 maps, 00-BF",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 00-7F are playable maps and 80-BF cutscene and event maps. All 192 were loaded on the US ROM. Picture: map B3.",
+  "section": "debug",
+  "img": "map_b3.png"
+ },
+ {
+  "code": "Action menu: GAME START 1-7",
+  "effect": "Restarts the game with a ready-made save in the fourth file slot",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 1-4 start Planets 2-5; 5 is Planet 5 Garaden at map 7 of 7; 6 is Planet 6 Gossick with every stage at 5 and all 24 collectibles; 7 is Garaden with 23 of 24. 0 is a normal boot. All eight run on the US ROM, 1 and 6 on the other two. Picture: the file select after GAME START 6, and its boss stage.",
+  "section": "debug",
+  "img": "game_start.png"
+ },
+ {
+  "code": "Action menu: DEMO 0-9",
+  "effect": "Plays the cutscenes: 1 is the fireworks ending scene, 2-5 introduce the Bomber Jet, Marine, Copter and Slider",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 0 and 6-9 all play the control-room opening. The scenes were not watched to the end.",
+  "section": "debug",
+  "img": "demo.png"
+ },
+ {
+  "code": "Action menu: MUSIC NUMBER, SOUND NUMBER",
+  "effect": "A sound test taking 0-100 hex for each",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). A plays the number; music 5 and 23 and sound 101 were checked by recording the output, not by ear. The game's own Sound Test in Options lists BGM 00-31 and SE 001-127 by name.",
+  "section": "debug"
+ },
+ {
+  "code": "Action menu: SHOCK TEST",
+  "effect": "A Rumble Pak test: TOTAL TIME, ON TIME, OFF TIME",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). Opened on the US ROM; the rumble itself was not checked.",
+  "section": "debug",
+  "img": "shock_test.png"
+ },
+ {
+  "code": "Action menu: ENTRY EDIT",
+  "effect": "An object-placement editor running on the chosen map",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). SET MODE shows the object number, its NAME_ label, position, angle and three parameters; L cycles SET, RESET and SAVE MODE. SAVE MODE sends the list to a print routine that is empty in the released game, so it does nothing. Opened on the US ROM; the controls are from the code.",
+  "section": "debug",
+  "img": "entry_edit.png"
+ },
+ {
+  "code": "Debug flag on: pause, then L",
+  "effect": "[MAIN MENU]: TIMER BAR, DEBUG DISPLAY MODE, NO DAMAGE, NO ATTRIBUTE, G BUTTON DEBUG, BOM, FIRE, DISPTYPE",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). L again goes to [LIGHT EDIT] and [FOG EDIT]; Start closes it. Opened on all three ROMs; the lines were changed on the US ROM. The lines have their own cards below.",
+  "section": "debug",
+  "img": "ingame_menu.png"
+ },
+ {
+  "code": "In-game debug menu: L, L",
+  "effect": "[LIGHT EDIT] and [FOG EDIT]: live editors for the map's lighting and fog",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). Ambient and diffuse colour and light direction; fog colour, range and far plane.",
+  "section": "debug",
+  "img": "light_fog.png"
+ },
+ {
+  "code": "In-game debug menu: DEBUG DISPLAY MODE",
+  "effect": "1 prints Bomberman's position and the map's STAGE, AREA, MAP and CLEAR numbers; 2 prints player and camera positions",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). Picture: mode 1 with the timer bar, and mode 2.",
+  "section": "debug",
+  "img": "display_modes.png"
+ },
+ {
+  "code": "In-game debug menu: NO ATTRIBUTE",
+  "effect": "Floor types stop working: an exit floor no longer ends the stage",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 8016E404 (Japan 8016E406). Each floor-type handler returns at once while it is set. Shown on map 0A's exit floor: the stage ends on the Clear Points tally without it and carries on with it (picture). Ice, conveyor and damage floors were not tested.",
+  "section": "debug",
+  "img": "no_attribute.png"
+ },
+ {
+  "code": "In-game debug menu: DISPTYPE",
+  "effect": "Changes what is drawn in the distance on some maps",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 80177974, which each map sets for itself. On map 2B the far road is missing at 0 and 1 and drawn at 3 and 5 (picture: 0 and 3); four other maps showed no change. What each value means is not settled.",
+  "section": "debug",
+  "img": "disptype.png"
+ },
+ {
+  "code": "In-game debug menu: TIMER BAR",
+  "effect": "A frame-time bar with three counters along the bottom of the screen",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). ",
+  "section": "debug",
+  "img": "timer_bar.png"
+ },
+ {
+  "code": "Action menu: CAMERA TYPE",
+  "effect": "Sets the camera number, 0-10",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). The same variable each map sets for itself. Held on map 02: 2 is the map's own view, 4 a close view from the far side, 6 a higher side view (picture: 4 and 6) and 7 a low view from outside; 0, 1, 8, 9 and 10 showed only sky.",
+  "section": "debug",
+  "img": "camera.png"
+ },
+ {
+  "code": "Score 5 on every stage of Planets 1-5 with all 24 collectibles",
+  "effect": "Planet 6, Gossick, appears on the planet select and on the Score screen",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "At a stage clear the game sets a save flag when all 24 collectible bits (the nn/24 counter on the pause screen) are held and every stage of the first five planets has a score of 5. The planet select then shows six planets once Garaden is cleared. On the US ROM the game set and saved the flag itself when the last missing stage was finished with a score of 5, played a short scene of the planets with no text, and drew Gossick after a power cycle; the finish and the score were forced, not played. Its third stage is listed as Vs.???? even once cleared. Picture: the same file without and with the flag.",
+  "section": "Secrets",
+  "img": "gossick.png"
+ },
+ {
+  "code": "Score 5 on every stage of three, five and six planets",
+  "effect": "Options gains Slider Race, then Golden Bomber, then Millian's Treasure Hunt",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The Options screen counts the planets whose every stage has a score of 5: three open Slider Race, five Golden Bomber, all six Millian's Treasure Hunt. Shown on the US ROM by setting the scores on a save file: two planets give neither (picture, left), three and four give Slider Race, five add Golden Bomber and six add the Treasure Hunt.",
+  "section": "Secrets",
+  "img": "options_2_3_5.png"
+ },
+ {
+  "code": "Options: Slider Race",
+  "effect": "A timed one-on-one Bomber Slider race against a rival",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Started from Options on a file with everything unlocked. The result scene reads your time back, then the race starts again; nothing was written to the save file after two wins, and the game's text has no best-time line. The wins were forced with the debug finish, not raced.",
+  "section": "Secrets",
+  "img": "slider_race.png"
+ },
+ {
+  "code": "Options: Golden Bomber",
+  "effect": "A gold Bomberman plays three scored stages of his own",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Maps 6F, 70 and 65, after an intro in the control room. Nothing was written to the save file. Its ending scenes were seen only by loading their maps.",
+  "section": "Secrets",
+  "img": "golden_bomber.png"
+ },
+ {
+  "code": "Options: Millian's Treasure Hunt",
+  "effect": "The planets are replayed to find 24 treasures",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "\"Scattered about the crash are 24 treasures. Please find them!\" The pause screen gains three 0/8 counters.",
+  "section": "Secrets",
+  "img": "treasure_hunt.png"
+ },
+ {
+  "code": "Treasure Hunt: find all 24 treasures",
+  "effect": "A celebration scene at Millian's castle plays once, then the game returns to Options",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "\"We have prepared a celebration for you!\" When the set becomes complete during a Treasure Hunt stage the game plays map B0; nothing is unlocked and no flag is set. Shown on the US ROM by setting the 24 treasure bits of the save file in a stage and forcing the finish: the scene followed with nothing more written. The treasures were not collected by play. Picture: the pause screen at 8/8 three times, and the scene.",
+  "section": "Secrets",
+  "img": "treasure_all.png"
+ },
+ {
+  "code": "Sound Test: hold C-Left or C-Right",
+  "effect": "The band on the Sound Test stage turns",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Options, Sound Test. About half a degree a frame. The code also tests C-Down, which did nothing that could be seen.",
+  "section": "Button codes",
+  "img": "sound_test_c.png"
+ },
+ {
+  "code": "BACKUP MEMORY TEST",
+  "effect": "A developer test of the Controller Pak and the cartridge's save memory that nothing in the game calls",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Routines 80020550 and 80020844, with no caller or pointer anywhere. Run by pointing the scene callbacks at them (8016526C and 80165274). It shows each controller port's pak status, a pak note list on L, and four actions. EEPROM DATA WRITE overwrites the first 200 hex bytes of the save memory with a test pattern, erasing all four files, and EEPROM DATA READ reads it back; both were run. The two PAK lines need a Controller Pak and were not.",
+  "section": "unused",
+  "img": "backup_test.png"
+ },
+ {
+  "code": "Maps 71-7E",
+  "effect": "Fourteen checkerboard test rooms: most empty, 7B with rows of treasure objects, 7C and 7E with enemies and pickups laid out",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Nothing points to them: not the stage-select table, any map's exit list or any map number in the code. Loaded with MAP NUMBER. 7B's list is 24 balls and eight each of three other treasure objects. 7D is different: Bomberman on the Bomber Copter in Planet 3's red canyon. Picture: 71, 7B, 7C and 7E.",
+  "section": "unused",
+  "img": "test_rooms.png"
+ },
+ {
+  "code": "Maps BC-BF and 6D",
+  "effect": "A blue-brick room with a red curtain wall, four times over, and a starfield with no floor",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Unreferenced in the same way. BC-BF sit in the cutscene range and have no HUD.",
+  "section": "unused",
+  "img": "maps_bc_6d.png"
+ },
+ {
+  "code": "Fifteen spare rooms",
+  "effect": "One small unused room beside each group of stages, in that group's tileset",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Maps 01, 07, 14, 1A, 20, 24, 2C, 34, 3A, 3F, 48, 4B, 56, 5B and 60, all with a blank stage record and nothing pointing to them. Picture: 01, 2C, 4B and 60.",
+  "section": "unused",
+  "img": "spare_rooms.png"
+ },
+ {
+  "code": "Maps 26 and 7D",
+  "effect": "An alternate first room for Planet 3's first stage, and a Bomber Copter scene in the same canyon",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Both carry the stage record 3-1-1, but the stage select starts that stage on map 98 and then 27. 26's only exit leads to 27.",
+  "section": "unused",
+  "img": "maps_26_7d.png"
+ },
+ {
+  "code": "White Bomb mission",
+  "effect": "A briefing and three stages behind a seventh file-select entry that is never drawn",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The file select builds seven entries and handles a seventh choice, but draws six, and the cursor wraps from Stereo back to Select. Choosing the seventh starts a mission of its own: \"Good work, White Bomb! Here's the next mission\", the Bomber Jet leaving, then stages on maps 2B, 49 and 54, which have no area picture or stage names. Shown on the US ROM by writing the menu's cursor value (80333424 = 6) once on the file select and pressing A; the game did the rest. Maps 49 and 54 and the closing scenes were not visited. Picture: the briefing, and the first stage.",
+  "section": "unused",
+  "img": "white_bomb_mission.png"
+ },
+ {
+  "code": "Unused objects",
+  "effect": "17 of the game's 652 objects are placed by no map and created by no code; one is a blue X crate",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "304 objects are in no map's placement list (US ROM 2193A0): 30 blank slots and 274 named. The US ROM's code creates 257 of the named ones; that was read from the code and the callers were not traced. The 17 left are seven spare item slots (ITMDUMMY9-15), SOFTBLK3, CRASH2, CRASH3, GAGON_F, NGOGL_IC, ENDL_TG, BAL_WD, MEG_FB, BAG2_BR and MCH_00. Picture: SOFTBLK3 put into test map 7B's list by hand. Placed the same way, the dummy items and MCH_00 hang the map load and the rest show nothing.",
+  "section": "unused",
+  "img": "unused_object.png"
+ },
+ {
+  "code": "Bomber Base chart",
+  "effect": "A design chart headed \"Bomber Base\" in Japanese and English, left in the corner of the font texture",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "US and European font texture (US ROM 64C3C0); the Japanese ROM's font is a kana sheet without it. Whether the game ever draws that corner was not determined.",
+  "section": "unused",
+  "img": "font_chart.png"
+ },
+ {
+  "code": "NAME_ labels",
+  "effect": "652 developer names for the game's objects, shown only by the object editor",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Fixed-width strings such as NAME_ITMBOM, NAME_FLASH1, NAME_EVCRAFT_B1 and NAME_MAPWOOD2 (US ROM 1172F8). Also left in: \"sbrk : can not change data segment space allocation!\" and the editor's output lines.",
+  "section": "unused"
+ }
+]

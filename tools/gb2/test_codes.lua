@@ -1,4 +1,4 @@
--- Type CODE (prepend CODE = "..."; see test_codes.py) with real pad presses on the password screen, A, then read
+-- Type CODE (prepend CODE = "..."; see tools/emu/gb_test_codes.py) with real pad presses on the password screen, A, then read
 -- $C1BD (the table value the check found), whether the check's reject exit ran (rej), $C100 (world << 4 | stage),
 -- $C11A (battle), $C125/$C126 (power-up code) and take a screenshot SHOTAT frames later.
 local A = ({us=0x3602, jp=0x362F})[VER]

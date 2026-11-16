@@ -3,7 +3,7 @@
 This is the English ROM of Super Bomberman 5 from Konami's Super Bomberman Collection, compared with the
 Japanese retail ROM documented in [sb5.md](sb5.md). Method: a function-by-function diff of the two ROMs
 (`tools/disasm.py`, `tools/lin65.py`, `tools/sb4en/hooks.py`, `tools/sb5/textwin.py`), then Mesen 2 runs
-with `tools/sb5en/` (`run.sh`, `fuzz.sh`, `typecode.lua`, with `tools/sb5/lib.lua`). Addresses and RAM are the same as
+with `tools/sb5en/` (`run.sh`, `typecode.lua`, with `tools/sb5/lib.lua` and `tools/sb5/fuzz.sh <dir> en`). Addresses and RAM are the same as
 in the Japanese retail ROM unless stated.
 
 **Short version:** a data-only localization. I found no added code. The password routines, the option
@@ -85,7 +85,7 @@ separate English codec.
 - **Alphabet and grid:** the English grid is `A B C D E F G H J K L M N` / `P Q R T U V W X Y` /
   `1 2 3 4 5 6 7 8 9 0` + **Back** + **Done** (JP もどる / 決定). It still has **no I, O, S or Z**, the
   layout and cursor are the same, and `tools/sb5en/typecode.lua` (the JP grid) types codes correctly.
-- **Fuzz:** `tools/sb5en/fuzz.sh` ran the same 815 cases as round 1 (400 random strings, every one-symbol
+- **Fuzz:** `tools/sb5/fuzz.sh <dir> en` ran the same 815 cases as round 1 (400 random strings, every one-symbol
   change of D24GJN, encoded codes for every body 0-15 × colour 0-7 plus random fields) through the English
   ROM's own decoder: **815 cases, 261 accepted, 554 rejected, 0 mismatches** with `tools/sb5/password.py`,
   including every decoded field. These are the same counts as the Japanese retail and Caravan ROMs.
@@ -184,7 +184,7 @@ unchanged.
 ## Files
 
 - `tools/sb5en/`: `run.sh` (English ROM by default, `jp` for the Japanese retail ROM), `../sb5/lib.lua`,
-  `fuzz.sh` + `fuzzcases.py` (compare with `tools/sb5/password.py`), `typecode.lua`, `logo.lua`,
+  `typecode.lua`, `logo.lua`,
   `croplogo.py` (with `tools/sb5/bgrender.py`).
 - `disasm/sb5en/`: banks `$C0-$E3` (`$E4-$FF` are `$FF`), with the Japanese `entries.txt`.
 - `img/sb5en/`, `img/logos/sb5_en.png`.

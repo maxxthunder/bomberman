@@ -1,11 +1,13 @@
 #!/bin/sh
 # Fuzz the character-password checker against the game's own decoder in Mesen.
-# Usage: tools/sb5/fuzz.sh <workdir> [caravan]   -> prints accepted/rejected/mismatch counts
+# Usage: tools/sb5/fuzz.sh <workdir> [caravan|en]   -> prints accepted/rejected/mismatch counts
+#   en = the English ROM: same RAM layout and a byte-identical decoder, so the same codec (password.py) is compared
 #   CASES="CODE1 CODE2 ..." tests just those codes instead of the generated set
 # Each case: load a savestate on the password screen, write the 6 symbols into the entry buffer,
 # press A on the OK key, and read the accept flag and the decoded fields 40 frames later.
 here=$(cd "$(dirname "$0")" && pwd); d=$1; mkdir -p "$d"
 off=0; [ "$2" = caravan ] && off=31   # the Caravan build keeps the editor block $1F bytes higher
+run="$here/run.sh"; ver=$2; [ "$2" = en ] && { run="$here/../sb5en/run.sh"; ver=; }
 if [ -n "$CASES" ]; then printf "%s
 " $CASES > "$d/cases.txt"; else python "$here/fuzzcases.py" "$d/cases.txt" ${N:+$N}; fi
 {
@@ -21,7 +23,7 @@ for _,c in ipairs(codes) do
 end
 L
 } > "$d/fuzz.lua"
-"$here/run.sh" "$d/fuzz.lua" $2 > "$d/fuzz.out"
+"$run" "$d/fuzz.lua" $ver > "$d/fuzz.out"
 python - "$d/fuzz.out" "$here" <<'P'
 import sys; sys.path.insert(0, sys.argv[2])
 from password import decode

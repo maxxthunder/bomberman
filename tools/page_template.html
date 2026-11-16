@@ -313,12 +313,12 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <summary>Where these come from</summary>
     <p>Each game's password routine was disassembled and rebuilt as a small codec. The generator and checker here
       run those codecs, and the codes were put through each game's own check in an emulator (Mesen 2 for the NES, Game Boy,
-      Super Nintendo and PC Engine games, BizHawk for Mega Bomberman, Panic Bomber and Bomberman 64, DOSBox-X for the PC-98 game).</p>
+      Super Nintendo and PC Engine games, BizHawk for Mega Bomberman, Panic Bomber and the Nintendo 64 games, DOSBox-X for the PC-98 game).</p>
     <p>Addresses, method and screenshots are in the research notes: <span id="docs"></span>.</p>
     <p class="hint legend" id="legend"></p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.8.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.9.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -466,6 +466,9 @@ const GAMES = [
   { id: "b64", ns: B64, family: "Nintendo 64", year: 1997, name: "Bomberman 64", plat: "Nintendo 64", regions: ["jp", "us", "eu"], logo: "b64", main: "us",
     len: 4, shape: /^$/, nopw: true, check: () => null,   // no passwords: EEPROM save
     intro: "The first 3D Bomberman. It saves to the cartridge and has no passwords; what it hides is a Start-button code for four more Battle stages, three locked Options entries, and four developer test maps." },
+  { id: "hero", ns: HERO, family: "Nintendo 64", year: 1998, name: "Bomberman Hero", plat: "Nintendo 64", regions: ["jp", "us", "eu"], logo: "hero", main: "us",
+    len: 4, shape: /^$/, nopw: true, check: () => null,   // no passwords: EEPROM save
+    intro: "The 3D platformer. It saves to the cartridge and has no passwords; what it hides is a complete debug mode behind one GameShark code, with a map select, ready-made saves and an object editor, and 35 maps the game never uses." },
   { id: "mega", ns: MEGA, family: "Genesis", year: 1994, name: "Mega Bomberman", plat: "Genesis", regions: ["us", "eu", "kr"], logo: "mega_us", main: "us",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     check: megaCheck(MEGA),
@@ -647,6 +650,9 @@ const GAMES = [
     },
     why: c => /^80/.test(c) ? "Not a Charabom roster address ($A110 + 8 x id, id 0-29)." : "Charabom codes start with 80 (a GameShark cart-RAM write).",
     notes: { Charaboms: "GameShark codes for the roster table in cart RAM. The game reads it in place, so a Charabom shows on Charabom Select at once and stays after you save." } },
+  { id: "quest", ns: QUEST, family: "Game Boy / Game Boy Color", year: 1998, name: "Bomberman Quest", plat: "Game Boy Color", regions: ["jp", "us"], logo: "quest", main: "us",
+    len: 4, shape: /^$/, nopw: true, check: () => null,   // no passwords: battery save
+    intro: "The Bomberman action RPG. It saves to battery and has no passwords; what it hides is a developer test menu and a debug new game, opened by a button code that only the Japanese version still accepts." },
   { id: "pbvb", ns: PBVB, family: "Virtual Boy", year: 1995, name: "Panic Bomber", plat: "Virtual Boy", regions: ["jp", "us"], logo: "pbvb", logos: { jp: "pbvb_jp" }, main: "us",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     intro: "Hudson's falling-block Bomberman puzzle game. A password starts any of the four stages on any of the four levels; a few more open the sound test, stage select and more.",
@@ -743,10 +749,10 @@ const section = (game, e) => {
 const families = ["Super Nintendo", "Nintendo 64", "TurboGrafx-16 / PC Engine", "Game Boy / Game Boy Color", "NES / Famicom", "Genesis", "Virtual Boy", "PC-98"];
 const byFamily = f => GAMES.filter(x => x.family === f);   // in list order
 // the screenshot in each game's header band
-const HERO = { sb1: ["sb1", "title"], sb2: ["sb2", "title"], sb3: ["sb3", "title"], sb4: ["sb4", "title"],
+const TITLE_SHOT = { sb1: ["sb1", "title"], sb2: ["sb2", "title"], sb3: ["sb3", "title"], sb4: ["sb4", "title"],
   sb5: ["sb5", "title"], mega: ["mega", "title"], pce90: ["pce90", "title_us"], pce93: ["pce93", "title"],
   pce94: ["pce94", "title"], nes1: ["nes1", "title_us"], nes2: ["nes2", "title_us"], gb1: ["gb1", "sgb_hero_wario", { jp: "sgb_hero_jp", col96: "sgb_hero_jp" }], gb2: ["gb2", "sgb_hero_us", { jp: "sgb_hero_jp" }],
-  gb3: ["gb3", "sgb_hero_jp"], pocket: ["pocket", "sgb_hero"], max: ["max", "title"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"], pbcd: ["pbcd", "title"], pb98: ["pb98", "title"], bdaman: ["bdaman", "title"], b64: ["b64", "title"] };
+  gb3: ["gb3", "sgb_hero_jp"], pocket: ["pocket", "sgb_hero"], max: ["max", "title"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"], pbcd: ["pbcd", "title"], pb98: ["pb98", "title"], bdaman: ["bdaman", "title"], b64: ["b64", "title"], quest: ["quest", "title", { jp: "title_jp" }], hero: ["hero", "title", { jp: "title_jp" }] };
 const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb", "Virtual Boy": "vb", "PC-98": "pc98", "Nintendo 64": "n64" };
 // 16 x 16 pixel icons for the console tabs: filled rects, then holes, then fixed-colour pixels ([x, y, w, h])
 const PXICON = {
@@ -808,7 +814,7 @@ function setLogo() {
   const b = $("cards").querySelector(`.gcard[data-g="${g.id}"] img`);
   if (b) b.src = `docs/img/logos/${l}.png`;
   // header picture; the Super Game Boy games show their title inside their own SGB border, per version where it differs
-  const [dir, pic, byVer] = HERO[g.id], src = `docs/img/${dir}/${(byVer && byVer[vlow()]) || pic}.png`;
+  const [dir, pic, byVer] = TITLE_SHOT[g.id], src = `docs/img/${dir}/${(byVer && byVer[vlow()]) || pic}.png`;
   if (!$("ghero").src.endsWith(src)) $("ghero").src = src;
 }
 // the system, then a flag for each region the game came out in (names on hover and for screen readers)

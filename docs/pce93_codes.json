@@ -1654,7 +1654,7 @@
  },
  {
   "code": "1F00CC:01",
-  "effect": "Every enemy on the stage vanishes (bosses stay)",
+  "effect": "Every enemy on the stage vanishes (bosses stay; one or two enemies survive on planet 6)",
   "versions": [
    "US",
    "vc",
@@ -1662,9 +1662,21 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Raw RAM code (F8:00CC = $20CC). The enemy handler 04:80CE reads $CC and, when it is not 0, removes the enemy and lowers the enemy count $3C5E. The game sets it itself (INC $CC at 04:9D17 and 05:955E, the second beside the code that places the exit) and clears it at 09:A05B; seen set on its own in 7-8. Checked in BizHawk, US and JP: 3 → 0 enemies in 1-1, 4 → 0 in 2-2, 10 → 0 in 4-5, 11 → 0 in 7-2; 2 of 8 stayed in 6-3; bosses (1-8, 3-8) stay. With it 2-2 was cleared through its exit and 2-3 loaded. ROM equivalent 0080D0:80 (BNE → BRA at 04:80D0) behaved the same on four stages, but it is only one of the game's 23 enemy checks.",
+  "note": "Raw RAM code (F8:00CC = $20CC). The enemy handler 04:80CE reads $CC and, when it is not 0, removes the enemy and lowers the enemy count $3C5E. The game sets it itself when a boss takes its last hit (INC $CC at 04:9D17), which is what removes the boss's helpers, and in 7-8 once the four kart Bombers are gone (05:B55E); every stage start clears it. The boss-kill set was caught in play on US and JP: the 1-8 boss bombed with the pad alone, the write on its fifth hit, its blue flames gone on the same frame. With the code on, US and JP: 3 → 0 enemies in 1-1, 4 → 0 in 2-2, 10 → 0 in 4-5, 11 → 0 in 7-2, and all of 3-2 to 3-7 and 5-2 to 5-7 go to 0. Planet 6 is the exception: one or two enemies stay on 6-2, 6-3, 6-5, 6-6 and 6-7. No boss is removed, but the 1-8 flames and four of the five 2-8 flowers go, and in 7-8 the kart fight and the last boss's first form are skipped. With it 2-2 was cleared through its exit and 2-3 loaded; no boss stage was finished with it on. ROM equivalent 0080D0:80 (BNE → BRA at 04:80D0) gave the same counts on the stages tried, but it is only one of the game's 23 enemy checks.",
   "section": "cheat",
   "img": "cheat_1f00cc01.png"
+ },
+ {
+  "code": "1F00D3:01",
+  "effect": "Special Version: every enemy on the stage vanishes",
+  "versions": [
+   "SP"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The same flag, at $20D3 in the Special Version (LDA $D3 at 04:80C5). The Special Version has no Normal Game on its menu; shown in Mesen with the menu patched in and a password to 2-2: 4 → 0 enemies. One stage, one run. Picture: off and on.",
+  "section": "cheat",
+  "img": "cheat_sp_1f00d3.png"
  },
  {
   "code": "patches/pce93_configration_us.ips",
@@ -1725,7 +1737,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "07:A707 tests $36 & $1F = $1F; removed in the US. Verified by writing the pad-5 byte at the test JP VC: static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
+  "note": "07:A707 tests $36 & $1F = $1F; removed in the US. With one pad and no Multi Tap the game copies that pad to all five, so the only pad works: BATTLE GAME chosen with Run, then the five buttons held, typed with the pad in Mesen on the Japanese ROM. JP VC: static: the Wii U VC dump differs from the retail HuCard only in the title menu's jump-table word (US file $DA1C, JP $DAED), so the bytes behind this are identical.",
   "section": "Hidden screens",
   "img": "tap_error_jp.png"
  },

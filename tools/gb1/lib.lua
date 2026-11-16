@@ -1,4 +1,4 @@
--- gb1 helpers, prepended to test scripts by run.sh (after tools/emu/mesen_gb.py's prelude)
+-- gb1 helpers, prepended to test scripts by run.sh (after tools/emu/mesen.py's and gb.lua's preludes)
 function pc() return emu.getState()['cpu.pc'] end
 function bank() return emu.getState()['cart.prgBank'] end
 -- random-input bot: one direction held for 6 frames, A (bomb) a third of the time

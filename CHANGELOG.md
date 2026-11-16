@@ -2,6 +2,25 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.9.0 (2026-11-16)
+- New game: Bomberman Hero. A GameShark code for the debug flag and its action menu and in-game menu, cheats, 35
+  unused maps, the Gossick and Options unlocks, a hidden White Bomb mission behind a file-select entry that is never
+  drawn, what all 24 treasures give, a developer backup-memory test and the 17 objects nothing uses.
+- New game: Bomberman Quest. A Japan-only power-on code for the test menu and a debug new game, GameShark codes,
+  the three hidden characters and their duels, both endings, an unused fourth fighter, town versions of the hidden
+  characters, a third pause-menu button the cursor cannot reach, and four music tracks nothing plays.
+- Bomberman 64: where each of the 24 Custom part pickups and the Gold Cards are, block by block; the unlocks the
+  game grants and saves; the 30-kill Gold Card; the Gold set's rule; a clock code and a short-fuse code; the result
+  screens; a broken one-enemy test room; a six-second jingle nothing plays.
+- Bomberman '93: the enemy-wipe flag caught being set by a boss kill in play; the cheat tested across planets 3, 5
+  and 6 and the boss stages; the Special Version's own code `1F00D3:01`; the "Tap is not connected" screen typed
+  with the pad.
+- Bomberman GB 3: City 5 played on foot from the first room to the boss with 85 of its 90 crystals.
+- Bomberman Max: how the legendary Charaboms are earned (the By Chance Game, started only by infrared); the eight
+  minigames; the stage count, 100 with 80 in each retail version.
+- Tools: one Mesen runner for every system, one BizHawk runner, and shared fuzz and code-typing drivers in place of
+  per-game copies. The page build stops on a broken code list or codec, and takes its game list from the code files.
+
 ## 2.8.0 (2026-11-15)
 - New game: Bomberman 64, the first Nintendo 64 game here. A Start-button code for four more Battle stages, the
   three locked Options entries (music test, View Credits, Full Power) and what unlocks them, GameShark codes, four

@@ -3,6 +3,7 @@
 Usage: python tools/emu/bizhawk.py body.lua rom
 Set EMUHAWK to EmuHawk.exe. The body gets press(btns, n), wait(n), shot(name), log(s) and r8/r16 (domain DOMAIN,
 default "68K RAM"); output (log.txt, PNG shots) goes next to the body. With DUMP=name set, BizHawk also dumps a WAV.
+CONFIG=config.ini runs it on that config (--config); EMU_TIMEOUT = seconds (default 3600).
 """
 import subprocess, sys, os
 EXE = os.environ.get("EMUHAWK", r"C:\BizHawk\EmuHawk.exe")
@@ -22,13 +23,13 @@ dump = os.environ.get("DUMP")
 tail = "\nlogf:close()\nwhile true do emu.frameadvance() end\n" if dump else "\nlogf:close()\nclient.exit()\n"
 run = OUT + "_run.lua"
 open(run, "w").write(PRE + open(body_path).read() + tail)
-args = [EXE, "--lua=" + run]
+args = [EXE] + ["--config=" + c for c in [os.environ.get("CONFIG")] if c] + ["--lua=" + run]
 if dump: args += ["--dump-type=wave", "--dump-name=" + dump, "--dump-length=" + os.environ.get("DUMPLEN", "2700"), "--dump-close"]
 # no headless mode in EmuHawk: start it minimized and unfocused (SW_SHOWMINNOACTIVE); SHOW=1 for a normal window
 si = None if os.environ.get("SHOW") else subprocess.STARTUPINFO(dwFlags=subprocess.STARTF_USESHOWWINDOW, wShowWindow=7)
 if si:
     import hidelua; hidelua.start()  # the Lua Console is a separate window
-p = subprocess.run(args + [os.path.abspath(sys.argv[2])], capture_output=True, text=True, startupinfo=si, timeout=3600, cwd=os.path.dirname(EXE))
+p = subprocess.run(args + [os.path.abspath(sys.argv[2])], capture_output=True, text=True, startupinfo=si, timeout=int(os.environ.get("EMU_TIMEOUT", "3600")), cwd=os.path.dirname(EXE))
 out = "\n".join(l for l in (p.stdout + p.stderr).splitlines() if "opcode" not in l and "DEVICE" not in l)
 print(out[-1500:])
 print(open(OUT + "log.txt").read() if os.path.exists(OUT + "log.txt") else "no log")
