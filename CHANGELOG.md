@@ -2,6 +2,15 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.7.0 (2026-11-15)
+- New game: Panic Bomber for PC Engine CD. A hidden sound test, a stage select for all 50 puzzle stages, a story
+  stage select, and leftovers of an older title program on the disc.
+- New game: Panic Bomber for PC-98. A DEBUG MODE page behind 128 presses on EXIT, a hidden 10th opponent, and the
+  developers' crash screens.
+- New game: Bomberman B-Daman. A Game Genie code for the debug mode left in the game: a scene select with all 100
+  stages, five debug tools, unlimited tries, and a second battle arena the game never picks.
+- Games with no passwords show their codes without the password box.
+
 ## 2.6.0 (2026-11-14)
 - Bomberman '93: all 125 password cards typed in and played, US and JP. Codes for stages 2-8 of any world load that
   stage directly, so 7-2 to 7-8 can be played with no planet cleared.

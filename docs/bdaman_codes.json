@@ -1,0 +1,192 @@
+[
+ {
+  "code": "DF65-4FAD",
+  "devices": {
+   "Game Genie": "DF65-4FAD"
+  },
+  "effect": "Turns on the debug mode left in the game: a scene select, five debug tools and a Select pause",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "One ROM byte, $80:8077 (file offset $8077: 00 → 01), is the switch; the game reads it at $C0:8206, $C0:8493, $C0:8FF1 and $C0:90F0. Mesen's cheat engine, same inputs and frame: without the code the boot carries on to the JBA logo, with it the scene select opens. DF65-7FAD, the same byte in bank $C0, does not work: the reads go through bank $80.",
+  "section": "cheat",
+  "img": "cheat_df65-4fad.png"
+ },
+ {
+  "code": "7E0D85:03",
+  "devices": {
+   "Pro Action Replay": "7E0D85:03"
+  },
+  "effect": "トライ ∞: a failed stage is retried until you clear it",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$0D85 is the tries setting, 0-2 for 1-3 tries and 3 for ∞, a value the Option screen only offers once your best rank is 6 or higher. Mesen's cheat engine: the Option screen read トライ ∞ at once. The retry loop itself ($C2:84E3) was read, not played.",
+  "section": "cheat",
+  "img": "cheat_7e0d8503.png"
+ },
+ {
+  "code": "7E0D83:06",
+  "devices": {
+   "Pro Action Replay": "7E0D83:06"
+  },
+  "effect": "The Option screen's トライ setting gains its hidden fourth value, ∞",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$0D83 is the best rank reached. Written in Mesen: Right on トライ cycled 2 → 3 → ∞ → 1; with $0D83 = 0 it cycled 2 → 3 → 1. The picture is the second press of Right, 1 against ∞.",
+  "section": "cheat",
+  "img": "cheat_7e0d8306.png"
+ },
+ {
+  "code": "Reach rank 6 or higher",
+  "effect": "トライ on the Option screen can be set to ∞, unlimited tries on each stage",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "The Option screen lets the tries setting reach 3 (∞) only when the best-rank byte $0D83 is 6 or more ($C2:B020, $C2:B04A); the rank is raised at $C1:B166 and saved. Which rank name is number 6 wasn't worked out.",
+  "section": "Secrets"
+ },
+ {
+  "code": "DF65-4FAD, then Start + Select on the Hudson logo, then Start + Select again",
+  "effect": "Scene select: STAGE xx and the name of every scene in the game, 100 normal stages included",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Start + Select on the Hudson logo sets $1F5A (the game as sold does this too, but nothing reads it without the debug byte). After that, Start + Select held in any scene opens the list ($83:8000). A +1, B -1, X +$10, Y -$10, Start runs the scene, L and R open two of the tools; Start + Select inside a scene comes back. Names are in half-width kana (table $83:B19B).",
+  "section": "debug",
+  "img": "debug_scene_select.png"
+ },
+ {
+  "code": "Scene select: L (scene FB)",
+  "effect": "BOMB ENTRY EDIT: a stage's bomb list, one row a bomb",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$83:A0AC. Rows like 01 00 0030 FE50 08 under NO = 00, COUNT = 07.",
+  "section": "debug",
+  "img": "debug_bomb_entry_edit.png"
+ },
+ {
+  "code": "Scene select: R (scene FC)",
+  "effect": "MOVE TYPE EDIT: the bombs' movement scripts",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$83:994A.",
+  "section": "debug",
+  "img": "debug_move_type_edit.png"
+ },
+ {
+  "code": "Scene select: scene FD",
+  "effect": "DEBUG MODE DATA SET: eight flag bytes as bits and 32 data words",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$83:8571. FLAG0-7 are $1F4E-$1F55 and DATAnn the word at $1F56 + 2n. The D-pad moves, A raises and B lowers a cell, Start leaves. FLAG0 bit 0 adds a MOVE TYPE readout to the stage editor; FLAG2 bit 0 swaps the Battle arena for Battle Stage 2.",
+  "section": "debug",
+  "img": "debug_mode_data.png"
+ },
+ {
+  "code": "Scene select: scene FE",
+  "effect": "SOUND TEST: BGM NO and SE NO",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$83:828B. The Option screen has its own BGM and SE test.",
+  "section": "debug",
+  "img": "debug_sound_test.png"
+ },
+ {
+  "code": "Scene select: scene FF",
+  "effect": "EXPLOSIOIN PARAM. SET (sic): the size and timing of small, middle and large blasts",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "$83:844B. Rows INIT, END, ADD, KEEP, SUB, HOLD and H ADD.",
+  "section": "debug",
+  "img": "debug_explosion_param.png"
+ },
+ {
+  "code": "7E1F4E:01",
+  "devices": {
+   "Pro Action Replay": "7E1F4E:01"
+  },
+  "effect": "The stage editor shows a MOVE TYPE nn readout",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "FLAG0 of the debug data page, read when EDIT starts ($C2:8F94). Written to RAM in Mesen, not through the cheat engine.",
+  "section": "debug",
+  "img": "cheat_7e1f4e01.png"
+ },
+ {
+  "code": "Battle Stage 2 (scene $17)",
+  "effect": "A second battle arena, バトル ステージ ソノ2, that the game never picks",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Battle loads scene $17 instead of $13 only when bit 0 of $1F50 is set ($C1:D9A9, $C1:F4BF, $C2:DCF1), and nothing but the debug data page writes that byte: the rules screen changed none of the flag bytes with every row toggled. The arena was seen through the scene select; the flag wasn't watched working in a real Battle. Picture: the normal arena and Battle Stage 2.",
+  "section": "unused",
+  "img": "battle_stage_2.png"
+ },
+ {
+  "code": "PAL console",
+  "effect": "The game boots into an empty wooden stage with nothing to hit",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "On a PAL console the boot stores scene $00 ($C0:80E8), its only use. Seen with Mesen's region set to PAL.",
+  "section": "Hidden screens",
+  "img": "pal_boot.png"
+ },
+ {
+  "code": "SNES Mouse plugged in",
+  "effect": "\"You can not use a mouse with this game.\"",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Scene $9C, shown after the JBA logo. Seen with a mouse in port 2.",
+  "section": "Hidden screens",
+  "img": "mouse_warning.png"
+ },
+ {
+  "code": "SFX SOUND DRIVER Ver 2.32",
+  "effect": "Sound driver credits that are never shown",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "File $4D58A: SFX SOUND DRIVER Ver 2.32 / 1993-96 Hudson Soft / Program : LU.Iwabuchi / Driver : Kazumi-TYPE / Note :",
+  "section": "unused"
+ }
+]

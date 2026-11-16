@@ -1,0 +1,84 @@
+[
+ {
+  "code": "Hold I while you confirm the number of players",
+  "effect": "The battle rule screen opens on the skull rule instead of the flame",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "As the battle program is launched ($6FC8) the game stores 1 in $361F when I is held, and bit 0 of $361F is the battle rule. Held from the 1 vs 1 confirmation through the load, with a multitap: the rule screen came up with the skull picked. Only a preset: the rule can be changed on that screen anyway.",
+  "section": "Button codes",
+  "img": "battle_rule_hold_i.png"
+ },
+ {
+  "code": "0D50CD:01",
+  "effect": "TESTモード on the game-mode menu: a sound test for the PSG effects, CD tracks and PCM voices",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen raw code, added on the title (card RAM bank $6A offset $10CD = $90CD). Bit 0 of $90CD makes the menu five entries long and draws TESTモード under HOW TO PLAY; nothing on the disc sets it. The screen has three rows, PSG $00-$1A, CD $00-$17 and PCM $00-$15: Up/Down picks the row, Left/Right the number, I or RUN plays it. II is tested but does nothing, so there is no way back.",
+  "section": "cheat",
+  "img": "cheat_0d50cd01.png"
+ },
+ {
+  "code": "1F1620:02",
+  "effect": "ボンバる寺への道: hold SELECT while you pick つづき and all 50 stages can be chosen",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen raw code (RAM $3620). The mode's title tests bit 1 of $3620 and then SELECT ($E1A3): with both, it stores 49 as the highest stage reached, which also goes into the save. The boot code clears $3620 and nothing sets it again, so the SELECT check is dead on the disc. With the code: the number ran up to 50 and stage 50 started; without it the same input stayed at stage 1.",
+  "section": "cheat",
+  "img": "cheat_1f162002.png"
+ },
+ {
+  "code": "1F163C:05",
+  "effect": "STORY starts at stage 6 (the value is the stage minus 1, 00-0F)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Mesen raw code (RAM $363C). The title program adds $363C to 8 to pick the stage program ($728C): with 05 the map showed STAGE-6 and stage program 13 loaded. It also pins the stage counter, so turn it off once the stage has started.",
+  "section": "cheat",
+  "img": "cheat_1f163c05.png"
+ },
+ {
+  "code": "Arcade Card",
+  "effect": "The hidden sound test's PCM row runs to $48 instead of $15",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "The boot program probes the Arcade Card ports ($6269) and sets bit 4 of zero-page $03 when one answers; the sound test then allows PCM $00-$48 ($758E). In Mesen as an Arcade Card the row stopped at $48, as a Super CD-ROM² at $15. What the card changes in play wasn't looked at.",
+  "section": "debug",
+  "img": "test_pcm_arcade.png"
+ },
+ {
+  "code": "Hold I or II, press RUN on the title",
+  "effect": "Opened TESTモード in an earlier build; does nothing on the released disc",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "The title's RUN handler ($6693) still loads the pad and tests I and II, but the branch goes to the next instruction (sector 66 +$69D: BD 28 22 89 03 F0 00). An older copy of the program left in sector 986 has the rest: it sets bit 0 of $8D4C, that build's TESTモード flag.",
+  "section": "unused"
+ },
+ {
+  "code": "Sectors 962-1089 and the unused file slots",
+  "effect": "Pieces of an older title program and about 7.7 MB of leftover audio data that nothing loads",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "The kernel's file tables list 41 program, 6 VRAM and 35 ADPCM files. No code requests program slots 2-4, 6, 7, 29-37, 39 and 40 or VRAM slots 0 and 5. Slot 6 holds the older title build; sectors 920-921 are copies of boot sectors 0-1; about 3,900 sectors in slots 29-35 and the gaps hold what looks like 16-bit stereo PCM that matches none of the disc's audio tracks. The kernel also has an Arcade Card loader that reads by raw sector; no call to it was found, but some of this could be its voice data.",
+  "section": "unused"
+ }
+]

@@ -43,7 +43,7 @@ file `$6585` (`D0` → `80`) skips the check. ![PAL](img/pbw/pal_warning.png) ![
 The character-swap codes set `$37CC` to 1-4; its table (`$80:8D93`) has two more slots, which give a black or garbled
 board. Table slots 6-7 of each row and the last `0005` repeat earlier codes, so they can never be reached.
 
-The PC Engine Super CD-ROM² version (Bomberman: Panic Bomber, 1994) has no password: it saves to the System Card's
+The PC Engine Super CD-ROM² version ([Bomberman: Panic Bomber](pbcd.md), 1994) has no password: it saves to the System Card's
 backup memory instead. Its Story mode goes straight to the difficulty choice; the save routine near the start of the
 data track calls the System Card's backup-memory functions with the file name `P.BOMBER` and a 166-byte buffer, and
 after one boot in Mesen the backup memory holds that file.

@@ -1,0 +1,129 @@
+[
+ {
+  "code": "Options: on EXIT, press button B (the C key) 128 times",
+  "effect": "A sound plays, EXIT turns into < EXIT >, and Left or Right on it opens a hidden DEBUG MODE page",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Button B on EXIT counts presses in DS:468E (CS:C588); at 128 it sets the flag DS:468C, draws < EXIT > and plays effect $44. Holding the key works too, about 45 seconds. The count starts again each time the options open; the flag stays until a reset. Done on the unpatched disk in DOSBox-X with scripted C presses. The page behind it was opened on a copy with the flag already set (disk $1650C = 01).",
+  "section": "Button codes",
+  "img": "debug_unlock.png"
+ },
+ {
+  "code": "Finish stage 9 with under 20 minutes on the clock",
+  "effect": "A hidden 10th opponent, すーぱーたけ (Super Take), before the ending",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "When the next stage would be the 10th and the play time (the PAST TIME on the continue screen) is under 0:20:00, the game sets DS:4680 and plays stage index 9 instead of going to the ending (CS:703F). Its card reads STAGE 0. The opponent was seen through the debug page's STAGE SELECT 10; the 20-minute rule itself was read from the code, not played out.",
+  "section": "Secrets",
+  "img": "super_take.png"
+ },
+ {
+  "code": "Hold CTRL while the disk boots",
+  "effect": "The game uses the 31 kHz display mode instead of 24 kHz",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "The boot code tests the CTRL bit of the BIOS key flags (CS:02EC) and picks the display mode from it. Read from the code; the not-held path (24 kHz) shows in the DOSBox-X log.",
+  "section": "Button codes"
+ },
+ {
+  "code": "Hold A + B as a second player joins a 1P game",
+  "effect": "The options screen opens before the VS game starts",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "After HERE COMES A NEW CHALLENGER !, if either player's input is exactly A + B the game runs the options screen first (CS:6F9A). Read from the code, not run.",
+  "section": "Button codes"
+ },
+ {
+  "code": "DEBUG MODE page",
+  "effect": "MODE (BOMBER SELECT, 21 RENSA, 5 RENSA * 2), STAGE SELECT 1-10, CHANCE TIME 1-5 MIN or NOTHING, DEKAB METER ZERO or MAX - 1",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Opened with Left or Right on < EXIT > once the page is unlocked; < RETURN > goes back. MODE is read from the code only: BOMBER SELECT lets the player re-roll each piece with Up, and the two RENSA modes deal pieces from fixed lists that set up a 21-chain or two 5-chains (CS:B2A9, CS:B2CD). BOMBER SELECT didn't show in two runs. Page seen on a copy with the flag set.",
+  "section": "debug",
+  "img": "debug_menu.png"
+ },
+ {
+  "code": "DEBUG MODE: STAGE SELECT 3",
+  "effect": "The 1P game starts at stage 3; 10 starts on the hidden opponent",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The setting is the word DS:466C (0-9), read when the 1P game starts (CS:ED5F). Seen with the word preset to 2 on a copy of the disk (disk $164EC).",
+  "section": "debug",
+  "img": "stage_select_3.png"
+ },
+ {
+  "code": "DEBUG MODE: CHANCE TIME 1 MIN",
+  "effect": "CHANCE TIME !! comes after 1 minute of a match instead of 3",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "DS:466E, 1-5 minutes or NOTHING, default 3 (CS:AF91): the game as sold always uses 3 minutes. Seen with the word preset to 1 on a copy of the disk (disk $164EE): CHANCE TIME !! at 1m00s.",
+  "section": "debug",
+  "img": "chance_time_1min.png"
+ },
+ {
+  "code": "DEBUG MODE: DEKAB METER MAX - 1",
+  "effect": "Both giant-bomb meters start one step from full",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "DS:4670 (CS:BA1F). Seen with the word preset on a copy of the disk (disk $164F0).",
+  "section": "debug",
+  "img": "dekab_meter_max.png"
+ },
+ {
+  "code": "Disk $1650C: 00 → 01",
+  "effect": "The DEBUG MODE page is unlocked from the start",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The byte is the flag DS:468C in the disk image (DS:xxxx = disk $11E80 + xxxx). On a copy with it set, the options show < EXIT > at once and the page opens.",
+  "section": "patch"
+ },
+ {
+  "code": "PROTECT CHECK ERROR!!",
+  "effect": "Four boot messages in English that nothing prints, one of them for a copy-protection check the game doesn't have",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "DS:0800 (disk $12680): PANIC BOMBER, FOR FM PC9821, NOW LOADING... and PROTECT CHECK ERROR!!. The boot screen uses Japanese strings instead, and no protection check exists in the code. Also unreferenced: the id string Panibon For PC9821 (DS:9410) and the text titles CONFIGRATION and DEBUG MODE, since both pages' titles are part of their background pictures.",
+  "section": "unused"
+ },
+ {
+  "code": "Crash handlers",
+  "effect": "A register dump and a memory viewer the developers left in, reached only if the game crashes",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "INT 3 prints the registers and waits for RETURN (CS:06AE). INT 0Dh opens a hex and ASCII memory viewer at the fault address (CS:0566: ROLL UP/DOWN scroll, ESC leaves), then prints Ippan Hogo!! (general protection) and stops. A text-console line input (CS:03D4) has no caller.",
+  "section": "unused"
+ }
+]
