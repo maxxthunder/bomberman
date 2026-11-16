@@ -318,7 +318,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p class="hint legend" id="legend"></p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.9.0</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.9.1</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -1884,7 +1884,7 @@ const PXICON = {
   nes: { body: [[0,4,16,8]], holes: [[2,7,3,1],[3,6,1,3],[6,9,1,1],[8,9,1,1],[10,7,2,2],[13,7,2,2]] },
   md: { body: [[3,4,10,1],[1,5,14,1],[0,6,16,4],[0,10,6,1],[10,10,6,1],[1,11,4,1],[11,11,4,1]],
     holes: [[2,7,3,1],[3,6,1,3],[7,5,2,1],[10,6,1,1],[12,6,1,1],[14,6,1,1],[9,8,1,1],[11,8,1,1],[13,8,1,1]] },
-  n64: { body: [[1,4,14,4],[1,8,3,5],[6,8,4,6],[12,8,3,5]], holes: [[2,6,3,1],[3,5,1,3],[7,5,2,2],[12,5,1,1],[13,6,1,1]] },
+  n64: { body: [[4,2,8,1],[1,3,14,2],[0,5,16,3],[0,8,4,3],[1,11,3,1],[6,8,4,5],[12,8,4,3],[12,11,3,1]], holes: [[2,5,3,1],[3,4,1,3],[7,4,2,1],[12,4,1,1],[11,5,1,1],[13,5,1,1],[12,6,1,1],[7,9,2,2]] },
   pc98: { body: [[2,1,12,9],[6,10,4,1],[1,12,14,3]], holes: [[4,3,8,5],[3,13,6,1],[11,13,2,1]] },
   vb: { body: [[1,3,14,5],[0,4,16,3],[7,8,2,5],[6,12,1,1],[5,13,1,1],[9,12,1,1],[10,13,1,1],[3,14,4,1],[9,14,4,1]], holes: [[2,4,5,2],[9,4,5,2]] },
 };

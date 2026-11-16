@@ -2,6 +2,9 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.9.1 (2026-11-16)
+- A new icon for the Nintendo 64 games: the three-grip controller.
+
 ## 2.9.0 (2026-11-16)
 - New game: Bomberman Hero. A GameShark code for the debug flag and its action menu and in-game menu, cheats, 35
   unused maps, the Gossick and Options unlocks, a hidden White Bomb mission behind a file-select entry that is never

@@ -1,6 +1,6 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Nintendo 64, Genesis, PC Engine, Virtual Boy and PC-98
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.9.0](https://img.shields.io/badge/version-2.9.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.9.1](https://img.shields.io/badge/version-2.9.1-ff4f9a)](CHANGELOG.md)
 
 Every password and secret code for 25 Bomberman games, read from each game's own code and tested in emulators, with a
 password checker for every game and a generator wherever a code holds items or progress. Each game also has its
