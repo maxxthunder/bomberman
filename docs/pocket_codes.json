@@ -511,7 +511,8 @@
  {
   "code": "0F9-C1A-E62",
   "devices": {
-   "Game Genie": "0F9-C1A-E62"
+   "Game Genie": "0F9-C1A-E62",
+   "GameShark": "010FA8C1"
   },
   "effect": "Debug menu in place of the title menu",
   "versions": [
@@ -520,7 +521,7 @@
   "status": "known",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie, already documented for the Game Boy Color release. In Mesen the title leads to the numbered test menu (1-7), its text partly garbled.",
+  "note": "Game Genie, already documented for the Game Boy Color release. In Mesen the title leads to the numbered test menu (1-7), its text partly garbled. GameShark: the debug menu straight from power-on, in Mesen; entries 1-6 work, and leaving it needs the code off. Run in original Game Boy mode: colour mode gave a white screen.",
   "img": "debug_menu.png"
  },
  {
@@ -654,7 +655,8 @@
  {
   "code": "0F8-0EB-E62",
   "devices": {
-   "Game Genie": "0F8-0EB-E62"
+   "Game Genie": "0F8-0EB-E62",
+   "GameShark": "010FA6C1"
   },
   "effect": "Debug menu in place of the title menu (Japan)",
   "versions": [
@@ -663,13 +665,14 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $01:480E, the scene number after the intro, $02 -> $0F (US $01:59C1; 0F9-C1A-E62 does nothing here). In Mesen Start on the title leads to the numbered test menu, text partly garbled, as on the US cart.",
+  "note": "Game Genie: $01:480E, the scene number after the intro, $02 -> $0F (US $01:59C1; 0F9-C1A-E62 does nothing here). In Mesen Start on the title leads to the numbered test menu, text partly garbled, as on the US cart. GameShark: the debug menu straight from power-on, in Mesen; entries 1-6 work, and leaving it needs the code off.",
   "img": "debug_menu_jp.png"
  },
  {
   "code": "0F7-DAB-E62",
   "devices": {
-   "Game Genie": "0F7-DAB-E62"
+   "Game Genie": "0F7-DAB-E62",
+   "GameShark": "010FA6C1"
   },
   "effect": "Debug menu in place of the title menu (first Europe cart)",
   "versions": [
@@ -678,7 +681,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "Cheats",
-  "note": "Game Genie: $01:47DA, $02 -> $0F. In Mesen Start on the title leads to the numbered test menu.",
+  "note": "Game Genie: $01:47DA, $02 -> $0F. In Mesen Start on the title leads to the numbered test menu. GameShark: the debug menu straight from power-on, in Mesen; entries 1-6 work, and leaving it needs the code off.",
   "img": "debug_menu_eu1.png"
  },
  {

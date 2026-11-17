@@ -84,7 +84,12 @@ Leather Armor, the Flak Bomb at firepower 5, the Remote Control and three healin
 pad input: the walk, Leave, the talk and the fight. Played straight, the first form went down once and the second
 then killed Bomberman. The win is one input history over three emulator launches joined by savestates, with a
 rewind of a second or two each time Bomberman was hit (about 530 in all) and eight discarded legs. It shows the
-fight can be won with this kit, not that it is won reliably.
+fight can be won with this kit, not that it is won reliably. Ten later attempts with the same kit and no rewinds,
+each from power-on, all ended in Game Over: the best beat the first form and fell early in the second. Bomberman
+takes a half heart every 450-650 frames there and lands a hit every 2,300-6,000.
+
+A trade still counts: the end test (`00:1DB0`, the boss gone) runs before anything else each frame, and Bomberman's
+death takes over a second before Game Over, so a last hit landed as his last heart goes gives the ending.
 
 The ending: "After an epic battle, Bomberman defeats the mighty Chaos Bomber!", Bomberman waving in the cockpit,
 "End", the staff roll and the title. The game saves by itself during it, and flag 53 ends as `$E0`.
@@ -108,7 +113,7 @@ Hammer, kicks bombs away and digs. Losing is an ordinary Game Over. The second a
 Armor on and no rewinding: the second took 8,800 frames and landed 10 hits on Bomberman, the third 3,550 frames and
 6 hits. Unlike Mami, both do damage with their bombs. The third win took max HP from 9 to 10 hearts; the second
 started at the 10-heart cap. No talk follows a win, the room is empty afterwards, and none of the three enters the
-Monsters book, whose tables stop at flag 52. Neither was tried without the armour.
+Monsters book, whose tables stop at flag 52. Without armour, from 3 hearts, both won their one try.
 ![The second and the third in their duels](img/quest/duels_2_3.png)
 The text names only Mami, in both languages; GameFAQs names the other two Lewysia and Deral, and the dancer
 Pampu, after their Saturn Bomberman characters.
@@ -127,10 +132,17 @@ Power Gloves, Rubber Bomb and Silver Armor. All three kits were read back in the
 
 ## GameShark codes
 
-Held RAM writes in Mesen, written in GameShark form; none was run on a GameShark.
+Held RAM writes in Mesen, written in GameShark form; none was run on a GameShark. The Game Genie codes patch the
+ROM instead and were run in Mesen's Game Genie engine on the US, Japanese and European ROMs; none was run on a Game
+Genie. Every one's compare byte matches in one bank only.
 
 | Code | US | Japan | |
 |---|---|---|---|
+| Test menu at power-on (Game Genie, Europe `187-FDE-B36`) | `187-F2E-B36` | `187-FFE-B36` | ![](img/quest/gg_test.png) |
+| ★ Test menu on Select (Game Genie, Europe `FF9-CAE-191`) | `FF9-BCE-191` | `FF9-D0E-191` | |
+| ★ No damage (Game Genie) | `189-26A-6EA` | `189-26A-6EA` | |
+| ★ 10 hearts on New Game (Game Genie) | `A02-40B-2AA` + `A02-41B-2AA` | the same | |
+| ★ New Game on screen NN (Game Genie) | `2E2-17D-081` + `NN2-18D-A2C` | `2E1-ACD-081` + `NN1-ADD-A28` | |
 | Test menu on Select | `010134C2` | `010134C2` | |
 | No damage | `018034C2` | `018034C2` | ![Without and with](img/quest/gs_no_damage.png) |
 | Infinite HP | `013082CE` | `013081CE` | ![](img/quest/gs_hp_us.png) ![](img/quest/gs_hp_jp.png) |
@@ -222,7 +234,7 @@ rank. ![](img/quest/battle_screens.png)
 ## Open
 
 - A Chaos Bomber win without rewinds, and the other bomb types against him.
-- The second and third duels without armour, and any of the fights on the Japanese ROM.
+- The second and third duels won without armour, and any of the fights on the Japanese ROM.
 - The second and third characters, the fourth fighter and the dancer have no names in either ROM's text.
 - A tile-by-tile pass over the graphics banks; the screen shown when a commander is beaten was read, not seen.
 - Japan's text entries `$74`-`$79` and the cut-scene narration, which is drawn as tile maps.

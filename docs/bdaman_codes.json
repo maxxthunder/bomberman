@@ -17,7 +17,8 @@
  {
   "code": "7E0D85:03",
   "devices": {
-   "Pro Action Replay": "7E0D85:03"
+   "Pro Action Replay": "7E0D85:03",
+   "Game Genie": "D76E-346F"
   },
   "effect": "トライ ∞: a failed stage is retried until you clear it",
   "versions": [
@@ -25,14 +26,15 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$0D85 is the tries setting, 0-2 for 1-3 tries and 3 for ∞, a value the Option screen only offers once your best rank is 6 or higher. Mesen's cheat engine: the Option screen read トライ ∞ at once. The retry loop itself ($C2:84E3) was read, not played.",
+  "note": "$0D85 is the tries setting, 0-2 for 1-3 tries and 3 for ∞, a value the Option screen only offers once your best rank is 6 or higher. Mesen's cheat engine: the Option screen read トライ ∞ at once. The retry loop itself ($C2:84E3) was read, not played. Game Genie: makes ∞ the default of a new save, so it works on a fresh save only; Mesen showed トライ ∞.",
   "section": "cheat",
   "img": "cheat_7e0d8503.png"
  },
  {
   "code": "7E0D83:06",
   "devices": {
-   "Pro Action Replay": "7E0D83:06"
+   "Pro Action Replay": "7E0D83:06",
+   "Game Genie": "DD84-4766 + DD80-4766"
   },
   "effect": "The Option screen's トライ setting gains its hidden fourth value, ∞",
   "versions": [
@@ -40,7 +42,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "$0D83 is the best rank reached. Written in Mesen: Right on トライ cycled 2 → 3 → ∞ → 1; with $0D83 = 0 it cycled 2 → 3 → 1. The picture is the second press of Right, 1 against ∞.",
+  "note": "$0D83 is the best rank reached. Written in Mesen: Right on トライ cycled 2 → 3 → ∞ → 1; with $0D83 = 0 it cycled 2 → 3 → 1. The picture is the second press of Right, 1 against ∞. Game Genie: in Mesen both Left and Right reached ∞.",
   "section": "cheat",
   "img": "cheat_7e0d8306.png"
  },
@@ -178,7 +180,8 @@
  {
   "code": "7E1F4E:01",
   "devices": {
-   "Pro Action Replay": "7E1F4E:01"
+   "Pro Action Replay": "7E1F4E:01",
+   "Game Genie": "DD6B-3468"
   },
   "effect": "The stage editor shows a MOVE TYPE nn readout",
   "versions": [
@@ -186,7 +189,7 @@
   ],
   "status": "known",
   "verified": "mesen",
-  "note": "FLAG0 of the debug data page, read when EDIT starts ($C2:8F94). Written to RAM in Mesen, not through the cheat engine.",
+  "note": "FLAG0 of the debug data page, read when EDIT starts ($C2:8F94). Written to RAM in Mesen, not through the cheat engine. Game Genie: in Mesen's cheat engine the readout appeared.",
   "section": "debug",
   "img": "cheat_7e1f4e01.png"
  },

@@ -1495,7 +1495,8 @@
  {
   "code": "7E6C6E:0B / 7E6C6E:0C",
   "devices": {
-   "Pro Action Replay": "7E6C6E:0B / 7E6C6E:0C"
+   "Pro Action Replay": "7E6C6E:0B / 7E6C6E:0C",
+   "Game Genie": "D815-5D00 / DA15-5D00 (EU, JP); D819-5D60 / DA19-5D60 (beta)"
   },
   "effect": "Select battle stage 11 / 12",
   "versions": [
@@ -1506,7 +1507,7 @@
   "status": "known",
   "verified": "static",
   "section": "cheat",
-  "note": "Already known.",
+  "note": "Already known. Game Genie: sets where the select starts, so Left and Right can still move off it; in Mesen stage 11 or 12 loaded.",
   "img": "cheat_7e6c6e.png"
  },
  {

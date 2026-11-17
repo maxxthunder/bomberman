@@ -275,7 +275,7 @@
   ],
   "status": "known",
   "verified": "emu",
-  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 8016E404 (Japan 8016E406). Each floor-type handler returns at once while it is set. Shown on map 0A's exit floor: the stage ends on the Clear Points tally without it and carries on with it (picture). With it a current floor stops carrying Bomberman (map 19) and a lift column stops lifting him (map 45). Ice and damage floors were not tested.",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 8016E404 (Japan 8016E406). The floor-type handlers return at once while it is set; damage floors go through another routine (80086AD0) and still hurt. Shown on map 0A's exit floor: the stage ends on the Clear Points tally without it and carries on with it (picture). With it a current floor stops carrying Bomberman (map 19) and a lift column stops lifting him (map 45). Spikes (map 10) and a hot plate (map 58) took a bar of health with it on as with it off. No floor type changes friction: the snow maps slide like any other floor.",
   "section": "debug",
   "img": "no_attribute.png"
  },
@@ -402,16 +402,16 @@
   "img": "bonus_code.png"
  },
  {
-  "code": "Sound Test: hold C-Left or C-Right",
-  "effect": "The band on the Sound Test stage turns",
+  "code": "Sound Test: hold C-Left or C-Right, then C-Down",
+  "effect": "The band on the Sound Test stage turns, and C-Down turns it back to the front",
   "versions": [
    "us"
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Options, Sound Test. About half a degree a frame. The code also tests C-Down, which did nothing that could be seen.",
+  "note": "Options, Sound Test. About half a degree a frame. C-Down is read only while neither C-Left nor C-Right is held, and sets all four players back to facing front. Played with the controller. Picture: turned with C-Left, and C-Down.",
   "section": "Button codes",
-  "img": "sound_test_c.png"
+  "img": "sound_test_cdown.png"
  },
  {
   "code": "BACKUP MEMORY TEST",

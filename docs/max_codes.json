@@ -210,6 +210,22 @@
   "img": "battle_vs_computer.png"
  },
  {
+  "code": "Battle Game: Combine, with a second Game Boy",
+  "effect": "Two Charaboms of different classes make one of six new ones; yours is used up",
+  "versions": [
+   "blue",
+   "red",
+   "hikari",
+   "yami",
+   "ain"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Only ten Charaboms can take part (ids 0, 2, 5, 7, 8, 9, 12, 14, 17, 19). Each belongs to a class by id: dragons, beasts, Pommies and sea creatures, and two of the same class make nothing. Dragon + beast: Fire Force; dragon + Pommy: Pommy Dragon; dragon + sea: Aqua Dragon; beast + Pommy: Thunder Kong; beast + sea: Rock Snakey; Pommy + sea: Thunder Shark. Nothing happens if you already own the result. Its stats are the two parents' added together, capped, and its level is their sum divided by 3. The partner arrives over infrared, so one cart cannot combine. Played on Hikari from a save with only Pommy, with the partner's six bytes (a Draco) written where the infrared would put them: \"Pommy Dragon is born!\" at level 6, as the formula gives, and Pommy gone from the roster. Read from the code: legendaries cannot take part, and a partner sending Heat Rock or Oct Kong gives you that Charabom, the only way to own either. Picture: the tanks, and the birth.",
+  "section": "Secrets",
+  "img": "combine.png"
+ },
+ {
   "code": "Get a game over",
   "effect": "The certificate: the Japanese versions add a red seal by the signature and a rating picture; the US ones print the rating as text",
   "versions": [

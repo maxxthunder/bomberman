@@ -1044,7 +1044,8 @@
  {
   "code": "010182C4",
   "devices": {
-   "GameShark": "010182C4"
+   "GameShark": "010182C4",
+   "Game Genie": "001-3FB-4CA"
   },
   "effect": "No walking and no bombs (an unused flag); Start still pauses",
   "versions": [
@@ -1052,7 +1053,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "GameShark. $C482 is never written anywhere in the ROM, but $01:413B zeroes the pad bytes $C2E0/$C2E1 before the object loop when it is non-zero. Mesen from Wood 1: the player doesn't move in any direction, and A and B change no RAM at all (63 bytes and a bomb object without it). Start still pauses, because the pause check $00:1ADB reads the pad earlier in the frame than $01:413B clears it. Image: the flag off and on, and Start pausing either way.",
+  "note": "GameShark. $C482 is never written anywhere in the ROM, but $01:413B zeroes the pad bytes $C2E0/$C2E1 before the object loop when it is non-zero. Mesen from Wood 1: the player doesn't move in any direction, and A and B change no RAM at all (63 bytes and a bomb object without it). Start still pauses, because the pause check $00:1ADB reads the pad earlier in the frame than $01:413B clears it. Image: the flag off and on, and Start pausing either way. Game Genie: the same in Mesen, no walking and no bombs.",
   "section": "cheat",
   "img": "pad_freeze.png"
  },

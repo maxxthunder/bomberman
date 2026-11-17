@@ -1,0 +1,220 @@
+[
+ {
+  "code": "08000CBA 205A",
+  "effect": "TEST SELECT: a developer menu of 16 items opens instead of the boot logos",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "A ROM patch (address, then the new 16-bit value), the same in all three versions; a real GameShark or Action Replay needs it encrypted, which was not done: the start-up code's first state number, 3C (the boot logos), becomes 5A (90, TEST SELECT). Turn it on before switching on. Its items: FIELD nnn, BATTLE, MULTI BOOT, CHAR BOMB, SOUND TEST, MINI GAME 0-3, OPENING, ENDING, DATA SAVE, DATA LOAD, BATTLE MINI, TITLE DEMO, GAME OVER, POWER ON, STAFF ROLL and FLAG SET; all 16 were run. Picture: US, Japan.",
+  "section": "debug",
+  "img": "test_select.png"
+ },
+ {
+  "code": "Quest, New Game, then hold 03004F30 = 0000005A",
+  "effect": "TEST SELECT on an unpatched cart",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "03004F30 is the game's state word. When New Game sets it to 50, holding it at 5A until the fade ends opens TEST SELECT instead of the opening. Held from the title onward, the title hangs. Shown on both ROMs. No way to reach state 90 with the controller alone was found. Picture: US, Japan.",
+  "section": "debug",
+  "img": "test_select_ram.png"
+ },
+ {
+  "code": "TEST SELECT: FIELD nnn",
+  "effect": "Starts the adventure at any of 391 places",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The number is an entry in the warp table (ROM 082FCCF0, 391 entries of position, facing, world and area). 391 and above give an empty grey room. Up and Down step by one, Left and Right by ten, L and R by a hundred (read from the code). Only entry 002 was chosen with the pad; the others were set by writing the number. Picture: 002, 100, 250 and 391.",
+  "section": "debug",
+  "img": "field.png"
+ },
+ {
+  "code": "TEST SELECT: MINI GAME 0-3",
+  "effect": "The four mini-games on their own: a race, a Ceedrun duel, a balloon game and a cannon game",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Each opens straight from the menu. Picture: 0 to 3.",
+  "section": "debug",
+  "img": "mini_games.png"
+ },
+ {
+  "code": "TEST SELECT: FLAG SET",
+  "effect": "The adventure's 256-flag pages: A turns a flag on or off, L and R change page",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Shown with flag 12 turned on: byte 02035276 became 04. Picture: the page, and flag 12 set.",
+  "section": "debug",
+  "img": "flag_set.png"
+ },
+ {
+  "code": "TEST SELECT: SOUND TEST",
+  "effect": "Songs 0 to 100",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Numbers 0 and 29-39 have no tracks, and 100 reads past the end of the 100-song table (read from the code).",
+  "section": "debug",
+  "img": "sound_test.png"
+ },
+ {
+  "code": "TEST SELECT: the other items",
+  "effect": "CHAR BOMB opens the Karabon pick screen, MULTI BOOT the link-cable send screen, BATTLE MINI the fishing game, and the rest the scenes and the save",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "OPENING, ENDING, STAFF ROLL, TITLE DEMO, GAME OVER (it returns to the menu) and POWER ON play those scenes; DATA SAVE writes the save buffer as it stands, which is empty until the field has packed the game into it (see the notes). Picture: CHAR BOMB, MULTI BOOT, BATTLE MINI and STAFF ROLL.",
+  "section": "debug",
+  "img": "test_select_more.png"
+ },
+ {
+  "code": "02035194 = 14 + 02035195 = 14 + 02035196 = 08 + 02035197 = 07 + 02035198 = 03E7 (16-bit) + 0203519C = FF",
+  "effect": "Adventure: 10 hearts, 8 bombs, fire 8 and 999 gold",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The player's status block: life in half hearts, maximum life (6 to 20), bombs (at least 2), fire, then gold. The last write makes the HUD redraw. Written once on the field, same addresses on both ROMs; plain memory writes, not checked as an encrypted GameShark code. Picture: US, Japan.",
+  "section": "cheat",
+  "img": "gs_status.png"
+ },
+ {
+  "code": "Write 0x20, 0C, 81, F2, 28, 86, 90, 25, 20, 03, 81 into 02035296-020352A0 (OR)",
+  "effect": "All 25 Karabons are yours",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The Karabons are story flags, listed by a table at ROM 0831B24C. Same addresses on both ROMs. Picture: the pick screen on the US ROM and in Japan.",
+  "section": "cheat",
+  "img": "gs_karabons.png"
+ },
+ {
+  "code": "030024C6 = entry",
+  "effect": "Adventure: the warp-table entry you enter next",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The same numbers as FIELD's; written on the field, the next area change goes there.",
+  "section": "cheat"
+ },
+ {
+  "code": "ROM 080343AC = 0402 + 080343B0 = 0C02",
+  "effect": "The cloud enemy splits into the unused smallest clouds",
+  "versions": [
+   "us",
+   "eu"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "The cloud (enemy type 33) has four forms: big, small, smallest and its shadow. Bombed, the big one turns pink and leaves two small ones, which die without splitting; nothing ever makes the smallest. These two words are the split's form numbers; changed, the split gives the smallest instead, drawn with tiles no other run used. The cloud lives in world 1; for the test it was placed by another ROM patch beside warp entry 46, with fire raised by a memory write. US ROM only. Picture: the cloud, hit, the normal split, and the patched split.",
+  "section": "unused",
+  "img": "cloud_split.png"
+ },
+ {
+  "code": "Dead-player heads",
+  "effect": "Halo versions of the four Battle player heads, loaded but never drawn",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Tiles 5C-61 sit in video memory beside the four HUD heads (58-5B). The HUD draws heads from a five-entry table (ROM 08064FCC) holding 58-5B and the gold halo head 60; 5C-5F and 61 are in no table, so the HUD cannot draw them. Over 9000 frames each with Revenge on, Super and off, player 1 losing every round to three computer players, no halo tile appeared, not even 60. Only one-player Battle was checked: the emulator has no link cable. Picture: the HUD heads and the unused halo heads, from video memory.",
+  "section": "unused",
+  "img": "dead_icons.png"
+ },
+ {
+  "code": "BOMBERMAN STORY 11",
+  "effect": "The Japanese title, kept as the save file's signature in the US and European ROM",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "File 1 of the save starts with it; the cart also writes \"BOMBERMANCHECKER\" at the start of the save memory. The ROM keeps Nintendo's multiboot library ID strings dated 010214.",
+  "section": "unused"
+ },
+ {
+  "code": "Karabon fusion text",
+  "effect": "Japan has a Karabon fusion shop and a fusion machine; the US and European ROM keeps the lines empty",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Twelve script lines are only an end code in the English ROM: the shop's whole conversation (\"Fuse Karabons?\" to \"Karabon X was born!\"), the machine's three offers (Shell + Knuckle-Pommy, Beast-Pommy + Dorako, Marine-Eel + Unicornes), an old man saying the fortress boss door needs the Shell and Knuckle-Pommy fusion, a \"Continue the game?\" prompt, and a tip that the Karabon Champ visits the Training Forest. Read from the two scripts; whether the English game still runs these events was not played.",
+  "section": "region"
+ },
+ {
+  "code": "Battle rules: Skulls",
+  "effect": "The US and European ROM starts Skulls on Burn; Japan starts it Off",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The rule screen's default. Picture: US, Japan.",
+  "section": "region",
+  "img": "battle_rules.png"
+ },
+ {
+  "code": "Title screen",
+  "effect": "Japan's logo flies in as two words with a white flash and a blue burst; the US logo slides in as one piece",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Japan also boots straight to the Hudson logo; the US and European ROM shows a legal screen and Activision's logo first. Picture: the US logo sliding in, and Japan's three steps.",
+  "section": "region",
+  "img": "title_logos.png"
+ }
+]

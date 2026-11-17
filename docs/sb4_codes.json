@@ -657,7 +657,8 @@
  {
   "code": "7F202B:0A / 7F202B:0B",
   "devices": {
-   "Pro Action Replay": "7F202B:0A / 7F202B:0B"
+   "Pro Action Replay": "7F202B:0A / 7F202B:0B",
+   "Game Genie": "DA07-77BD (JP)"
   },
   "effect": "Select battle stage 11 / 12",
   "versions": [
@@ -667,7 +668,7 @@
   "status": "known",
   "verified": "static",
   "section": "cheat",
-  "note": "Already known.",
+  "note": "Already known. Game Genie: raises the stage count to 12, so 11 and 12 can be picked rather than set; run on the Japanese ROM (the English one was not run).",
   "img": "cheat_7f202b.png"
  },
  {
@@ -679,7 +680,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The Normal Game records (48 bytes from $C3:58B8, listed at $C3:5840) include two the list skips: $C3:5FA8 and $C3:5FD8, between 5-4 ($C3:5F78) and 5-5 ($C3:6008). They use World 5's graphics and a layout stream no listed stage uses ($D7:1C45): a thick ring of blocks around the pillars. With slot 38 (the filler 5-7) pointed at either, and $0092 = 38, they load and play. World 5 seems to have had 7 stages, which would explain the filler 5-7 and 5-8. Image: 5-4, the two cut stages, 5-5. English: same records and list (the patch doesn't touch $C3:5840-$C3:6037); both codes entered in Mesen's cheat engine with $0092 = 38 load the two ring-of-blocks World 5 stages.",
+  "note": "The Normal Game records (48 bytes from $C3:58B8, listed at $C3:5840) include two the list skips: $C3:5FA8 and $C3:5FD8, between 5-4 ($C3:5F78) and 5-5 ($C3:6008). They use World 5's graphics and a layout stream no listed stage uses ($D7:1C45): a thick ring of blocks around the pillars. With slot 38 (the filler 5-7) pointed at either, and $0092 = 38, they load and play. World 5 seems to have had 7 stages, which would explain the filler 5-7 and 5-8. Image: 5-4, the two cut stages, 5-5. English: same records and list (the patch doesn't touch $C3:5840-$C3:6037); both codes entered in Mesen's cheat engine with $0092 = 38 load the two ring-of-blocks World 5 stages. As Game Genie codes for the ROM bytes: C698-7D63 (or 2698-7D63) + 9E98-7DA3, run in Mesen on the Japanese ROM; the slot write stays.",
   "section": "unused",
   "img": "cut_world5.png"
  },
@@ -692,7 +693,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Battle stage records (34 bytes, $C3:62DB-$C3:686E) are picked from four sets at $C4:0074. One more record follows them at $C3:686F, and nothing points to it: stage 6's start positions and background with its own layout stream ($D7:5576, between stage 6's two) and no gimmick objects. Pointing set 0, entry 0 at it ($024A = 0) loads it in Mesen. Image: retail stage 6 (left), the unreferenced record (right). Static: the English ROM has the battle records $C3:62DB-$C3:68A0, the set table $C4:0074 and the layout stream $D7:5576 byte-identical; not run in Mesen.",
+  "note": "Battle stage records (34 bytes, $C3:62DB-$C3:686E) are picked from four sets at $C4:0074. One more record follows them at $C3:686F, and nothing points to it: stage 6's start positions and background with its own layout stream ($D7:5576, between stage 6's two) and no gimmick objects. Pointing set 0, entry 0 at it ($024A = 0) loads it in Mesen. Image: retail stage 6 (left), the unreferenced record (right). Static: the English ROM has the battle records $C3:62DB-$C3:68A0, the set table $C4:0074 and the layout stream $D7:5576 byte-identical; not run in Mesen. As Game Genie codes: 1E17-8DAA + 1617-8FDA, run in Mesen on the Japanese ROM.",
   "section": "unused",
   "img": "unref_battle_C3686F.png"
  },

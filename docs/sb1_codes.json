@@ -3366,7 +3366,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The ROM codes point battle 3's map ($C3:2215, pointer at +$11) at the ring map, and $7E:00A4 = $3F held for the first frames starts battle 3. It loads and plays: a ring of floor around a block of walls. The floor comes out in the wrong tiles with this and battle 7's tile set (C32478DA C32479A1, scene $43), so its own tile set is gone. In Normal Game it hangs because the soft-block placer ($C6:1DC7) needs 112 free cells reachable from the start (flood fill $C6:1E93) and the ring has 90; battle mode skips that check ($C6:1DC9). Beta: same codes; Japan: battle 3's header is at $C3:21B5, so C321C6DA C321C7A1; both entered in Mesen's cheat engine with 7E00A43F at power-on and battle 3 loads on the ring map with the same wrong floor tiles; Europe is static (its ROM differs from US only in the header and the battle-timer constant).",
+  "note": "The ROM codes point battle 3's map ($C3:2215, pointer at +$11) at the ring map, and $7E:00A4 = $3F held for the first frames starts battle 3. It loads and plays: a ring of floor around a block of walls. The floor comes out in the wrong tiles with this and battle 7's tile set (C32478DA C32479A1, scene $43), so its own tile set is gone. In Normal Game it hangs because the soft-block placer ($C6:1DC7) needs 112 free cells reachable from the start (flood fill $C6:1E93) and the ring has 90; battle mode skips that check ($C6:1DC9). Beta: same codes; Japan: battle 3's header is at $C3:21B5, so C321C6DA C321C7A1; both entered in Mesen's cheat engine with 7E00A43F at power-on and battle 3 loads on the ring map with the same wrong floor tiles; Europe is static (its ROM differs from US only in the header and the battle-timer constant). As Game Genie codes for the two ROM bytes: 2C44-8F6A + CF44-8FAA (US, EU, beta) / 2C4A-5F6A + CF4A-5FAA (JP), run in Mesen on all four; 7E00A43F stays a PAR write.",
   "section": "unused",
   "img": "maps/ring_C1A1DA_battle3.png"
  },
@@ -3475,7 +3475,8 @@
  {
   "code": "7E0304FF",
   "devices": {
-   "Pro Action Replay": "7E0304FF"
+   "Pro Action Replay": "7E0304FF",
+   "Game Genie": "6B43-8496"
   },
   "effect": "Stages never fade in: you play on a black field, with only the HUD, the players and the enemies showing",
   "versions": [
@@ -3484,7 +3485,7 @@
   "status": "new",
   "verified": "mesen",
   "section": "cheat",
-  "note": "$0304 is a frame-skip mask the palette fader reads ($C6:22E7) but nothing ever counts up, so it stays 0. With bit 0 set, fade speed classes 6 and up never take a step; every stage fade-in is class 6. Writing 0 lets the stalled fade finish within 120 frames. Image: 1-2 played on the black field.",
+  "note": "$0304 is a frame-skip mask the palette fader reads ($C6:22E7) but nothing ever counts up, so it stays 0. With bit 0 set, fade speed classes 6 and up never take a step; every stage fade-in is class 6. Writing 0 lets the stalled fade finish within 120 frames. Image: 1-2 played on the black field. Game Genie: points the fade's mask read at a ROM byte that is FF; the same black field in Mesen.",
   "img": "fade_mask_black.png"
  }
 ]

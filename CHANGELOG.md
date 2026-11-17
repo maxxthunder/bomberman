@@ -2,6 +2,21 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.11.0 (2026-11-17)
+- New family: Game Boy Advance.
+- New game: Bomberman Tournament. A developer menu (TEST SELECT) with a place select, the mini-games and a flag
+  editor; cheats; the cloud enemy's unused smallest split; the save layout; Karabon fusion text kept only in Japan;
+  Battle heads that can never be drawn.
+- New game: Bomberman Max 2. A minigame select menu nothing opens, a complete save file nothing loads, Fly Shark and
+  Elemouse, the Jump the Jump Rope legendary, merging on one cart, and cheats.
+- Cheat devices: Game Genie codes for Bomberman Quest; Game Genie, GameShark or Pro Action Replay forms added on GB 1,
+  GB 2, GB 3, Pocket Bomberman, B-Daman, Super Bomberman 1, 3, 4 and 5, and Bomberman 64's scene warp.
+- Bomberman 64 (2001): the Park's 30 medals, its prizes and gates, and the lost-cat errand.
+- Bomberman Hero: NO ATTRIBUTE on damage floors, C-Down in the Sound Test, the credits run with the debug flag.
+- Bomberman 64: music and Spellmaker's voices can be played on their cards.
+- Bomberman Max: combining Charaboms. Bomberman GB 3: the challenge door reached by pad, and the 5-minute ranking.
+- ROM checksums in `tools/roms.md5`.
+
 ## 2.10.0 (2026-11-17)
 - New game: Bomberman 64: The Second Attack!. A Z + A code for playing as the computer's characters, a map warp
   with two test maps, the shop that sells the four extra Battle stages and the Cowboy parts that change its

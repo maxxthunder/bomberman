@@ -878,9 +878,10 @@
   "status": "new",
   "verified": "mesen",
   "devices": {
-   "GameShark": "0102D1C1 + 0104D2C1"
+   "GameShark": "0102D1C1 + 0104D2C1",
+   "Game Genie": "3CF-0AB-5D4 (Japan) / 3C3-A6A-5D4 (Wario Blast)"
   },
-  "note": "GameShark: the defeat count $C1D1-$C1D3 held at 2-4-x, so the first check after a round sees 240+. $C1D1-$C1D3 is also the password digit buffer, so switch the codes on only after the password is accepted, then press A on the GREAT BATTLE intro. Tested in Mesen on both carts. Static (RAM codes): Bomberman Collection carries Bomberman GB (Japan)'s banks byte-identical, so $C1D1-$C1D3 and the check are the same.",
+  "note": "GameShark: the defeat count $C1D1-$C1D3 held at 2-4-x, so the first check after a round sees 240+. $C1D1-$C1D3 is also the password digit buffer, so switch the codes on only after the password is accepted, then press A on the GREAT BATTLE intro. Tested in Mesen on both carts. Static (RAM codes): Bomberman Collection carries Bomberman GB (Japan)'s banks byte-identical, so $C1D1-$C1D3 and the check are the same. Game Genie: patches the 240-win check instead; in Mesen on both carts the PERFECT! screen came after the first round won. Bomberman Collection has Japan's bytes (not run).",
   "section": "cheat",
   "img": "perfect_240_wario_cheat.png"
  },

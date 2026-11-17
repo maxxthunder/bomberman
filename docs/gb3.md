@@ -270,14 +270,16 @@ bell panels (ベルパネル) that call the Bomber Ball (ボンバーボール).
 Ends at time up with タイムアップ!, a rating page (time left, blocks broken, enemies beaten, bonus, your score, best
 score), a level (`$01:61D2`, `$01:6B55`; はらはら 2 min: ぷろぼん ≥ 9000, なみぼん ≥ 4000, みそぼん ≥ 1500, else
 ぺけぼん; 5 min 18000 / 8000 / 3000; どきどき 2 min 14000 / 7000 / 3000, 5 min 25000 / 8000 / 3500, the last three
-read from the ROM) and a ranking of four (defaults HUD 9000, I.Y 5000, B.R 2000, BOM 1000) with 3-initial name
+read from the ROM) and a ranking of four (はらはら 2 min defaults HUD 9000, I.Y 5000, B.R 2000, BOM 1000; 5 min 18000,
+10000, 5000, 2000) with 3-initial name
 entry, then つづけますか はい / いいえ. The cart has no battery, so the ranking lasts until power-off.
 ![Rating, level, name entry](img/gb3/challenge_result.png)
 
 ★ **A door in はらはら.** Room 117 (はらはら's arena) has door cells `$2C`/`$2D` in its bottom-right corner. Up at
 the door puts the player in state 9 (`$01:522F`), which sets `$C480` = 3, and `$00:16D1` moves to room 118: a plain
-11 × 12 arena with a horned, caped enemy, the clock still running (Mesen, the player moved next to the door).
-![The door cells, the second room](img/gb3/challenge_door_room.png)
+11 × 12 arena with a horned, caped enemy, the clock still running. Walked by pad in the 5-minute game: ten blocks
+bombed along the way, the door at 3:32. ![The door cells, the second room](img/gb3/challenge_door_room.png)
+![Through the door by pad, and room 118](img/gb3/challenge_door_pad.png)
 
 Room maps: `$00:1DC0[area × 30 + stage × 5 + k]` gives the room id, `$00:1ECE` + 3 × id its bank and pointer to four
 words (map, then data for `$00:221A`, `$00:2302`, `$00:234D`). The map (`$00:2072`) is 2 header bytes, width, height,
@@ -297,5 +299,5 @@ apart at `$D300` and copied to `$D200`; a decoded challenge room matched the RAM
   ![City 5 room 2 with its four switch flags set: the door open, T0](img/gb3/city5_room2.png)
   ![City stage 5 room 1: the view scrolling by itself](img/gb3/city5_autoscroll.png)
 - Challenge mode: the cleared branch (`$C480` = `$FF`) and どきどき's doors (cells `$32`/`$33`, rooms 120-123) weren't
-  reached; walking to はらはら's door wasn't done (the player was moved next to it): its corner is sealed by breakable blocks,
-  the room record's `$CC` objects, and four pad-only runs did not get there.
+  reached: room 119's start side is cut off from its doors by columns of hard cells; whether a moto can hop a low one
+  was not tested.

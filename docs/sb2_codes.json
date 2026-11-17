@@ -519,7 +519,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Battle maps its stage number to an internal stage through a 16-byte table at $CC:03E4 (retail 00 01 02 05 06 07 08 09 0A 0B 04 03 ...). The Caravan's reads 00 09 0A 0B 0B ..., so only 4 stages are reachable, and even its 12-stage select code can't get further. Its entry 0 set to 1 or 8 loads retail stage 2 or 7 complete and playable; internal 2-7 (retail 3, 12, 11, 4, 5, 6) load with junk tiles, so their data is gone. Mesen.",
+  "note": "Battle maps its stage number to an internal stage through a 16-byte table at $CC:03E4 (retail 00 01 02 05 06 07 08 09 0A 0B 04 03 ...). The Caravan's reads 00 09 0A 0B 0B ..., so only 4 stages are reachable, and even its 12-stage select code can't get further. Its entry 0 set to 1 or 8 loads retail stage 2 or 7 complete and playable; internal 2-7 (retail 3, 12, 11, 4, 5, 6) load with junk tiles, so their data is gone. Mesen. As Game Genie codes: DFD3-EF7D in place of CC03E401 and D6D3-EF7D in place of CC03E408, run in Mesen.",
   "section": "unused",
   "img": "caravan_leftover_stages.png"
  },

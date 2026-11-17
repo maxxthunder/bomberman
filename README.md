@@ -1,8 +1,8 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Nintendo 64, Genesis, PC Engine, Virtual Boy and PC-98
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.10.0](https://img.shields.io/badge/version-2.10.0-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.11.0](https://img.shields.io/badge/version-2.11.0-ff4f9a)](CHANGELOG.md)
 
-Every password and secret code for 27 Bomberman games, read from each game's own code and tested in emulators, with a
+Every password and secret code for 29 Bomberman games, read from each game's own code and tested in emulators, with a
 password checker for every game and a generator wherever a code holds items or progress. Each game also has its
 unused music and sounds, which you can play, and cut graphics shown in the game.
 
@@ -59,12 +59,15 @@ bar); the games you've looked at keep their screenshots.
 | **Game Boy Color** | | | |
 | <img src="docs/img/logos/pocket.png" alt="" height="28"> | [Pocket Bomberman](https://maxxthunder.github.io/bomberman/#pocket) | 1998 | every password, cheats |
 | <img src="docs/img/logos/max_blue.png" alt="" height="28"> | [Bomberman Max](https://maxxthunder.github.io/bomberman/#max) | 1999 | Charabom code builder (the game saves), cheats |
+| <img src="docs/img/logos/quest.png" alt="" height="28"> | [Bomberman Quest](https://maxxthunder.github.io/bomberman/#quest) | 1998 | test menu and debug game button code, GameShark codes, endings |
+| **Game Boy Advance** | | | |
+| <img src="docs/img/logos/tourn.png" alt="" height="28"> | [Bomberman Tournament](https://maxxthunder.github.io/bomberman/#tourn) | 2001 | developer menu with a place select and mini-games, cheats, unused Battle graphics |
+| <img src="docs/img/logos/max2.png" alt="" height="28"> | [Bomberman Max 2](https://maxxthunder.github.io/bomberman/#max2) | 2002 | minigame select menu, an unused complete save, unused Charaboms, cheats |
 | **NES / Famicom** | | | |
 | <img src="docs/img/logos/nes1_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#nes1) | 1985 | password generator, cheats |
 | <img src="docs/img/logos/nes2_us.png" alt="" height="28"> | [Bomberman II](https://maxxthunder.github.io/bomberman/#nes2) | 1991 | password generator, cheats |
 | **Genesis** | | | |
 | <img src="docs/img/logos/mega_us.png" alt="" height="28"> | [Mega Bomberman](https://maxxthunder.github.io/bomberman/#mega) and its 8-player demo | 1994 | password generator, cheats |
-| <img src="docs/img/logos/quest.png" alt="" height="28"> | [Bomberman Quest](https://maxxthunder.github.io/bomberman/#quest) | 1998 | test menu and debug game button code, GameShark codes, endings |
 | **Virtual Boy** | | | |
 | <img src="docs/img/logos/pbvb.png" alt="" height="28"> | [Panic Bomber](https://maxxthunder.github.io/bomberman/#pbvb) | 1995 | every password, special codes, debug menu, developer menu patch |
 | **PC-98** | | | |
@@ -217,6 +220,7 @@ What each patch does, and how it was tested, is on the game's page under Patches
 - Game Boy: [Atomic Punk / Bomber Boy](docs/bb.md), [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md),
   [Bomberman GB 3](docs/gb3.md)
 - Game Boy Color: [Pocket Bomberman](docs/pocket.md), [Bomberman Max](docs/max.md), [Bomberman Quest](docs/quest.md)
+- Game Boy Advance: [Bomberman Tournament](docs/tourn.md), [Bomberman Max 2](docs/max2.md)
 - NES: [Bomberman](docs/nes1.md), [Bomberman II](docs/nes2.md)
 - Genesis: [Mega Bomberman](docs/mega.md) and its [8-player demo](docs/mega8.md)
 - Virtual Boy: [Panic Bomber](docs/pbvb.md)
@@ -245,6 +249,7 @@ The page is one file and opens straight from disk; it pulls its fonts and icons 
   with `tools/emu/mesen.py` (or `bizhawk.py`). Set `MESEN` or `EMUHAWK` to the
   emulator.
 - `tools/emu/ips.py`: the IPS writer the patch makers share.
+- `tools/roms.md5`: checksums of the ROMs the tools expect in `roms/` (`md5sum -c ../tools/roms.md5` from `roms/`).
 
 ROMs aren't included. Put them in `roms/` with their No-Intro names.
 

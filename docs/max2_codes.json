@@ -1,0 +1,164 @@
+[
+ {
+  "code": "In a stage: 03004A3C = 0002, then 03002248 = 0023 (16-bit)",
+  "effect": "MINIGAME SELECT: a developer menu for the four minigames; 0003 instead of 0002 gives BONUSGAME SELECT and the four bonus games",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "blueeu",
+   "redeu",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "03002248 is the stage's sub-state; 23 is a menu on a plain green screen that no code ever asks for. It lists the minigames by their Japanese working names (NAWATOBI, MATOATE, KENKENPAPA, NAKAMASAGASI) and the bonus games (BAROMDARAKE, MOGURAHOREHORE, JUMPRACE, BLOCKKICK); the pad picks one and it starts. Europe: 03004A4C and 03002268. Written once in BizHawk on Blue Advance (US and Europe) and Bomberman Version; the menu is in all six ROMs. Picture: both menus.",
+  "section": "debug",
+  "img": "debug_select.png"
+ },
+ {
+  "code": "MINIGAME SELECT and BONUSGAME SELECT: the eight games",
+  "effect": "Jump the Jump Rope, the bomb kick, Hop Scotch and the find game; the Balloms, the digging game, the jump race and the block kick",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "blueeu",
+   "redeu",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "All eight started from the menu with the pad. Picture: the four minigames.",
+  "section": "debug",
+  "img": "minigames.png"
+ },
+ {
+  "code": "Complete save file (unused loader at 08002670)",
+  "effect": "A file with every stage cleared and Charaboms owned, which nothing loads",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "blueeu",
+   "redeu",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "A routine nothing calls copies one of two built-in files into the save: all 100 stages cleared with 24 Charaboms (0806BC48 in the ROM), or only this version's 80 stages with all 30 (0806BF48). Europe's loader is at 0800284C. Written into the save memory at power-on: File 1 shows 100%, and Red Advance's stage 1-06 can be picked in Blue Advance, where it loads and plays. Picture: the file, and 1-06 open on the map.",
+  "section": "unused",
+  "img": "complete_file.png"
+ },
+ {
+  "code": "Charabom select: Fly Shark and Elemouse",
+  "effect": "Two Charaboms at level 85 that no stage gives: Fly Shark (fire, water, rock) and Elemouse (water, rock, electric)",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "bmver",
+   "maxver"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Own them with 02005CC0 = 0001 and 02005CD0 = 0001 (16-bit). On a new file they are then the only cards; Fly Shark's text has the typo \"bambs\". Ridden, the stage shows them, but froze in every run, so their abilities in play are not shown. The only other ways in are the unused complete file and a link merge with a partner who owns one. Picture: both cards.",
+  "section": "unused",
+  "img": "unused_charaboms.png"
+ },
+ {
+  "code": "02005B00 + 16 × id = 0001 (16-bit)",
+  "effect": "Own Charabom number id (0-29)",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The roster in memory, 16 bytes a Charabom: owned, level, then stats; Charabom select reads it. Written in BizHawk on Blue Advance (US). Same address in Japan.",
+  "section": "cheat"
+ },
+ {
+  "code": "02008098 = 0009 (16-bit) + 02000051 = 08 + 02000053 = 08",
+  "effect": "9 lives, 8 bombs and fire 8",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Lives, then the player's bombs and fire. After a death bombs and fire go back to 1. Written in a stage in BizHawk on Blue Advance (US); Japan uses the same addresses. Picture: the HUD, and a long blast.",
+  "section": "cheat",
+  "img": "cheat_status.png"
+ },
+ {
+  "code": "Jump the Jump Rope: 100 jumps",
+  "effect": "Wins the version's legendary Charabom: KameKing in Blue Advance and Bomberman Version, Th. Liger in Red Advance and Max Version",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "blueeu",
+   "redeu",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The only call of the routine that hands out a legendary. Played with the jump counter (0200016C) written to 99 and the hundredth jump made with A: \"You won a KameKing!\" on Blue Advance and \"You won a Th. Liger!\" on Red Advance. The 100 jumps were not done by pad alone. Picture: Blue, and Red.",
+  "section": "Secrets",
+  "img": "jump_rope_100.png"
+ },
+ {
+  "code": "Merge on one cart",
+  "effect": "Two Charaboms of different groups make a third, with no second Game Boy Advance",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "blueeu",
+   "redeu",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Unlike Bomberman Max on Game Boy Color. Dragon + sea: Shargon; dragon + Pommy: P. Dragon; dragon + beast: Elefandon; sea + Pommy: Sparkun; sea + beast: Rhinaus; Pommy + beast: P. Fangs (the table is the same in all six ROMs). Played with the pad from the complete file on Blue Advance: Dorako + Ceedrun, \"Can Not Combine!\"; Dorako + Sibaloon, \"Shargon is born!\". Picture: refused, picked, and the merge.",
+  "section": "Secrets",
+  "img": "merge.png"
+ },
+ {
+  "code": "battle mode programming by fuzzball",
+  "effect": "A programmer's credit nothing shows",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "blueeu",
+   "redeu",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Plain text at 08077FF8 in all six ROMs, with nothing pointing to it. Read from the ROMs.",
+  "section": "unused"
+ },
+ {
+  "code": "Boot and title",
+  "effect": "Europe boots through Vivendi Universal and Majesco to a language select (English, German, French); Japan shows only Hudson",
+  "versions": [
+   "blueadv",
+   "redadv",
+   "blueeu",
+   "redeu",
+   "bmver",
+   "maxver"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The US shows Majesco, then Hudson. Japan's title names the versions BOMBERMAN バージョン and MAX バージョン and has no Nintendo licence line. Picture: the US boot, Europe's two screens and Japan's.",
+  "section": "region",
+  "img": "boot.png"
+ }
+]

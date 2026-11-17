@@ -55,7 +55,7 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Finishing the Park sets six save bits at once and plays the staff roll; some of the same bits are also set by events inside the Park. The Battle stages are マガって ドッカン！ (arrows that bend the blast) and ベルコン アナあな！ (holes and conveyor belts). The rule is read from the code and the effect shown by setting the bits; the Park was not finished by play. Picture: the two stages.",
+  "note": "Meeting the Park's director, behind a door that needs all 30 medals, sets six save bits at once and plays the staff roll; most of the same bits also come from people in the Park (see the notes). The Battle stages are マガって ドッカン！ (arrows that bend the blast) and ベルコン アナあな！ (holes and conveyor belts). The rule is read from the code and the effect shown by setting the bits; the Park was not finished by play. Picture: the two stages.",
   "section": "Secrets",
   "img": "battle_stages.png"
  },
@@ -79,9 +79,33 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Two save bits for each game, set by Park events and by finishing the Park. The game counts the bits: one adds the first extra set and two add both. Shown by setting the bits. Picture: Panic Bomber's list on a new save, and with all bits.",
+  "note": "Two save bits for each game, set by people in the Park and by the director. The game counts the bits: one adds the first extra set and two add both. Shown by setting the bits. Picture: Panic Bomber's list on a new save, and with all bits.",
   "section": "Secrets",
   "img": "panic_pieces.png"
+ },
+ {
+  "code": "Bomberman Park: find the girl's lost cat",
+  "effect": "A new Panic Bomber piece set",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Talk to the girl who has lost her cat, find the cat by Bomber Castle, then tell the girl. She gives a Panic Bomber piece set (save bit 80000000). Played by talking to each in turn, with Bomberman placed beside them by a position write. Other errands give the rest: a lost child for a SameGame set, a late date for the Battle stage ベルコン アナあな！, read from the code. Picture: the girl, and the piece set given.",
+  "section": "Secrets",
+  "img": "cat_quest.png"
+ },
+ {
+  "code": "Bomberman Park: 30 medals",
+  "effect": "Four from people in the Park and one for each of 26 attractions; 10 and 20 medals win prizes, and gates open at 12 to 30",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "An attraction's medal comes with its first new high score, or is offered after ten plays; only when it is played in the Park. A man at Bomber Castle gives a Panic Bomber piece set for 10 medals, shown with the count written to 9 and to 10; another gives a Battle stage for 20. Medal 1 was given by talking to its owner. The medal list opens from the Park menu once another man has handed it over. The rest is read from the code. Picture: the man at 9 medals and at 10.",
+  "section": "Secrets",
+  "img": "medal_prize_10.png"
  },
  {
   "code": "81240474 0001",

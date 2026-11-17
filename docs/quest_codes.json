@@ -32,10 +32,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Holds the debug bit the Japanese button code leaves on ($C234 bit 0); it is the only way in on the US ROM. The menu shows the hardware it runs on, DEAD and SAVE counters from the save file and a build stamp: US 12/24/1998.17:29:48, Japan 10/27/1998.19:56:37 (picture: US and Japan). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "note": "Holds the debug bit the Japanese button code leaves on ($C234 bit 0); it is the only way in on the US ROM. The menu shows the hardware it runs on, DEAD and SAVE counters from the save file and a build stamp: US 12/24/1998.17:29:48, Japan 10/27/1998.19:56:37 (picture: US and Japan). Tested as a held RAM write in Mesen, not on a GameShark. Game Genie: stops the boot code clearing the bit (Europe FF9-CAE-191). Run in Mesen on all three ROMs: Select on the title opened the menu, and the US debug new game below works with it too.",
   "section": "cheat",
   "devices": {
-   "GameShark": "010134C2"
+   "GameShark": "010134C2",
+   "Game Genie": "FF9-BCE-191 (US) / FF9-D0E-191 (JP)"
   },
   "img": "gs_test_menu.png"
  },
@@ -47,7 +48,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The same start as the Japanese button code. 010334C2 with no buttons does not work: the title clears bit 1 again unless Down + Select + A are held.",
+  "note": "The same start as the Japanese button code. 010334C2 with no buttons does not work: the title clears bit 1 again unless Down + Select + A are held. With a Game Genie, 18B-6DF-4CA (Japan 18B-7AF-4CA, Europe 18B-73F-4CA) gives every New Game this start with no buttons; run in Mesen.",
   "section": "debug",
   "img": "debug_game_us.png"
  },
@@ -60,10 +61,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Bit 7 of the debug byte $C234. The damage routine skips the HP subtraction when it is set (09:5921), and nothing in the ROM sets it. Three of Bomberman's own blasts: Game Over without the code, full HP with it (picture). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "note": "Bit 7 of the debug byte $C234. The damage routine skips the HP subtraction when it is set (09:5921), and nothing in the ROM sets it. Three of Bomberman's own blasts: Game Over without the code, full HP with it (picture). Tested as a held RAM write in Mesen, not on a GameShark. Game Genie: skips the HP subtraction itself, the same on all three ROMs; run in Mesen: full HP after three blasts. It also stands in for the Infinite HP codes, which a Game Genie cannot hold.",
   "section": "cheat",
   "devices": {
-   "GameShark": "018034C2"
+   "GameShark": "018034C2",
+   "Game Genie": "189-26A-6EA"
   },
   "img": "gs_no_damage.png"
  },
@@ -105,10 +107,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The screen the game loads on New Game or Continue ($CE91, $1B at the start). Only 00-3F are screens, the 8 by 8 overworld grid; there is no range check, and higher values load garbage. Tested as a held RAM write in Mesen, not on a GameShark.",
+  "note": "The screen the game loads on New Game or Continue ($CE91, $1B at the start). Only 00-3F are screens, the 8 by 8 overworld grid; there is no range check, and higher values load garbage. Tested as a held RAM write in Mesen, not on a GameShark. Game Genie: patches the screen load (Europe 2E2-25D-081 + 202-26D-A24); run in Mesen on New Game. Continue goes through the same load but was not run.",
   "section": "cheat",
   "devices": {
-   "GameShark": "012091CE"
+   "GameShark": "012091CE",
+   "Game Genie": "2E2-17D-081 + 202-18D-A2C"
   },
   "img": "gs_warp20_us.png"
  },
@@ -120,10 +123,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The same byte with screen $00. Tested as a held RAM write in Mesen, not on a GameShark.",
+  "note": "The same byte with screen $00. Tested as a held RAM write in Mesen, not on a GameShark. Game Genie: the same patch with screen $00 (Europe 2E2-25D-081 + 002-26D-A24); run in Mesen on New Game.",
   "section": "cheat",
   "devices": {
-   "GameShark": "010091CE"
+   "GameShark": "010091CE",
+   "Game Genie": "2E2-17D-081 + 002-18D-A2C"
   },
   "img": "gs_warp00_us.png"
  },
@@ -135,12 +139,29 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The start-screen byte on the Japanese ROM ($CE90). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "note": "The start-screen byte on the Japanese ROM ($CE90). Tested as a held RAM write in Mesen, not on a GameShark. Game Genie: the same patch on the Japanese ROM (screen $00: 2E1-ACD-081 + 001-ADD-A28); run in Mesen on New Game.",
   "section": "cheat",
   "devices": {
-   "GameShark": "012090CE"
+   "GameShark": "012090CE",
+   "Game Genie": "2E1-ACD-081 + 201-ADD-A28"
   },
   "img": "gs_warp20_jp.png"
+ },
+ {
+  "code": "187-F2E-B36",
+  "effect": "Boots straight into TEST MODE",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "A Game Genie code that changes the title's next game state from 17 to 18, the test menu. Japan 187-FFE-B36, Europe 187-FDE-B36. Run in Mesen's Game Genie engine on all three ROMs: the menu at frame 401. Picture: US and Japan.",
+  "section": "cheat",
+  "img": "gg_test.png",
+  "devices": {
+   "Game Genie": "187-F2E-B36 (US) / 187-FFE-B36 (JP) / 187-FDE-B36 (EU)"
+  }
  },
  {
   "code": "Test menu: A",
@@ -251,10 +272,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Max HP in the save block ($CE81). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "note": "Max HP in the save block ($CE81). Tested as a held RAM write in Mesen, not on a GameShark. Game Genie: patches the new game's start data, so it acts on New Game only (same codes in Japan and Europe); run in Mesen.",
   "section": "cheat",
   "devices": {
-   "GameShark": "01A081CE"
+   "GameShark": "01A081CE",
+   "Game Genie": "A02-40B-2AA + A02-41B-2AA"
   },
   "img": "gs_maxhp_us.png"
  },
@@ -266,10 +288,11 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "Max HP on the Japanese ROM ($CE80). Tested as a held RAM write in Mesen, not on a GameShark.",
+  "note": "Max HP on the Japanese ROM ($CE80). Tested as a held RAM write in Mesen, not on a GameShark. Game Genie: the same pair as the US ROM; New Game only; run in Mesen.",
   "section": "cheat",
   "devices": {
-   "GameShark": "01A080CE"
+   "GameShark": "01A080CE",
+   "Game Genie": "A02-40B-2AA + A02-41B-2AA"
   },
   "img": "gs_maxhp_jp.png"
  },
@@ -281,7 +304,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The duel code has four fighters; only three are placed and there is no fourth greeting. The dancer's seven sprite tiles above the shuttle are byte-identical to tiles of this fighter's 38-tile set, so the fourth fighter is the dancer. A second reference page notes her full sprite set; the duel kit is not in it. Shown by changing one byte of a copy of the US ROM so Mami's room loads the fourth (file offset 48BE8, 02 to 03). The sprites are at 2E:4680. The kit is 10 hearts, Power Gloves, Rubber Bomb and Silver Armor.",
+  "note": "The duel code has four fighters; only three are placed and there is no fourth greeting. The dancer's seven sprite tiles above the shuttle are byte-identical to tiles of this fighter's 38-tile set, so the fourth fighter is the dancer. A second reference page notes her full sprite set; the duel kit is not in it. Shown by changing one byte of a copy of the US ROM so Mami's room loads the fourth (file offset 48BE8, 02 to 03). The sprites are at 2E:4680. The kit is 10 hearts, Power Gloves, Rubber Bomb and Silver Armor. The same change as a Game Genie code: 03B-E8B-E62, run in Mesen.",
   "section": "unused",
   "img": "hidden_fourth.png"
  },
@@ -316,7 +339,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "A town object picks one of three short talks by a parameter 0-2 (table 11:54F5), and no screen in either ROM uses those parameters. Shown by changing one byte of a copy of the US ROM (file offset 4877F), which puts each character in Peace Town: \"There you are! I've been looking for you!\" Nothing follows the talk: play goes on and A repeats it. Picture: Mami in town, and her talk.",
+  "note": "A town object picks one of three short talks by a parameter 0-2 (table 11:54F5), and no screen in either ROM uses those parameters. Shown by changing one byte of a copy of the US ROM (file offset 4877F), which puts each character in Peace Town: \"There you are! I've been looking for you!\" Nothing follows the talk: play goes on and A repeats it. Picture: Mami in town, and her talk. As Game Genie codes: 007-7FB-E66 (Mami), 017-7FB-E66 and 027-7FB-E66 (the second and third), each run in Mesen.",
   "section": "unused",
   "img": "town_mami.png"
  },

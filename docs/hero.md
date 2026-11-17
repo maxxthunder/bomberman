@@ -29,8 +29,9 @@ no write (US ROM), and seven button sets held at power-on left it at 0. So the m
 **`8016E424 0001`** (Japan **`8016E41B 0001`**). Held from the first frame, the game boots normally.
 
 A second trap run with a save file covered Score, Options, the Sound Test, Copy, Clear, the Planet 6 boss and three
-ending scenes; on the European and Japanese ROMs it ran from power-on to the first stage. Not covered: the credits
-and an ending reached by play. The logo
+ending scenes; on the European and Japanese ROMs it ran from power-on to the first stage. The credits (scene `BB`,
+all 83 lines, 9,600 frames) and scene `BA` ran with no write to it, reached by warp. Not covered: an ending reached
+by play. ![The credits' last line, and the result screen after them](img/hero/credits_trap.png) The logo
 and title programs were read in full; the other menus were read at their button tests, which are A, B, Start and
 directions only, apart from C-Left, C-Right and C-Down on the Options Sound Test. The first boot screen does carry
 a Start code, but it sets the Bonus entry below, not this flag.
@@ -60,7 +61,7 @@ a Start code, but it sets the Bonus entry below, not this flag.
 | TIMER BAR | `8016E3E4` | a frame-time bar ![](img/hero/timer_bar.png) |
 | DEBUG DISPLAY MODE | `8016E3F7` | 1 position and STAGE/AREA/MAP/CLEAR, 2 player and camera ![](img/hero/display_modes.png) |
 | NO DAMAGE | `8016E3FC` (Japan `8016E404`) | no damage; works without the debug flag ![Enemy contact without and with](img/hero/no_damage_enemy.png) |
-| NO ATTRIBUTE | `8016E404` (Japan `8016E406`) | floor types stop working; shown on an exit floor ![](img/hero/no_attribute.png) |
+| NO ATTRIBUTE | `8016E404` (Japan `8016E406`) | floor types stop working: exits, currents and lifts; spikes and hot plates still hurt ![](img/hero/no_attribute.png) ![Spikes, off and on](img/hero/no_attribute_spikes.png) |
 | G BUTTON DEBUG | `8016E40C` | hold Z to fly, A up, B down; Z + L ends the map; works without the debug flag ![](img/hero/g_button.png) |
 | BOM, FIRE | `8016523F`, `80165240` | extra bombs and fire, 0-3; fire scales the blast 0.60-1.50 ![Fire 0 and 3](img/hero/fire_byte.png) |
 | DISPTYPE | `80177974` | what is drawn in the distance on some maps ![Map 2B at 0 and 3](img/hero/disptype.png) |
@@ -110,7 +111,7 @@ map loads, so there is no one-line warp; MAP NUMBER in the action menu is the wa
     by writing the three bytes in a stage and forcing the finish. ![](img/hero/treasure_all.png)
   - Slider Race and Golden Bomber wrote nothing to the save file in the runs made. The text has one time line,
     "Your time is", and no best-time or score-table wording.
-  - In the Sound Test, holding C-Left or C-Right turns the band. ![](img/hero/sound_test.png)
+  - In the Sound Test, holding C-Left or C-Right turns the band, and C-Down turns it back. ![](img/hero/sound_test.png)
 - Holding B throws more bombs at once: one after a 20-frame hold, two after 150, four after 300, whatever the bombs
   byte holds.
 - Flag bits 0 and 2 are set when Garaden and Gossick are cleared; nothing was found that reads them.
@@ -284,5 +285,5 @@ memory with a test pattern and so erases all four files. ![](img/hero/backup_tes
 - No unused text was found, but a single unused line inside a used message would not show.
 - The Bonus stages by real play, and the mission past its first stage on the European and Japanese ROMs.
 - The hidden modes by real play, and the 24 treasures collected rather than written.
-- Gossick earned by an unforced clear. NO ATTRIBUTE on ice and damage floors.
-- The debug-flag trap on the credits and a played ending, and past the first stage on the other two ROMs.
+- Gossick earned by an unforced clear.
+- The debug-flag trap through an ending reached by play, and past the first stage on the other two ROMs.

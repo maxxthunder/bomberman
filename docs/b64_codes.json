@@ -503,7 +503,7 @@
   ],
   "status": "known",
   "verified": "emu",
-  "note": "All 32-bit values; Europe is 10 lower (802AC5C4...), Japan 802AB804, 802AB80C, 802AB808, 802AB810 and 802AB800. All 24 stage scenes were loaded on the US ROM, the test maps on all three. A room inside a stage needs its own entry number in place of 10. Picture: Hot Avenger (8A) and Final Battle! (7E).",
+  "note": "All 32-bit values; Europe is 10 lower (802AC5C4...), Japan 802AB804, 802AB80C, 802AB808, 802AB810 and 802AB800. All 24 stage scenes were loaded on the US ROM, the test maps on all three. A room inside a stage needs its own entry number in place of 10. Picture: Hot Avenger (8A) and Final Battle! (7E). As GameShark lines (US): 812AC5D6 00xx, 812AC5DE 00xx, 812AC5DA 0010, 812AC5E2 0010, 802AC5D3 0001; Europe 812AC5C6, 812AC5CE, 812AC5CA, 812AC5D2, 802AC5C3; Japan 812AB806, 812AB80E, 812AB80A, 812AB812, 802AB803. In BizHawk on all three the scene loaded with the lines turned off about 20 frames after the warp; left on, they hold the clock at 0 and send every later scene change back to the same scene.",
   "section": "debug",
   "img": "warp.png"
  },
@@ -527,9 +527,12 @@
   ],
   "status": "new",
   "verified": "emu",
-  "note": "Sequence 30 is 920 bytes, seven tracks and 63 notes, and no call in the main program or any of the 95 scene programs asks for it. Recorded from the music test (picture): it sounds for 5.8 seconds, two bars, once, and stops.",
+  "note": "Sequence 30 is 920 bytes, seven tracks and 63 notes, and no call in the main program or any of the 95 scene programs asks for it. Recorded from the music test (picture): it sounds for 5.8 seconds, two bars, once, and stops. Recording below.",
   "section": "unused",
-  "img": "music_30.png"
+  "img": "music_30.png",
+  "audio": [
+   "b64/Music_30.mp3"
+  ]
  },
  {
   "code": "Music 00, 09, 23, 25, 34, 36, 37, 41, 43",
@@ -541,7 +544,10 @@
   "verified": "emu",
   "note": "Nothing asks for any of them. The nine sequences are byte-identical and stored together at the end of the bank. The music test accepts them (picture: 09). Recorded: one instrument plays a 16-note bar of 1.2 seconds four times, then silence.",
   "section": "unused",
-  "img": "music_09.png"
+  "img": "music_09.png",
+  "audio": [
+   "b64/Music_09.mp3"
+  ]
  },
  {
   "code": "STAGE SELECT, CONFIG, COMLEVEL",
@@ -630,8 +636,26 @@
   ],
   "status": "known",
   "verified": "emu",
-  "note": "In Japan the Rainbow Palace stage 2 boss calls out each card, sounds 1D3-1DA chosen by a jump table in the scene's program. In the US and European program all eight entries lead to one case that plays sound 1CF, so the clips stay unused; they are re-recorded, not copies of Japan's. Each was played by writing its number into the menu's cursor sound. Which clip names which card was not checked by ear.",
-  "section": "unused"
+  "note": "In Japan the Rainbow Palace stage 2 boss calls out each card, sounds 1D3-1DA chosen by a jump table in the scene's program. In the US and European program all eight entries lead to one case that plays sound 1CF, so the clips stay unused; they are re-recorded, not copies of Japan's. Each was played by writing its number into the menu's cursor sound. Which clip names which card was not checked by ear. Recordings: the eight US clips, then Japan's eight.",
+  "section": "unused",
+  "audio": [
+   "b64/US_1D3.mp3",
+   "b64/US_1D4.mp3",
+   "b64/US_1D5.mp3",
+   "b64/US_1D6.mp3",
+   "b64/US_1D7.mp3",
+   "b64/US_1D8.mp3",
+   "b64/US_1D9.mp3",
+   "b64/US_1DA.mp3",
+   "b64/JP_1D3.mp3",
+   "b64/JP_1D4.mp3",
+   "b64/JP_1D5.mp3",
+   "b64/JP_1D6.mp3",
+   "b64/JP_1D7.mp3",
+   "b64/JP_1D8.mp3",
+   "b64/JP_1D9.mp3",
+   "b64/JP_1DA.mp3"
+  ]
  },
  {
   "code": "Button-sequence checker",

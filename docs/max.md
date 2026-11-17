@@ -79,11 +79,11 @@ it. A GameShark code of type `$80` (cart RAM bank 0) writes it: `8001` + low + h
 | 17 | ![](img/items/max/iron_squid.png) | Iron Squid | クラーケン | Blue / Hikari | 32 |
 | 18 | ![](img/items/max/animal_pommy.png) | Animal Pommy | ビーストポミュ | Blue / Hikari | 36 |
 | 19 | ![](img/items/max/mecha_kong.png) | Mecha Kong | メカコング | Red / Yami | 36 |
-| 20-25 | ![](img/items/max/aqua_dragon.png) ![](img/items/max/pommy_dragon.png) ![](img/items/max/thunder_kong.png) ![](img/items/max/thunder_shark.png) ![](img/items/max/rock_snakey.png) ![](img/items/max/fire_force.png) | Aqua Dragon, Pommy Dragon, Thunder Kong, Thunder Shark, Rock Snakey, Fire Force | アクアドラゴン, ポミュドラゴン, サンダーコング, サンダーシャーク, ロックスネーキー, ファイアーフォース | combining two | 5 |
+| 20-25 | ![](img/items/max/aqua_dragon.png) ![](img/items/max/pommy_dragon.png) ![](img/items/max/thunder_kong.png) ![](img/items/max/thunder_shark.png) ![](img/items/max/rock_snakey.png) ![](img/items/max/fire_force.png) | Aqua Dragon, Pommy Dragon, Thunder Kong, Thunder Shark, Rock Snakey, Fire Force | アクアドラゴン, ポミュドラゴン, サンダーコング, サンダーシャーク, ロックスネーキー, ファイアーフォース | combining two (below) | from the parents |
 | 26 | ![](img/items/max/shardra.png) | Shardra | シャードラ | legendary | 40 |
 | 27 | ![](img/items/max/ox_battra.png) | Ox Battra | オックスバトラー | legendary | 40 |
-| 28 | ![](img/items/max/heat_rock.png) | Heat Rock | ヒートロック | nothing (unused, Known) | 50 |
-| 29 | ![](img/items/max/oct_kong.png) | Oct Kong | タッコング | nothing (unused, Known) | 50 |
+| 28 | ![](img/items/max/heat_rock.png) | Heat Rock | ヒートロック | nothing (unused, Known); a combining partner can send it | 50 |
+| 29 | ![](img/items/max/oct_kong.png) | Oct Kong | タッコング | nothing (unused, Known); a combining partner can send it | 50 |
 
 Names are the Charabom Select cards (all 30 owned, every card shown in Mesen in all five versions:
 `tools/max/cards.lua`); "given by" is GameFAQs' stage list for 1-19, the game's text for the rest. The icons are the
@@ -96,7 +96,7 @@ Pommy) in Japan and Beast Pommy in the US, id 18 the other way round.
 (Shardra) in Blue, Hikari and Ain and `$1B` (Ox Battra) in Red and Yami. The minigame type `$C600` is set only by the
 infrared receiver (`$50:6B44`); the random pick at `$02:631E` is dead code. All 27 references to the roster `$A110`
 were read in Blue: three write an entry, the stage rescue, this award (`$53:6712`) and `$08:58F0`, which stores only
-the player's own Charabom or a combining result (ids 20-25). So a cart alone can earn only its own side's legendary,
+the player's own Charabom, a combining result (ids 20-25) or a combining partner's Heat Rock or Oct Kong. So a cart alone can earn only its own side's legendary,
 and only from an infrared signal; the Pitch Area packet was not decoded. Shown on Blue and Red by writing `$C600` = 6
 and the player state `$C705` = `$13` once in area 1-01 and playing the minigame with the pad; the first runs
 found the winning lane by retrying from savestates. The same was then run on Hikari and Ain (Shardra) and Yami (Ox
@@ -276,7 +276,7 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
 - The exit walk on Blue, and a control clear of 1-01 without the code.
 - An infrared panel reached by play from a new game, and what signal the receiver accepts.
 - Pitch Area's infrared packet format (needs a second console).
-- Combining Charaboms, and the Charabom battles in a coverage run. The roster's 30 slots fill `$A110`-`$A1FF` up to the
+- The Charabom battles in a coverage run. The roster's 30 slots fill `$A110`-`$A1FF` up to the
   first save file, so there is no room for more; computer rivals (`$08:4C24`) use ids 0-25 only.
 
 ## Battle against the computer (★ New)
@@ -290,9 +290,27 @@ sets `$C4E3` = 1 after ten right presses; on A, `$08:4D3F` goes to scene `$15` a
 is opened again. Battle Game needs a saved file (the title skips it on a fresh save). The table is the same in all five
 versions, and the code works in all five: typed in Mesen through to Round 1 Start! (Japan: 1かいせんめ かいし!). ![Battle against the computer](img/max/battle_vs_computer.png)
 
-A whole fight from a real save, on Hikari with no cheat: Battle Game offers Battle, Combine and Data Load. Data Load
+A whole fight from a real save, on Hikari with no cheat: Battle Game offers Battle, Combine and Data Load. Combine needs a second Game Boy (below). Data Load
 takes a save file, Battle opens the Charabom card, then three of six tactics are picked, then the OK? screen, where
 the code was typed. Pommy Lv 3 met Shell Lv 4: a VS screen with both sides' tactics, rounds with named attacks and
 damage lines, "Pommy wins!" and a win screen. Only A was pressed during the fight, and the roster entry was the same
 afterwards. ![](img/max/battle_won_2.png) ![](img/max/battle_won.png)
+
+★ **Combine.** Pick a Charabom, confirm, and the infrared screen waits for the partner (`$C2B0`); the computer code
+exists only on Battle's confirm screen, so one cart cannot combine. Ten ids can take part (`$08:5A22`): 0, 2, 5, 7, 8,
+9, 12, 14, 17 and 19. Each id's class is its number mod 4 (dragons, sea creatures, Pommies, beasts), and the result
+(`$08:5A95`) depends only on the two classes; the same class makes nothing, and an owned result is refused.
+
+| | beast | Pommy | sea |
+|---|---|---|---|
+| dragon | Fire Force | Pommy Dragon | Aqua Dragon |
+| beast | | Thunder Kong | Rock Snakey |
+| Pommy | | | Thunder Shark |
+
+Each stat is the two parents' summed and capped per result (`$03:4151`), and the level is the three stats' sum over 3.
+Your parent is used up. A partner sending Heat Rock or Oct Kong (ids 28, 29) is stored as yours (`$08:586D`), the only
+code path to either. Played on Hikari from a save owning only Pommy, with the partner's bytes written once in place of
+the second console (a Draco, `C2B0`-`B7` = `01 00 03 06 02 01 00 00`): Pommy Dragon was born at level 6 with 7/4/7, as
+the formula gives, and Pommy left the roster. ![The tanks, and the birth](img/max/combine.png)
+![The roster before and after](img/max/combine_roster.png)
 
