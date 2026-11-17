@@ -7,9 +7,9 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
-  "note": "The title program counts new Start presses in a 60-frame window (50 on the European ROM) and wants 10 to 14 of them with no gap of 7 frames or more; 15 or more in one window fail. The flag at 802AC654 (Europe 802AC644, Japan 802AB884) is set. It is not saved: after a reset it read 0 again, so the code is needed each time the console is switched on. Played on all three ROMs with 12 presses. Picture: the last stage without and with the code.",
+  "note": "The title program counts new Start presses in a 60-frame window (50 on the European ROM) and wants 10 to 14 of them with no gap of 7 frames or more; 15 or more in one window fail. The flag at 802AC654 (Europe 802AC644, Japan 802AB884) is set. It is not saved: after a reset it read 0 again, so the code is needed each time the console is switched on. Played on all three ROMs with 12 presses. Picture: the last stage without and with the code. GameFAQs lists pressing Start very quickly on the main menu.",
   "section": "Button codes",
   "img": "start_code.png"
  },
@@ -35,9 +35,9 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
-  "note": "The stage-clear code grants this when the best-time slots of all 16 stages of Green Garden, Blue Resort, Red Mountain and White Glacier are filled; the same 16 slots open the fifth world. On the US ROM, with the other 15 times filled in by hand, a real clear of Green Garden stage 1 made the game grant it and save it, and Music was still there after a power cycle. In the test, A turns the number yellow and starts the track (picture: before and after A); the stick alone plays nothing. The music bank holds exactly 47 sequences.",
+  "note": "The stage-clear code grants this when the best-time slots of all 16 stages of Green Garden, Blue Resort, Red Mountain and White Glacier are filled; the same 16 slots open the fifth world. On the US ROM, with the other 15 times filled in by hand, a real clear of Green Garden stage 1 made the game grant it and save it, and Music was still there after a power cycle. In the test, A turns the number yellow and starts the track (picture: before and after A); the stick alone plays nothing. The music bank holds exactly 47 sequences. GameFAQs gives the sound test for finishing the game on Normal.",
   "section": "Secrets",
   "img": "music_test.png"
  },
@@ -49,9 +49,9 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
-  "note": "Granted when a stage is cleared with world 6, stage 4 selected; the check reads no difficulty setting. On the US ROM the game granted and saved it when Final Battle! was cleared, and it survived a power cycle; the stage was entered by scene write with the boss's health cut and cheats held, not played through. With only the music-test unlock, those four numbers are drawn as -- and A does nothing (picture: 08 without and with this unlock; 15, 16 and 44 are from the code). On View Credits the A button starts the ending sequence.",
+  "note": "Granted when a stage is cleared with world 6, stage 4 selected; the check reads no difficulty setting. On the US ROM the game granted and saved it when Final Battle! was cleared, and it survived a power cycle; the stage was entered by scene write with the boss's health cut and cheats held, not played through. With only the music-test unlock, those four numbers are drawn as -- and A does nothing (picture: 08 without and with this unlock; 15, 16 and 44 are from the code). On View Credits the A button starts the ending sequence. GameFAQs gives View Credits for finishing the game with 100 Gold Cards.",
   "section": "Secrets",
   "img": "music_test_08.png"
  },
@@ -63,7 +63,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "Granted at a stage clear when all 120 card flags are set: five cards a stage, 24 stages, no difficulty term. On the US ROM, with 119 card flags set by hand, clearing a stage under its target time earned the last card and the game granted and saved the unlock. Full Power: On, Bomberman keeps remote bombs when he loses a life, and keeps remote bombs, power bombs and blast size above 4 when a stage is started from the world map. Off, the remote bombs go on a death and all three go on the world map. Picture: the same stage start with the option Off and On, the bombs having been given by hand on the world map. It changes nothing in Battle.",
   "section": "Secrets",
@@ -91,7 +91,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "The world map wants a best time for Black Fortress stage 4 and a flag that the stage itself sets when all 100 cards of the first five worlds are held, counting the ones just earned. Shown by setting both by hand: either one alone leaves the map on Black Fortress (picture: without and with the flag, US). Run on all three ROMs; the stage's own card check is from the code.",
   "section": "Secrets",
@@ -115,9 +115,9 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "static",
-  "note": "Each of the four lists has ten parts. The Knight part is there from the first save and six more are pickups. The eighth (Samurai Head, Shogun Kimono, Fans, High Heels) comes with all 120 Gold Cards. The ninth (Clown Smile, Karate Ware, Boxing Gloves, Clogs) comes with clearing Final Battle! while a counter in the save file is under 10801, read as three hours of play. The counter is the file's play time: it goes up once a second, stops in pause and is saved at each stage clear. The tenth, the Gold set, comes with all 120 cards while a second save value is 1 and the play time is at most 10800. With the values written by hand on the US ROM the Gold flags were set at 10780 and 10800, and not at 10801 or with the second value at 0. Nothing was found in the game that sets that second value. The Clown rule is from the code only. Picture: the Head list on a clean save, and its second page with every flag set.",
+  "note": "Each of the four lists has ten parts. The Knight part is there from the first save and six more are pickups. The eighth (Samurai Head, Shogun Kimono, Fans, High Heels) comes with all 120 Gold Cards. The ninth (Clown Smile, Karate Ware, Boxing Gloves, Clogs) comes with clearing Final Battle! while a counter in the save file is under 10801, read as three hours of play. The counter is the file's play time: it goes up once a second, stops in pause and is saved at each stage clear. The tenth, the Gold set, comes with all 120 cards on a Hard file with the play time at most 10800 seconds. With the values written by hand on the US ROM the Gold flags were set at 10780 and 10800, and not at 10801 or on a Normal file. Hard is the second choice on the Difficulty Level screen when a file is made, there from the first save. The Clown set was not granted when Final Battle! was cleared with the play time written to 20,000 seconds. Picture: the Head list on a clean save, and its second page with every flag set. GameFAQs lists the three sets and their conditions, Hard included.",
   "section": "Secrets",
   "img": "custom_parts.png"
  },
@@ -131,7 +131,7 @@
   ],
   "status": "new",
   "verified": "static",
-  "note": "Bomb the block and walk onto the part. Green Garden: Dragon Head (stage 1, room 3), Dragon Gloves (1, room 5), Dragon Mail (3, room 3), Dragon Spikes (3, room 4). Blue Resort: Iron Nuckles (1, room 1), Cat Hood (1, room 2), High Tops (3, room 1), Cat Suit (3, room 3). Red Mountain: Slash Claws (1, room 4), Iron Goggles (1, room 7), Rocking Horse (3, room 5), Cat Paws for the feet (3, room 6). White Glacier: Iron Armor (1, room 2), Chicken Head (1, room 3), Chicken Wings (3, room 2), Iron Sneakers (3, room 4). Black Fortress: Drill Arms (1, room 5), Sunglasses and Bubby Socks (3, room 3), Dress (3, room 6). Rainbow Palace: Duck Float (1, room 1), Cat Paws for the arms (1, room 2), Ponytails and Duck Feet (3, room 2). Read from the block table, which is the same in all three ROMs; the notes give each block's cell. On the US ROM four of the blocks were bombed with Bomberman placed beside them by hand and gave the listed part; the routes were not played. Picture: Dragon Head and Dragon Spikes out of their blocks.",
+  "note": "Bomb the block and walk onto the part. Green Garden: Dragon Head (stage 1, room 3), Dragon Gloves (1, room 5), Dragon Mail (3, room 3), Dragon Spikes (3, room 4). Blue Resort: Iron Nuckles (1, room 1), Cat Hood (1, room 2), High Tops (3, room 1), Cat Suit (3, room 3). Red Mountain: Slash Claws (1, room 4), Iron Goggles (1, room 7), Rocking Horse (3, room 5), Cat Paws for the feet (3, room 6). White Glacier: Iron Armor (1, room 2), Chicken Head (1, room 3), Chicken Wings (3, room 2), Iron Sneakers (3, room 4). Black Fortress: Drill Arms (1, room 5), Sunglasses and Bubby Socks (3, room 3), Dress (3, room 6). Rainbow Palace: Duck Float (1, room 1), Cat Paws for the arms (1, room 2), Ponytails and Duck Feet (3, room 2). Read from the block table, which is the same in all three ROMs; the notes give each block's cell. On the US ROM four of the blocks were bombed with Bomberman placed beside them by hand and gave the listed part; the routes were not played. These are the blocks on a Normal file; a Hard file moves about half of them, listed in the notes. Picture: Dragon Head and Dragon Spikes out of their blocks.",
   "section": "Secrets",
   "img": "custom_part_blocks.png"
  },
@@ -475,7 +475,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "The first program archive holds four stage programs that carry the strings \"debmap0 : Mapchange happened!\", \"Playerout happened!\" and \"Evlevel2 happened!\". Nothing in normal play asks for them; the game's start-up value for \"next scene\" is still 14, but the boot never loads it. Loaded with the scene write below on all three ROMs. Bomberman can walk in each and lay bombs in 14, 15 and 16; in 17 he walks off the edge and is put back.",
   "section": "debug",
@@ -501,7 +501,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "All 32-bit values; Europe is 10 lower (802AC5C4...), Japan 802AB804, 802AB80C, 802AB808, 802AB810 and 802AB800. All 24 stage scenes were loaded on the US ROM, the test maps on all three. A room inside a stage needs its own entry number in place of 10. Picture: Hot Avenger (8A) and Final Battle! (7E).",
   "section": "debug",
@@ -537,7 +537,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "Nothing asks for any of them. The nine sequences are byte-identical and stored together at the end of the bank. The music test accepts them (picture: 09). Recorded: one instrument plays a 16-note bar of 1.2 seconds four times, then silence.",
   "section": "unused",
@@ -576,7 +576,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "Asset 35 in all three ROMs. The title builds its logo from separate pieces, and no call to the sprite loader passes 35. Traps on the file and sprite loaders never saw 35 asked for on any of the three ROMs, through the boot, title, file select, Battle menu, Options, a stage, a Battle and the start of the ending.",
   "section": "unused",
@@ -603,9 +603,34 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "static",
   "note": "They all go to a print routine that is empty (ROM 24F8). Among them: \"*** MAP INFORMATION ***\", \"Offset:%d,%d,%d\", \"move.c [Error] : move direction is inadequate 0x%02x\", \"EEPROM : SAVE DATA REVISION ERROR. PLEASE FORMAT EEPROM. REVISION=%d\", \"ZeroJump Error : unset segment [ %d ] call[%d,%d]\". Build dates: Japan FRI AUG 8 17:45:39 JST 1997, US SAT SEP 6 14:57:59, Europe MON SEP 8 12:04:49.",
+  "section": "unused"
+ },
+ {
+  "code": "Graphics pack 517",
+  "effect": "An earlier look for the Battle stage Up and Down: bright red, blue, green and yellow with checkered floors",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Nothing loads or refers to pack 517, which sits between Up and Down's packs 514-516 and Pyramid's 518. With the stage's load patched to ask for it (80043174: 24040202 to 24040205) it draws on the same collision map and a match plays on it. Picture: the stage as shipped, and with pack 517.",
+  "section": "unused",
+  "img": "up_and_down_early.png"
+ },
+ {
+  "code": "Spellmaker's card voices",
+  "effect": "Recorded calls for each of the boss's eight attack cards, which only the Japanese ROM plays",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "In Japan the Rainbow Palace stage 2 boss calls out each card, sounds 1D3-1DA chosen by a jump table in the scene's program. In the US and European program all eight entries lead to one case that plays sound 1CF, so the clips stay unused; they are re-recorded, not copies of Japan's. Each was played by writing its number into the menu's cursor sound. Which clip names which card was not checked by ear.",
   "section": "unused"
  },
  {

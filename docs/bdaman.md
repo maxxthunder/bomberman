@@ -1,7 +1,11 @@
 # Bomberman B-Daman (Super Famicom, Japan, 1996): secrets
 
 Hudson's marble-shooting puzzle game. Everything here comes from the ROM and from Mesen 2 (headless test runner).
-`$C0:xxxx` is file offset `xxxx` (HiROM); the code runs from the `$80`+ mirrors. Marks: ★ **New**.
+`$C0:xxxx` is file offset `xxxx` (HiROM); the code runs from the `$80`+ mirrors.
+
+Prior art: the GameFAQs "Bomberman B-Daman" cheats page and a second page on the game's debug material (both in `res/`: the debug mode through a Pro
+Action Replay code, its scene select and five tools, and the move-type flag; GameFAQs lists the Special and Survival
+modes and the title changes). Marks: ★ **New** (in neither), **Known**.
 
 ![](img/bdaman/title.png) ![](img/bdaman/title_menu.png)
 
@@ -90,8 +94,51 @@ the scene select. ![The normal arena (left) and Battle Stage 2 (right)](img/bdam
 
 The Option screen's トライ (tries on each stage) has a fourth value, ∞, offered only when the best-rank byte `$0D83`
 is 6 or more (`$C2:B020`, `$C2:B04A`); the stage-end code treats it as "retry until cleared" (`$C2:84E3`). With
-`$0D83` = 6, Right cycles 2 → 3 → ∞ → 1; with 0 it cycles 2 → 3 → 1. Which rank name is number 6 wasn't worked out.
+`$0D83` = 6, Right cycles 2 → 3 → ∞ → 1; with 0 it cycles 2 → 3 → 1. Rank 6 is ハイパービーダー, a total of 9250 or
+more (below).
 ![Second press of Right: without and with rank 6](img/bdaman/cheat_7e0d8306.png)
+
+## ★ Certificates, ranks and the extra modes
+
+Each 10-stage Normal level ends with a certificate. Its rank is the total of the file's best scores on all 100 stages
+(each at most 100, so 10000 in all) against a table (`$C1:BB22`, `$C1:BB4A`):
+
+| Rank | Total | Name | Unlocks |
+|---|---|---|---|
+| 0 | under 3000 | ひよっこビーダー | |
+| 1 | 3000 | みならいビーダー | |
+| 2 | 6000 | ひとなみビーダー | |
+| 3 | 8000 | チャレンジャービーダー | |
+| 4 | 8500 | チャンピオンビーダー | title music BGM `16`, bronze title Bomberman, SPECIAL |
+| 5 | 9000 | スーパービーダー | silver Bomberman with a green ball, SURVIVAL |
+| 6 | 9250 | ハイパービーダー | red ball, トライ ∞ |
+| 7 | 9500 | グレートビーダー | |
+| 8 | 9800 | ドクター多摩野 | |
+| 9 | 10000 | マスター攻略王 | gold Bomberman |
+
+The best rank over all files is saved at `$30:628D` and copied to `$0D83` at boot; the title (`$C2:9DEA`, `$C2:9EBD`)
+and the menu (`$C2:A477`) read it. Nothing checks that stages were cleared, only the total. Other save bytes: best
+rank of each file `$30:6348+f`, certificates in each file `$30:6098+f`, certificates ever awarded `$30:6347`, best
+Survival run `$30:6346`.
+
+Shown by writing the save and resetting (ranks 0, 4, 5, 6 and 9), and by writing the stage scores before a
+certificate: 8499 gave rank 3 and 8500 rank 4; all 100 at 100 gave rank 9 and, after a reset, the gold Bomberman with
+SPECIAL and SURVIVAL. Nothing was unlocked by play.
+![Ranks 0, 4 and 5](img/bdaman/title_ranks_1.png) ![Ranks 6 and 9](img/bdaman/title_ranks_2.png)
+![Certificates for 8499 and 8500](img/bdaman/certificate_edge.png) ![Rank 9, and the ranking](img/bdaman/certificate_ranks.png)
+
+- **SPECIAL** (rank 4): pick a custom part, then a course of 10 stages drawn at random, never repeating; a failed
+  stage is retried while tries remain. 45 stages are never picked (`$C2:AA91`). ![](img/bdaman/special_mode.png)
+- **SURVIVAL** (rank 5): pick one of six B-Daman, then stages 1 to 100 in order, one try each; the best run is saved.
+  At 100 the end screen reads マスター攻略王 and the menu cursor turns gold (shown by writing the count; the end screen
+  was reached by a scene jump). ![](img/bdaman/survival_mode.png) ![](img/bdaman/gold_cursor.png)
+- **????** (100 certificates ever): ten 10-stage levels with their own scores, saved to a fourth record. How it
+  differs from Normal was not worked out. ![The menu at rank 0, at rank 5, and with ????](img/bdaman/menu_entries.png)
+  ![](img/bdaman/question_mode.png)
+
+GameFAQs gives the music and Special for over 800 on each of the 10 levels (8000, rank 3, which changes nothing),
+silver, Special and Survival for clearing all 100 levels, and gold for 10000. No Normal ending scene was found: a
+certificate goes to the ranking; what follows it was not traced.
 
 ## Region and mouse checks
 
@@ -123,3 +170,5 @@ numbers, `$0DA4-$0DAD` results, `$0D87` tries used, `$0D85` tries setting.
 - Unused graphics, music and stage data: no coverage sweep was run, and the button-code search covered only
   held-pad compares, so a hidden title or menu code isn't ruled out.
 - Level 10 on a fresh save played its stages in a shuffled order; not traced.
+- Any unlock earned by play; the ends of Special and ???? (scenes `$9D`, `$A2`); what ???? changes from Normal; BGM `16`
+  by ear.

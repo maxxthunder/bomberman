@@ -6,7 +6,7 @@
    "us",
    "eu"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "The master debug flag. The game clears it at start-up and nothing in any of the three ROMs can set it: a write trap from power-on through the title, file select, a stage, Game Over and Continue saw no write (US ROM), and seven button sets held at power-on did nothing. Held from the first frame, the boot, title and file select come up normally and the menu opens with buttons only. Run on the US and European ROMs. Tested as a held RAM write in BizHawk, not on a GameShark.",
   "section": "cheat",
@@ -21,7 +21,7 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "The debug flag on the Japanese ROM, whose menu carries the build tag DBG---1998/03/15-A where the others say MASTER ----- DEBUG. Tested as a held RAM write in BizHawk, not on a GameShark.",
   "section": "cheat",
@@ -148,7 +148,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). The game's main thread runs this menu whenever the game loop returns, and only Z + Start with the flag on makes it return. The Control Stick moves the cursor and changes values, A selects. TITLE TEST is an empty case, and MAP TEST loads a map without one of its data files: HUD on black.",
   "section": "debug",
@@ -160,7 +160,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 00-7F are playable maps and 80-BF cutscene and event maps. All 192 were loaded on the US ROM. Picture: map B3.",
   "section": "debug",
@@ -174,7 +174,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 1-4 start Planets 2-5; 5 is Planet 5 Garaden at map 7 of 7; 6 is Planet 6 Gossick with every stage at 5 and all 24 collectibles; 7 is Garaden with 23 of 24. 0 is a normal boot. All eight run on the US ROM, 1 and 6 on the other two. Picture: the file select after GAME START 6, and its boss stage.",
   "section": "debug",
@@ -186,7 +186,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 0 and 6-9 all play the control-room opening. The scenes were not watched to the end.",
   "section": "debug",
@@ -198,7 +198,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). A plays the number; music 5 and 23 and sound 101 were checked by recording the output, not by ear. The game's own Sound Test in Options lists BGM 00-31 and SE 001-127 by name.",
   "section": "debug"
@@ -209,7 +209,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). Opened on the US ROM; the rumble itself was not checked.",
   "section": "debug",
@@ -221,7 +221,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). SET MODE shows the object number, its NAME_ label, position, angle and three parameters; L cycles SET, RESET and SAVE MODE. SAVE MODE sends the list to a print routine that is empty in the released game, so it does nothing. Opened on the US ROM; the controls are from the code.",
   "section": "debug",
@@ -235,7 +235,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). L again goes to [LIGHT EDIT] and [FOG EDIT]; Start closes it. Opened on all three ROMs; the lines were changed on the US ROM. The lines have their own cards below.",
   "section": "debug",
@@ -249,7 +249,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). Ambient and diffuse colour and light direction; fog colour, range and far plane.",
   "section": "debug",
@@ -261,7 +261,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). Picture: mode 1 with the timer bar, and mode 2.",
   "section": "debug",
@@ -273,9 +273,9 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
-  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 8016E404 (Japan 8016E406). Each floor-type handler returns at once while it is set. Shown on map 0A's exit floor: the stage ends on the Clear Points tally without it and carries on with it (picture). Ice, conveyor and damage floors were not tested.",
+  "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 8016E404 (Japan 8016E406). Each floor-type handler returns at once while it is set. Shown on map 0A's exit floor: the stage ends on the Clear Points tally without it and carries on with it (picture). With it a current floor stops carrying Bomberman (map 19) and a lift column stops lifting him (map 45). Ice and damage floors were not tested.",
   "section": "debug",
   "img": "no_attribute.png"
  },
@@ -285,7 +285,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). 80177974, which each map sets for itself. On map 2B the far road is missing at 0 and 1 and drawn at 3 and 5 (picture: 0 and 3); four other maps showed no change. What each value means is not settled.",
   "section": "debug",
@@ -297,7 +297,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). ",
   "section": "debug",
@@ -309,7 +309,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "With the debug flag on (GameShark 8016E424 0001; Japan 8016E41B 0001). The same variable each map sets for itself. Held on map 02: 2 is the map's own view, 4 a close view from the far side, 6 a higher side view (picture: 4 and 6) and 7 a low view from outside; 0, 1, 8, 9 and 10 showed only sky.",
   "section": "debug",
@@ -321,9 +321,9 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
-  "note": "At a stage clear the game sets a save flag when all 24 collectible bits (the nn/24 counter on the pause screen) are held and every stage of the first five planets has a score of 5. The planet select then shows six planets once Garaden is cleared. On the US ROM the game set and saved the flag itself when the last missing stage was finished with a score of 5, played a short scene of the planets with no text, and drew Gossick after a power cycle; the finish and the score were forced, not played. Its third stage is listed as Vs.???? even once cleared. Picture: the same file without and with the flag.",
+  "note": "At a stage clear the game sets a save flag when all 24 collectible bits (the nn/24 counter on the pause screen) are held and every stage of the first five planets has a score of 5. The planet select then shows six planets once Garaden is cleared. On the US ROM the game set and saved the flag itself when the last missing stage was finished with a score of 5, played a short scene of the planets with no text, and drew Gossick after a power cycle; the finish and the score were forced, not played. Its third stage is listed as Vs.???? even once cleared. Picture: the same file without and with the flag. GameFAQs lists it as all the Other-Dimension bombs and five Gold Medals.",
   "section": "Secrets",
   "img": "gossick.png"
  },
@@ -333,9 +333,9 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
-  "note": "The Options screen counts the planets whose every stage has a score of 5: three open Slider Race, five Golden Bomber, all six Millian's Treasure Hunt. Shown on the US ROM by setting the scores on a save file: two planets give neither (picture, left), three and four give Slider Race, five add Golden Bomber and six add the Treasure Hunt.",
+  "note": "The Options screen counts the planets whose every stage has a score of 5: three open Slider Race, five Golden Bomber, all six Millian's Treasure Hunt. Shown on the US ROM by setting the scores on a save file: two planets give neither (picture, left), three and four give Slider Race, five add Golden Bomber and six add the Treasure Hunt. The planet result screen calls such a planet Bomber Hero · Gold and gives it a gold medal. Any five do for Golden Bomber: Gossick is only the sixth planet in the count, and three gold planets plus a gold Gossick do not give it. The Japanese ROM opens the Treasure Hunt on another rule: Gossick's three stages cleared at any rank, even with only four gold planets. GameFAQs gives Slider Race for 3 Gold Medals and the Treasure Hunt for 6, as here, but Golden Bomber for clearing Gossick's three stages; Golden Bomber did not appear with Gossick gold and only three other gold planets.",
   "section": "Secrets",
   "img": "options_2_3_5.png"
  },
@@ -388,6 +388,20 @@
   "img": "treasure_all.png"
  },
  {
+  "code": "Press Start 12 times, quickly, on the first screen after switching on",
+  "effect": "The file select gains a seventh entry, Bonus: a White Bomb mission of three stages",
+  "versions": [
+   "us",
+   "eu",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "The first screen is the HUDSON logo in Japan and the licence screen in Europe. The game counts Start presses there: 10 to 14 inside one second, with no pause of 7 frames or more, set a flag until the power goes off (read from the controller code, 8001DCEC). The file select then shows Bonus under Stereo (Japan: おまけ). Played on all three ROMs with the pad alone, one press every 5 frames: the entry appeared, also on a blank save, and A on it started the mission: \"Good work, White Bomb! Here's the next mission\", the Bomber Jet leaving, then stages on maps 2B, 49 and 54 and a Total Score. The three stages were ended with the debug finish, not played, and nothing is saved. Picture: Bonus selected on the US ROM, and the briefing. GameFAQs lists tapping Start rapidly while the intro plays; during the movie it did nothing, on the first screen it works.",
+  "section": "Button codes",
+  "img": "bonus_code.png"
+ },
+ {
   "code": "Sound Test: hold C-Left or C-Right",
   "effect": "The band on the Sound Test stage turns",
   "versions": [
@@ -417,7 +431,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "emu",
   "note": "Nothing points to them: not the stage-select table, any map's exit list or any map number in the code. Loaded with MAP NUMBER. 7B's list is 24 balls and eight each of three other treasure objects. 7D is different: Bomberman on the Bomber Copter in Planet 3's red canyon. Picture: 71, 7B, 7C and 7E.",
   "section": "unused",
@@ -460,18 +474,6 @@
   "img": "maps_26_7d.png"
  },
  {
-  "code": "White Bomb mission",
-  "effect": "A briefing and three stages behind a seventh file-select entry that is never drawn",
-  "versions": [
-   "us"
-  ],
-  "status": "new",
-  "verified": "emu",
-  "note": "The file select builds seven entries and handles a seventh choice, but draws six, and the cursor wraps from Stereo back to Select. Choosing the seventh starts a mission of its own: \"Good work, White Bomb! Here's the next mission\", the Bomber Jet leaving, then stages on maps 2B, 49 and 54, which have no area picture or stage names. Shown on the US ROM by writing the menu's cursor value (80333424 = 6) once on the file select and pressing A; the game did the rest. Maps 49 and 54 and the closing scenes were not visited. Picture: the briefing, and the first stage.",
-  "section": "unused",
-  "img": "white_bomb_mission.png"
- },
- {
   "code": "Unused objects",
   "effect": "17 of the game's 652 objects are placed by no map and created by no code; one is a blue X crate",
   "versions": [
@@ -504,7 +506,7 @@
    "eu",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "static",
   "note": "Fixed-width strings such as NAME_ITMBOM, NAME_FLASH1, NAME_EVCRAFT_B1 and NAME_MAPWOOD2 (US ROM 1172F8). Also left in: \"sbrk : can not change data segment space allocation!\" and the editor's output lines.",
   "section": "unused"

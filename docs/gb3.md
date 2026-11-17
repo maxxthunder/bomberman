@@ -297,5 +297,5 @@ apart at `$D300` and copied to `$D200`; a decoded challenge room matched the RAM
   ![City 5 room 2 with its four switch flags set: the door open, T0](img/gb3/city5_room2.png)
   ![City stage 5 room 1: the view scrolling by itself](img/gb3/city5_autoscroll.png)
 - Challenge mode: the cleared branch (`$C480` = `$FF`) and どきどき's doors (cells `$32`/`$33`, rooms 120-123) weren't
-  reached; walking to はらはら's door wasn't done (the player was moved next to it); the room records' soft-block, item
-  and object parts aren't decoded.
+  reached; walking to はらはら's door wasn't done (the player was moved next to it): its corner is sealed by breakable blocks,
+  the room record's `$CC` objects, and four pad-only runs did not get there.

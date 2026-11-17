@@ -98,8 +98,17 @@ infrared receiver (`$50:6B44`); the random pick at `$02:631E` is dead code. All 
 were read in Blue: three write an entry, the stage rescue, this award (`$53:6712`) and `$08:58F0`, which stores only
 the player's own Charabom or a combining result (ids 20-25). So a cart alone can earn only its own side's legendary,
 and only from an infrared signal; the Pitch Area packet was not decoded. Shown on Blue and Red by writing `$C600` = 6
-and the player state `$C705` = `$13` once in area 1-01 and playing the minigame with the pad; the winning lane was
-found by retrying from savestates. Hikari, Yami and Ain were not run.
+and the player state `$C705` = `$13` once in area 1-01 and playing the minigame with the pad; the first runs
+found the winning lane by retrying from savestates. The same was then run on Hikari and Ain (Shardra) and Yami (Ox
+Battra), each roster entry written by `$53:6712`. The prize lane comes from one of 8 layouts picked by `$C1D3 & 7`;
+the same boot and inputs give the same board, and one Blue run was typed straight through with no savestates.
+![Yami and Ain](img/max/legendary_jp.png)
+
+What starts the receiver is map tile `$5A`, a pink diamond floor panel. A scan of all 100 stages on Blue found it in
+eight, one each, all stages both sides have: 1-14, 2-12, 3-01, 3-09, 4-11, 4-15, 5-01 and 5-09. Standing on it asks
+"Start remote control input?" and then "Turn the remote control to the Game Boy and Press any button!". Shown in
+3-01, reached by a warp write and with the player placed beside the panel. Whether another console's infrared
+would also be read was not tested. ![](img/max/ir_panel.png) ![](img/max/ir_waiting.png)
 ![The By Chance Game, and Shardra rescued in Blue](img/max/legendary_shardra.png)
 ![Ox Battra rescued in Red, and in the roster](img/max/legendary_ox_battra.png)
 
@@ -138,6 +147,13 @@ Red and Yami 20 others, and Ain has all 100 (read from cart RAM after a new game
 Ain and in retail Hikari and Blue, and 1-02 in Yami. Nothing was found that sets a stage's first byte in play, so a
 retail cart alone has no way to the other side's 20 stages or to the full ending; a whole-table copy by Pitch Area
 was not ruled out. ![1-09 in Hikari, 1-02 in Yami](img/max/other_side_stages.png)
+
+With GameShark `800140A0` on from power-on, retail Hikari was played with the pad alone into 1-09: the caged Pommy
+in 1-01 is freed with a bomb and touched, the game then builds exits to 1-03 and to 1-09, and walking onto the
+second loads S1-09 with its own objective. Saving keeps 1-09 open but not cleared. Loaded again without the code,
+the area map sat on 1-01 and no direction moved the cursor, so 1-09 was not offered there; that was seen on one
+file, where 1-01 is the only cleared area. ![The two exits, and 1-09 loaded](img/max/retail_exit.png)
+![1-09's objective, and the area map after reloading](img/max/retail_exit_after.png)
 
 ## Cheats (★ New, `tools/max/test_cheats.lua`)
 
@@ -257,11 +273,10 @@ Every joypad test, the mode table and the debug text in bank `$0A` are the same 
 
 ## Open
 
-- A retail cart walked through an exit opened by a GameShark write to the stage table.
-- The By Chance award in Hikari, Yami and Ain, a clean run of it without retries, and which stage object offers the
-  infrared read.
+- The exit walk on Blue, and a control clear of 1-01 without the code.
+- An infrared panel reached by play from a new game, and what signal the receiver accepts.
 - Pitch Area's infrared packet format (needs a second console).
-- Battle Game with a saved Charabom, and the Charabom battles in a coverage run. The roster's 30 slots fill `$A110`-`$A1FF` up to the
+- Combining Charaboms, and the Charabom battles in a coverage run. The roster's 30 slots fill `$A110`-`$A1FF` up to the
   first save file, so there is no room for more; computer rivals (`$08:4C24`) use ids 0-25 only.
 
 ## Battle against the computer (★ New)
@@ -274,4 +289,10 @@ sets `$C4E3` = 1 after ten right presses; on A, `$08:4D3F` goes to scene `$15` a
 `$08:4C24`, indexed by a frame counter. A wrong press sets `$C4E3` = `$FF`, which locks the code out until the screen
 is opened again. Battle Game needs a saved file (the title skips it on a fresh save). The table is the same in all five
 versions, and the code works in all five: typed in Mesen through to Round 1 Start! (Japan: 1かいせんめ かいし!). ![Battle against the computer](img/max/battle_vs_computer.png)
+
+A whole fight from a real save, on Hikari with no cheat: Battle Game offers Battle, Combine and Data Load. Data Load
+takes a save file, Battle opens the Charabom card, then three of six tactics are picked, then the OK? screen, where
+the code was typed. Pommy Lv 3 met Shell Lv 4: a VS screen with both sides' tactics, rounds with named attacks and
+damage lines, "Pommy wins!" and a win screen. Only A was pressed during the fight, and the roster entry was the same
+afterwards. ![](img/max/battle_won_2.png) ![](img/max/battle_won.png)
 

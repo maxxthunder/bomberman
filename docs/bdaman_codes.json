@@ -8,9 +8,9 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
-  "note": "One ROM byte, $80:8077 (file offset $8077: 00 → 01), is the switch; the game reads it at $C0:8206, $C0:8493, $C0:8FF1 and $C0:90F0. Mesen's cheat engine, same inputs and frame: without the code the boot carries on to the JBA logo, with it the scene select opens. DF65-7FAD, the same byte in bank $C0, does not work: the reads go through bank $80.",
+  "note": "One ROM byte, $80:8077 (file offset $8077: 00 → 01), is the switch; the game reads it at $C0:8206, $C0:8493, $C0:8FF1 and $C0:90F0. Mesen's cheat engine, same inputs and frame: without the code the boot carries on to the JBA logo, with it the scene select opens. DF65-7FAD, the same byte in bank $C0, does not work: the reads go through bank $80. The same debug flag is known through a Pro Action Replay code.",
   "section": "cheat",
   "img": "cheat_df65-4fad.png"
  },
@@ -45,15 +45,63 @@
   "img": "cheat_7e0d8306.png"
  },
  {
-  "code": "Reach rank 6 or higher",
+  "code": "Reach rank 6, ハイパービーダー",
   "effect": "トライ on the Option screen can be set to ∞, unlimited tries on each stage",
   "versions": [
    "jp"
   ],
   "status": "new",
   "verified": "static",
-  "note": "The Option screen lets the tries setting reach 3 (∞) only when the best-rank byte $0D83 is 6 or more ($C2:B020, $C2:B04A); the rank is raised at $C1:B166 and saved. Which rank name is number 6 wasn't worked out.",
+  "note": "The Option screen lets the tries setting reach 3 (∞) only when the best-rank byte $0D83 is 6 or more ($C2:B020, $C2:B04A); the rank is raised at $C1:B166 and saved. Rank 6 is ハイパービーダー: a total of 9250 or more over the 100 stages' best scores (see the certificate card).",
   "section": "Secrets"
+ },
+ {
+  "code": "Certificate total 8500 or more",
+  "effect": "New title music, a bronze Bomberman on the title, and a SPECIAL entry on the menu",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Every 10-stage Normal level ends with a certificate. Its rank comes from the total of the file's best scores on all 100 stages, each at most 100: 3000, 6000, 8000, 8500, 9000, 9250, 9500, 9800 and 10000 are ranks 1 to 9 ($C1:BB22, table $C1:BB4A). The best rank over all files is saved ($30:628D) and the title and menu read it: at rank 4 (8500) the title plays BGM 16 instead of 01, the Bomberman turns bronze, and SPECIAL appears after OPTION. Shown by writing the save and resetting, and the edge by writing the stage scores before a certificate: 8499 gave rank 3, 8500 rank 4. GameFAQs lists the music and Special for over 800 on each of the 10 levels; that is 8000 in all, rank 3, which changes nothing. The music number was logged, not listened to. Picture: the certificates for 8499 and 8500.",
+  "section": "Secrets",
+  "img": "certificate_edge.png"
+ },
+ {
+  "code": "Certificate total 9000, 9250 and 10000",
+  "effect": "SURVIVAL joins the menu and the title Bomberman turns silver, then gets a red ball, then turns gold",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "mesen",
+  "note": "Rank 5 (9000): silver Bomberman with a green ball and SURVIVAL after SPECIAL. Rank 6 (9250): a red ball. Rank 9 (10000, every stage at 100): a gold Bomberman, the certificate マスター攻略王. Nothing checks that every stage was cleared, only the total, so about 90 stages at full score are needed. A certificate with all 100 scores written at 100 saved rank 9, and after a reset the title showed the gold Bomberman with SPECIAL and SURVIVAL on the menu. GameFAQs gives silver, Special and Survival for clearing all 100 levels and gold for 10000. Picture: ranks 6 and 9.",
+  "section": "Secrets",
+  "img": "title_ranks_2.png"
+ },
+ {
+  "code": "Win 100 certificates",
+  "effect": "A fourth entry, ????, under NEW GAME: ten 10-stage levels with their own scores and a save record of their own",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "It appears when the count of certificates ever awarded ($30:6347, across all files) reaches 100. It opens a B-Daman select, a level select with ten level scores, then a 10-stage level, saved to a fourth record. How it differs from Normal was not worked out. Shown by writing the count. Picture: the menu with ????, and its level select.",
+  "section": "Secrets",
+  "img": "menu_entries.png"
+ },
+ {
+  "code": "Clear 100 stages in a row in Survival",
+  "effect": "The menu's cursor ball turns gold",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "mesen",
+  "note": "Survival plays stages 1 to 100 in order with one try each and keeps the best run ($30:6346). At 100 the end screen reads マスター攻略王, \"すごいぞっ！キミも攻略王だっ！おめでとう！\", and the menu cursor becomes a gold ball. Shown by writing the count; the end screen was reached by jumping to it, not by playing 100 stages.",
+  "section": "Secrets",
+  "img": "gold_cursor.png"
  },
  {
   "code": "DF65-4FAD, then Start + Select on the Hudson logo, then Start + Select again",
@@ -61,7 +109,7 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "Start + Select on the Hudson logo sets $1F5A (the game as sold does this too, but nothing reads it without the debug byte). After that, Start + Select held in any scene opens the list ($83:8000). A +1, B -1, X +$10, Y -$10, Start runs the scene, L and R open two of the tools; Start + Select inside a scene comes back. Names are in half-width kana (table $83:B19B).",
   "section": "debug",
@@ -73,7 +121,7 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "$83:A0AC. Rows like 01 00 0030 FE50 08 under NO = 00, COUNT = 07.",
   "section": "debug",
@@ -85,7 +133,7 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "$83:994A.",
   "section": "debug",
@@ -97,7 +145,7 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "$83:8571. FLAG0-7 are $1F4E-$1F55 and DATAnn the word at $1F56 + 2n. The D-pad moves, A raises and B lowers a cell, Start leaves. FLAG0 bit 0 adds a MOVE TYPE readout to the stage editor; FLAG2 bit 0 swaps the Battle arena for Battle Stage 2.",
   "section": "debug",
@@ -109,7 +157,7 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "$83:828B. The Option screen has its own BGM and SE test.",
   "section": "debug",
@@ -121,7 +169,7 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "$83:844B. Rows INIT, END, ADD, KEEP, SUB, HOLD and H ADD.",
   "section": "debug",
@@ -136,7 +184,7 @@
   "versions": [
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "FLAG0 of the debug data page, read when EDIT starts ($C2:8F94). Written to RAM in Mesen, not through the cheat engine.",
   "section": "debug",

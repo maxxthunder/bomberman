@@ -1,0 +1,297 @@
+[
+ {
+  "code": "Hold Start while switching on",
+  "effect": "An \"Erase Game Pak Memory\" screen comes up before the logos",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The start-up code tests controller 1 for Start held (80037678) and loads the erase screen first. Played on both ROMs with Start held from the first frame; the answer was left on No. Picture: US, Japan.",
+  "section": "Button codes",
+  "img": "erase.png"
+ },
+ {
+  "code": "Z + A on Battle Character Select",
+  "effect": "A human player picks one of the 15 computer characters instead of Bomberman",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "It only works once the save has it unlocked: the game sets that when all five Challenge levels reach 5, and Options then shows the instruction itself (see the Options card). Hold Z and confirm a MAN slot with A. Shown on both ROMs by setting the save bit, not by earning it: without the bit Z+A just picks Bomberman. A clean save shows 3 of the 15 characters and 12 silhouettes; all 15 showed with the five Challenge levels at 5. Picture: the computer grid open for player 1, and player 1 as a computer character. GameFAQs lists it, with a Red Cup in each of the five Battle types.",
+  "section": "Button codes",
+  "img": "com_characters.png"
+ },
+ {
+  "code": "Reach Challenge level 3 in a Battle type",
+  "effect": "The next Battle type opens: Survival, then Battle Royal, King & Knights, Key Trial and Score Attack",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "A clean save has Survival only. Each type keeps a Challenge level from 0 to 5 in the save, and a type opens when the one before it is at 3 or more; level 2 opens nothing. The rule is read from the Battle setup program; shown on both ROMs by writing the levels. Picture: a clean save, and all five open. GameFAQs lists it as beating the 3-win match.",
+  "section": "Secrets",
+  "img": "battle_types.png"
+ },
+ {
+  "code": "Options: the two ??? lines",
+  "effect": "The first becomes a line reading BGM 00; the second becomes the instruction for the Z + A code",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The BGM line, read as a music test, comes with one of two save bits set at the end of the story; the number did not change with the D-pad in the one try made, and no track was heard. The second line appears when all five Challenge levels are at 5 and reads \"Press Z+A on the Battle Character Select screen to use COM characters!\". Shown on both ROMs by setting the bits. Picture: a clean save, and both lines open.",
+  "section": "Secrets",
+  "img": "options.png"
+ },
+ {
+  "code": "Finish the story",
+  "effect": "The title screen changes: a blue sky replaces the starfield, or the little character beside PUSH START takes another form",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The program that runs at the end of the story sets one of two save bits, chosen by three event flags; that is read from the code as two endings, and neither was played. One bit gives the sky; either makes the title pick the character's form at random from 14, with a rare 15th and 16th. Shown on the US ROM by setting each bit; the random pick gave the same form every run because each run started from the same state. Picture: the first bit alone, and the second alone.",
+  "section": "Secrets",
+  "img": "title_each.png"
+ },
+ {
+  "code": "Merchant Ship Frontier: Battle Map A, B, C and D",
+  "effect": "Four more Battle stages, 200G each: Abandoned Mine, Desert Shrine, Crystal Palace and Rope Bridge",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The shop opens with R on World Select, the screen between worlds. The etc tab sells the four maps from the first visit; buying one sets its save bit and saves at once. Bought with the controller on the US ROM with the money written: Map A set bit 08 and Map C bit 20. B and D are from the shop's table. Picture: Map A for sale, and after buying it.",
+  "section": "Secrets",
+  "img": "shop_battle_map.png"
+ },
+ {
+  "code": "Merchant Ship Frontier: buy all 32 parts",
+  "effect": "Four Cowboy parts come into stock, and buying all four changes the salesman for good",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Each part bought sets a flag; when all 32 regular parts are owned the Cowboy Hat, Vest, Gloves and Boots appear, and once all four are bought the salesman becomes a bald man in green overalls, also after leaving and coming back. On the US ROM the 32 part flags and the money were written; the four Cowboy parts were then bought with the controller. Picture: the default salesman, and the moment the fourth is bought. GameFAQs lists it.",
+  "section": "Secrets",
+  "img": "shop_salesman.png"
+ },
+ {
+  "code": "D00A0171 0030 + 800ABD4B 00xx + D00A0171 0030 + 800ABD4F 0000 + D00A0171 0030 + 800ABD43 0001",
+  "effect": "Story: hold L + R to warp to any map, test maps 808 and 809 included",
+  "versions": [
+   "us"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "Write the map number to 800ABD48 (map numbers are 0800-08FF; the high byte is already 08), the entry point to 800ABD4C, then set bit 0 of 800ABD40, and the story loop loads it. 809 is a flat blue and white checkerboard and 808 a purple one with a slope; no list in the game names either. A second reference page gives this code with the two maps the other way round. Japan: 800A9CBB, 800A9CBF, 800A9CB3, with the condition D009E111 0030; the page's D009E0E0 does not react to L+R. Shown on both ROMs. Picture: 809 and 808.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "D00A0171 0030 + 800ABD4B 00xx + D00A0171 0030 + 800ABD4F 0000 + D00A0171 0030 + 800ABD43 0001"
+  },
+  "img": "test_maps.png"
+ },
+ {
+  "code": "D009E111 0030 + 800A9CBB 00xx + D009E111 0030 + 800A9CBF 0000 + D009E111 0030 + 800A9CB3 0001",
+  "effect": "Japan: hold L + R in Story Mode to warp to map 08xx",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The Japanese form of the warp, with the controller condition at the right address. Shown with 09. Picture: map 809.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "D009E111 0030 + 800A9CBB 00xx + D009E111 0030 + 800A9CBF 0000 + D009E111 0030 + 800A9CB3 0001"
+  },
+  "img": "test_map_jp.png"
+ },
+ {
+  "code": "PC Engine System Card",
+  "effect": "The last 64 KB of the PC Engine CD System Card 3.0, with Hudson's 1988 staff list, inside the asset archive",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "Asset slot 2 (ROM 68B8C8) matches the System Card's last 64 KB: all eight banks in the US ROM, seven in Japan's. At ROM 69B3A9 is the card's copyright notice and staff list (\"PRODUCER 中本伸一\", \"1988 Sep. Written by TAKAKI KOBAYASHI\"). It appeared in none of 35 memory dumps; no code was found that loads it.",
+  "section": "unused"
+ },
+ {
+  "code": "Tutorial 2",
+  "effect": "A second lesson on the Tutorial menu, locked on a new save",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The US ROM adds a Tutorial entry to the main menu; Japan has none. Tutorial 2 is opened by a save bit the first story area sets; where in that area was not found, and it was still locked when play began. Shown by setting the bit.",
+  "section": "Secrets",
+  "img": "tutorial_2.png"
+ },
+ {
+  "code": "800AC2A3 00FF",
+  "effect": "Everything the unlock byte holds: the BGM line, the Z + A code, the title changes, the four extra Battle stages and Tutorial 2",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "One byte of the save: bit 01 the BGM line and sky title, 02 Z + A and its Options line, 04 the title character, 08 Abandoned Mine, 10 Desert Shrine, 20 Crystal Palace, 40 Rope Bridge, 80 Tutorial 2. Switch the code on after the title screen appears: held from the moment of power-on, the game stayed on a black screen in the emulator (seen with this code's byte and with the story codes).",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AC2A3 00FF"
+  },
+  "img": "gs_unlock_all.png"
+ },
+ {
+  "code": "800AA103 0078",
+  "effect": "Japan: the four extra Battle stages",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The same byte on the Japanese ROM, which has no Tutorial bit; 007F adds the BGM line, the Z + A code and the title changes. Also run with 02 (the Z + A grid) and 03 (both Options lines). Picture: the eighth stage in the list. Switch the code on after the title screen appears: held from the moment of power-on, the game stayed on a black screen in the emulator (seen with this code's byte and with the story codes).",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AA103 0078"
+  },
+  "img": "gs_stages_jp.png"
+ },
+ {
+  "code": "800AC2A4 0003 + 800AC2A5 0003 + 800AC2A6 0003 + 800AC2A7 0003",
+  "effect": "All five Battle types are open",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The Challenge levels of Survival, Battle Royal, King & Knights and Key Trial, each opening the next type at 3. Write 0005 for five trophies. Japan: 800AA104 to 800AA107. Switch the code on after the title screen appears: held from the moment of power-on, the game stayed on a black screen in the emulator (seen with this code's byte and with the story codes).",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AC2A4 0003 + 800AC2A5 0003 + 800AC2A6 0003 + 800AC2A7 0003"
+  },
+  "img": "gs_battle_types.png"
+ },
+ {
+  "code": "800AA104 0003 + 800AA105 0003 + 800AA106 0003 + 800AA107 0003",
+  "effect": "Japan: all five Battle types are open",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The same four Challenge levels on the Japanese ROM. Switch the code on after the title screen appears: held from the moment of power-on, the game stayed on a black screen in the emulator (seen with this code's byte and with the story codes).",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AA104 0003 + 800AA105 0003 + 800AA106 0003 + 800AA107 0003"
+  },
+  "img": "gs_battle_types_jp.png"
+ },
+ {
+  "code": "810AD75E 0005 + 800AD733 0005 + 800AD737 0008 + 800AD73B 0004 + 810ABD52 03E7",
+  "effect": "Story: 5 hearts of health, fire 5, 8 bombs, lightning bombs and 999 money",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Player 1's health, fire level, bomb count and bomb element, and the money. Held together for 500 frames in the first area while bombing. Player 2's block is 3C higher. Japan, read from the code and not run: 810AB5BE, 800AB593, 800AB597, 800AB59B, 810A9CC2. Picture: before and with the codes on. Switch the code on after the title screen appears: held from the moment of power-on, the game stayed on a black screen in the emulator (seen with this code's byte and with the story codes).",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "810AD75E 0005 + 800AD733 0005 + 800AD737 0008 + 800AD73B 0004 + 810ABD52 03E7"
+  },
+  "img": "gs_story.png"
+ },
+ {
+  "code": "810AD75E 0008 + 810AD762 0008",
+  "effect": "Story: 8 hearts",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Health and maximum hearts. Japan, not run: 810AB5BE and 810AB5C2. Switch the code on after the title screen appears: held from the moment of power-on, the game stayed on a black screen in the emulator (seen with this code's byte and with the story codes).",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "810AD75E 0008 + 810AD762 0008"
+  },
+  "img": "gs_hearts.png"
+ },
+ {
+  "code": "800AD73B 0001",
+  "effect": "Story: ice bombs",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The bomb element: 0 fire, 1 ice, 2 wind, 3 earth, 4 lightning, 5 light, 6 dark. The names are from the HUD icon and the bomb's colour. Japan, not run: 800AB59B. Switch the code on after the title screen appears: held from the moment of power-on, the game stayed on a black screen in the emulator (seen with this code's byte and with the story codes).",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "800AD73B 0001"
+  },
+  "img": "gs_element.png"
+ },
+ {
+  "code": "Placeholder messages",
+  "effect": "Developer notes left in two event files: \"[Temporary Message] In this pattern, the jewels are put in left and right.\"",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Event files 2655 and 2656, beside the real jewel-pedestal events, in both ROMs: \"Right and left patterns are under construction.\", \"The center and center-left patterns haven't been made. Do you want to make one?\", \"The elevator sound effect in the event file has been deleted.\" Read from the text; whether any map still calls them was not traced.",
+  "section": "unused"
+ },
+ {
+  "code": "Japanese text in the US ROM",
+  "effect": "Ten event files and a menu block were never translated",
+  "versions": [
+   "us"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "Event files 3090, 3091, 3094-3097, 3110-3112 and 3119 (3119 is the Japanese twin of 3117, \"The power's off!\"), and a Japanese main-menu block in string file 2030. Whether the game can show them was not tested.",
+  "section": "unused"
+ },
+ {
+  "code": "Debug print labels",
+  "effect": "\"Castle=%d\", \"KingWarp=%d\", \"RESKEY2=%d\" and other labels for a debug print routine that is now empty",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "The routine at 80000FA0 stores its arguments and returns. Its strings are still in the main program with the engine's error texts, such as \"Process : Heap or stack broken\".",
+  "section": "unused"
+ },
+ {
+  "code": "US and Japan",
+  "effect": "The US ROM adds a Tutorial entry to the main menu and a SKIP DEMO line to Options; the title, logos and credit differ",
+  "versions": [
+   "us",
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Japan is Baku Bomberman 2, (c)1999, \"Baku2 Team Presents\"; the US ROM opens on a Vatical logo and is (c)2000. Build stamps: \"SEP 06 19:48:41\" and \"MAR 16 15:58:02\". Picture: Japan's four-entry main menu.",
+  "section": "region",
+  "img": "menu_jp.png"
+ }
+]

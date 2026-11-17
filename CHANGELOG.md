@@ -2,6 +2,26 @@
 
 Changes to the [codes page and password generator](https://maxxthunder.github.io/bomberman/).
 
+## 2.10.0 (2026-11-17)
+- New game: Bomberman 64: The Second Attack!. A Z + A code for playing as the computer's characters, a map warp
+  with two test maps, the shop that sells the four extra Battle stages and the Cowboy parts that change its
+  salesman, the Battle-type unlock rule, GameShark codes, and developers' placeholder messages.
+- New game: Bomberman 64 (Japan, 2001). A code in Bomberman Park that opens everything, the attractions played from
+  the High Score page, a debug boot menu nothing loads, Panic Bomber X lettering, and text left over from
+  Bomberman Land.
+- Bomberman Hero: a Start-button code on the first screen opens a hidden Bonus entry, a three-stage White Bomb
+  mission; Golden Bomber needs any five gold planets; Japan's Treasure Hunt rule.
+- Bomberman 64: the Gold set needs a Hard file; Green Garden stage 1 cleared with the controller alone; an earlier
+  look for the Battle stage Up and Down; Spellmaker's unused card voices; Europe's four-hour limit.
+- Bomberman Quest: the Chaos Bomber beaten and the true ending; the second and third hidden duels won; the unused
+  fourth fighter is the dancer, who needs only the Chaos Bomber.
+- Bomberman B-Daman: the certificate ranks and what they open (title colours, Special, Survival and a hidden ????
+  mode).
+- Bomberman Max: a retail cart played into the other version's stages, the infrared panel that starts the legendary
+  Charabom minigame, and a full Charabom battle from a save.
+- Cards that the saved reference pages already list are marked Known on the Bomberman 64, Second Attack, 2001
+  Bomberman 64, Hero, Quest and B-Daman pages.
+
 ## 2.9.1 (2026-11-16)
 - A new icon for the Nintendo 64 games: the three-grip controller.
 

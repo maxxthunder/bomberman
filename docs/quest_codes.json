@@ -149,7 +149,7 @@
    "us",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "Left and Right change the set, B goes back. Picture: sets 0 and 1.",
   "section": "debug",
@@ -162,7 +162,7 @@
    "us",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "Up and Down pick the BGM or SE line, Left and Right the number, A plays, B goes back. A \"B: STOP\" line is in the ROM but is not drawn, and there is no stop key.",
   "section": "debug",
@@ -175,7 +175,7 @@
    "us",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "Up and Down pick the channel, Left and Right the level (0-$1F), A resets it, B goes back. The swatch only shows on a Game Boy Color.",
   "section": "debug",
@@ -188,7 +188,7 @@
    "us",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
   "note": "Sets the ending selector to 3: \"After an epic battle, Bomberman defeats the mighty Chaos Bomber!\", then the staff roll. Select on the test menu goes back to the title.",
   "section": "debug",
@@ -203,7 +203,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The check runs when Bomberman answers Leave at the Bomber Shuttle with the four commanders beaten (22:4205): it tests the captured bit of monster flags 1-51. All set: \"Bomberman's true enemy... The Chaos Bomber!\" and his fight in an arena of its own. Otherwise the shuttle leaves, the staff roll plays and the game says \"Next time, try to capture all the monsters?\". Played on both ROMs by setting the flags and walking to the shuttle; the fight was started but not won, and the last ending was triggered by removing the boss by hand. Picture: the normal ending and the Chaos Bomber reveal.",
+  "note": "The check runs when Bomberman answers Leave at the Bomber Shuttle with the four commanders beaten (22:4205): it tests the captured bit of monster flags 1-51. All set: \"Bomberman's true enemy... The Chaos Bomber!\" and his fight in an arena of its own. Otherwise the shuttle leaves, the staff roll plays and the game says \"Next time, try to capture all the monsters?\". Played on both ROMs by setting the flags and walking to the shuttle; the Chaos Bomber was then beaten with the pad on the US ROM. He has two forms of 10 hits each, and only the lingering burst of the Flak Bomb hurts him. The win needed savestate rewinds whenever Bomberman was hit, so it shows the fight can be won with that kit (10 hearts, Leather Armor, Flak Bomb at firepower 5, three healing items, all set beforehand), not that it is easy. The ending that follows, \"After an epic battle, Bomberman defeats the mighty Chaos Bomber!\", saves the game by itself. Picture: the normal ending and the Chaos Bomber reveal.",
   "section": "Secrets",
   "img": "endings.png"
  },
@@ -213,9 +213,9 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
-  "note": "The first, Mami, is in the Water Commander's room once the Water and Electro commanders are beaten; the second is in the Electro Commander's room once three commanders and Mami are beaten; the third in the Hurricane Commander's room once all four and the second are. The text never names the second and third. All three were met on the US ROM by setting the beaten flags. Mami's duel was won on the US ROM with the pad alone, starting from 3 hearts, with the commander flags and a Normal Bomb at firepower 5 set beforehand: max HP rose to 4 hearts and the second character appeared. She never hurts Bomberman: she stuns with the Hammer, kicks bombs away and digs. Losing to her is an ordinary Game Over. The other two duels were not fought. Picture: Mami's greeting, and her duel.",
+  "note": "The first, Mami, is in the Water Commander's room once the Water and Electro commanders are beaten; the second is in the Electro Commander's room once three commanders and Mami are beaten; the third in the Hurricane Commander's room once all four and the second are. The text never names the second and third. All three were met on the US ROM by setting the beaten flags. Mami's duel was won on the US ROM with the pad alone, starting from 3 hearts, with the commander flags and a Normal Bomb at firepower 5 set beforehand: max HP rose to 4 hearts and the second character appeared. She never hurts Bomberman: she stuns with the Hammer, kicks bombs away and digs. Losing to her is an ordinary Game Over. The second and third were then won the same way with Gold Armor on, no rewinding; unlike Mami, their bombs hurt. The third win took max HP from 9 to 10 hearts. No talk follows a win and none of the three enters the Monsters book. Picture: Mami's greeting, and her duel. GameFAQs names the second and third Lewysia and Deral, after their Saturn Bomberman characters.",
   "section": "Secrets",
   "img": "hidden_mami.png"
  },
@@ -225,11 +225,11 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "mesen",
-  "note": "An object on the town's shuttle screen that appears only when the Chaos Bomber's flag has its captured bit. Shown on the US ROM by setting the bit.",
+  "note": "An object on the town's shuttle screen (11:6D4E) that tests only the Chaos Bomber's captured bit; nothing in the game reads the three hidden characters' flags. Shown on the US ROM by setting flags: with the Chaos Bomber beaten and none of the hidden characters she is there, and with all three beaten but not the Chaos Bomber she is not. Picture: the first case, and the second. GameFAQs names her Pampu and says all three hidden characters must be beaten as well; she appeared with none of them beaten.",
   "section": "Secrets",
-  "img": "dancer.png"
+  "img": "dancer_rule.png"
  },
  {
   "code": "Monsters book: hold Select",
@@ -275,13 +275,13 @@
  },
  {
   "code": "A fourth hidden fighter",
-  "effect": "A complete duel kit and sprite set that no screen uses",
+  "effect": "The dancer as a fourth duel opponent: a complete kit and sprite set that no screen uses",
   "versions": [
    "us"
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "The duel code has four fighters; only three are placed and there is no fourth greeting. Shown by changing one byte of a copy of the US ROM so Mami's room loads the fourth (file offset 48BE8, 02 to 03). The sprites are at 2E:4680. The kit is 10 hearts, Power Gloves, Rubber Bomb and Silver Armor.",
+  "note": "The duel code has four fighters; only three are placed and there is no fourth greeting. The dancer's seven sprite tiles above the shuttle are byte-identical to tiles of this fighter's 38-tile set, so the fourth fighter is the dancer. A second reference page notes her full sprite set; the duel kit is not in it. Shown by changing one byte of a copy of the US ROM so Mami's room loads the fourth (file offset 48BE8, 02 to 03). The sprites are at 2E:4680. The kit is 10 hearts, Power Gloves, Rubber Bomb and Silver Armor.",
   "section": "unused",
   "img": "hidden_fourth.png"
  },
@@ -293,7 +293,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "From the sound test's lists. No code, screen music byte, monster-talk table or dance table asks for these BGM ids, or for SE 9E, A5, A8, BE, BF, C1, C2, C9, D0, D1, D4, D7 and DB. The four tracks were played in the sound test with every sound-chip write logged: each is a real piece unlike any other id. 81 and 9F are full four-channel pieces still playing after 40 seconds, E0 ends after about 16 seconds, and E1, about 38 seconds, opens with the same 65 notes as F0. The effects were not played.",
+  "note": "From the sound test's lists. No code, screen music byte, monster-talk table or dance table asks for these BGM ids, or for SE 9E, A5, A8, BE, BF, C1, C2, C9, D0, D1, D4, D7 and DB. The four tracks were played in the sound test with every sound-chip write logged: each is a real piece unlike any other id. 81 and 9F are full four-channel pieces still playing after 40 seconds, E0 ends after about 16 seconds, and E1, about 38 seconds, opens with the same 65 notes as F0. The thirteen effects were logged the same way: all are real and none matches another effect.",
   "section": "unused"
  },
  {
@@ -316,7 +316,7 @@
   ],
   "status": "new",
   "verified": "mesen",
-  "note": "A town object picks one of three short talks by a parameter 0-2 (table 11:54F5), and no screen in either ROM uses those parameters. Shown by changing one byte of a copy of the US ROM (file offset 4877F), which puts each character in Peace Town: \"There you are! I've been looking for you!\" Picture: Mami in town, and her talk.",
+  "note": "A town object picks one of three short talks by a parameter 0-2 (table 11:54F5), and no screen in either ROM uses those parameters. Shown by changing one byte of a copy of the US ROM (file offset 4877F), which puts each character in Peace Town: \"There you are! I've been looking for you!\" Nothing follows the talk: play goes on and A repeats it. Picture: Mami in town, and her talk.",
   "section": "unused",
   "img": "town_mami.png"
  },
@@ -337,7 +337,7 @@
   "versions": [
    "us"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "static",
   "note": "The border routine (00:19FC) has two borders; the second is called from one place, 08:66DE, after the handshake and only on Super Game Boy hardware, so it needs a Super Game Boy with a link port. Shown here by pointing the boot's border at it in a patched copy of the US ROM, not by a real link battle. Picture: the normal border and the battle border.",
   "section": "Secrets",
@@ -350,7 +350,7 @@
    "us",
    "jp"
   ],
-  "status": "new",
+  "status": "known",
   "verified": "static",
   "note": "Bank $27 strings with no reference: LOAD =, STAGE=, ENEMY=, A (BG_PCG), B (SPR_CHR), START (SOUND TEST), SPR NO., PCG NO., UP.DN PCG_CHENG, LF.RH SPR_CHENG and B: STOP. The menu's third screen slot is a null pointer.",
   "section": "unused"

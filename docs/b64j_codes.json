@@ -1,0 +1,218 @@
+[
+ {
+  "code": "Bomberman Park: L + R under the right welcome arch, then L + R under the left one",
+  "effect": "Everything opens until the power goes off: all 26 attractions, both hidden Battle stages, Extra-large SameGame and the extra piece sets",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Walk up the plaza from the Park entrance to the three arches that say welcome. Under the right-hand arch stand one step in and against its left wall, and press L and R together with nothing else held; then do the same in the middle of the lane under the left-hand arch. A sound plays. The other order does nothing. Played with the controller: the flag was set, and the Attraction High Score page then listed all 26 attractions (see the High Score card). That it also opens the Battle stages, SameGame size and piece sets is read from the code, which asks the same flag for every unlock. It is not saved, but it lasted through save-and-quit back to the title. Picture: the two spots; Bomberman is hidden behind the arch in both.",
+  "section": "Button codes",
+  "img": "park_code.png"
+ },
+ {
+  "code": "Main menu: Start on High Score",
+  "effect": "The High Score pages open with the attractions playable: A on a line of the Attraction High Score page starts that attraction",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "A on High Score only shows the scores. On a new save every attraction line reads ?????? and A buzzes; an attraction is listed once it has been played in the Park, or all 26 at once after the Park code. Played with the controller, Park code included, as far as the full list; starting an attraction from it was shown with the code's flag written. Picture: a new save, and after the Park code.",
+  "section": "Button codes",
+  "img": "attractions.png"
+ },
+ {
+  "code": "Hold Start while switching on",
+  "effect": "A box asks whether to clear the save data",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The start-up code tests controller 1 for Start held (80209B30). The answer was left on No.",
+  "section": "Button codes",
+  "img": "clear_save.png"
+ },
+ {
+  "code": "SameGame: L or R",
+  "effect": "The bottom bar changes from pieces left and score to a count of each colour",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "While playing SameGame. Whether the manual mentions it is not known.",
+  "section": "Button codes",
+  "img": "samegame_counts.png"
+ },
+ {
+  "code": "Finish Bomberman Park",
+  "effect": "Two more Battle stages, and more piece sets for SameGame and Panic Bomber",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Finishing the Park sets six save bits at once and plays the staff roll; some of the same bits are also set by events inside the Park. The Battle stages are マガって ドッカン！ (arrows that bend the blast) and ベルコン アナあな！ (holes and conveyor belts). The rule is read from the code and the effect shown by setting the bits; the Park was not finished by play. Picture: the two stages.",
+  "section": "Secrets",
+  "img": "battle_stages.png"
+ },
+ {
+  "code": "SameGame: beat the starting high score on all three sizes",
+  "effect": "A fourth size opens: Extra-large SameGame",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The starting scores are 150, 300 and 600. Read from the code; shown by setting the save bit. Picture: the size list on a new save, and with the bit.",
+  "section": "Secrets",
+  "img": "samegame_sizes.png"
+ },
+ {
+  "code": "Piece sets",
+  "effect": "SameGame gains a star set and a letter set; Panic Bomber gains a Pommy set and a panel set",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "Two save bits for each game, set by Park events and by finishing the Park. The game counts the bits: one adds the first extra set and two add both. Shown by setting the bits. Picture: Panic Bomber's list on a new save, and with all bits.",
+  "section": "Secrets",
+  "img": "panic_pieces.png"
+ },
+ {
+  "code": "81240474 0001",
+  "effect": "Everything is open, as after the Park code",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The Park code's own flag. Picture: an attraction started from the High Score list with the code on. Switch the code on once the logos have started: held from the first frames after power-on, the game stayed on a black screen in the emulator.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "81240474 0001"
+  },
+  "img": "gs_open.png"
+ },
+ {
+  "code": "8123EBC0 FFFF + 8123EBC2 FFFF",
+  "effect": "All the saved unlocks: both Battle stages, Extra-large SameGame and every piece set",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "emu",
+  "note": "The unlock word of the save; a new game has 337F3FFF. Picture: SameGame's four sizes. Switch the code on once the logos have started: held from the first frames after power-on, the game stayed on a black screen in the emulator.",
+  "section": "cheat",
+  "devices": {
+   "GameShark": "8123EBC0 FFFF + 8123EBC2 FFFF"
+  },
+  "img": "gs_unlock_bits.png"
+ },
+ {
+  "code": "Debug boot menu",
+  "effect": "A three-line start-up menu that nothing loads: 00: Normal start, 01: Clear EEPROM, 02: Sound Test",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "emu",
+  "note": "It is still in the ROM as program 1B, but the game now starts with a fixed choice and no call asks for it. Shown by copying its table entry over an empty one and holding the game's state word at 4. Its three choices were not followed, because the code at that state throws the answer away. Picture: the first and third lines. Its three lines were known as text in the ROM.",
+  "section": "unused",
+  "img": "debug_menu.png"
+ },
+ {
+  "code": "Sound Test",
+  "effect": "The game still has a state for a sound test, but the program behind it is empty",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "State 4 loads program 1C, which is 0 bytes long; forcing the state gives a black screen. The debug menu's third line pointed here.",
+  "section": "unused"
+ },
+ {
+  "code": "Panic Bomber X",
+  "effect": "Title and high-score lettering for a Panic Bomber X, with a tumbling X in nine frames, that the game never draws",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "The title's texture holds three captions: ボンバーマン, ぱにっくボンバー✕ and ミニボンバーマンランド (Mini Bomberman Land, which looks like an earlier name for the Park). The high-score texture has Panic Bomber with a separate X. In play the title shows only the logo and the high-score page has no X. Rendered from the ROM's textures; whether the sprite tables still point at them was not settled. Picture: the title texture, enlarged.",
+  "section": "unused",
+  "img": "panic_bomber_x.png"
+ },
+ {
+  "code": "Bomberman Land text",
+  "effect": "Story, boss and attraction text from the PlayStation game Bomberman Land, which this game has no use for",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "The Dark Rose, Dark Doll, Dark Piece, Dark Witch and Dark Bomber bosses, experience and level-up lines, about 26 attractions this game does not have, dice and card betting, \"found the CD of...\", and Pommy saying Dark Bomber took the Red Bombers. Also memory-card messages and a main-menu line about loading a file from a memory card. Decoded from the game's own text tables; no code was found that asks for these lines, though message numbers worked out at run time were not all traced.",
+  "section": "unused"
+ },
+ {
+  "code": "Casino Area, Space Area, Dungeon Area",
+  "effect": "Three Park area names in the list of eight that the Park's own area table does not use",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "System messages E4, E6 and E8. The area-name table at 802406E0 holds only E2, E3, E5, E7 and E9.",
+  "section": "unused"
+ },
+ {
+  "code": "Seven more attractions",
+  "effect": "Names, and Park guide lines, for attractions the Park does not have",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "The system list names 33 attractions and the attraction table uses 26. Missing: ボンガンマン, たまごをまもれ！ and おたからダッシュ, each with an advanced version, and ボンバーアクション. The first three have Park characters' lines (\"here you can play...\").",
+  "section": "unused"
+ },
+ {
+  "code": "Battle option: helper character",
+  "effect": "A rule-screen caption for a helper character, おたすけキャラ, beside the six used options",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "The Battle text adds \"Louie appears as a helper / no helper\" and a devil character on or off; the rule screen in play has six lines and no helper. Picture: the caption sheet (one palette for the whole sheet, so some shapes are off-colour).",
+  "section": "unused",
+  "img": "battle_labels.png"
+ },
+ {
+  "code": "Debug menu text",
+  "effect": "Names for a stage select, a debug stage and a flag menu (phone flag, all mini-games, title mode, two four-panel-comic flags)",
+  "versions": [
+   "jp"
+  ],
+  "status": "new",
+  "verified": "static",
+  "note": "With \"Battle Game menu: temporary button input\" and \"play this game again?\". No code was found that shows them.",
+  "section": "unused"
+ },
+ {
+  "code": "PlayStation save names",
+  "effect": "\"BISLPS-03002-\" and \"BISLPS-03002-SS\" in the main program, with block counts 15 and 14",
+  "versions": [
+   "jp"
+  ],
+  "status": "known",
+  "verified": "static",
+  "note": "At ROM 44570. They have the form of PlayStation memory-card file names, and no code refers to them. The game's data files also use the PlayStation's byte order.",
+  "section": "unused"
+ }
+]

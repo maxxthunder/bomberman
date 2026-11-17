@@ -1,8 +1,8 @@
 # Bomberman Codes: NES, Game Boy, Super Nintendo, Nintendo 64, Genesis, PC Engine, Virtual Boy and PC-98
 
-**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.9.1](https://img.shields.io/badge/version-2.9.1-ff4f9a)](CHANGELOG.md)
+**[Open the codes page and password generator →](https://maxxthunder.github.io/bomberman/)** &nbsp;[![v2.10.0](https://img.shields.io/badge/version-2.10.0-ff4f9a)](CHANGELOG.md)
 
-Every password and secret code for 25 Bomberman games, read from each game's own code and tested in emulators, with a
+Every password and secret code for 27 Bomberman games, read from each game's own code and tested in emulators, with a
 password checker for every game and a generator wherever a code holds items or progress. Each game also has its
 unused music and sounds, which you can play, and cut graphics shown in the game.
 
@@ -44,6 +44,8 @@ bar); the games you've looked at keep their screenshots.
 | **Nintendo 64** | | | |
 | <img src="docs/img/logos/b64.png" alt="" height="28"> | [Bomberman 64](https://maxxthunder.github.io/bomberman/#b64) | 1997 | Start code for four Battle stages, locked Options entries, GameShark codes, test maps |
 | <img src="docs/img/logos/hero.png" alt="" height="28"> | [Bomberman Hero](https://maxxthunder.github.io/bomberman/#hero) | 1998 | debug mode GameShark code, map select, unused maps, unlock rules |
+| <img src="docs/img/logos/b642.png" alt="" height="28"> | [Bomberman 64: The Second Attack!](https://maxxthunder.github.io/bomberman/#b642) | 2000 | Z+A code for the computer's characters, unlock rules, GameShark codes, placeholder messages |
+| <img src="docs/img/logos/b64j.png" alt="" height="28"> | [Bomberman 64 (2001)](https://maxxthunder.github.io/bomberman/#b64j) | 2001 | park code that opens everything, attractions from the High Score page, debug boot menu |
 | **TurboGrafx-16 / PC Engine** | | | |
 | <img src="docs/img/logos/pce90_us.png" alt="" height="28"> | [Bomberman](https://maxxthunder.github.io/bomberman/#pce90) and Users Battle | 1990 | password generator, cheats, patches |
 | <img src="docs/img/logos/pce93_us.png" alt="" height="28"> | [Bomberman '93](https://maxxthunder.github.io/bomberman/#pce93) | 1992 | password generator, cheats, patches |
@@ -209,7 +211,7 @@ What each patch does, and how it was tested, is on the game's page under Patches
 - Super Nintendo: [Super Bomberman](docs/sb1.md), [2](docs/sb2.md), [3](docs/sb3.md), [4](docs/sb4.md),
   [5](docs/sb5.md), the English [4](docs/sb4en.md) and [5](docs/sb5en.md) (Super Bomberman Collection), and
   [Panic Bomber W](docs/pbw.md), [Bomberman B-Daman](docs/bdaman.md)
-- Nintendo 64: [Bomberman 64](docs/b64.md), [Bomberman Hero](docs/hero.md)
+- Nintendo 64: [Bomberman 64](docs/b64.md), [Bomberman Hero](docs/hero.md), [Bomberman 64: The Second Attack!](docs/b642.md), [Bomberman 64 (2001)](docs/b64j.md)
 - PC Engine: [Bomberman](docs/pce90.md), [Users Battle](docs/pceub.md), [Bomberman '93](docs/pce93.md),
   [Bomberman '94](docs/pce94.md), [Panic Bomber](docs/pbcd.md) (CD), and the [Wii U and Collection re-releases](docs/pcevc.md)
 - Game Boy: [Atomic Punk / Bomber Boy](docs/bb.md), [Wario Blast / Bomberman GB](docs/gb1.md), [Bomberman GB / GB 2](docs/gb2.md),

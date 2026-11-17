@@ -2,7 +2,11 @@
 
 Hudson's 3D platformer: Bomberman Hero: Mirian Oujo o Sukue! in Japan. Everything here comes from the three ROMs and
 from BizHawk (Mupen64Plus core). Addresses are N64 RAM addresses on the US ROM unless a region is named; "written"
-means a value put into RAM in the emulator. Marks: ★ **New**.
+means a value put into RAM in the emulator.
+
+Prior art: the GameFAQs "Bomberman Hero" cheats page and a second page on the game's debug material (both in `res/`: the Options unlocks, the hidden
+planet and the Start presses for the bonus stages; the debug-flag code with its action menu and in-game menu, and the
+checkerboard test maps). Marks: ★ **New** (in neither), **Known**.
 
 ![](img/hero/title.png) ![](img/hero/title_jp.png)
 
@@ -28,7 +32,8 @@ A second trap run with a save file covered Score, Options, the Sound Test, Copy,
 ending scenes; on the European and Japanese ROMs it ran from power-on to the first stage. Not covered: the credits
 and an ending reached by play. The logo
 and title programs were read in full; the other menus were read at their button tests, which are A, B, Start and
-directions only, apart from C-Left, C-Right and C-Down on the Options Sound Test.
+directions only, apart from C-Left, C-Right and C-Down on the Options Sound Test. The first boot screen does carry
+a Start code, but it sets the Bonus entry below, not this flag.
 
 ### [BOMBERMAN ACTION MENU]: Z + Start in a stage
 
@@ -90,7 +95,13 @@ map loads, so there is no one-line warp; MAP NUMBER in the action menu is the wa
   ![The tally, the scene, and after a power cycle](img/hero/gossick_earned.png)
   Gossick's third stage is listed as Vs.???? even once cleared. ![](img/hero/vs_unknown.png)
 - **Options.** Slider Race needs three planets with every stage at 5, Golden Bomber five, Millian's Treasure Hunt all
-  six. ![Four planets, and six](img/hero/options.png) ![Two, three and five](img/hero/options_2_3_5.png)
+  six. The game calls such a planet Bomber Hero · Gold (`800697F0` sums the stage ranks against a table at US ROM
+  `0FE120`; the top step is five times the stage count). ![](img/hero/gold_medal.png) Any five count for Golden
+  Bomber: Gossick is the sixth planet and nothing tests its clear on its own. Shown by writing scores: three gold
+  planets plus a gold Gossick give no Golden Bomber, four plus a gold Gossick do.
+  ![Three gold planets and a gold Gossick, and four and a gold Gossick](img/hero/options_gossick.png)
+  In Japan the Treasure Hunt opens once Gossick's three stages are cleared at any rank, even with four gold planets.
+  ![Japan: five gold planets and no Gossick, and four with Gossick](img/hero/options_jp_rule.png) ![Four planets, and six](img/hero/options.png) ![Two, three and five](img/hero/options_2_3_5.png)
   - Slider Race: a timed race against a rival on the Bomber Slider. ![](img/hero/slider_race.png)
   - Golden Bomber: three scored stages as a gold Bomberman (maps `6F`, `70`, `65`). ![](img/hero/golden_bomber.png)
   - Millian's Treasure Hunt: the planets again, looking for 24 treasures. ![](img/hero/treasure_hunt.png)
@@ -188,21 +199,36 @@ map's exit, `--` nothing.
 3F 0-0-0  -- 7F,00                   7F 6-3-7  filler 7F,00               BF 0-0-0  -- 7F,00
 ```
 
-## ★ White Bomb mission
+## ★ The Bonus code
 
-The game loop handles a file-select result that no visible entry gives: result 3 sets map `B5` and mode byte
-`80177630` = 4. The file select builds seven entries (`80332FD0`) and its A handler has a case for cursor value 6
-(`8033169C`), but six are drawn and Down from Stereo wraps to Select. The only stores to the word that would restore
-the seventh position (`80134888`) are zero and the current position plus one.
+On the first screen after power-on, 10 to 14 presses of Start inside 60 frames, with no gap of 7 frames or more, set
+the gate byte `801776F8` (Japan `80177720`). The counter is in the controller code (`8001DCEC`) and runs only during
+that first screen; the byte is cleared once at power-on and set nowhere else. With it the file select draws a
+seventh entry, Bonus (Japan: おまけ), under Stereo, and Up from Select lands on it.
 
-Shown on the US ROM by writing the cursor value `80333424` = 6 once on the file select and pressing A. With nothing
-more written the game set mode 4 and ran `B5` (the briefing: "Good work, White Bomb! Here's the next mission. The
-secret in Bomber Star will be destroyed!"), `B6` (the Bomber Jet takes off), `B7` (it flies to a planet) and the
-playable map `2B`. ![](img/hero/white_bomb_mission.png) ![](img/hero/white_bomb_scenes.png)
+Played with the pad alone on all three ROMs, debug flag off and nothing written: 12 presses, one every 5 frames, set
+the gate; the entry appeared, on the US ROM also with four empty files; A on it set mode byte `80177630` = 4 and
+loaded map `B5`. The bounds of 10 to 14, the gap and the window are read from the code; only the 12-press rhythm was
+played. The screen is the licence screen in the US and Europe and the HUDSON logo in Japan. Twelve presses during the
+intro movie that follows did nothing. ![The US licence screen](img/hero/bonus_code_screen_us.png)
+![Bonus selected, and the briefing](img/hero/bonus_code.png) ![Europe and Japan](img/hero/bonus_code_eu_jp.png)
+![The screens the presses go on, Europe and Japan](img/hero/bonus_code_screens.png)
 
-Maps `2B`, `49` and `54` are tagged 5-2-1 to 5-2-3, an area with no area picture and no stage-name labels. By the
-exit lists the mission closes on scenes `B8` and `B9`. Not visited: `49`, `54`, `B8`, `B9`. Not read: what mode 4
-changes inside a stage. Not checked on the other two ROMs. A write to the cursor through a pointer is not ruled out.
+The mission, on the US ROM: `B5` the briefing, `B6` the Bomber Jet takes off, `B7` it flies to a planet, the stages
+`2B`, `49` and `54` each with a Clear Points tally, `B8` the jet flying home, `B9` the landing with a Total Score
+box, then the file select with the cursor back on Bonus. The three stages were ended with the debug finish, not
+played. ![](img/hero/white_bomb_mission.png) ![](img/hero/white_bomb_scenes.png)
+![Maps 49 and 54](img/hero/bonus_stages.png) ![The landing and the Total Score](img/hero/bonus_end.png)
+
+- Mode 4 takes the same branches as Slider Race and Golden Bomber: no planet or stage select, no rank stored and no
+  save after a stage, Bomberman stays white. The save records of two files were compared at every step of the
+  mission and no byte changed. The pause screen has lives and Continue / Quit only.
+- Maps `2B`, `49` and `54` are tagged 5-2-1 to 5-2-3, an area with no area picture and no stage-name labels.
+- The briefing in Japan reads "Good work, White Bomber! Here is your next mission. Destroy the enemy's secret base
+  on Planet Bonbori!" The US and European line, "The secret in Bomber Star will be destroyed!", turns it round.
+  ![](img/hero/bonus_briefing_jp.png)
+- Addresses: cursor `80333424` (Japan `803333E4`), mode byte `80177630` (Japan `8017761C`). Writing the cursor to 6
+  on the file select and pressing A reaches the mission without the code.
 
 ## ★ BACKUP MEMORY TEST
 
@@ -256,7 +282,7 @@ memory with a test pattern and so erases all four files. ![](img/hero/backup_tes
   Animated-texture frames are only partly matched to their files, models are drawn un-posed, and the unloaded-file
   test was run on the US ROM only.
 - No unused text was found, but a single unused line inside a used message would not show.
-- The White Bomb mission past its first stage, and on the other two ROMs.
+- The Bonus stages by real play, and the mission past its first stage on the European and Japanese ROMs.
 - The hidden modes by real play, and the 24 treasures collected rather than written.
-- Gossick earned by an unforced clear. NO ATTRIBUTE on ice, conveyor and damage floors.
+- Gossick earned by an unforced clear. NO ATTRIBUTE on ice and damage floors.
 - The debug-flag trap on the credits and a played ending, and past the first stage on the other two ROMs.

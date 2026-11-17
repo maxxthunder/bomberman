@@ -318,7 +318,7 @@ try { const t = JSON.parse(localStorage.getItem("bomberman") || "{}").theme; if 
     <p class="hint legend" id="legend"></p>
   </details>
   <p class="hint">Fan research. Bomberman is a trademark of Konami (formerly Hudson Soft); this site is not affiliated with them.</p>
-  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.9.1</a></footer>
+  <footer><a href="https://github.com/maxxthunder/bomberman"><i class="fa-brands fa-github" style="font-size:18px" aria-hidden="true"></i>maxxthunder/bomberman</a><a href="https://github.com/maxxthunder/bomberman/blob/main/CHANGELOG.md">v2.10.0</a></footer>
 </main>
 <dialog id="shot" aria-label="Screenshot"><figure><img id="shot_img" alt=""><figcaption id="shot_cap"></figcaption></figure>
   <button type="button" id="shot_close" aria-label="Close">✕</button></dialog>
@@ -469,6 +469,12 @@ const GAMES = [
   { id: "hero", ns: HERO, family: "Nintendo 64", year: 1998, name: "Bomberman Hero", plat: "Nintendo 64", regions: ["jp", "us", "eu"], logo: "hero", main: "us",
     len: 4, shape: /^$/, nopw: true, check: () => null,   // no passwords: EEPROM save
     intro: "The 3D platformer. It saves to the cartridge and has no passwords; what it hides is a complete debug mode behind one GameShark code, with a map select, ready-made saves and an object editor, and 35 maps the game never uses." },
+  { id: "b642", ns: B642, family: "Nintendo 64", year: 2000, name: "Bomberman 64: The Second Attack!", plat: "Nintendo 64", regions: ["jp", "us"], logo: "b642", main: "us",
+    len: 4, shape: /^$/, nopw: true, check: () => null,   // no passwords: EEPROM save
+    intro: "The sequel, Baku Bomberman 2 in Japan. It saves to the cartridge and has no passwords; what it hides is a Z+A code for playing as the computer's characters, four more Battle stages and four more Battle types, and developers' placeholder messages." },
+  { id: "b64j", ns: B64J, family: "Nintendo 64", year: 2001, name: "Bomberman 64 (2001)", plat: "Nintendo 64", regions: ["jp"], logo: "b64j", main: "jp",
+    len: 4, shape: /^$/, nopw: true, check: () => null,   // no passwords: EEPROM save
+    intro: "The 2001 game released only in Japan: Bomberman, Panic Bomber, SameGame and a park of mini-games on one cartridge. It has no passwords; what it hides is a code in the park that opens everything, a way to play the attractions from the High Score page, and a debug boot menu nothing loads." },
   { id: "mega", ns: MEGA, family: "Genesis", year: 1994, name: "Mega Bomberman", plat: "Genesis", regions: ["us", "eu", "kr"], logo: "mega_us", main: "us",
     len: 4, shape: /^\d{4}$/, form: "4 digits",
     check: megaCheck(MEGA),
@@ -752,7 +758,7 @@ const byFamily = f => GAMES.filter(x => x.family === f);   // in list order
 const TITLE_SHOT = { sb1: ["sb1", "title"], sb2: ["sb2", "title"], sb3: ["sb3", "title"], sb4: ["sb4", "title"],
   sb5: ["sb5", "title"], mega: ["mega", "title"], pce90: ["pce90", "title_us"], pce93: ["pce93", "title"],
   pce94: ["pce94", "title"], nes1: ["nes1", "title_us"], nes2: ["nes2", "title_us"], gb1: ["gb1", "sgb_hero_wario", { jp: "sgb_hero_jp", col96: "sgb_hero_jp" }], gb2: ["gb2", "sgb_hero_us", { jp: "sgb_hero_jp" }],
-  gb3: ["gb3", "sgb_hero_jp"], pocket: ["pocket", "sgb_hero"], max: ["max", "title"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"], pbcd: ["pbcd", "title"], pb98: ["pb98", "title"], bdaman: ["bdaman", "title"], b64: ["b64", "title"], quest: ["quest", "title", { jp: "title_jp" }], hero: ["hero", "title", { jp: "title_jp" }] };
+  gb3: ["gb3", "sgb_hero_jp"], pocket: ["pocket", "sgb_hero"], max: ["max", "title"], bb: ["bb", "title_us"], pbvb: ["pbvb", "title"], pbw: ["pbw", "title"], pbcd: ["pbcd", "title"], pb98: ["pb98", "title"], bdaman: ["bdaman", "title"], b64: ["b64", "title"], quest: ["quest", "title", { jp: "title_jp" }], hero: ["hero", "title", { jp: "title_jp" }], b642: ["b642", "title", { jp: "title_jp" }], b64j: ["b64j", "title"] };
 const FAM = { "Super Nintendo": "snes", "Genesis": "md", "TurboGrafx-16 / PC Engine": "pce", "NES / Famicom": "nes", "Game Boy / Game Boy Color": "gb", "Virtual Boy": "vb", "PC-98": "pc98", "Nintendo 64": "n64" };
 // 16 x 16 pixel icons for the console tabs: filled rects, then holes, then fixed-colour pixels ([x, y, w, h])
 const PXICON = {

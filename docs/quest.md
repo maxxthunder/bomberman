@@ -2,7 +2,11 @@
 
 Hudson's action RPG: Bomber Man Quest in Japan. Everything here comes from the two ROMs and from Mesen 2 (headless
 test runner), each run starting from an empty cartridge RAM. `bb:aaaa` is ROM bank and address, US unless a region is
-named. "Written" means a value put into RAM in the emulator. Marks: ★ **New**.
+named. "Written" means a value put into RAM in the emulator.
+
+Prior art: the GameFAQs "Bomberman Quest" cheats page and a second page on the game's debug material (both in `res/`: the test menu through a Game Genie
+code, the stage and enemy labels, the Super Game Boy 2 battle border, the hidden characters and the dancer).
+Marks: ★ **New** (in neither), **Known**.
 
 ![](img/quest/title.png) ![](img/quest/title_jp.png)
 
@@ -69,8 +73,22 @@ The ending code (`22:4205`) tests the captured bit (bit 6) of the 51 monster fla
 
 The check runs when Bomberman answers Leave at the Bomber Shuttle (overworld `$1B`) with the four commander flags
 set. Played on both ROMs by setting the flags and walking to the shuttle with the no-damage bit held. The fight was
-started, not won; the last ending fires when the screen's boss is gone (`00:1DB0`), triggered here by clearing its
-object slots. ![](img/quest/end_true.png)
+then won on the US ROM. He has 10 HP twice: at 0 the code at `10:5C59` rebuilds him with 10 more, a new look and new
+attacks. Every hit is 1 HP (`10:400E`) followed by `$40` frames of immunity, and only the Flak Bomb's lingering burst
+flags him; Normal and Aqua bombs do not, and the other types were not tried. Leather Armor halves his damage and the
+healing items work from the Start menu.
+![The first form hit by the burst, and the last hit on the second](img/quest/chaos_forms.png)
+
+Set beforehand by one write on the start screen: the four commander flags, monsters 1-51 captured, 10 hearts,
+Leather Armor, the Flak Bomb at firepower 5, the Remote Control and three healing items. Everything after that was
+pad input: the walk, Leave, the talk and the fight. Played straight, the first form went down once and the second
+then killed Bomberman. The win is one input history over three emulator launches joined by savestates, with a
+rewind of a second or two each time Bomberman was hit (about 530 in all) and eight discarded legs. It shows the
+fight can be won with this kit, not that it is won reliably.
+
+The ending: "After an epic battle, Bomberman defeats the mighty Chaos Bomber!", Bomberman waving in the cockpit,
+"End", the staff roll and the title. The game saves by itself during it, and flag 53 ends as `$E0`.
+![](img/quest/end_3.png) ![The same ending started by hand in an earlier round](img/quest/end_true.png)
 
 ## ★ Hidden characters
 
@@ -86,15 +104,25 @@ Beating one adds a heart of max HP and refills it. ![](img/quest/hidden_heart.pn
 the US ROM by setting the flags. Mami's duel was then won with the pad alone from 3 hearts (a Normal Bomb at
 firepower 5 and the Remote Control given beforehand): her HP went 10 to 0, max HP 3 to 4 hearts, flag 54 `$A0` to
 `$B0`, and the second character appeared. ![](img/quest/mami_won.png) She never hurts Bomberman; she stuns with the
-Hammer, kicks bombs away and digs. Losing is an ordinary Game Over. The second and third duels were not fought.
-The text names only Mami, in both languages.
+Hammer, kicks bombs away and digs. Losing is an ordinary Game Over. The second and third duels were won the same way with Gold
+Armor on and no rewinding: the second took 8,800 frames and landed 10 hits on Bomberman, the third 3,550 frames and
+6 hits. Unlike Mami, both do damage with their bombs. The third win took max HP from 9 to 10 hearts; the second
+started at the 10-heart cap. No talk follows a win, the room is empty afterwards, and none of the three enters the
+Monsters book, whose tables stop at flag 52. Neither was tried without the armour.
+![The second and the third in their duels](img/quest/duels_2_3.png)
+The text names only Mami, in both languages; GameFAQs names the other two Lewysia and Deral, and the dancer
+Pampu, after their Saturn Bomberman characters.
 
 Each fighter has 10 hearts and a fixed kit (`0C:4000`): Mami the Shovel, Hammer and Combat Boots; the second Jump
 Shoes, Poison Bomb and Teleport Armor; the third Power Gloves, Short-fused Bomb and Rocket Shoes; the unused fourth
-Power Gloves, Rubber Bomb and Silver Armor. Only Mami's was watched in play.
+Power Gloves, Rubber Bomb and Silver Armor. All three kits were read back in the duels.
 
-- A fourth fighter's kit and sprites (`2E:4680`) are complete and unused. ![](img/quest/hidden_fourth.png)
-- With the Chaos Bomber's flag captured, a pink character dances above the shuttle. ![](img/quest/dancer.png)
+- A fourth fighter's kit and sprites (`2E:4680`) are complete and unused as a fighter. Its set is the dancer's: the seven
+  tiles of her cameo above the shuttle are byte-identical to tiles of it. The duel draws it in another palette.
+  ![](img/quest/hidden_fourth.png)
+- With the Chaos Bomber's flag captured, a pink character dances above the shuttle. Her object (`11:6D4E`) tests only
+  that flag; nothing reads the hidden characters' flags 54-56. Shown both ways by writing flags.
+  ![](img/quest/dancer.png) ![Chaos Bomber beaten alone, and the three hidden characters beaten alone](img/quest/dancer_rule.png)
 - Flag 53 is the Chaos Bomber himself.
 
 ## GameShark codes
@@ -152,7 +180,10 @@ their ids by a run, the rest follow the table order.
 
 - **Town versions of the hidden characters.** Town object `$1F` picks one of three short talks (`21:4A10`, `4A26`,
   `4A3C`) by its parameter 0-2 (table `11:54F5`). No screen in either ROM places those parameters. One byte of a US
-  ROM copy changed (file `$4877F`) stands each in Peace Town. What follows the talk was not followed.
+  ROM copy changed (file `$4877F`) stands each in Peace Town. Nothing follows the talk: play resumes in the town and A repeats it.
+  The town screens load front-facing tiles of Mami and the second character (`18:6080`) that only these figures draw; the
+  third wears the dancer's tiles, not her own. ![](img/quest/town_third_dancer.png)
+  ![](img/quest/town_after_talk.png)
   ![](img/quest/town_mami.png) ![The second and third](img/quest/town_two_more.png)
 - **A third pause-menu button.** The main pause menu's cursor `$C3E7` is 0 or 1. Written to 2 with the menu open, A
   draws a third button, still labelled in kana in the US ROM; A on it does nothing.
@@ -161,7 +192,9 @@ their ids by a run, the rest follow the table order.
   replies (`$7A`-`$7F`); the US has fillers there. Neither ROM's talk records use them.
 - **Music.** BGM `$81`, `$9F`, `$E0` and `$E1` were played in the sound test with the sound-chip writes logged for
   all 39 ids: no id repeats another. `$81` and `$9F` are full pieces still playing at 40 seconds, `$E0` a one-shot
-  of about 16 seconds, `$E1` one of about 38 seconds that opens with `$F0`'s first 65 notes.
+  of about 16 seconds, `$E1` one of about 38 seconds that opens with `$F0`'s first 65 notes. The thirteen
+  unrequested effects were logged the same way, all 67 effects in turn: each is real and none matches another;
+  `$D0` and `$DB` are long.
 - **Screens.** A graph of borders, doors, entrances and the shuttle reaches all 128 screens, so none is unused.
   Interior `$17` and `$1F` are joined to the rest only across a water channel; that crossing was not played.
 - **Portraits.** All 62 slots of the portrait bank are used by a talk record.
@@ -188,11 +221,9 @@ rank. ![](img/quest/battle_screens.png)
 
 ## Open
 
-- The Chaos Bomber fight was not won: his HP went 10 to 5 at best before Bomberman's 10 hearts ran out. The Flak
-  Bomb's lingering burst is what hurts him; Normal and Aqua bombs did nothing.
-  ![The burst, and the furthest run](img/quest/chaos_flak.png)
-- The second and third duels. Those two characters, the fourth fighter and the dancer have no names in either
-  ROM's text.
-- The thirteen unrequested sound effects; a tile-by-tile pass over the graphics banks.
+- A Chaos Bomber win without rewinds, and the other bomb types against him.
+- The second and third duels without armour, and any of the fights on the Japanese ROM.
+- The second and third characters, the fourth fighter and the dancer have no names in either ROM's text.
+- A tile-by-tile pass over the graphics banks; the screen shown when a commander is beaten was read, not seen.
 - Japan's text entries `$74`-`$79` and the cut-scene narration, which is drawn as tile maps.
 - A Battle match itself, which needs a link partner.
